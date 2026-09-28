@@ -67,8 +67,22 @@ export default async function handler(req, res) {
     const GEMINI_API_KEY = (process.env.GEMINI_API_KEY || '').trim();
     const GEMINI_MODEL = (process.env.GEMINI_MODEL || '').trim();
     const OPENAI_API_KEY = (process.env.OPENAI_API_KEY || process.env.GROQ_API_KEY || process.env.OPENROUTER_API_KEY || '').trim();
-    const OPENAI_BASE_URL = (process.env.OPENAI_BASE_URL || (process.env.GROQ_API_KEY ? 'https://api.groq.com/openai/v1' : 'https://openrouter.ai/api/v1')).trim();
-    const OPENAI_MODEL = (process.env.OPENAI_MODEL || 'llama-3.1-8b-instant').trim(); // Default Groq model
+    
+    let OPENAI_BASE_URL = (process.env.OPENAI_BASE_URL || '').trim();
+    let OPENAI_MODEL = (process.env.OPENAI_MODEL || '').trim();
+    
+    if (!OPENAI_BASE_URL) {
+        if (process.env.GROQ_API_KEY || OPENAI_API_KEY.startsWith('gsk_')) {
+            OPENAI_BASE_URL = 'https://api.groq.com/openai/v1';
+            if (!OPENAI_MODEL) OPENAI_MODEL = 'llama-3.3-70b-versatile'; // Reliable Groq fallback
+        } else if (process.env.OPENROUTER_API_KEY || OPENAI_API_KEY.startsWith('sk-or-')) {
+            OPENAI_BASE_URL = 'https://openrouter.ai/api/v1';
+            if (!OPENAI_MODEL) OPENAI_MODEL = 'meta-llama/llama-3.1-8b-instruct'; // Reliable OpenRouter fallback
+        } else {
+            OPENAI_BASE_URL = 'https://api.openai.com/v1'; // Default OpenAI
+            if (!OPENAI_MODEL) OPENAI_MODEL = 'gpt-4o-mini';
+        }
+    }
 
     if (!GEMINI_API_KEY && !OPENAI_API_KEY) {
         return res.status(500).json({ error: 'Server configuration error: No API key provided (Gemini or OpenAI-compatible)' });
