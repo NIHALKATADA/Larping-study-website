@@ -86,9 +86,16 @@ export class AssistantLLM extends AssistantCore {
             let maxVramGb = Math.max(maxBufferSize, maxStorage) / (1024*1024*1024);
             let devMem = navigator.deviceMemory || 0; // Caps at 8 on many browsers
 
-            let sizeClass = '3b'; // default
-            // Forcing 3B recommendation as requested
-            sizeClass = '3b';
+            let sizeClass = '1b'; // default for safety
+            
+            // If device has >4GB system memory AND >2.5GB adapter limits, suggest 3B
+            // maxVramGb will be 0 if the browser doesn't expose adapter limits
+            if ((devMem > 4 && maxVramGb > 2.5) || maxVramGb >= 3.0) {
+                sizeClass = '3b';
+            }
+            if (maxVramGb >= 6.0) {
+                sizeClass = '7b';
+            }
 
             let usedStats = [];
             if (devMem) usedStats.push(`${devMem}GB RAM (capped)`);
