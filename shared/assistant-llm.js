@@ -236,8 +236,8 @@ export class AssistantLLM extends AssistantCore {
                 this.modelId,
                 {
                     initProgressCallback: (progress) => {
-                        const progressText = document.getElementById('model-progress');
-                        const progressBar = document.getElementById('model-progress-bar');
+                        const progressText = selUi ? selUi.querySelector('#model-progress') : document.getElementById('model-progress');
+                        const progressBar = selUi ? selUi.querySelector('#model-progress-bar') : document.getElementById('model-progress-bar');
                         if (progressText) progressText.innerText = progress.text;
                         if (progressBar && progress.progress) progressBar.style.width = Math.round(progress.progress * 100) + '%';
                     }
@@ -272,14 +272,28 @@ export class AssistantLLM extends AssistantCore {
     }
 
     async deleteModel() {
-        if (!this.modelId) return;
+        const targetModel = this.modelId || localStorage.getItem('preferredSmartModel');
+        if (!targetModel) {
+            this.ui.appendMessage('assistant', "No model is currently cached or selected.");
+            return;
+        }
         try {
-            await deleteModelAllInfoInCache(this.modelId);
+            await deleteModelAllInfoInCache(targetModel);
             localStorage.removeItem('preferredSmartModel');
             localStorage.removeItem('preferredSmartTier');
-            this.ui.appendMessage('assistant', "Model data deleted from cache. The next time you enable Smart Mode, you will be prompted to select a model again.");
+            this.modelId = null;
+            this.engine = null;
+            this.isSmartMode = false;
+            
+            // Also revert the UI to Deep Mode
+            this.setMode('deep');
+            const sel = document.getElementById('aiModeSelect');
+            if (sel) sel.value = 'deep';
+
+            this.ui.appendMessage('assistant', "Model data deleted from cache. The assistant has been reverted to Deep Mode.");
         } catch (e) {
             console.error("Cache deletion error", e);
+            this.ui.appendMessage('assistant', "Failed to delete cache. See console for details.");
         }
     }
 
