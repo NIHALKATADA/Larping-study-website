@@ -147,6 +147,10 @@
                         <tr><td>Search</td><td>Fast (SQL)</td><td>Slow</td></tr>
                         <tr><td>Concurrency</td><td>ACID support</td><td>None</td></tr>
                     </table>
+                    <div class="exam-trap">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        <div><strong>Exam Trap:</strong> A table can be in 3NF but fail BCNF if it contains overlapping candidate keys and a non-prime attribute determines part of a candidate key.</div>
+                    </div>
                 </div>
 
                 <div class="cheat-card">
@@ -188,6 +192,10 @@
                         <li><strong>Conceptual:</strong> DBA level, schema & logic.</li>
                         <li><strong>Internal:</strong> Storage, indexing, physical paths.</li>
                     </ul>
+                    <div class="pro-tip">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <div><strong>Pro-Tip:</strong> The primary objective of the 3-level architecture is to achieve Data Independence (Logical and Physical).</div>
+                    </div>
                 </div>
 
                 <div class="cheat-card">
@@ -198,6 +206,10 @@
                         <dt>Primary Key (PK)</dt><dd>Chosen candidate key. Unique, NOT NULL.</dd>
                         <dt>Foreign Key (FK)</dt><dd>Refers to PK in another table.</dd>
                     </dl>
+                    <div class="exam-trap">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        <div><strong>Exam Trap:</strong> Every Primary Key is a Candidate Key, but not every Candidate Key is a Primary Key!</div>
+                    </div>
                 </div>
 
                 <div class="cheat-card">
@@ -209,6 +221,10 @@
                         <tr><td><strong>3NF</strong></td><td>2NF + No transitive dependencies (non-key relies on non-key).</td></tr>
                         <tr><td><strong>BCNF</strong></td><td>3NF + Every determinant is a candidate key.</td></tr>
                     </table>
+                    <div class="exam-trap">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        <div><strong>Exam Trap:</strong> A table can be in 3NF but fail BCNF if it contains overlapping candidate keys and a non-prime attribute determines part of a candidate key.</div>
+                    </div>
                 </div>
 
             </div>
@@ -228,6 +244,10 @@
                         <dt>&times; (Cartesian)</dt><dd>Cross product</dd>
                         <dt>&cup; (Union)</dt><dd>Combines result sets (must be union-compatible)</dd>
                     </dl>
+                    <div class="exam-trap">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        <div><strong>Exam Trap:</strong> Every Primary Key is a Candidate Key, but not every Candidate Key is a Primary Key!</div>
+                    </div>
                 </div>
 
                 <div class="cheat-card">
@@ -328,6 +348,10 @@
                         <dt>Trigger</dt><dd>Auto-executes BEFORE or AFTER an <code>INSERT/UPDATE/DELETE</code> event.</dd>
                         <dt>Cursor</dt><dd>Allows row-by-row iteration in PL/SQL logic.</dd>
                     </dl>
+                    <div class="exam-trap">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        <div><strong>Exam Trap:</strong> Every Primary Key is a Candidate Key, but not every Candidate Key is a Primary Key!</div>
+                    </div>
                 </div>
 
             </div>
@@ -346,6 +370,10 @@
                         <dt>Isolation</dt><dd>Concurrent txns do not interfere.</dd>
                         <dt>Durability</dt><dd>Committed data is saved permanently.</dd>
                     </dl>
+                    <div class="exam-trap">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        <div><strong>Exam Trap:</strong> Every Primary Key is a Candidate Key, but not every Candidate Key is a Primary Key!</div>
+                    </div>
                 </div>
 
                 <div class="cheat-card">
@@ -397,6 +425,10 @@
                         <dt>Log-based Recovery</dt><dd>Uses Write-Ahead Logging (WAL). REDO applied for committed, UNDO applied for failed txns.</dd>
                         <dt>Checkpoints</dt><dd>Saves state to disk to reduce recovery time.</dd>
                     </dl>
+                    <div class="exam-trap">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        <div><strong>Exam Trap:</strong> Every Primary Key is a Candidate Key, but not every Candidate Key is a Primary Key!</div>
+                    </div>
                 </div>
 
             </div>
@@ -416,6 +448,10 @@
                         <tr><td>Relations</td><td>Foreign Keys</td><td>Embed/Ref</td></tr>
                         <tr><td>ACID</td><td>Strict</td><td>Eventual Consistency</td></tr>
                     </table>
+                    <div class="exam-trap">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        <div><strong>Exam Trap:</strong> A table can be in 3NF but fail BCNF if it contains overlapping candidate keys and a non-prime attribute determines part of a candidate key.</div>
+                    </div>
                 </div>
 
                 <div class="cheat-card">
@@ -427,6 +463,10 @@
                         <li><strong>Field</strong> &rarr; Key-value pair (like Column).</li>
                         <li><strong>_id</strong> &rarr; Unique primary key for every document.</li>
                     </ul>
+                    <div class="pro-tip">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <div><strong>Pro-Tip:</strong> The primary objective of the 3-level architecture is to achieve Data Independence (Logical and Physical).</div>
+                    </div>
                 </div>
 
                 <div class="cheat-card">
@@ -453,6 +493,10 @@ db.users.deleteOne({ name: <span class="str">"Alice"</span> })</code></pre>
                         <dt>Pipeline</dt><dd>Stages for processing data: <code>$match &rarr; $group &rarr; $sort</code></dd>
                         <dt>Replica Set</dt><dd>Group of mongod instances holding same data set. 1 Primary (writes), N Secondaries (reads/failover).</dd>
                     </dl>
+                    <div class="exam-trap">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        <div><strong>Exam Trap:</strong> Every Primary Key is a Candidate Key, but not every Candidate Key is a Primary Key!</div>
+                    </div>
                 </div>
 
             </div>

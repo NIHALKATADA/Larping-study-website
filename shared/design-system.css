@@ -1448,3 +1448,27 @@ pre code {
     min-width: 300px;
     min-height: 400px;
 }
+
+/* PDF-Style Traps & Tips for Cheat Cards */
+.cheat-card .exam-trap, .cheat-card .pro-tip {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85em;
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+.cheat-card .exam-trap {
+    background: rgba(239, 68, 68, 0.1);
+    border-left: 3px solid #ef4444;
+    color: #fca5a5;
+}
+.cheat-card .pro-tip {
+    background: rgba(16, 185, 129, 0.1);
+    border-left: 3px solid #10b981;
+    color: #6ee7b7;
+}
+.cheat-card .exam-trap strong, .cheat-card .pro-tip strong {
+    color: #fff;
+}
