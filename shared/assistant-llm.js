@@ -65,10 +65,10 @@ export class AssistantLLM extends AssistantCore {
 
 
     async initSmartMode(uiObj) {
+        this.ui = uiObj;
         if (localStorage.getItem('smartModeDismissed') === 'true') {
             return;
         }
-        this.ui = uiObj;
         if (!navigator.gpu) {
             this.ui.appendMessage('assistant', "Smart Mode unavailable: Your browser doesn't support WebGPU. I'll stay in Lite mode.");
             return;
