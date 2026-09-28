@@ -358,7 +358,9 @@
                 modal.style.opacity = '1';
                 modal.style.transform = 'translateY(0)';
             }, 10);
-            document.getElementById('assistantInput').focus();
+            if (window.innerWidth > 768) {
+                document.getElementById('assistantInput').focus();
+            }
             if (!assistantApp) {
                 try {
                     const { initAssistant } = await import('../../shared/assistant-ui.js');
