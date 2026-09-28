@@ -17,15 +17,24 @@ export class AssistantLLM extends AssistantCore {
 
     setMode(mode) {
         this.isDeepMode = (mode === 'deep');
-        if (mode !== 'smart') this.smartPending = false;
-        // When switching to smart, trigger model selection if no engine loaded
-        if (mode === 'smart' && !this.engine && !this.isSmartMode) {
-            this.smartPending = true;
-            localStorage.removeItem('smartModeDismissed');
-            if (this.ui) {
-                this.initSmartMode(this.ui);
+        
+        if (mode === 'lite' || mode === 'deep') {
+            this.isSmartMode = false;
+            this.smartPending = false;
+        }
+
+        if (mode === 'smart') {
+            if (this.engine) {
+                this.isSmartMode = true;
+            } else {
+                this.smartPending = true;
+                localStorage.removeItem('smartModeDismissed');
+                if (this.ui) {
+                    this.initSmartMode(this.ui);
+                }
             }
         }
+        
         this._updateTitle();
     }
 
@@ -172,8 +181,7 @@ export class AssistantLLM extends AssistantCore {
         };
 
         html += await renderOption(m1, "1B (Phones and iGPU Laptops)", recommendedClass === '1b', '1b');
-        html += await renderOption(m3, "3B (Default Laptops)", recommendedClass === '3b', '3b');
-        html += await renderOption(m7, "8B (Strong GPUs Only)", recommendedClass === '7b', '7b');
+        html += await renderOption(m3, "3B (Dedicated GPUs)", recommendedClass === '3b', '3b');
 
         html += `</div>`;
         div.innerHTML = html;
