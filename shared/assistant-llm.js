@@ -294,7 +294,11 @@ export class AssistantLLM extends AssistantCore {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ messages, temperature: temp, max_tokens })
                 });
-                if (!res.ok) throw new Error('API failed');
+                if (!res.ok) {
+                    const errTxt = await res.text();
+                    console.error("Deep Mode API error details:", res.status, errTxt);
+                    throw new Error('API failed: ' + errTxt);
+                }
                 const data = await res.json();
                 yield { choices: [{ delta: { content: data.text } }] };
                 return;
