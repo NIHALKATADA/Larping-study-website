@@ -411,7 +411,10 @@ export class AssistantLLM extends AssistantCore {
             referenceHtml = `<div style="margin-top:1rem; padding:0.75rem; background:rgba(0,0,0,0.3); border-radius:8px; font-size:0.85em; color:var(--text-muted);"><em>General answer (not from your question bank)</em><br/>Related links: ${searchResults.slice(0,3).map(r => `<a href="?open=${r.doc.id}" onclick="appUtilsOpenCard('${r.doc.id}'); return false;" style="color:var(--primary-teal);">Q${r.doc.q_num}</a>`).join(", ")}</div>`;
         }
 
+        let activeModel = this.isDeepMode ? "Qwen 2.5 27B (Groq Cloud API)" : (this.modelId || "Llama 3.2 (Local WebGPU)");
+        
         let sysPrompt = `You are a highly intelligent and helpful study assistant for ${this.subjectId.toUpperCase()} at a university B.Tech level.
+You are currently powered by the ${activeModel} AI model. If the user asks who you are or what model you are, proudly tell them this!
 You have the freedom to reason deeply and answer questions naturally. 
 Guidelines:
 - If the user asks for a specific mark weight (e.g., 2m, 5m), adjust your detail level accordingly.
