@@ -8,6 +8,7 @@ export class AssistantLLM extends AssistantCore {
         this.modelId = null;
         this.ui = null;
         this.isSmartMode = false;
+        this.smartPending = false;
         this.isDeepMode = false;
         this.history = []; 
         this.contextWindow = 4096;
@@ -16,9 +17,10 @@ export class AssistantLLM extends AssistantCore {
 
     setMode(mode) {
         this.isDeepMode = (mode === 'deep');
+        if (mode !== 'smart') this.smartPending = false;
         // When switching to smart, trigger model selection if no engine loaded
         if (mode === 'smart' && !this.engine && !this.isSmartMode) {
-            // Remove the dismissed flag so initSmartMode runs
+            this.smartPending = true;
             localStorage.removeItem('smartModeDismissed');
             if (this.ui) {
                 this.initSmartMode(this.ui);
@@ -47,6 +49,10 @@ export class AssistantLLM extends AssistantCore {
                     else if (this.modelId.match(/[78]B/i)) tierLabel = " - 8B";
                 }
                 titleSpan.textContent = "(Smart" + tierLabel + ")";
+                titleSpan.style.color = "var(--primary-teal)";
+                if (sel) sel.value = 'smart';
+            } else if (this.smartPending) {
+                titleSpan.textContent = "(Smart - Select Model)";
                 titleSpan.style.color = "var(--primary-teal)";
                 if (sel) sel.value = 'smart';
             } else {
