@@ -342,7 +342,7 @@ export class AssistantLLM extends AssistantCore {
                 contentDiv.innerHTML = '<em>Analyzing intent...</em>';
                 const jsonPrompt = `Extract intent, subject, unit, marks, n, query from: "${text}". Valid intents: search, getQuestion, progress, topQuestions, nextToRevise, quiz. Output valid JSON only.`;
                 let outText = '';
-                const stream = this.generate([{role: "user", content: jsonPrompt}], { temperature: 0, max_tokens: 150 });
+                const stream = this.generate([{role: "system", content: "You are a JSON extraction assistant. Output valid JSON only."}, {role: "user", content: jsonPrompt}], { temperature: 0, max_tokens: 150 });
                 for await (const chunk of stream) {
                     outText += chunk.choices[0]?.delta?.content || "";
                 }
@@ -365,7 +365,7 @@ export class AssistantLLM extends AssistantCore {
             let introText = "";
             try {
                 const introPrompt = `Generate a brief, friendly one-line introduction for the user's request: "${text}". The intent is ${intent}.`;
-                const stream = this.generate([{role: "user", content: introPrompt}], { temperature: 0.3, max_tokens: 50 });
+                const stream = this.generate([{role: "system", content: "You are a friendly study assistant."}, {role: "user", content: introPrompt}], { temperature: 0.3, max_tokens: 50 });
                 for await (const chunk of stream) {
                     introText += chunk.choices[0]?.delta?.content || "";
                 }
@@ -405,10 +405,11 @@ Format answers based on marks (if asked):
 Keep runnable code/SQL minimal. Say "I'm not sure" rather than bluff.
 If reference notes are provided, cite question numbers like [Q12].`;
 
-        let messages = [{role: "system", content: sysPrompt}];
         if (notesText) {
-            messages.push({role: "system", content: "Reference notes:\n" + notesText});
+            sysPrompt += "\n\nReference notes:\n" + notesText;
         }
+
+        let messages = [{role: "system", content: sysPrompt}];
         
         // Count history in turns based on context window budget
         // Assume roughly 300 tokens per turn (user + assistant) and 500 tokens for system + notes
