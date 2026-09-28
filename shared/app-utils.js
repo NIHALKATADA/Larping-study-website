@@ -329,7 +329,10 @@ document.addEventListener('DOMContentLoaded', () => {
             fabMenu.classList.toggle('open');
             fabBtn.classList.toggle('active');
         });
-        document.addEventListener('click', (e) => {
+    }
+});
+
+document.addEventListener('click', (e) => {
     // 1. Handle glass-modals
     if (e.target.classList.contains('glass-modal')) {
         e.target.classList.remove('active');
@@ -345,10 +348,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof closeAssistant === 'function') closeAssistant();
         }
     }
-});
-    }
-});
-document.addEventListener('click', (e) => {
+
+    // 3. Close glass modal on anchor link click
     if (e.target.tagName === 'A' && e.target.getAttribute('href') && e.target.getAttribute('href').startsWith('#') && e.target.closest('.glass-modal')) {
         e.target.closest('.glass-modal').classList.remove('active');
         document.body.style.overflow = '';

@@ -250,8 +250,11 @@ export async function initAssistant(subjectId) {
     }
     // ---------------------------
     
-    if (core.initSmartMode) {
-        core.initSmartMode(ui);
+    // Set Deep Mode as default on open
+    if (core.setMode) {
+        core.setMode('deep');
+        const sel = document.getElementById('aiModeSelect');
+        if (sel) sel.value = 'deep';
     }
     
     return ui;
