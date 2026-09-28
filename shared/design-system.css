@@ -228,7 +228,7 @@ header.banner {
 [data-subject="maths"] { --subject-color: #f59e0b; --subject-color-rgb: 245, 158, 11; } 
 
 .card-content {
-    background: linear-gradient(rgba(20,20,20,0.6), rgba(20,20,20,0.6)), url('../assets/pre-blurred-glass.webp') center/cover;
+    background: linear-gradient(rgba(20,20,20,0.6), rgba(20,20,20,0.6)), rgba(20, 20, 20, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     border-radius: 11px;
     padding: var(--space-5);
     height: 100%;
