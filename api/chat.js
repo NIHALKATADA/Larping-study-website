@@ -1,4 +1,4 @@
-﻿module.exports = async function handler(req, res) {
+module.exports = async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
@@ -11,10 +11,9 @@
     // 1. Strictly grab the Groq API key from environment
     const GROQ_API_KEY = (process.env.GROQ_API_KEY || '').trim();
     
-    // 2. The Groq API STRICTLY requires a model string (it cannot be left blank).
-    // We will use whatever you put in process.env.GROQ_MODEL, otherwise fall back to 
-    // the stable llama-3.3-70b-versatile.
-    const GROQ_MODEL = (process.env.GROQ_MODEL || process.env.OPENAI_MODEL || 'llama-3.3-70b-versatile').trim();
+    // 2. The API STRICTLY requires a model string. Based on your dashboard limits, 
+    // we will default to 'qwen/qwen3.8-27b' which you have access to.
+    const GROQ_MODEL = (process.env.GROQ_MODEL || process.env.OPENAI_MODEL || 'qwen/qwen3.8-27b').trim();
 
     if (!GROQ_API_KEY) {
         return res.status(500).json({ error: 'Missing GROQ_API_KEY in Vercel Environment Variables.' });
