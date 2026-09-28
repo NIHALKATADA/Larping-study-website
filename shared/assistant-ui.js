@@ -24,7 +24,7 @@ export async function initAssistant(subjectId) {
         core = new AssistantLLM(subjectId, aliases, indexData);
         window.assistantLLMInstance = core;
     } catch (e) {
-        console.warn("Could not load Smart Mode, falling back to Lite mode", e);
+        console.warn("Could not load AssistantLLM, falling back to Lite mode", e);
         core = new AssistantCore(subjectId, aliases, indexData);
         window.assistantLLMInstance = core;
         
@@ -107,7 +107,7 @@ export async function initAssistant(subjectId) {
         core,
         handleQuery(query) {
             this.appendMessage('user', query);
-            if (core.isSmartMode || core.isDeepMode) {
+            if (core.isDeepMode) {
                 core.executeSmart(query);
             } else {
                 const res = core.execute(query);
@@ -173,7 +173,7 @@ export async function initAssistant(subjectId) {
                     const topMatch = res.result[0];
                     if (topMatch.score < 4.0) {
                         html += `<p>I am an offline study assistant. I couldn't find any relevant study material for your query.</p>
-                        <p style="color:var(--primary-teal);"><strong>Please enable Smart Mode or Deep Mode to ask general knowledge questions.</strong></p>`;
+                        <p style="color:var(--primary-teal);"><strong>Please enable Deep Mode to ask general knowledge questions.</strong></p>`;
                     } else if (topMatch.score > 2.5) {
                         html += `<p>Here is the best match for your query:</p>
                         <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; margin-top: 0.5rem; font-size: 0.9em; border: 1px solid rgba(255,255,255,0.05);">
@@ -239,10 +239,6 @@ export async function initAssistant(subjectId) {
         observer.observe(msgsContainer, { childList: true, subtree: true, characterData: true });
     }
     // ---------------------------
-    
-    if (core.initSmartMode) {
-        core.initSmartMode(ui);
-    }
     
     return ui;
 }
