@@ -136,6 +136,14 @@ export class AssistantLLM extends AssistantCore {
             
             this.modelTiers = { '1b': models1B, '3b': models3B, '7b': models7B };
 
+            const preferredModel = localStorage.getItem('preferredSmartModel');
+            const preferredTier = localStorage.getItem('preferredSmartTier') || sizeClass;
+            
+            if (preferredModel) {
+                this.downloadAndLoadModel(preferredModel, preferredTier);
+                return;
+            }
+
             this.showModelSelection(models1B, models3B, models7B, sizeClass, limitsMsg);
         } catch (e) {
             console.error("WebGPU check failed:", e);
@@ -192,8 +200,15 @@ export class AssistantLLM extends AssistantCore {
 
     async downloadAndLoadModel(modelId, tier) {
         this.modelId = modelId;
+        localStorage.setItem('preferredSmartModel', modelId);
+        if (tier) localStorage.setItem('preferredSmartTier', tier);
+        
         const selUi = document.getElementById('model-selection-ui');
         if (selUi) selUi.innerHTML = `<h4>Loading Model: ${modelId}</h4><div id="model-progress">Starting engine...</div><div class="skel-line" style="height:4px; width:100%; border-radius:2px; margin-top:0.5rem; background:rgba(255,255,255,0.1);"><div id="model-progress-bar" style="height:100%; width:0%; background:var(--primary-teal); transition:width 0.2s;"></div></div>`;
+        else {
+            // Auto-load case where UI box doesn't exist yet
+            this.ui.appendMessage('assistant', `<em>Loading Smart Mode model: ${modelId} ...</em>`);
+        }
 
         try {
             const workerUrl = new URL('./assistant-worker.js', import.meta.url);
@@ -249,7 +264,9 @@ export class AssistantLLM extends AssistantCore {
         if (!this.modelId) return;
         try {
             await deleteModelAllInfoInCache(this.modelId);
-            this.ui.appendMessage('assistant', "Model data deleted from cache.");
+            localStorage.removeItem('preferredSmartModel');
+            localStorage.removeItem('preferredSmartTier');
+            this.ui.appendMessage('assistant', "Model data deleted from cache. The next time you enable Smart Mode, you will be prompted to select a model again.");
         } catch (e) {
             console.error("Cache deletion error", e);
         }
