@@ -352,9 +352,7 @@
                 return;
             }
             modal.style.display = 'flex';
-            // Hide the FAB button when modal is open
-            const fab = document.querySelector('.ask-ai-btn');
-            if (fab) fab.style.display = 'none';
+            // Removed FAB hide so it stays visible
             // slight delay for transition
             setTimeout(() => {
                 modal.style.opacity = '1';
@@ -374,9 +372,7 @@
             }
         }
         function closeAssistant() {
-            // Show the FAB button again
-            const fab = document.querySelector('.ask-ai-btn');
-            if (fab) fab.style.display = '';
+            // FAB stays independent now
             const modal = document.getElementById('assistantModal');
             modal.style.opacity = '0';
             modal.style.transform = 'translateY(20px)';
@@ -401,3 +397,4 @@
 </body>
 
 </html>
+

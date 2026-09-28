@@ -573,332 +573,93 @@ window.downloadPDF = function() {
 
 
 // ==========================================
-// Draggable Assistant Widget & Button
+// ==========================================
+// Draggable Assistant Widget
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('assistantModal');
-    const fab = document.querySelector('.ask-ai-btn');
     if (!modal) return;
     
-    const header = modal.querySelector('.modal-header');
+    // Add 4px padding as requested
+    modal.style.padding = '4px';
     
     let isDragging = false;
     let startX, startY;
     let initialModalLeft, initialModalTop;
-    let initialFabLeft, initialFabTop;
-    let dragTarget = null;
-    let hasDragged = false; // Flag to indicate if we've switched to absolute positioning
-    let fabOffsetY = 0; // Relative offset to keep them perfectly locked // 'header' or 'fab'
+    let hasDragged = false; 
 
-    function startDrag(e, targetType) {
-        if (window.innerWidth <= 768) return; // Disable dragging on mobile devices
-        if (e.target.closest('button:not(.ask-ai-btn)') || e.target.closest('label') || e.target.closest('input')) return;
+    function startDrag(e) {
+        if (window.innerWidth <= 768) return; // Disable dragging on mobile
+        
+        // Don't drag if clicking buttons, inputs, selects, or text content
+        if (e.target.closest('button') || e.target.closest('select') || e.target.closest('input') || e.target.closest('.msg')) return;
         
         isDragging = true;
-        dragTarget = targetType;
         startX = e.clientX;
         startY = e.clientY;
         
-        let oldTransform = modal.style.transform;
-        modal.style.transform = 'none';
-        let modalRect = modal.getBoundingClientRect();
-        if (modal.style.display === 'none') {
-            // Modal is hidden, temporarily show it to get its true size/position
-            modal.style.visibility = 'hidden';
-            modal.style.display = 'flex';
-            modalRect = modal.getBoundingClientRect();
-            modal.style.display = 'none';
-            modal.style.visibility = 'visible';
-        }
-        modal.style.transform = oldTransform;
-        
-        initialModalLeft = modalRect.left;
-        initialModalTop = modalRect.top;
-        
-        // If it's still 0 (e.g. initial load), use computed style or defaults
-        if (initialModalLeft === 0 && initialModalTop === 0 && fab) {
-            const fRect = fab.getBoundingClientRect();
-            initialModalLeft = fRect.left;
-            initialModalTop = fRect.top - 620; // approximate height + padding
-        }
-        
-        if (fab) {
-            const fabRect = fab.getBoundingClientRect();
-            initialFabLeft = fabRect.left;
-            initialFabTop = fabRect.top;
-        }
-
-        // Convert bottom/right constraints to left/top so they can be dragged freely
-        modal.style.bottom = 'auto';
-        modal.style.right = 'auto';
-        modal.style.left = initialModalLeft + 'px';
-        modal.style.top = initialModalTop + 'px';
-        modal.style.transform = 'none';
-        
-        if (fab) {
-            fab.style.bottom = 'auto';
-            fab.style.right = 'auto';
-            fab.style.left = initialFabLeft + 'px';
-            fab.style.top = initialFabTop + 'px';
-        }
-        
-        document.addEventListener('mousemove', onMouseMove);
-        document.addEventListener('mouseup', onMouseUp);
-        
-        if (targetType === 'fab') {
-            // Prevent the click from opening/closing immediately if it was a drag
-            e.stopPropagation();
-        } else {
-            e.preventDefault();
-        }
-    }
-
-    if (header) {
-        header.style.cursor = 'move';
-        header.addEventListener('mousedown', (e) => startDrag(e, 'header'));
-    }
-    
-    if (fab) {
-        // We use a small threshold to distinguish drag from click
-        let isFabClick = true;
-        fab.style.cursor = 'move';
-        fab.addEventListener('mousedown', (e) => {
-            isFabClick = true;
-            startDrag(e, 'fab');
-        });
-        
-        // Wrap openAssistant to prevent it if we dragged
-        const oldOnclick = fab.onclick;
-        fab.onclick = (e) => {
-            if (!isFabClick) {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            }
-            if (oldOnclick) oldOnclick.call(fab, e);
-        };
-    }
-
-    function onMouseMove(e) {
-        if (!isDragging) return;
-        const dx = e.clientX - startX;
-        const dy = e.clientY - startY;
-        
-        // If moved more than 3px, it's a drag, not a click
-        if (Math.abs(dx) > 3 || Math.abs(dy) > 3) {
-            if (fab && dragTarget === 'fab') fab.isFabClick = false; // We use a local closure variable but fab.isFabClick is safer?
-            // Actually, we just need to set the outer scoped isFabClick
-            if (fab) fab.isFabClick = false; // We'll just check this inside onclick if we can. 
-            // Wait, I can't easily modify the closure var from here. Let's just set a property on the element.
-        }
-
-        modal.style.left = (initialModalLeft + dx) + 'px';
-        modal.style.top = (initialModalTop + dy) + 'px';
-        
-        if (fab) {
-            fab.style.left = (initialFabLeft + dx) + 'px';
-            fab.style.top = (initialFabTop + dy) + 'px';
-            if (Math.abs(dx) > 3 || Math.abs(dy) > 3) {
-                fab.setAttribute('data-dragged', 'true');
-            }
-        }
-    }
-
-    function onMouseUp(e) {
-        isDragging = false;
-        document.removeEventListener('mousemove', onMouseMove);
-        document.removeEventListener('mouseup', onMouseUp);
-        
-        if (fab) {
-            setTimeout(() => {
-                fab.removeAttribute('data-dragged');
-            }, 50);
-        }
-    }
-});
-
-// OVERRIDE ALL CLICK OUTSIDE LOGIC
-document.addEventListener('click', (e) => {
-    // 1. Handle glass-modals
-    if (e.target.classList.contains('glass-modal')) {
-        e.target.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-    
-    // 2. Handle Assistant widget click outside
-    const assistant = document.getElementById('assistantModal');
-    if (assistant && assistant.style.display === 'flex') {
-        const isClickInside = assistant.contains(e.target);
-        const isClickOnToggle = e.target.closest('.ask-ai-btn');
-        if (!isClickInside && !isClickOnToggle && !window.isAssistantPinned) {
-            if (typeof closeAssistant === 'function') closeAssistant();
-        }
-    }
-}, true); // Use capture to intercept early
-
-// ==========================================
-// Draggable Assistant Widget & Button
-// ==========================================
-document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('assistantModal');
-    const fab = document.querySelector('.ask-ai-btn');
-    if (!modal) return;
-    
-    const header = modal.querySelector('.modal-header');
-    
-    let isDragging = false;
-    let startX, startY;
-    let initialModalLeft, initialModalTop;
-    let initialFabLeft, initialFabTop;
-    let dragTarget = null;
-    let hasDragged = false; // Flag to indicate if we've switched to absolute positioning
-    let fabOffsetY = 0; // Relative offset to keep them perfectly locked
-
-    function startDrag(e, targetType) {
-        if (window.innerWidth <= 768) return; // Disable dragging on mobile devices
-        if (e.target.closest('button:not(.ask-ai-btn)') || e.target.closest('label') || e.target.closest('input')) return;
-        
-        isDragging = true;
-        dragTarget = targetType;
-        startX = e.clientX;
-        startY = e.clientY;
-        
-        // Prevent CSS transitions from animating the transform to 'none', which breaks measurements
         let oldTransition = modal.style.transition;
-        let oldFabTransition = fab ? fab.style.transition : '';
         modal.style.transition = 'none';
-        if (fab) fab.style.transition = 'none';
         
         let oldTransform = modal.style.transform;
-        let oldFabTransform = fab ? fab.style.transform : '';
-        modal.style.transform = 'none';
-        if (fab) fab.style.transform = 'none'; 
+        const modalRect = modal.getBoundingClientRect();
         
-        // Force reflow so the instant snap takes effect
-        void modal.offsetWidth;
-        if (fab) void fab.offsetWidth;
-        
-        let modalRect = modal.getBoundingClientRect();
-        if (modal.style.display === 'none') {
-            modal.style.visibility = 'hidden';
-            modal.style.display = 'flex';
-            modalRect = modal.getBoundingClientRect();
-            modal.style.display = 'none';
-            modal.style.visibility = 'visible';
-        }
-        
-        initialModalLeft = modalRect.left;
-        initialModalTop = modalRect.top;
-        
-        if (fab) {
-            const fabRect = fab.getBoundingClientRect();
-            initialFabLeft = fabRect.left;
-            initialFabTop = fabRect.top;
-        }
-        
-        modal.style.transform = oldTransform;
-        if (fab) fab.style.transform = oldFabTransform;
-        
-        // Restore transitions
-        modal.style.transition = oldTransition;
-        if (fab) fab.style.transition = oldFabTransition;
-
-        // If it's the first drag, compute their relative offset
-        if (!hasDragged && fab) {
-            fabOffsetY = initialFabTop - initialModalTop;
+        if (!hasDragged && oldTransform !== 'none' && oldTransform !== '') {
+            initialModalLeft = modalRect.left;
+            initialModalTop = modalRect.top;
             hasDragged = true;
+        } else {
+            initialModalLeft = modal.offsetLeft;
+            initialModalTop = modal.offsetTop;
         }
 
         modal.style.bottom = 'auto';
         modal.style.right = 'auto';
         modal.style.left = initialModalLeft + 'px';
         modal.style.top = initialModalTop + 'px';
-        
-        if (fab) {
-            fab.style.bottom = 'auto';
-            fab.style.right = 'auto';
-            fab.style.left = initialFabLeft + 'px';
-            fab.style.top = initialFabTop + 'px';
-        }
+        modal.style.transform = 'none';
         
         document.addEventListener('mousemove', onMouseMove);
         document.addEventListener('mouseup', onMouseUp);
         
-        if (targetType === 'fab') {
-            e.stopPropagation();
-        } else {
-            e.preventDefault();
-        }
+        e.preventDefault();
     }
 
-    if (header) {
-        header.style.cursor = 'move';
-        header.addEventListener('mousedown', (e) => startDrag(e, 'header'));
-    }
+    // Make the entire modal movable (draggable) from anywhere except interactive elements
+    modal.style.cursor = 'move';
+    modal.addEventListener('mousedown', startDrag);
     
-    if (fab) {
-        let isFabClick = true;
-        fab.style.cursor = 'move';
-        fab.addEventListener('mousedown', (e) => {
-            isFabClick = true;
-            startDrag(e, 'fab');
-        });
-        
-        const oldOnclick = fab.onclick;
-        fab.onclick = (e) => {
-            if (!isFabClick || fab.getAttribute('data-dragged') === 'true') {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            }
-            if (oldOnclick) oldOnclick.call(fab, e);
-        };
-    }
+    // Reset cursor for interactive areas inside the modal
+    modal.querySelectorAll('.modal-body, .assistant-input-area, .modal-header button, .modal-header select').forEach(el => {
+        el.style.cursor = 'default';
+        el.addEventListener('mousedown', (e) => e.stopPropagation());
+    });
 
     function onMouseMove(e) {
         if (!isDragging) return;
         const dx = e.clientX - startX;
         const dy = e.clientY - startY;
         
-        if (Math.abs(dx) > 3 || Math.abs(dy) > 3) {
-            if (fab && dragTarget === 'fab') {
-                fab.setAttribute('data-dragged', 'true');
-            }
-        }
-
         let newModalLeft = initialModalLeft + dx;
         let newModalTop = initialModalTop + dy;
         
-        // Enforce relaxed window bounds (allow partial off-screen dragging but never lose it)
         const mw = modal.offsetWidth || 400;
         const mh = modal.offsetHeight || 600;
-        const minX = -mw + 100; // keep at least 100px visible on the left
-        const maxX = window.innerWidth - 100; // keep at least 100px visible on the right
-        const minY = -mh + 100; // keep at least 100px visible on the top
-        const maxY = window.innerHeight - 100; // keep at least 100px visible on the bottom
+        const minX = -mw + 100; 
+        const maxX = window.innerWidth - 100; 
+        const minY = -mh + 100; 
+        const maxY = window.innerHeight - 100; 
         
         newModalLeft = Math.max(minX, Math.min(newModalLeft, maxX));
         newModalTop = Math.max(minY, Math.min(newModalTop, maxY));
         
         modal.style.left = newModalLeft + 'px';
         modal.style.top = newModalTop + 'px';
-        
-        if (fab) {
-            // Force the FAB to stay mathematically locked to the modal
-            fab.style.left = newModalLeft + 'px';
-            fab.style.top = (newModalTop + fabOffsetY) + 'px';
-        }
     }
 
     function onMouseUp(e) {
         isDragging = false;
         document.removeEventListener('mousemove', onMouseMove);
         document.removeEventListener('mouseup', onMouseUp);
-        
-        if (fab) {
-            setTimeout(() => {
-                fab.removeAttribute('data-dragged');
-            }, 50);
-        }
     }
 });

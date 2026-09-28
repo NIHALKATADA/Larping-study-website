@@ -802,9 +802,7 @@ async function openAssistant() {
     isAssistantOpen = true;
     modal.style.display = 'flex';
     
-    // Hide the FAB button when modal is open
-    const fab = document.querySelector('.ask-ai-btn');
-    if (fab) fab.style.display = 'none';
+    // Removed FAB hide so it stays visible
     
     // Force DOM reflow so transition plays reliably
     void modal.offsetHeight;
@@ -830,9 +828,7 @@ async function openAssistant() {
     const modal = document.getElementById('assistantModal');
     isAssistantOpen = false;
     
-    // Show the FAB button again
-    const fab = document.querySelector('.ask-ai-btn');
-    if (fab) fab.style.display = '';
+    // FAB stays independent now
     
     modal.style.opacity = '0';
     modal.style.transform = 'translateY(20px)';
