@@ -580,8 +580,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('assistantModal');
     if (!modal) return;
     
-    // Add 4px padding as requested
-    modal.style.padding = '4px';
+    // Add 10px padding as requested
+    modal.style.padding = '10px';
     
     let isDragging = false;
     let startX, startY;
@@ -591,8 +591,16 @@ document.addEventListener('DOMContentLoaded', () => {
     function startDrag(e) {
         if (window.innerWidth <= 768) return; // Disable dragging on mobile
         
-        // Don't drag if clicking buttons, inputs, selects, or text content
-        if (e.target.closest('button') || e.target.closest('select') || e.target.closest('input') || e.target.closest('.msg')) return;
+        // Allow native resizing: don't drag if clicking the bottom-right corner (15x15px resize handle)
+        const rect = modal.getBoundingClientRect();
+        const isResizeClick = (e.clientX - rect.left > rect.width - 20) && (e.clientY - rect.top > rect.height - 20);
+        if (isResizeClick) return;
+        
+        // ONLY allow dragging if clicking the modal's 10px padding OR the header
+        if (e.target !== modal && !e.target.closest('.modal-header')) return;
+        
+        // Don't drag if clicking buttons, inputs, or selects inside the header
+        if (e.target.closest('button') || e.target.closest('select') || e.target.closest('input')) return;
         
         isDragging = true;
         startX = e.clientX;
@@ -625,15 +633,16 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
     }
 
-    // Make the entire modal movable (draggable) from anywhere except interactive elements
+    // Make the modal background and header indicate they are draggable
     modal.style.cursor = 'move';
-    modal.addEventListener('mousedown', startDrag);
+    const header = modal.querySelector('.modal-header');
+    if (header) header.style.cursor = 'move';
     
-    // Reset cursor for interactive areas inside the modal
-    modal.querySelectorAll('.modal-body, .assistant-input-area, .modal-header button, .modal-header select').forEach(el => {
-        el.style.cursor = 'default';
-        el.addEventListener('mousedown', (e) => e.stopPropagation());
-    });
+    // Reset cursor for the inner content wrapper so text selection feels normal
+    const body = modal.querySelector('.modal-body');
+    if (body) body.style.cursor = 'default';
+    
+    modal.addEventListener('mousedown', startDrag);
 
     function onMouseMove(e) {
         if (!isDragging) return;
