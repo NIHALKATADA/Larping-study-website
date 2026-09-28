@@ -24,23 +24,35 @@ export async function initAssistant(subjectId) {
         core = new AssistantLLM(subjectId, aliases, indexData);
         window.assistantLLMInstance = core;
     } catch (e) {
-        console.warn("Could not load Smart Mode, falling back to Lite mode", e);
+        console.warn("Could not load AssistantLLM, falling back to Lite mode", e);
         core = new AssistantCore(subjectId, aliases, indexData);
         window.assistantLLMInstance = core;
         
         core.isDeepMode = false;
-        core.toggleDeepMode = function(enabled) {
-            this.isDeepMode = enabled;
+        core.setMode = function(mode) {
+            if (mode === 'smart') {
+                // Smart mode not available in fallback
+                const sel = document.getElementById('aiModeSelect');
+                if (sel) sel.value = this.isDeepMode ? 'deep' : 'lite';
+                return;
+            }
+            this.isDeepMode = (mode === 'deep');
             const titleSpan = document.querySelector('#aiModalTitle span');
+            const sel = document.getElementById('aiModeSelect');
             if (titleSpan) {
                 if (this.isDeepMode) {
                     titleSpan.textContent = "(Deep Mode)";
                     titleSpan.style.color = "var(--primary-teal)";
+                    if (sel) sel.value = 'deep';
                 } else {
                     titleSpan.textContent = "(Lite)";
                     titleSpan.style.color = "var(--text-muted)";
+                    if (sel) sel.value = 'lite';
                 }
             }
+        };
+        core.toggleDeepMode = function(enabled) {
+            this.setMode(enabled ? 'deep' : 'lite');
         };
         
         core.executeSmart = async function(text) {
@@ -93,12 +105,10 @@ export async function initAssistant(subjectId) {
                 div.innerHTML = escaped;
             } catch (err) {
                 console.warn('Deep mode failed, falling back', err);
-                this.toggleDeepMode(false);
-                const sel = document.getElementById('deepModeToggle');
-                if (sel) sel.checked = false;
+                this.setMode('lite');
                 
                 div.style.borderLeft = '3px solid var(--subject-color)';
-                div.innerHTML = "<em>Deep Mode API failed. Falling back to local Lite Mode output.</em>";
+                div.innerHTML = "<em>Deep Mode API failed. Falling back to Lite Mode.</em>";
             }
         };
     }

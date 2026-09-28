@@ -708,10 +708,11 @@
         <div class="modal-header" style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
             <div style="display: flex; align-items: center; gap: 15px;">
                 <h2 id="aiModalTitle" style="margin: 0; font-size: 1.25rem;">Ask AI <span style="font-size: 0.8em; font-weight: normal; color: var(--text-muted);">(Lite)</span></h2>
-                <label style="display: flex; align-items: center; gap: 6px; font-size: 0.85em; color: var(--text-muted); cursor: pointer; border: 1px solid rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; background: rgba(0,0,0,0.2);">
-                    <input type="checkbox" id="deepModeToggle" onchange="window.assistantLLMInstance && window.assistantLLMInstance.toggleDeepMode && window.assistantLLMInstance.toggleDeepMode(this.checked)" style="accent-color: var(--primary-teal);">
-                    Deep mode
-                </label>
+                <select id="aiModeSelect" onchange="window.assistantLLMInstance && window.assistantLLMInstance.setMode && window.assistantLLMInstance.setMode(this.value)" style="font-size: 0.85em; color: var(--text-muted); background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; cursor: pointer; outline: none;">
+                    <option value="lite" style="background:#1a1a1a;">Lite</option>
+                    <option value="smart" style="background:#1a1a1a;">Smart (WebGPU)</option>
+                    <option value="deep" style="background:#1a1a1a;">Deep (Cloud)</option>
+                </select>
                 
             </div>
             

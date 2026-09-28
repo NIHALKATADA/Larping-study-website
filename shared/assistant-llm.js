@@ -14,13 +14,31 @@ export class AssistantLLM extends AssistantCore {
         this.modelTiers = {};
     }
 
+    setMode(mode) {
+        this.isDeepMode = (mode === 'deep');
+        // When switching to smart, trigger model selection if no engine loaded
+        if (mode === 'smart' && !this.engine && !this.isSmartMode) {
+            // Remove the dismissed flag so initSmartMode runs
+            localStorage.removeItem('smartModeDismissed');
+            if (this.ui) {
+                this.initSmartMode(this.ui);
+            }
+        }
+        this._updateTitle();
+    }
+
     toggleDeepMode(enabled) {
-        this.isDeepMode = enabled;
+        this.setMode(enabled ? 'deep' : (this.isSmartMode ? 'smart' : 'lite'));
+    }
+
+    _updateTitle() {
         const titleSpan = document.querySelector('#aiModalTitle span');
+        const sel = document.getElementById('aiModeSelect');
         if (titleSpan) {
             if (this.isDeepMode) {
                 titleSpan.textContent = "(Deep Mode)";
                 titleSpan.style.color = "var(--primary-teal)";
+                if (sel) sel.value = 'deep';
             } else if (this.isSmartMode) {
                 let tierLabel = "";
                 if (this.modelId) {
@@ -30,12 +48,15 @@ export class AssistantLLM extends AssistantCore {
                 }
                 titleSpan.textContent = "(Smart" + tierLabel + ")";
                 titleSpan.style.color = "var(--primary-teal)";
+                if (sel) sel.value = 'smart';
             } else {
                 titleSpan.textContent = "(Lite)";
                 titleSpan.style.color = "var(--text-muted)";
+                if (sel) sel.value = 'lite';
             }
         }
     }
+
 
     async initSmartMode(uiObj) {
         if (localStorage.getItem('smartModeDismissed') === 'true') {
@@ -177,6 +198,7 @@ export class AssistantLLM extends AssistantCore {
             );
             
             this.isSmartMode = true;
+            this._updateTitle();
             if (selUi) {
                 selUi.innerHTML = `<h4>Smart Mode Active</h4><p style="font-size:0.9em; color:var(--text-muted);">Model: ${this.modelId} (Ready / Cached)<br/>Context budget: ${this.contextWindow} tokens</p>
                 <button class="btn btn-secondary" onclick="window.assistantLLMInstance.deleteModel()" style="margin-top:0.5rem; font-size:0.8em; padding:0.2rem 0.5rem;">Delete Model Data</button>`;
