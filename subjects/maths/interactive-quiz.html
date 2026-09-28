@@ -779,8 +779,10 @@ async function openAssistant() {
                     assistantApp = await initAssistant('maths');
                     if (!assistantApp) throw new Error("App init failed");
                 } catch (e) {
+                    console.error('Assistant init failed:', e);
                     const msgs = document.getElementById('assistantMessages');
-                    msgs.innerHTML = `<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>`;
+                    const isFileProtocol = window.location.protocol === 'file:';
+                    msgs.innerHTML = `<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">${isFileProtocol ? 'I am blocked by your browser\'s security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).' : 'Assistant failed to initialize: ' + e.message}</div>`;
                 }
             }
         }

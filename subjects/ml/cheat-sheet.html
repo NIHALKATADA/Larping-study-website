@@ -299,10 +299,11 @@
         <div class="modal-header" style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
             <div style="display: flex; align-items: center; gap: 15px;">
                 <h2 id="aiModalTitle" style="margin: 0; font-size: 1.25rem;">Ask AI <span style="font-size: 0.8em; font-weight: normal; color: var(--text-muted);">(Lite)</span></h2>
-                <label style="display: flex; align-items: center; gap: 6px; font-size: 0.85em; color: var(--text-muted); cursor: pointer; border: 1px solid rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; background: rgba(0,0,0,0.2);">
-                    <input type="checkbox" id="deepModeToggle" onchange="window.assistantLLMInstance && window.assistantLLMInstance.toggleDeepMode ? window.assistantLLMInstance.toggleDeepMode(this.checked) : (this.checked = false, alert('Deep Mode not supported in pure Lite mode.'))" style="accent-color: var(--primary-teal);">
-                    Deep mode
-                </label>
+                <select id="aiModeSelect" onchange="window.assistantLLMInstance && window.assistantLLMInstance.setMode && window.assistantLLMInstance.setMode(this.value)" style="font-size: 0.85em; color: var(--text-muted); background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; cursor: pointer; outline: none;">
+    <option value="lite" style="background:#1a1a1a;">Lite</option>
+    <option value="smart" style="background:#1a1a1a;">Smart (WebGPU)</option>
+    <option value="deep" style="background:#1a1a1a;">Deep (Cloud)</option>
+</select>
                 
             </div>
             
@@ -337,6 +338,9 @@
                 return;
             }
             modal.style.display = 'flex';
+            // Hide the FAB button when modal is open
+            const fab = document.querySelector('.ask-ai-btn');
+            if (fab) fab.style.display = 'none';
             // slight delay for transition
             setTimeout(() => {
                 modal.style.opacity = '1';
@@ -349,12 +353,16 @@
                     assistantApp = await initAssistant('ml');
                     if (!assistantApp) throw new Error("App init failed");
                 } catch (e) {
+                    console.error(e);
                     const msgs = document.getElementById('assistantMessages');
                     msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
                 }
             }
         }
         function closeAssistant() {
+            // Show the FAB button again
+            const fab = document.querySelector('.ask-ai-btn');
+            if (fab) fab.style.display = '';
             const modal = document.getElementById('assistantModal');
             modal.style.opacity = '0';
             modal.style.transform = 'translateY(20px)';
