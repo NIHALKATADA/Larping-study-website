@@ -344,24 +344,7 @@ export class AssistantLLM extends AssistantCore {
 
         let { intent, params } = this.routeIntent(text);
         
-        if (intent === 'search' && !params.unit && !params.marks && !params.qId && text.length < 50 && !text.includes('?')) {
-            try {
-                contentDiv.innerHTML = '<em>Analyzing intent...</em>';
-                const jsonPrompt = `Extract intent, subject, unit, marks, n, query from: "${text}". Valid intents: search, getQuestion, progress, topQuestions, nextToRevise, quiz. Output valid JSON only.`;
-                let outText = '';
-                const stream = this.generate([{role: "system", content: "You are a JSON extraction assistant. Output valid JSON only."}, {role: "user", content: jsonPrompt}], { temperature: 0, max_tokens: 150 });
-                for await (const chunk of stream) {
-                    outText += chunk.choices[0]?.delta?.content || "";
-                }
-                const parsed = JSON.parse(outText.replace(/```json/g, '').replace(/```/g, '').trim());
-                if (parsed) {
-                    if (parsed.intent) intent = parsed.intent;
-                    Object.assign(params, parsed);
-                }
-            } catch (e) {
-                console.error("JSON mode extraction failed", e);
-            }
-        }
+        // Removed slow LLM-based secondary intent extraction pass to improve responsiveness.
 
         if (['topQuestions', 'progress', 'nextToRevise'].includes(intent)) {
             let resObj = null;
@@ -370,14 +353,9 @@ export class AssistantLLM extends AssistantCore {
             else if (intent === 'nextToRevise') resObj = this.nextToRevise();
             
             let introText = "";
-            try {
-                const introPrompt = `Generate a brief, friendly one-line introduction for the user's request: "${text}". The intent is ${intent}.`;
-                const stream = this.generate([{role: "system", content: "You are a friendly study assistant."}, {role: "user", content: introPrompt}], { temperature: 0.3, max_tokens: 50 });
-                for await (const chunk of stream) {
-                    introText += chunk.choices[0]?.delta?.content || "";
-                }
-                introText = introText.trim();
-            } catch(e) {}
+            if (intent === 'topQuestions') introText = "Here are the most important questions you requested:";
+            else if (intent === 'progress') introText = "Here is your current progress overview:";
+            else if (intent === 'nextToRevise') introText = "Based on your progress, I recommend focusing on these topics next:";
             
             div.remove();
             this.ui.renderResponse({ intent, params, result: resObj, introText });
@@ -404,13 +382,12 @@ export class AssistantLLM extends AssistantCore {
             referenceHtml = `<div style="margin-top:1rem; padding:0.75rem; background:rgba(0,0,0,0.3); border-radius:8px; font-size:0.85em; color:var(--text-muted);"><em>General answer (not from your question bank)</em><br/>Related links: ${searchResults.slice(0,3).map(r => `<a href="?open=${r.doc.id}" onclick="appUtilsOpenCard('${r.doc.id}'); return false;" style="color:var(--primary-teal);">Q${r.doc.q_num}</a>`).join(", ")}</div>`;
         }
 
-        let sysPrompt = `You are an expert exam tutor for ${this.subjectId.toUpperCase()} at university B.Tech level.
-Format answers based on marks (if asked):
-- 2m: 2-3 lines
-- 3m: definition + points + example
-- 5m: definition, explanation, diagram (ASCII or description), example, exam tip.
-Keep runnable code/SQL minimal. Say "I'm not sure" rather than bluff.
-If reference notes are provided, cite question numbers like [Q12].`;
+        let sysPrompt = `You are a highly intelligent and helpful study assistant for ${this.subjectId.toUpperCase()} at a university B.Tech level.
+You have the freedom to reason deeply and answer questions naturally. 
+Guidelines:
+- If the user asks for a specific mark weight (e.g., 2m, 5m), adjust your detail level accordingly.
+- Keep your tone friendly, conversational, yet academically accurate.
+- If reference notes are provided below, use them to inform your answer, citing [Q...] when helpful.`;
 
         if (notesText) {
             sysPrompt += "\n\nReference notes:\n" + notesText;
@@ -427,7 +404,7 @@ If reference notes are provided, cite question numbers like [Q12].`;
         messages.push({role: "user", content: text});
 
         try {
-            const stream = this.generate(messages, { temperature: 0.3, max_tokens: params.marks ? params.marks * 100 : 300 });
+            const stream = this.generate(messages, { temperature: 0.7, max_tokens: params.marks ? params.marks * 150 : 800 });
             contentDiv.innerHTML = '';
             let fullText = '';
             
