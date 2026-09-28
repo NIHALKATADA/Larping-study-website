@@ -207,7 +207,7 @@ export class AssistantLLM extends AssistantCore {
         if (selUi) selUi.innerHTML = `<h4>Loading Model: ${modelId}</h4><div id="model-progress">Starting engine...</div><div class="skel-line" style="height:4px; width:100%; border-radius:2px; margin-top:0.5rem; background:rgba(255,255,255,0.1);"><div id="model-progress-bar" style="height:100%; width:0%; background:var(--primary-teal); transition:width 0.2s;"></div></div>`;
         else {
             // Auto-load case where UI box doesn't exist yet
-            this.ui.appendMessage('assistant', `<em>Loading Smart Mode model: ${modelId} ...</em>`);
+            this.ui.appendMessage('assistant', `Loading Smart Mode model: ${modelId} ...`);
         }
 
         try {

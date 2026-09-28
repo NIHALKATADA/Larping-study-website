@@ -68,7 +68,7 @@ export default async function handler(req, res) {
     const GEMINI_MODEL = (process.env.GEMINI_MODEL || '').trim();
     const OPENAI_API_KEY = (process.env.OPENAI_API_KEY || process.env.GROQ_API_KEY || process.env.OPENROUTER_API_KEY || '').trim();
     const OPENAI_BASE_URL = (process.env.OPENAI_BASE_URL || (process.env.GROQ_API_KEY ? 'https://api.groq.com/openai/v1' : 'https://openrouter.ai/api/v1')).trim();
-    const OPENAI_MODEL = (process.env.OPENAI_MODEL || 'llama3-8b-8192').trim(); // Default Groq model
+    const OPENAI_MODEL = (process.env.OPENAI_MODEL || 'llama-3.1-8b-instant').trim(); // Default Groq model
 
     if (!GEMINI_API_KEY && !OPENAI_API_KEY) {
         return res.status(500).json({ error: 'Server configuration error: No API key provided (Gemini or OpenAI-compatible)' });
