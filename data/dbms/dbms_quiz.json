@@ -1,0 +1,307 @@
+[
+    {
+        "id": "610bf8fc-a257-473b-a48a-b894091d1cd0",
+        "type": "mcq",
+        "question": "Which concept is described by: atomic domains?",
+        "options": [
+            "1NF",
+            "2NF",
+            "3NF",
+            "BCNF"
+        ],
+        "correct_answer": "1NF",
+        "explanation": "1NF is defined by atomic domains"
+    },
+    {
+        "id": "fe5b7f1e-160b-4844-b49e-88f0fa3819e6",
+        "type": "mcq",
+        "question": "Which concept is described by: no partial dependencies?",
+        "options": [
+            "1NF",
+            "2NF",
+            "3NF",
+            "BCNF"
+        ],
+        "correct_answer": "2NF",
+        "explanation": "2NF is defined by no partial dependencies"
+    },
+    {
+        "id": "0540fbb8-d4c7-4a7f-96f2-a38fa6e494f7",
+        "type": "mcq",
+        "question": "Which concept is described by: no transitive dependencies?",
+        "options": [
+            "1NF",
+            "2NF",
+            "3NF",
+            "BCNF"
+        ],
+        "correct_answer": "3NF",
+        "explanation": "3NF is defined by no transitive dependencies"
+    },
+    {
+        "id": "e032529c-842f-400c-bafc-145cb6ad868a",
+        "type": "mcq",
+        "question": "Which concept is described by: every determinant is a candidate key?",
+        "options": [
+            "1NF",
+            "2NF",
+            "3NF",
+            "BCNF"
+        ],
+        "correct_answer": "BCNF",
+        "explanation": "BCNF is defined by every determinant is a candidate key"
+    },
+    {
+        "id": "5704801a-31d6-47e2-b8e3-a77d3e17cbc9",
+        "type": "mcq",
+        "question": "Which concept is described by: no multivalued dependencies?",
+        "options": [
+            "1NF",
+            "2NF",
+            "3NF",
+            "BCNF"
+        ],
+        "correct_answer": "4NF",
+        "explanation": "4NF is defined by no multivalued dependencies"
+    },
+    {
+        "id": "795ad679-41b1-4f95-9084-5788244ef465",
+        "type": "mcq",
+        "question": "Which concept is described by: no join dependencies?",
+        "options": [
+            "1NF",
+            "2NF",
+            "3NF",
+            "BCNF"
+        ],
+        "correct_answer": "5NF",
+        "explanation": "5NF is defined by no join dependencies"
+    },
+    {
+        "id": "3d9f0f28-1532-4e9a-aee3-a49cb6d98337",
+        "type": "short_answer",
+        "question": "What term means: all or nothing execution?",
+        "options": [],
+        "correct_answer": "Atomicity",
+        "explanation": "Atomicity is all or nothing execution"
+    },
+    {
+        "id": "2d1cd802-2f70-432e-a419-a8e98a8edb91",
+        "type": "short_answer",
+        "question": "What term means: database remains in valid state?",
+        "options": [],
+        "correct_answer": "Consistency",
+        "explanation": "Consistency is database remains in valid state"
+    },
+    {
+        "id": "0ecbd001-6895-455f-b9f4-54d143d43807",
+        "type": "short_answer",
+        "question": "What term means: concurrent transactions do not interfere?",
+        "options": [],
+        "correct_answer": "Isolation",
+        "explanation": "Isolation is concurrent transactions do not interfere"
+    },
+    {
+        "id": "b9a44f92-622d-40ab-927a-63f9c4f98d1b",
+        "type": "short_answer",
+        "question": "What term means: committed data is permanent?",
+        "options": [],
+        "correct_answer": "Durability",
+        "explanation": "Durability is committed data is permanent"
+    },
+    {
+        "id": "5bb6799b-0c85-4a00-b3a2-5d323fe13ca2",
+        "type": "mcq",
+        "question": "Which concept is described by: allows concurrent reads?",
+        "options": [
+            "Shared lock",
+            "Exclusive lock",
+            "Two-phase locking",
+            "Timestamp ordering"
+        ],
+        "correct_answer": "Shared lock",
+        "explanation": "Shared lock is defined by allows concurrent reads"
+    },
+    {
+        "id": "fefff0d0-3c5e-4b45-8527-113e50c40b03",
+        "type": "mcq",
+        "question": "Which concept is described by: prevents concurrent reads and writes?",
+        "options": [
+            "Shared lock",
+            "Exclusive lock",
+            "Two-phase locking",
+            "Timestamp ordering"
+        ],
+        "correct_answer": "Exclusive lock",
+        "explanation": "Exclusive lock is defined by prevents concurrent reads and writes"
+    },
+    {
+        "id": "2a1ab1c1-baa8-4986-94f8-ba7aafb0d84c",
+        "type": "mcq",
+        "question": "Which concept is described by: guarantees serializability?",
+        "options": [
+            "Shared lock",
+            "Exclusive lock",
+            "Two-phase locking",
+            "Timestamp ordering"
+        ],
+        "correct_answer": "Two-phase locking",
+        "explanation": "Two-phase locking is defined by guarantees serializability"
+    },
+    {
+        "id": "3854b08b-abc2-4cc6-825e-522d72b1229a",
+        "type": "mcq",
+        "question": "Which concept is described by: uses timestamps to determine transaction order?",
+        "options": [
+            "Shared lock",
+            "Exclusive lock",
+            "Two-phase locking",
+            "Timestamp ordering"
+        ],
+        "correct_answer": "Timestamp ordering",
+        "explanation": "Timestamp ordering is defined by uses timestamps to determine transaction order"
+    },
+    {
+        "id": "0c846680-4085-4444-b2ec-037af741ac9f",
+        "type": "mcq",
+        "question": "Which concept is described by: logs changes before writing to disk?",
+        "options": [
+            "Clustered index",
+            "Non-clustered index",
+            "Hash index",
+            "B-tree"
+        ],
+        "correct_answer": "Write-ahead logging",
+        "explanation": "Write-ahead logging is defined by logs changes before writing to disk"
+    },
+    {
+        "id": "70550cee-3092-48a4-aaa7-036617d3e133",
+        "type": "short_answer",
+        "question": "What term means: balanced tree for indexing?",
+        "options": [],
+        "correct_answer": "B-tree",
+        "explanation": "B-tree is balanced tree for indexing"
+    },
+    {
+        "id": "5a348f39-ff96-4f8a-a4aa-969d47046397",
+        "type": "short_answer",
+        "question": "What term means: all values are at leaf level?",
+        "options": [],
+        "correct_answer": "B+ tree",
+        "explanation": "B+ tree is all values are at leaf level"
+    },
+    {
+        "id": "a24a84b8-092a-424d-abec-274400a4ac98",
+        "type": "short_answer",
+        "question": "What term means: O(1) lookups for equality predicates?",
+        "options": [],
+        "correct_answer": "Hash index",
+        "explanation": "Hash index is O(1) lookups for equality predicates"
+    },
+    {
+        "id": "d50ec24b-34bb-4ccf-abbe-4f6d8e28d3cf",
+        "type": "mcq",
+        "question": "Which concept is described by: determines physical order of data?",
+        "options": [
+            "Clustered index",
+            "Non-clustered index",
+            "Hash index",
+            "B-tree"
+        ],
+        "correct_answer": "Clustered index",
+        "explanation": "Clustered index is defined by determines physical order of data"
+    },
+    {
+        "id": "d2b8b2fe-a32e-47f1-8057-60c380bef7b7",
+        "type": "mcq",
+        "question": "Which concept is described by: has a separate structure from data rows?",
+        "options": [
+            "Clustered index",
+            "Non-clustered index",
+            "Hash index",
+            "B-tree"
+        ],
+        "correct_answer": "Non-clustered index",
+        "explanation": "Non-clustered index is defined by has a separate structure from data rows"
+    },
+    {
+        "id": "952a17c6-6403-4991-be0d-fc61993a055d",
+        "type": "code",
+        "question": "Write a SQL statement to query data.",
+        "options": [],
+        "correct_answer": "SELECT ...;",
+        "explanation": "SELECT is used to query data"
+    },
+    {
+        "id": "290cf9c3-7d64-4f0d-858b-cbf270e8ae2c",
+        "type": "code",
+        "question": "Write a SQL statement to add rows.",
+        "options": [],
+        "correct_answer": "INSERT ...;",
+        "explanation": "INSERT is used to add rows"
+    },
+    {
+        "id": "148d72ff-dcf2-45b6-9fb6-7d5f73a8153a",
+        "type": "code",
+        "question": "Write a SQL statement to modify rows.",
+        "options": [],
+        "correct_answer": "UPDATE ...;",
+        "explanation": "UPDATE is used to modify rows"
+    },
+    {
+        "id": "2a4bbfcc-1058-492b-9c47-34c69f8da997",
+        "type": "code",
+        "question": "Write a SQL statement to remove rows.",
+        "options": [],
+        "correct_answer": "DELETE ...;",
+        "explanation": "DELETE is used to remove rows"
+    },
+    {
+        "id": "29eb12cc-def5-41d8-893c-1162b174e7ce",
+        "type": "code",
+        "question": "Write a SQL statement to make a new table.",
+        "options": [],
+        "correct_answer": "CREATE ...;",
+        "explanation": "CREATE is used to make a new table"
+    },
+    {
+        "id": "4a48354d-af9b-4ddf-a331-38bf0304f27b",
+        "type": "code",
+        "question": "Write a SQL statement to remove a table.",
+        "options": [],
+        "correct_answer": "DROP ...;",
+        "explanation": "DROP is used to remove a table"
+    },
+    {
+        "id": "16703e10-fe4c-4e61-9a33-04ba23726494",
+        "type": "code",
+        "question": "Write a SQL statement to change table schema.",
+        "options": [],
+        "correct_answer": "ALTER ...;",
+        "explanation": "ALTER is used to change table schema"
+    },
+    {
+        "id": "2e71a00a-5c8c-40c2-851c-d47728df8bdb",
+        "type": "code",
+        "question": "Write a SQL statement to empty table without logging individual row deletes.",
+        "options": [],
+        "correct_answer": "TRUNCATE ...;",
+        "explanation": "TRUNCATE is used to empty table without logging individual row deletes"
+    },
+    {
+        "id": "6699f83c-0910-4f8f-9746-bc8b0610c318",
+        "type": "code",
+        "question": "Write a SQL statement to give privileges.",
+        "options": [],
+        "correct_answer": "GRANT ...;",
+        "explanation": "GRANT is used to give privileges"
+    },
+    {
+        "id": "b3b2a5e1-f0e5-4a7f-9eaf-91a4411e2883",
+        "type": "code",
+        "question": "Write a SQL statement to remove privileges.",
+        "options": [],
+        "correct_answer": "REVOKE ...;",
+        "explanation": "REVOKE is used to remove privileges"
+    }
+]

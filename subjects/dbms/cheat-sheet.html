@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS Cheat Sheet</title>
+    <link rel="stylesheet" href="../../shared/design-system.css">
+    
+</head>
+<body>
+    <div class="glow-bg"></div>
+    <nav class="smart-topbar">
+        <div class="topbar-left">
+            <a href="../../index.html" class="btn btn-secondary sleek-back">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                <span class="desktop-title">Dashboard</span>
+            </a>
+            <span class="topbar-logo desktop-title">Revision Hub</span>
+        </div>
+        <div class="topbar-right">
+            <button onclick="downloadPDF()" class="btn btn-secondary" style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; padding: 0.4rem 0.8rem; background: rgba(255,255,255,0.1);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Save as PDF
+            </button>
+            <button id="themeToggleBtn" class="btn btn-secondary theme-toggle">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+                <span class="desktop-title">Theme</span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="banner">
+        
+        <h1>Database Management Systems</h1>
+        <h2>Dense Revision Cheat Sheet</h2>
+        <p class="scope-note">All Units | Scannable Reference | High-Yield Syntax & Concepts</p>
+    </header>
+
+    <div class="layout-wrapper" style="display: block;">
+        
+        <div class="controls" style="flex-direction: row; justify-content: space-between; align-items: center;">
+            
+            <div>
+                <strong>Quick Jump:</strong> 
+                <a href="#unit1" style="margin-right: 1rem;">Unit I</a>
+                <a href="#unit2" style="margin-right: 1rem;">Unit II</a>
+                <a href="#unit3" style="margin-right: 1rem;">Unit III</a>
+                <a href="#unit4" style="margin-right: 1rem;">Unit IV</a>
+                <a href="#unit5">Unit V</a>
+            </div>
+            <button class="btn btn-secondary" id="themeToggleBtn">Mode: Paper</button>
+        </div>
+
+        <!-- UNIT 1 -->
+        
+<div style="display: grid; width: 100%;">
+    <div id="pureSkeleton">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div class="skel-line" style="height: 1.8rem; width: 250px; border-radius: 6px;"></div>
+            <div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
+        </div>
+        <div class="cheat-grid" style="margin-bottom: 3rem;">
+            
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div class="skel-line" style="height: 1.8rem; width: 200px; border-radius: 6px;"></div>
+            <div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
+        </div>
+        <div class="cheat-grid" style="margin-bottom: 3rem;">
+            
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        </div>
+    </div>
+    <div id="realContentWrapper">
+<div class="unit-section" id="unit1">
+            <h3>Unit I: Introduction to DBMS <span class="badge unit-1">CO1</span></h3>
+            <div class="cheat-grid">
+                
+                <div class="cheat-card">
+                    <h4>DBMS vs File System <span class="badge unit-1">U1</span></h4>
+                    <table>
+                        <tr><th>Feature</th><th>DBMS</th><th>File System</th></tr>
+                        <tr><td>Redundancy</td><td>Controlled</td><td>High</td></tr>
+                        <tr><td>Integrity</td><td>Enforced</td><td>Poor</td></tr>
+                        <tr><td>Search</td><td>Fast (SQL)</td><td>Slow</td></tr>
+                        <tr><td>Concurrency</td><td>ACID support</td><td>None</td></tr>
+                    </table>
+                </div>
+
+                <div class="cheat-card">
+                    <h4>3-Level Architecture <span class="badge unit-1">U1</span></h4>
+                    <div class="compact-svg">
+                        <svg viewBox="0 0 200 130" style="width: 100%; height: auto;">
+                            <!-- External Views -->
+                            <rect x="10" y="20" width="50" height="20" rx="2" fill="var(--card-bg)" stroke="currentColor" stroke-width="1"/>
+                            <text x="35" y="34" font-size="9" text-anchor="middle" fill="currentColor">View 1</text>
+                            
+                            <rect x="75" y="20" width="50" height="20" rx="2" fill="var(--card-bg)" stroke="currentColor" stroke-width="1"/>
+                            <text x="100" y="34" font-size="9" text-anchor="middle" fill="currentColor">View 2</text>
+                            
+                            <rect x="140" y="20" width="50" height="20" rx="2" fill="var(--card-bg)" stroke="currentColor" stroke-width="1"/>
+                            <text x="165" y="34" font-size="9" text-anchor="middle" fill="currentColor">View 3</text>
+                            
+                            <!-- Label above -->
+                            <text x="100" y="12" font-size="10" font-weight="bold" text-anchor="middle" fill="currentColor">External Level</text>
+                            
+                            <!-- Conceptual Level -->
+                            <rect x="50" y="60" width="100" height="25" rx="3" fill="var(--card-bg)" stroke="currentColor" stroke-width="1.5"/>
+                            <text x="100" y="76" font-size="10" font-weight="bold" text-anchor="middle" fill="currentColor">Conceptual Level</text>
+                            
+                            <!-- Internal Level -->
+                            <rect x="50" y="105" width="100" height="25" rx="3" fill="var(--card-bg)" stroke="currentColor" stroke-width="1.5"/>
+                            <text x="100" y="121" font-size="10" font-weight="bold" text-anchor="middle" fill="currentColor">Internal Level</text>
+                            
+                            <!-- Arrows from External to Conceptual -->
+                            <path d="M 35 40 L 75 60" stroke="currentColor" stroke-dasharray="2,2"/>
+                            <path d="M 100 40 L 100 60" stroke="currentColor" stroke-dasharray="2,2"/>
+                            <path d="M 165 40 L 125 60" stroke="currentColor" stroke-dasharray="2,2"/>
+                            
+                            <!-- Arrow from Conceptual to Internal -->
+                            <path d="M 100 85 L 100 105" stroke="currentColor"/>
+                        </svg>
+                    </div>
+                    <ul style="margin-top:0.5rem">
+                        <li><strong>External:</strong> End-user views.</li>
+                        <li><strong>Conceptual:</strong> DBA level, schema & logic.</li>
+                        <li><strong>Internal:</strong> Storage, indexing, physical paths.</li>
+                    </ul>
+                </div>
+
+                <div class="cheat-card">
+                    <h4>Keys in Relational Model <span class="badge unit-1">U1</span></h4>
+                    <dl class="def-list">
+                        <dt>Super Key</dt><dd>Any combination identifying a row.</dd>
+                        <dt>Candidate Key</dt><dd>Minimal super key (no redundant columns).</dd>
+                        <dt>Primary Key (PK)</dt><dd>Chosen candidate key. Unique, NOT NULL.</dd>
+                        <dt>Foreign Key (FK)</dt><dd>Refers to PK in another table.</dd>
+                    </dl>
+                </div>
+
+                <div class="cheat-card">
+                    <h4>Normalization Forms <span class="badge unit-1">U1</span></h4>
+                    <table>
+                        <tr><th>Form</th><th>Rule to Satisfy</th></tr>
+                        <tr><td><strong>1NF</strong></td><td>Atomic values, no repeating groups.</td></tr>
+                        <tr><td><strong>2NF</strong></td><td>1NF + No partial dependencies (depends on whole PK).</td></tr>
+                        <tr><td><strong>3NF</strong></td><td>2NF + No transitive dependencies (non-key relies on non-key).</td></tr>
+                        <tr><td><strong>BCNF</strong></td><td>3NF + Every determinant is a candidate key.</td></tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- UNIT 2 -->
+        <div class="unit-section" id="unit2">
+            <h3>Unit II: Relational Database Concepts <span class="badge unit-2">CO2</span></h3>
+            <div class="cheat-grid">
+                
+                <div class="cheat-card">
+                    <h4>Relational Algebra <span class="badge unit-2">U2</span></h4>
+                    <dl class="def-list" style="display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 1rem;">
+                        <dt>&sigma; (Select)</dt><dd>Filters rows: <code>&sigma;<sub>age>20</sub>(Student)</code></dd>
+                        <dt>&pi; (Project)</dt><dd>Filters cols: <code>&pi;<sub>name, id</sub>(Student)</code></dd>
+                        <dt>&bowtie; (Join)</dt><dd>Combines tables on condition</dd>
+                        <dt>&times; (Cartesian)</dt><dd>Cross product</dd>
+                        <dt>&cup; (Union)</dt><dd>Combines result sets (must be union-compatible)</dd>
+                    </dl>
+                </div>
+
+                <div class="cheat-card">
+                    <h4>Types of Joins <span class="badge unit-2">U2</span></h4>
+                    <div class="compact-svg">
+                        <svg viewBox="15 10 135 120" style="width: 100%; height: auto; max-height: 280px; margin: 1rem 0;">
+                            <!-- Inner -->
+                            <circle cx="35" cy="30" r="20" fill="none" stroke="currentColor"/>
+                            <circle cx="60" cy="30" r="20" fill="none" stroke="currentColor"/>
+                            <path d="M 47.5 13 A 20 20 0 0 0 47.5 47 A 20 20 0 0 0 47.5 13 Z" fill="var(--primary-teal)"/>
+                            <text x="47.5" y="63" font-size="10" text-anchor="middle" fill="currentColor">INNER</text>
+                            
+                            <!-- Left -->
+                            <circle cx="105" cy="30" r="20" fill="var(--primary-teal)" stroke="currentColor"/>
+                            <circle cx="130" cy="30" r="20" fill="var(--card-bg)" stroke="currentColor"/>
+                            <path d="M 117.5 13 A 20 20 0 0 0 117.5 47 A 20 20 0 0 0 117.5 13 Z" fill="var(--primary-teal)"/>
+                            <text x="117.5" y="63" font-size="10" text-anchor="middle" fill="currentColor">LEFT</text>
+
+                            <!-- Right -->
+                            <circle cx="35" cy="90" r="20" fill="var(--card-bg)" stroke="currentColor"/>
+                            <circle cx="60" cy="90" r="20" fill="var(--primary-teal)" stroke="currentColor"/>
+                            <path d="M 47.5 73 A 20 20 0 0 0 47.5 107 A 20 20 0 0 0 47.5 73 Z" fill="var(--primary-teal)"/>
+                            <text x="47.5" y="123" font-size="10" text-anchor="middle" fill="currentColor">RIGHT</text>
+                            
+                            <!-- Full -->
+                            <circle cx="105" cy="90" r="20" fill="var(--primary-teal)" stroke="currentColor"/>
+                            <circle cx="130" cy="90" r="20" fill="var(--primary-teal)" stroke="currentColor"/>
+                            <text x="117.5" y="123" font-size="10" text-anchor="middle" fill="currentColor">FULL</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="cheat-card">
+                    <h4>Aggregates & Group By <span class="badge unit-2">U2</span></h4>
+                    <pre><code><span class="kw">SELECT</span> Dept, <span class="kw">COUNT</span>(*), <span class="kw">AVG</span>(Salary)
+<span class="kw">FROM</span> Employees
+<span class="kw">WHERE</span> Status = <span class="str">'Active'</span>
+<span class="kw">GROUP BY</span> Dept
+<span class="kw">HAVING</span> <span class="kw">COUNT</span>(*) > 5
+<span class="kw">ORDER BY</span> Dept <span class="kw">DESC</span>;</code></pre>
+                    <p><strong>Note:</strong> WHERE filters rows <em>before</em> grouping; HAVING filters <em>after</em> grouping.</p>
+                </div>
+                
+                <div class="cheat-card">
+                    <h4>Views <span class="badge unit-2">U2</span></h4>
+                    <p>Virtual tables based on queries. Do not store data directly (usually).</p>
+                    <pre><code><span class="kw">CREATE VIEW</span> HighEarners <span class="kw">AS</span>
+<span class="kw">SELECT</span> Name, Salary 
+<span class="kw">FROM</span> Employee <span class="kw">WHERE</span> Salary > 90000;</code></pre>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- UNIT 3 -->
+        <div class="unit-section" id="unit3">
+            <h3>Unit III: Structured Query Language (SQL) <span class="badge unit-3">CO3</span></h3>
+            <div class="cheat-grid">
+                
+                <div class="cheat-card">
+                    <h4>DDL (Data Definition) <span class="badge unit-3">U3</span></h4>
+                    <pre><code><span class="kw">CREATE TABLE</span> Students (
+  ID <span class="type">INT PRIMARY KEY</span>,
+  Email <span class="type">VARCHAR</span>(50) <span class="kw">UNIQUE NOT NULL</span>,
+  Age <span class="type">INT CHECK</span> (Age >= 18),
+  DeptID <span class="type">INT</span>,
+  <span class="kw">FOREIGN KEY</span> (DeptID) <span class="kw">REFERENCES</span> Dept(ID)
+);</code></pre>
+                </div>
+
+                <div class="cheat-card">
+                    <h4>DML (Data Manipulation) <span class="badge unit-3">U3</span></h4>
+                    <pre><code><span class="type">-- Insert</span>
+<span class="kw">INSERT INTO</span> Tbl (Col1, Col2) <span class="kw">VALUES</span> (1, <span class="str">'A'</span>);
+
+<span class="type">-- Update</span>
+<span class="kw">UPDATE</span> Tbl <span class="kw">SET</span> Col2 = <span class="str">'B'</span> <span class="kw">WHERE</span> Col1 = 1;
+
+<span class="type">-- Delete</span>
+<span class="kw">DELETE FROM</span> Tbl <span class="kw">WHERE</span> Col1 = 1;</code></pre>
+                </div>
+
+                <div class="cheat-card">
+                    <h4>TCL (Transaction Control) <span class="badge unit-3">U3</span></h4>
+                    <dl class="def-list">
+                        <dt>COMMIT</dt><dd>Save changes permanently.</dd>
+                        <dt>ROLLBACK</dt><dd>Undo changes to last commit.</dd>
+                        <dt>SAVEPOINT</dt><dd>Set a marker for partial rollback.</dd>
+                    </dl>
+                    <pre><code><span class="kw">SAVEPOINT</span> SP1;
+<span class="kw">ROLLBACK TO</span> SP1;</code></pre>
+                </div>
+
+                <div class="cheat-card">
+                    <h4>Triggers & Procedures <span class="badge unit-3">U3</span></h4>
+                    <dl class="def-list">
+                        <dt>Stored Procedure</dt><dd>Precompiled block of SQL to run logic via <code>CALL/EXEC</code>.</dd>
+                        <dt>Trigger</dt><dd>Auto-executes BEFORE or AFTER an <code>INSERT/UPDATE/DELETE</code> event.</dd>
+                        <dt>Cursor</dt><dd>Allows row-by-row iteration in PL/SQL logic.</dd>
+                    </dl>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- UNIT 4 -->
+        <div class="unit-section" id="unit4">
+            <h3>Unit IV: Transaction Processing <span class="badge marks">CO4</span></h3>
+            <div class="cheat-grid">
+                
+                <div class="cheat-card">
+                    <h4>ACID Properties <span class="badge marks">U4</span></h4>
+                    <dl class="def-list">
+                        <dt>Atomicity</dt><dd>All or nothing (Commit/Rollback).</dd>
+                        <dt>Consistency</dt><dd>Transforms DB from one valid state to another.</dd>
+                        <dt>Isolation</dt><dd>Concurrent txns do not interfere.</dd>
+                        <dt>Durability</dt><dd>Committed data is saved permanently.</dd>
+                    </dl>
+                </div>
+
+                <div class="cheat-card">
+                    <h4>Concurrency Control (Locks) <span class="badge marks">U4</span></h4>
+                    <ul>
+                        <li><strong>Shared Lock (S):</strong> Allows reading. Multiple txns can hold S locks on same item.</li>
+                        <li><strong>Exclusive Lock (X):</strong> Allows reading & writing. Only one txn can hold X lock.</li>
+                    </ul>
+                    <p><strong>Two-Phase Locking (2PL):</strong> Growing Phase (acquire locks) &rarr; Shrinking Phase (release locks). Guarantees serializability.</p>
+                </div>
+
+                <div class="cheat-card">
+                    <h4>Indexing (B & B+ Trees) <span class="badge marks">U4</span></h4>
+                    <div class="compact-svg">
+                        <svg viewBox="0 0 200 100" style="width: 100%; height: auto; max-height: 200px;">
+                            <!-- Root Node -->
+                            <rect x="75" y="10" width="50" height="20" rx="3" fill="var(--card-bg)" stroke="currentColor" stroke-width="1.5"/>
+                            <text x="100" y="24" font-size="12" font-weight="bold" text-anchor="middle" fill="currentColor">Root</text>
+                            
+                            <!-- Edges to children -->
+                            <path d="M 100 30 L 45 50" stroke="currentColor" stroke-width="1"/>
+                            <path d="M 100 30 L 100 50" stroke="currentColor" stroke-width="1"/>
+                            <path d="M 100 30 L 155 50" stroke="currentColor" stroke-width="1"/>
+
+                            <!-- Child Nodes -->
+                            <rect x="20" y="50" width="50" height="20" rx="3" fill="var(--card-bg)" stroke="currentColor" stroke-width="1"/>
+                            <text x="45" y="64" font-size="10" text-anchor="middle" fill="currentColor">Leaf</text>
+
+                            <rect x="75" y="50" width="50" height="20" rx="3" fill="var(--card-bg)" stroke="currentColor" stroke-width="1"/>
+                            <text x="100" y="64" font-size="10" text-anchor="middle" fill="currentColor">Leaf</text>
+
+                            <rect x="130" y="50" width="50" height="20" rx="3" fill="var(--card-bg)" stroke="currentColor" stroke-width="1"/>
+                            <text x="155" y="64" font-size="10" text-anchor="middle" fill="currentColor">Leaf</text>
+                            
+                            <!-- B+ Tree Linked List arrows -->
+                            <path d="M 70 60 L 75 60" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2,2"/>
+                            <path d="M 125 60 L 130 60" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2,2"/>
+                            
+                            <!-- Caption -->
+                            <text x="100" y="90" font-size="10" text-anchor="middle" fill="currentColor">B+ Tree: Leaves linked, data at bottom</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="cheat-card">
+                    <h4>Deadlocks & Recovery <span class="badge marks">U4</span></h4>
+                    <dl class="def-list">
+                        <dt>Wait-For Graph</dt><dd>Used to detect deadlocks (cycles = deadlock).</dd>
+                        <dt>Log-based Recovery</dt><dd>Uses Write-Ahead Logging (WAL). REDO applied for committed, UNDO applied for failed txns.</dd>
+                        <dt>Checkpoints</dt><dd>Saves state to disk to reduce recovery time.</dd>
+                    </dl>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- UNIT 5 -->
+        <div class="unit-section" id="unit5">
+            <h3>Unit V: Advanced DB & MongoDB <span class="badge marks">CO5</span></h3>
+            <div class="cheat-grid">
+                
+                <div class="cheat-card">
+                    <h4>RDBMS vs NoSQL <span class="badge marks">U5</span></h4>
+                    <table>
+                        <tr><th>Aspect</th><th>RDBMS</th><th>NoSQL</th></tr>
+                        <tr><td>Schema</td><td>Rigid (Tables)</td><td>Dynamic (Docs)</td></tr>
+                        <tr><td>Scaling</td><td>Vertical (CPU/RAM)</td><td>Horizontal (Nodes)</td></tr>
+                        <tr><td>Relations</td><td>Foreign Keys</td><td>Embed/Ref</td></tr>
+                        <tr><td>ACID</td><td>Strict</td><td>Eventual Consistency</td></tr>
+                    </table>
+                </div>
+
+                <div class="cheat-card">
+                    <h4>MongoDB Architecture <span class="badge marks">U5</span></h4>
+                    <ul>
+                        <li><strong>Database</strong> &rarr; Contains Collections.</li>
+                        <li><strong>Collection</strong> &rarr; Group of Documents (like Table).</li>
+                        <li><strong>Document</strong> &rarr; JSON/BSON object (like Row).</li>
+                        <li><strong>Field</strong> &rarr; Key-value pair (like Column).</li>
+                        <li><strong>_id</strong> &rarr; Unique primary key for every document.</li>
+                    </ul>
+                </div>
+
+                <div class="cheat-card">
+                    <h4>Mongo CRUD Syntax <span class="badge marks">U5</span></h4>
+                    <pre><code><span class="type">// Insert</span>
+db.users.insertOne({ name: <span class="str">"Alice"</span>, age: 22 })
+
+<span class="type">// Find (Select)</span>
+db.users.find({ age: { $gt: 20 } })
+
+<span class="type">// Update</span>
+db.users.updateOne(
+  { name: <span class="str">"Alice"</span> }, 
+  { $set: { age: 23 } }
+)
+
+<span class="type">// Delete</span>
+db.users.deleteOne({ name: <span class="str">"Alice"</span> })</code></pre>
+                </div>
+                
+                <div class="cheat-card">
+                    <h4>Aggregation & Replication <span class="badge marks">U5</span></h4>
+                    <dl class="def-list">
+                        <dt>Pipeline</dt><dd>Stages for processing data: <code>$match &rarr; $group &rarr; $sort</code></dd>
+                        <dt>Replica Set</dt><dd>Group of mongod instances holding same data set. 1 Primary (writes), N Secondaries (reads/failover).</dd>
+                    </dl>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- INTERACTIVITY SCRIPT -->
+        </div>
+</div>
+<script src="../../shared/app-utils.js"></script>
+﻿    
+    <!-- Standalone Ask AI FAB (Bottom Left) -->
+    <button class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI" aria-label="Ask AI">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2zM12 8c2.2 0 4 1.8 4 4v5c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-5c0-2.2 1.8-4 4-4zM6 12v5h2v-5H6zm10 0v5h2v-5h-2z"/></svg>
+    </button>
+
+    <!-- Ask AI Chat Widget -->
+    <div id="assistantModal" class="ask-ai-widget" style="display: none; flex-direction: column; background: rgba(15,15,20,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); overflow: hidden; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0; transform: translateY(20px); pointer-events: auto;">
+        <div class="modal-header" style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <h2 id="aiModalTitle" style="margin: 0; font-size: 1.25rem;">Ask AI <span style="font-size: 0.8em; font-weight: normal; color: var(--text-muted);">(Lite)</span></h2>
+                <label style="display: flex; align-items: center; gap: 6px; font-size: 0.85em; color: var(--text-muted); cursor: pointer; border: 1px solid rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; background: rgba(0,0,0,0.2);">
+                    <input type="checkbox" id="deepModeToggle" onchange="window.assistantLLMInstance && window.assistantLLMInstance.toggleDeepMode ? window.assistantLLMInstance.toggleDeepMode(this.checked) : (this.checked = false, alert('Deep Mode not supported in pure Lite mode.'))" style="accent-color: var(--primary-teal);">
+                    Deep mode
+                </label>
+                
+            </div>
+            
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" aria-label="Close modal" onclick="closeAssistant()" style="background: none; border: none; color: var(--text-muted); cursor: pointer;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <div id="assistantMessages" class="modal-body" style="flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; scrollbar-width: thin;">
+            <div class="msg assistant" style="padding: 1rem; border-radius: 8px; background: rgba(255,255,255,0.05); border-left: 3px solid var(--primary-blue); line-height: 1.5;">
+                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.
+            </div>
+        </div>
+        <div class="assistant-input-area" style="padding: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <form id="assistantForm" onsubmit="event.preventDefault(); submitAssistantQuery();" style="display: flex; gap: 0.5rem;">
+                <input type="text" id="assistantInput" autocomplete="off" placeholder="Ask something..." style="flex: 1; padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: white;">
+                <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1rem;">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let assistantApp = null;
+        async function openAssistant() {
+            if (document.querySelector('.ask-ai-btn') && document.querySelector('.ask-ai-btn').getAttribute('data-dragged') === 'true') return;
+            const modal = document.getElementById('assistantModal');
+            if (modal.style.display === 'flex') {
+                closeAssistant();
+                return;
+            }
+            modal.style.display = 'flex';
+            // slight delay for transition
+            setTimeout(() => {
+                modal.style.opacity = '1';
+                modal.style.transform = 'translateY(0)';
+            }, 10);
+            document.getElementById('assistantInput').focus();
+            if (!assistantApp) {
+                try {
+                    const { initAssistant } = await import('../../shared/assistant-ui.js');
+                    assistantApp = await initAssistant('dbms');
+                    if (!assistantApp) throw new Error("App init failed");
+                } catch (e) {
+                    const msgs = document.getElementById('assistantMessages');
+                    msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
+                }
+            }
+        }
+        function closeAssistant() {
+            const modal = document.getElementById('assistantModal');
+            modal.style.opacity = '0';
+            modal.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+        function submitAssistantQuery(q) {
+            const input = document.getElementById('assistantInput');
+            const query = q || input.value.trim();
+            if (!query) return;
+            if (!assistantApp) {
+                const msgs = document.getElementById('assistantMessages');
+                msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
+                return;
+            }
+            input.value = '';
+            assistantApp.handleQuery(query);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+[
+    {
+        "id": "48a5dd1c-1571-4969-b99c-ca81a74e15ad",
+        "type": "mcq",
+        "question": "Which sorting algorithm is described by: repeatedly swap adjacent out-of-order elements?",
+        "options": [
+            "Bubble Sort",
+            "Merge Sort",
+            "Quick Sort",
+            "Heap Sort"
+        ],
+        "correct_answer": "Bubble Sort",
+        "explanation": "Bubble Sort is repeatedly swap adjacent out-of-order elements"
+    },
+    {
+        "id": "2383849f-977e-4997-b401-47ef4e2023df",
+        "type": "mcq",
+        "question": "Which sorting algorithm is described by: divide array in half, sort, and merge?",
+        "options": [
+            "Bubble Sort",
+            "Merge Sort",
+            "Quick Sort",
+            "Heap Sort"
+        ],
+        "correct_answer": "Merge Sort",
+        "explanation": "Merge Sort is divide array in half, sort, and merge"
+    },
+    {
+        "id": "c02e9cc1-9e66-4e65-8ab4-02f737b6d0d8",
+        "type": "mcq",
+        "question": "Which sorting algorithm is described by: partition array around a pivot?",
+        "options": [
+            "Bubble Sort",
+            "Merge Sort",
+            "Quick Sort",
+            "Heap Sort"
+        ],
+        "correct_answer": "Quick Sort",
+        "explanation": "Quick Sort is partition array around a pivot"
+    },
+    {
+        "id": "e9f4418f-8b06-4932-8a20-ccc84c0715fd",
+        "type": "mcq",
+        "question": "Which sorting algorithm is described by: build a max heap and extract elements?",
+        "options": [
+            "Bubble Sort",
+            "Merge Sort",
+            "Quick Sort",
+            "Heap Sort"
+        ],
+        "correct_answer": "Heap Sort",
+        "explanation": "Heap Sort is build a max heap and extract elements"
+    },
+    {
+        "id": "1228b8a7-1a78-4f61-a47c-83deb6515f74",
+        "type": "mcq",
+        "question": "Which sorting algorithm is described by: build sorted array one element at a time?",
+        "options": [
+            "Bubble Sort",
+            "Merge Sort",
+            "Quick Sort",
+            "Heap Sort"
+        ],
+        "correct_answer": "Insertion Sort",
+        "explanation": "Insertion Sort is build sorted array one element at a time"
+    },
+    {
+        "id": "5a50fdb1-ba9b-492e-9c32-6eb8299f50eb",
+        "type": "mcq",
+        "question": "Which sorting algorithm is described by: repeatedly find minimum element?",
+        "options": [
+            "Bubble Sort",
+            "Merge Sort",
+            "Quick Sort",
+            "Heap Sort"
+        ],
+        "correct_answer": "Selection Sort",
+        "explanation": "Selection Sort is repeatedly find minimum element"
+    },
+    {
+        "id": "a7e82dd4-69ac-480d-b37b-878ee2cac424",
+        "type": "short_answer",
+        "question": "What algorithm/complexity matches: constant time complexity?",
+        "options": [],
+        "correct_answer": "O(1)",
+        "explanation": "O(1) corresponds to constant time complexity"
+    },
+    {
+        "id": "b8eabb31-c886-45e5-85f5-543fbf045324",
+        "type": "short_answer",
+        "question": "What algorithm/complexity matches: logarithmic time complexity?",
+        "options": [],
+        "correct_answer": "O(log n)",
+        "explanation": "O(log n) corresponds to logarithmic time complexity"
+    },
+    {
+        "id": "0c94623c-1792-4319-b9bf-0199d7aaea36",
+        "type": "short_answer",
+        "question": "What algorithm/complexity matches: linear time complexity?",
+        "options": [],
+        "correct_answer": "O(n)",
+        "explanation": "O(n) corresponds to linear time complexity"
+    },
+    {
+        "id": "f95bc94a-8abc-4189-a42f-fd8e36917151",
+        "type": "short_answer",
+        "question": "What algorithm/complexity matches: linearithmic time complexity?",
+        "options": [],
+        "correct_answer": "O(n log n)",
+        "explanation": "O(n log n) corresponds to linearithmic time complexity"
+    },
+    {
+        "id": "1b3df1ea-cc7e-4163-8508-3e167c70d326",
+        "type": "short_answer",
+        "question": "What algorithm/complexity matches: quadratic time complexity?",
+        "options": [],
+        "correct_answer": "O(n^2)",
+        "explanation": "O(n^2) corresponds to quadratic time complexity"
+    },
+    {
+        "id": "2804324f-f073-4367-9e3d-9e1cc9d1b888",
+        "type": "short_answer",
+        "question": "What algorithm/complexity matches: exponential time complexity?",
+        "options": [],
+        "correct_answer": "O(2^n)",
+        "explanation": "O(2^n) corresponds to exponential time complexity"
+    },
+    {
+        "id": "30534ac5-e867-4497-9b14-f31a50b20811",
+        "type": "short_answer",
+        "question": "What algorithm/complexity matches: shortest path from single source?",
+        "options": [],
+        "correct_answer": "Dijkstra",
+        "explanation": "Dijkstra corresponds to shortest path from single source"
+    },
+    {
+        "id": "fcb0b3da-5346-4deb-b28e-07780e84ee98",
+        "type": "short_answer",
+        "question": "What algorithm/complexity matches: shortest path with negative edges?",
+        "options": [],
+        "correct_answer": "Bellman-Ford",
+        "explanation": "Bellman-Ford corresponds to shortest path with negative edges"
+    },
+    {
+        "id": "149f2e9d-284b-4e65-8b1d-94a5cb3f6d79",
+        "type": "short_answer",
+        "question": "What algorithm/complexity matches: all-pairs shortest path?",
+        "options": [],
+        "correct_answer": "Floyd-Warshall",
+        "explanation": "Floyd-Warshall corresponds to all-pairs shortest path"
+    },
+    {
+        "id": "fbee6456-9439-4c7c-b661-c2519dd310ce",
+        "type": "short_answer",
+        "question": "What algorithm/complexity matches: MST using sorted edges and disjoint sets?",
+        "options": [],
+        "correct_answer": "Kruskal",
+        "explanation": "Kruskal corresponds to MST using sorted edges and disjoint sets"
+    },
+    {
+        "id": "03362fad-3aa6-4d53-b23a-b66a7c4d375e",
+        "type": "short_answer",
+        "question": "What algorithm/complexity matches: MST growing from a starting vertex?",
+        "options": [],
+        "correct_answer": "Prim",
+        "explanation": "Prim corresponds to MST growing from a starting vertex"
+    },
+    {
+        "id": "f82ac476-312e-45dd-9d1a-aaa6ff314a3d",
+        "type": "short_answer",
+        "question": "What algorithm/complexity matches: explore graph layer by layer?",
+        "options": [],
+        "correct_answer": "BFS",
+        "explanation": "BFS corresponds to explore graph layer by layer"
+    },
+    {
+        "id": "1a878940-8901-419d-9dd4-006ba2dee3bf",
+        "type": "short_answer",
+        "question": "What algorithm/complexity matches: explore graph deeply before backtracking?",
+        "options": [],
+        "correct_answer": "DFS",
+        "explanation": "DFS corresponds to explore graph deeply before backtracking"
+    },
+    {
+        "id": "1aab955b-9f2c-4e1d-b95f-448f8d3dfe54",
+        "type": "short_answer",
+        "question": "What algorithm/complexity matches: linear ordering of DAG vertices?",
+        "options": [],
+        "correct_answer": "Topological Sort",
+        "explanation": "Topological Sort corresponds to linear ordering of DAG vertices"
+    },
+    {
+        "id": "01b19b81-251f-4474-81a0-b4313e79558d",
+        "type": "code",
+        "question": "Write the python construct/function definition for binary search function.",
+        "options": [],
+        "correct_answer": "def binary_search",
+        "explanation": "def binary_search implements binary search function"
+    },
+    {
+        "id": "5cce215f-3692-4042-a1ad-7360ba802e26",
+        "type": "code",
+        "question": "Write the python construct/function definition for merge step of merge sort.",
+        "options": [],
+        "correct_answer": "def merge",
+        "explanation": "def merge implements merge step of merge sort"
+    },
+    {
+        "id": "eb3608e7-87a1-4f62-bb69-16ea98168b35",
+        "type": "code",
+        "question": "Write the python construct/function definition for partition step of quick sort.",
+        "options": [],
+        "correct_answer": "def partition",
+        "explanation": "def partition implements partition step of quick sort"
+    },
+    {
+        "id": "40c44232-366b-4116-b540-7ca16bfcc1c4",
+        "type": "code",
+        "question": "Write the python construct/function definition for dynamic programming table.",
+        "options": [],
+        "correct_answer": "dp[]",
+        "explanation": "dp[] implements dynamic programming table"
+    },
+    {
+        "id": "62943513-0c0b-4e1a-87fe-62adadf7fdf6",
+        "type": "code",
+        "question": "Write the python construct/function definition for memoization dictionary.",
+        "options": [],
+        "correct_answer": "memo = {}",
+        "explanation": "memo = {} implements memoization dictionary"
+    },
+    {
+        "id": "2a4dce7a-3268-4fb6-a7bc-1fe677858886",
+        "type": "code",
+        "question": "Write the python construct/function definition for enqueue operation.",
+        "options": [],
+        "correct_answer": "queue.append",
+        "explanation": "queue.append implements enqueue operation"
+    },
+    {
+        "id": "26c8960f-099f-4e08-a0cb-e8298582ad23",
+        "type": "code",
+        "question": "Write the python construct/function definition for dequeue operation.",
+        "options": [],
+        "correct_answer": "queue.popleft",
+        "explanation": "queue.popleft implements dequeue operation"
+    },
+    {
+        "id": "8e6ef7c1-d903-4286-aa10-046c6accd174",
+        "type": "code",
+        "question": "Write the python construct/function definition for push operation.",
+        "options": [],
+        "correct_answer": "stack.append",
+        "explanation": "stack.append implements push operation"
+    },
+    {
+        "id": "b2956d5f-8d3b-4d4a-a567-d50e2d64f873",
+        "type": "code",
+        "question": "Write the python construct/function definition for pop operation.",
+        "options": [],
+        "correct_answer": "stack.pop",
+        "explanation": "stack.pop implements pop operation"
+    },
+    {
+        "id": "7bdbc184-4a81-4196-914a-8e4a44832aa1",
+        "type": "code",
+        "question": "Write the python construct/function definition for mark node as visited.",
+        "options": [],
+        "correct_answer": "visited.add",
+        "explanation": "visited.add implements mark node as visited"
+    }
+]

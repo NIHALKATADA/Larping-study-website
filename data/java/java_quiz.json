@@ -1,0 +1,292 @@
+[
+    {
+        "id": "a4f4b4e2-65bf-4e33-b02b-a9593c7c02e3",
+        "type": "short_answer",
+        "question": "What term refers to hiding internal state in Java?",
+        "options": [],
+        "correct_answer": "Encapsulation",
+        "explanation": "Encapsulation is hiding internal state"
+    },
+    {
+        "id": "c6f7c495-8ce2-4675-8bcc-803f5b991ad7",
+        "type": "short_answer",
+        "question": "What term refers to ability to take many forms in Java?",
+        "options": [],
+        "correct_answer": "Polymorphism",
+        "explanation": "Polymorphism is ability to take many forms"
+    },
+    {
+        "id": "ea148b00-af74-4699-a6bf-454a5f5c318d",
+        "type": "short_answer",
+        "question": "What term refers to acquiring properties of another class in Java?",
+        "options": [],
+        "correct_answer": "Inheritance",
+        "explanation": "Inheritance is acquiring properties of another class"
+    },
+    {
+        "id": "cd7f8fcf-b970-4226-b8cf-51506ed1405e",
+        "type": "short_answer",
+        "question": "What term refers to hiding implementation details in Java?",
+        "options": [],
+        "correct_answer": "Abstraction",
+        "explanation": "Abstraction is hiding implementation details"
+    },
+    {
+        "id": "0ea474c4-420a-427c-95a9-046d7f8fa797",
+        "type": "mcq",
+        "question": "Which Java feature/exception relates to: same method name, different parameters?",
+        "options": [
+            "Method overloading",
+            "Method overriding",
+            "final",
+            "static"
+        ],
+        "correct_answer": "Method overloading",
+        "explanation": "Method overloading maps to same method name, different parameters"
+    },
+    {
+        "id": "e539ee32-7426-4c62-b987-2729a51738a1",
+        "type": "mcq",
+        "question": "Which Java feature/exception relates to: same method signature in subclass?",
+        "options": [
+            "Method overloading",
+            "Method overriding",
+            "final",
+            "static"
+        ],
+        "correct_answer": "Method overriding",
+        "explanation": "Method overriding maps to same method signature in subclass"
+    },
+    {
+        "id": "08ae2c1f-30d6-423e-97d0-75a35c9d4328",
+        "type": "mcq",
+        "question": "Which Java feature/exception relates to: prevents inheritance or modification?",
+        "options": [
+            "Method overloading",
+            "Method overriding",
+            "final",
+            "static"
+        ],
+        "correct_answer": "final",
+        "explanation": "final maps to prevents inheritance or modification"
+    },
+    {
+        "id": "89197142-4a53-4ba6-afe9-e23d5da3c453",
+        "type": "mcq",
+        "question": "Which Java feature/exception relates to: belongs to the class rather than instance?",
+        "options": [
+            "Method overloading",
+            "Method overriding",
+            "final",
+            "static"
+        ],
+        "correct_answer": "static",
+        "explanation": "static maps to belongs to the class rather than instance"
+    },
+    {
+        "id": "b9413c51-a207-4fd1-9529-5d20d7b3a62a",
+        "type": "mcq",
+        "question": "Which Java feature/exception relates to: class that cannot be instantiated?",
+        "options": [
+            "Method overloading",
+            "Method overriding",
+            "final",
+            "static"
+        ],
+        "correct_answer": "abstract",
+        "explanation": "abstract maps to class that cannot be instantiated"
+    },
+    {
+        "id": "2179f3d6-b2b2-4eb9-98f8-90786ad2adf9",
+        "type": "mcq",
+        "question": "Which Java feature/exception relates to: contract for classes to implement?",
+        "options": [
+            "Method overloading",
+            "Method overriding",
+            "final",
+            "static"
+        ],
+        "correct_answer": "interface",
+        "explanation": "interface maps to contract for classes to implement"
+    },
+    {
+        "id": "4c8db6f1-6c12-4ff1-9e1e-6dd9add7341b",
+        "type": "short_answer",
+        "question": "What term refers to dynamic array implementation in Java?",
+        "options": [],
+        "correct_answer": "ArrayList",
+        "explanation": "ArrayList is dynamic array implementation"
+    },
+    {
+        "id": "b1146e94-a131-4264-a2e3-16f0ae6f4b2b",
+        "type": "short_answer",
+        "question": "What term refers to doubly-linked list implementation in Java?",
+        "options": [],
+        "correct_answer": "LinkedList",
+        "explanation": "LinkedList is doubly-linked list implementation"
+    },
+    {
+        "id": "04824614-86ad-43ac-9466-a01f918b240e",
+        "type": "short_answer",
+        "question": "What term refers to key-value storage using hashing in Java?",
+        "options": [],
+        "correct_answer": "HashMap",
+        "explanation": "HashMap is key-value storage using hashing"
+    },
+    {
+        "id": "879e6761-3143-4959-a3e6-269133bf718b",
+        "type": "short_answer",
+        "question": "What term refers to collection with no duplicates in Java?",
+        "options": [],
+        "correct_answer": "HashSet",
+        "explanation": "HashSet is collection with no duplicates"
+    },
+    {
+        "id": "d40dc16e-449f-4c47-b7b2-8ea466d3c0ec",
+        "type": "short_answer",
+        "question": "What term refers to sorted key-value storage in Java?",
+        "options": [],
+        "correct_answer": "TreeMap",
+        "explanation": "TreeMap is sorted key-value storage"
+    },
+    {
+        "id": "6d43a0c2-ed19-42c3-b3b4-5957fba26b7f",
+        "type": "short_answer",
+        "question": "What term refers to queue based on priority heap in Java?",
+        "options": [],
+        "correct_answer": "PriorityQueue",
+        "explanation": "PriorityQueue is queue based on priority heap"
+    },
+    {
+        "id": "949745ec-8bd2-4ef0-a47d-148e1ec195b6",
+        "type": "mcq",
+        "question": "Which Java feature/exception relates to: accessing method on null object?",
+        "options": [
+            "NullPointerException",
+            "ArrayIndexOutOfBoundsException",
+            "ClassCastException",
+            "ArithmeticException"
+        ],
+        "correct_answer": "NullPointerException",
+        "explanation": "NullPointerException maps to accessing method on null object"
+    },
+    {
+        "id": "1a769844-1957-4be5-83ad-b8b31ee2115b",
+        "type": "mcq",
+        "question": "Which Java feature/exception relates to: accessing invalid array index?",
+        "options": [
+            "NullPointerException",
+            "ArrayIndexOutOfBoundsException",
+            "ClassCastException",
+            "ArithmeticException"
+        ],
+        "correct_answer": "ArrayIndexOutOfBoundsException",
+        "explanation": "ArrayIndexOutOfBoundsException maps to accessing invalid array index"
+    },
+    {
+        "id": "68800bcd-736b-448d-99a5-0ba521209362",
+        "type": "mcq",
+        "question": "Which Java feature/exception relates to: invalid cast between types?",
+        "options": [
+            "NullPointerException",
+            "ArrayIndexOutOfBoundsException",
+            "ClassCastException",
+            "ArithmeticException"
+        ],
+        "correct_answer": "ClassCastException",
+        "explanation": "ClassCastException maps to invalid cast between types"
+    },
+    {
+        "id": "ac09c99e-baa4-4790-abf9-67270aa4bdfe",
+        "type": "mcq",
+        "question": "Which Java feature/exception relates to: dividing by zero?",
+        "options": [
+            "NullPointerException",
+            "ArrayIndexOutOfBoundsException",
+            "ClassCastException",
+            "ArithmeticException"
+        ],
+        "correct_answer": "ArithmeticException",
+        "explanation": "ArithmeticException maps to dividing by zero"
+    },
+    {
+        "id": "d98b42cc-a2a2-460a-b74a-efc32b59d3a9",
+        "type": "code",
+        "question": "Write code using Thread keyword/class.",
+        "options": [],
+        "correct_answer": "Thread example;",
+        "explanation": "Uses Thread for class to create a new thread"
+    },
+    {
+        "id": "7d76fcc2-6dba-40d6-a3d7-ee7b71ac9213",
+        "type": "code",
+        "question": "Write code using Runnable keyword/class.",
+        "options": [],
+        "correct_answer": "Runnable example;",
+        "explanation": "Uses Runnable for interface to create a new thread"
+    },
+    {
+        "id": "320020b5-0d54-4ef2-a0ac-cb16f4c92566",
+        "type": "code",
+        "question": "Write code using synchronized keyword/class.",
+        "options": [],
+        "correct_answer": "synchronized example;",
+        "explanation": "Uses synchronized for keyword for thread safety"
+    },
+    {
+        "id": "236582b4-de73-4aab-98ef-2ae630600dee",
+        "type": "code",
+        "question": "Write code using wait() keyword/class.",
+        "options": [],
+        "correct_answer": "wait() example;",
+        "explanation": "Uses wait() for method to pause thread execution"
+    },
+    {
+        "id": "95d1bef6-7044-4fd1-8c86-2f7789c8b5eb",
+        "type": "code",
+        "question": "Write code using notify() keyword/class.",
+        "options": [],
+        "correct_answer": "notify() example;",
+        "explanation": "Uses notify() for method to wake up a waiting thread"
+    },
+    {
+        "id": "9c57de06-addf-4aee-ab8f-fd4cd8a75b17",
+        "type": "code",
+        "question": "Write code using join() keyword/class.",
+        "options": [],
+        "correct_answer": "join() example;",
+        "explanation": "Uses join() for method to wait for thread termination"
+    },
+    {
+        "id": "3e9f4f09-016c-4c33-98de-2af7b02b0029",
+        "type": "code",
+        "question": "Write code using try keyword/class.",
+        "options": [],
+        "correct_answer": "try example;",
+        "explanation": "Uses try for block for code that may throw exceptions"
+    },
+    {
+        "id": "7af77b11-7579-46c1-a52f-0276e38bbcce",
+        "type": "code",
+        "question": "Write code using catch keyword/class.",
+        "options": [],
+        "correct_answer": "catch example;",
+        "explanation": "Uses catch for block to handle exceptions"
+    },
+    {
+        "id": "c41f8b11-c2a8-4251-a0b1-698e44eb19fb",
+        "type": "code",
+        "question": "Write code using finally keyword/class.",
+        "options": [],
+        "correct_answer": "finally example;",
+        "explanation": "Uses finally for block that always executes"
+    },
+    {
+        "id": "dc9022af-bc45-4fcd-8bae-8460ecd46168",
+        "type": "code",
+        "question": "Write code using throw keyword/class.",
+        "options": [],
+        "correct_answer": "throw example;",
+        "explanation": "Uses throw for keyword to manually raise an exception"
+    }
+]

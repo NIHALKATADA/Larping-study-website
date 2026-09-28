@@ -1,0 +1,2299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta name="view-transition" content="same-origin">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA - Midterm Important</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../shared/design-system.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body data-subject="java" style="background:#030303;">
+    <div class="glow-bg"></div>
+
+    <nav class="smart-topbar">
+        <div class="topbar-left">
+            <a href="../../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: var(--text-main);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                <span style="font-weight: 600; font-size: 1.1rem; letter-spacing: 0.5px;">Dashboard</span>
+            </a>
+        </div>
+        <div class="topbar-right">
+            <button onclick="downloadPDF()" class="btn btn-secondary" style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; padding: 0.4rem 0.8rem; background: rgba(255,255,255,0.1);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Save as PDF
+            </button>
+        </div>
+    </nav>
+
+<header class="banner">
+        
+        
+        
+        <h1>Object Oriented Programming using Java</h1>
+        <h2>Midterm Important Questions</h2>
+        <p class="scope-note">Important Only (Score 9.0+) | Units I, II, III</p>
+    
+        
+    </header>
+
+    <div class="layout-wrapper">
+    <!-- Filter Modal (FAB) -->
+    <div id="filterModal" class="glass-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Search & Filters</h3>
+                
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="controls-top">
+                    <div class="filter-section">
+                        <input type="search" id="search-box" class="search-bar" placeholder="Search questions by keyword...">
+                        <div class="filter-toggles">
+                            <label><input type="checkbox" class="unit-cb" value="I"> Unit I</label>
+                            <label><input type="checkbox" class="unit-cb" value="II"> Unit II</label>
+                            <label><input type="checkbox" class="unit-cb" value="III"> Unit III</label>
+                            <label><input type="checkbox" class="unit-cb" value="IV"> Unit IV</label>
+                            <label><input type="checkbox" class="unit-cb" value="V"> Unit V</label>
+                            <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
+                            <label><input type="checkbox" class="marks-cb" value="2"> 2 Marks</label>
+                            <label><input type="checkbox" class="marks-cb" value="3"> 3 Marks</label>
+                            <label><input type="checkbox" class="marks-cb" value="5"> 5 Marks</label>
+                            <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
+                            
+                            <label><input type="checkbox" class="reviewed-filter-cb"> Reviewed Only</label>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:flex; gap:0.5rem; margin-top:1rem; flex-wrap:wrap;">
+                    <button class="btn btn-primary" style="flex:1" onclick="toggleAllAnswers(); closeModal('filterModal')">Reveal All</button>
+                    <button class="btn btn-secondary" style="flex:1" onclick="clearFilters(); closeModal('filterModal')">Clear Filters</button>
+                    <button class="btn btn-secondary" style="flex:1" onclick="closeModal('filterModal')">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Jump Modal -->
+    <div id="jumpModal" class="glass-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Quick Jump</h3>
+                
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                
+                <div class="nav-group">
+                    <h4 style="color: var(--subject-color); margin-bottom: 0.5rem;">Unit I</h4>
+                    <ul class="quick-jump-list">
+                    
+                        <li><a href="#q7">Q7 (2 Marks)</a></li>
+                    
+                        <li><a href="#q8">Q8 (2 Marks)</a></li>
+                    
+                        <li><a href="#q13">Q13 (2 Marks)</a></li>
+                    
+                        <li><a href="#q24">Q24 (2 Marks)</a></li>
+                    
+                        <li><a href="#q31">Q31 (3 Marks)</a></li>
+                    
+                        <li><a href="#q33">Q33 (3 Marks)</a></li>
+                    
+                        <li><a href="#q39">Q39 (3 Marks)</a></li>
+                    
+                        <li><a href="#q40">Q40 (3 Marks)</a></li>
+                    
+                        <li><a href="#q61">Q61 (5 Marks)</a></li>
+                    
+                        <li><a href="#q63">Q63 (5 Marks)</a></li>
+                    
+                        <li><a href="#q69">Q69 (5 Marks)</a></li>
+                    
+                    </ul>
+                </div>
+                
+                <div class="nav-group">
+                    <h4 style="color: var(--subject-color); margin-bottom: 0.5rem;">Unit II</h4>
+                    <ul class="quick-jump-list">
+                    
+                        <li><a href="#q3">Q3 (2 Marks)</a></li>
+                    
+                        <li><a href="#q4">Q4 (2 Marks)</a></li>
+                    
+                        <li><a href="#q5">Q5 (2 Marks)</a></li>
+                    
+                        <li><a href="#q10">Q10 (2 Marks)</a></li>
+                    
+                        <li><a href="#q12">Q12 (2 Marks)</a></li>
+                    
+                        <li><a href="#q14">Q14 (2 Marks)</a></li>
+                    
+                        <li><a href="#q16">Q16 (2 Marks)</a></li>
+                    
+                        <li><a href="#q17">Q17 (2 Marks)</a></li>
+                    
+                        <li><a href="#q20">Q20 (2 Marks)</a></li>
+                    
+                        <li><a href="#q37">Q37 (3 Marks)</a></li>
+                    
+                        <li><a href="#q41">Q41 (3 Marks)</a></li>
+                    
+                        <li><a href="#q43">Q43 (3 Marks)</a></li>
+                    
+                        <li><a href="#q44">Q44 (3 Marks)</a></li>
+                    
+                        <li><a href="#q45">Q45 (3 Marks)</a></li>
+                    
+                        <li><a href="#q46">Q46 (3 Marks)</a></li>
+                    
+                        <li><a href="#q49">Q49 (3 Marks)</a></li>
+                    
+                        <li><a href="#q50">Q50 (3 Marks)</a></li>
+                    
+                        <li><a href="#q62">Q62 (5 Marks)</a></li>
+                    
+                        <li><a href="#q65">Q65 (5 Marks)</a></li>
+                    
+                        <li><a href="#q71">Q71 (5 Marks)</a></li>
+                    
+                        <li><a href="#q72">Q72 (5 Marks)</a></li>
+                    
+                        <li><a href="#q73">Q73 (5 Marks)</a></li>
+                    
+                        <li><a href="#q74">Q74 (5 Marks)</a></li>
+                    
+                        <li><a href="#q75">Q75 (5 Marks)</a></li>
+                    
+                        <li><a href="#q79">Q79 (5 Marks)</a></li>
+                    
+                        <li><a href="#q80">Q80 (5 Marks)</a></li>
+                    
+                    </ul>
+                </div>
+                
+                <div class="nav-group">
+                    <h4 style="color: var(--subject-color); margin-bottom: 0.5rem;">Unit III</h4>
+                    <ul class="quick-jump-list">
+                    
+                        <li><a href="#q21">Q21 (2 Marks)</a></li>
+                    
+                        <li><a href="#q22">Q22 (2 Marks)</a></li>
+                    
+                        <li><a href="#q25">Q25 (2 Marks)</a></li>
+                    
+                        <li><a href="#q29">Q29 (2 Marks)</a></li>
+                    
+                        <li><a href="#q36">Q36 (3 Marks)</a></li>
+                    
+                        <li><a href="#q51">Q51 (3 Marks)</a></li>
+                    
+                        <li><a href="#q52">Q52 (3 Marks)</a></li>
+                    
+                        <li><a href="#q53">Q53 (3 Marks)</a></li>
+                    
+                        <li><a href="#q54">Q54 (3 Marks)</a></li>
+                    
+                        <li><a href="#q55">Q55 (3 Marks)</a></li>
+                    
+                        <li><a href="#q58">Q58 (3 Marks)</a></li>
+                    
+                        <li><a href="#q81">Q81 (5 Marks)</a></li>
+                    
+                        <li><a href="#q83">Q83 (5 Marks)</a></li>
+                    
+                        <li><a href="#q84">Q84 (5 Marks)</a></li>
+                    
+                        <li><a href="#q85">Q85 (5 Marks)</a></li>
+                    
+                        <li><a href="#q86">Q86 (5 Marks)</a></li>
+                    
+                        <li><a href="#q87">Q87 (5 Marks)</a></li>
+                    
+                        <li><a href="#q88">Q88 (5 Marks)</a></li>
+                    
+                        <li><a href="#q89">Q89 (5 Marks)</a></li>
+                    
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Study Modal (Flashcards) -->
+    <div id="studyModal" class="glass-modal">
+        <div class="modal-content" style="max-width: 800px; height: 80vh; display: flex; flex-direction: column;">
+            <div class="modal-header" style="flex-shrink: 0;">
+                <h3>Flashcards</h3>
+                
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
+            </div>
+            <div class="modal-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; overflow: hidden; padding-bottom: 2rem;">
+                
+                <div id="flashcard-wrapper" onclick="document.getElementById('flashcard-inner').classList.toggle('flipped')" style="flex-grow: 1; min-height: 350px; perspective: 1000px; position: relative;">
+                    <div id="flashcard-inner" style="position: absolute; inset: 0; transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); transform-style: preserve-3d; cursor: pointer;">
+                        <!-- Front (Question) -->
+                        <div id="flashcard-front" style="position: absolute; inset: 0; backface-visibility: hidden; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                            <div id="fc-badge" class="badges" style="margin-bottom: 1.5rem; justify-content: center;"></div>
+                            <h2 id="fc-question" style="font-size: 1.6rem; line-height: 1.4; color: var(--text-main); font-family: var(--font-headings); font-weight: 600;">Loading...</h2>
+                            <p style="margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem; font-weight: 500;">Tap to reveal answer</p>
+                        </div>
+                        
+                        <!-- Back (Answer) -->
+                        <div id="flashcard-back" style="position: absolute; inset: 0; backface-visibility: hidden; background: rgba(var(--subject-color-rgb, 255,255,255), 0.05); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 2.5rem 2rem; display: flex; flex-direction: column; overflow-y: auto; transform: rotateY(180deg);">
+                            <h5 id="fc-back-question" style="margin-top: 0; margin-bottom: 1.5rem; color: var(--heading-color); font-size: 1.05rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; opacity: 0.9; line-height: 1.4;"></h5>
+                            <div id="fc-answer" style="text-align: left; width: 100%; font-size: 1.05rem; line-height: 1.6; color: var(--text-main);"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem; justify-content: center;">
+                    <button class="btn btn-secondary" onclick="prevFlashcard()">Prev</button>
+                    <button class="btn btn-secondary" onclick="shuffleFlashcards()">Shuffle</button>
+                    <button class="btn btn-primary" onclick="nextFlashcard()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="content-area">
+        
+        <div style="margin-bottom: 2rem;">
+            <p id="showing-text" style="color: var(--text-muted); font-size: 0.95rem;">Showing questions.</p>
+        </div>
+
+        
+
+        <div class="quiz-container" style="display: grid;">
+            <div id="pureSkeleton">
+                <!-- SKELETON MOCK -->
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 75%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 60%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 85%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 50%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 80%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 90%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 65%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 70%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="realContentWrapper">
+                <section id="cards">
+                    
+                    <details class="q-card" id="q3" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q3. Define Object-Oriented Programming and list the six pillars of OOP.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Object-Oriented Programming (OOP)</strong> is a paradigm centered around "objects" (which contain data in the form of fields and code in the form of methods) rather than "actions" or logic.</p>
+<p>The six pillars (or core concepts) of OOP are:</p>
+<ol>
+<li>Class</li>
+<li>Object</li>
+<li>Encapsulation</li>
+<li>Abstraction</li>
+<li>Inheritance</li>
+<li>Polymorphism</li>
+</ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q4" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q4. Differentiate between a class and an object with one suitable example.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <table>
+<thead><tr><th>Class</th><th>Object</th></tr></thead>
+<tbody>
+<tr><td>A logical template or blueprint.</td><td>A physical entity/instance created from a class.</td></tr>
+<tr><td>Does not allocate memory when created.</td><td>Allocates memory in the heap when instantiated.</td></tr>
+<tr><td>Declared using the <code>class</code> keyword.</td><td>Created using the <code>new</code> keyword.</td></tr>
+</tbody>
+</table>
+<p><strong>Example:</strong> If <code>Car</code> is a class (the blueprint), then a <code>Red Tesla Model S</code> is an object (an actual car).</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q5" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q5. Define encapsulation, abstraction, inheritance, and polymorphism.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 10.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>Encapsulation:</strong> Wrapping data (variables) and code (methods) together into a single unit (class), protecting the data from outside interference.</li>
+<li><strong>Abstraction:</strong> Hiding internal implementation details and exposing only the necessary functionalities to the user.</li>
+<li><strong>Inheritance:</strong> A mechanism where a new class (child) inherits properties and behaviors from an existing class (parent), promoting code reusability.</li>
+<li><strong>Polymorphism:</strong> The ability of a single entity (method, object, or operator) to take on multiple forms and behave differently based on the context.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q7" data-unit="I" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q7. What are JDK, JRE, and JVM?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>JDK (Java Development Kit):</strong> A full software development environment. It contains the JRE plus development tools like the compiler (<code>javac</code>) and debugger.</li>
+<li><strong>JRE (Java Runtime Environment):</strong> The environment required to <em>run</em> Java programs. It contains the JVM and core class libraries.</li>
+<li><strong>JVM (Java Virtual Machine):</strong> An abstract machine that executes Java Bytecode. It makes Java platform-independent.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q8" data-unit="I" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q8. What is bytecode, and why is Java considered platform-independent?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Bytecode</strong> is a highly optimized set of instructions generated by the Java compiler (<code>javac</code>) after compiling the source code. It is not machine code, but rather intermediate code.</p>
+<p>Java is <strong>platform-independent</strong> because the compiler generates this bytecode instead of native machine code. This bytecode can be executed on any operating system as long as that system has a JVM (Java Virtual Machine) installed to interpret it (Write Once, Run Anywhere).</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q10" data-unit="II" data-bloom="L1" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q10. List the four access modifiers in Java and state the default access level.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l1">CO2 | Bloom L1</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The four access modifiers in Java (from most restrictive to least) are:</p>
+<ol>
+<li><strong>private</strong> (accessible only within the same class)</li>
+<li><strong>default</strong> (no keyword; accessible only within the same package)</li>
+<li><strong>protected</strong> (accessible within the same package and subclasses in other packages)</li>
+<li><strong>public</strong> (accessible from anywhere)</li>
+</ol>
+<p>If no modifier is specified, the access level is <strong>default</strong> (package-private).</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q12" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q12. What is the purpose of the new keyword in Java? Where is the newly created object stored?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The <code>new</code> keyword in Java is used to create a new object or array by allocating memory at runtime. It essentially instantiates a class.</p>
+<p><strong>Storage:</strong> The newly created object is always stored in the <strong>Heap</strong> memory.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q13" data-unit="I" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q13. What is the difference between an instance variable and a local variable? State any two differences.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <table>
+<thead><tr><th>Instance Variable</th><th>Local Variable</th></tr></thead>
+<tbody>
+<tr><td>Declared inside a class but outside any method.</td><td>Declared inside a method, constructor, or block.</td></tr>
+<tr><td>Gets a default value (e.g., 0 for int) if not initialized.</td><td>Does not get a default value; must be initialized before use.</td></tr>
+</tbody>
+</table>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q14" data-unit="II" data-bloom="L1" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q14. What is a constructor in Java? State any two rules of a constructor.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l1">CO2 | Bloom L1</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>A <strong>constructor</strong> is a special block of code that is called automatically when an object is instantiated. It is used to initialize the state of the object.</p>
+<p><strong>Rules:</strong></p>
+<ol>
+<li>The constructor name must exactly match the class name.</li>
+<li>A constructor must not have an explicit return type (not even <code>void</code>).</li>
+</ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q16" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q16. What is constructor chaining? Name the two keywords used for constructor chaining.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Constructor chaining</strong> is the process of calling one constructor from another constructor with respect to the current object. It helps avoid duplicate code.</p>
+<p>The two keywords used are:</p>
+<ul>
+<li><code>this()</code>: Used to call a constructor of the same class.</li>
+<li><code>super()</code>: Used to call a constructor of the superclass (parent class).</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q17" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q17. What is the purpose of the this keyword in Java? State any two uses.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The <code>this</code> keyword is a reference variable that refers to the current object on which the method or constructor is being invoked.</p>
+<p><strong>Two Uses:</strong></p>
+<ol>
+<li>To resolve shadowing when instance variables and local parameters share the same name (e.g., <code>this.name = name;</code>).</li>
+<li>To invoke another constructor in the same class (using <code>this()</code>).</li>
+</ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q20" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q20. What is String immutability? State one benefit of immutable Strings.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>String immutability</strong> means that once a <code>String</code> object is created, its value or state cannot be changed. Any operation that alters the string creates a brand new <code>String</code> object rather than modifying the original.</p>
+<p><strong>Benefit:</strong> It makes Strings thread-safe and allows caching in the String Constant Pool, which saves memory.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q21" data-unit="III" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q21. Define inheritance. List the different types of inheritance supported in Java.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Inheritance</strong> is a mechanism where a new class acquires the properties and methods of an existing class, establishing an IS-A relationship and promoting code reuse.</p>
+<p><strong>Types supported in Java (via classes):</strong></p>
+<ul>
+<li>Single Inheritance</li>
+<li>Multilevel Inheritance</li>
+<li>Hierarchical Inheritance</li>
+</ul>
+<p><em>(Note: Multiple and Hybrid inheritance are not supported through classes, only through interfaces).</em></p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q22" data-unit="III" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q22. What is the purpose of the super keyword? List any two uses.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The <code>super</code> keyword is a reference variable used to refer to the immediate parent class object.</p>
+<p><strong>Two Uses:</strong></p>
+<ol>
+<li>To invoke the immediate parent class constructor (e.g., <code>super();</code>).</li>
+<li>To invoke an overridden method in the parent class (e.g., <code>super.display();</code>).</li>
+</ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q24" data-unit="I" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q24. Define method overloading and method overriding.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>Method Overloading:</strong> Creating multiple methods in the same class with the same name but different parameters (compile-time polymorphism).</li>
+<li><strong>Method Overriding:</strong> Providing a specific implementation in a subclass for a method that is already defined in its parent class. The method signature must be identical (run-time polymorphism).</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q25" data-unit="III" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q25. What is polymorphism? Name its two types.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Polymorphism</strong> is the ability of an object or method to take on many forms, allowing the same interface to be used for different underlying forms (data types).</p>
+<p><strong>Two Types:</strong></p>
+<ol>
+<li>Compile-time Polymorphism (Static binding, e.g., Method Overloading).</li>
+<li>Run-time Polymorphism (Dynamic binding, e.g., Method Overriding).</li>
+</ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q29" data-unit="III" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q29. What is an abstract class? What is an interface?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>Abstract Class:</strong> A class declared with the <code>abstract</code> keyword that cannot be instantiated. It can contain both abstract methods (without a body) and concrete methods.</li>
+<li><strong>Interface:</strong> A completely "abstract class" that acts as a contract. In modern Java, it primarily contains abstract methods and static constants, though it can now have default methods. A class <em>implements</em> an interface.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q31" data-unit="I" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q31. Explain the Top-Down and Bottom-Up approaches with a suitable example.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Top-Down Approach:</strong> The problem is broken down into smaller sub-problems. It focuses on the main algorithm first, then the details (used in Procedural Programming like C).<br><em>Example:</em> Building a car by first designing the full car, then breaking it down into engine, wheels, and doors.</p>
+<p><strong>Bottom-Up Approach:</strong> The smaller modules or objects are designed first, and then integrated together to form the complete system (used in Object-Oriented Programming like Java).<br><em>Example:</em> Designing the engine, wheels, and doors first as independent objects, then assembling them to build the car.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q33" data-unit="I" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q33. Explain the role of JDK, JRE, and JVM in executing a Java program.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>JDK (Java Development Kit):</strong> The complete toolbox for a developer. It provides the compiler (<code>javac</code>) which translates the <code>.java</code> source code into a <code>.class</code> file (bytecode).</li>
+<li><strong>JRE (Java Runtime Environment):</strong> The environment where the Java program runs. It provides the core class libraries and packages required for execution.</li>
+<li><strong>JVM (Java Virtual Machine):</strong> The core engine inside the JRE. It reads the bytecode line by line, interprets it, and executes it on the host operating system.</li>
+</ul>
+<div class="diagram-container">
+<svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
+  <!-- JVM Box -->
+  <rect x="150" y="100" width="200" height="80" fill="var(--card-bg)" stroke="currentColor" stroke-width="2" rx="8"/>
+  <text x="250" y="145" text-anchor="middle" fill="currentColor" font-weight="bold">JVM</text>
+  
+  <!-- JRE Box -->
+  <rect x="125" y="75" width="250" height="130" fill="none" stroke="#20b2aa" stroke-width="2" stroke-dasharray="5,5" rx="8"/>
+  <text x="250" y="95" text-anchor="middle" fill="#20b2aa" font-weight="bold">JRE (JVM + Libraries)</text>
+  
+  <!-- JDK Box -->
+  <rect x="100" y="25" width="300" height="205" fill="none" stroke="#eab308" stroke-width="2" rx="8"/>
+  <text x="250" y="50" text-anchor="middle" fill="#eab308" font-weight="bold">JDK (JRE + Dev Tools)</text>
+</svg>
+</div>
+
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q36" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q36. Explain built-in and user-defined packages with suitable examples. Also explain the purpose of the import statement.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>Built-in Packages:</strong> Provided by the Java API. <em>Example: <code>java.util</code>, <code>java.io</code>.</em></li>
+<li><strong>User-defined Packages:</strong> Created by the programmer to group related classes. <em>Example: <code>package com.mycompany.utils;</code></em></li>
+</ul>
+<p><strong>Import Statement:</strong> Used to bring a class or an entire package into visibility so it can be used without typing its fully qualified name (e.g., <code>import java.util.Scanner;</code>).</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q37" data-unit="II" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q37. Explain the four access modifiers in Java with respect to their accessibility.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <table>
+<thead><tr><th>Modifier</th><th>Same Class</th><th>Same Package</th><th>Subclass (Diff Pkg)</th><th>Diff Pkg (Non-subclass)</th></tr></thead>
+<tbody>
+<tr><td><strong>Private</strong></td><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
+<tr><td><strong>Default</strong></td><td>Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
+<tr><td><strong>Protected</strong></td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+<tr><td><strong>Public</strong></td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+</tbody>
+</table>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q39" data-unit="I" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q39. Explain Java data types and differentiate between primitive and reference data types.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Primitive Data Types:</strong> Predefined by Java and hold actual values. There are 8: <code>byte, short, int, long, float, double, char, boolean</code>. They are stored in stack memory and have a fixed size.</p>
+<p><strong>Reference Data Types:</strong> User-defined (except Arrays and Strings) and hold references (memory addresses) to the actual objects. They are stored in heap memory. <em>Examples: Classes, Interfaces, Arrays.</em></p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q40" data-unit="I" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q40. Explain one-dimensional and two-dimensional arrays, and differentiate between for, while, and do-while loops.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Arrays:</strong></p>
+<ul>
+<li>1D Array: A linear list of elements. <code>int[] arr = new int[5];</code></li>
+<li>2D Array: An array of arrays (a matrix). <code>int[][] matrix = new int[3][3];</code></li>
+</ul>
+<p><strong>Loops:</strong></p>
+<ul>
+<li><strong>for:</strong> Used when the number of iterations is known in advance.</li>
+<li><strong>while:</strong> Used when iterations are unknown; condition is checked <em>before</em> execution (entry-controlled).</li>
+<li><strong>do-while:</strong> Condition is checked <em>after</em> execution (exit-controlled); guarantees execution at least once.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q41" data-unit="II" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q41. Explain the difference between stack and heap memory in Java with respect to object creation and references.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>Heap Memory:</strong> This is where all actual <strong>objects</strong> and instance variables are stored. It is dynamically allocated at runtime when the <code>new</code> keyword is used. It is managed by the Garbage Collector.</li>
+<li><strong>Stack Memory:</strong> This is where all local variables, method calls, and <strong>object references</strong> are stored. When you write <code>Car c = new Car();</code>, the object itself goes in the heap, but the reference variable <code>c</code> is kept in the stack, pointing to the heap memory address.</li>
+</ul>
+<div class="diagram-container">
+<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
+    </marker>
+  </defs>
+
+  <line x1="160" y1="120" x2="300" y2="120" stroke="currentColor" stroke-width="2" marker-end="url(#arrow3)"/>
+
+  <!-- Stack -->
+  <rect x="50" y="50" width="120" height="120" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="110" y="40" text-anchor="middle" fill="currentColor" font-weight="bold">Stack Memory</text>
+  <rect x="70" y="100" width="80" height="30" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="110" y="120" text-anchor="middle" fill="currentColor">Car c1</text>
+
+  <!-- Heap -->
+  <rect x="280" y="50" width="180" height="120" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="370" y="40" text-anchor="middle" fill="currentColor" font-weight="bold">Heap Memory</text>
+  <rect x="310" y="80" width="120" height="60" fill="var(--card-bg)" stroke="currentColor" stroke-width="2" rx="8"/>
+  <text x="370" y="105" text-anchor="middle" fill="currentColor">Car Object</text>
+  <text x="370" y="125" text-anchor="middle" fill="currentColor" font-size="12">model = "Tesla"</text>
+</svg>
+</div>
+
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q43" data-unit="II" data-bloom="L3" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q43. Explain default/no-argument and parameterized constructors with suitable examples.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Default / No-Argument Constructor:</strong> Takes no parameters. If no constructor is defined, the compiler provides one automatically. Used for default initialization.</p>
+<pre><code>class Box {
+    Box() { System.out.println("Empty box created"); }
+}</code></pre>
+<p><strong>Parameterized Constructor:</strong> Takes parameters to initialize the object with specific values upon creation.</p>
+<pre><code>class Box {
+    int size;
+    Box(int s) { this.size = s; }
+}</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q44" data-unit="II" data-bloom="L3" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q44. Explain constructor overloading with a suitable Java example.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Constructor Overloading</strong> allows a class to have multiple constructors with different parameter lists, giving flexibility in how an object is initialized.</p>
+<pre><code>class Rectangle {
+    int length, width;
+    
+    // Constructor 1: Default (Square)
+    Rectangle() {
+        length = 5; width = 5;
+    }
+    
+    // Constructor 2: Parameterized
+    Rectangle(int l, int w) {
+        length = l; width = w;
+    }
+}</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q45" data-unit="II" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q45. Differentiate between constructor overloading and constructor chaining. Also mention the keywords used for constructor chaining.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>Constructor Overloading:</strong> Having multiple separate constructors in the same class to handle different initialization scenarios.</li>
+<li><strong>Constructor Chaining:</strong> The process where one constructor explicitly <em>calls</em> another constructor (either within the same class or from the parent class) to reuse initialization logic.</li>
+</ul>
+<p><strong>Keywords for Chaining:</strong></p>
+<ul>
+<li><code>this()</code> - Calls another constructor in the <em>same</em> class.</li>
+<li><code>super()</code> - Calls a constructor in the <em>parent</em> class.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q46" data-unit="II" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q46. Explain any three uses of the this keyword with suitable examples.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ol>
+<li><strong>Resolve Shadowing:</strong> Used to distinguish instance variables from local parameters.<br><code>this.name = name;</code></li>
+<li><strong>Constructor Chaining:</strong> Used to invoke another constructor in the same class.<br><code>this(10); // Calls parameterized constructor</code></li>
+<li><strong>Pass as Argument:</strong> Used to pass the current object as a parameter to another method.<br><code>helper.printDetails(this);</code></li>
+</ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q49" data-unit="II" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q49. Explain the two ways of creating a String in Java: using a string literal and using the new keyword.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>String Literal:</strong> <code>String s = "Hello";</code><br>The JVM first checks the <em>String Constant Pool</em>. If "Hello" exists, it returns the reference. If not, it creates it. This is highly memory-efficient.</li>
+<li><strong>new Keyword:</strong> <code>String s = new String("Hello");</code><br>The JVM forces the creation of a brand new String object in the <em>Heap</em> memory, bypassing the pool entirely, even if "Hello" already exists in the pool.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q50" data-unit="II" data-bloom="L3" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q50. Differentiate between = = and equals() when comparing String objects with a suitable example.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 10.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>== Operator:</strong> Compares the <em>memory references</em> (addresses) of two objects to see if they point to the exact same object in memory.</li>
+<li><strong>equals() Method:</strong> Compares the actual <em>contents/values</em> of the two objects for logical equality.</li>
+</ul>
+<pre><code>String s1 = new String("Java");
+String s2 = new String("Java");
+
+System.out.println(s1 == s2);      // false (different heap objects)
+System.out.println(s1.equals(s2)); // true (same content)</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q51" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q51. Explain single, multilevel, hierarchical, and hybrid inheritance with suitable examples.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>Single:</strong> Class B inherits from Class A. <em>(Dog inherits Animal)</em></li>
+<li><strong>Multilevel:</strong> Class C inherits from Class B, which inherits from Class A. <em>(Puppy inherits Dog inherits Animal)</em></li>
+<li><strong>Hierarchical:</strong> Multiple classes inherit from a single Class A. <em>(Dog and Cat both inherit Animal)</em></li>
+<li><strong>Hybrid:</strong> A combination of two or more types. In Java, true hybrid inheritance involving multiple parents is only achievable via <strong>Interfaces</strong> to avoid the Diamond Problem.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q52" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q52. Explain the three major uses of the super keyword with suitable examples.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ol>
+<li><strong>Invoke Parent Constructor:</strong> <code>super();</code> (Must be the first line in the child constructor).</li>
+<li><strong>Invoke Parent Method:</strong> Used when the child has overridden the method. <code>super.display();</code></li>
+<li><strong>Access Parent Variable:</strong> Used when the child class hides a parent's variable with the same name. <code>System.out.println(super.x);</code></li>
+</ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q53" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q53. Explain the Object class and the purpose of toString(), equals(), hashCode(), and getClass().</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The <code>Object</code> class is the universal superclass of all Java classes.</p>
+<ul>
+<li><code>toString()</code>: Returns a string representation of the object (often overridden to show field values).</li>
+<li><code>equals()</code>: Used to compare the logical equality of two objects.</li>
+<li><code>hashCode()</code>: Returns an integer hash code value for the object, crucial for collections like <code>HashMap</code>.</li>
+<li><code>getClass()</code>: Returns the runtime class object of the current instance (used in reflection).</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q54" data-unit="III" data-bloom="L3" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q54. Differentiate between method overloading and method overriding with suitable examples.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <table>
+<thead><tr><th>Method Overloading</th><th>Method Overriding</th></tr></thead>
+<tbody>
+<tr><td>Occurs within the <strong>same class</strong>.</td><td>Occurs between <strong>parent and child</strong> classes.</td></tr>
+<tr><td>Parameters <strong>must</strong> be different.</td><td>Parameters <strong>must</strong> be exactly the same.</td></tr>
+<tr><td>Resolved at <strong>Compile-Time</strong> (Static Binding).</td><td>Resolved at <strong>Run-Time</strong> (Dynamic Binding).</td></tr>
+<tr><td>Example: <code>add(int a, int b)</code> vs <code>add(double a, double b)</code></td><td>Example: <code>Animal.sound()</code> overridden by <code>Dog.sound()</code></td></tr>
+</tbody>
+</table>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q55" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q55. Differentiate between compile-time and run-time polymorphism in Java.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>Compile-time Polymorphism:</strong> Achieved through Method Overloading. The compiler knows exactly which method to call based on the method signature (number and type of arguments). Fast execution because binding happens early.</li>
+<li><strong>Run-time Polymorphism:</strong> Achieved through Method Overriding. A parent reference points to a child object. The JVM determines which overridden method to execute during runtime based on the <em>actual object type</em>, not the reference type.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q58" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q58. Differentiate between an abstract class and an interface. Also state how interfaces support multiple inheritance.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <table>
+<thead><tr><th>Abstract Class</th><th>Interface</th></tr></thead>
+<tbody>
+<tr><td>Can have both abstract and concrete methods.</td><td>Historically only abstract methods (now allows <code>default</code> methods).</td></tr>
+<tr><td>Can have state (instance variables).</td><td>Only <code>public static final</code> constants.</td></tr>
+<tr><td>A class can extend only <strong>one</strong> abstract class.</td><td>A class can implement <strong>multiple</strong> interfaces.</td></tr>
+</tbody>
+</table>
+<p><strong>Multiple Inheritance:</strong> Java prevents a class from extending multiple classes to avoid ambiguity, but it allows a class to implement multiple interfaces because interfaces (traditionally) have no implementation to clash.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q61" data-unit="I" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q61. Compare procedural programming and OOP with respect to approach, data handling, security, reusability, inheritance, and polymorphism.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <table>
+<thead><tr><th>Feature</th><th>Procedural Programming</th><th>Object-Oriented Programming</th></tr></thead>
+<tbody>
+<tr><td><strong>Approach</strong></td><td>Top-Down approach.</td><td>Bottom-Up approach.</td></tr>
+<tr><td><strong>Data Handling</strong></td><td>Data moves freely between functions globally.</td><td>Data is tied to objects and controlled via methods.</td></tr>
+<tr><td><strong>Security</strong></td><td>Low security (no access modifiers).</td><td>High security (data hiding via encapsulation & modifiers).</td></tr>
+<tr><td><strong>Reusability</strong></td><td>Low (code duplication is common).</td><td>High (achieved via Inheritance and objects).</td></tr>
+<tr><td><strong>Inheritance</strong></td><td>Not supported.</td><td>Supported (Single, Multilevel, Hierarchical).</td></tr>
+<tr><td><strong>Polymorphism</strong></td><td>Not supported.</td><td>Supported (Overloading, Overriding).</td></tr>
+</tbody>
+</table>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q62" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q62. Explain the six pillars of OOP—class, object, encapsulation, abstraction, inheritance, and polymorphism—with suitable examples.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>Class:</strong> A blueprint for creating objects. <em>Ex: A <code>Vehicle</code> class defining speed and color.</em></li>
+<li><strong>Object:</strong> A real-world instance of a class. <em>Ex: A specific red Ferrari.</em></li>
+<li><strong>Encapsulation:</strong> Wrapping data and methods into a single unit to protect the data. <em>Ex: A capsule containing medicine; private variables accessed via getters/setters.</em></li>
+<li><strong>Abstraction:</strong> Hiding complex implementation details and showing only essentials. <em>Ex: Driving a car without knowing how the internal combustion engine works.</em></li>
+<li><strong>Inheritance:</strong> A child class acquiring properties from a parent class. <em>Ex: <code>Dog</code> inherits from <code>Animal</code>.</em></li>
+<li><strong>Polymorphism:</strong> One entity taking many forms. <em>Ex: A <code>sound()</code> method that barks for a Dog but meows for a Cat.</em></li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q63" data-unit="I" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q63. Explain Java's platform independence in detail, from source code compilation to bytecode execution through the JVM.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Java's "Write Once, Run Anywhere" capability relies on its two-step execution process:</p>
+<ol>
+<li><strong>Compilation:</strong> The developer writes <code>Program.java</code> (Source Code). The Java Compiler (<code>javac</code>) compiles this into <code>Program.class</code>. Instead of compiling it into machine-specific code (like C++), it compiles it into <strong>Bytecode</strong>. This bytecode is entirely independent of the underlying OS or hardware.</li>
+<li><strong>Execution:</strong> The compiled bytecode is transported to any machine (Windows, Mac, Linux). That machine must have a <strong>JVM (Java Virtual Machine)</strong> installed. The JVM reads the bytecode and translates it into the specific machine-level instructions native to that exact operating system.</li>
+</ol>
+<p>Therefore, while the JVM is platform-<em>dependent</em>, the Java program (bytecode) itself is totally platform-<em>independent</em>.</p>
+<div class="diagram-container">
+<svg viewBox="0 0 600 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
+    </marker>
+  </defs>
+  <!-- Lines -->
+  <line x1="120" y1="75" x2="180" y2="75" stroke="currentColor" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="280" y1="75" x2="340" y2="75" stroke="currentColor" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="440" y1="75" x2="500" y2="75" stroke="currentColor" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Boxes -->
+  <rect x="20" y="45" width="100" height="60" fill="var(--card-bg)" stroke="currentColor" stroke-width="2" rx="5"/>
+  <text x="70" y="70" text-anchor="middle" fill="currentColor" font-size="14">Source Code</text>
+  <text x="70" y="90" text-anchor="middle" fill="currentColor" font-size="12">(.java)</text>
+
+  <rect x="180" y="45" width="100" height="60" fill="var(--card-bg)" stroke="currentColor" stroke-width="2" rx="5"/>
+  <text x="230" y="80" text-anchor="middle" fill="currentColor" font-weight="bold">Compiler</text>
+
+  <rect x="340" y="45" width="100" height="60" fill="var(--card-bg)" stroke="currentColor" stroke-width="2" rx="5"/>
+  <text x="390" y="70" text-anchor="middle" fill="currentColor" font-size="14">Bytecode</text>
+  <text x="390" y="90" text-anchor="middle" fill="currentColor" font-size="12">(.class)</text>
+
+  <rect x="500" y="45" width="80" height="60" fill="var(--card-bg)" stroke="currentColor" stroke-width="2" rx="5"/>
+  <text x="540" y="80" text-anchor="middle" fill="currentColor" font-weight="bold">JVM</text>
+</svg>
+</div>
+
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q65" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q65. Explain Java packages and access modifiers. Write a suitable program demonstrating private, default, protected, and public members.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Packages</strong> group related classes to avoid name clashes. <strong>Access Modifiers</strong> control the visibility of classes and members.</p>
+<pre><code>package mypack;
+
+public class AccessDemo {
+    private int priv = 1;     // Only this class
+    int def = 2;              // Only this package
+    protected int prot = 3;   // This package + subclasses
+    public int pub = 4;       // Everywhere
+    
+    public void show() {
+        System.out.println(priv + def + prot + pub);
+    }
+}</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q69" data-unit="I" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q69. Explain Java control statements with suitable examples of if-else, switch-case, loops, break, continue, and the ternary operator.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>if-else:</strong> Branching based on a boolean. <code>if(x > 0) { ... } else { ... }</code></li>
+<li><strong>switch-case:</strong> Multi-way branch. <code>switch(day) { case 1: ... break; }</code></li>
+<li><strong>loops:</strong> Repeating code. <code>for(int i=0; i&lt;5; i++) { ... }</code></li>
+<li><strong>break:</strong> Exits the entire loop or switch immediately.</li>
+<li><strong>continue:</strong> Skips the current iteration and proceeds to the next iteration of the loop.</li>
+<li><strong>Ternary Operator:</strong> A one-line if-else. <code>int max = (a > b) ? a : b;</code></li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q71" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q71. Explain Classes and Objects in Java in detail. Describe how objects are created using new, how multiple objects of the same class maintain independent instance variables, and illustrate with a suitable example.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>A <strong>Class</strong> is a blueprint. An <strong>Object</strong> is a physical instance. The <code>new</code> keyword allocates distinct heap memory for every object created.</p>
+<p>Because each object gets its own memory block in the heap, they maintain <strong>independent copies of instance variables</strong>. Changing the variable in one object does not affect the other.</p>
+<pre><code>class Account {
+    int balance;
+}
+public class Main {
+    public static void main(String[] args) {
+        Account acc1 = new Account();
+        Account acc2 = new Account();
+        
+        acc1.balance = 500;
+        acc2.balance = 1000;
+        // acc1 and acc2 are independent.
+    }
+}</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q72" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q72. Explain instance variables and local variables in Java. Discuss their declaration, default/initialization requirements, lifetime, and memory behavior with suitable examples.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <table>
+<thead><tr><th>Property</th><th>Instance Variable</th><th>Local Variable</th></tr></thead>
+<tbody>
+<tr><td><strong>Declaration</strong></td><td>Inside class, outside methods.</td><td>Inside a method or block.</td></tr>
+<tr><td><strong>Memory</strong></td><td>Stored in the <strong>Heap</strong> (inside the object).</td><td>Stored in the <strong>Stack</strong>.</td></tr>
+<tr><td><strong>Lifetime</strong></td><td>Lives as long as the object lives.</td><td>Destroyed when the method execution completes.</td></tr>
+<tr><td><strong>Initialization</strong></td><td>Automatically initialized to defaults (0, null).</td><td>NO default value. Must be explicitly initialized.</td></tr>
+</tbody>
+</table>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q73" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q73. Explain constructors in Java in detail. Discuss constructor rules, default/no-argument constructor, parameterized constructor, and the role of constructors in object initialization.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Constructors are special blocks invoked when an object is instantiated via <code>new</code>.</p>
+<ul>
+<li><strong>Rules:</strong> Must have the exact same name as the class. Cannot have a return type.</li>
+<li><strong>Role:</strong> They allocate default or specific values to instance variables the moment the object is born, ensuring the object starts in a valid state.</li>
+<li><strong>Default Constructor:</strong> Generated by the compiler if none exists. Initializes fields to 0/null.</li>
+<li><strong>No-Argument Constructor:</strong> Explicitly written without parameters to run specific setup code.</li>
+<li><strong>Parameterized Constructor:</strong> Accepts arguments to dynamically set up the object.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q74" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q74. Explain constructor overloading and constructor chaining in Java. Compare their purpose, implementation, and execution using suitable examples involving this() and super().</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Overloading</strong> allows a class to have multiple constructors with different parameters. <strong>Chaining</strong> allows these constructors to call each other, or call the parent's constructor, to avoid duplicating initialization logic.</p>
+<pre><code>class Parent {
+    Parent() { System.out.println("Parent init"); }
+}
+class Child extends Parent {
+    int x, y;
+    
+    Child() {
+        this(0, 0); // Constructor Chaining via this()
+    }
+    
+    Child(int x, int y) { // Overloaded constructor
+        super(); // Constructor Chaining via super() to Parent
+        this.x = x;
+        this.y = y;
+    }
+}</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q75" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q75. Explain the this keyword in Java. Discuss its major uses, including resolving field parameter shadowing, invoking another method, constructor chaining using this(), passing the current object, and returning the current object.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The <code>this</code> keyword is a reference to the current executing object.</p>
+<ol>
+<li><strong>Shadowing:</strong> When a parameter has the same name as a field: <code>this.age = age;</code></li>
+<li><strong>Method invocation:</strong> Explicitly calling another method: <code>this.doWork();</code></li>
+<li><strong>Chaining:</strong> Calling another constructor: <code>this(name, age);</code></li>
+<li><strong>Passing as Argument:</strong> Passing the current instance to an event listener: <code>button.addListener(this);</code></li>
+<li><strong>Returning:</strong> Used in builder patterns to chain method calls: <code>return this;</code></li>
+</ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q79" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q79. Explain the String class in Java in detail. Discuss String immutability, String literals, the new keyword, String Constant Pool, == versus equals(), and important String methods with examples.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The <code>String</code> class represents an array of characters. Strings are <strong>immutable</strong>; once created, their value cannot change.</p>
+<ul>
+<li><strong>Literals vs New:</strong> <code>String s1 = "Java";</code> creates/reuses a string in the highly-efficient <strong>String Constant Pool</strong>. <code>String s2 = new String("Java");</code> forces a new allocation in the normal Heap.</li>
+<li><strong>== vs equals():</strong> <code>s1 == s2</code> compares memory addresses (returns false here). <code>s1.equals(s2)</code> compares the actual text characters (returns true).</li>
+<li><strong>Methods:</strong> <code>length()</code>, <code>substring(start, end)</code>, <code>toUpperCase()</code>, <code>concat(str)</code>.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q80" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q80. Compare String, StringBuffer, and StringBuilder in Java. Discuss their mutability, thread safety, performance, and appropriate use cases. Also explain important StringBuffer methods such as append(), insert(), replace(), delete(), and reverse().</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <table>
+<thead><tr><th>Feature</th><th>String</th><th>StringBuffer</th><th>StringBuilder</th></tr></thead>
+<tbody>
+<tr><td><strong>Mutability</strong></td><td>Immutable</td><td>Mutable</td><td>Mutable</td></tr>
+<tr><td><strong>Thread Safety</strong></td><td>Yes</td><td>Yes (Synchronized)</td><td>No (Not Synchronized)</td></tr>
+<tr><td><strong>Performance</strong></td><td>Slow for concat</td><td>Moderate</td><td>Fastest</td></tr>
+</tbody>
+</table>
+<p><strong>StringBuffer Methods:</strong></p>
+<ul>
+<li><code>append("A")</code>: Adds "A" to the end.</li>
+<li><code>insert(1, "A")</code>: Inserts "A" at index 1.</li>
+<li><code>replace(1, 3, "X")</code>: Replaces substring.</li>
+<li><code>delete(1, 3)</code>: Removes characters.</li>
+<li><code>reverse()</code>: Reverses the sequence.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q81" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q81. Explain all major types of inheritance in Java—single, multilevel, hierarchical, hybrid, and multiple inheritance. Also explain how multiple inheritance is achieved using interfaces.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>Single:</strong> Class A &rarr; Class B</li>
+<li><strong>Multilevel:</strong> Class A &rarr; Class B &rarr; Class C</li>
+<li><strong>Hierarchical:</strong> Class A &rarr; Class B, Class A &rarr; Class C</li>
+<li><strong>Multiple:</strong> Class A, Class B &rarr; Class C. Not supported directly through classes due to the Diamond Problem.</li>
+<li><strong>Hybrid:</strong> A mix of the above.</li>
+</ul>
+<p><strong>Multiple Inheritance via Interfaces:</strong> Because interfaces traditionally do not hold implementation or state, a single Java class can <code>implement</code> multiple interfaces without ambiguity over whose method to inherit.</p>
+<div class="diagram-container">
+<svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
+    </marker>
+  </defs>
+  
+  <!-- Single -->
+  <text x="80" y="30" text-anchor="middle" fill="currentColor" font-weight="bold">Single</text>
+  <line x1="80" y1="70" x2="80" y2="95" stroke="currentColor" stroke-width="2" marker-end="url(#arrow2)"/>
+  <rect x="40" y="40" width="80" height="30" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="80" y="60" text-anchor="middle" fill="currentColor">Class A</text>
+  <rect x="40" y="100" width="80" height="30" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="80" y="120" text-anchor="middle" fill="currentColor">Class B</text>
+
+  <!-- Multilevel -->
+  <text x="250" y="30" text-anchor="middle" fill="currentColor" font-weight="bold">Multilevel</text>
+  <line x1="250" y1="70" x2="250" y2="95" stroke="currentColor" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="250" y1="130" x2="250" y2="155" stroke="currentColor" stroke-width="2" marker-end="url(#arrow2)"/>
+  <rect x="210" y="40" width="80" height="30" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="250" y="60" text-anchor="middle" fill="currentColor">Class A</text>
+  <rect x="210" y="100" width="80" height="30" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="250" y="120" text-anchor="middle" fill="currentColor">Class B</text>
+  <rect x="210" y="160" width="80" height="30" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="250" y="180" text-anchor="middle" fill="currentColor">Class C</text>
+
+  <!-- Hierarchical -->
+  <text x="450" y="30" text-anchor="middle" fill="currentColor" font-weight="bold">Hierarchical</text>
+  <line x1="450" y1="70" x2="400" y2="95" stroke="currentColor" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="450" y1="70" x2="500" y2="95" stroke="currentColor" stroke-width="2" marker-end="url(#arrow2)"/>
+  <rect x="410" y="40" width="80" height="30" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="450" y="60" text-anchor="middle" fill="currentColor">Class A</text>
+  <rect x="360" y="100" width="80" height="30" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="400" y="120" text-anchor="middle" fill="currentColor">Class B</text>
+  <rect x="460" y="100" width="80" height="30" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="500" y="120" text-anchor="middle" fill="currentColor">Class C</text>
+</svg>
+</div>
+
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q83" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q83. Explain the Object class in detail and demonstrate the use of toString(), equals(), hashCode(), and getClass() with suitable examples.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The <code>Object</code> class is the root of the class hierarchy.</p>
+<pre><code>class Person {
+    String name;
+    Person(String n) { name = n; }
+    
+    // Overriding toString
+    public String toString() { return "Person: " + name; }
+    
+    // Overriding equals
+    public boolean equals(Object obj) {
+        if(obj instanceof Person) {
+            return this.name.equals(((Person)obj).name);
+        }
+        return false;
+    }
+}
+
+// Usage:
+Person p = new Person("John");
+System.out.println(p.toString());
+System.out.println(p.hashCode());
+System.out.println(p.getClass().getName());</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q84" data-unit="III" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q84. Write a Java program to demonstrate method overloading and method overriding. Explain how they represent compile-time and run-time polymorphism respectively.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <pre><code>class MathOps {
+    // Overloading (Compile-time Polymorphism)
+    int add(int a, int b) { return a + b; }
+    double add(double a, double b) { return a + b; }
+}
+
+class Animal {
+    void sound() { System.out.println("Generic sound"); }
+}
+class Dog extends Animal {
+    // Overriding (Run-time Polymorphism)
+    @Override
+    void sound() { System.out.println("Bark"); }
+}</code></pre>
+<p><strong>Compile-time:</strong> The compiler binds the <code>add()</code> method based on the parameter data types provided. <strong>Run-time:</strong> The JVM binds the <code>sound()</code> method based on whether the actual heap object is an <code>Animal</code> or a <code>Dog</code>.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q85" data-unit="III" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q85. Explain dynamic binding in detail with a Java program using a superclass reference and subclass object. Also explain how method overriding is resolved at run time.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Dynamic Binding</strong> occurs when the compiler cannot determine the method implementation at compile time, so the JVM resolves it during execution.</p>
+<pre><code>class Vehicle {
+    void move() { System.out.println("Moving"); }
+}
+class Car extends Vehicle {
+    @Override
+    void move() { System.out.println("Driving on wheels"); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vehicle v = new Car(); // Superclass ref, Subclass object
+        v.move(); // Outputs: Driving on wheels
+    }
+}</code></pre>
+<p>At compile time, the compiler ensures <code>move()</code> exists in <code>Vehicle</code>. At runtime, the JVM notices the object is actually a <code>Car</code> and executes the overridden version.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q86" data-unit="III" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q86. Explain object casting in Java with suitable examples of upcasting and downcasting. Demonstrate the use of instanceof to perform safe downcasting.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <pre><code>class Animal {}
+class Dog extends Animal {
+    void bark() { System.out.println("Woof"); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Upcasting (Automatic)
+        Animal a = new Dog(); 
+        
+        // Downcasting (Explicit & requires checking)
+        if (a instanceof Dog) {
+            Dog d = (Dog) a;
+            d.bark(); // Safe to call child-specific method
+        }
+    }
+}</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q87" data-unit="III" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q87. Explain abstract classes in Java. Write a program containing an abstract class, abstract method, concrete method, constructor, and subclass implementation.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <pre><code>abstract class Shape {
+    Shape() { System.out.println("Shape created"); }
+    
+    // Abstract method (no body)
+    abstract void draw();
+    
+    // Concrete method
+    void display() { System.out.println("Displaying shape"); }
+}
+
+class Circle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing Circle");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape s = new Circle();
+        s.display();
+        s.draw();
+    }
+}</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q88" data-unit="III" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q88. Explain interfaces in Java and compare them with abstract classes. Write a program in which a class implements multiple interfaces.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Interfaces</strong> define contracts (mostly abstract methods). Unlike Abstract classes which can have state and constructors, interfaces cannot maintain instance state.</p>
+<pre><code>interface Printable {
+    void print();
+}
+interface Showable {
+    void show();
+}
+
+class Document implements Printable, Showable {
+    public void print() { System.out.println("Printing"); }
+    public void show() { System.out.println("Showing"); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Document doc = new Document();
+        doc.print();
+        doc.show();
+    }
+}</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q89" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q89. Explain generic programming in Java. Write examples of a generic class and a generic method, and state the advantages of type safety and code reusability.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Generics</strong> allow parameters for types, catching type errors at compile-time instead of runtime.</p>
+<pre><code>// Generic Class
+class Box&lt;T&gt; {
+    private T item;
+    public void set(T t) { item = t; }
+    public T get() { return item; }
+}
+
+// Generic Method
+public &lt;E&gt; void printArray(E[] array) {
+    for(E element : array) { System.out.println(element); }
+}</code></pre>
+<p><strong>Advantages:</strong> Code can be reused for any object type while maintaining rigorous type safety without explicit casting.</p>
+                        </div>
+                    </details>
+                    
+                </section>
+
+            <div id="no-results" style="display: none; text-align: center; padding: 3rem;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--primary-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <h3 style="color: var(--text-main); margin-bottom: 1rem;">No questions match your filters</h3>
+                <button class="btn btn-secondary" onclick="document.querySelectorAll('.filter-toggles input[type=checkbox]').forEach(cb => cb.checked = false); document.getElementById('search-box').value=''; document.getElementById('search-box').dispatchEvent(new Event('input'));">Clear Filters</button>
+            </div>
+
+        </div>
+        </main>
+    </div>
+
+    <script src="course-data.js"></script>
+    
+    <div id="stickyProgressWidget" style="position: fixed; bottom: 2rem; right: 2rem; background: var(--card-bg); padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 1px solid var(--border-color); z-index: 1000; display: flex; flex-direction: column; gap: 0.5rem; min-width: 250px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem;">Review Progress</span>
+            <span id="progressText" style="font-size: 0.85rem; font-weight: bold; color: var(--primary-teal);">0 / 0</span>
+        </div>
+        <div style="width: 100%; background: var(--bg-color); border-radius: 8px; height: 8px; overflow: hidden; margin-top: 0.2rem; border: 1px solid var(--border-color);">
+            <div id="progressBar" style="width: 0%; height: 100%; background: var(--primary-teal); transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);"></div>
+        </div>
+    </div>
+
+<script src="../../shared/app-utils.js"></script>
+
+    <!-- Floating Action Button (FAB) -->
+    <div class="fab-container">
+        <div class="fab-menu" id="fabMenu">
+            
+            
+<button class="fab-item" onclick="startFlashcards(); document.getElementById('fabMenu').classList.remove('open');" title="Study Mode">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                <span>Flashcards</span>
+            </button>
+<button class="fab-item" onclick="openModal('jumpModal'); document.getElementById('fabMenu').classList.remove('open');" title="Quick Jump">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                <span>Jump</span>
+            </button>
+            <button class="fab-item" onclick="openModal('filterModal'); document.getElementById('fabMenu').classList.remove('open');" title="Filters">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                <span>Filter</span>
+            </button>
+            <button class="fab-item" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); document.getElementById('fabMenu').classList.remove('open');" title="Back to Top">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                <span>Top</span>
+            </button>
+        </div>
+        <button class="fab-main" id="fabMainBtn" aria-label="Quick Actions">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+    </div>
+
+    
+    <!-- Standalone Ask AI FAB (Bottom Left) -->
+    <button class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI" aria-label="Ask AI">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2zM12 8c2.2 0 4 1.8 4 4v5c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-5c0-2.2 1.8-4 4-4zM6 12v5h2v-5H6zm10 0v5h2v-5h-2z"/></svg>
+    </button>
+
+    <!-- Ask AI Chat Widget -->
+    <div id="assistantModal" class="ask-ai-widget" style="display: none; flex-direction: column; background: rgba(15,15,20,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); overflow: hidden; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0; transform: translateY(20px); pointer-events: auto;">
+        <div class="modal-header" style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <h2 id="aiModalTitle" style="margin: 0; font-size: 1.25rem;">Ask AI <span style="font-size: 0.8em; font-weight: normal; color: var(--text-muted);">(Lite)</span></h2>
+                <label style="display: flex; align-items: center; gap: 6px; font-size: 0.85em; color: var(--text-muted); cursor: pointer; border: 1px solid rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; background: rgba(0,0,0,0.2);">
+                    <input type="checkbox" id="deepModeToggle" onchange="window.assistantLLMInstance && window.assistantLLMInstance.toggleDeepMode && window.assistantLLMInstance.toggleDeepMode(this.checked)" style="accent-color: var(--primary-teal);">
+                    Deep mode
+                </label>
+                
+            </div>
+            
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" aria-label="Close modal" onclick="closeAssistant()" style="background: none; border: none; color: var(--text-muted); cursor: pointer;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <div id="assistantMessages" class="modal-body" style="flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; scrollbar-width: thin;">
+            <div class="msg assistant" style="padding: 1rem; border-radius: 8px; background: rgba(255,255,255,0.05); border-left: 3px solid var(--primary-blue); line-height: 1.5;">
+                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.
+            </div>
+        </div>
+        <div class="assistant-input-area" style="padding: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <form id="assistantForm" onsubmit="event.preventDefault(); submitAssistantQuery();" style="display: flex; gap: 0.5rem;">
+                <input type="text" id="assistantInput" autocomplete="off" placeholder="Ask something..." style="flex: 1; padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: white;">
+                <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1rem;">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let assistantApp = null;
+let assistantCloseTimer = null;
+let isAssistantOpen = false;
+
+async function openAssistant() {
+    if (document.querySelector('.ask-ai-btn')?.getAttribute('data-dragged') === 'true') return;
+    
+    const modal = document.getElementById('assistantModal');
+    
+    // Toggle closed if already open
+    if (isAssistantOpen) {
+        closeAssistant();
+        return;
+    }
+
+    // Cancel any pending close timer from rapid clicks
+    if (assistantCloseTimer) {
+        clearTimeout(assistantCloseTimer);
+        assistantCloseTimer = null;
+    }
+
+    isAssistantOpen = true;
+    modal.style.display = 'flex';
+    
+    // Force DOM reflow so transition plays reliably
+    void modal.offsetHeight;
+    
+    modal.style.opacity = '1';
+    modal.style.transform = 'translateY(0)';
+    document.getElementById('assistantInput').focus();
+
+    if (!assistantApp) {
+                try {
+                    const { initAssistant } = await import('../../shared/assistant-ui.js');
+                    assistantApp = await initAssistant('java');
+                    if (!assistantApp) throw new Error("App init failed");
+                } catch (e) {
+                    const msgs = document.getElementById('assistantMessages');
+                    msgs.innerHTML = `<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>`;
+                }
+            }
+        }
+        function closeAssistant() {
+    const modal = document.getElementById('assistantModal');
+    isAssistantOpen = false;
+    
+    modal.style.opacity = '0';
+    modal.style.transform = 'translateY(20px)';
+    
+    if (assistantCloseTimer) clearTimeout(assistantCloseTimer);
+    assistantCloseTimer = setTimeout(() => {
+        modal.style.display = 'none';
+        assistantCloseTimer = null;
+    }, 300);
+}
+        function submitAssistantQuery(q) {
+            const input = document.getElementById('assistantInput');
+            const query = q || input.value.trim();
+            if (!query) return;
+            if (!assistantApp) {
+                const msgs = document.getElementById('assistantMessages');
+                msgs.innerHTML = `<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>`;
+                return;
+            }
+            input.value = '';
+            assistantApp.handleQuery(query);
+        }
+    </script>
+
+</body>
+</html>

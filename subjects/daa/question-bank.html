@@ -1,0 +1,2259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta name="view-transition" content="same-origin">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAA - Full Question Bank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../shared/design-system.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body data-subject="daa" style="background:#030303;">
+    <div class="glow-bg"></div>
+
+    <nav class="smart-topbar">
+        <div class="topbar-left">
+            <a href="../../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: var(--text-main);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                <span style="font-weight: 600; font-size: 1.1rem; letter-spacing: 0.5px;">Dashboard</span>
+            </a>
+        </div>
+        <div class="topbar-right">
+            <button onclick="downloadPDF()" class="btn btn-secondary" style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; padding: 0.4rem 0.8rem; background: rgba(255,255,255,0.1);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Save as PDF
+            </button>
+        </div>
+    </nav>
+
+<header class="banner">
+        
+        
+        
+        <h1>Design and Analysis of Algorithms</h1>
+        <h2>Full Question Bank</h2>
+        <p class="scope-note">All Units | 2, 3, and 5 Marks</p>
+    
+        
+    </header>
+
+    <div class="layout-wrapper">
+    <!-- Filter Modal (FAB) -->
+    <div id="filterModal" class="glass-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Search & Filters</h3>
+                
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="controls-top">
+                    <div class="filter-section">
+                        <input type="search" id="search-box" class="search-bar" placeholder="Search questions by keyword...">
+                        <div class="filter-toggles">
+                            <label><input type="checkbox" class="unit-cb" value="I"> Unit I</label>
+                            <label><input type="checkbox" class="unit-cb" value="II"> Unit II</label>
+                            <label><input type="checkbox" class="unit-cb" value="III"> Unit III</label>
+                            <label><input type="checkbox" class="unit-cb" value="IV"> Unit IV</label>
+                            <label><input type="checkbox" class="unit-cb" value="V"> Unit V</label>
+                            <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
+                            <label><input type="checkbox" class="marks-cb" value="2"> 2 Marks</label>
+                            <label><input type="checkbox" class="marks-cb" value="3"> 3 Marks</label>
+                            <label><input type="checkbox" class="marks-cb" value="5"> 5 Marks</label>
+                            <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
+                            
+                            <label title="Filters for elite questions with a score of 9.0+ based on fundamental importance and exam probability."><input type="checkbox" class="important-cb"> Important Only</label>
+                            
+                            <label><input type="checkbox" class="reviewed-filter-cb"> Reviewed Only</label>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:flex; gap:0.5rem; margin-top:1rem; flex-wrap:wrap;">
+                    <button class="btn btn-primary" style="flex:1" onclick="toggleAllAnswers(); closeModal('filterModal')">Reveal All</button>
+                    <button class="btn btn-secondary" style="flex:1" onclick="clearFilters(); closeModal('filterModal')">Clear Filters</button>
+                    <button class="btn btn-secondary" style="flex:1" onclick="closeModal('filterModal')">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Jump Modal -->
+    <div id="jumpModal" class="glass-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Quick Jump</h3>
+                
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                
+                <div class="nav-group">
+                    <h4 style="color: var(--subject-color); margin-bottom: 0.5rem;">Unit I</h4>
+                    <ul class="quick-jump-list">
+                    
+                        <li><a href="#u1q1">Q1 (2 Marks)</a></li>
+                    
+                        <li><a href="#u1q2">Q2 (2 Marks)</a></li>
+                    
+                        <li><a href="#u1q3">Q3 (3 Marks)</a></li>
+                    
+                        <li><a href="#u1q4">Q4 (2 Marks)</a></li>
+                    
+                        <li><a href="#u1q5">Q5 (3 Marks)</a></li>
+                    
+                        <li><a href="#u1q7">Q7 (2 Marks)</a></li>
+                    
+                        <li><a href="#u1q8">Q8 (3 Marks)</a></li>
+                    
+                        <li><a href="#u1q9">Q9 (3 Marks)</a></li>
+                    
+                        <li><a href="#u1q10">Q10 (3 Marks)</a></li>
+                    
+                        <li><a href="#u1q11">Q11 (3 Marks)</a></li>
+                    
+                        <li><a href="#u1q12">Q12 (3 Marks)</a></li>
+                    
+                        <li><a href="#u1q13">Q13 (5 Marks)</a></li>
+                    
+                        <li><a href="#u1q14">Q14 (5 Marks)</a></li>
+                    
+                        <li><a href="#u1q15">Q15 (5 Marks)</a></li>
+                    
+                    </ul>
+                </div>
+                
+                <div class="nav-group">
+                    <h4 style="color: var(--subject-color); margin-bottom: 0.5rem;">Unit II</h4>
+                    <ul class="quick-jump-list">
+                    
+                        <li><a href="#u2q1">Q1 (2 Marks)</a></li>
+                    
+                        <li><a href="#u2q2">Q2 (3 Marks)</a></li>
+                    
+                        <li><a href="#u2q3">Q3 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q4">Q4 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q5">Q5 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q6">Q6 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q7">Q7 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q8">Q8 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q9">Q9 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q10">Q10 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q11">Q11 (10 Marks)</a></li>
+                    
+                        <li><a href="#u2q12">Q12 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q13">Q13 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q14">Q14 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q15">Q15 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q16">Q16 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q17">Q17 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q18">Q18 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q19">Q19 (5 Marks)</a></li>
+                    
+                        <li><a href="#u2q20">Q20 (3 Marks)</a></li>
+                    
+                        <li><a href="#u2q21">Q21 (3 Marks)</a></li>
+                    
+                        <li><a href="#u2q22">Q22 (3 Marks)</a></li>
+                    
+                    </ul>
+                </div>
+                
+                <div class="nav-group">
+                    <h4 style="color: var(--subject-color); margin-bottom: 0.5rem;">Unit III</h4>
+                    <ul class="quick-jump-list">
+                    
+                        <li><a href="#q1">Q1 (5 Marks)</a></li>
+                    
+                        <li><a href="#q2">Q2 (3 Marks)</a></li>
+                    
+                        <li><a href="#q3">Q3 (5 Marks)</a></li>
+                    
+                        <li><a href="#q4">Q4 (5 Marks)</a></li>
+                    
+                        <li><a href="#q5">Q5 (3 Marks)</a></li>
+                    
+                        <li><a href="#q6">Q6 (3 Marks)</a></li>
+                    
+                        <li><a href="#q7">Q7 (5 Marks)</a></li>
+                    
+                        <li><a href="#q12">Q12 (5 Marks)</a></li>
+                    
+                        <li><a href="#q14">Q14 (5 Marks)</a></li>
+                    
+                        <li><a href="#q15">Q15 (5 Marks)</a></li>
+                    
+                        <li><a href="#q16">Q16 (5 Marks)</a></li>
+                    
+                        <li><a href="#q17">Q17 (5 Marks)</a></li>
+                    
+                        <li><a href="#q18">Q18 (5 Marks)</a></li>
+                    
+                        <li><a href="#q19">Q19 (5 Marks)</a></li>
+                    
+                        <li><a href="#q20">Q20 (5 Marks)</a></li>
+                    
+                        <li><a href="#q21">Q21 (3 Marks)</a></li>
+                    
+                        <li><a href="#q22">Q22 (3 Marks)</a></li>
+                    
+                        <li><a href="#q23">Q23 (3 Marks)</a></li>
+                    
+                        <li><a href="#q24">Q24 (5 Marks)</a></li>
+                    
+                        <li><a href="#q27">Q27 (5 Marks)</a></li>
+                    
+                        <li><a href="#q32">Q32 (5 Marks)</a></li>
+                    
+                        <li><a href="#q35">Q35 (5 Marks)</a></li>
+                    
+                        <li><a href="#q44">Q44 (5 Marks)</a></li>
+                    
+                        <li><a href="#q45">Q45 (3 Marks)</a></li>
+                    
+                        <li><a href="#q49">Q49 (3 Marks)</a></li>
+                    
+                        <li><a href="#q50">Q50 (3 Marks)</a></li>
+                    
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Study Modal (Flashcards) -->
+    <div id="studyModal" class="glass-modal">
+        <div class="modal-content" style="max-width: 800px; height: 80vh; display: flex; flex-direction: column;">
+            <div class="modal-header" style="flex-shrink: 0;">
+                <h3>Flashcards</h3>
+                
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
+            </div>
+            <div class="modal-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; overflow: hidden; padding-bottom: 2rem;">
+                
+                <div id="flashcard-wrapper" onclick="document.getElementById('flashcard-inner').classList.toggle('flipped')" style="flex-grow: 1; min-height: 350px; perspective: 1000px; position: relative;">
+                    <div id="flashcard-inner" style="position: absolute; inset: 0; transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); transform-style: preserve-3d; cursor: pointer;">
+                        <!-- Front (Question) -->
+                        <div id="flashcard-front" style="position: absolute; inset: 0; backface-visibility: hidden; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                            <div id="fc-badge" class="badges" style="margin-bottom: 1.5rem; justify-content: center;"></div>
+                            <h2 id="fc-question" style="font-size: 1.6rem; line-height: 1.4; color: var(--text-main); font-family: var(--font-headings); font-weight: 600;">Loading...</h2>
+                            <p style="margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem; font-weight: 500;">Tap to reveal answer</p>
+                        </div>
+                        
+                        <!-- Back (Answer) -->
+                        <div id="flashcard-back" style="position: absolute; inset: 0; backface-visibility: hidden; background: rgba(var(--subject-color-rgb, 255,255,255), 0.05); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 2.5rem 2rem; display: flex; flex-direction: column; overflow-y: auto; transform: rotateY(180deg);">
+                            <h5 id="fc-back-question" style="margin-top: 0; margin-bottom: 1.5rem; color: var(--heading-color); font-size: 1.05rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; opacity: 0.9; line-height: 1.4;"></h5>
+                            <div id="fc-answer" style="text-align: left; width: 100%; font-size: 1.05rem; line-height: 1.6; color: var(--text-main);"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem; justify-content: center;">
+                    <button class="btn btn-secondary" onclick="prevFlashcard()">Prev</button>
+                    <button class="btn btn-secondary" onclick="shuffleFlashcards()">Shuffle</button>
+                    <button class="btn btn-primary" onclick="nextFlashcard()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="content-area">
+        
+        <div style="margin-bottom: 2rem;">
+            <p id="showing-text" style="color: var(--text-muted); font-size: 0.95rem;">Showing questions.</p>
+        </div>
+
+        
+
+        <div class="quiz-container" style="display: grid;">
+            <div id="pureSkeleton">
+                <!-- SKELETON MOCK -->
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 75%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 60%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 85%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 50%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 80%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 90%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 65%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 70%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="realContentWrapper">
+                <section id="cards">
+                    
+                    <details class="q-card" id="u1q1" data-unit="I" data-bloom="L1" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q1. Define an algorithm. Write any four characteristics of a good algorithm.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l1">CO1 | Bloom L1</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>An algorithm is a step-by-step procedure or set of rules to be followed in calculations or other problem-solving operations. Characteristics:</p><ul><li><strong>Finiteness:</strong> Must terminate after a finite number of steps.</li><li><strong>Definiteness:</strong> Each step must be precisely defined.</li><li><strong>Input:</strong> Has zero or more inputs.</li><li><strong>Output:</strong> Produces one or more outputs.</li><li><strong>Effectiveness:</strong> Operations must be basic enough to be done exactly and in finite time.</li></ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u1q2" data-unit="I" data-bloom="L1" data-marks="2" data-important="false">
+                        <summary>
+                            <h3>Q2. What is pseudocode? Mention two advantages of representing an algorithm using pseudocode.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l1">CO1 | Bloom L1</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Pseudocode is an informal, high-level description of the operating principle of a computer program or algorithm. Advantages:</p><ul><li>Easier for humans to read and understand compared to actual code.</li><li>Independent of any specific programming language, making it versatile.</li></ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u1q3" data-unit="I" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q3. Differentiate between time complexity and space complexity with one example.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Time Complexity:</strong> The amount of time an algorithm takes to run as a function of the length of the input. <strong>Space Complexity:</strong> The amount of memory an algorithm requires to run as a function of the length of the input.</p><p><em>Example:</em> Mergesort has a time complexity of O(n log n) and space complexity of O(n), whereas Bubble sort has time complexity O(n^2) but space complexity O(1).</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u1q4" data-unit="I" data-bloom="L1" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q4. Define Big-O notation.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l1">CO1 | Bloom L1</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Big-O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity. In computer science, it is used to classify algorithms according to how their run time or space requirements grow as the input size grows. It describes the upper bound of the complexity.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u1q5" data-unit="I" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q5. What is the difference between best-case, worst-case, and average-case analysis?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul><li><strong>Best-case:</strong> The minimum time required for program execution for any input of size n.</li><li><strong>Worst-case:</strong> The maximum time required for program execution for any input of size n. (Provides an upper bound).</li><li><strong>Average-case:</strong> The expected time required for program execution over all possible inputs of size n.</li></ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u1q7" data-unit="I" data-bloom="L1" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q7. What is asymptotic analysis? Why is it preferred over measuring execution time?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l1">CO1 | Bloom L1</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 7.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Asymptotic analysis evaluates the performance of an algorithm in terms of input size (n) as it approaches infinity. It is preferred because execution time depends on hardware, compiler, and OS, whereas asymptotic analysis provides a machine-independent way to compare algorithms' efficiency.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u1q8" data-unit="I" data-bloom="L2" data-marks="3" data-important="false">
+                        <summary>
+                            <h3>Q8. What is amortized analysis? Explain the aggregate method in one or two sentences.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Amortized analysis calculates the average time taken per operation, over a sequence of operations, guaranteeing the average performance even if a single operation is expensive.</p><p><strong>Aggregate method:</strong> It computes the total time <em>T(n)</em> for a sequence of <em>n</em> operations and sets the amortized cost per operation to <em>T(n)/n</em>.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u1q9" data-unit="I" data-bloom="L3" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q9. Find the time complexity of the following code: sum = 0; a = 5; b = 10; sum = a + b; printf("%d", sum);</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The time complexity is <strong>O(1)</strong> (constant time) because there are no loops or recursion. The number of basic operations (assignments, addition, printing) is fixed and independent of any input size.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u1q10" data-unit="I" data-bloom="L3" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q10. Find the time complexity of the following code: if (n > 100) x = x + 1; else x = x - 1; Also mention the best and worst case.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The time complexity is <strong>O(1)</strong>. The condition evaluation takes O(1) time, and both the <code>if</code> block and <code>else</code> block contain basic arithmetic operations taking O(1) time.</p><p><strong>Best case:</strong> O(1)<br><strong>Worst case:</strong> O(1)</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u1q11" data-unit="I" data-bloom="L3" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q11. Find the time complexity: for(i = 1; i <= n; i++) { printf("%d", i); }</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The loop variable <code>i</code> goes from 1 to <code>n</code>, incrementing by 1 each time. The loop runs exactly <code>n</code> times.</p><p>Number of iterations: <code>n</code>.</p><p>Final time complexity: <strong>O(n)</strong>.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u1q12" data-unit="I" data-bloom="L3" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q12. Find the time complexity: for(i = 1; i <= n; i = i + 2) { count++; }</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The loop variable <code>i</code> starts at 1 and increases by 2 in each iteration (1, 3, 5, ..., n). The loop runs roughly <code>n/2</code> times.</p><p>Execution count: <code>n/2</code> times.</p><p>Final time complexity: <strong>O(n)</strong>.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u1q13" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q13. Find the time complexity: for(i = 1; i <= n; i++) { for(j = 1; j <= n; j++) { count++; } }</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The outer loop runs <code>n</code> times. For each iteration of the outer loop, the inner loop runs <code>n</code> times. Total iterations = n * n = n<sup>2</sup>.</p><p>Final time complexity: <strong>O(n<sup>2</sup>)</strong>.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u1q14" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q14. Find the time complexity: for(i = 1; i <= n; i++) { for(j = 1; j <= i; j++) { count++; } }</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The outer loop runs <code>n</code> times. The inner loop runs <code>i</code> times. The total number of executions is the sum of the first n integers:</p><p>Summation: 1 + 2 + 3 + ... + n = <code>n(n+1)/2</code> = <code>(n<sup>2</sup> + n)/2</code>.</p><p>Final time complexity: <strong>O(n<sup>2</sup>)</strong>.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u1q15" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q15. Find the time complexity: for(i = 1; i <= n; i = i * 2) { printf("%d", i); }</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The loop variable <code>i</code> starts at 1 and multiplies by 2 each time. Sequence of i values: 1, 2, 4, 8, ..., 2<sup>k</sup>.</p><p>The loop terminates when 2<sup>k</sup> > n, which means k ≈ log<sub>2</sub>(n). The total iterations is roughly log<sub>2</sub>(n).</p><p>Final time complexity: <strong>O(log n)</strong>.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q1" data-unit="II" data-bloom="L1" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q1. Define algorithm correctness. Differentiate between partial correctness and total correctness with suitable examples.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l1">CO2 | Bloom L1</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Algorithm Correctness:</strong> An algorithm is correct if, for every valid input, it halts and produces the correct output as defined by its specifications.</p><ul><li><strong>Partial Correctness:</strong> If the algorithm halts, it produces the correct output (but it might not halt). Example: A while(true) loop that searches for an element and breaks when found. If the element isn't there, it might loop forever.</li><li><strong>Total Correctness:</strong> The algorithm is guaranteed to halt, and when it halts, it produces the correct output. Example: A standard for-loop based linear search that scans an array from start to end and returns true/false.</li></ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q2" data-unit="II" data-bloom="L1" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q2. What is a loop invariant? Explain the three steps—initialization, maintenance, and termination—used to prove the correctness of an algorithm.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l1">CO2 | Bloom L1</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>A <strong>loop invariant</strong> is a condition or property that is true before and after each iteration of a loop. It is used to prove the correctness of loop structures.</p><ol><li><strong>Initialization:</strong> The invariant must be true before the first iteration of the loop.</li><li><strong>Maintenance:</strong> If it is true before an iteration of the loop, it remains true before the next iteration.</li><li><strong>Termination:</strong> When the loop terminates, the invariant gives us a useful property that helps show the algorithm is correct.</li></ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q3" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
+                        <summary>
+                            <h3>Q3. Explain how loop invariants can be used to prove the correctness of a sorting algorithm.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>In sorting algorithms like Insertion Sort, a loop invariant can be defined as: 'At the start of each iteration <em>i</em>, the subarray A[0...i-1] consists of the elements originally in A[0...i-1], but in sorted order.'</p><ul><li><strong>Initialization:</strong> For i=1, A[0] is just a single element, which is trivially sorted.</li><li><strong>Maintenance:</strong> During iteration <em>i</em>, the algorithm inserts A[i] into its correct position in A[0...i-1], making A[0...i] sorted.</li><li><strong>Termination:</strong> The loop ends when i = n. The invariant states that A[0...n-1] is sorted, which means the entire array is sorted, proving correctness.</li></ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q4" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q4. Perform a complete dry run of Bubble Sort on the array: 64, 25, 12, 22, 11, 90, 34, 5, 78, 43.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Initial array: [64, 25, 12, 22, 11, 90, 34, 5, 78, 43]</p><table border='1'><tr><th>Pass</th><th>Array State</th><th>Comparisons</th><th>Swaps</th></tr><tr><td>1</td><td>[25, 12, 22, 11, 64, 34, 5, 78, 43, 90]</td><td>9</td><td>8</td></tr><tr><td>2</td><td>[12, 22, 11, 25, 34, 5, 64, 43, 78, 90]</td><td>8</td><td>6</td></tr><tr><td>3</td><td>[12, 11, 22, 25, 5, 34, 43, 64, 78, 90]</td><td>7</td><td>3</td></tr><tr><td>4</td><td>[11, 12, 22, 5, 25, 34, 43, 64, 78, 90]</td><td>6</td><td>2</td></tr><tr><td>5</td><td>[11, 12, 5, 22, 25, 34, 43, 64, 78, 90]</td><td>5</td><td>1</td></tr><tr><td>6</td><td>[11, 5, 12, 22, 25, 34, 43, 64, 78, 90]</td><td>4</td><td>1</td></tr><tr><td>7</td><td>[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]</td><td>3</td><td>1</td></tr><tr><td>8</td><td>[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]</td><td>2</td><td>0</td></tr><tr><td>9</td><td>[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]</td><td>1</td><td>0</td></tr></table><p>Total Comparisons: 45, Total Swaps: 22</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q5" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q5. Perform a complete dry run of Bubble Sort on: 90, 80, 70, 60, 50, 40, 30, 20, 10.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Initial array: [90, 80, 70, 60, 50, 40, 30, 20, 10]</p><table border='1'><tr><th>Pass</th><th>Array State</th><th>Comparisons</th><th>Swaps</th></tr><tr><td>1</td><td>[80, 70, 60, 50, 40, 30, 20, 10, 90]</td><td>8</td><td>8</td></tr><tr><td>2</td><td>[70, 60, 50, 40, 30, 20, 10, 80, 90]</td><td>7</td><td>7</td></tr><tr><td>3</td><td>[60, 50, 40, 30, 20, 10, 70, 80, 90]</td><td>6</td><td>6</td></tr><tr><td>4</td><td>[50, 40, 30, 20, 10, 60, 70, 80, 90]</td><td>5</td><td>5</td></tr><tr><td>5</td><td>[40, 30, 20, 10, 50, 60, 70, 80, 90]</td><td>4</td><td>4</td></tr><tr><td>6</td><td>[30, 20, 10, 40, 50, 60, 70, 80, 90]</td><td>3</td><td>3</td></tr><tr><td>7</td><td>[20, 10, 30, 40, 50, 60, 70, 80, 90]</td><td>2</td><td>2</td></tr><tr><td>8</td><td>[10, 20, 30, 40, 50, 60, 70, 80, 90]</td><td>1</td><td>1</td></tr></table><p>Total Comparisons: 36, Total Swaps: 36</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q6" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q6. Apply Selection Sort on the array: 29, 10, 14, 37, 13, 25, 8, 42, 17.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Initial array: [29, 10, 14, 37, 13, 25, 8, 42, 17]</p><table border='1'><tr><th>Pass</th><th>Min Selected</th><th>Array State</th></tr><tr><td>1</td><td>8</td><td>[8, 10, 14, 37, 13, 25, 29, 42, 17]</td></tr><tr><td>2</td><td>10</td><td>[8, 10, 14, 37, 13, 25, 29, 42, 17]</td></tr><tr><td>3</td><td>13</td><td>[8, 10, 13, 37, 14, 25, 29, 42, 17]</td></tr><tr><td>4</td><td>14</td><td>[8, 10, 13, 14, 37, 25, 29, 42, 17]</td></tr><tr><td>5</td><td>17</td><td>[8, 10, 13, 14, 17, 25, 29, 42, 37]</td></tr><tr><td>6</td><td>25</td><td>[8, 10, 13, 14, 17, 25, 29, 42, 37]</td></tr><tr><td>7</td><td>29</td><td>[8, 10, 13, 14, 17, 25, 29, 42, 37]</td></tr><tr><td>8</td><td>37</td><td>[8, 10, 13, 14, 17, 25, 29, 37, 42]</td></tr></table>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q7" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q7. Apply Selection Sort on: 64, 25, 12, 22, 11, 90, 34, 5, 78, 43.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Initial array: [64, 25, 12, 22, 11, 90, 34, 5, 78, 43]</p><table border='1'><tr><th>Pass</th><th>Min Selected</th><th>Array State</th></tr><tr><td>1</td><td>5</td><td>[5, 25, 12, 22, 11, 90, 34, 64, 78, 43]</td></tr><tr><td>2</td><td>11</td><td>[5, 11, 12, 22, 25, 90, 34, 64, 78, 43]</td></tr><tr><td>3</td><td>12</td><td>[5, 11, 12, 22, 25, 90, 34, 64, 78, 43]</td></tr><tr><td>4</td><td>22</td><td>[5, 11, 12, 22, 25, 90, 34, 64, 78, 43]</td></tr><tr><td>5</td><td>25</td><td>[5, 11, 12, 22, 25, 90, 34, 64, 78, 43]</td></tr><tr><td>6</td><td>34</td><td>[5, 11, 12, 22, 25, 34, 90, 64, 78, 43]</td></tr><tr><td>7</td><td>43</td><td>[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]</td></tr><tr><td>8</td><td>64</td><td>[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]</td></tr><tr><td>9</td><td>78</td><td>[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]</td></tr></table>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q8" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q8. Perform a complete dry run of Insertion Sort on: 45, 12, 78, 34, 23, 9, 56, 67, 18, 5.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Initial array: [45, 12, 78, 34, 23, 9, 56, 67, 18, 5]</p><table border='1'><tr><th>Element Inserted</th><th>Array State</th></tr><tr><td>12</td><td>[12, 45, 78, 34, 23, 9, 56, 67, 18, 5]</td></tr><tr><td>78</td><td>[12, 45, 78, 34, 23, 9, 56, 67, 18, 5]</td></tr><tr><td>34</td><td>[12, 34, 45, 78, 23, 9, 56, 67, 18, 5]</td></tr><tr><td>23</td><td>[12, 23, 34, 45, 78, 9, 56, 67, 18, 5]</td></tr><tr><td>9</td><td>[9, 12, 23, 34, 45, 78, 56, 67, 18, 5]</td></tr><tr><td>56</td><td>[9, 12, 23, 34, 45, 56, 78, 67, 18, 5]</td></tr><tr><td>67</td><td>[9, 12, 23, 34, 45, 56, 67, 78, 18, 5]</td></tr><tr><td>18</td><td>[9, 12, 18, 23, 34, 45, 56, 67, 78, 5]</td></tr><tr><td>5</td><td>[5, 9, 12, 18, 23, 34, 45, 56, 67, 78]</td></tr></table>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q9" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q9. Apply Insertion Sort to the array: 9, 8, 7, 6, 5, 4, 3, 2, 1.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Initial array: [9, 8, 7, 6, 5, 4, 3, 2, 1]</p><table border='1'><tr><th>Element Inserted</th><th>Array State</th></tr><tr><td>8</td><td>[8, 9, 7, 6, 5, 4, 3, 2, 1]</td></tr><tr><td>7</td><td>[7, 8, 9, 6, 5, 4, 3, 2, 1]</td></tr><tr><td>6</td><td>[6, 7, 8, 9, 5, 4, 3, 2, 1]</td></tr><tr><td>5</td><td>[5, 6, 7, 8, 9, 4, 3, 2, 1]</td></tr><tr><td>4</td><td>[4, 5, 6, 7, 8, 9, 3, 2, 1]</td></tr><tr><td>3</td><td>[3, 4, 5, 6, 7, 8, 9, 2, 1]</td></tr><tr><td>2</td><td>[2, 3, 4, 5, 6, 7, 8, 9, 1]</td></tr><tr><td>1</td><td>[1, 2, 3, 4, 5, 6, 7, 8, 9]</td></tr></table>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q10" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q10. Construct a Max Heap from the following array using the bottom-up heap construction method: 45, 20, 14, 12, 31, 7, 11, 13, 8, 10.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Initial Array: [45, 20, 14, 12, 31, 7, 11, 13, 8, 10]</p><p>Nodes from index (n/2 - 1) down to 0 are heapified.</p><ul><li>i = 4 (value 31): Children are 10. 31 > 10. No swap.</li><li>i = 3 (value 12): Children are 13, 8. Swap 12 with 13. State: [45, 20, 14, 13, 31, 7, 11, 12, 8, 10]</li><li>i = 2 (value 14): Children are 7, 11. 14 > 11, 7. No swap.</li><li>i = 1 (value 20): Children are 13, 31. Swap 20 with 31. State: [45, 31, 14, 13, 20, 7, 11, 12, 8, 10]</li><li>i = 0 (value 45): Children are 31, 14. 45 > 31. No swap.</li></ul><p><strong>Final Max Heap:</strong> [45, 31, 14, 13, 20, 7, 11, 12, 8, 10]</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q11" data-unit="II" data-bloom="L4" data-marks="10" data-important="true">
+                        <summary>
+                            <h3>Q11. Perform a complete dry run of Heap Sort on: 25, 17, 36, 2, 3, 100, 1, 19, 7.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
+                                    <span class="badge marks marks-10">10 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Initial: [25, 17, 36, 2, 3, 100, 1, 19, 7]</p><p><strong>Step 1: Build Max Heap</strong></p><ul><li>i=3 (value 2): children 19, 7. Swap with 19 -> [..., 19, 3, 100, 1, 2, 7]</li><li>i=2 (value 36): children 100, 1. Swap with 100 -> [..., 100, 1, 2, 7]</li><li>i=1 (value 17): children 19, 3. Swap with 19 -> [..., 19, 100, ...]</li><li>i=0 (value 25): children 19, 100. Swap with 100 -> [100, 19, 25, ...]</li></ul><p>Max Heap: [100, 19, 36, 17, 3, 25, 1, 2, 7]</p><p><strong>Step 2: Extract & Heapify</strong></p><ul><li>Swap 100 & 7 -> Heapify(0) -> [36, 19, 25, 17, 3, 7, 1, 2] | Sorted: [100]</li><li>Swap 36 & 2 -> Heapify(0) -> [25, 19, 7, 17, 3, 2, 1] | Sorted: [36, 100]</li><li>... process continues until sorted ...</li></ul><p><strong>Final Array:</strong> [1, 2, 3, 7, 17, 19, 25, 36, 100]</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q12" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q12. Apply Counting Sort on the array: 4, 2, 7, 3, 2, 1, 6, 4, 3, 5.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Input: [4, 2, 7, 3, 2, 1, 6, 4, 3, 5]</p><p>Count array: [0, 1, 2, 2, 2, 1, 1, 1]</p><p>Cumulative count array: [0, 0, 1, 3, 5, 7, 8, 9]</p><p>Output array: [1, 2, 2, 3, 3, 4, 4, 5, 6, 7]</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q13" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q13. Perform a complete dry run of Counting Sort on: 3, 1, 4, 1, 2, 7, 5, 3, 6, 2.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Input: [3, 1, 4, 1, 2, 7, 5, 3, 6, 2]</p><p>Count array: [0, 2, 2, 2, 1, 1, 1, 1]</p><p>Cumulative count array: [0, 0, 2, 4, 6, 7, 8, 9]</p><p>Output array: [1, 1, 2, 2, 3, 3, 4, 5, 6, 7]</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q14" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q14. Perform a complete dry run of Radix Sort on: 170, 45, 75, 90, 802, 24, 2, 66, 329, 501.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Initial Array: [170, 45, 75, 90, 802, 24, 2, 66, 329, 501]</p><p><strong>Pass 1 (Units digit):</strong><br>Buckets / Sorted: [170, 90, 501, 802, 2, 24, 45, 75, 66, 329]</p><p><strong>Pass 2 (Tens digit):</strong><br>Buckets / Sorted: [802, 2, 501, 24, 329, 45, 66, 170, 75, 90]</p><p><strong>Pass 3 (Hundreds digit):</strong><br>Buckets / Sorted: [2, 24, 45, 66, 75, 90, 170, 329, 501, 802]</p><p><strong>Final Sorted Array:</strong> [2, 24, 45, 66, 75, 90, 170, 329, 501, 802]</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q15" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q15. Apply Radix Sort on: 329, 457, 657, 839, 436, 720, 355, 12, 98.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Initial Array: [329, 457, 657, 839, 436, 720, 355, 12, 98]</p><p><strong>Pass 1 (Units):</strong> [720, 12, 355, 436, 457, 657, 98, 329, 839]</p><p><strong>Pass 2 (Tens):</strong> [12, 720, 329, 436, 839, 355, 457, 657, 98]</p><p><strong>Pass 3 (Hundreds):</strong> [12, 98, 329, 355, 436, 457, 657, 720, 839]</p><p><em>The sorting algorithm (like counting sort) at each digit must be stable so that elements with the same current digit remain in the relative order established by previous, less-significant digits.</em></p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q16" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q16. Perform a complete dry run of Bucket Sort on: 0.42, 0.32, 0.73, 0.52, 0.25, 0.91, 0.63, 0.18, 0.37, 0.81.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Initial Array: [0.42, 0.32, 0.73, 0.52, 0.25, 0.91, 0.63, 0.18, 0.37, 0.81]</p><p>10 buckets (index 0 to 9) computed by floor(10 * value):</p><ul><li>B1: [0.18]</li><li>B2: [0.25]</li><li>B3: [0.32, 0.37]</li><li>B4: [0.42]</li><li>B5: [0.52]</li><li>B6: [0.63]</li><li>B7: [0.73]</li><li>B8: [0.81]</li><li>B9: [0.91]</li></ul><p>Sort each bucket (already sorted or trivial). Concatenate all buckets.</p><p><strong>Final Sorted Array:</strong> [0.18, 0.25, 0.32, 0.37, 0.42, 0.52, 0.63, 0.73, 0.81, 0.91]</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q17" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q17. Compare Bubble, Selection, Insertion, Heap, Counting, Radix, Bucket Sort complexities.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <table border='1'><tr><th>Algorithm</th><th>Best-case</th><th>Average-case</th><th>Worst-case</th></tr><tr><td>Bubble Sort</td><td>O(n)</td><td>O(n<sup>2</sup>)</td><td>O(n<sup>2</sup>)</td></tr><tr><td>Selection Sort</td><td>O(n<sup>2</sup>)</td><td>O(n<sup>2</sup>)</td><td>O(n<sup>2</sup>)</td></tr><tr><td>Insertion Sort</td><td>O(n)</td><td>O(n<sup>2</sup>)</td><td>O(n<sup>2</sup>)</td></tr><tr><td>Heap Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td></tr><tr><td>Counting Sort</td><td>O(n+k)</td><td>O(n+k)</td><td>O(n+k)</td></tr><tr><td>Radix Sort</td><td>O(d(n+k))</td><td>O(d(n+k))</td><td>O(d(n+k))</td></tr><tr><td>Bucket Sort</td><td>O(n+k)</td><td>O(n)</td><td>O(n<sup>2</sup>)</td></tr></table>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q18" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q18. Compare Bubble, Selection, Insertion on 64, 34, 25, 12, 22, 11, 90, 45, 78, 33.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>All three have worst-case O(n^2). However, for an <strong>almost-sorted array</strong>, Insertion Sort is highly preferable because its best-case time complexity approaches O(n) as it only compares a few elements before finding the correct position. Bubble sort can also be O(n) if a flag is used to break early, but it generally involves more swaps. Selection Sort is always O(n^2) comparisons.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q19" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q19. Perform a complete dry run of Heap Sort on: 20, 15, 30, 5, 10, 25, 35, 2, 8, 12.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Initial Array: [20, 15, 30, 5, 10, 25, 35, 2, 8, 12]</p><p><strong>Build Max Heap:</strong><br>Heapify from index 4 down to 0.<br>Resulting Max Heap: [35, 15, 30, 8, 12, 25, 20, 2, 5, 10]</p><p><strong>Extraction & Heapify:</strong><br>Extract 35, move 10 to root, heapify. -> [30, 15, 25, 8, 12, 10, 20, 2, 5] | [35]<br>... continue extracting max ...<br><strong>Final Sorted Array:</strong> [2, 5, 8, 10, 12, 15, 20, 25, 30, 35]</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q20" data-unit="II" data-bloom="L3" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q20. Determine whether array represents a Max Heap: 16, 14, 10, 8, 7, 9, 3, 2, 4, 1.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>For an array to be a Max Heap, every parent A[i] must be >= its children A[2i+1] and A[2i+2].</p><ul><li>i=0 (16): children 14, 10. Valid.</li><li>i=1 (14): children 8, 7. Valid.</li><li>i=2 (10): children 9, 3. Valid.</li><li>i=3 (8): children 2, 4. Valid.</li><li>i=4 (7): child 1. Valid.</li></ul><p>The array <strong>is</strong> a valid Max Heap. No violations found.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q21" data-unit="II" data-bloom="L2" data-marks="3" data-important="false">
+                        <summary>
+                            <h3>Q21. Explain the difference between BUILD-MAX-HEAP and MAX-HEAPIFY.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>MAX-HEAPIFY:</strong> Maintains the max-heap property for a given node, assuming its left and right subtrees are already max heaps. It has a time complexity of O(log n).</p><p><strong>BUILD-MAX-HEAP:</strong> Constructs a max heap from an unordered array by calling MAX-HEAPIFY in a bottom-up manner on all non-leaf nodes. It has a time complexity of O(n).</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="u2q22" data-unit="II" data-bloom="L1" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q22. Define a heap. Differentiate between a Max Heap and a Min Heap.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l1">CO2 | Bloom L1</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>A <strong>Heap</strong> is a specialized tree-based data structure that satisfies the heap property, typically implemented as an almost complete binary tree.</p><ul><li><strong>Max Heap:</strong> The value of each node is greater than or equal to the values of its children. The largest element is at the root. Example: [100, 19, 36]</li><li><strong>Min Heap:</strong> The value of each node is less than or equal to the values of its children. The smallest element is at the root. Example: [1, 2, 3]</li></ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q1" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q1. Define the Divide and Conquer paradigm. Explain its three basic steps with a suitable example.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Divide and Conquer Paradigm</div>
+<p>The <strong>Divide and Conquer</strong> paradigm is an algorithmic design strategy that solves a problem by recursively breaking it down into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. The solutions to the sub-problems are then combined to give a solution to the original problem.</p>
+<p>It consists of three basic steps:</p>
+<ul>
+<li><strong>Divide:</strong> Break the given problem into smaller sub-problems.</li>
+<li><strong>Conquer:</strong> Recursively solve these sub-problems. If the sub-problem size is small enough, solve it directly (base case).</li>
+<li><strong>Combine:</strong> Merge the solutions of the sub-problems to form the solution of the original problem.</li>
+</ul>
+<div class="concept-heading">Example: Merge Sort</div>
+<p>In Merge Sort:</p>
+<ul>
+<li><strong>Divide:</strong> Divide the unsorted array of size <em>n</em> into two sub-arrays of size <em>n/2</em>.</li>
+<li><strong>Conquer:</strong> Recursively sort the two sub-arrays using Merge Sort.</li>
+<li><strong>Combine:</strong> Merge the two sorted sub-arrays into a single sorted array.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q2" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q2. What are the divide, conquer, and combine steps in a Divide and Conquer algorithm?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The three main steps of the Divide and Conquer strategy are:</p>
+<ul>
+<li><strong>Divide:</strong> This step involves breaking the original problem into a set of smaller sub-problems. The sub-problems should represent a smaller instance of the same original problem.</li>
+<li><strong>Conquer:</strong> This step involves solving the sub-problems recursively. If the sub-problem is small enough (the base case), it is solved directly without further division.</li>
+<li><strong>Combine:</strong> This step involves taking the solutions to the sub-problems and merging them together to formulate the solution to the original problem.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q3" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
+                        <summary>
+                            <h3>Q3. Explain the general structure of a Divide and Conquer algorithm. How is it different from an iterative algorithm?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">General Structure</div>
+<p>The general structure of a Divide and Conquer algorithm can be represented recursively:</p>
+<pre><code>Algorithm DAndC(P)
+{
+    if Small(P) then
+        return S(P); // Solve directly
+    else
+    {
+        Divide P into smaller instances P1, P2, ..., Pk, k &ge; 1;
+        Apply DAndC to each of these subproblems;
+        return Combine(DAndC(P1), DAndC(P2), ..., DAndC(Pk));
+    }
+}</code></pre>
+<div class="concept-heading">Difference from Iterative Algorithms</div>
+<ul>
+<li><strong>Control Flow:</strong> Divide and Conquer algorithms rely heavily on recursion (functions calling themselves), whereas iterative algorithms use loops (for, while) to repeat tasks.</li>
+<li><strong>State Management:</strong> In recursion, state is maintained implicitly by the call stack. In iteration, variables explicitly hold state (like loop counters).</li>
+<li><strong>Approach:</strong> Divide and conquer works top-down (breaking large to small), while dynamic programming or iterative methods can work bottom-up (solving small to build large).</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q4" data-unit="III" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q4. Identify whether the following algorithms use the Divide and Conquer technique. Give reasons for your answer: Binary Search, Merge Sort, Quick Sort, Bubble Sort</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>Binary Search:</strong> <em>Yes</em>. It divides the array into two halves, compares the target with the middle element, and recursively conquers only one of the halves. The combine step is trivial (returning the index).</li>
+<li><strong>Merge Sort:</strong> <em>Yes</em>. It divides the array into two halves, recursively sorts each half (conquer), and then merges the two sorted halves (combine).</li>
+<li><strong>Quick Sort:</strong> <em>Yes</em>. It chooses a pivot to divide the array into two partitions (smaller than pivot and greater than pivot), recursively sorts the partitions (conquer). Combine is trivial as sorting is done in place.</li>
+<li><strong>Bubble Sort:</strong> <em>No</em>. It is an iterative comparison-based algorithm that repeatedly swaps adjacent elements if they are in the wrong order. It does not divide the problem into smaller subproblems or use recursion.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q5" data-unit="III" data-bloom="L2" data-marks="3" data-important="false">
+                        <summary>
+                            <h3>Q5. Explain the advantages and limitations of the Divide and Conquer approach.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Advantages</div>
+<ul>
+<li><strong>Solving Complex Problems:</strong> Makes solving conceptually difficult problems easier by breaking them down into simpler, smaller sub-problems.</li>
+<li><strong>Parallelism:</strong> Sub-problems are independent and can often be executed in parallel on multi-core processors.</li>
+<li><strong>Memory Access Efficiency:</strong> Can be designed to optimize cache usage, as smaller sub-problems fit easily into the CPU cache.</li>
+<li><strong>Efficiency:</strong> Often yields algorithms with faster time complexities, e.g., reducing O(n&sup2;) to O(n log n) in sorting.</li>
+</ul>
+<div class="concept-heading">Limitations</div>
+<ul>
+<li><strong>Overhead:</strong> The recursion and function call stack overhead can make them slower for small inputs compared to simple iterative approaches.</li>
+<li><strong>Space Complexity:</strong> Deep recursion trees can lead to stack overflow or require excessive auxiliary space.</li>
+<li><strong>Repeated Subproblems:</strong> If not careful, overlapping subproblems can be solved multiple times, leading to inefficiencies (better handled by Dynamic Programming).</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q6" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q6. What is a recurrence relation? Explain its role in analyzing the time complexity of recursive algorithms.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>A <strong>recurrence relation</strong> is an equation or inequality that describes a mathematical function in terms of its value on smaller inputs.</p>
+<p><strong>Role in Analyzing Time Complexity:</strong></p>
+<p>When an algorithm contains a recursive call, its running time can be described by a recurrence relation. For example, in Merge Sort, solving a problem of size <em>n</em> involves two subproblems of size <em>n/2</em>, and merging takes linear time <em>O(n)</em>. This gives the recurrence:</p>
+<pre><code>T(n) = 2T(n/2) + O(n)</code></pre>
+<p>By solving this recurrence relation (using methods like the Substitution Method, Recursion Tree Method, or Master Theorem), we can express the time complexity of the algorithm in Big-O notation (e.g., O(n log n)).</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q7" data-unit="III" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q7. Solve the following recurrence using the substitution method: T(n) = 2T(n/2) + n</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Recurrence:</strong> T(n) = 2T(n/2) + n</p>
+<p><strong>Guess:</strong> T(n) = O(n log n). We need to prove that T(n) &le; c &middot; n log n for some constant c &gt; 0.</p>
+<p><strong>Proof by induction:</strong></p>
+<ul>
+<li>Assume the bound holds for n/2, i.e., T(n/2) &le; c &middot; (n/2) log(n/2).</li>
+<li>Substitute this into the recurrence:
+    <br> T(n) &le; 2 &middot; [c &middot; (n/2) log(n/2)] + n
+    <br> T(n) &le; c &middot; n log(n/2) + n
+    <br> T(n) &le; c &middot; n(log n - log 2) + n
+    <br> T(n) &le; c &middot; n log n - c &middot; n + n
+</li>
+<li>We want T(n) &le; c &middot; n log n. This holds true if:
+    <br> c &middot; n log n - c &middot; n + n &le; c &middot; n log n
+    <br> -c &middot; n + n &le; 0
+    <br> c &ge; 1
+</li>
+</ul>
+<p>Since we can choose c &ge; 1, the guess is correct.</p>
+<p><strong>Result:</strong> T(n) = O(n log n)</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q12" data-unit="III" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q12. Solve the following recurrence using the substitution method: T(n) = T(n/2) + 1</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Recurrence:</strong> T(n) = T(n/2) + 1</p>
+<p><strong>Guess:</strong> T(n) = O(log n). We prove T(n) &le; c &middot; log n for some constant c.</p>
+<p><strong>Proof by induction:</strong></p>
+<ul>
+<li>Assume T(n/2) &le; c &middot; log(n/2)</li>
+<li>Substitute into recurrence:
+    <br> T(n) &le; c &middot; log(n/2) + 1
+    <br> T(n) &le; c &middot; (log n - 1) + 1
+    <br> T(n) &le; c &middot; log n - c + 1
+</li>
+<li>We want T(n) &le; c &middot; log n. This requires:
+    <br> - c + 1 &le; 0 &rArr; c &ge; 1
+</li>
+</ul>
+<p>Since we can find a constant c (c &ge; 1) such that the condition holds, the guess is correct.</p>
+<p><strong>Result:</strong> T(n) = O(log n)</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q14" data-unit="III" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q14. Solve the following recurrence using the Master Method: T(n) = 2T(n/2) + n</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The Master Theorem applies to recurrences of the form: <strong>T(n) = aT(n/b) + f(n)</strong></p>
+<p>Given: <code>T(n) = 2T(n/2) + n</code></p>
+<ul>
+<li>a = 2</li>
+<li>b = 2</li>
+<li>f(n) = n</li>
+</ul>
+<p>Calculate n<sup>log<sub>b</sub>a</sup>:</p>
+<ul>
+<li>n<sup>log<sub>2</sub>2</sup> = n<sup>1</sup> = n</li>
+</ul>
+<p>Compare f(n) with n<sup>log<sub>b</sub>a</sup>:</p>
+<p>f(n) = n, and n<sup>log<sub>b</sub>a</sup> = n. They are equal, which matches <strong>Case 2</strong> of the Master Theorem (f(n) = &Theta;(n<sup>log<sub>b</sub>a</sup>)).</p>
+<p><strong>Formula for Case 2:</strong> T(n) = &Theta;(n<sup>log<sub>b</sub>a</sup> log n)</p>
+<p><strong>Result:</strong> T(n) = &Theta;(n log n)</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q15" data-unit="III" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q15. Solve the following recurrence using the Master Method: T(n) = 4T(n/2) + n</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Given: <code>T(n) = 4T(n/2) + n</code></p>
+<ul>
+<li>a = 4</li>
+<li>b = 2</li>
+<li>f(n) = n</li>
+</ul>
+<p>Calculate n<sup>log<sub>b</sub>a</sup>:</p>
+<ul>
+<li>n<sup>log<sub>2</sub>4</sup> = n<sup>2</sup></li>
+</ul>
+<p>Compare f(n) with n<sup>log<sub>b</sub>a</sup>:</p>
+<p>f(n) = O(n<sup>2 - &epsilon;</sup>) for &epsilon; = 1. Since f(n) grows polynomially slower than n<sup>log<sub>b</sub>a</sup>, this is <strong>Case 1</strong> of the Master Theorem.</p>
+<p><strong>Formula for Case 1:</strong> T(n) = &Theta;(n<sup>log<sub>b</sub>a</sup>)</p>
+<p><strong>Result:</strong> T(n) = &Theta;(n<sup>2</sup>)</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q16" data-unit="III" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q16. Solve the following recurrence using the Master Method: T(n) = 4T(n/2) + n²</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Given: <code>T(n) = 4T(n/2) + n&sup2;</code></p>
+<ul>
+<li>a = 4</li>
+<li>b = 2</li>
+<li>f(n) = n&sup2;</li>
+</ul>
+<p>Calculate n<sup>log<sub>b</sub>a</sup>:</p>
+<ul>
+<li>n<sup>log<sub>2</sub>4</sup> = n<sup>2</sup></li>
+</ul>
+<p>Compare f(n) with n<sup>log<sub>b</sub>a</sup>:</p>
+<p>f(n) = n&sup2; and n<sup>log<sub>b</sub>a</sup> = n&sup2;. They are equal. This matches <strong>Case 2</strong> of the Master Theorem (f(n) = &Theta;(n<sup>log<sub>b</sub>a</sup>)).</p>
+<p><strong>Formula for Case 2:</strong> T(n) = &Theta;(n<sup>log<sub>b</sub>a</sup> log n)</p>
+<p><strong>Result:</strong> T(n) = &Theta;(n&sup2; log n)</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q17" data-unit="III" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q17. Solve the following recurrence using the Master Method: T(n) = 8T(n/2) + n²</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Given: <code>T(n) = 8T(n/2) + n&sup2;</code></p>
+<ul>
+<li>a = 8</li>
+<li>b = 2</li>
+<li>f(n) = n&sup2;</li>
+</ul>
+<p>Calculate n<sup>log<sub>b</sub>a</sup>:</p>
+<ul>
+<li>n<sup>log<sub>2</sub>8</sup> = n<sup>3</sup></li>
+</ul>
+<p>Compare f(n) with n<sup>log<sub>b</sub>a</sup>:</p>
+<p>f(n) = O(n<sup>3 - &epsilon;</sup>) for &epsilon; = 1. Since f(n) grows polynomially slower than n<sup>log<sub>b</sub>a</sup>, this is <strong>Case 1</strong> of the Master Theorem.</p>
+<p><strong>Formula for Case 1:</strong> T(n) = &Theta;(n<sup>log<sub>b</sub>a</sup>)</p>
+<p><strong>Result:</strong> T(n) = &Theta;(n<sup>3</sup>)</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q18" data-unit="III" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q18. Solve the following recurrence using the Master Method: T(n) = T(n/2) + 1</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Given: <code>T(n) = T(n/2) + 1</code></p>
+<ul>
+<li>a = 1</li>
+<li>b = 2</li>
+<li>f(n) = 1 (which is n<sup>0</sup>)</li>
+</ul>
+<p>Calculate n<sup>log<sub>b</sub>a</sup>:</p>
+<ul>
+<li>n<sup>log<sub>2</sub>1</sup> = n<sup>0</sup> = 1</li>
+</ul>
+<p>Compare f(n) with n<sup>log<sub>b</sub>a</sup>:</p>
+<p>f(n) = 1, and n<sup>log<sub>b</sub>a</sup> = 1. They are equal, which matches <strong>Case 2</strong> of the Master Theorem (f(n) = &Theta;(n<sup>log<sub>b</sub>a</sup>)).</p>
+<p><strong>Formula for Case 2:</strong> T(n) = &Theta;(n<sup>log<sub>b</sub>a</sup> log n)</p>
+<p><strong>Result:</strong> T(n) = &Theta;(1 &middot; log n) = &Theta;(log n)</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q19" data-unit="III" data-bloom="L5" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q19. Perform a complete dry run of Binary Search on the sorted array: 5, 12, 18, 23, 31, 37, 45, 52, 64, 71, 85. Search for the element 45. Show the values of low, high, mid, and the comparison at every step.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l5">CO3 | Bloom L5</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Array:</strong> A = [5, 12, 18, 23, 31, 37, 45, 52, 64, 71, 85]</p>
+<p><strong>Indices:</strong> 0 to 10 (size n=11)</p>
+<p><strong>Target (x):</strong> 45</p>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr><th>Step</th><th>low</th><th>high</th><th>mid = (low+high)/2</th><th>A[mid]</th><th>Comparison</th><th>Action</th></tr>
+<tr>
+<td>1</td><td>0</td><td>10</td><td>(0+10)/2 = 5</td><td>A[5] = 37</td><td>37 &lt; 45</td><td>x is greater, search right half. Set low = mid + 1 = 6.</td>
+</tr>
+<tr>
+<td>2</td><td>6</td><td>10</td><td>(6+10)/2 = 8</td><td>A[8] = 64</td><td>64 &gt; 45</td><td>x is smaller, search left half. Set high = mid - 1 = 7.</td>
+</tr>
+<tr>
+<td>3</td><td>6</td><td>7</td><td>(6+7)/2 = 6</td><td>A[6] = 45</td><td>45 == 45</td><td>Match found! Return index 6.</td>
+</tr>
+</table>
+<p><strong>Result:</strong> Element 45 found at index 6.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q20" data-unit="III" data-bloom="L5" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q20. Perform a complete dry run of Binary Search on: 3, 8, 12, 17, 21, 29, 34, 41, 56, 63, 72, 89. Search for 50 and show why the search terminates unsuccessfully.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l5">CO3 | Bloom L5</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Array:</strong> A = [3, 8, 12, 17, 21, 29, 34, 41, 56, 63, 72, 89]</p>
+<p><strong>Indices:</strong> 0 to 11 (size n=12)</p>
+<p><strong>Target (x):</strong> 50</p>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr><th>Step</th><th>low</th><th>high</th><th>mid = (low+high)/2</th><th>A[mid]</th><th>Comparison</th><th>Action</th></tr>
+<tr><td>1</td><td>0</td><td>11</td><td>(0+11)/2 = 5</td><td>A[5] = 29</td><td>29 &lt; 50</td><td>Set low = mid + 1 = 6</td></tr>
+<tr><td>2</td><td>6</td><td>11</td><td>(6+11)/2 = 8</td><td>A[8] = 56</td><td>56 &gt; 50</td><td>Set high = mid - 1 = 7</td></tr>
+<tr><td>3</td><td>6</td><td>7</td><td>(6+7)/2 = 6</td><td>A[6] = 34</td><td>34 &lt; 50</td><td>Set low = mid + 1 = 7</td></tr>
+<tr><td>4</td><td>7</td><td>7</td><td>(7+7)/2 = 7</td><td>A[7] = 41</td><td>41 &lt; 50</td><td>Set low = mid + 1 = 8</td></tr>
+</table>
+<p><strong>Termination:</strong> In step 5, <code>low</code> becomes 8 and <code>high</code> is 7. The condition <code>low &le; high</code> is violated (8 &le; 7 is False). The loop terminates, and the search returns an unsuccessful result (element not found).</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q21" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q21. Compare Linear Search and Binary Search with respect to their best-case, average-case, and worst-case time complexities.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <table border="1" cellpadding="5" cellspacing="0">
+<tr><th>Search Type</th><th>Best-Case</th><th>Average-Case</th><th>Worst-Case</th><th>Prerequisite</th></tr>
+<tr>
+<td><strong>Linear Search</strong></td>
+<td>O(1) (Item is at index 0)</td>
+<td>O(n) (Item is in the middle)</td>
+<td>O(n) (Item is at the end or not present)</td>
+<td>None (Works on unsorted arrays)</td>
+</tr>
+<tr>
+<td><strong>Binary Search</strong></td>
+<td>O(1) (Item is the middle element)</td>
+<td>O(log n)</td>
+<td>O(log n) (Item is at extremes or not present)</td>
+<td>Array must be sorted</td>
+</tr>
+</table>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q22" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                        <summary>
+                            <h3>Q22. Explain why Binary Search requires the input array to be sorted. What happens if Binary Search is applied to an unsorted array?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Why Sorting is Required:</strong> Binary search fundamentally relies on the ordering of elements. It compares the target value to the middle element and mathematically eliminates half of the remaining search space based on that comparison. If <code>target &lt; mid</code>, it knows the target <em>must</em> be in the left half, because all elements in the left half are smaller than the middle element.</p>
+<p><strong>If Applied to an Unsorted Array:</strong> The logic breaks down. Comparing the target to the middle element gives no reliable information about where the target might be located in the rest of the array. The search might discard the half that actually contains the target, leading to a false negative (returning "not found" even when the element exists).</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q23" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q23. Explain how the Divide and Conquer technique can be used to find the maximum and minimum elements of an array.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The Divide and Conquer Max-Min algorithm finds both the maximum and minimum elements simultaneously by recursively breaking the array into halves.</p>
+<ul>
+<li><strong>Divide:</strong> Split the array into two halves.</li>
+<li><strong>Conquer:</strong> Recursively find the (max, min) pair for the left half and the (max, min) pair for the right half.
+  <ul>
+    <li><strong>Base Cases:</strong>
+      <ul>
+        <li>If the subarray has 1 element, return it as both max and min.</li>
+        <li>If the subarray has 2 elements, compare them and return the larger as max and the smaller as min.</li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<li><strong>Combine:</strong> Compare the max of the left half with the max of the right half to get the overall max. Compare the min of the left half with the min of the right half to get the overall min.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q24" data-unit="III" data-bloom="L5" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q24. Perform a complete dry run of the Max-Min algorithm on: 35, 12, 48, 7, 23, 56, 19, 4, 31, 15. Show the division, recursive comparisons, and final maximum and minimum values.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l5">CO3 | Bloom L5</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Array:</strong> A = [35, 12, 48, 7, 23, 56, 19, 4, 31, 15] (indices 0 to 9)</p>
+<div class="concept-heading">Recursive Divisions</div>
+<ul>
+<li>MaxMin(0, 9)
+  <ul>
+    <li>mid = 4</li>
+    <li><strong>Left:</strong> MaxMin(0, 4) &rarr; A[0..4] = [35, 12, 48, 7, 23]
+      <ul>
+        <li>mid = 2</li>
+        <li><strong>Left:</strong> MaxMin(0, 2) &rarr; [35, 12, 48]
+          <ul>
+            <li>mid = 1</li>
+            <li><strong>Left:</strong> MaxMin(0, 1) &rarr; [35, 12]. Base case: Returns (max=35, min=12)</li>
+            <li><strong>Right:</strong> MaxMin(2, 2) &rarr; [48]. Base case: Returns (max=48, min=48)</li>
+            <li><em>Combine(0, 2):</em> max(35, 48)=48, min(12, 48)=12. Returns <strong>(48, 12)</strong></li>
+          </ul>
+        </li>
+        <li><strong>Right:</strong> MaxMin(3, 4) &rarr; [7, 23]
+          <ul>
+            <li>Base case: Returns <strong>(max=23, min=7)</strong></li>
+          </ul>
+        </li>
+        <li><em>Combine(0, 4):</em> max(48, 23)=48, min(12, 7)=7. Returns <strong>(48, 7)</strong></li>
+      </ul>
+    </li>
+    <li><strong>Right:</strong> MaxMin(5, 9) &rarr; A[5..9] = [56, 19, 4, 31, 15]
+      <ul>
+        <li>mid = 7</li>
+        <li><strong>Left:</strong> MaxMin(5, 7) &rarr; [56, 19, 4]
+          <ul>
+            <li>mid = 6</li>
+            <li><strong>Left:</strong> MaxMin(5, 6) &rarr; [56, 19]. Base case: Returns (max=56, min=19)</li>
+            <li><strong>Right:</strong> MaxMin(7, 7) &rarr; [4]. Base case: Returns (max=4, min=4)</li>
+            <li><em>Combine(5, 7):</em> max(56, 4)=56, min(19, 4)=4. Returns <strong>(56, 4)</strong></li>
+          </ul>
+        </li>
+        <li><strong>Right:</strong> MaxMin(8, 9) &rarr; [31, 15]
+          <ul>
+            <li>Base case: Returns <strong>(max=31, min=15)</strong></li>
+          </ul>
+        </li>
+        <li><em>Combine(5, 9):</em> max(56, 31)=56, min(4, 15)=4. Returns <strong>(56, 4)</strong></li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<li><em>Final Combine(0, 9):</em> max(48, 56)=56, min(7, 4)=4. Returns <strong>(56, 4)</strong></li>
+</ul>
+<p><strong>Final Result:</strong> Maximum = 56, Minimum = 4</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q27" data-unit="III" data-bloom="L5" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q27. Perform a complete dry run of Merge Sort on: 38, 27, 43, 3, 9, 82, 10, 15, 21, 6. Show all division and merging steps.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l5">CO3 | Bloom L5</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Initial Array:</strong> [38, 27, 43, 3, 9, 82, 10, 15, 21, 6]</p>
+<div class="concept-heading">Divide Phase</div>
+<p>Split recursively into halves until single elements remain.</p>
+<ul>
+<li>[38, 27, 43, 3, 9] and [82, 10, 15, 21, 6]</li>
+<li>[38, 27, 43], [3, 9] | [82, 10, 15], [21, 6]</li>
+<li>[38, 27], [43] | [3], [9] | [82, 10], [15] | [21], [6]</li>
+<li>[38], [27] | [43] | [3] | [9] | [82], [10] | [15] | [21] | [6]</li>
+</ul>
+<div class="concept-heading">Merge Phase</div>
+<p>Merge sorted sub-arrays back together in sorted order.</p>
+<ul>
+<li>Merge size 1 to 2: [27, 38], [43] | [3, 9] | [10, 82], [15] | [6, 21]</li>
+<li>Merge size 2 to 3/4: [27, 38, 43] | [3, 9] | [10, 15, 82] | [6, 21]</li>
+<li>Merge halves: [3, 9, 27, 38, 43] and [6, 10, 15, 21, 82]</li>
+<li><strong>Final Merge:</strong> [3, 6, 9, 10, 15, 21, 27, 38, 43, 82]</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q32" data-unit="III" data-bloom="L5" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q32. Perform a complete dry run of Quick Sort on: 64, 25, 12, 22, 11, 90, 34, 5, 78, 43. Assume the first element is selected as the pivot. Show each partitioning step.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l5">CO3 | Bloom L5</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Initial Array:</strong> [64, 25, 12, 22, 11, 90, 34, 5, 78, 43]</p>
+<p><strong>Step 1: Partition around 64 (Pivot = 64)</strong></p>
+<ul>
+<li>Elements smaller than 64 go to the left, larger to the right.</li>
+<li>Left: [25, 12, 22, 11, 34, 5, 43]</li>
+<li>Right: [90, 78]</li>
+<li>Array after partition 1: <strong>[25, 12, 22, 11, 34, 5, 43] , 64 , [90, 78]</strong></li>
+</ul>
+<p><strong>Step 2: Recursive Calls</strong></p>
+<p><em>Left partition: [25, 12, 22, 11, 34, 5, 43] (Pivot = 25)</em></p>
+<ul>
+<li>Left of 25: [12, 22, 11, 5]</li>
+<li>Right of 25: [34, 43]</li>
+<li>Array becomes: <strong>[12, 22, 11, 5] , 25 , [34, 43]</strong></li>
+</ul>
+<p><em>Sub-Left: [12, 22, 11, 5] (Pivot = 12)</em></p>
+<ul>
+<li>Left: [11, 5]</li>
+<li>Right: [22]</li>
+<li>Array becomes: <strong>[11, 5] , 12 , [22]</strong></li>
+</ul>
+<p><em>Sub-Sub-Left: [11, 5] (Pivot = 11)</em></p>
+<ul>
+<li>Left: [5], Right: []</li>
+<li>Array becomes: <strong>[5] , 11</strong></li>
+</ul>
+<p><em>Sub-Right of 25: [34, 43] (Pivot = 34)</em></p>
+<ul>
+<li>Left: [], Right: [43]</li>
+<li>Array becomes: <strong>34 , [43]</strong></li>
+</ul>
+<p><em>Right partition of 64: [90, 78] (Pivot = 90)</em></p>
+<ul>
+<li>Left: [78], Right: []</li>
+<li>Array becomes: <strong>[78] , 90</strong></li>
+</ul>
+<div class="concept-heading">Combining all partitions</div>
+<p>Final sorted array: <strong>[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]</strong></p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q35" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q35. Explain the best-case, average-case, and worst-case time complexity of Quick Sort.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Best Case: O(n log n)</div>
+<p>Occurs when the pivot chosen at each step divides the array into two roughly equal halves. The recursion tree has a depth of log(n) and partitioning at each level takes O(n) time. Recurrence: <code>T(n) = 2T(n/2) + O(n)</code></p>
+<div class="concept-heading">Average Case: O(n log n)</div>
+<p>Occurs when the pivot randomly divides the array into proportional splits (e.g., 9-to-1 split or 3-to-1 split). Even an unbalanced split like 99-to-1 results in an O(n log n) running time, as the depth of the tree is bounded by a logarithmic function.</p>
+<div class="concept-heading">Worst Case: O(n&sup2;)</div>
+<p>Occurs when the pivot is consistently the smallest or largest element, leading to completely unbalanced partitions (one sub-array of size n-1, and one of size 0). This creates a skewed recursion tree of depth n. Example: sorting an already sorted array when the first or last element is chosen as the pivot. Recurrence: <code>T(n) = T(n-1) + O(n)</code></p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q44" data-unit="III" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q44. Compare conventional matrix multiplication and Strassen's Matrix Multiplication with respect to the number of multiplications and asymptotic time complexity.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <table border="1" cellpadding="5" cellspacing="0">
+<tr><th>Feature</th><th>Conventional Matrix Multiplication</th><th>Strassen's Matrix Multiplication</th></tr>
+<tr>
+<td><strong>Method</strong></td>
+<td>Uses 3 nested loops to compute dot products of rows and columns.</td>
+<td>Uses Divide and Conquer, breaking n x n matrices into 4 (n/2 x n/2) sub-matrices.</td>
+</tr>
+<tr>
+<td><strong>Multiplications per step</strong></td>
+<td>8 multiplications for a 2x2 division step.</td>
+<td>7 multiplications for a 2x2 division step (optimized mathematically).</td>
+</tr>
+<tr>
+<td><strong>Additions/Subtractions</strong></td>
+<td>4 additions.</td>
+<td>18 additions/subtractions (increased overhead).</td>
+</tr>
+<tr>
+<td><strong>Recurrence Relation</strong></td>
+<td>T(n) = 8T(n/2) + O(n&sup2;)</td>
+<td>T(n) = 7T(n/2) + O(n&sup2;)</td>
+</tr>
+<tr>
+<td><strong>Asymptotic Time Complexity</strong></td>
+<td>O(n<sup>3</sup>)</td>
+<td>O(n<sup>log<sub>2</sub>7</sup>) &approx; O(n<sup>2.81</sup>)</td>
+</tr>
+</table>
+<p><strong>Conclusion:</strong> Strassen's algorithm reduces the number of recursive multiplications from 8 to 7, bringing down the asymptotic time complexity. However, due to the overhead of extra additions, it is practically faster only for very large matrices.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q45" data-unit="III" data-bloom="L2" data-marks="3" data-important="false">
+                        <summary>
+                            <h3>Q45. Explain how the Divide and Conquer technique can be used for multiplication of large integers.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>When integers are very large (e.g., hundreds of digits in cryptography), standard multiplication (O(n&sup2;)) is too slow. The Divide and Conquer technique (Karatsuba algorithm) speeds this up.</p>
+<p><strong>Process:</strong></p>
+<ol>
+<li><strong>Divide:</strong> Split each n-digit number into two halves (high and low parts).
+<br>Example: <code>X = A*10^(n/2) + B</code> and <code>Y = C*10^(n/2) + D</code></li>
+<li><strong>Standard Divide and Conquer:</strong> Compute four partial products (AC, AD, BC, BD). This yields <code>T(n) = 4T(n/2) + O(n)</code> &rarr; O(n&sup2;).</li>
+<li><strong>Karatsuba Optimization:</strong> Compute only three products recursively:
+  <ul>
+    <li>P1 = A * C</li>
+    <li>P2 = B * D</li>
+    <li>P3 = (A + B) * (C + D)</li>
+  </ul>
+  The middle term (AD + BC) is derived as <code>P3 - P1 - P2</code>.
+</li>
+<li><strong>Conquer and Combine:</strong> This reduces the recurrence to <code>T(n) = 3T(n/2) + O(n)</code>, improving the time complexity to O(n<sup>log<sub>2</sub>3</sup>) &approx; O(n<sup>1.585</sup>).</li>
+</ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q49" data-unit="III" data-bloom="L3" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q49. Is merge sort a stable sorting algorithm? Explain.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Yes, Merge Sort is a stable sorting algorithm.</strong></p>
+<p><strong>Explanation:</strong> A sorting algorithm is stable if it preserves the relative order of equal elements. In Merge Sort, stability is maintained during the <em>merge</em> step. When combining two sorted sub-arrays, if elements are equal, the element from the left sub-array (which appeared earlier in the original array) is explicitly chosen to be placed into the merged array first. By doing this, the original relative ordering of equal elements is preserved.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q50" data-unit="III" data-bloom="L4" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q50. When would you select merge sort instead of quick sort?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Merge Sort is preferred over Quick Sort in the following scenarios:</p>
+<ul>
+<li><strong>Stability is Required:</strong> Merge Sort is inherently stable, whereas Quick Sort is not.</li>
+<li><strong>Worst-Case Guarantees:</strong> Merge Sort guarantees O(n log n) time complexity in all cases. Quick Sort can degrade to O(n&sup2;) in the worst case (e.g., already sorted arrays with bad pivot choice).</li>
+<li><strong>Sorting Linked Lists:</strong> Merge Sort performs excellently on linked lists because elements don't need contiguous memory access for random swaps (unlike Quick Sort). The O(n) auxiliary space requirement of Merge Sort is also reduced to O(1) for linked lists.</li>
+<li><strong>External Sorting:</strong> When the dataset is too large to fit in RAM and resides on disk, Merge Sort's predictable sequential access patterns make it the preferred choice.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                </section>
+
+            <div id="no-results" style="display: none; text-align: center; padding: 3rem;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--primary-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <h3 style="color: var(--text-main); margin-bottom: 1rem;">No questions match your filters</h3>
+                <button class="btn btn-secondary" onclick="document.querySelectorAll('.filter-toggles input[type=checkbox]').forEach(cb => cb.checked = false); document.getElementById('search-box').value=''; document.getElementById('search-box').dispatchEvent(new Event('input'));">Clear Filters</button>
+            </div>
+
+        </div>
+        </main>
+    </div>
+
+    <script src="course-data.js"></script>
+    
+    <div id="stickyProgressWidget" style="position: fixed; bottom: 2rem; right: 2rem; background: var(--card-bg); padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 1px solid var(--border-color); z-index: 1000; display: flex; flex-direction: column; gap: 0.5rem; min-width: 250px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem;">Review Progress</span>
+            <span id="progressText" style="font-size: 0.85rem; font-weight: bold; color: var(--primary-teal);">0 / 0</span>
+        </div>
+        <div style="width: 100%; background: var(--bg-color); border-radius: 8px; height: 8px; overflow: hidden; margin-top: 0.2rem; border: 1px solid var(--border-color);">
+            <div id="progressBar" style="width: 0%; height: 100%; background: var(--primary-teal); transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);"></div>
+        </div>
+    </div>
+
+<script src="../../shared/app-utils.js"></script>
+
+    <!-- Floating Action Button (FAB) -->
+    <div class="fab-container">
+        <div class="fab-menu" id="fabMenu">
+            
+            
+<button class="fab-item" onclick="startFlashcards(); document.getElementById('fabMenu').classList.remove('open');" title="Study Mode">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                <span>Flashcards</span>
+            </button>
+<button class="fab-item" onclick="openModal('jumpModal'); document.getElementById('fabMenu').classList.remove('open');" title="Quick Jump">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                <span>Jump</span>
+            </button>
+            <button class="fab-item" onclick="openModal('filterModal'); document.getElementById('fabMenu').classList.remove('open');" title="Filters">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                <span>Filter</span>
+            </button>
+            <button class="fab-item" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); document.getElementById('fabMenu').classList.remove('open');" title="Back to Top">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                <span>Top</span>
+            </button>
+        </div>
+        <button class="fab-main" id="fabMainBtn" aria-label="Quick Actions">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+    </div>
+
+    
+    <!-- Standalone Ask AI FAB (Bottom Left) -->
+    <button class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI" aria-label="Ask AI">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2zM12 8c2.2 0 4 1.8 4 4v5c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-5c0-2.2 1.8-4 4-4zM6 12v5h2v-5H6zm10 0v5h2v-5h-2z"/></svg>
+    </button>
+
+    <!-- Ask AI Chat Widget -->
+    <div id="assistantModal" class="ask-ai-widget" style="display: none; flex-direction: column; background: rgba(15,15,20,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); overflow: hidden; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0; transform: translateY(20px); pointer-events: auto;">
+        <div class="modal-header" style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <h2 id="aiModalTitle" style="margin: 0; font-size: 1.25rem;">Ask AI <span style="font-size: 0.8em; font-weight: normal; color: var(--text-muted);">(Lite)</span></h2>
+                <label style="display: flex; align-items: center; gap: 6px; font-size: 0.85em; color: var(--text-muted); cursor: pointer; border: 1px solid rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; background: rgba(0,0,0,0.2);">
+                    <input type="checkbox" id="deepModeToggle" onchange="window.assistantLLMInstance && window.assistantLLMInstance.toggleDeepMode && window.assistantLLMInstance.toggleDeepMode(this.checked)" style="accent-color: var(--primary-teal);">
+                    Deep mode
+                </label>
+                
+            </div>
+            
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" aria-label="Close modal" onclick="closeAssistant()" style="background: none; border: none; color: var(--text-muted); cursor: pointer;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <div id="assistantMessages" class="modal-body" style="flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; scrollbar-width: thin;">
+            <div class="msg assistant" style="padding: 1rem; border-radius: 8px; background: rgba(255,255,255,0.05); border-left: 3px solid var(--primary-blue); line-height: 1.5;">
+                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.
+            </div>
+        </div>
+        <div class="assistant-input-area" style="padding: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <form id="assistantForm" onsubmit="event.preventDefault(); submitAssistantQuery();" style="display: flex; gap: 0.5rem;">
+                <input type="text" id="assistantInput" autocomplete="off" placeholder="Ask something..." style="flex: 1; padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: white;">
+                <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1rem;">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let assistantApp = null;
+let assistantCloseTimer = null;
+let isAssistantOpen = false;
+
+async function openAssistant() {
+    if (document.querySelector('.ask-ai-btn')?.getAttribute('data-dragged') === 'true') return;
+    
+    const modal = document.getElementById('assistantModal');
+    
+    // Toggle closed if already open
+    if (isAssistantOpen) {
+        closeAssistant();
+        return;
+    }
+
+    // Cancel any pending close timer from rapid clicks
+    if (assistantCloseTimer) {
+        clearTimeout(assistantCloseTimer);
+        assistantCloseTimer = null;
+    }
+
+    isAssistantOpen = true;
+    modal.style.display = 'flex';
+    
+    // Force DOM reflow so transition plays reliably
+    void modal.offsetHeight;
+    
+    modal.style.opacity = '1';
+    modal.style.transform = 'translateY(0)';
+    document.getElementById('assistantInput').focus();
+
+    if (!assistantApp) {
+                try {
+                    const { initAssistant } = await import('../../shared/assistant-ui.js');
+                    assistantApp = await initAssistant('daa');
+                    if (!assistantApp) throw new Error("App init failed");
+                } catch (e) {
+                    const msgs = document.getElementById('assistantMessages');
+                    msgs.innerHTML = `<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>`;
+                }
+            }
+        }
+        function closeAssistant() {
+    const modal = document.getElementById('assistantModal');
+    isAssistantOpen = false;
+    
+    modal.style.opacity = '0';
+    modal.style.transform = 'translateY(20px)';
+    
+    if (assistantCloseTimer) clearTimeout(assistantCloseTimer);
+    assistantCloseTimer = setTimeout(() => {
+        modal.style.display = 'none';
+        assistantCloseTimer = null;
+    }, 300);
+}
+        function submitAssistantQuery(q) {
+            const input = document.getElementById('assistantInput');
+            const query = q || input.value.trim();
+            if (!query) return;
+            if (!assistantApp) {
+                const msgs = document.getElementById('assistantMessages');
+                msgs.innerHTML = `<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>`;
+                return;
+            }
+            input.value = '';
+            assistantApp.handleQuery(query);
+        }
+    </script>
+
+</body>
+</html>

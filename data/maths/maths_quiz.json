@@ -1,0 +1,272 @@
+[
+    {
+        "id": "d9502aff-998d-48cc-8a57-d2dc3abaf049",
+        "type": "short_answer",
+        "question": "What is a rectangular array of numbers?",
+        "options": [],
+        "correct_answer": "Matrix",
+        "explanation": "Matrix is rectangular array of numbers"
+    },
+    {
+        "id": "ff316425-578a-45ad-8cbc-40e649b0753d",
+        "type": "short_answer",
+        "question": "What is a scalar value of a square matrix?",
+        "options": [],
+        "correct_answer": "Determinant",
+        "explanation": "Determinant is scalar value of a square matrix"
+    },
+    {
+        "id": "d64e2ef7-d63c-4b12-b94b-f8040e8a775a",
+        "type": "short_answer",
+        "question": "What is a vector that only scales during transformation?",
+        "options": [],
+        "correct_answer": "Eigenvector",
+        "explanation": "Eigenvector is vector that only scales during transformation"
+    },
+    {
+        "id": "8900c2ba-151d-47b2-b355-18ac6b5dcd01",
+        "type": "short_answer",
+        "question": "What is a scalar multiple for eigenvector?",
+        "options": [],
+        "correct_answer": "Eigenvalue",
+        "explanation": "Eigenvalue is scalar multiple for eigenvector"
+    },
+    {
+        "id": "9725c62c-a56f-4f0d-bea2-e6aa3e090da5",
+        "type": "mcq",
+        "question": "Which mathematical concept is: rate of change?",
+        "options": [
+            "Derivative",
+            "Integral",
+            "Gradient",
+            "Jacobian"
+        ],
+        "correct_answer": "Derivative",
+        "explanation": "Derivative is rate of change"
+    },
+    {
+        "id": "4468c553-f317-4374-9298-18adee11809a",
+        "type": "mcq",
+        "question": "Which mathematical concept is: area under curve?",
+        "options": [
+            "Derivative",
+            "Integral",
+            "Gradient",
+            "Jacobian"
+        ],
+        "correct_answer": "Integral",
+        "explanation": "Integral is area under curve"
+    },
+    {
+        "id": "83298ae7-7613-4234-8627-82813d1618c0",
+        "type": "mcq",
+        "question": "Which mathematical concept is: vector of partial derivatives?",
+        "options": [
+            "Derivative",
+            "Integral",
+            "Gradient",
+            "Jacobian"
+        ],
+        "correct_answer": "Gradient",
+        "explanation": "Gradient is vector of partial derivatives"
+    },
+    {
+        "id": "89512791-fee3-4f5d-acb0-550809471a38",
+        "type": "mcq",
+        "question": "Which mathematical concept is: matrix of first-order partial derivatives?",
+        "options": [
+            "Derivative",
+            "Integral",
+            "Gradient",
+            "Jacobian"
+        ],
+        "correct_answer": "Jacobian",
+        "explanation": "Jacobian is matrix of first-order partial derivatives"
+    },
+    {
+        "id": "edc6bd01-c75b-428e-b486-abc99e18eec4",
+        "type": "mcq",
+        "question": "Which mathematical concept is: matrix of second-order partial derivatives?",
+        "options": [
+            "Derivative",
+            "Integral",
+            "Gradient",
+            "Jacobian"
+        ],
+        "correct_answer": "Hessian",
+        "explanation": "Hessian is matrix of second-order partial derivatives"
+    },
+    {
+        "id": "aa99f774-a690-415c-b809-486bcfd299c0",
+        "type": "mcq",
+        "question": "Which mathematical concept is: infinite sum representation of a function?",
+        "options": [
+            "Derivative",
+            "Integral",
+            "Gradient",
+            "Jacobian"
+        ],
+        "correct_answer": "Taylor Series",
+        "explanation": "Taylor Series is infinite sum representation of a function"
+    },
+    {
+        "id": "af328d41-2e58-4392-8aa0-bd25fd17e858",
+        "type": "short_answer",
+        "question": "What is a average value?",
+        "options": [],
+        "correct_answer": "Mean",
+        "explanation": "Mean is average value"
+    },
+    {
+        "id": "1397e232-34e7-4e69-947a-f8862262f7d6",
+        "type": "short_answer",
+        "question": "What is a middle value?",
+        "options": [],
+        "correct_answer": "Median",
+        "explanation": "Median is middle value"
+    },
+    {
+        "id": "1f749e6c-1b48-4eb4-a6d0-94819563c743",
+        "type": "short_answer",
+        "question": "What is a expected squared deviation from mean?",
+        "options": [],
+        "correct_answer": "Variance",
+        "explanation": "Variance is expected squared deviation from mean"
+    },
+    {
+        "id": "f1c9636a-ff42-46d3-93a4-0f23ef8ec415",
+        "type": "short_answer",
+        "question": "What is a square root of variance?",
+        "options": [],
+        "correct_answer": "Standard Deviation",
+        "explanation": "Standard Deviation is square root of variance"
+    },
+    {
+        "id": "43385740-2e79-4c3a-a2f7-18f4cbb52889",
+        "type": "short_answer",
+        "question": "What is a bell curve distribution?",
+        "options": [],
+        "correct_answer": "Normal Distribution",
+        "explanation": "Normal Distribution is bell curve distribution"
+    },
+    {
+        "id": "2208e403-7709-4e35-abb0-da23600a93b8",
+        "type": "short_answer",
+        "question": "What is a probability of events in fixed interval?",
+        "options": [],
+        "correct_answer": "Poisson Distribution",
+        "explanation": "Poisson Distribution is probability of events in fixed interval"
+    },
+    {
+        "id": "42e79e5c-3243-4324-a6cf-a92138aed85f",
+        "type": "short_answer",
+        "question": "What is a P(A|B) = P(B|A)P(A)/P(B)?",
+        "options": [],
+        "correct_answer": "Bayes Theorem",
+        "explanation": "Bayes Theorem is P(A|B) = P(B|A)P(A)/P(B)"
+    },
+    {
+        "id": "773c6929-efb6-4507-b053-bda1842e7bda",
+        "type": "short_answer",
+        "question": "What is a collection of distinct elements?",
+        "options": [],
+        "correct_answer": "Set",
+        "explanation": "Set is collection of distinct elements"
+    },
+    {
+        "id": "6bdc2b48-e17c-4ef2-9a86-b1e262fa4c92",
+        "type": "short_answer",
+        "question": "What is a set of vertices and edges?",
+        "options": [],
+        "correct_answer": "Graph",
+        "explanation": "Graph is set of vertices and edges"
+    },
+    {
+        "id": "94567c0b-39ca-4911-9e53-9124140bb808",
+        "type": "short_answer",
+        "question": "What is a connected acyclic graph?",
+        "options": [],
+        "correct_answer": "Tree",
+        "explanation": "Tree is connected acyclic graph"
+    },
+    {
+        "id": "bc72663d-b6a4-4a56-8787-a5ccd3a24fe4",
+        "type": "code",
+        "question": "Write python code for create numpy array.",
+        "options": [],
+        "correct_answer": "np.array()",
+        "explanation": "np.array is used for create numpy array"
+    },
+    {
+        "id": "a6cbe028-279b-40a7-94a6-6b69a79bb4ca",
+        "type": "code",
+        "question": "Write python code for dot product.",
+        "options": [],
+        "correct_answer": "np.dot()",
+        "explanation": "np.dot is used for dot product"
+    },
+    {
+        "id": "643fe69e-6fa9-48a4-8fca-03bed5f2b32b",
+        "type": "code",
+        "question": "Write python code for matrix inverse.",
+        "options": [],
+        "correct_answer": "np.linalg.inv()",
+        "explanation": "np.linalg.inv is used for matrix inverse"
+    },
+    {
+        "id": "11546919-63fb-48e6-9ee2-50fba99ceeac",
+        "type": "code",
+        "question": "Write python code for compute eigenvalues.",
+        "options": [],
+        "correct_answer": "np.linalg.eig()",
+        "explanation": "np.linalg.eig is used for compute eigenvalues"
+    },
+    {
+        "id": "4f2bb065-0f04-4d1b-aa21-83b8b8c2a967",
+        "type": "code",
+        "question": "Write python code for integration library.",
+        "options": [],
+        "correct_answer": "scipy.integrate()",
+        "explanation": "scipy.integrate is used for integration library"
+    },
+    {
+        "id": "3e4d2cd8-d388-4151-9d86-d89a5ffb1154",
+        "type": "code",
+        "question": "Write python code for calculate mean.",
+        "options": [],
+        "correct_answer": "np.mean()",
+        "explanation": "np.mean is used for calculate mean"
+    },
+    {
+        "id": "590b6d39-5910-4027-b190-a947dca56bfa",
+        "type": "code",
+        "question": "Write python code for calculate standard deviation.",
+        "options": [],
+        "correct_answer": "np.std()",
+        "explanation": "np.std is used for calculate standard deviation"
+    },
+    {
+        "id": "6ee280c7-e8b3-4ee5-b114-f2df05400970",
+        "type": "code",
+        "question": "Write python code for calculate variance.",
+        "options": [],
+        "correct_answer": "np.var()",
+        "explanation": "np.var is used for calculate variance"
+    },
+    {
+        "id": "4cf6ec34-84e9-4312-adbf-ae9b7c7232e2",
+        "type": "code",
+        "question": "Write python code for symbolic differentiation.",
+        "options": [],
+        "correct_answer": "sympy.diff()",
+        "explanation": "sympy.diff is used for symbolic differentiation"
+    },
+    {
+        "id": "04240ca1-8fed-428e-8cac-f2d65827e34d",
+        "type": "code",
+        "question": "Write python code for symbolic integration.",
+        "options": [],
+        "correct_answer": "sympy.integrate()",
+        "explanation": "sympy.integrate is used for symbolic integration"
+    }
+]

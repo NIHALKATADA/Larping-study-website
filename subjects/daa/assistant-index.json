@@ -1,0 +1,1027 @@
+[
+  {
+    "id": "u1q1",
+    "q_num": 1,
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO1",
+    "score": 8.0,
+    "important": true,
+    "title": "Define an algorithm. Write any four characteristics of a good algorithm.",
+    "url": "question-bank.html?open=u1q1",
+    "chunks": [
+      "An algorithm is a step-by-step procedure or set of rules to be followed in calculations or other problem-solving operations. Characteristics:\n\nFiniteness: Must terminate after a finite number of steps.\nDefiniteness: Each step must be precisely defined.\nInput: Has zero or more inputs.\nOutput: Produces one or more outputs.\nEffectiveness: Operations must be basic enough to be done exactly and in finite time."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u1q2",
+    "q_num": 2,
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO1",
+    "score": 6.0,
+    "important": false,
+    "title": "What is pseudocode? Mention two advantages of representing an algorithm using pseudocode.",
+    "url": "question-bank.html?open=u1q2",
+    "chunks": [
+      "Pseudocode is an informal, high-level description of the operating principle of a computer program or algorithm. Advantages:\n\nEasier for humans to read and understand compared to actual code.\nIndependent of any specific programming language, making it versatile."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u1q3",
+    "q_num": 3,
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 8.5,
+    "important": true,
+    "title": "Differentiate between time complexity and space complexity with one example.",
+    "url": "question-bank.html?open=u1q3",
+    "chunks": [
+      "Time Complexity: The amount of time an algorithm takes to run as a function of the length of the input. Space Complexity: The amount of memory an algorithm requires to run as a function of the length of the input.\nExample: Mergesort has a time complexity of O(n log n) and space complexity of O(n), whereas Bubble sort has time complexity O(n^2) but space complexity O(1)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u1q4",
+    "q_num": 4,
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO1",
+    "score": 9.0,
+    "important": true,
+    "title": "Define Big-O notation.",
+    "url": "question-bank.html?open=u1q4",
+    "chunks": [
+      "Big-O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity. In computer science, it is used to classify algorithms according to how their run time or space requirements grow as the input size grows. It describes the upper bound of the complexity."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u1q5",
+    "q_num": 5,
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 8.0,
+    "important": true,
+    "title": "What is the difference between best-case, worst-case, and average-case analysis?",
+    "url": "question-bank.html?open=u1q5",
+    "chunks": [
+      "Best-case: The minimum time required for program execution for any input of size n.\nWorst-case: The maximum time required for program execution for any input of size n. (Provides an upper bound).\nAverage-case: The expected time required for program execution over all possible inputs of size n."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u1q7",
+    "q_num": 7,
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO1",
+    "score": 7.5,
+    "important": true,
+    "title": "What is asymptotic analysis? Why is it preferred over measuring execution time?",
+    "url": "question-bank.html?open=u1q7",
+    "chunks": [
+      "Asymptotic analysis evaluates the performance of an algorithm in terms of input size (n) as it approaches infinity. It is preferred because execution time depends on hardware, compiler, and OS, whereas asymptotic analysis provides a machine-independent way to compare algorithms' efficiency."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u1q8",
+    "q_num": 8,
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 7.0,
+    "important": false,
+    "title": "What is amortized analysis? Explain the aggregate method in one or two sentences.",
+    "url": "question-bank.html?open=u1q8",
+    "chunks": [
+      "Amortized analysis calculates the average time taken per operation, over a sequence of operations, guaranteeing the average performance even if a single operation is expensive.\nAggregate method: It computes the total time T(n) for a sequence of n operations and sets the amortized cost per operation to T(n)/n."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u1q9",
+    "q_num": 9,
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO1",
+    "score": 8.5,
+    "important": true,
+    "title": "Find the time complexity of the following code: sum = 0; a = 5; b = 10; sum = a + b; printf(\"%d\", sum);",
+    "url": "question-bank.html?open=u1q9",
+    "chunks": [
+      "The time complexity is O(1) (constant time) because there are no loops or recursion. The number of basic operations (assignments, addition, printing) is fixed and independent of any input size."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u1q10",
+    "q_num": 10,
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO1",
+    "score": 8.5,
+    "important": true,
+    "title": "Find the time complexity of the following code: if (n > 100) x = x + 1; else x = x - 1; Also mention the best and worst case.",
+    "url": "question-bank.html?open=u1q10",
+    "chunks": [
+      "The time complexity is O(1). The condition evaluation takes O(1) time, and both the if block and else block contain basic arithmetic operations taking O(1) time.\nBest case: O(1)\nWorst case: O(1)"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u1q11",
+    "q_num": 11,
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO1",
+    "score": 8.5,
+    "important": true,
+    "title": "Find the time complexity: for(i = 1; i <= n; i++) { printf(\"%d\", i); }",
+    "url": "question-bank.html?open=u1q11",
+    "chunks": [
+      "The loop variable i goes from 1 to n, incrementing by 1 each time. The loop runs exactly n times.\nNumber of iterations: n.\nFinal time complexity: O(n)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u1q12",
+    "q_num": 12,
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO1",
+    "score": 8.5,
+    "important": true,
+    "title": "Find the time complexity: for(i = 1; i <= n; i = i + 2) { count++; }",
+    "url": "question-bank.html?open=u1q12",
+    "chunks": [
+      "The loop variable i starts at 1 and increases by 2 in each iteration (1, 3, 5, ..., n). The loop runs roughly n/2 times.\nExecution count: n/2 times.\nFinal time complexity: O(n)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u1q13",
+    "q_num": 13,
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO1",
+    "score": 9.0,
+    "important": true,
+    "title": "Find the time complexity: for(i = 1; i <= n; i++) { for(j = 1; j <= n; j++) { count++; } }",
+    "url": "question-bank.html?open=u1q13",
+    "chunks": [
+      "The outer loop runs n times. For each iteration of the outer loop, the inner loop runs n times. Total iterations = n * n = n2.\nFinal time complexity: O(n2)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u1q14",
+    "q_num": 14,
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO1",
+    "score": 9.5,
+    "important": true,
+    "title": "Find the time complexity: for(i = 1; i <= n; i++) { for(j = 1; j <= i; j++) { count++; } }",
+    "url": "question-bank.html?open=u1q14",
+    "chunks": [
+      "The outer loop runs n times. The inner loop runs i times. The total number of executions is the sum of the first n integers:\nSummation: 1 + 2 + 3 + ... + n = n(n+1)/2 = (n2 + n)/2.\nFinal time complexity: O(n2)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u1q15",
+    "q_num": 15,
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO1",
+    "score": 9.5,
+    "important": true,
+    "title": "Find the time complexity: for(i = 1; i <= n; i = i * 2) { printf(\"%d\", i); }",
+    "url": "question-bank.html?open=u1q15",
+    "chunks": [
+      "The loop variable i starts at 1 and multiplies by 2 each time. Sequence of i values: 1, 2, 4, 8, ..., 2k.\nThe loop terminates when 2k > n, which means k \u2248 log2(n). The total iterations is roughly log2(n).\nFinal time complexity: O(log n)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q1",
+    "q_num": 1,
+    "unit": "II",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO2",
+    "score": 8.0,
+    "important": true,
+    "title": "Define algorithm correctness. Differentiate between partial correctness and total correctness with suitable examples.",
+    "url": "question-bank.html?open=u2q1",
+    "chunks": [
+      "Algorithm Correctness: An algorithm is correct if, for every valid input, it halts and produces the correct output as defined by its specifications.\n\nPartial Correctness: If the algorithm halts, it produces the correct output (but it might not halt). Example: A while(true) loop that searches for an element and breaks when found. If the element isn't there, it might loop forever.\nTotal Correctness: The algorithm is guaranteed to halt, and when it halts, it produces the correct output. Example: A standard for-loop based linear search that scans an array from start to end and returns true/false."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q2",
+    "q_num": 2,
+    "unit": "II",
+    "marks": 3,
+    "bloom": "L1",
+    "co": "CO2",
+    "score": 8.5,
+    "important": true,
+    "title": "What is a loop invariant? Explain the three steps\u2014initialization, maintenance, and termination\u2014used to prove the correctness of an algorithm.",
+    "url": "question-bank.html?open=u2q2",
+    "chunks": [
+      "A loop invariant is a condition or property that is true before and after each iteration of a loop. It is used to prove the correctness of loop structures.\n\nInitialization: The invariant must be true before the first iteration of the loop.\nMaintenance: If it is true before an iteration of the loop, it remains true before the next iteration.\nTermination: When the loop terminates, the invariant gives us a useful property that helps show the algorithm is correct."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q3",
+    "q_num": 3,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO2",
+    "score": 7.0,
+    "important": false,
+    "title": "Explain how loop invariants can be used to prove the correctness of a sorting algorithm.",
+    "url": "question-bank.html?open=u2q3",
+    "chunks": [
+      "In sorting algorithms like Insertion Sort, a loop invariant can be defined as: 'At the start of each iteration i, the subarray A[0...i-1] consists of the elements originally in A[0...i-1], but in sorted order.'\n\nInitialization: For i=1, A[0] is just a single element, which is trivially sorted.\nMaintenance: During iteration i, the algorithm inserts A[i] into its correct position in A[0...i-1], making A[0...i] sorted.\nTermination: The loop ends when i = n. The invariant states that A[0...n-1] is sorted, which means the entire array is sorted, proving correctness."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q4",
+    "q_num": 4,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.5,
+    "important": true,
+    "title": "Perform a complete dry run of Bubble Sort on the array: 64, 25, 12, 22, 11, 90, 34, 5, 78, 43.",
+    "url": "question-bank.html?open=u2q4",
+    "chunks": [
+      "Initial array: [64, 25, 12, 22, 11, 90, 34, 5, 78, 43]\nPassArray StateComparisonsSwaps\n1[25, 12, 22, 11, 64, 34, 5, 78, 43, 90]98\n2[12, 22, 11, 25, 34, 5, 64, 43, 78, 90]86\n3[12, 11, 22, 25, 5, 34, 43, 64, 78, 90]73\n4[11, 12, 22, 5, 25, 34, 43, 64, 78, 90]62\n5[11, 12, 5, 22, 25, 34, 43, 64, 78, 90]51\n6[11, 5, 12, 22, 25, 34, 43, 64, 78, 90]41\n7[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]31\n8[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]20\n9[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]10\nTotal Comparisons: 45, Total Swaps: 22"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q5",
+    "q_num": 5,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.0,
+    "important": true,
+    "title": "Perform a complete dry run of Bubble Sort on: 90, 80, 70, 60, 50, 40, 30, 20, 10.",
+    "url": "question-bank.html?open=u2q5",
+    "chunks": [
+      "Initial array: [90, 80, 70, 60, 50, 40, 30, 20, 10]\nPassArray StateComparisonsSwaps\n1[80, 70, 60, 50, 40, 30, 20, 10, 90]88\n2[70, 60, 50, 40, 30, 20, 10, 80, 90]77\n3[60, 50, 40, 30, 20, 10, 70, 80, 90]66\n4[50, 40, 30, 20, 10, 60, 70, 80, 90]55\n5[40, 30, 20, 10, 50, 60, 70, 80, 90]44\n6[30, 20, 10, 40, 50, 60, 70, 80, 90]33\n7[20, 10, 30, 40, 50, 60, 70, 80, 90]22\n8[10, 20, 30, 40, 50, 60, 70, 80, 90]11\nTotal Comparisons: 36, Total Swaps: 36"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q6",
+    "q_num": 6,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.5,
+    "important": true,
+    "title": "Apply Selection Sort on the array: 29, 10, 14, 37, 13, 25, 8, 42, 17.",
+    "url": "question-bank.html?open=u2q6",
+    "chunks": [
+      "Initial array: [29, 10, 14, 37, 13, 25, 8, 42, 17]\nPassMin SelectedArray State\n18[8, 10, 14, 37, 13, 25, 29, 42, 17]\n210[8, 10, 14, 37, 13, 25, 29, 42, 17]\n313[8, 10, 13, 37, 14, 25, 29, 42, 17]\n414[8, 10, 13, 14, 37, 25, 29, 42, 17]\n517[8, 10, 13, 14, 17, 25, 29, 42, 37]\n625[8, 10, 13, 14, 17, 25, 29, 42, 37]\n729[8, 10, 13, 14, 17, 25, 29, 42, 37]\n837[8, 10, 13, 14, 17, 25, 29, 37, 42]"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q7",
+    "q_num": 7,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.0,
+    "important": true,
+    "title": "Apply Selection Sort on: 64, 25, 12, 22, 11, 90, 34, 5, 78, 43.",
+    "url": "question-bank.html?open=u2q7",
+    "chunks": [
+      "Initial array: [64, 25, 12, 22, 11, 90, 34, 5, 78, 43]\nPassMin SelectedArray State\n15[5, 25, 12, 22, 11, 90, 34, 64, 78, 43]\n211[5, 11, 12, 22, 25, 90, 34, 64, 78, 43]\n312[5, 11, 12, 22, 25, 90, 34, 64, 78, 43]\n422[5, 11, 12, 22, 25, 90, 34, 64, 78, 43]\n525[5, 11, 12, 22, 25, 90, 34, 64, 78, 43]\n634[5, 11, 12, 22, 25, 34, 90, 64, 78, 43]\n743[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]\n864[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]\n978[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q8",
+    "q_num": 8,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.5,
+    "important": true,
+    "title": "Perform a complete dry run of Insertion Sort on: 45, 12, 78, 34, 23, 9, 56, 67, 18, 5.",
+    "url": "question-bank.html?open=u2q8",
+    "chunks": [
+      "Initial array: [45, 12, 78, 34, 23, 9, 56, 67, 18, 5]\nElement InsertedArray State\n12[12, 45, 78, 34, 23, 9, 56, 67, 18, 5]\n78[12, 45, 78, 34, 23, 9, 56, 67, 18, 5]\n34[12, 34, 45, 78, 23, 9, 56, 67, 18, 5]\n23[12, 23, 34, 45, 78, 9, 56, 67, 18, 5]\n9[9, 12, 23, 34, 45, 78, 56, 67, 18, 5]\n56[9, 12, 23, 34, 45, 56, 78, 67, 18, 5]\n67[9, 12, 23, 34, 45, 56, 67, 78, 18, 5]\n18[9, 12, 18, 23, 34, 45, 56, 67, 78, 5]\n5[5, 9, 12, 18, 23, 34, 45, 56, 67, 78]"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q9",
+    "q_num": 9,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.0,
+    "important": true,
+    "title": "Apply Insertion Sort to the array: 9, 8, 7, 6, 5, 4, 3, 2, 1.",
+    "url": "question-bank.html?open=u2q9",
+    "chunks": [
+      "Initial array: [9, 8, 7, 6, 5, 4, 3, 2, 1]\nElement InsertedArray State\n8[8, 9, 7, 6, 5, 4, 3, 2, 1]\n7[7, 8, 9, 6, 5, 4, 3, 2, 1]\n6[6, 7, 8, 9, 5, 4, 3, 2, 1]\n5[5, 6, 7, 8, 9, 4, 3, 2, 1]\n4[4, 5, 6, 7, 8, 9, 3, 2, 1]\n3[3, 4, 5, 6, 7, 8, 9, 2, 1]\n2[2, 3, 4, 5, 6, 7, 8, 9, 1]\n1[1, 2, 3, 4, 5, 6, 7, 8, 9]"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q10",
+    "q_num": 10,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO2",
+    "score": 9.5,
+    "important": true,
+    "title": "Construct a Max Heap from the following array using the bottom-up heap construction method: 45, 20, 14, 12, 31, 7, 11, 13, 8, 10.",
+    "url": "question-bank.html?open=u2q10",
+    "chunks": [
+      "Initial Array: [45, 20, 14, 12, 31, 7, 11, 13, 8, 10]\nNodes from index (n/2 - 1) down to 0 are heapified.\n\ni = 4 (value 31): Children are 10. 31 > 10. No swap.\ni = 3 (value 12): Children are 13, 8. Swap 12 with 13. State: [45, 20, 14, 13, 31, 7, 11, 12, 8, 10]\ni = 2 (value 14): Children are 7, 11. 14 > 11, 7. No swap.\ni = 1 (value 20): Children are 13, 31. Swap 20 with 31. State: [45, 31, 14, 13, 20, 7, 11, 12, 8, 10]\ni = 0 (value 45): Children are 31, 14. 45 > 31. No swap.\nFinal Max Heap: [45, 31, 14, 13, 20, 7, 11, 12, 8, 10]"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q11",
+    "q_num": 11,
+    "unit": "II",
+    "marks": 10,
+    "bloom": "L4",
+    "co": "CO2",
+    "score": 9.5,
+    "important": true,
+    "title": "Perform a complete dry run of Heap Sort on: 25, 17, 36, 2, 3, 100, 1, 19, 7.",
+    "url": "question-bank.html?open=u2q11",
+    "chunks": [
+      "Initial: [25, 17, 36, 2, 3, 100, 1, 19, 7]\nStep 1: Build Max Heap\n\ni=3 (value 2): children 19, 7. Swap with 19 -> [..., 19, 3, 100, 1, 2, 7]\ni=2 (value 36): children 100, 1. Swap with 100 -> [..., 100, 1, 2, 7]\ni=1 (value 17): children 19, 3. Swap with 19 -> [..., 19, 100, ...]\ni=0 (value 25): children 19, 100. Swap with 100 -> [100, 19, 25, ...]\nMax Heap: [100, 19, 36, 17, 3, 25, 1, 2, 7]\nStep 2: Extract & Heapify\n\nSwap 100 & 7 -> Heapify(0) -> [36, 19, 25, 17, 3, 7, 1, 2] | Sorted: [100]\nSwap 36 & 2 -> Heapify(0) -> [25, 19, 7, 17, 3, 2, 1] | Sorted: [36, 100]\n... process continues until sorted ...\nFinal Array: [1, 2, 3, 7, 17, 19, 25, 36, 100]"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q12",
+    "q_num": 12,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO2",
+    "score": 9.0,
+    "important": true,
+    "title": "Apply Counting Sort on the array: 4, 2, 7, 3, 2, 1, 6, 4, 3, 5.",
+    "url": "question-bank.html?open=u2q12",
+    "chunks": [
+      "Input: [4, 2, 7, 3, 2, 1, 6, 4, 3, 5]\nCount array: [0, 1, 2, 2, 2, 1, 1, 1]\nCumulative count array: [0, 0, 1, 3, 5, 7, 8, 9]\nOutput array: [1, 2, 2, 3, 3, 4, 4, 5, 6, 7]"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q13",
+    "q_num": 13,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO2",
+    "score": 9.0,
+    "important": true,
+    "title": "Perform a complete dry run of Counting Sort on: 3, 1, 4, 1, 2, 7, 5, 3, 6, 2.",
+    "url": "question-bank.html?open=u2q13",
+    "chunks": [
+      "Input: [3, 1, 4, 1, 2, 7, 5, 3, 6, 2]\nCount array: [0, 2, 2, 2, 1, 1, 1, 1]\nCumulative count array: [0, 0, 2, 4, 6, 7, 8, 9]\nOutput array: [1, 1, 2, 2, 3, 3, 4, 5, 6, 7]"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q14",
+    "q_num": 14,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO2",
+    "score": 9.5,
+    "important": true,
+    "title": "Perform a complete dry run of Radix Sort on: 170, 45, 75, 90, 802, 24, 2, 66, 329, 501.",
+    "url": "question-bank.html?open=u2q14",
+    "chunks": [
+      "Initial Array: [170, 45, 75, 90, 802, 24, 2, 66, 329, 501]\nPass 1 (Units digit):\nBuckets / Sorted: [170, 90, 501, 802, 2, 24, 45, 75, 66, 329]\nPass 2 (Tens digit):\nBuckets / Sorted: [802, 2, 501, 24, 329, 45, 66, 170, 75, 90]\nPass 3 (Hundreds digit):\nBuckets / Sorted: [2, 24, 45, 66, 75, 90, 170, 329, 501, 802]\nFinal Sorted Array: [2, 24, 45, 66, 75, 90, 170, 329, 501, 802]"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q15",
+    "q_num": 15,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO2",
+    "score": 9.5,
+    "important": true,
+    "title": "Apply Radix Sort on: 329, 457, 657, 839, 436, 720, 355, 12, 98.",
+    "url": "question-bank.html?open=u2q15",
+    "chunks": [
+      "Initial Array: [329, 457, 657, 839, 436, 720, 355, 12, 98]\nPass 1 (Units): [720, 12, 355, 436, 457, 657, 98, 329, 839]\nPass 2 (Tens): [12, 720, 329, 436, 839, 355, 457, 657, 98]\nPass 3 (Hundreds): [12, 98, 329, 355, 436, 457, 657, 720, 839]\nThe sorting algorithm (like counting sort) at each digit must be stable so that elements with the same current digit remain in the relative order established by previous, less-significant digits."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q16",
+    "q_num": 16,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO2",
+    "score": 9.0,
+    "important": true,
+    "title": "Perform a complete dry run of Bucket Sort on: 0.42, 0.32, 0.73, 0.52, 0.25, 0.91, 0.63, 0.18, 0.37, 0.81.",
+    "url": "question-bank.html?open=u2q16",
+    "chunks": [
+      "Initial Array: [0.42, 0.32, 0.73, 0.52, 0.25, 0.91, 0.63, 0.18, 0.37, 0.81]\n10 buckets (index 0 to 9) computed by floor(10 * value):\n\nB1: [0.18]\nB2: [0.25]\nB3: [0.32, 0.37]\nB4: [0.42]\nB5: [0.52]\nB6: [0.63]\nB7: [0.73]\nB8: [0.81]\nB9: [0.91]\nSort each bucket (already sorted or trivial). Concatenate all buckets.\nFinal Sorted Array: [0.18, 0.25, 0.32, 0.37, 0.42, 0.52, 0.63, 0.73, 0.81, 0.91]"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q17",
+    "q_num": 17,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.5,
+    "important": true,
+    "title": "Compare Bubble, Selection, Insertion, Heap, Counting, Radix, Bucket Sort complexities.",
+    "url": "question-bank.html?open=u2q17",
+    "chunks": [
+      "AlgorithmBest-caseAverage-caseWorst-case\nBubble SortO(n)O(n2)O(n2)\nSelection SortO(n2)O(n2)O(n2)\nInsertion SortO(n)O(n2)O(n2)\nHeap SortO(n log n)O(n log n)O(n log n)\nCounting SortO(n+k)O(n+k)O(n+k)\nRadix SortO(d(n+k))O(d(n+k))O(d(n+k))\nBucket SortO(n+k)O(n)O(n2)"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q18",
+    "q_num": 18,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO2",
+    "score": 9.0,
+    "important": true,
+    "title": "Compare Bubble, Selection, Insertion on 64, 34, 25, 12, 22, 11, 90, 45, 78, 33.",
+    "url": "question-bank.html?open=u2q18",
+    "chunks": [
+      "All three have worst-case O(n^2). However, for an almost-sorted array, Insertion Sort is highly preferable because its best-case time complexity approaches O(n) as it only compares a few elements before finding the correct position. Bubble sort can also be O(n) if a flag is used to break early, but it generally involves more swaps. Selection Sort is always O(n^2) comparisons."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q19",
+    "q_num": 19,
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO2",
+    "score": 9.0,
+    "important": true,
+    "title": "Perform a complete dry run of Heap Sort on: 20, 15, 30, 5, 10, 25, 35, 2, 8, 12.",
+    "url": "question-bank.html?open=u2q19",
+    "chunks": [
+      "Initial Array: [20, 15, 30, 5, 10, 25, 35, 2, 8, 12]\nBuild Max Heap:\nHeapify from index 4 down to 0.\nResulting Max Heap: [35, 15, 30, 8, 12, 25, 20, 2, 5, 10]\nExtraction & Heapify:\nExtract 35, move 10 to root, heapify. -> [30, 15, 25, 8, 12, 10, 20, 2, 5] | [35]\n... continue extracting max ...\nFinal Sorted Array: [2, 5, 8, 10, 12, 15, 20, 25, 30, 35]"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q20",
+    "q_num": 20,
+    "unit": "II",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 8.5,
+    "important": true,
+    "title": "Determine whether array represents a Max Heap: 16, 14, 10, 8, 7, 9, 3, 2, 4, 1.",
+    "url": "question-bank.html?open=u2q20",
+    "chunks": [
+      "For an array to be a Max Heap, every parent A[i] must be >= its children A[2i+1] and A[2i+2].\n\ni=0 (16): children 14, 10. Valid.\ni=1 (14): children 8, 7. Valid.\ni=2 (10): children 9, 3. Valid.\ni=3 (8): children 2, 4. Valid.\ni=4 (7): child 1. Valid.\nThe array is a valid Max Heap. No violations found."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q21",
+    "q_num": 21,
+    "unit": "II",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO2",
+    "score": 7.0,
+    "important": false,
+    "title": "Explain the difference between BUILD-MAX-HEAP and MAX-HEAPIFY.",
+    "url": "question-bank.html?open=u2q21",
+    "chunks": [
+      "MAX-HEAPIFY: Maintains the max-heap property for a given node, assuming its left and right subtrees are already max heaps. It has a time complexity of O(log n).\nBUILD-MAX-HEAP: Constructs a max heap from an unordered array by calling MAX-HEAPIFY in a bottom-up manner on all non-leaf nodes. It has a time complexity of O(n)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "u2q22",
+    "q_num": 22,
+    "unit": "II",
+    "marks": 3,
+    "bloom": "L1",
+    "co": "CO2",
+    "score": 8.5,
+    "important": true,
+    "title": "Define a heap. Differentiate between a Max Heap and a Min Heap.",
+    "url": "question-bank.html?open=u2q22",
+    "chunks": [
+      "A Heap is a specialized tree-based data structure that satisfies the heap property, typically implemented as an almost complete binary tree.\n\nMax Heap: The value of each node is greater than or equal to the values of its children. The largest element is at the root. Example: [100, 19, 36]\nMin Heap: The value of each node is less than or equal to the values of its children. The smallest element is at the root. Example: [1, 2, 3]"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q1",
+    "q_num": 1,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 9.0,
+    "important": true,
+    "title": "Define the Divide and Conquer paradigm. Explain its three basic steps with a suitable example.",
+    "url": "question-bank.html?open=q1",
+    "chunks": [
+      "Divide and Conquer Paradigm\n\nThe Divide and Conquer paradigm is an algorithmic design strategy that solves a problem by recursively breaking it down into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. The solutions to the sub-problems are then combined to give a solution to the original problem.\n\nIt consists of three basic steps:\n\nDivide: Break the given problem into smaller sub-problems.\n\nConquer: Recursively solve these sub-problems. If the sub-problem size is small enough, solve it directly (base case).\n\nCombine: Merge the solutions of the sub-problems to form the solution of the original problem.\n\nExample: Merge Sort\n\nIn Merge Sort:\n\nDivide: Divide the unsorted array of size n into two sub-arrays of size n/2.\n\nConquer: Recursively sort the two sub-arrays using Merge Sort.\n\nCombine: Merge the two sorted sub-arrays into a single sorted array."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q2",
+    "q_num": 2,
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 8.0,
+    "important": true,
+    "title": "What are the divide, conquer, and combine steps in a Divide and Conquer algorithm?",
+    "url": "question-bank.html?open=q2",
+    "chunks": [
+      "The three main steps of the Divide and Conquer strategy are:\n\nDivide: This step involves breaking the original problem into a set of smaller sub-problems. The sub-problems should represent a smaller instance of the same original problem.\n\nConquer: This step involves solving the sub-problems recursively. If the sub-problem is small enough (the base case), it is solved directly without further division.\n\nCombine: This step involves taking the solutions to the sub-problems and merging them together to formulate the solution to the original problem."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q3",
+    "q_num": 3,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 6.5,
+    "important": false,
+    "title": "Explain the general structure of a Divide and Conquer algorithm. How is it different from an iterative algorithm?",
+    "url": "question-bank.html?open=q3",
+    "chunks": [
+      "General Structure\n\nThe general structure of a Divide and Conquer algorithm can be represented recursively:\n\nAlgorithm DAndC(P)\n{\n    if Small(P) then\n        return S(P); // Solve directly\n    else\n    {\n        Divide P into smaller instances P1, P2, ..., Pk, k \u2265 1;\n        Apply DAndC to each of these subproblems;\n        return Combine(DAndC(P1), DAndC(P2), ..., DAndC(Pk));\n    }\n}\n\nDifference from Iterative Algorithms\n\nControl Flow: Divide and Conquer algorithms rely heavily on recursion (functions calling themselves), whereas iterative algorithms use loops (for, while) to repeat tasks.\n\nState Management: In recursion, state is maintained implicitly by the call stack. In iteration, variables explicitly hold state (like loop counters).\n\nApproach: Divide and conquer works top-down (breaking large to small), while dynamic programming or iterative methods can work bottom-up (solving small to build large)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q4",
+    "q_num": 4,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO3",
+    "score": 8.5,
+    "important": true,
+    "title": "Identify whether the following algorithms use the Divide and Conquer technique. Give reasons for your answer: Binary Search, Merge Sort, Quick Sort, Bubble Sort",
+    "url": "question-bank.html?open=q4",
+    "chunks": [
+      "Binary Search: Yes. It divides the array into two halves, compares the target with the middle element, and recursively conquers only one of the halves. The combine step is trivial (returning the index).\n\nMerge Sort: Yes. It divides the array into two halves, recursively sorts each half (conquer), and then merges the two sorted halves (combine).\n\nQuick Sort: Yes. It chooses a pivot to divide the array into two partitions (smaller than pivot and greater than pivot), recursively sorts the partitions (conquer). Combine is trivial as sorting is done in place.\n\nBubble Sort: No. It is an iterative comparison-based algorithm that repeatedly swaps adjacent elements if they are in the wrong order. It does not divide the problem into smaller subproblems or use recursion."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q5",
+    "q_num": 5,
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 7.0,
+    "important": false,
+    "title": "Explain the advantages and limitations of the Divide and Conquer approach.",
+    "url": "question-bank.html?open=q5",
+    "chunks": [
+      "Advantages\n\nSolving Complex Problems: Makes solving conceptually difficult problems easier by breaking them down into simpler, smaller sub-problems.\n\nParallelism: Sub-problems are independent and can often be executed in parallel on multi-core processors.\n\nMemory Access Efficiency: Can be designed to optimize cache usage, as smaller sub-problems fit easily into the CPU cache.\n\nEfficiency: Often yields algorithms with faster time complexities, e.g., reducing O(n\u00b2) to O(n log n) in sorting.\n\nLimitations\n\nOverhead: The recursion and function call stack overhead can make them slower for small inputs compared to simple iterative approaches.\n\nSpace Complexity: Deep recursion trees can lead to stack overflow or require excessive auxiliary space.\n\nRepeated Subproblems: If not careful, overlapping subproblems can be solved multiple times, leading to inefficiencies (better handled by Dynamic Programming)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q6",
+    "q_num": 6,
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 8.0,
+    "important": true,
+    "title": "What is a recurrence relation? Explain its role in analyzing the time complexity of recursive algorithms.",
+    "url": "question-bank.html?open=q6",
+    "chunks": [
+      "A recurrence relation is an equation or inequality that describes a mathematical function in terms of its value on smaller inputs.\n\nRole in Analyzing Time Complexity:\n\nWhen an algorithm contains a recursive call, its running time can be described by a recurrence relation. For example, in Merge Sort, solving a problem of size n involves two subproblems of size n/2, and merging takes linear time O(n). This gives the recurrence:\n\nT(n) = 2T(n/2) + O(n)\n\nBy solving this recurrence relation (using methods like the Substitution Method, Recursion Tree Method, or Master Theorem), we can express the time complexity of the algorithm in Big-O notation (e.g., O(n log n))."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q7",
+    "q_num": 7,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO3",
+    "score": 9.5,
+    "important": true,
+    "title": "Solve the following recurrence using the substitution method: T(n) = 2T(n/2) + n",
+    "url": "question-bank.html?open=q7",
+    "chunks": [
+      "Recurrence: T(n) = 2T(n/2) + n\n\nGuess: T(n) = O(n log n). We need to prove that T(n) \u2264 c \u00b7 n log n for some constant c > 0.\n\nProof by induction:\n\nAssume the bound holds for n/2, i.e., T(n/2) \u2264 c \u00b7 (n/2) log(n/2).\n\nSubstitute this into the recurrence:\n\n T(n) \u2264 2 \u00b7 [c \u00b7 (n/2) log(n/2)] + n\n\n T(n) \u2264 c \u00b7 n log(n/2) + n\n\n T(n) \u2264 c \u00b7 n(log n - log 2) + n\n\n T(n) \u2264 c \u00b7 n log n - c \u00b7 n + n\n\nWe want T(n) \u2264 c \u00b7 n log n. This holds true if:\n\n c \u00b7 n log n - c \u00b7 n + n \u2264 c \u00b7 n log n\n\n -c \u00b7 n + n \u2264 0\n\n c \u2265 1\n\nSince we can choose c \u2265 1, the guess is correct.\n\nResult: T(n) = O(n log n)"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q12",
+    "q_num": 12,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO3",
+    "score": 8.0,
+    "important": true,
+    "title": "Solve the following recurrence using the substitution method: T(n) = T(n/2) + 1",
+    "url": "question-bank.html?open=q12",
+    "chunks": [
+      "Recurrence: T(n) = T(n/2) + 1\n\nGuess: T(n) = O(log n). We prove T(n) \u2264 c \u00b7 log n for some constant c.\n\nProof by induction:\n\nAssume T(n/2) \u2264 c \u00b7 log(n/2)\n\nSubstitute into recurrence:\n\n T(n) \u2264 c \u00b7 log(n/2) + 1\n\n T(n) \u2264 c \u00b7 (log n - 1) + 1\n\n T(n) \u2264 c \u00b7 log n - c + 1\n\nWe want T(n) \u2264 c \u00b7 log n. This requires:\n\n - c + 1 \u2264 0 \u21d2 c \u2265 1\n\nSince we can find a constant c (c \u2265 1) such that the condition holds, the guess is correct.\n\nResult: T(n) = O(log n)"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q14",
+    "q_num": 14,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO3",
+    "score": 9.5,
+    "important": true,
+    "title": "Solve the following recurrence using the Master Method: T(n) = 2T(n/2) + n",
+    "url": "question-bank.html?open=q14",
+    "chunks": [
+      "The Master Theorem applies to recurrences of the form: T(n) = aT(n/b) + f(n)\n\nGiven: T(n) = 2T(n/2) + n\n\na = 2\n\nb = 2\n\nf(n) = n\n\nCalculate nlogba:\n\nnlog22 = n1 = n\n\nCompare f(n) with nlogba:\n\nf(n) = n, and nlogba = n. They are equal, which matches Case 2 of the Master Theorem (f(n) = \u0398(nlogba)).\n\nFormula for Case 2: T(n) = \u0398(nlogba log n)\n\nResult: T(n) = \u0398(n log n)"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q15",
+    "q_num": 15,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO3",
+    "score": 9.0,
+    "important": true,
+    "title": "Solve the following recurrence using the Master Method: T(n) = 4T(n/2) + n",
+    "url": "question-bank.html?open=q15",
+    "chunks": [
+      "Given: T(n) = 4T(n/2) + n\n\na = 4\n\nb = 2\n\nf(n) = n\n\nCalculate nlogba:\n\nnlog24 = n2\n\nCompare f(n) with nlogba:\n\nf(n) = O(n2 - \u03b5) for \u03b5 = 1. Since f(n) grows polynomially slower than nlogba, this is Case 1 of the Master Theorem.\n\nFormula for Case 1: T(n) = \u0398(nlogba)\n\nResult: T(n) = \u0398(n2)"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q16",
+    "q_num": 16,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO3",
+    "score": 9.0,
+    "important": true,
+    "title": "Solve the following recurrence using the Master Method: T(n) = 4T(n/2) + n\u00b2",
+    "url": "question-bank.html?open=q16",
+    "chunks": [
+      "Given: T(n) = 4T(n/2) + n\u00b2\n\na = 4\n\nb = 2\n\nf(n) = n\u00b2\n\nCalculate nlogba:\n\nnlog24 = n2\n\nCompare f(n) with nlogba:\n\nf(n) = n\u00b2 and nlogba = n\u00b2. They are equal. This matches Case 2 of the Master Theorem (f(n) = \u0398(nlogba)).\n\nFormula for Case 2: T(n) = \u0398(nlogba log n)\n\nResult: T(n) = \u0398(n\u00b2 log n)"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q17",
+    "q_num": 17,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO3",
+    "score": 9.0,
+    "important": true,
+    "title": "Solve the following recurrence using the Master Method: T(n) = 8T(n/2) + n\u00b2",
+    "url": "question-bank.html?open=q17",
+    "chunks": [
+      "Given: T(n) = 8T(n/2) + n\u00b2\n\na = 8\n\nb = 2\n\nf(n) = n\u00b2\n\nCalculate nlogba:\n\nnlog28 = n3\n\nCompare f(n) with nlogba:\n\nf(n) = O(n3 - \u03b5) for \u03b5 = 1. Since f(n) grows polynomially slower than nlogba, this is Case 1 of the Master Theorem.\n\nFormula for Case 1: T(n) = \u0398(nlogba)\n\nResult: T(n) = \u0398(n3)"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q18",
+    "q_num": 18,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO3",
+    "score": 8.0,
+    "important": true,
+    "title": "Solve the following recurrence using the Master Method: T(n) = T(n/2) + 1",
+    "url": "question-bank.html?open=q18",
+    "chunks": [
+      "Given: T(n) = T(n/2) + 1\n\na = 1\n\nb = 2\n\nf(n) = 1 (which is n0)\n\nCalculate nlogba:\n\nnlog21 = n0 = 1\n\nCompare f(n) with nlogba:\n\nf(n) = 1, and nlogba = 1. They are equal, which matches Case 2 of the Master Theorem (f(n) = \u0398(nlogba)).\n\nFormula for Case 2: T(n) = \u0398(nlogba log n)\n\nResult: T(n) = \u0398(1 \u00b7 log n) = \u0398(log n)"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q19",
+    "q_num": 19,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L5",
+    "co": "CO3",
+    "score": 9.5,
+    "important": true,
+    "title": "Perform a complete dry run of Binary Search on the sorted array: 5, 12, 18, 23, 31, 37, 45, 52, 64, 71, 85. Search for the element 45. Show the values of low, high, mid, and the comparison at every step.",
+    "url": "question-bank.html?open=q19",
+    "chunks": [
+      "Array: A = [5, 12, 18, 23, 31, 37, 45, 52, 64, 71, 85]\n\nIndices: 0 to 10 (size n=11)\n\nTarget (x): 45\n\nSteplowhighmid = (low+high)/2A[mid]ComparisonAction\n\n1010(0+10)/2 = 5A[5] = 3737 < 45x is greater, search right half. Set low = mid + 1 = 6.\n\n2610(6+10)/2 = 8A[8] = 6464 > 45x is smaller, search left half. Set high = mid - 1 = 7.\n\n367(6+7)/2 = 6A[6] = 4545 == 45Match found! Return index 6.\n\nResult: Element 45 found at index 6."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q20",
+    "q_num": 20,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L5",
+    "co": "CO3",
+    "score": 9.0,
+    "important": true,
+    "title": "Perform a complete dry run of Binary Search on: 3, 8, 12, 17, 21, 29, 34, 41, 56, 63, 72, 89. Search for 50 and show why the search terminates unsuccessfully.",
+    "url": "question-bank.html?open=q20",
+    "chunks": [
+      "Array: A = [3, 8, 12, 17, 21, 29, 34, 41, 56, 63, 72, 89]\n\nIndices: 0 to 11 (size n=12)\n\nTarget (x): 50\n\nSteplowhighmid = (low+high)/2A[mid]ComparisonAction\n\n1011(0+11)/2 = 5A[5] = 2929 < 50Set low = mid + 1 = 6\n\n2611(6+11)/2 = 8A[8] = 5656 > 50Set high = mid - 1 = 7\n\n367(6+7)/2 = 6A[6] = 3434 < 50Set low = mid + 1 = 7\n\n477(7+7)/2 = 7A[7] = 4141 < 50Set low = mid + 1 = 8\n\nTermination: In step 5, low becomes 8 and high is 7. The condition low \u2264 high is violated (8 \u2264 7 is False). The loop terminates, and the search returns an unsuccessful result (element not found)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q21",
+    "q_num": 21,
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 8.0,
+    "important": true,
+    "title": "Compare Linear Search and Binary Search with respect to their best-case, average-case, and worst-case time complexities.",
+    "url": "question-bank.html?open=q21",
+    "chunks": [
+      "Search TypeBest-CaseAverage-CaseWorst-CasePrerequisite\n\nLinear Search\nO(1) (Item is at index 0)\nO(n) (Item is in the middle)\nO(n) (Item is at the end or not present)\nNone (Works on unsorted arrays)\n\nBinary Search\nO(1) (Item is the middle element)\nO(log n)\nO(log n) (Item is at extremes or not present)\nArray must be sorted"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q22",
+    "q_num": 22,
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO3",
+    "score": 7.0,
+    "important": false,
+    "title": "Explain why Binary Search requires the input array to be sorted. What happens if Binary Search is applied to an unsorted array?",
+    "url": "question-bank.html?open=q22",
+    "chunks": [
+      "Why Sorting is Required: Binary search fundamentally relies on the ordering of elements. It compares the target value to the middle element and mathematically eliminates half of the remaining search space based on that comparison. If target < mid, it knows the target must be in the left half, because all elements in the left half are smaller than the middle element.\n\nIf Applied to an Unsorted Array: The logic breaks down. Comparing the target to the middle element gives no reliable information about where the target might be located in the rest of the array. The search might discard the half that actually contains the target, leading to a false negative (returning \"not found\" even when the element exists)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q23",
+    "q_num": 23,
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 8.0,
+    "important": true,
+    "title": "Explain how the Divide and Conquer technique can be used to find the maximum and minimum elements of an array.",
+    "url": "question-bank.html?open=q23",
+    "chunks": [
+      "The Divide and Conquer Max-Min algorithm finds both the maximum and minimum elements simultaneously by recursively breaking the array into halves.\n\nDivide: Split the array into two halves.\n\nConquer: Recursively find the (max, min) pair for the left half and the (max, min) pair for the right half.\n\nBase Cases:\n\nIf the subarray has 1 element, return it as both max and min.\n\nIf the subarray has 2 elements, compare them and return the larger as max and the smaller as min.\n\nCombine: Compare the max of the left half with the max of the right half to get the overall max. Compare the min of the left half with the min of the right half to get the overall min."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q24",
+    "q_num": 24,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L5",
+    "co": "CO3",
+    "score": 9.5,
+    "important": true,
+    "title": "Perform a complete dry run of the Max-Min algorithm on: 35, 12, 48, 7, 23, 56, 19, 4, 31, 15. Show the division, recursive comparisons, and final maximum and minimum values.",
+    "url": "question-bank.html?open=q24",
+    "chunks": [
+      "Array: A = [35, 12, 48, 7, 23, 56, 19, 4, 31, 15] (indices 0 to 9)\n\nRecursive Divisions\n\nMaxMin(0, 9)\n\nmid = 4\n\nLeft: MaxMin(0, 4) \u2192 A[0..4] = [35, 12, 48, 7, 23]\n\nmid = 2\n\nLeft: MaxMin(0, 2) \u2192 [35, 12, 48]\n\nmid = 1\n\nLeft: MaxMin(0, 1) \u2192 [35, 12]. Base case: Returns (max=35, min=12)\n\nRight: MaxMin(2, 2) \u2192 [48]. Base case: Returns (max=48, min=48)\n\nCombine(0, 2): max(35, 48)=48, min(12, 48)=12. Returns (48, 12)\n\nRight: MaxMin(3, 4) \u2192 [7, 23]\n\nBase case: Returns (max=23, min=7)\n\nCombine(0, 4): max(48, 23)=48, min(12, 7)=7. Returns (48, 7)\n\nRight: MaxMin(5, 9) \u2192 A[5..9] = [56, 19, 4, 31, 15]\n\nmid = 7\n\nLeft: MaxMin(5, 7) \u2192 [56, 19, 4]\n\nmid = 6\n\nLeft: MaxMin(5, 6) \u2192 [56, 19]. Base case: Returns (max=56, min=19)\n\nRight: MaxMin(7, 7) \u2192 [4]. Base case: Returns (max=4, min=4)\n\nCombine(5, 7): max(56, 4)=56, min(19, 4)=4. Returns (56, 4)\n\nRight: MaxMin(8, 9) \u2192 [31, 15]\n\nBase case: Returns (max=31, min=15)\n\nCombine(5, 9): max(56, 31)=56, min(4, 15)=4. Returns (56, 4)\n\nFinal Combine(0, 9): max(48, 56)=56, min(7, 4)=4. Returns (56, 4)\n\nFinal Result: Maximum = 56, Minimum = 4"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q27",
+    "q_num": 27,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L5",
+    "co": "CO3",
+    "score": 9.5,
+    "important": true,
+    "title": "Perform a complete dry run of Merge Sort on: 38, 27, 43, 3, 9, 82, 10, 15, 21, 6. Show all division and merging steps.",
+    "url": "question-bank.html?open=q27",
+    "chunks": [
+      "Initial Array: [38, 27, 43, 3, 9, 82, 10, 15, 21, 6]\n\nDivide Phase\n\nSplit recursively into halves until single elements remain.\n\n[38, 27, 43, 3, 9] and [82, 10, 15, 21, 6]\n\n[38, 27, 43], [3, 9] | [82, 10, 15], [21, 6]\n\n[38, 27], [43] | [3], [9] | [82, 10], [15] | [21], [6]\n\n[38], [27] | [43] | [3] | [9] | [82], [10] | [15] | [21] | [6]\n\nMerge Phase\n\nMerge sorted sub-arrays back together in sorted order.\n\nMerge size 1 to 2: [27, 38], [43] | [3, 9] | [10, 82], [15] | [6, 21]\n\nMerge size 2 to 3/4: [27, 38, 43] | [3, 9] | [10, 15, 82] | [6, 21]\n\nMerge halves: [3, 9, 27, 38, 43] and [6, 10, 15, 21, 82]\n\nFinal Merge: [3, 6, 9, 10, 15, 21, 27, 38, 43, 82]"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q32",
+    "q_num": 32,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L5",
+    "co": "CO3",
+    "score": 9.5,
+    "important": true,
+    "title": "Perform a complete dry run of Quick Sort on: 64, 25, 12, 22, 11, 90, 34, 5, 78, 43. Assume the first element is selected as the pivot. Show each partitioning step.",
+    "url": "question-bank.html?open=q32",
+    "chunks": [
+      "Initial Array: [64, 25, 12, 22, 11, 90, 34, 5, 78, 43]\n\nStep 1: Partition around 64 (Pivot = 64)\n\nElements smaller than 64 go to the left, larger to the right.\n\nLeft: [25, 12, 22, 11, 34, 5, 43]\n\nRight: [90, 78]\n\nArray after partition 1: [25, 12, 22, 11, 34, 5, 43] , 64 , [90, 78]\n\nStep 2: Recursive Calls\n\nLeft partition: [25, 12, 22, 11, 34, 5, 43] (Pivot = 25)\n\nLeft of 25: [12, 22, 11, 5]\n\nRight of 25: [34, 43]\n\nArray becomes: [12, 22, 11, 5] , 25 , [34, 43]\n\nSub-Left: [12, 22, 11, 5] (Pivot = 12)\n\nLeft: [11, 5]\n\nRight: [22]\n\nArray becomes: [11, 5] , 12 , [22]\n\nSub-Sub-Left: [11, 5] (Pivot = 11)\n\nLeft: [5], Right: []\n\nArray becomes: [5] , 11\n\nSub-Right of 25: [34, 43] (Pivot = 34)\n\nLeft: [], Right: [43]\n\nArray becomes: 34 , [43]\n\nRight partition of 64: [90, 78] (Pivot = 90)\n\nLeft: [78], Right: []\n\nArray becomes: [78] , 90\n\nCombining all partitions\n\nFinal sorted array: [5, 11, 12, 22, 25, 34, 43, 64, 78, 90]"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q35",
+    "q_num": 35,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 9.0,
+    "important": true,
+    "title": "Explain the best-case, average-case, and worst-case time complexity of Quick Sort.",
+    "url": "question-bank.html?open=q35",
+    "chunks": [
+      "Best Case: O(n log n)\n\nOccurs when the pivot chosen at each step divides the array into two roughly equal halves. The recursion tree has a depth of log(n) and partitioning at each level takes O(n) time. Recurrence: T(n) = 2T(n/2) + O(n)\n\nAverage Case: O(n log n)\n\nOccurs when the pivot randomly divides the array into proportional splits (e.g., 9-to-1 split or 3-to-1 split). Even an unbalanced split like 99-to-1 results in an O(n log n) running time, as the depth of the tree is bounded by a logarithmic function.\n\nWorst Case: O(n\u00b2)\n\nOccurs when the pivot is consistently the smallest or largest element, leading to completely unbalanced partitions (one sub-array of size n-1, and one of size 0). This creates a skewed recursion tree of depth n. Example: sorting an already sorted array when the first or last element is chosen as the pivot. Recurrence: T(n) = T(n-1) + O(n)"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q44",
+    "q_num": 44,
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO3",
+    "score": 8.5,
+    "important": true,
+    "title": "Compare conventional matrix multiplication and Strassen's Matrix Multiplication with respect to the number of multiplications and asymptotic time complexity.",
+    "url": "question-bank.html?open=q44",
+    "chunks": [
+      "FeatureConventional Matrix MultiplicationStrassen's Matrix Multiplication\n\nMethod\nUses 3 nested loops to compute dot products of rows and columns.\nUses Divide and Conquer, breaking n x n matrices into 4 (n/2 x n/2) sub-matrices.\n\nMultiplications per step\n8 multiplications for a 2x2 division step.\n7 multiplications for a 2x2 division step (optimized mathematically).\n\nAdditions/Subtractions\n4 additions.\n18 additions/subtractions (increased overhead).\n\nRecurrence Relation\nT(n) = 8T(n/2) + O(n\u00b2)\nT(n) = 7T(n/2) + O(n\u00b2)\n\nAsymptotic Time Complexity\nO(n3)\nO(nlog27) \u2248 O(n2.81)\n\nConclusion: Strassen's algorithm reduces the number of recursive multiplications from 8 to 7, bringing down the asymptotic time complexity. However, due to the overhead of extra additions, it is practically faster only for very large matrices."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q45",
+    "q_num": 45,
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 7.0,
+    "important": false,
+    "title": "Explain how the Divide and Conquer technique can be used for multiplication of large integers.",
+    "url": "question-bank.html?open=q45",
+    "chunks": [
+      "When integers are very large (e.g., hundreds of digits in cryptography), standard multiplication (O(n\u00b2)) is too slow. The Divide and Conquer technique (Karatsuba algorithm) speeds this up.\n\nProcess:\n\nDivide: Split each n-digit number into two halves (high and low parts).\n\nExample: X = A*10^(n/2) + B and Y = C*10^(n/2) + D\n\nStandard Divide and Conquer: Compute four partial products (AC, AD, BC, BD). This yields T(n) = 4T(n/2) + O(n) \u2192 O(n\u00b2).\n\nKaratsuba Optimization: Compute only three products recursively:\n\nP1 = A * C\n\nP2 = B * D\n\nP3 = (A + B) * (C + D)\n\n  The middle term (AD + BC) is derived as P3 - P1 - P2.\n\nConquer and Combine: This reduces the recurrence to T(n) = 3T(n/2) + O(n), improving the time complexity to O(nlog23) \u2248 O(n1.585)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q49",
+    "q_num": 49,
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO3",
+    "score": 8.0,
+    "important": true,
+    "title": "Is merge sort a stable sorting algorithm? Explain.",
+    "url": "question-bank.html?open=q49",
+    "chunks": [
+      "Yes, Merge Sort is a stable sorting algorithm.\n\nExplanation: A sorting algorithm is stable if it preserves the relative order of equal elements. In Merge Sort, stability is maintained during the merge step. When combining two sorted sub-arrays, if elements are equal, the element from the left sub-array (which appeared earlier in the original array) is explicitly chosen to be placed into the merged array first. By doing this, the original relative ordering of equal elements is preserved."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q50",
+    "q_num": 50,
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L4",
+    "co": "CO3",
+    "score": 8.5,
+    "important": true,
+    "title": "When would you select merge sort instead of quick sort?",
+    "url": "question-bank.html?open=q50",
+    "chunks": [
+      "Merge Sort is preferred over Quick Sort in the following scenarios:\n\nStability is Required: Merge Sort is inherently stable, whereas Quick Sort is not.\n\nWorst-Case Guarantees: Merge Sort guarantees O(n log n) time complexity in all cases. Quick Sort can degrade to O(n\u00b2) in the worst case (e.g., already sorted arrays with bad pivot choice).\n\nSorting Linked Lists: Merge Sort performs excellently on linked lists because elements don't need contiguous memory access for random swaps (unlike Quick Sort). The O(n) auxiliary space requirement of Merge Sort is also reduced to O(1) for linked lists.\n\nExternal Sorting: When the dataset is too large to fit in RAM and resides on disk, Merge Sort's predictable sequential access patterns make it the preferred choice."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "cheat-sheet",
+    "title": "DAA Cheat Sheet",
+    "url": "cheat-sheet.html",
+    "chunks": [
+      "Dashboard\n\n            Revision Hub\n\n                Save as PDF\n\n                Theme",
+      "Design and Analysis of Algorithms",
+      "Dense Revision Cheat Sheet \n\nAll Units | Scannable Reference | High-Yield Syntax & Concepts\n\nQuick Jump:\nUnit I\nUnit II\nUnit III\nUnit IV\nUnit V\n\n\u2190 Dashboard\nMode: Dark",
+      "Unit I: Introduction & Basics CO1",
+      "Algorithm Characteristics \n\nFiniteness: Terminates after a finite number of steps.\n\nDefiniteness: Each step is precisely defined.\n\nInput: Zero or more inputs.\n\nOutput: One or more outputs.\n\nEffectiveness: Operations must be basic and doable in finite time.",
+      "Loop Invariant \n\nA property true before and after each loop iteration. Used to prove correctness.\n\nInitialization: True before first iteration.\n\nMaintenance: If true before iteration, remains true before next.\n\nTermination: Gives useful property when loop ends.",
+      "Heap Data Structure \n\nMax Heap: Parent \u2265 Children. Largest at root.\n\nMin Heap: Parent \u2264 Children. Smallest at root.\n\nMAX-HEAPIFY: Maintains max-heap property. O(log n).\n\nBUILD-MAX-HEAP: Bottom-up heap construction. O(n).",
+      "Substitution Method \n\nSteps to solve recurrences:\n\nGuess the form of the solution (e.g., O(n log n)).\n\nUse mathematical induction to prove the guess.\n\nSubstitute guessed bound into recurrence.\n\nShow condition holds for constants.",
+      "Unit II: Core Mechanics CO2",
+      "Time vs Space Complexity \n\nTime Complexity: Time taken as a function of input length.\n\nSpace Complexity: Memory required as a function of input length.\n\nExample: Mergesort: Time O(n log n), Space O(n). Bubble Sort: Time O(n\u00b2), Space O(1).",
+      "Sorting Time Complexities \n\nAlgorithmBestAverageWorst\n\nBubbleO(n)O(n\u00b2)O(n\u00b2)\n\nSelectionO(n\u00b2)O(n\u00b2)O(n\u00b2)\n\nInsertionO(n)O(n\u00b2)O(n\u00b2)\n\nHeapO(n log n)O(n log n)O(n log n)\n\nCountingO(n+k)O(n+k)O(n+k)\n\nRadixO(d(n+k))O(d(n+k))O(d(n+k))\n\nBucketO(n+k)O(n)O(n\u00b2)",
+      "Search Algorithms \n\nSearchBestAverageWorst\n\nLinearO(1)O(n)O(n)\n\nBinaryO(1)O(log n)O(log n)\n\nNote: Binary search requires sorted array. Linear search doesn't.",
+      "Unit III: Advanced Concepts CO3",
+      "Asymptotic Bounds \n\nBest-case: Minimum time required. Lower bound.\n\nWorst-case: Maximum time required. Upper bound (Big-O).\n\nAverage-case: Expected time required over all inputs.",
+      "Divide and Conquer \n\nBreaks problem down recursively.\n\nDivide: Break into smaller sub-problems.\n\nConquer: Recursively solve sub-problems (or directly if small).\n\nCombine: Merge solutions.\n\nExamples: Merge Sort, Quick Sort, Binary Search.",
+      "Time Complexity Examples 1 \n\nfor(i = 1; i <= n; i++) \n  // O(n)\n\nfor(i = 1; i <= n; i = i * 2)\n  // O(log n)\n\nfor(i = 1; i <= n; i = i + 2)\n  // O(n)",
+      "Unit IV: Design Patterns & Architectures CO4",
+      "Amortized Analysis \n\nCalculates the average time per operation over a sequence, guaranteeing performance even if a single operation is expensive.\n\nAggregate Method: Computes total time T(n) for n ops, sets cost to T(n)/n.",
+      "Master Theorem \n\nFor recurrences of form T(n) = aT(n/b) + f(n)\n\nCalculate c = log_b(a), compare n^c with f(n):\n\nCase 1: f(n) is smaller -> O(n^c)\n\nCase 2: f(n) is equal -> O(n^c log n)\n\nCase 3: f(n) is larger -> O(f(n))",
+      "Time Complexity Examples 2 \n\nfor(i = 1; i <= n; i++) \n  for(j = 1; j <= n; j++)\n    // O(n\u00b2)\n\nfor(i = 1; i <= n; i++) \n  for(j = 1; j <= i; j++)\n    // O(n\u00b2)",
+      "Unit V: Modern Ecosystem CO5",
+      "Algorithm Correctness \n\nPartial Correctness: If the algorithm halts, output is correct. (May loop forever).\n\nTotal Correctness: Guaranteed to halt AND produce correct output.",
+      "Master Theorem Examples \n\nRecurrenceResultCase\n\n2T(n/2) + nO(n log n)Case 2\n\n4T(n/2) + nO(n\u00b2)Case 1\n\n4T(n/2) + n\u00b2O(n\u00b2 log n)Case 2\n\n8T(n/2) + n\u00b2O(n\u00b3)Case 1\n\nT(n/2) + 1O(log n)Case 2",
+      "Radix & Bucket Sort \n\nRadix Sort: Sorts digit by digit using stable sort (e.g., Counting Sort) for each place value. O(d(n+k))\n\nBucket Sort: Divides elements into buckets based on value, sorts buckets individually, then concatenates. Best for uniformly distributed data.\n\n\ufeff",
+      "Ask AI (Lite) \n\n                    Deep mode\n\n                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.\n\n                Send\n\n        let assistantApp = null;\n        async function openAssistant() {\n            if (document.querySelector('.ask-ai-btn') && document.querySelector('.ask-ai-btn').getAttribute('data-dragged') === 'true') return;\n            const modal = document.getElementById('assistantModal');\n            if (modal.style.display === 'flex') {\n                closeAssistant();\n                return;\n            }\n            modal.style.display = 'flex';\n            // slight delay for transition\n            setTimeout(() => {\n                modal.style.opacity = '1';\n                modal.style.transform = 'translateY(0)';\n            }, 10);\n            document.getElementById('assistantInput').focus();\n            if (!assistantApp) {\n                try {\n                    const { initAssistant } = await import('../../shared/assistant-ui.js');\n                    assistantApp = await initAssistant('daa');\n                    if (!assistantApp) throw new Error(\"App init failed\");\n                } catch (e) {\n                    const msgs = document.getElementById('assistantMessages');\n                    msgs.innerHTML = \nI am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).;\n                }\n            }\n        }\n        function closeAssistant() {\n            const modal = document.getElementById('assistantModal');\n            modal.style.opacity = '0';\n            modal.style.transform = 'translateY(20px)';\n            setTimeout(() => {\n                modal.style.display = 'none';\n            }, 300);\n        }\n        function submitAssistantQuery(q) {\n            const input = document.getElementById('assistantInput');\n            const query = q || input.value.trim();\n            if (!query) return;\n            if (!assistantApp) {\n                const msgs = document.getElementById('assistantMessages');\n                msgs.innerHTML = \nI am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).;\n                return;\n            }\n            input.value = '';\n            assistantApp.handleQuery(query);\n        }"
+    ],
+    "type": "cheat"
+  }
+]

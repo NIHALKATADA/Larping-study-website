@@ -1,0 +1,2182 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta name="view-transition" content="same-origin">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS - Midterm Important</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../shared/design-system.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body data-subject="dbms" style="background:#030303;">
+    <div class="glow-bg"></div>
+
+    <nav class="smart-topbar">
+        <div class="topbar-left">
+            <a href="../../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: var(--text-main);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                <span style="font-weight: 600; font-size: 1.1rem; letter-spacing: 0.5px;">Dashboard</span>
+            </a>
+        </div>
+        <div class="topbar-right">
+            <button onclick="downloadPDF()" class="btn btn-secondary" style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; padding: 0.4rem 0.8rem; background: rgba(255,255,255,0.1);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Save as PDF
+            </button>
+        </div>
+    </nav>
+
+<header class="banner">
+        
+        
+        
+        <h1>Database Management Systems</h1>
+        <h2>Midterm Important Questions</h2>
+        <p class="scope-note">Important Only (Score 9.0+) | Units I, II, III</p>
+    
+        
+    </header>
+
+    <div class="layout-wrapper">
+    <!-- Filter Modal (FAB) -->
+    <div id="filterModal" class="glass-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Search & Filters</h3>
+                
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="controls-top">
+                    <div class="filter-section">
+                        <input type="search" id="search-box" class="search-bar" placeholder="Search questions by keyword...">
+                        <div class="filter-toggles">
+                            <label><input type="checkbox" class="unit-cb" value="I"> Unit I</label>
+                            <label><input type="checkbox" class="unit-cb" value="II"> Unit II</label>
+                            <label><input type="checkbox" class="unit-cb" value="III"> Unit III</label>
+                            <label><input type="checkbox" class="unit-cb" value="IV"> Unit IV</label>
+                            <label><input type="checkbox" class="unit-cb" value="V"> Unit V</label>
+                            <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
+                            <label><input type="checkbox" class="marks-cb" value="2"> 2 Marks</label>
+                            <label><input type="checkbox" class="marks-cb" value="3"> 3 Marks</label>
+                            <label><input type="checkbox" class="marks-cb" value="5"> 5 Marks</label>
+                            <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
+                            
+                            <label><input type="checkbox" class="reviewed-filter-cb"> Reviewed Only</label>
+                        </div>
+                    </div>
+                </div>
+                <div style="display:flex; gap:0.5rem; margin-top:1rem; flex-wrap:wrap;">
+                    <button class="btn btn-primary" style="flex:1" onclick="toggleAllAnswers(); closeModal('filterModal')">Reveal All</button>
+                    <button class="btn btn-secondary" style="flex:1" onclick="clearFilters(); closeModal('filterModal')">Clear Filters</button>
+                    <button class="btn btn-secondary" style="flex:1" onclick="closeModal('filterModal')">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Jump Modal -->
+    <div id="jumpModal" class="glass-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Quick Jump</h3>
+                
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                
+                <div class="nav-group">
+                    <h4 style="color: var(--subject-color); margin-bottom: 0.5rem;">Unit I</h4>
+                    <ul class="quick-jump-list">
+                    
+                        <li><a href="#q4">Q4 (2 Marks)</a></li>
+                    
+                        <li><a href="#q12">Q12 (2 Marks)</a></li>
+                    
+                        <li><a href="#q26">Q26 (3 Marks)</a></li>
+                    
+                        <li><a href="#q27">Q27 (3 Marks)</a></li>
+                    
+                        <li><a href="#q32">Q32 (5 Marks)</a></li>
+                    
+                        <li><a href="#q33">Q33 (5 Marks)</a></li>
+                    
+                        <li><a href="#q34">Q34 (5 Marks)</a></li>
+                    
+                        <li><a href="#q35">Q35 (5 Marks)</a></li>
+                    
+                        <li><a href="#q40">Q40 (5 Marks)</a></li>
+                    
+                        <li><a href="#q42">Q42 (5 Marks)</a></li>
+                    
+                        <li><a href="#q43">Q43 (5 Marks)</a></li>
+                    
+                        <li><a href="#q44">Q44 (5 Marks)</a></li>
+                    
+                        <li><a href="#q46">Q46 (5 Marks)</a></li>
+                    
+                        <li><a href="#q47">Q47 (5 Marks)</a></li>
+                    
+                        <li><a href="#q48">Q48 (5 Marks)</a></li>
+                    
+                        <li><a href="#q49">Q49 (5 Marks)</a></li>
+                    
+                        <li><a href="#q50">Q50 (5 Marks)</a></li>
+                    
+                    </ul>
+                </div>
+                
+                <div class="nav-group">
+                    <h4 style="color: var(--subject-color); margin-bottom: 0.5rem;">Unit II</h4>
+                    <ul class="quick-jump-list">
+                    
+                        <li><a href="#q53">Q53 (2 Marks)</a></li>
+                    
+                        <li><a href="#q58">Q58 (2 Marks)</a></li>
+                    
+                        <li><a href="#q63">Q63 (3 Marks)</a></li>
+                    
+                        <li><a href="#q66">Q66 (3 Marks)</a></li>
+                    
+                        <li><a href="#q68">Q68 (3 Marks)</a></li>
+                    
+                        <li><a href="#q76">Q76 (5 Marks)</a></li>
+                    
+                        <li><a href="#q77">Q77 (5 Marks)</a></li>
+                    
+                        <li><a href="#q78">Q78 (5 Marks)</a></li>
+                    
+                        <li><a href="#q84">Q84 (5 Marks)</a></li>
+                    
+                        <li><a href="#q85">Q85 (5 Marks)</a></li>
+                    
+                        <li><a href="#q87">Q87 (5 Marks)</a></li>
+                    
+                        <li><a href="#q88">Q88 (5 Marks)</a></li>
+                    
+                        <li><a href="#q89">Q89 (5 Marks)</a></li>
+                    
+                    </ul>
+                </div>
+                
+                <div class="nav-group">
+                    <h4 style="color: var(--subject-color); margin-bottom: 0.5rem;">Unit III</h4>
+                    <ul class="quick-jump-list">
+                    
+                        <li><a href="#q90">Q90 (3 Marks)</a></li>
+                    
+                        <li><a href="#q97">Q97 (3 Marks)</a></li>
+                    
+                        <li><a href="#q98">Q98 (5 Marks)</a></li>
+                    
+                        <li><a href="#q101">Q101 (5 Marks)</a></li>
+                    
+                        <li><a href="#q102">Q102 (3 Marks)</a></li>
+                    
+                        <li><a href="#q105">Q105 (5 Marks)</a></li>
+                    
+                        <li><a href="#q110">Q110 (5 Marks)</a></li>
+                    
+                        <li><a href="#q111">Q111 (5 Marks)</a></li>
+                    
+                        <li><a href="#q117">Q117 (5 Marks)</a></li>
+                    
+                        <li><a href="#q122">Q122 (5 Marks)</a></li>
+                    
+                        <li><a href="#q123">Q123 (5 Marks)</a></li>
+                    
+                        <li><a href="#q128">Q128 (5 Marks)</a></li>
+                    
+                        <li><a href="#q129">Q129 (3 Marks)</a></li>
+                    
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Study Modal (Flashcards) -->
+    <div id="studyModal" class="glass-modal">
+        <div class="modal-content" style="max-width: 800px; height: 80vh; display: flex; flex-direction: column;">
+            <div class="modal-header" style="flex-shrink: 0;">
+                <h3>Flashcards</h3>
+                
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
+            </div>
+            <div class="modal-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; overflow: hidden; padding-bottom: 2rem;">
+                
+                <div id="flashcard-wrapper" onclick="document.getElementById('flashcard-inner').classList.toggle('flipped')" style="flex-grow: 1; min-height: 350px; perspective: 1000px; position: relative;">
+                    <div id="flashcard-inner" style="position: absolute; inset: 0; transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); transform-style: preserve-3d; cursor: pointer;">
+                        <!-- Front (Question) -->
+                        <div id="flashcard-front" style="position: absolute; inset: 0; backface-visibility: hidden; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                            <div id="fc-badge" class="badges" style="margin-bottom: 1.5rem; justify-content: center;"></div>
+                            <h2 id="fc-question" style="font-size: 1.6rem; line-height: 1.4; color: var(--text-main); font-family: var(--font-headings); font-weight: 600;">Loading...</h2>
+                            <p style="margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem; font-weight: 500;">Tap to reveal answer</p>
+                        </div>
+                        
+                        <!-- Back (Answer) -->
+                        <div id="flashcard-back" style="position: absolute; inset: 0; backface-visibility: hidden; background: rgba(var(--subject-color-rgb, 255,255,255), 0.05); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 2.5rem 2rem; display: flex; flex-direction: column; overflow-y: auto; transform: rotateY(180deg);">
+                            <h5 id="fc-back-question" style="margin-top: 0; margin-bottom: 1.5rem; color: var(--heading-color); font-size: 1.05rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; opacity: 0.9; line-height: 1.4;"></h5>
+                            <div id="fc-answer" style="text-align: left; width: 100%; font-size: 1.05rem; line-height: 1.6; color: var(--text-main);"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem; justify-content: center;">
+                    <button class="btn btn-secondary" onclick="prevFlashcard()">Prev</button>
+                    <button class="btn btn-secondary" onclick="shuffleFlashcards()">Shuffle</button>
+                    <button class="btn btn-primary" onclick="nextFlashcard()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="content-area">
+        
+        <div style="margin-bottom: 2rem;">
+            <p id="showing-text" style="color: var(--text-muted); font-size: 0.95rem;">Showing questions.</p>
+        </div>
+
+        
+
+        <div class="quiz-container" style="display: grid;">
+            <div id="pureSkeleton">
+                <!-- SKELETON MOCK -->
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 75%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 60%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 85%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 50%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 80%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 90%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 65%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 0.5rem;">
+                    <div class="skel-line" style="height: 1.4rem; width: 70%; border-radius: 4px;"></div>
+                    <div style="display: flex; gap: 0.5rem; margin-top: 0.25rem;">
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 6rem; border-radius: 12px;"></div>
+                        <div class="skel-line" style="height: 1.2rem; width: 4rem; border-radius: 12px;"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="realContentWrapper">
+                <section id="cards">
+                    
+                    <details class="q-card" id="q4" data-unit="I" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q4. Draw and explain the three-level (ANSI-SPARC) architecture of a DBMS.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">The Three Levels</div>
+        <ol>
+            <li><strong>External Level (View Level):</strong> The highest level, describing only the part of the database relevant to a specific user group (hiding the rest).</li>
+            <li><strong>Conceptual Level (Logical Level):</strong> Describes what data is stored in the entire database and the relationships among those data. Used by DBAs.</li>
+            <li><strong>Internal Level (Physical Level):</strong> Describes exactly how the data is physically stored on disk (data structures, file organizations).</li>
+        </ol>
+        <div class="exam-tip">
+            <strong>Exam Tip:</strong> The primary objective of this architecture is to achieve <em>Data Independence</em>.
+        </div>
+<div class="diagram-container">
+<svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
+    </marker>
+  </defs>
+
+  <!-- External Level -->
+  <rect x="50" y="30" width="500" height="80" fill="none" stroke="currentColor" stroke-dasharray="5,5" stroke-width="2"/>
+  <text x="70" y="55" fill="currentColor" font-weight="bold">External Level</text>
+  
+  <rect x="150" y="45" width="80" height="50" fill="var(--card-bg)" stroke="currentColor" stroke-width="2" rx="8"/>
+  <text x="190" y="75" text-anchor="middle" fill="currentColor">View 1</text>
+  
+  <rect x="260" y="45" width="80" height="50" fill="var(--card-bg)" stroke="currentColor" stroke-width="2" rx="8"/>
+  <text x="300" y="75" text-anchor="middle" fill="currentColor">View 2</text>
+  
+  <rect x="370" y="45" width="80" height="50" fill="var(--card-bg)" stroke="currentColor" stroke-width="2" rx="8"/>
+  <text x="410" y="75" text-anchor="middle" fill="currentColor">View 3</text>
+
+  <!-- Lines External to Conceptual -->
+  <line x1="190" y1="95" x2="300" y2="155" stroke="currentColor" stroke-width="2" marker-end="url(#arrow4)"/>
+  <line x1="300" y1="95" x2="300" y2="155" stroke="currentColor" stroke-width="2" marker-end="url(#arrow4)"/>
+  <line x1="410" y1="95" x2="300" y2="155" stroke="currentColor" stroke-width="2" marker-end="url(#arrow4)"/>
+
+  <!-- Conceptual Level -->
+  <rect x="50" y="140" width="500" height="80" fill="none" stroke="currentColor" stroke-dasharray="5,5" stroke-width="2"/>
+  <text x="70" y="165" fill="currentColor" font-weight="bold">Conceptual Level</text>
+
+  <rect x="200" y="155" width="200" height="50" fill="var(--card-bg)" stroke="currentColor" stroke-width="2" rx="8"/>
+  <text x="300" y="185" text-anchor="middle" fill="currentColor">Conceptual / Logical Schema</text>
+
+  <!-- Line Conceptual to Internal -->
+  <line x1="300" y1="205" x2="300" y2="255" stroke="currentColor" stroke-width="2" marker-end="url(#arrow4)"/>
+
+  <!-- Internal Level -->
+  <rect x="50" y="240" width="500" height="80" fill="none" stroke="currentColor" stroke-dasharray="5,5" stroke-width="2"/>
+  <text x="70" y="265" fill="currentColor" font-weight="bold">Internal Level</text>
+
+  <rect x="200" y="255" width="200" height="50" fill="var(--card-bg)" stroke="currentColor" stroke-width="2" rx="8"/>
+  <text x="300" y="285" text-anchor="middle" fill="currentColor">Physical Schema</text>
+</svg>
+</div>
+
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q12" data-unit="I" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q12. Explain the terms super key, candidate key, primary key and foreign key with a suitable example.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Explanation</div>
+        <ul>
+            <li><strong>Super Key:</strong> Any combination of columns that uniquely identifies a row. (e.g., <code>StudentID + Name</code>)</li>
+            <li><strong>Candidate Key:</strong> A minimal super key; it uniquely identifies a row with no unnecessary columns. (e.g., <code>StudentID</code> or <code>Email</code>)</li>
+            <li><strong>Primary Key:</strong> The specific candidate key chosen to identify rows. Cannot be NULL. (e.g., <code>StudentID</code>)</li>
+            <li><strong>Foreign Key:</strong> A column that refers to the primary key of another table, enforcing referential integrity. (e.g., <code>Dept_ID</code> in a Student table referencing the Department table)</li>
+        </ul>
+        <div class="diagram-container">
+            <svg viewBox="0 0 500 220" width="100%" height="220" role="img" aria-labelledby="title_q12">
+                <title id="title_q12">Relationship Between Database Keys</title>
+                <!-- Super Key -->
+                <ellipse cx="250" cy="110" rx="200" ry="100" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="250" y="45" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1a237e" text-anchor="middle">Super Keys (All unique combinations)</text>
+                
+                <!-- Candidate Key -->
+                <ellipse cx="250" cy="130" rx="130" ry="60" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text x="250" y="100" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c65f00" text-anchor="middle">Candidate Keys (Minimal)</text>
+
+                <!-- Primary Key -->
+                <circle cx="250" cy="155" r="25" fill="#e0f7fa" stroke="#006064" stroke-width="2"/>
+                <text x="250" y="160" font-family="sans-serif" font-size="12" font-weight="bold" fill="#006064" text-anchor="middle">PK</text>
+            </svg>
+        </div>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q26" data-unit="I" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q26. What are insertion, deletion and update anomalies? How does normalization help remove them?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">The Three Anomalies</div>
+        <ul>
+            <li><strong>Update Anomaly:</strong> If data is stored redundantly, changing it in one row requires changing it in all rows. Missing one causes inconsistency (e.g., changing a department's location).</li>
+            <li><strong>Insertion Anomaly:</strong> The inability to add data to the database due to absence of other data (e.g., unable to add a new Department because it has no Employees yet, and Employee_ID is the primary key).</li>
+            <li><strong>Deletion Anomaly:</strong> The unintended loss of data when deleting a row (e.g., deleting the only employee in a department also deletes the department's information).</li>
+        </ul>
+        <div class="concept-heading">How Normalization Helps</div>
+        <p>Normalization resolves these by decomposing large, poorly structured tables into smaller, well-structured tables where each table represents a single logical theme or entity. By linking them with foreign keys, redundancy is eliminated, which inherently solves update, insertion, and deletion anomalies.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q27" data-unit="I" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q27. What is normalization? Explain 1NF, 2NF and 3NF with a suitable example.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Definition</div>
+        <p>Normalization is the process of organizing data to minimize redundancy and eliminate anomalies by dividing larger tables into smaller tables and defining relationships between them using functional dependencies.</p>
+        
+        <div class="concept-heading">The Normal Forms</div>
+        <ul>
+            <li><strong>First Normal Form (1NF):</strong> All attributes must be atomic (indivisible). No repeating groups or arrays allowed in a cell.</li>
+            <li><strong>Second Normal Form (2NF):</strong> Must be in 1NF, and all non-key attributes must be <em>fully functionally dependent</em> on the entire primary key. (Eliminates partial dependencies).</li>
+            <li><strong>Third Normal Form (3NF):</strong> Must be in 2NF, and no non-key attribute can be dependent on another non-key attribute. (Eliminates transitive dependencies: X &rarr; Y and Y &rarr; Z).</li>
+        </ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q32" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q32. Draw an E-R diagram for a University Exam System, showing all entities, attributes, relationships, keys and cardinalities clearly. Also write down its schema.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">E-R Diagram</div>
+        <div class="diagram-container">
+            <svg viewBox="0 0 600 200" width="100%" height="200">
+                <title>University Exam System ER</title>
+                <!-- Lines & Cardinalities -->
+                <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2"/>
+                <line x1="100" y1="58" x2="100" y2="80" stroke="#333"/>
+                
+                <!-- Entities -->
+                <rect x="50" y="80" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="100" y="105" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Student</text>
+                
+                <rect x="250" y="80" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="300" y="105" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Exam</text>
+                
+                <rect x="450" y="80" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="500" y="105" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Course</text>
+                
+                <!-- Relationships -->
+                <polygon points="200,80 235,100 200,120 165,100" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text x="200" y="104" font-family="sans-serif" font-size="10" text-anchor="middle">Appears</text>
+                
+                <polygon points="400,80 435,100 400,120 365,100" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text x="400" y="104" font-family="sans-serif" font-size="10" text-anchor="middle">Has</text>
+                
+                <text x="160" y="90" font-family="sans-serif" font-size="10">M</text>
+                <text x="240" y="90" font-family="sans-serif" font-size="10">N</text>
+                
+                <text x="360" y="90" font-family="sans-serif" font-size="10">M</text>
+                <text x="440" y="90" font-family="sans-serif" font-size="10">1</text>
+                
+                <!-- Attributes -->
+                <ellipse cx="100" cy="40" rx="45" ry="18" fill="#e0f7fa" stroke="#006064"/>
+                <text fill="currentColor" x="100" y="44" font-family="sans-serif" font-size="11" text-decoration="underline" text-anchor="middle">Roll_No</text>
+            </svg>
+        </div>
+        <div class="concept-heading">Relational Schema</div>
+        <ul>
+            <li><strong>Student</strong>(<u>Roll_No</u>, Name, Program)</li>
+            <li><strong>Course</strong>(<u>Course_Code</u>, C_Name, Credits)</li>
+            <li><strong>Exam</strong>(<u>Exam_ID</u>, Date, Time, <em>Course_Code</em>)</li>
+            <li><strong>Appears</strong>(<u><em>Roll_No</em>, <em>Exam_ID</em></u>, Marks_Obtained)</li>
+        </ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q33" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q33. Design an E-R diagram for an Online Book Store considering Customer, Book, Author, Order and Publisher, and write the corresponding schema.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">E-R Diagram</div>
+        <div class="diagram-container">
+            <svg viewBox="0 0 600 300" width="100%" height="300">
+                <title>Online Book Store ER</title>
+                <!-- Lines -->
+                <line x1="150" y1="70" x2="450" y2="70" stroke="#333" stroke-width="2"/>
+                <line x1="500" y1="90" x2="500" y2="150" stroke="#333" stroke-width="2"/>
+                
+                <!-- Auth to Book Line -->
+                <path d="M 450 70 Q 400 150 450 270" fill="none" stroke="#333" stroke-width="2"/>
+                <line x1="450" y1="70" x2="420" y2="70" stroke="#333" stroke-width="2"/>
+                <line x1="420" y1="70" x2="420" y2="210" stroke="#333" stroke-width="2"/>
+                <line x1="420" y1="210" x2="500" y2="210" stroke="#333" stroke-width="2"/>
+                <line x1="500" y1="210" x2="500" y2="250" stroke="#333" stroke-width="2"/>
+                
+                <!-- Entities -->
+                <rect x="50" y="50" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="100" y="75" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Customer</text>
+
+                <rect x="250" y="50" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="300" y="75" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Order</text>
+
+                <rect x="450" y="50" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="500" y="75" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Book</text>
+
+                <rect x="450" y="150" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="500" y="175" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Publisher</text>
+
+                <rect x="450" y="250" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="500" y="275" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Author</text>
+
+                <!-- Relationships -->
+                <!-- Customer to Order -->
+                <polygon points="200,50 235,70 200,90 165,70" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text x="200" y="74" font-family="sans-serif" font-size="10" text-anchor="middle">Places</text>
+                <text x="160" y="60" font-family="sans-serif" font-size="10">1</text>
+                <text x="240" y="60" font-family="sans-serif" font-size="10">N</text>
+
+                <!-- Order to Book -->
+                <polygon points="400,50 435,70 400,90 365,70" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text x="400" y="74" font-family="sans-serif" font-size="10" text-anchor="middle">Contains</text>
+                <text x="360" y="60" font-family="sans-serif" font-size="10">M</text>
+                <text x="440" y="60" font-family="sans-serif" font-size="10">N</text>
+
+                <!-- Book to Publisher -->
+                <polygon points="500,105 530,120 500,135 470,120" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text x="500" y="123" font-family="sans-serif" font-size="10" text-anchor="middle">Published By</text>
+                <text x="510" y="98" font-family="sans-serif" font-size="10">N</text>
+                <text x="510" y="145" font-family="sans-serif" font-size="10">1</text>
+
+                <!-- Book to Author -->
+                <polygon points="500,195 530,210 500,225 470,210" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text fill="currentColor" x="500" y="213" font-family="sans-serif" font-size="10" text-anchor="middle">Written By</text>
+                <text fill="currentColor" x="430" y="80" font-family="sans-serif" font-size="10">N</text>
+                <text fill="currentColor" x="510" y="245" font-family="sans-serif" font-size="10">1</text>
+            </svg>
+        </div>
+        <div class="concept-heading">Relational Schema</div>
+        <ul>
+            <li><strong>Customer</strong>(<u>Cust_ID</u>, Name, Email, Address)</li>
+            <li><strong>Author</strong>(<u>Auth_ID</u>, Name, Bio)</li>
+            <li><strong>Publisher</strong>(<u>Pub_ID</u>, Name, Address)</li>
+            <li><strong>Book</strong>(<u>ISBN</u>, Title, Price, <em>Auth_ID</em>, <em>Pub_ID</em>)</li>
+            <li><strong>Order</strong>(<u>Order_ID</u>, Date, Total_Amt, <em>Cust_ID</em>)</li>
+            <li><strong>Order_Details</strong>(<u><em>Order_ID</em>, <em>ISBN</em></u>, Quantity)</li>
+        </ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q34" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q34. A Hospital wants to maintain records of Patients and Doctors, along with the tests conducted for each patient. Draw a suitable E-R diagram and write its schema.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">E-R Diagram</div>
+        <div class="diagram-container">
+            <svg viewBox="0 0 500 250" width="100%" height="250">
+                <title>Hospital ER</title>
+                <!-- Lines -->
+                <line x1="150" y1="70" x2="350" y2="70" stroke="#333" stroke-width="2"/>
+                <line x1="250" y1="90" x2="250" y2="180" stroke="#333" stroke-width="2"/>
+                
+                <rect x="50" y="50" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="100" y="75" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Patient</text>
+                
+                <rect x="350" y="50" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="400" y="75" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Doctor</text>
+                
+                <rect x="200" y="180" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="250" y="205" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Test</text>
+                
+                <polygon points="250,45 295,70 250,95 205,70" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text fill="currentColor" x="250" y="74" font-family="sans-serif" font-size="10" text-anchor="middle">Conducts</text>
+                
+                <text fill="currentColor" x="160" y="60" font-family="sans-serif" font-size="10">M</text>
+                <text fill="currentColor" x="340" y="60" font-family="sans-serif" font-size="10">N</text>
+                <text fill="currentColor" x="260" y="170" font-family="sans-serif" font-size="10">P</text>
+            </svg>
+        </div>
+        <div class="concept-heading">Relational Schema</div>
+        <ul>
+            <li><strong>Patient</strong>(<u>Patient_ID</u>, Name, DOB, Contact)</li>
+            <li><strong>Doctor</strong>(<u>Doc_ID</u>, Name, Specialization)</li>
+            <li><strong>Test</strong>(<u>Test_Code</u>, Test_Name, Cost)</li>
+            <li><strong>Consultation_Record</strong>(<u>Record_ID</u>, <em>Patient_ID</em>, <em>Doc_ID</em>, <em>Test_Code</em>, Date, Result)</li>
+        </ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q35" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q35. Construct an E-R diagram for a Bank that offers different types of accounts and loans through several branches. Write its schema as well.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">E-R Diagram</div>
+        <div class="diagram-container">
+            <svg viewBox="0 0 600 200" width="100%" height="200">
+                <title>Bank ER</title>
+                <!-- Lines -->
+                <line x1="100" y1="80" x2="100" y2="50" stroke="#333" stroke-width="2"/>
+                <line x1="100" y1="50" x2="250" y2="50" stroke="#333" stroke-width="2"/>
+                <line x1="100" y1="120" x2="100" y2="150" stroke="#333" stroke-width="2"/>
+                <line x1="100" y1="150" x2="250" y2="150" stroke="#333" stroke-width="2"/>
+                <line x1="350" y1="50" x2="500" y2="50" stroke="#333" stroke-width="2"/>
+                <line x1="500" y1="50" x2="500" y2="80" stroke="#333" stroke-width="2"/>
+                <line x1="350" y1="150" x2="500" y2="150" stroke="#333" stroke-width="2"/>
+                <line x1="500" y1="150" x2="500" y2="120" stroke="#333" stroke-width="2"/>
+                
+                <rect x="50" y="80" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="100" y="105" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Customer</text>
+                
+                <rect x="250" y="30" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="300" y="55" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Account</text>
+                
+                <rect x="250" y="130" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="300" y="155" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Loan</text>
+                
+                <rect x="450" y="80" width="100" height="40" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="500" y="105" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Branch</text>
+                
+                <polygon points="175,30 215,50 175,70 135,50" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text x="175" y="54" font-family="sans-serif" font-size="10" text-anchor="middle">Holds</text>
+                
+                <polygon points="175,130 215,150 175,170 135,150" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text x="175" y="154" font-family="sans-serif" font-size="10" text-anchor="middle">Takes</text>
+                
+                <polygon points="375,30 415,50 375,70 335,50" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text x="375" y="54" font-family="sans-serif" font-size="10" text-anchor="middle">Maintains</text>
+                
+                <polygon points="375,130 415,150 375,170 335,150" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text fill="currentColor" x="375" y="154" font-family="sans-serif" font-size="10" text-anchor="middle">Issues</text>
+            </svg>
+        </div>
+        <div class="concept-heading">Relational Schema</div>
+        <ul>
+            <li><strong>Branch</strong>(<u>Branch_Code</u>, City, Assets)</li>
+            <li><strong>Customer</strong>(<u>Cust_ID</u>, Name, Phone, Address)</li>
+            <li><strong>Account</strong>(<u>Acc_No</u>, Type, Balance, <em>Branch_Code</em>)</li>
+            <li><strong>Loan</strong>(<u>Loan_No</u>, Amount, Interest_Rate, <em>Branch_Code</em>)</li>
+            <li><strong>Holds_Account</strong>(<u><em>Cust_ID</em>, <em>Acc_No</em></u>)</li>
+            <li><strong>Takes_Loan</strong>(<u><em>Cust_ID</em>, <em>Loan_No</em></u>)</li>
+        </ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q40" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q40. Consider an unnormalized relation Student_Marks(Rollno, Name, Subject, Marks) where a student appears in multiple rows, one per subject. Normalize it step by step up to 3NF, clearly stating the functional dependencies you have assumed.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Functional Dependencies (FDs)</div>
+        <p>Assumed FDs based on logic:</p>
+        <ol>
+            <li>FD1: <code>Rollno &rarr; Name</code> (A student has one name)</li>
+            <li>FD2: <code>Rollno, Subject &rarr; Marks</code> (A specific student's marks in a specific subject)</li>
+        </ol>
+        <p>The primary key for the unnormalized relation is <strong>(Rollno, Subject)</strong>.</p>
+
+        <div class="concept-heading">Step 1: 1NF to 2NF</div>
+        <p>In the original relation, <code>Name</code> depends ONLY on <code>Rollno</code>, which is a part of the primary key. This is a <strong>Partial Dependency</strong>. We decompose to eliminate it:</p>
+        <ul>
+            <li><strong>Student</strong>(<u>Rollno</u>, Name)</li>
+            <li><strong>Performance</strong>(<u>Rollno, Subject</u>, Marks)</li>
+        </ul>
+        
+        <div class="concept-heading">Step 2: 2NF to 3NF</div>
+        <p>In the new tables, there are no non-key attributes depending on other non-key attributes (no transitive dependencies). Therefore, the tables are already in <strong>3NF</strong>.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q42" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q42. The table below has the composite key (StudentID, SubjectID). Identify the partial dependencies present and decompose the table into 2NF.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Identifying Partial Dependencies</div>
+        <p>Suppose the relation is <code>R(StudentID, SubjectID, StudentName, Grade)</code>. The primary key is <strong>(StudentID, SubjectID)</strong>.</p>
+        <ul>
+            <li><code>StudentID &rarr; StudentName</code> (StudentName depends only on part of the key) <strong>&mdash; Partial Dependency</strong></li>
+            <li><code>StudentID, SubjectID &rarr; Grade</code> (Grade depends on the whole key) <strong>&mdash; Full Dependency</strong></li>
+        </ul>
+        <div class="concept-heading">Decomposition into 2NF</div>
+        <p>We split the table to remove the partial dependency:</p>
+        <ol>
+            <li><strong>Student</strong>(<u>StudentID</u>, StudentName)</li>
+            <li><strong>Enrollment</strong>(<u>StudentID, SubjectID</u>, Grade)</li>
+        </ol>
+        <p>Both tables are now in 2NF as all non-prime attributes fully depend on their respective primary keys.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q43" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q43. The table below has EmployeeID as its primary key. Show that it violates 3NF, and decompose it into a set of tables that satisfy 3NF.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Violation of 3NF</div>
+        <p>Consider <code>Employee(EmpID, Name, DeptID, DeptName)</code> where <code>EmpID</code> is the primary key.</p>
+        <p>Functional Dependencies:<br>
+        1. <code>EmpID &rarr; DeptID</code><br>
+        2. <code>DeptID &rarr; DeptName</code><br>
+        Because <code>EmpID &rarr; DeptName</code> through <code>DeptID</code>, this is a <strong>Transitive Dependency</strong>. 3NF forbids non-prime attributes depending on other non-prime attributes.</p>
+        
+        <div class="concept-heading">Decomposition into 3NF</div>
+        <p>We decompose the relation to separate the department details:</p>
+        <ol>
+            <li><strong>Employee</strong>(<u>EmpID</u>, Name, <em>DeptID</em>)</li>
+            <li><strong>Department</strong>(<u>DeptID</u>, DeptName)</li>
+        </ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q44" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q44. In the table below, each mentor teaches only one subject. Given that the candidate keys of this table are (StudentID, Subject) and (StudentID, Mentor), check whether it satisfies BCNF. If it does not, decompose it into BCNF.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Checking BCNF</div>
+        <p>Relation: <code>R(StudentID, Subject, Mentor)</code><br>
+        FDs: <code>{StudentID, Subject} &rarr; Mentor</code>, and <code>Mentor &rarr; Subject</code> (each mentor teaches one subject).<br>
+        Because <code>Mentor &rarr; Subject</code> exists, but <code>Mentor</code> is <strong>not a super key</strong>, the table violates BCNF (even though it is in 3NF since Subject is a prime attribute).</p>
+        
+        <div class="concept-heading">BCNF Decomposition</div>
+        <p>We must pull the violating determinant out into its own table:</p>
+        <ol>
+            <li><strong>Mentor_Subject</strong>(<u>Mentor</u>, Subject)</li>
+            <li><strong>Student_Mentor</strong>(<u>StudentID, Mentor</u>)</li>
+        </ol>
+        <p>Now all determinants are candidate keys.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q46" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q46. Given a relation R(A, B, C, D, E) with the functional dependency set F = {A -> B, BC -> D, D -> E}, compute the closure of {A, C} and state whether {A, C} is a candidate key of R.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Computing {A, C}<sup>+</sup></div>
+        <ol>
+            <li>Start with the base set: <code>{A, C}</code></li>
+            <li>Using <code>A &rarr; B</code>, add B. The set becomes <code>{A, B, C}</code></li>
+            <li>Using <code>BC &rarr; D</code> (we have both B and C), add D. The set becomes <code>{A, B, C, D}</code></li>
+            <li>Using <code>D &rarr; E</code>, add E. The set becomes <code>{A, B, C, D, E}</code></li>
+        </ol>
+        <div class="concept-heading">Conclusion</div>
+        <p>Since the closure of {A, C} contains all the attributes of the relation R, <strong>{A, C} is a super key</strong>. Assuming no proper subset of {A, C} can determine all attributes, <strong>{A, C} is a Candidate Key</strong>.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q47" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q47. Consider the relation Student_Course(Roll_No, Course_ID, Course_Name, Instructor) with the functional dependencies {Roll_No, Course_ID} -> Instructor, and Course_ID -> Course_Name. Identify the partial dependency present, show why the relation is not in 2NF, and decompose it into 2NF.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Analysis</div>
+        <p>Primary Key: <strong>(Roll_No, Course_ID)</strong><br>
+        The FD <code>Course_ID &rarr; Course_Name</code> is a <strong>Partial Dependency</strong> because <code>Course_Name</code> depends only on a part of the primary key (Course_ID), violating 2NF.</p>
+        
+        <div class="concept-heading">2NF Decomposition</div>
+        <ol>
+            <li><strong>Course</strong>(<u>Course_ID</u>, Course_Name)</li>
+            <li><strong>Student_Course</strong>(<u>Roll_No, Course_ID</u>, Instructor)</li>
+        </ol>
+        <p>Now, both relations are in 2NF.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q48" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q48. Consider the relation Employee(Emp_ID, Emp_Name, Dept_ID, Dept_Name, Dept_Location) with the functional dependencies Emp_ID -> Emp_Name, Dept_ID and Dept_ID -> Dept_Name, Dept_Location. Show that this relation is in 2NF but violates 3NF, and decompose it into 3NF.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Analysis</div>
+        <p>Primary Key: <strong>Emp_ID</strong>. Since the key is a single attribute, there are no partial dependencies, so it is in <strong>2NF</strong>.<br>
+        However, the FD <code>Dept_ID &rarr; Dept_Name, Dept_Location</code> creates a <strong>Transitive Dependency</strong> (Emp_ID &rarr; Dept_ID &rarr; Dept_Name). This violates 3NF.</p>
+        
+        <div class="concept-heading">3NF Decomposition</div>
+        <ol>
+            <li><strong>Employee</strong>(<u>Emp_ID</u>, Emp_Name, <em>Dept_ID</em>)</li>
+            <li><strong>Department</strong>(<u>Dept_ID</u>, Dept_Name, Dept_Location)</li>
+        </ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q49" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q49. Consider the relation R(Student, Subject, Teacher) with the functional dependencies {Student, Subject} -> Teacher and Teacher -> Subject. Determine whether R is in BCNF. If it is not, decompose it into a set of relations that are in BCNF.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Analysis</div>
+        <p>Candidate Keys: <strong>(Student, Subject)</strong> and <strong>(Student, Teacher)</strong>.<br>
+        For the FD <code>Teacher &rarr; Subject</code>, <code>Teacher</code> is a determinant but <strong>not a super key</strong>. Therefore, R violates BCNF.</p>
+        
+        <div class="concept-heading">BCNF Decomposition</div>
+        <ol>
+            <li><strong>Teach_Subj</strong>(<u>Teacher</u>, Subject)</li>
+            <li><strong>Stud_Teach</strong>(<u>Student, Teacher</u>)</li>
+        </ol>
+        <p>Both tables are now strictly in BCNF.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q50" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q50. Given a relation R(A, B, C, D) with the functional dependency set F = {AB -> C, C -> D, D -> A}, find all the candidate keys of R and state the highest normal form it satisfies.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-1">Unit I</span>
+                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Candidate Keys</div>
+        <ul>
+            <li><code>{A, B}<sup>+</sup></code> = {A, B, C, D}</li>
+            <li><code>{B, C}<sup>+</sup></code> = {A, B, C, D} (since C &rarr; D and D &rarr; A)</li>
+            <li><code>{B, D}<sup>+</sup></code> = {A, B, C, D} (since D &rarr; A and AB &rarr; C)</li>
+        </ul>
+        <p>The candidate keys are <strong>AB, BC, and BD</strong>. All attributes are prime attributes except none (every attribute is part of at least one candidate key).</p>
+        
+        <div class="concept-heading">Highest Normal Form</div>
+        <p>Because there are no non-prime attributes, the relation is automatically in <strong>3NF</strong>.<br>
+        However, check BCNF: The FD <code>C &rarr; D</code> has determinant C, which is not a super key. Thus, it violates BCNF. The highest normal form is <strong>3NF</strong>.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q53" data-unit="II" data-bloom="L3" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q53. Consider the relational schema Student(sid, sname), Course(cid, cname), Enrollment(sid, cid). Write relational algebra expressions.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
+        <svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 600px; height: auto;">
+            <defs>
+                <clipPath id="clip-B53">
+                    <circle cx="25" cy="0" r="50"/>
+                </clipPath>
+            </defs>
+            <style>
+                .circle { fill: transparent; stroke: currentColor; stroke-width: 3; }
+                .highlight { fill: var(--primary-teal); opacity: 0.6; }
+                .label { font-family: sans-serif; font-size: 14px; fill: var(--text-color); font-weight: bold; text-anchor: middle; }
+                .title { font-family: sans-serif; font-size: 16px; fill: currentColor; font-weight: bold; text-anchor: middle; }
+            </style>
+            
+            <!-- UNION (A U B) -->
+            <g transform="translate(150, 120)">
+                <text x="0" y="-80" class="title">UNION (A &#x222A; B)</text>
+                <circle cx="-25" cy="0" r="50" class="highlight"/>
+                <circle cx="25" cy="0" r="50" class="highlight"/>
+                <circle cx="-25" cy="0" r="50" class="circle"/>
+                <circle cx="25" cy="0" r="50" class="circle"/>
+                <text x="-45" y="5" class="label">A</text>
+                <text x="45" y="5" class="label">B</text>
+            </g>
+            
+            <!-- SET DIFFERENCE (A - B) -->
+            <g transform="translate(450, 120)">
+                <text x="0" y="-80" class="title">SET DIFFERENCE (A - B)</text>
+                <circle cx="-25" cy="0" r="50" class="highlight"/>
+                <!-- Hide the intersection by masking with B, actually we need the opposite. 
+                     If we draw A full, and then draw B over it with white? 
+                     Yes, or we can use a reverse clip.
+                     Easier: draw A highlight, then B with background color, then outlines. -->
+                <circle cx="25" cy="0" r="50" fill="var(--card-bg)"/>
+                <circle cx="-25" cy="0" r="50" class="circle"/>
+                <circle cx="25" cy="0" r="50" class="circle"/>
+                <text fill="currentColor" x="-45" y="5" class="label">A</text>
+                <text fill="currentColor" x="45" y="5" class="label">B</text>
+            </g>
+        </svg>
+        </div>
+        <div class="concept-heading">i. Names of students enrolled in 'DBMS'</div>
+        <p><code>&pi;<sub>sname</sub> ( &sigma;<sub>cname='DBMS'</sub> (Student &#x2A1D; Enrollment &#x2A1D; Course) )</code></p>
+        <div class="concept-heading">ii. Courses where 'Alice' is enrolled</div>
+        <p><code>&pi;<sub>cname</sub> ( &sigma;<sub>sname='Alice'</sub> (Course &#x2A1D; Enrollment &#x2A1D; Student) )</code></p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q58" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
+                        <summary>
+                            <h3>Q58. Explain DDL, DML, DCL and TCL commands with one example of each.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+            <li><strong>DDL:</strong> Defines structure (e.g., <code>CREATE TABLE</code>).</li>
+            <li><strong>DML:</strong> Manages data (e.g., <code>INSERT INTO</code>).</li>
+            <li><strong>DCL:</strong> Manages security (e.g., <code>GRANT</code>).</li>
+            <li><strong>TCL:</strong> Manages transactions (e.g., <code>COMMIT</code>).</li>
+        </ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q63" data-unit="II" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q63. What is a join? Explain the different types of joins, inner, left outer, right outer and full outer, with examples.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
+        <svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 800px; height: auto;">
+            <defs>
+                <!-- Clip paths for intersections -->
+                <clipPath id="clip-A">
+                    <circle cx="-25" cy="0" r="50"/>
+                </clipPath>
+                <clipPath id="clip-B">
+                    <circle cx="25" cy="0" r="50"/>
+                </clipPath>
+            </defs>
+            <style>
+                .circle { fill: transparent; stroke: currentColor; stroke-width: 3; }
+                .highlight { fill: var(--primary-teal); opacity: 0.6; }
+                .label { font-family: sans-serif; font-size: 14px; fill: var(--text-color); font-weight: bold; text-anchor: middle; }
+                .title { font-family: sans-serif; font-size: 16px; fill: currentColor; font-weight: bold; text-anchor: middle; }
+            </style>
+            
+            <!-- INNER JOIN -->
+            <g transform="translate(100, 120)">
+                <text fill="currentColor" x="0" y="-80" class="title">INNER JOIN</text>
+                <!-- Intersect: Fill A clipped by B -->
+                <circle cx="-25" cy="0" r="50" class="highlight" clip-path="url(#clip-B)"/>
+                <circle cx="-25" cy="0" r="50" class="circle"/>
+                <circle cx="25" cy="0" r="50" class="circle"/>
+                <text fill="currentColor" x="-45" y="5" class="label">A</text>
+                <text fill="currentColor" x="45" y="5" class="label">B</text>
+            </g>
+            
+            <!-- LEFT OUTER JOIN -->
+            <g transform="translate(300, 120)">
+                <text fill="currentColor" x="0" y="-80" class="title">LEFT JOIN</text>
+                <!-- Left Circle fully filled -->
+                <circle cx="-25" cy="0" r="50" class="highlight"/>
+                <circle cx="-25" cy="0" r="50" class="circle"/>
+                <circle cx="25" cy="0" r="50" class="circle"/>
+                <text fill="currentColor" x="-45" y="5" class="label">A</text>
+                <text fill="currentColor" x="45" y="5" class="label">B</text>
+            </g>
+            
+            <!-- RIGHT OUTER JOIN -->
+            <g transform="translate(500, 120)">
+                <text fill="currentColor" x="0" y="-80" class="title">RIGHT JOIN</text>
+                <!-- Right Circle fully filled -->
+                <circle cx="25" cy="0" r="50" class="highlight"/>
+                <circle cx="-25" cy="0" r="50" class="circle"/>
+                <circle cx="25" cy="0" r="50" class="circle"/>
+                <text fill="currentColor" x="-45" y="5" class="label">A</text>
+                <text fill="currentColor" x="45" y="5" class="label">B</text>
+            </g>
+            
+            <!-- FULL OUTER JOIN -->
+            <g transform="translate(700, 120)">
+                <text fill="currentColor" x="0" y="-80" class="title">FULL OUTER JOIN</text>
+                <!-- Both Circles fully filled -->
+                <circle cx="-25" cy="0" r="50" class="highlight"/>
+                <circle cx="25" cy="0" r="50" class="highlight"/>
+                <circle cx="-25" cy="0" r="50" class="circle"/>
+                <circle cx="25" cy="0" r="50" class="circle"/>
+                <text fill="currentColor" x="-45" y="5" class="label">A</text>
+                <text fill="currentColor" x="45" y="5" class="label">B</text>
+            </g>
+        </svg>
+        </div>
+        <p>A <strong>JOIN</strong> combines rows from two or more tables based on a related column.</p>
+        <div class="concept-heading">Inner Join</div>
+        <p>Returns only rows with matching values in <em>both</em> tables.</p>
+        <pre><code>SELECT A.Name, B.Dept FROM Emp A INNER JOIN Dept B ON A.DeptID = B.DeptID;</code></pre>
+        <div class="concept-heading">Outer Joins</div>
+        <ul>
+            <li><strong>Left Outer:</strong> Returns <em>all</em> rows from the left table, and matched rows from the right.</li>
+            <li><strong>Right Outer:</strong> Returns <em>all</em> rows from the right table, and matched rows from the left.</li>
+            <li><strong>Full Outer:</strong> Returns all rows when there is a match in <em>either</em> table.</li>
+        </ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q66" data-unit="II" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q66. Explain the aggregate functions available in SQL, COUNT, SUM, AVG, MAX and MIN, giving an example of each.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Aggregate functions perform a calculation on a set of values and return a single summarizing value.</p>
+        <ul>
+            <li><strong>COUNT():</strong> Returns the number of rows. <code>SELECT COUNT(*) FROM Employees;</code></li>
+            <li><strong>SUM():</strong> Returns the total sum of a column. <code>SELECT SUM(Salary) FROM Employees;</code></li>
+            <li><strong>AVG():</strong> Returns the average value. <code>SELECT AVG(Salary) FROM Employees;</code></li>
+            <li><strong>MAX() / MIN():</strong> Returns the largest / smallest value. <code>SELECT MAX(Salary) FROM Employees;</code></li>
+        </ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q68" data-unit="II" data-bloom="L4" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q68. How is the HAVING clause different from the WHERE clause? Justify with an example.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="table-responsive">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>WHERE Clause</th>
+                        <th>HAVING Clause</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Filters <strong>individual rows</strong> before grouping.</td>
+                        <td>Filters <strong>groups</strong> after grouping.</td>
+                    </tr>
+                    <tr>
+                        <td>Cannot contain aggregate functions.</td>
+                        <td>Can contain aggregate functions.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="concept-heading">Example</div>
+        <pre><code>SELECT DeptID, AVG(Salary) FROM Employee
+WHERE HireDate &gt; '2020-01-01'  -- Filters rows first
+GROUP BY DeptID
+HAVING AVG(Salary) &gt; 50000;    -- Filters groups</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q76" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q76. Explain generalization, specialization and aggregation in the Extended E-R model.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
+        <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 600px; height: auto;">
+            <style>
+                .entity-q76 { fill: var(--card-bg); stroke: currentColor; stroke-width: 2; rx: 4; }
+                .isa { fill: var(--bg-color); stroke: var(--primary-teal); stroke-width: 2; }
+                .line { stroke: currentColor; stroke-width: 2; }
+                .text { font-family: sans-serif; font-size: 14px; fill: currentColor; font-weight: bold; text-anchor: middle; dominant-baseline: middle; }
+                .small-text { font-family: sans-serif; font-size: 12px; fill: var(--primary-teal); text-anchor: middle; font-style: italic; }
+            </style>
+            
+            <!-- Lines -->
+            <line x1="300" y1="60" x2="300" y2="120" class="line"/>
+            <line x1="300" y1="160" x2="300" y2="200" class="line"/>
+            <line x1="150" y1="200" x2="450" y2="200" class="line"/>
+            <line x1="150" y1="200" x2="150" y2="240" class="line"/>
+            <line x1="450" y1="200" x2="450" y2="240" class="line"/>
+
+            <!-- Arrows to show direction (Generalization vs Specialization) -->
+            <!-- Bottom-Up Generalization -->
+            <path d="M 270,90 L 270,60 L 265,65 M 270,60 L 275,65" fill="none" stroke="var(--primary-teal)" stroke-width="2"/>
+            <text x="230" y="75" class="small-text">Generalization</text>
+
+            <!-- Top-Down Specialization -->
+            <path d="M 330,60 L 330,90 L 325,85 M 330,90 L 335,85" fill="none" stroke="var(--primary-teal)" stroke-width="2"/>
+            <text fill="currentColor" x="375" y="75" class="small-text">Specialization</text>
+
+            <!-- Vehicle (Superclass) -->
+            <rect x="240" y="20" width="120" height="40" class="entity-q76"/>
+            <text fill="currentColor" x="300" y="40" class="text">VEHICLE</text>
+
+            <!-- IS-A Triangle -->
+            <polygon points="300,120 260,160 340,160" class="isa"/>
+            <text fill="currentColor" x="300" y="145" class="text" style="font-size:12px;">IS-A</text>
+
+            <!-- Car (Subclass) -->
+            <rect x="90" y="240" width="120" height="40" class="entity-q76"/>
+            <text fill="currentColor" x="150" y="260" class="text">CAR</text>
+
+            <!-- Truck (Subclass) -->
+            <rect x="390" y="240" width="120" height="40" class="entity-q76"/>
+            <text fill="currentColor" x="450" y="260" class="text">TRUCK</text>
+        </svg>
+        </div>
+        <div class="concept-heading">Specialization (Top-Down)</div>
+        <p>The process of defining a set of subclasses from an entity type based on distinguishing characteristics. <br><em>Example:</em> An <strong>Employee</strong> can be specialized into <strong>Hourly_Emp</strong> and <strong>Salaried_Emp</strong>.</p>
+        
+        <div class="concept-heading">Generalization (Bottom-Up)</div>
+        <p>The reverse of specialization. Extracting shared characteristics from multiple entity types to create a generalized superclass. <br><em>Example:</em> <strong>Car</strong> and <strong>Truck</strong> generalized into <strong>Vehicle</strong>.</p>
+        
+        <div class="concept-heading">Aggregation</div>
+        <p>Treating a relationship between entities as a single abstract entity, allowing relationships to participate in other relationships. <br><em>Example:</em> A <strong>Project</strong> and <strong>Employee</strong> have a <em>Works_On</em> relationship. A <strong>Manager</strong> manages the entire <em>Works_On</em> relationship, treating it as one aggregated entity.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q77" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q77. What is decomposition? Explain the concepts of lossless-join and dependency-preserving decomposition.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Decomposition</strong> is the process of breaking down a large, poorly-designed relation into two or more smaller relations to eliminate redundancy and anomalies.</p>
+        
+        <div class="concept-heading">Lossless-Join Decomposition</div>
+        <p>A decomposition of R into R1 and R2 is lossless if joining R1 and R2 back together using a Natural Join yields the exact original relation R, without generating spurious (fake) tuples.</p>
+        <p><em>Condition:</em> The common attributes must be a candidate key for at least one of the decomposed relations (i.e., <code>R1 &cap; R2 &rarr; R1</code> or <code>R1 &cap; R2 &rarr; R2</code>).</p>
+        
+        <div class="concept-heading">Dependency-Preserving Decomposition</div>
+        <p>A decomposition is dependency-preserving if all original functional dependencies can be checked and enforced using only the decomposed relations, without needing to join them back together.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q78" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q78. How is decomposition related to normalization? Explain with a small example.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Normalization</strong> uses <strong>Decomposition</strong> as its primary mechanism. When a relation violates a normal form, we decompose it into smaller relations that satisfy the normal form.</p>
+        
+        <div class="concept-heading">Example</div>
+        <p>Suppose a relation <code>R(EmpID, EmpName, DeptID, DeptName)</code> where <code>EmpID &rarr; EmpName, DeptID</code> and <code>DeptID &rarr; DeptName</code>.</p>
+        <ul>
+            <li>This violates 3NF due to the transitive dependency (<code>EmpID &rarr; DeptID &rarr; DeptName</code>).</li>
+            <li><strong>Normalization Process:</strong> We <em>decompose</em> R into two relations to remove the redundancy:
+                <br>1. <code>Employee(EmpID, EmpName, DeptID)</code>
+                <br>2. <code>Department(DeptID, DeptName)</code>
+            </li>
+        </ul>
+        <p>This decomposition is both lossless-join (because DeptID is a primary key in Department) and dependency-preserving.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q84" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q84. Write a query to find students who have not enrolled in any course so far.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Using LEFT JOIN</div>
+        <pre><code>SELECT s.sname 
+FROM Student s
+LEFT JOIN Enrollment e ON s.sid = e.sid
+WHERE e.cid IS NULL;</code></pre>
+        <div class="concept-heading">Using NOT EXISTS</div>
+        <pre><code>SELECT sname FROM Student s
+WHERE NOT EXISTS (
+    SELECT 1 FROM Enrollment e WHERE e.sid = s.sid
+);</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q85" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q85. Write a nested query to find the student(s) who scored the highest marks in the course 'DBMS'.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>Assuming <code>Enrollment(sid, cid, marks)</code>.</p>
+        <pre><code>SELECT s.sname, e.marks
+FROM Student s
+JOIN Enrollment e ON s.sid = e.sid
+JOIN Course c ON e.cid = c.cid
+WHERE c.cname = 'DBMS' 
+  AND e.marks = (
+      SELECT MAX(e2.marks) 
+      FROM Enrollment e2
+      JOIN Course c2 ON e2.cid = c2.cid
+      WHERE c2.cname = 'DBMS'
+  );</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q87" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q87. Write a relational algebra expression to retrieve the names of students enrolled in the course 'DBMS'.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Relational Algebra:</strong></p>
+        <p><code>&pi;<sub>sname</sub> ( Student &#x2A1D; Enrollment &#x2A1D; &sigma;<sub>cname='DBMS'</sub>(Course) )</code></p>
+        <p><em>Breakdown:</em></p>
+        <ol>
+            <li>Select only the course where cname is 'DBMS' (&sigma;).</li>
+            <li>Natural Join (&#x2A1D;) the result with Enrollment and Student.</li>
+            <li>Project (&pi;) only the student name (sname).</li>
+        </ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q88" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q88. Using the division operation of relational algebra, write an expression to find students who are enrolled in every course offered.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>The division operator (<code>&divide;</code>) is used specifically for queries involving "every" or "all".</p>
+        <p><strong>Expression:</strong></p>
+        <p><code>&pi;<sub>sid</sub>(Enrollment) &divide; &pi;<sub>cid</sub>(Course)</code></p>
+        <p>To get the student names, we natural join this result with the Student table:</p>
+        <p><code>&pi;<sub>sname</sub> ( Student &#x2A1D; (&pi;<sub>sid, cid</sub>(Enrollment) &divide; &pi;<sub>cid</sub>(Course)) )</code></p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q89" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q89. Write a correlated subquery to list students who have scored more than the average marks obtained in their respective course.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <pre><code>SELECT s.sname, e1.cid, e1.marks
+FROM Student s
+JOIN Enrollment e1 ON s.sid = e1.sid
+WHERE e1.marks &gt; (
+    SELECT AVG(e2.marks)
+    FROM Enrollment e2
+    WHERE e1.cid = e2.cid
+);</code></pre>
+        <p>The inner query recalculates the average marks dynamically for every row of the outer query, matching the <code>cid</code>.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q90" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q90. What is the use of CREATE TABLE, ALTER TABLE and DROP TABLE commands? Why are DDL statements said to be auto-committed?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>CREATE TABLE</strong> is used to create a new table in the database.</p><p><strong>ALTER TABLE</strong> is used to add, delete, or modify columns in an existing table.</p><p><strong>DROP TABLE</strong> is used to delete an existing table completely (including its structure and data).</p><p>DDL statements are <strong>auto-committed</strong> because they alter the database schema directly and cannot be rolled back in most RDBMS like MySQL and Oracle.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q97" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q97. Give the difference between DELETE, TRUNCATE and DROP commands.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>DELETE</strong> is a DML command used to remove specific rows based on a WHERE clause. It can be rolled back.</li>
+<li><strong>TRUNCATE</strong> is a DDL command that removes all rows from a table quickly by deallocating the pages. It cannot be rolled back and resets identity columns.</li>
+<li><strong>DROP</strong> is a DDL command that completely deletes the table structure and its data from the database.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q98" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q98. Explain the five constraints NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY and CHECK, giving an example of each.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>NOT NULL</strong>: Ensures a column cannot have a NULL value. <em>Ex: <code>Name VARCHAR(50) NOT NULL</code></em></p>
+<p><strong>UNIQUE</strong>: Ensures all values in a column are distinct. <em>Ex: <code>Email VARCHAR(50) UNIQUE</code></em></p>
+<p><strong>PRIMARY KEY</strong>: Uniquely identifies each record. It is NOT NULL + UNIQUE. <em>Ex: <code>ID INT PRIMARY KEY</code></em></p>
+<p><strong>FOREIGN KEY</strong>: Ensures referential integrity by linking to a primary key in another table. <em>Ex: <code>FOREIGN KEY (DeptID) REFERENCES Dept(ID)</code></em></p>
+<p><strong>CHECK</strong>: Ensures values in a column satisfy a specific condition. <em>Ex: <code>Age INT CHECK (Age &gt;= 18)</code></em></p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q101" data-unit="III" data-bloom="L3" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q101. Write a CREATE TABLE statement for Employee(Emp_ID, Name, Email, Dept_ID, Salary), where Emp_ID is the primary key, Name cannot be left blank and Email must be unique.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <pre><code>CREATE TABLE Employee (
+    Emp_ID INT PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL,
+    Email VARCHAR(50) UNIQUE,
+    Dept_ID INT,
+    Salary DECIMAL(10,2)
+);</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q102" data-unit="III" data-bloom="L3" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q102. Using ALTER TABLE, add a foreign key on Employee.Dept_ID referencing Department.Dept_ID.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <pre><code>ALTER TABLE Employee
+ADD CONSTRAINT fk_dept
+FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q105" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q105. Explain the numeric functions ROUND, TRUNCATE, CEIL, FLOOR, ABS, MOD, POWER and SQRT, giving an example of each.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>ROUND(n, d)</strong>: Rounds <em>n</em> to <em>d</em> decimal places. <em>ROUND(3.456, 2) &rarr; 3.46</em></li>
+<li><strong>TRUNCATE(n, d)</strong>: Cuts off <em>n</em> at <em>d</em> decimal places without rounding. <em>TRUNCATE(3.456, 2) &rarr; 3.45</em></li>
+<li><strong>CEIL(n)</strong>: Returns the smallest integer &ge; <em>n</em>. <em>CEIL(3.14) &rarr; 4</em></li>
+<li><strong>FLOOR(n)</strong>: Returns the largest integer &le; <em>n</em>. <em>FLOOR(3.8) &rarr; 3</em></li>
+<li><strong>ABS(n)</strong>: Returns the absolute (positive) value. <em>ABS(-5) &rarr; 5</em></li>
+<li><strong>MOD(x, y)</strong>: Returns the remainder of x/y. <em>MOD(10, 3) &rarr; 1</em></li>
+<li><strong>POWER(x, y)</strong>: Returns x raised to power y. <em>POWER(2, 3) &rarr; 8</em></li>
+<li><strong>SQRT(n)</strong>: Returns the square root. <em>SQRT(16) &rarr; 4</em></li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q110" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q110. Explain the date functions CURDATE, DATEDIFF, DATE_ADD/DATE_SUB and DATE_FORMAT, giving an example of each.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>CURDATE()</strong>: Returns the current system date. <em>Ex: <code>SELECT CURDATE();</code></em></li>
+<li><strong>DATEDIFF(date1, date2)</strong>: Returns the number of days between two dates. <em>Ex: <code>SELECT DATEDIFF('2023-10-10', '2023-10-01'); &rarr; 9</code></em></li>
+<li><strong>DATE_ADD(date, INTERVAL expr unit)</strong>: Adds a time interval to a date. <em>Ex: <code>SELECT DATE_ADD('2023-01-01', INTERVAL 5 DAY);</code></em></li>
+<li><strong>DATE_FORMAT(date, format)</strong>: Formats a date string. <em>Ex: <code>SELECT DATE_FORMAT(CURDATE(), '%Y-%m-%d');</code></em></li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q111" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q111. Explain the string functions CONCAT, UPPER/LOWER, LENGTH, SUBSTRING and TRIM/REPLACE, giving an example of each.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>CONCAT(s1, s2)</strong>: Joins two or more strings. <em>Ex: <code>CONCAT('Data', 'base') &rarr; 'Database'</code></em></li>
+<li><strong>UPPER(s) / LOWER(s)</strong>: Converts a string to all uppercase or lowercase. <em>Ex: <code>UPPER('sql') &rarr; 'SQL'</code></em></li>
+<li><strong>LENGTH(s)</strong>: Returns the number of characters in a string. <em>Ex: <code>LENGTH('DBMS') &rarr; 4</code></em></li>
+<li><strong>SUBSTRING(s, start, len)</strong>: Extracts a part of a string. <em>Ex: <code>SUBSTRING('Database', 1, 4) &rarr; 'Data'</code></em></li>
+<li><strong>TRIM(s)</strong>: Removes leading and trailing spaces. <em>Ex: <code>TRIM('  SQL  ') &rarr; 'SQL'</code></em></li>
+<li><strong>REPLACE(s, old, new)</strong>: Replaces all occurrences of a substring. <em>Ex: <code>REPLACE('DBMS', 'M', 'B') &rarr; 'DBBS'</code></em></li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q117" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q117. Explain UNION, UNION ALL, INTERSECT and MINUS/EXCEPT with an example of each. What condition must both the SELECT statements satisfy before these operators can be applied?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Set Operators:</strong></p>
+<ul>
+<li><strong>UNION</strong>: Combines results of two queries, removing duplicates.</li>
+<li><strong>UNION ALL</strong>: Combines results of two queries, keeping all duplicates.</li>
+<li><strong>INTERSECT</strong>: Returns only the rows that appear in both queries.</li>
+<li><strong>MINUS / EXCEPT</strong>: Returns rows from the first query that are not present in the second.</li>
+</ul>
+<p><strong>Condition for application (Union Compatibility):</strong></p>
+<ol>
+<li>Both SELECT statements must have the same number of columns.</li>
+<li>The corresponding columns must have compatible data types in the same order.</li>
+</ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q122" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q122. What is a transaction? Explain the ACID properties with the help of a bank transfer example.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 10.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>A <strong>transaction</strong> is a logical unit of work consisting of one or more SQL statements that must be executed entirely or not at all.</p>
+<p><strong>ACID Properties (Bank Transfer Example: A to B):</strong></p>
+<ul>
+<li><strong>Atomicity</strong>: "All or nothing." If money is deducted from A, it MUST be credited to B. If either fails, the entire transaction is rolled back.</li>
+<li><strong>Consistency</strong>: The database must remain in a valid state. The total sum of A + B's balances must be the same before and after the transaction.</li>
+<li><strong>Isolation</strong>: Concurrent transactions do not interfere with each other. If another transaction reads A's balance during the transfer, it will see the state either strictly before or strictly after, not midway.</li>
+<li><strong>Durability</strong>: Once the transaction is committed, the changes are permanent and will survive system crashes.</li>
+</ul>
+<div class="diagram-container">
+<svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
+    </marker>
+  </defs>
+
+  <rect x="250" y="20" width="100" height="40" rx="20" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="300" y="45" text-anchor="middle" fill="currentColor" font-weight="bold">Active</text>
+
+  <rect x="100" y="100" width="150" height="40" rx="20" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="175" y="125" text-anchor="middle" fill="currentColor" font-weight="bold">Partially Committed</text>
+
+  <rect x="360" y="100" width="100" height="40" rx="20" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="410" y="125" text-anchor="middle" fill="currentColor" font-weight="bold">Failed</text>
+
+  <rect x="125" y="180" width="100" height="40" rx="20" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="175" y="205" text-anchor="middle" fill="currentColor" font-weight="bold">Committed</text>
+
+  <rect x="360" y="180" width="100" height="40" rx="20" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="410" y="205" text-anchor="middle" fill="currentColor" font-weight="bold">Aborted</text>
+
+  <!-- Arrows -->
+  <line x1="280" y1="60" x2="220" y2="100" stroke="currentColor" stroke-width="2" marker-end="url(#arrow5)"/>
+  <line x1="320" y1="60" x2="380" y2="100" stroke="currentColor" stroke-width="2" marker-end="url(#arrow5)"/>
+  <line x1="175" y1="140" x2="175" y2="180" stroke="currentColor" stroke-width="2" marker-end="url(#arrow5)"/>
+  <line x1="250" y1="120" x2="360" y2="120" stroke="currentColor" stroke-width="2" marker-end="url(#arrow5)"/>
+  <line x1="410" y1="140" x2="410" y2="180" stroke="currentColor" stroke-width="2" marker-end="url(#arrow5)"/>
+</svg>
+<p class="concept-heading">Transaction State Diagram</p>
+</div>
+
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q123" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q123. Explain COMMIT, ROLLBACK and SAVEPOINT with a suitable example on the ACCOUNT table.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>COMMIT</strong>: Saves all changes made during the current transaction permanently.</li>
+<li><strong>ROLLBACK</strong>: Undoes all changes made during the current transaction, reverting to the last commit.</li>
+<li><strong>SAVEPOINT</strong>: Sets a marker within a transaction so you can roll back to that specific point without canceling the entire transaction.</li>
+</ul>
+<pre><code>START TRANSACTION;
+UPDATE ACCOUNT SET Balance = Balance - 500 WHERE Acc_No = 'A101';
+SAVEPOINT step1;
+UPDATE ACCOUNT SET Balance = Balance + 500 WHERE Acc_No = 'A102';
+-- If something goes wrong here:
+ROLLBACK TO step1; -- Undoes only the A102 update
+COMMIT; -- Saves the final state</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q128" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q128. In one or two lines each, state the purpose of a stored procedure, a sequence (AUTO_INCREMENT in MySQL), a cursor and a trigger.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>Stored Procedure</strong>: A pre-compiled collection of SQL statements saved in the database that can be executed as a single callable routine.</li>
+<li><strong>Sequence (AUTO_INCREMENT)</strong>: Automatically generates unique, sequential numeric values, typically used for primary keys.</li>
+<li><strong>Cursor</strong>: A database object used to retrieve and process rows one by one from a result set inside a stored procedure.</li>
+<li><strong>Trigger</strong>: A special type of stored procedure that automatically executes (fires) in response to specific DML events (INSERT, UPDATE, DELETE) on a table.</li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q129" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                        <summary>
+                            <h3>Q129. What is the difference between a BEFORE trigger and an AFTER trigger? What do the keywords NEW and OLD refer to inside a trigger?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>BEFORE Trigger</strong> executes before the triggering DML operation is applied (useful for validation/modification of incoming data). <strong>AFTER Trigger</strong> executes after the operation (useful for auditing or cascading changes to other tables).</p>
+<p><strong>NEW</strong> refers to the incoming data (being inserted or updated). <strong>OLD</strong> refers to the existing data in the table before the operation (being updated or deleted).</p>
+                        </div>
+                    </details>
+                    
+                </section>
+
+            <div id="no-results" style="display: none; text-align: center; padding: 3rem;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--primary-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <h3 style="color: var(--text-main); margin-bottom: 1rem;">No questions match your filters</h3>
+                <button class="btn btn-secondary" onclick="document.querySelectorAll('.filter-toggles input[type=checkbox]').forEach(cb => cb.checked = false); document.getElementById('search-box').value=''; document.getElementById('search-box').dispatchEvent(new Event('input'));">Clear Filters</button>
+            </div>
+
+        </div>
+        </main>
+    </div>
+
+    <script src="course-data.js"></script>
+    
+    <div id="stickyProgressWidget" style="position: fixed; bottom: 2rem; right: 2rem; background: var(--card-bg); padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 1px solid var(--border-color); z-index: 1000; display: flex; flex-direction: column; gap: 0.5rem; min-width: 250px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem;">Review Progress</span>
+            <span id="progressText" style="font-size: 0.85rem; font-weight: bold; color: var(--primary-teal);">0 / 0</span>
+        </div>
+        <div style="width: 100%; background: var(--bg-color); border-radius: 8px; height: 8px; overflow: hidden; margin-top: 0.2rem; border: 1px solid var(--border-color);">
+            <div id="progressBar" style="width: 0%; height: 100%; background: var(--primary-teal); transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);"></div>
+        </div>
+    </div>
+
+<script src="../../shared/app-utils.js"></script>
+
+    <!-- Floating Action Button (FAB) -->
+    <div class="fab-container">
+        <div class="fab-menu" id="fabMenu">
+            
+            
+<button class="fab-item" onclick="startFlashcards(); document.getElementById('fabMenu').classList.remove('open');" title="Study Mode">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                <span>Flashcards</span>
+            </button>
+<button class="fab-item" onclick="openModal('jumpModal'); document.getElementById('fabMenu').classList.remove('open');" title="Quick Jump">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                <span>Jump</span>
+            </button>
+            <button class="fab-item" onclick="openModal('filterModal'); document.getElementById('fabMenu').classList.remove('open');" title="Filters">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                <span>Filter</span>
+            </button>
+            <button class="fab-item" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); document.getElementById('fabMenu').classList.remove('open');" title="Back to Top">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                <span>Top</span>
+            </button>
+        </div>
+        <button class="fab-main" id="fabMainBtn" aria-label="Quick Actions">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+    </div>
+
+    
+    <!-- Standalone Ask AI FAB (Bottom Left) -->
+    <button class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI" aria-label="Ask AI">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2zM12 8c2.2 0 4 1.8 4 4v5c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-5c0-2.2 1.8-4 4-4zM6 12v5h2v-5H6zm10 0v5h2v-5h-2z"/></svg>
+    </button>
+
+    <!-- Ask AI Chat Widget -->
+    <div id="assistantModal" class="ask-ai-widget" style="display: none; flex-direction: column; background: rgba(15,15,20,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); overflow: hidden; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0; transform: translateY(20px); pointer-events: auto;">
+        <div class="modal-header" style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <h2 id="aiModalTitle" style="margin: 0; font-size: 1.25rem;">Ask AI <span style="font-size: 0.8em; font-weight: normal; color: var(--text-muted);">(Lite)</span></h2>
+                <label style="display: flex; align-items: center; gap: 6px; font-size: 0.85em; color: var(--text-muted); cursor: pointer; border: 1px solid rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; background: rgba(0,0,0,0.2);">
+                    <input type="checkbox" id="deepModeToggle" onchange="window.assistantLLMInstance && window.assistantLLMInstance.toggleDeepMode && window.assistantLLMInstance.toggleDeepMode(this.checked)" style="accent-color: var(--primary-teal);">
+                    Deep mode
+                </label>
+                
+            </div>
+            
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" aria-label="Close modal" onclick="closeAssistant()" style="background: none; border: none; color: var(--text-muted); cursor: pointer;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <div id="assistantMessages" class="modal-body" style="flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; scrollbar-width: thin;">
+            <div class="msg assistant" style="padding: 1rem; border-radius: 8px; background: rgba(255,255,255,0.05); border-left: 3px solid var(--primary-blue); line-height: 1.5;">
+                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.
+            </div>
+        </div>
+        <div class="assistant-input-area" style="padding: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <form id="assistantForm" onsubmit="event.preventDefault(); submitAssistantQuery();" style="display: flex; gap: 0.5rem;">
+                <input type="text" id="assistantInput" autocomplete="off" placeholder="Ask something..." style="flex: 1; padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: white;">
+                <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1rem;">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let assistantApp = null;
+let assistantCloseTimer = null;
+let isAssistantOpen = false;
+
+async function openAssistant() {
+    if (document.querySelector('.ask-ai-btn')?.getAttribute('data-dragged') === 'true') return;
+    
+    const modal = document.getElementById('assistantModal');
+    
+    // Toggle closed if already open
+    if (isAssistantOpen) {
+        closeAssistant();
+        return;
+    }
+
+    // Cancel any pending close timer from rapid clicks
+    if (assistantCloseTimer) {
+        clearTimeout(assistantCloseTimer);
+        assistantCloseTimer = null;
+    }
+
+    isAssistantOpen = true;
+    modal.style.display = 'flex';
+    
+    // Force DOM reflow so transition plays reliably
+    void modal.offsetHeight;
+    
+    modal.style.opacity = '1';
+    modal.style.transform = 'translateY(0)';
+    document.getElementById('assistantInput').focus();
+
+    if (!assistantApp) {
+                try {
+                    const { initAssistant } = await import('../../shared/assistant-ui.js');
+                    assistantApp = await initAssistant('dbms');
+                    if (!assistantApp) throw new Error("App init failed");
+                } catch (e) {
+                    const msgs = document.getElementById('assistantMessages');
+                    msgs.innerHTML = `<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>`;
+                }
+            }
+        }
+        function closeAssistant() {
+    const modal = document.getElementById('assistantModal');
+    isAssistantOpen = false;
+    
+    modal.style.opacity = '0';
+    modal.style.transform = 'translateY(20px)';
+    
+    if (assistantCloseTimer) clearTimeout(assistantCloseTimer);
+    assistantCloseTimer = setTimeout(() => {
+        modal.style.display = 'none';
+        assistantCloseTimer = null;
+    }, 300);
+}
+        function submitAssistantQuery(q) {
+            const input = document.getElementById('assistantInput');
+            const query = q || input.value.trim();
+            if (!query) return;
+            if (!assistantApp) {
+                const msgs = document.getElementById('assistantMessages');
+                msgs.innerHTML = `<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>`;
+                return;
+            }
+            input.value = '';
+            assistantApp.handleQuery(query);
+        }
+    </script>
+
+</body>
+</html>

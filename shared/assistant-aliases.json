@@ -1,0 +1,28 @@
+{
+  "aliases": {
+    "acid": ["atomicity", "consistency", "isolation", "durability"],
+    "3nf": ["third normal form"],
+    "2nf": ["second normal form"],
+    "1nf": ["first normal form"],
+    "bcnf": ["boyce codd normal form"],
+    "sjf": ["shortest job first"],
+    "fcfs": ["first come first serve"],
+    "rr": ["round robin"],
+    "oop": ["object oriented programming"],
+    "overloading": ["method overloading", "polymorphism", "compile time polymorphism"],
+    "overriding": ["method overriding", "polymorphism", "run time polymorphism"],
+    "dbms": ["database management system", "database"],
+    "os": ["operating system"],
+    "ml": ["machine learning"],
+    "daa": ["design and analysis of algorithms"],
+    "er": ["entity relationship"],
+    "sql": ["structured query language"],
+    "ddl": ["data definition language"],
+    "dml": ["data manipulation language"],
+    "dcl": ["data control language"],
+    "tcl": ["transaction control language"],
+    "deadlock": ["circular wait", "mutual exclusion", "hold and wait", "no preemption"],
+    "paging": ["virtual memory", "page fault", "page table"],
+    "normalization": ["normal forms", "anomalies", "functional dependency"]
+  }
+}

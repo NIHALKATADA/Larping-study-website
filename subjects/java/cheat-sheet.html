@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html data-theme="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Java Cheat Sheet</title>
+<link href="../../shared/design-system.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="glow-bg"></div>
+    <nav class="smart-topbar">
+        <div class="topbar-left">
+            <a href="../../index.html" class="btn btn-secondary sleek-back">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                <span class="desktop-title">Dashboard</span>
+            </a>
+            <span class="topbar-logo desktop-title">Revision Hub</span>
+        </div>
+        <div class="topbar-right">
+            <button onclick="downloadPDF()" class="btn btn-secondary" style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; padding: 0.4rem 0.8rem; background: rgba(255,255,255,0.1);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Save as PDF
+            </button>
+            <button id="themeToggleBtn" class="btn btn-secondary theme-toggle">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+                <span class="desktop-title">Theme</span>
+            </button>
+        </div>
+    </nav>
+
+<header class="banner">
+<h1>Java Programming</h1>
+<h2>Dense Revision Cheat Sheet</h2>
+<p class="scope-note">All Units | Scannable Reference | High-Yield Syntax &amp; Concepts</p>
+</header>
+<div class="layout-wrapper" style="display: block; max-width: 1400px; margin: 0 auto; padding: 2rem;">
+<div class="controls" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+<div>
+<strong>Quick Jump:</strong>
+<a href="#unit1" style="margin-right: 1rem;">Unit I</a>
+<a href="#unit2" style="margin-right: 1rem;">Unit II</a>
+<a href="#unit3" style="margin-right: 1rem;">Unit III</a>
+<a href="#unit4" style="margin-right: 1rem;">Unit IV</a>
+<a href="#unit5">Unit V</a>
+</div>
+<div>
+<a class="btn btn-secondary" href="../../index.html" style="margin-right: 1rem;">← Dashboard</a>
+<button class="btn btn-secondary" id="themeToggleBtn">Mode: Dark</button>
+</div>
+</div>
+
+
+<div style="display: grid; width: 100%;">
+    <div id="pureSkeleton">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div class="skel-line" style="height: 1.8rem; width: 250px; border-radius: 6px;"></div>
+            <div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
+        </div>
+        <div class="cheat-grid" style="margin-bottom: 3rem;">
+            
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div class="skel-line" style="height: 1.8rem; width: 200px; border-radius: 6px;"></div>
+            <div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
+        </div>
+        <div class="cheat-grid" style="margin-bottom: 3rem;">
+            
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+        </div>
+        </div>
+    </div>
+    <div id="realContentWrapper">
+<div class="unit-section" id="unit1">
+<h3>Unit I: Introduction &amp; Basics <span class="badge unit-1">CO1</span></h3>
+<div class="cheat-grid">
+<div class="cheat-card">
+<h4>Java Environment</h4>
+<ul>
+<li><strong>JDK (Java Development Kit):</strong> JRE + Dev Tools (javac, etc.)</li>
+<li><strong>JRE (Java Runtime Environment):</strong> JVM + Core Libraries</li>
+<li><strong>JVM (Java Virtual Machine):</strong> Executes Bytecode. Makes Java Platform-Independent (WORA).</li>
+</ul>
+</div><div class="cheat-card">
+<h4>Constructors &amp; Keywords</h4>
+<ul>
+<li><strong>Constructor:</strong> Special block, same name as class, no return type. Initializes objects.</li>
+<li><strong>this:</strong> Reference to current object. Used to resolve shadowing and chain constructors.</li>
+<li><strong>super:</strong> Reference to parent object. Invokes parent constructors/methods.</li>
+</ul>
+</div><div class="cheat-card">
+<h4>Multithreading</h4>
+<ul>
+<li><strong>Thread Class:</strong> <code>class MyThread extends Thread</code></li>
+<li><strong>Runnable Interface:</strong> <code>class MyRunnable implements Runnable</code></li>
+<li><strong>Lifecycle:</strong> New -&gt; Runnable -&gt; Running -&gt; Waiting/Blocked -&gt; Terminated</li>
+<li><strong>Synchronization:</strong> Prevents thread interference.</li>
+</ul>
+</div></div>
+</div>
+
+<div class="unit-section" id="unit2">
+<h3>Unit II: Core Mechanics <span class="badge unit-1">CO2</span></h3>
+<div class="cheat-grid">
+<div class="cheat-card">
+<h4>Data Types</h4>
+<table>
+<tr><th>Type</th><th>Size</th><th>Default</th></tr>
+<tr><td>byte</td><td>1 byte</td><td>0</td></tr>
+<tr><td>short</td><td>2 bytes</td><td>0</td></tr>
+<tr><td>int</td><td>4 bytes</td><td>0</td></tr>
+<tr><td>long</td><td>8 bytes</td><td>0L</td></tr>
+<tr><td>float</td><td>4 bytes</td><td>0.0f</td></tr>
+<tr><td>double</td><td>8 bytes</td><td>0.0d</td></tr>
+<tr><td>char</td><td>2 bytes</td><td>'\u0000'</td></tr>
+<tr><td>boolean</td><td>1 bit</td><td>false</td></tr>
+</table>
+</div><div class="cheat-card">
+<h4>Polymorphism Types</h4>
+<table>
+<tr><th>Compile-time</th><th>Run-time</th></tr>
+<tr><td>Method Overloading</td><td>Method Overriding</td></tr>
+<tr><td>Same method, different parameters</td><td>Same method signature, in subclass</td></tr>
+<tr><td>Static Binding</td><td>Dynamic Binding</td></tr>
+</table>
+</div><div class="cheat-card">
+<h4>Collections Framework (List)</h4>
+<ul>
+<li><strong>ArrayList:</strong> Dynamic array, fast random access, slow insertion/deletion.</li>
+<li><strong>LinkedList:</strong> Doubly linked list, fast insertion/deletion, slow access.</li>
+<li><strong>Vector:</strong> Legacy, synchronized (thread-safe) dynamic array.</li>
+</ul>
+</div></div>
+</div>
+
+<div class="unit-section" id="unit3">
+<h3>Unit III: Advanced Concepts <span class="badge unit-1">CO3</span></h3>
+<div class="cheat-grid">
+<div class="cheat-card">
+<h4>Memory Management</h4>
+<ul>
+<li><strong>Heap:</strong> Stores objects and instance variables. Globally accessible.</li>
+<li><strong>Stack:</strong> Stores local variables and object references. Thread-specific.</li>
+<li><strong>Garbage Collection:</strong> Automatically deletes unreferenced objects in the Heap.</li>
+</ul>
+</div><div class="cheat-card">
+<h4>Abstract Class vs Interface</h4>
+<table>
+<tr><th>Abstract Class</th><th>Interface</th></tr>
+<tr><td>Can have constructors</td><td>No constructors</td></tr>
+<tr><td>Can have instance variables</td><td>Only static final constants</td></tr>
+<tr><td>Single inheritance</td><td>Multiple inheritance</td></tr>
+<tr><td>extends keyword</td><td>implements keyword</td></tr>
+</table>
+</div><div class="cheat-card">
+<h4>Collections Framework (Set &amp; Map)</h4>
+<ul>
+<li><strong>HashSet:</strong> Unordered unique elements. Backed by HashMap.</li>
+<li><strong>TreeSet:</strong> Sorted unique elements.</li>
+<li><strong>HashMap:</strong> Key-value pairs. Keys must be unique. Unordered.</li>
+<li><strong>TreeMap:</strong> Sorted key-value pairs based on keys.</li>
+</ul>
+</div></div>
+</div>
+
+<div class="unit-section" id="unit4">
+<h3>Unit IV: Design Patterns &amp; Architectures <span class="badge unit-1">CO4</span></h3>
+<div class="cheat-grid">
+<div class="cheat-card">
+<h4>Access Modifiers</h4>
+<table>
+<tr><th>Modifier</th><th>Class</th><th>Pkg</th><th>Subclass</th><th>World</th></tr>
+<tr><td>private</td><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
+<tr><td>default</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
+<tr><td>protected</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+<tr><td>public</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+</table>
+</div><div class="cheat-card">
+<h4>Strings</h4>
+<ul>
+<li><strong>Immutable:</strong> Strings cannot be changed once created. Safe for threads.</li>
+<li><strong>String Pool:</strong> Special memory area for literals to save space.</li>
+<li><strong>== vs equals():</strong> `==` compares references. `.equals()` compares content.</li>
+<li><strong>StringBuilder/Buffer:</strong> Mutable sequence of characters.</li>
+</ul>
+</div><div class="cheat-card">
+<h4>Java 8+ Features</h4>
+<ul>
+<li><strong>Lambda Expressions:</strong> <code>(a, b) -&gt; a + b;</code></li>
+<li><strong>Streams API:</strong> Functional-style operations on streams of elements.</li>
+<li><strong>Optional:</strong> Container object to prevent NullPointerException.</li>
+<li><strong>Default Methods:</strong> Interfaces can have methods with bodies.</li>
+</ul>
+</div></div>
+</div>
+
+<div class="unit-section" id="unit5">
+<h3>Unit V: Modern Ecosystem <span class="badge unit-1">CO5</span></h3>
+<div class="cheat-grid">
+<div class="cheat-card">
+<h4>OOP Pillars</h4>
+<ul>
+<li><strong>Encapsulation:</strong> Data hiding using private variables and public getters/setters.</li>
+<li><strong>Abstraction:</strong> Hiding implementation details (Abstract Classes / Interfaces).</li>
+<li><strong>Inheritance:</strong> Reusing code from a parent class (IS-A relationship).</li>
+<li><strong>Polymorphism:</strong> One interface, multiple methods (Overloading / Overriding).</li>
+</ul>
+</div><div class="cheat-card">
+<h4>Exception Handling</h4>
+<pre><code>try {
+    // Risky code
+} catch (ExceptionType e) {
+    // Handle error
+} finally {
+    // Always executes
+}</code></pre>
+<ul>
+<li><strong>Checked:</strong> Compile-time exceptions (e.g., IOException).</li>
+<li><strong>Unchecked:</strong> Run-time exceptions (e.g., NullPointerException).</li>
+</ul>
+</div><div class="cheat-card">
+<h4>Type Casting</h4>
+<ul>
+<li><strong>Implicit (Widening):</strong> Small to large type. <code>int a = 10; double d = a;</code></li>
+<li><strong>Explicit (Narrowing):</strong> Large to small type. <code>double d = 10.5; int a = (int)d;</code></li>
+<li><strong>Upcasting:</strong> Subclass to Superclass (Automatic).</li>
+<li><strong>Downcasting:</strong> Superclass to Subclass (Requires cast).</li>
+</ul>
+</div></div>
+</div>
+</div>
+    </div>
+</div>
+<script src="../../shared/app-utils.js"></script>
+﻿    
+    <!-- Standalone Ask AI FAB (Bottom Left) -->
+    <button class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI" aria-label="Ask AI">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2zM12 8c2.2 0 4 1.8 4 4v5c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-5c0-2.2 1.8-4 4-4zM6 12v5h2v-5H6zm10 0v5h2v-5h-2z"/></svg>
+    </button>
+
+    <!-- Ask AI Chat Widget -->
+    <div id="assistantModal" class="ask-ai-widget" style="display: none; flex-direction: column; background: rgba(15,15,20,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); overflow: hidden; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0; transform: translateY(20px); pointer-events: auto;">
+        <div class="modal-header" style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <h2 id="aiModalTitle" style="margin: 0; font-size: 1.25rem;">Ask AI <span style="font-size: 0.8em; font-weight: normal; color: var(--text-muted);">(Lite)</span></h2>
+                <label style="display: flex; align-items: center; gap: 6px; font-size: 0.85em; color: var(--text-muted); cursor: pointer; border: 1px solid rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; background: rgba(0,0,0,0.2);">
+                    <input type="checkbox" id="deepModeToggle" onchange="window.assistantLLMInstance && window.assistantLLMInstance.toggleDeepMode ? window.assistantLLMInstance.toggleDeepMode(this.checked) : (this.checked = false, alert('Deep Mode not supported in pure Lite mode.'))" style="accent-color: var(--primary-teal);">
+                    Deep mode
+                </label>
+                
+            </div>
+            
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" aria-label="Close modal" onclick="closeAssistant()" style="background: none; border: none; color: var(--text-muted); cursor: pointer;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <div id="assistantMessages" class="modal-body" style="flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; scrollbar-width: thin;">
+            <div class="msg assistant" style="padding: 1rem; border-radius: 8px; background: rgba(255,255,255,0.05); border-left: 3px solid var(--primary-blue); line-height: 1.5;">
+                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.
+            </div>
+        </div>
+        <div class="assistant-input-area" style="padding: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <form id="assistantForm" onsubmit="event.preventDefault(); submitAssistantQuery();" style="display: flex; gap: 0.5rem;">
+                <input type="text" id="assistantInput" autocomplete="off" placeholder="Ask something..." style="flex: 1; padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: white;">
+                <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1rem;">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let assistantApp = null;
+        async function openAssistant() {
+            if (document.querySelector('.ask-ai-btn') && document.querySelector('.ask-ai-btn').getAttribute('data-dragged') === 'true') return;
+            const modal = document.getElementById('assistantModal');
+            if (modal.style.display === 'flex') {
+                closeAssistant();
+                return;
+            }
+            modal.style.display = 'flex';
+            // slight delay for transition
+            setTimeout(() => {
+                modal.style.opacity = '1';
+                modal.style.transform = 'translateY(0)';
+            }, 10);
+            document.getElementById('assistantInput').focus();
+            if (!assistantApp) {
+                try {
+                    const { initAssistant } = await import('../../shared/assistant-ui.js');
+                    assistantApp = await initAssistant('java');
+                    if (!assistantApp) throw new Error("App init failed");
+                } catch (e) {
+                    const msgs = document.getElementById('assistantMessages');
+                    msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
+                }
+            }
+        }
+        function closeAssistant() {
+            const modal = document.getElementById('assistantModal');
+            modal.style.opacity = '0';
+            modal.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+        function submitAssistantQuery(q) {
+            const input = document.getElementById('assistantInput');
+            const query = q || input.value.trim();
+            if (!query) return;
+            if (!assistantApp) {
+                const msgs = document.getElementById('assistantMessages');
+                msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
+                return;
+            }
+            input.value = '';
+            assistantApp.handleQuery(query);
+        }
+    </script>
+
+</body>
+
+</html>

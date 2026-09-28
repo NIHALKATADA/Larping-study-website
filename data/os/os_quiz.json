@@ -1,0 +1,287 @@
+[
+    {
+        "id": "d4f2b08e-de66-49df-baf9-17d440dd2224",
+        "type": "short_answer",
+        "question": "What OS concept is program in execution?",
+        "options": [],
+        "correct_answer": "Process",
+        "explanation": "Process is program in execution"
+    },
+    {
+        "id": "24b3a526-715b-48ef-87f1-fd560361f341",
+        "type": "short_answer",
+        "question": "What OS concept is lightweight process?",
+        "options": [],
+        "correct_answer": "Thread",
+        "explanation": "Thread is lightweight process"
+    },
+    {
+        "id": "784ca4be-6ebb-4209-b16a-f458190119c8",
+        "type": "short_answer",
+        "question": "What OS concept is saving and restoring process state?",
+        "options": [],
+        "correct_answer": "Context switch",
+        "explanation": "Context switch is saving and restoring process state"
+    },
+    {
+        "id": "d7e486d6-cf5e-4f5b-b5e2-67895db28092",
+        "type": "short_answer",
+        "question": "What OS concept is data structure storing process info?",
+        "options": [],
+        "correct_answer": "PCB",
+        "explanation": "PCB is data structure storing process info"
+    },
+    {
+        "id": "b76a2d05-2cfa-40cb-8e9b-ec47bbbd1d92",
+        "type": "mcq",
+        "question": "Which scheduling/sync mechanism represents: first come first served scheduling?",
+        "options": [
+            "FCFS",
+            "SJF",
+            "Round Robin",
+            "Priority Scheduling"
+        ],
+        "correct_answer": "FCFS",
+        "explanation": "FCFS is first come first served scheduling"
+    },
+    {
+        "id": "9377644c-addc-4f5f-828a-cc0c17bdf40b",
+        "type": "mcq",
+        "question": "Which scheduling/sync mechanism represents: shortest job first scheduling?",
+        "options": [
+            "FCFS",
+            "SJF",
+            "Round Robin",
+            "Priority Scheduling"
+        ],
+        "correct_answer": "SJF",
+        "explanation": "SJF is shortest job first scheduling"
+    },
+    {
+        "id": "1d31a636-bdbb-4974-afaf-ac6a3c984c30",
+        "type": "mcq",
+        "question": "Which scheduling/sync mechanism represents: time-sliced scheduling?",
+        "options": [
+            "FCFS",
+            "SJF",
+            "Round Robin",
+            "Priority Scheduling"
+        ],
+        "correct_answer": "Round Robin",
+        "explanation": "Round Robin is time-sliced scheduling"
+    },
+    {
+        "id": "a6355cce-a75e-4cf3-9420-c2893d399bdd",
+        "type": "mcq",
+        "question": "Which scheduling/sync mechanism represents: scheduling based on priority?",
+        "options": [
+            "FCFS",
+            "SJF",
+            "Round Robin",
+            "Priority Scheduling"
+        ],
+        "correct_answer": "Priority Scheduling",
+        "explanation": "Priority Scheduling is scheduling based on priority"
+    },
+    {
+        "id": "5c1ce97a-fbbd-4eea-bd73-7f88181474c9",
+        "type": "mcq",
+        "question": "Which scheduling/sync mechanism represents: processes assigned to one of several queues?",
+        "options": [
+            "FCFS",
+            "SJF",
+            "Round Robin",
+            "Priority Scheduling"
+        ],
+        "correct_answer": "Multilevel Queue",
+        "explanation": "Multilevel Queue is processes assigned to one of several queues"
+    },
+    {
+        "id": "abfd1ce0-8e60-4639-84c6-dbb246093c68",
+        "type": "short_answer",
+        "question": "What OS concept is circular wait for resources?",
+        "options": [],
+        "correct_answer": "Deadlock",
+        "explanation": "Deadlock is circular wait for resources"
+    },
+    {
+        "id": "48f9fad0-ecb5-4d59-bca8-90727f757170",
+        "type": "mcq",
+        "question": "Which scheduling/sync mechanism represents: binary semaphore for mutual exclusion?",
+        "options": [
+            "Mutex",
+            "Semaphore",
+            "Monitor",
+            "Spinlock"
+        ],
+        "correct_answer": "Mutex",
+        "explanation": "Mutex is binary semaphore for mutual exclusion"
+    },
+    {
+        "id": "b562db2e-78ef-4e2d-8d3f-42d26e1a41e1",
+        "type": "mcq",
+        "question": "Which scheduling/sync mechanism represents: integer variable for synchronization?",
+        "options": [
+            "Mutex",
+            "Semaphore",
+            "Monitor",
+            "Spinlock"
+        ],
+        "correct_answer": "Semaphore",
+        "explanation": "Semaphore is integer variable for synchronization"
+    },
+    {
+        "id": "1886895d-35ff-49e3-a49f-462e6687336c",
+        "type": "mcq",
+        "question": "Which scheduling/sync mechanism represents: high-level synchronization construct?",
+        "options": [
+            "Mutex",
+            "Semaphore",
+            "Monitor",
+            "Spinlock"
+        ],
+        "correct_answer": "Monitor",
+        "explanation": "Monitor is high-level synchronization construct"
+    },
+    {
+        "id": "a83ccbd0-59df-4f3e-a56a-426c4b070315",
+        "type": "mcq",
+        "question": "Which scheduling/sync mechanism represents: busy waiting lock?",
+        "options": [
+            "Mutex",
+            "Semaphore",
+            "Monitor",
+            "Spinlock"
+        ],
+        "correct_answer": "Spinlock",
+        "explanation": "Spinlock is busy waiting lock"
+    },
+    {
+        "id": "cb460cc7-d870-41e7-9e1a-8f0511d290de",
+        "type": "short_answer",
+        "question": "What OS concept is fixed size memory blocks?",
+        "options": [],
+        "correct_answer": "Paging",
+        "explanation": "Paging is fixed size memory blocks"
+    },
+    {
+        "id": "17b7bbdb-2c85-412c-8862-98fe64af2520",
+        "type": "short_answer",
+        "question": "What OS concept is variable size memory blocks?",
+        "options": [],
+        "correct_answer": "Segmentation",
+        "explanation": "Segmentation is variable size memory blocks"
+    },
+    {
+        "id": "7af2020f-8270-40e0-88d5-e85554fd4ca5",
+        "type": "short_answer",
+        "question": "What OS concept is illusion of large main memory?",
+        "options": [],
+        "correct_answer": "Virtual Memory",
+        "explanation": "Virtual Memory is illusion of large main memory"
+    },
+    {
+        "id": "f8e01fbe-5223-4550-9055-af39bccd54c6",
+        "type": "short_answer",
+        "question": "What OS concept is hardware cache for page table?",
+        "options": [],
+        "correct_answer": "TLB",
+        "explanation": "TLB is hardware cache for page table"
+    },
+    {
+        "id": "ee9b2932-4192-404b-80f6-5a312af0db3c",
+        "type": "short_answer",
+        "question": "What OS concept is accessing page not in memory?",
+        "options": [],
+        "correct_answer": "Page Fault",
+        "explanation": "Page Fault is accessing page not in memory"
+    },
+    {
+        "id": "5897db37-d1ce-43c6-962f-69bcc67ec3ab",
+        "type": "short_answer",
+        "question": "What OS concept is excessive paging activity?",
+        "options": [],
+        "correct_answer": "Thrashing",
+        "explanation": "Thrashing is excessive paging activity"
+    },
+    {
+        "id": "48bb054e-fff1-4c32-b6e1-1731931cf833",
+        "type": "code",
+        "question": "Write a system call to create new process.",
+        "options": [],
+        "correct_answer": "fork();",
+        "explanation": "fork() is used to create new process"
+    },
+    {
+        "id": "0521a73e-6d16-4731-9af4-bcdff02e0cd7",
+        "type": "code",
+        "question": "Write a system call to replace process image.",
+        "options": [],
+        "correct_answer": "exec();",
+        "explanation": "exec() is used to replace process image"
+    },
+    {
+        "id": "85fb57e5-7581-4f90-8a20-95ef7a6fff6d",
+        "type": "code",
+        "question": "Write a system call to wait for child process.",
+        "options": [],
+        "correct_answer": "wait();",
+        "explanation": "wait() is used to wait for child process"
+    },
+    {
+        "id": "418cb1ad-cfe8-4cb5-baf5-41e5d62b7d08",
+        "type": "code",
+        "question": "Write a system call to inter-process communication.",
+        "options": [],
+        "correct_answer": "pipe();",
+        "explanation": "pipe() is used to inter-process communication"
+    },
+    {
+        "id": "22c20756-259f-4463-87b9-795e6333ff0f",
+        "type": "code",
+        "question": "Write a system call to memory map files.",
+        "options": [],
+        "correct_answer": "mmap();",
+        "explanation": "mmap() is used to memory map files"
+    },
+    {
+        "id": "6ee2b969-5e67-48ce-95f5-e26e5ef87f94",
+        "type": "code",
+        "question": "Write a system call to change file permissions.",
+        "options": [],
+        "correct_answer": "chmod();",
+        "explanation": "chmod() is used to change file permissions"
+    },
+    {
+        "id": "30531a88-2d76-46a8-89c6-36f39c55663e",
+        "type": "code",
+        "question": "Write a system call to change file owner.",
+        "options": [],
+        "correct_answer": "chown();",
+        "explanation": "chown() is used to change file owner"
+    },
+    {
+        "id": "3ae76904-a717-4b29-94db-0214b42e8dd5",
+        "type": "code",
+        "question": "Write a system call to send signal to process.",
+        "options": [],
+        "correct_answer": "kill();",
+        "explanation": "kill() is used to send signal to process"
+    },
+    {
+        "id": "d6fdd01c-a1d8-4045-b7dd-1dd00b77ca19",
+        "type": "code",
+        "question": "Write a system call to handle process signal.",
+        "options": [],
+        "correct_answer": "signal();",
+        "explanation": "signal() is used to handle process signal"
+    },
+    {
+        "id": "56aecfde-3f2f-47c1-b6a4-a36cdf7e33b7",
+        "type": "code",
+        "question": "Write a system call to open a file descriptor.",
+        "options": [],
+        "correct_answer": "open();",
+        "explanation": "open() is used to open a file descriptor"
+    }
+]

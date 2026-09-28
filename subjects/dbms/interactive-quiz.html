@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta name="view-transition" content="same-origin">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../shared/design-system.css">
+    
+</head>
+<body data-subject="dbms" style="background:#030303;">
+    <div class="glow-bg"></div>
+
+<header class="smart-topbar">
+        <div class="topbar-left">
+            <a href="../../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: var(--text-main);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                <span style="font-weight: 600; font-size: 1.1rem; letter-spacing: 0.5px;">Dashboard</span>
+            </a>
+        </div>
+        <div class="topbar-right">
+            <button onclick="downloadPDF()" class="btn btn-secondary" style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; padding: 0.4rem 0.8rem; background: rgba(255,255,255,0.1);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Save as PDF
+            </button>
+        </div>
+    </header>
+
+    <div class="quiz-container" style="display: grid;">
+
+<!-- ROCK SOLID SKELETON -->
+
+<div id="pureSkeleton">
+    <div style="text-align: center; margin-bottom: 3rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+        <div class="skel-line" style="height: 2.2rem; width: 280px; border-radius: 8px;"></div>
+        <div class="skel-line" style="height: 1.2rem; width: 320px; border-radius: 6px;"></div>
+    </div>
+    <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 2.5rem; margin-bottom: 2rem;">
+        <div class="skel-line" style="height: 1.5rem; width: 85%; margin-bottom: 0.8rem; border-radius: 6px;"></div>
+        <div class="skel-line" style="height: 1.5rem; width: 50%; margin-bottom: 2.5rem; border-radius: 6px;"></div>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2.5rem;">
+            <div class="skel-line" style="height: 3.5rem; width: 100%; border-radius: 8px;"></div><div class="skel-line" style="height: 3.5rem; width: 100%; border-radius: 8px;"></div><div class="skel-line" style="height: 3.5rem; width: 100%; border-radius: 8px;"></div>
+        </div>
+        <div style="display: flex; gap: 1rem;"><div class="skel-line" style="height: 3.5rem; flex: 2; border-radius: 8px;"></div><div class="skel-line" style="height: 3.5rem; flex: 1; border-radius: 8px;"></div></div>
+    </div>
+</div>
+<div id="realContentWrapper">
+
+
+
+<div style="text-align: center; margin-bottom: 3rem;">
+            <h1 style="background: linear-gradient(to right, var(--subject-color), #fff); -webkit-background-clip: text; color: transparent;">Knowledge Verification</h1>
+            <p style="color: var(--text-muted);">Answer the following questions. Your inputs will be verified.</p>
+        </div>
+
+        <div id="quiz-list">
+            
+            <div class="quiz-card" data-correct="1NF" data-type="mcq">
+                <h3>Which concept is described by: atomic domains?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">1NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">2NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">3NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">BCNF</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">1NF is defined by atomic domains</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="2NF" data-type="mcq">
+                <h3>Which concept is described by: no partial dependencies?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">1NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">2NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">3NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">BCNF</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">2NF is defined by no partial dependencies</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="3NF" data-type="mcq">
+                <h3>Which concept is described by: no transitive dependencies?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">1NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">2NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">3NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">BCNF</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">3NF is defined by no transitive dependencies</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="BCNF" data-type="mcq">
+                <h3>Which concept is described by: every determinant is a candidate key?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">1NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">2NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">3NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">BCNF</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">BCNF is defined by every determinant is a candidate key</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="4NF" data-type="mcq">
+                <h3>Which concept is described by: no multivalued dependencies?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">1NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">2NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">3NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">BCNF</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">4NF is defined by no multivalued dependencies</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="5NF" data-type="mcq">
+                <h3>Which concept is described by: no join dependencies?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">1NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">2NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">3NF</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">BCNF</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">5NF is defined by no join dependencies</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Atomicity" data-type="short_answer">
+                <h3>What term means: all or nothing execution?</h3>
+                
+                
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Atomicity is all or nothing execution</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Consistency" data-type="short_answer">
+                <h3>What term means: database remains in valid state?</h3>
+                
+                
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Consistency is database remains in valid state</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Isolation" data-type="short_answer">
+                <h3>What term means: concurrent transactions do not interfere?</h3>
+                
+                
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Isolation is concurrent transactions do not interfere</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Durability" data-type="short_answer">
+                <h3>What term means: committed data is permanent?</h3>
+                
+                
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Durability is committed data is permanent</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Shared lock" data-type="mcq">
+                <h3>Which concept is described by: allows concurrent reads?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Shared lock</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Exclusive lock</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Two-phase locking</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Timestamp ordering</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Shared lock is defined by allows concurrent reads</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Exclusive lock" data-type="mcq">
+                <h3>Which concept is described by: prevents concurrent reads and writes?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Shared lock</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Exclusive lock</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Two-phase locking</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Timestamp ordering</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Exclusive lock is defined by prevents concurrent reads and writes</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Two-phase locking" data-type="mcq">
+                <h3>Which concept is described by: guarantees serializability?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Shared lock</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Exclusive lock</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Two-phase locking</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Timestamp ordering</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Two-phase locking is defined by guarantees serializability</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Timestamp ordering" data-type="mcq">
+                <h3>Which concept is described by: uses timestamps to determine transaction order?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Shared lock</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Exclusive lock</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Two-phase locking</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Timestamp ordering</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Timestamp ordering is defined by uses timestamps to determine transaction order</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Write-ahead logging" data-type="mcq">
+                <h3>Which concept is described by: logs changes before writing to disk?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Clustered index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Non-clustered index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Hash index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">B-tree</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Write-ahead logging is defined by logs changes before writing to disk</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="B-tree" data-type="short_answer">
+                <h3>What term means: balanced tree for indexing?</h3>
+                
+                
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">B-tree is balanced tree for indexing</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="B+ tree" data-type="short_answer">
+                <h3>What term means: all values are at leaf level?</h3>
+                
+                
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">B+ tree is all values are at leaf level</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Hash index" data-type="short_answer">
+                <h3>What term means: O(1) lookups for equality predicates?</h3>
+                
+                
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Hash index is O(1) lookups for equality predicates</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Clustered index" data-type="mcq">
+                <h3>Which concept is described by: determines physical order of data?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Clustered index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Non-clustered index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Hash index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">B-tree</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Clustered index is defined by determines physical order of data</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Non-clustered index" data-type="mcq">
+                <h3>Which concept is described by: has a separate structure from data rows?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Clustered index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Non-clustered index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Hash index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">B-tree</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Non-clustered index is defined by has a separate structure from data rows</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="SELECT ...;" data-type="code">
+                <h3>Write a SQL statement to query data.</h3>
+                
+                
+                <textarea class="code-input" placeholder="Type your code here..."></textarea>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">SELECT is used to query data</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="INSERT ...;" data-type="code">
+                <h3>Write a SQL statement to add rows.</h3>
+                
+                
+                <textarea class="code-input" placeholder="Type your code here..."></textarea>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">INSERT is used to add rows</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="UPDATE ...;" data-type="code">
+                <h3>Write a SQL statement to modify rows.</h3>
+                
+                
+                <textarea class="code-input" placeholder="Type your code here..."></textarea>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">UPDATE is used to modify rows</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="DELETE ...;" data-type="code">
+                <h3>Write a SQL statement to remove rows.</h3>
+                
+                
+                <textarea class="code-input" placeholder="Type your code here..."></textarea>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">DELETE is used to remove rows</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="CREATE ...;" data-type="code">
+                <h3>Write a SQL statement to make a new table.</h3>
+                
+                
+                <textarea class="code-input" placeholder="Type your code here..."></textarea>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">CREATE is used to make a new table</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="DROP ...;" data-type="code">
+                <h3>Write a SQL statement to remove a table.</h3>
+                
+                
+                <textarea class="code-input" placeholder="Type your code here..."></textarea>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">DROP is used to remove a table</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="ALTER ...;" data-type="code">
+                <h3>Write a SQL statement to change table schema.</h3>
+                
+                
+                <textarea class="code-input" placeholder="Type your code here..."></textarea>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">ALTER is used to change table schema</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="TRUNCATE ...;" data-type="code">
+                <h3>Write a SQL statement to empty table without logging individual row deletes.</h3>
+                
+                
+                <textarea class="code-input" placeholder="Type your code here..."></textarea>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">TRUNCATE is used to empty table without logging individual row deletes</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="GRANT ...;" data-type="code">
+                <h3>Write a SQL statement to give privileges.</h3>
+                
+                
+                <textarea class="code-input" placeholder="Type your code here..."></textarea>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">GRANT is used to give privileges</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="REVOKE ...;" data-type="code">
+                <h3>Write a SQL statement to remove privileges.</h3>
+                
+                
+                <textarea class="code-input" placeholder="Type your code here..."></textarea>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">REVOKE is used to remove privileges</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div id="final-score-container" style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+            <h2 id="final-score-display">Score: 0 / 30</h2>
+            <button class="btn btn-primary" style="margin-top: 1rem;" onclick="location.reload()">Restart Quiz</button>
+        </div>
+    </div>
+
+            
+    <script src="../../shared/app-utils.js"></script>
+    <script src="../../shared/quiz-logic.js"></script>
+﻿    
+    <!-- Standalone Ask AI FAB (Bottom Left) -->
+    <button class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI" aria-label="Ask AI">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2zM12 8c2.2 0 4 1.8 4 4v5c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-5c0-2.2 1.8-4 4-4zM6 12v5h2v-5H6zm10 0v5h2v-5h-2z"/></svg>
+    </button>
+
+    <!-- Ask AI Chat Widget -->
+    <div id="assistantModal" class="ask-ai-widget" style="display: none; flex-direction: column; background: rgba(15,15,20,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); overflow: hidden; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0; transform: translateY(20px); pointer-events: auto;">
+        <div class="modal-header" style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <h2 id="aiModalTitle" style="margin: 0; font-size: 1.25rem;">Ask AI <span style="font-size: 0.8em; font-weight: normal; color: var(--text-muted);">(Lite)</span></h2>
+                <label style="display: flex; align-items: center; gap: 6px; font-size: 0.85em; color: var(--text-muted); cursor: pointer; border: 1px solid rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; background: rgba(0,0,0,0.2);">
+                    <input type="checkbox" id="deepModeToggle" onchange="window.assistantLLMInstance && window.assistantLLMInstance.toggleDeepMode && window.assistantLLMInstance.toggleDeepMode(this.checked)" style="accent-color: var(--primary-teal);">
+                    Deep mode
+                </label>
+                
+            </div>
+            
+            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+            </button><button class="close-modal" aria-label="Close modal" onclick="closeAssistant()" style="background: none; border: none; color: var(--text-muted); cursor: pointer;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <div id="assistantMessages" class="modal-body" style="flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; scrollbar-width: thin;">
+            <div class="msg assistant" style="padding: 1rem; border-radius: 8px; background: rgba(255,255,255,0.05); border-left: 3px solid var(--primary-blue); line-height: 1.5;">
+                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.
+            </div>
+        </div>
+        <div class="assistant-input-area" style="padding: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <form id="assistantForm" onsubmit="event.preventDefault(); submitAssistantQuery();" style="display: flex; gap: 0.5rem;">
+                <input type="text" id="assistantInput" autocomplete="off" placeholder="Ask something..." style="flex: 1; padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: white;">
+                <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1rem;">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let assistantApp = null;
+let assistantCloseTimer = null;
+let isAssistantOpen = false;
+
+async function openAssistant() {
+    if (document.querySelector('.ask-ai-btn')?.getAttribute('data-dragged') === 'true') return;
+    
+    const modal = document.getElementById('assistantModal');
+    
+    // Toggle closed if already open
+    if (isAssistantOpen) {
+        closeAssistant();
+        return;
+    }
+
+    // Cancel any pending close timer from rapid clicks
+    if (assistantCloseTimer) {
+        clearTimeout(assistantCloseTimer);
+        assistantCloseTimer = null;
+    }
+
+    isAssistantOpen = true;
+    modal.style.display = 'flex';
+    
+    // Force DOM reflow so transition plays reliably
+    void modal.offsetHeight;
+    
+    modal.style.opacity = '1';
+    modal.style.transform = 'translateY(0)';
+    document.getElementById('assistantInput').focus();
+
+    if (!assistantApp) {
+                try {
+                    const { initAssistant } = await import('../../shared/assistant-ui.js');
+                    assistantApp = await initAssistant('dbms');
+                    if (!assistantApp) throw new Error("App init failed");
+                } catch (e) {
+                    const msgs = document.getElementById('assistantMessages');
+                    msgs.innerHTML = `<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>`;
+                }
+            }
+        }
+        function closeAssistant() {
+    const modal = document.getElementById('assistantModal');
+    isAssistantOpen = false;
+    
+    modal.style.opacity = '0';
+    modal.style.transform = 'translateY(20px)';
+    
+    if (assistantCloseTimer) clearTimeout(assistantCloseTimer);
+    assistantCloseTimer = setTimeout(() => {
+        modal.style.display = 'none';
+        assistantCloseTimer = null;
+    }, 300);
+}
+        function submitAssistantQuery(q) {
+            const input = document.getElementById('assistantInput');
+            const query = q || input.value.trim();
+            if (!query) return;
+            if (!assistantApp) {
+                const msgs = document.getElementById('assistantMessages');
+                msgs.innerHTML = `<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>`;
+                return;
+            }
+            input.value = '';
+            assistantApp.handleQuery(query);
+        }
+    </script>
+
+</body>
+
+</html>

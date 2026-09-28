@@ -1,0 +1,277 @@
+[
+    {
+        "id": "3bc57152-55c6-4476-b884-9da111f72491",
+        "type": "short_answer",
+        "question": "What ML term means: learning from labeled data?",
+        "options": [],
+        "correct_answer": "Supervised Learning",
+        "explanation": "Supervised Learning refers to learning from labeled data"
+    },
+    {
+        "id": "40fb8757-7205-4865-afb3-dac6a4b1862d",
+        "type": "short_answer",
+        "question": "What ML term means: learning from unlabeled data?",
+        "options": [],
+        "correct_answer": "Unsupervised Learning",
+        "explanation": "Unsupervised Learning refers to learning from unlabeled data"
+    },
+    {
+        "id": "daedd2d7-4c41-4df3-9077-52862e0af3c4",
+        "type": "short_answer",
+        "question": "What ML term means: learning via rewards and punishments?",
+        "options": [],
+        "correct_answer": "Reinforcement Learning",
+        "explanation": "Reinforcement Learning refers to learning via rewards and punishments"
+    },
+    {
+        "id": "b2c9325d-d513-4f49-a6dc-6b500029dfae",
+        "type": "mcq",
+        "question": "Which algorithm is best described as: predict continuous output?",
+        "options": [
+            "Linear Regression",
+            "Logistic Regression",
+            "Decision Tree",
+            "Random Forest"
+        ],
+        "correct_answer": "Linear Regression",
+        "explanation": "Linear Regression is predict continuous output"
+    },
+    {
+        "id": "08d0c9c3-c732-4af8-b7f7-05745c9b5b0b",
+        "type": "mcq",
+        "question": "Which algorithm is best described as: predict probability of binary outcome?",
+        "options": [
+            "Linear Regression",
+            "Logistic Regression",
+            "Decision Tree",
+            "Random Forest"
+        ],
+        "correct_answer": "Logistic Regression",
+        "explanation": "Logistic Regression is predict probability of binary outcome"
+    },
+    {
+        "id": "a6eec0fd-dc75-4d2e-b32a-ba05fa069cc6",
+        "type": "mcq",
+        "question": "Which algorithm is best described as: tree-like model of decisions?",
+        "options": [
+            "Linear Regression",
+            "Logistic Regression",
+            "Decision Tree",
+            "Random Forest"
+        ],
+        "correct_answer": "Decision Tree",
+        "explanation": "Decision Tree is tree-like model of decisions"
+    },
+    {
+        "id": "aa05162b-3890-42ef-8026-34045dea1a3d",
+        "type": "mcq",
+        "question": "Which algorithm is best described as: ensemble of decision trees?",
+        "options": [
+            "Linear Regression",
+            "Logistic Regression",
+            "Decision Tree",
+            "Random Forest"
+        ],
+        "correct_answer": "Random Forest",
+        "explanation": "Random Forest is ensemble of decision trees"
+    },
+    {
+        "id": "4a61a1af-034f-43cd-b532-5ab97d57f21b",
+        "type": "mcq",
+        "question": "Which algorithm is best described as: finds optimal hyperplane?",
+        "options": [
+            "SVM",
+            "K-Means",
+            "PCA",
+            "Gradient Boosting"
+        ],
+        "correct_answer": "SVM",
+        "explanation": "SVM is finds optimal hyperplane"
+    },
+    {
+        "id": "ee243b4e-7457-486e-a649-0e592cebe8dd",
+        "type": "mcq",
+        "question": "Which algorithm is best described as: clustering algorithm?",
+        "options": [
+            "SVM",
+            "K-Means",
+            "PCA",
+            "Gradient Boosting"
+        ],
+        "correct_answer": "K-Means",
+        "explanation": "K-Means is clustering algorithm"
+    },
+    {
+        "id": "24c11124-5a24-4b54-95b2-34281dcc5d87",
+        "type": "mcq",
+        "question": "Which algorithm is best described as: dimensionality reduction technique?",
+        "options": [
+            "SVM",
+            "K-Means",
+            "PCA",
+            "Gradient Boosting"
+        ],
+        "correct_answer": "PCA",
+        "explanation": "PCA is dimensionality reduction technique"
+    },
+    {
+        "id": "232f9be3-39eb-43dd-8118-1fa3e9aebe0a",
+        "type": "short_answer",
+        "question": "What ML term means: model learns noise in training data?",
+        "options": [],
+        "correct_answer": "Overfitting",
+        "explanation": "Overfitting refers to model learns noise in training data"
+    },
+    {
+        "id": "662f9d7e-a17a-45de-b19a-0ceab0e49cf9",
+        "type": "short_answer",
+        "question": "What ML term means: model too simple to capture patterns?",
+        "options": [],
+        "correct_answer": "Underfitting",
+        "explanation": "Underfitting refers to model too simple to capture patterns"
+    },
+    {
+        "id": "aaedcd5f-eb1c-4a15-a4d4-e73c3da8df0a",
+        "type": "short_answer",
+        "question": "What ML term means: assessing model generalizability?",
+        "options": [],
+        "correct_answer": "Cross-Validation",
+        "explanation": "Cross-Validation refers to assessing model generalizability"
+    },
+    {
+        "id": "e226e205-48e5-4c52-8dcd-643946e399ec",
+        "type": "short_answer",
+        "question": "What ML term means: adding penalty to prevent overfitting?",
+        "options": [],
+        "correct_answer": "Regularization",
+        "explanation": "Regularization refers to adding penalty to prevent overfitting"
+    },
+    {
+        "id": "40b3e44b-eb63-4d40-a6ba-bdd531563a42",
+        "type": "short_answer",
+        "question": "What ML term means: Lasso, encourages sparsity?",
+        "options": [],
+        "correct_answer": "L1 Regularization",
+        "explanation": "L1 Regularization refers to Lasso, encourages sparsity"
+    },
+    {
+        "id": "624c07a2-8f36-48ff-8b58-4866201dd61e",
+        "type": "short_answer",
+        "question": "What ML term means: Ridge, penalizes large weights?",
+        "options": [],
+        "correct_answer": "L2 Regularization",
+        "explanation": "L2 Regularization refers to Ridge, penalizes large weights"
+    },
+    {
+        "id": "2e4839b2-9d3e-46aa-ae70-9f42384f49f0",
+        "type": "short_answer",
+        "question": "What ML term means: true positives / predicted positives?",
+        "options": [],
+        "correct_answer": "Precision",
+        "explanation": "Precision refers to true positives / predicted positives"
+    },
+    {
+        "id": "76785ac8-4364-4a71-b6e3-49c003c11145",
+        "type": "short_answer",
+        "question": "What ML term means: true positives / actual positives?",
+        "options": [],
+        "correct_answer": "Recall",
+        "explanation": "Recall refers to true positives / actual positives"
+    },
+    {
+        "id": "9f4e763d-fc9d-4b92-b79e-cd84d425c1b8",
+        "type": "short_answer",
+        "question": "What ML term means: harmonic mean of precision and recall?",
+        "options": [],
+        "correct_answer": "F1 Score",
+        "explanation": "F1 Score refers to harmonic mean of precision and recall"
+    },
+    {
+        "id": "cf08e660-ae83-4147-970e-d94b7e7bfe0a",
+        "type": "short_answer",
+        "question": "What ML term means: area under receiver operating characteristic?",
+        "options": [],
+        "correct_answer": "ROC AUC",
+        "explanation": "ROC AUC refers to area under receiver operating characteristic"
+    },
+    {
+        "id": "bc90024b-e3b5-4d74-8280-6817f016579b",
+        "type": "code",
+        "question": "Write Python code using scikit-learn for: import scikit-learn.",
+        "options": [],
+        "correct_answer": "import sklearn...",
+        "explanation": "import sklearn is used for import scikit-learn"
+    },
+    {
+        "id": "586fe4dd-2342-4fe4-a947-ced9a54235cb",
+        "type": "code",
+        "question": "Write Python code using scikit-learn for: train a model.",
+        "options": [],
+        "correct_answer": "fit()...",
+        "explanation": "fit() is used for train a model"
+    },
+    {
+        "id": "d866054b-fcb4-49a7-babd-03a8d60f0e52",
+        "type": "code",
+        "question": "Write Python code using scikit-learn for: make predictions.",
+        "options": [],
+        "correct_answer": "predict()...",
+        "explanation": "predict() is used for make predictions"
+    },
+    {
+        "id": "6c54dd30-cb41-4e02-b88f-8b3ae6913f2d",
+        "type": "code",
+        "question": "Write Python code using scikit-learn for: split data.",
+        "options": [],
+        "correct_answer": "train_test_split...",
+        "explanation": "train_test_split is used for split data"
+    },
+    {
+        "id": "44a8a57c-d42f-4d3a-8bd1-37d7d7960456",
+        "type": "code",
+        "question": "Write Python code using scikit-learn for: standardize features.",
+        "options": [],
+        "correct_answer": "StandardScaler...",
+        "explanation": "StandardScaler is used for standardize features"
+    },
+    {
+        "id": "fdb17266-61ce-4e74-8fc9-494a7b8dce06",
+        "type": "code",
+        "question": "Write Python code using scikit-learn for: scale to range.",
+        "options": [],
+        "correct_answer": "MinMaxScaler...",
+        "explanation": "MinMaxScaler is used for scale to range"
+    },
+    {
+        "id": "534f23a8-03a2-42e4-8c8e-ba592a26d847",
+        "type": "code",
+        "question": "Write Python code using scikit-learn for: hyperparameter tuning.",
+        "options": [],
+        "correct_answer": "GridSearchCV...",
+        "explanation": "GridSearchCV is used for hyperparameter tuning"
+    },
+    {
+        "id": "46246618-90ea-4c44-aba3-8f7fb99a3507",
+        "type": "code",
+        "question": "Write Python code using scikit-learn for: chain transformations and estimator.",
+        "options": [],
+        "correct_answer": "Pipeline...",
+        "explanation": "Pipeline is used for chain transformations and estimator"
+    },
+    {
+        "id": "64b82200-b1db-423c-9325-fc3d7c0ae101",
+        "type": "code",
+        "question": "Write Python code using scikit-learn for: KNN implementation.",
+        "options": [],
+        "correct_answer": "KNeighborsClassifier...",
+        "explanation": "KNeighborsClassifier is used for KNN implementation"
+    },
+    {
+        "id": "07e9d1f7-7d97-465f-a50e-8589ca2010ea",
+        "type": "code",
+        "question": "Write Python code using scikit-learn for: neural network implementation.",
+        "options": [],
+        "correct_answer": "MLPClassifier...",
+        "explanation": "MLPClassifier is used for neural network implementation"
+    }
+]
