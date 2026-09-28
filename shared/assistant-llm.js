@@ -45,6 +45,18 @@ export class AssistantLLM extends AssistantCore {
     _updateTitle() {
         const titleSpan = document.querySelector('#aiModalTitle span');
         const sel = document.getElementById('aiModeSelect');
+        
+        let activeModel = this.isDeepMode ? "Qwen 2.5 27B (Cloud API)" : 
+                         (this.isSmartMode ? (this.modelId || "Llama (Local WebGPU)") : "Offline Search (No AI)");
+                         
+        const msgsContainer = document.getElementById('assistantMessages');
+        if (msgsContainer) {
+            const firstMsg = msgsContainer.firstElementChild;
+            if (firstMsg && firstMsg.classList.contains('assistant') && firstMsg.innerText.includes("Hi! I'm your study assistant.")) {
+                firstMsg.innerHTML = `Hi! I'm your study assistant. I am currently powered by <strong>${activeModel}</strong>. Ask me to find questions, summarize concepts, or recommend what to revise next.`;
+            }
+        }
+
         if (titleSpan) {
             if (this.isDeepMode) {
                 titleSpan.textContent = "(Deep Mode)";
