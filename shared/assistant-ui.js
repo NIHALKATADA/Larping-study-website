@@ -267,5 +267,6 @@ export async function initAssistant(subjectId) {
         if (sel) sel.value = 'deep';
     }
     
+    core.ui = ui;
     return ui;
 }
