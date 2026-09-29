@@ -30,53 +30,25 @@ def normalize_unit(unit):
 
 def clean_html(html_str):
     if not html_str: return ""
-    html_str = re.sub(r'<script[^>]*>.*?</script>', '', html_str, flags=re.IGNORECASE | re.DOTALL)
-    html_str = re.sub(r'<style[^>]*>.*?</style>', '', html_str, flags=re.IGNORECASE | re.DOTALL)
-    # Strip .ask-ai-widget by finding its start and matching nested divs
-    start_idx = html_str.find('ask-ai-widget')
-    if start_idx != -1:
-        div_start = html_str.rfind('<div', 0, start_idx)
-        if div_start != -1:
-            depth = 0
-            end_idx = div_start
-            i = div_start
-            while i < len(html_str):
-                if html_str.startswith('<div', i):
-                    depth += 1
-                    i += 4
-                elif html_str.startswith('</div', i):
-                    depth -= 1
-                    i += 5
-                    if depth == 0:
-                        end_idx = i + 1  # includes '>'
-                        # Need to find the closing '>'
-                        closing = html_str.find('>', end_idx - 1)
-                        if closing != -1:
-                            end_idx = closing + 1
-                        break
-                else:
-                    i += 1
-            if depth == 0 and end_idx > div_start:
-                html_str = html_str[:div_start] + html_str[end_idx:]
-
-    html_str = re.sub(r'<button[^>]*class="[^"]*ask-ai-btn[^"]*"[^>]*>.*?</button>', '', html_str, flags=re.IGNORECASE | re.DOTALL)
-    html_str = re.sub(r'<svg[^>]*>.*?</svg>', '', html_str, flags=re.IGNORECASE | re.DOTALL)
-    # preserve code block contents
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(html_str, "html.parser")
+    for tag in soup(["script", "style", "svg"]):
+        tag.extract()
+    for el in soup.select(".ask-ai-widget, .ask-ai-btn, .fab-main, #assistantModal"):
+        el.extract()
+    
     code_blocks = []
-    def save_code(match):
-        code_blocks.append(match.group(1))
-        return f"__CODE_BLOCK_{len(code_blocks)-1}__"
-    html_str = re.sub(r'<pre><code>(.*?)</code></pre>', save_code, html_str, flags=re.IGNORECASE | re.DOTALL)
-    
-    html_str = re.sub(r'<(div|p|br|h[1-6]|li|tr|ul|ol)[^>]*>', '\n', html_str, flags=re.IGNORECASE)
-    text = re.sub(r'<[^>]+>', '', html_str)
-    text = html.unescape(text)
-    
-    for i, cb in enumerate(code_blocks):
-        text = text.replace(f"__CODE_BLOCK_{i}__", "\n" + html.unescape(cb) + "\n")
+    for code in soup.find_all("code"):
+        if code.parent.name == "pre":
+            code_blocks.append(code.get_text())
+            code.parent.replace_with(f"__CODE_BLOCK_{len(code_blocks)-1}__")
+            
+    text = soup.get_text(separator=" ")
+    for i, code in enumerate(code_blocks):
+        text = text.replace(f"__CODE_BLOCK_{i}__", code)
         
-    text = re.sub(r'\n\s*\n', '\n\n', text)
-    return text.strip()
+    text = re.sub(r'\s+', ' ', text).strip()
+    return html.unescape(text)
 
 def chunk_html(html_str):
     parts = re.split(r'(<h[1-6][^>]*>.*?</h[1-6]>)', html_str, flags=re.IGNORECASE)
@@ -225,6 +197,14 @@ def build_subject(subject_dir, templates_dir, data_dir):
             body_match = re.search(r'<body[^>]*>(.*?)</body>', cheat_html, re.DOTALL | re.IGNORECASE)
             if body_match:
                 cheat_html = body_match.group(1)
+            
+            # Pre-clean the HTML using BeautifulSoup before chunking it to avoid breaking modals
+            from bs4 import BeautifulSoup
+            soup = BeautifulSoup(cheat_html, 'html.parser')
+            for el in soup.select('.ask-ai-widget, .ask-ai-btn, .fab-main, #assistantModal'):
+                el.extract()
+            cheat_html = str(soup)
+            
             chunks = chunk_html(cheat_html)
             assistant_index.append({
                 "id": "cheat-sheet",

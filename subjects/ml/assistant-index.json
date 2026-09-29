@@ -235,7 +235,7 @@
     "title": "Write the hypothesis function for a Simple Linear Regression model and define its components.",
     "url": "question-bank.html?open=2m_q15",
     "chunks": [
-      "The hypothesis function is h(x) = \u03b80 + \u03b81*x, where \u03b80 is the y-intercept, \u03b81 is the slope (weight), and x is the input feature."
+      "The hypothesis function is h(x) = \u03b80 + \u03b81*x , where \u03b80 is the y-intercept, \u03b81 is the slope (weight), and x is the input feature."
     ],
     "type": "question"
   },
@@ -251,7 +251,7 @@
     "title": "State the equation for Multiple Linear Regression with n independent variables.",
     "url": "question-bank.html?open=2m_q16",
     "chunks": [
-      "The equation is y = \u03b80 + \u03b81*x1 + \u03b82*x2 + ... + \u03b8n*xn, where \u03b8i are the coefficients and xi are the independent variables."
+      "The equation is y = \u03b80 + \u03b81*x1 + \u03b82*x2 + ... + \u03b8n*xn , where \u03b8i are the coefficients and xi are the independent variables."
     ],
     "type": "question"
   },
@@ -267,7 +267,7 @@
     "title": "Define residual error ei in linear regression analysis.",
     "url": "question-bank.html?open=2m_q17",
     "chunks": [
-      "Residual error ei is the difference between the actual observed value yi and the predicted value \u0177i from the linear regression model: ei = yi - \u0177i."
+      "Residual error ei is the difference between the actual observed value yi and the predicted value \u0177i from the linear regression model: ei = yi - \u0177i ."
     ],
     "type": "question"
   },
@@ -299,7 +299,7 @@
     "title": "Write the Mean Squared Error (MSE) cost function J\u03b8 used in linear regression.",
     "url": "question-bank.html?open=2m_q19",
     "chunks": [
-      "The MSE cost function is J(\u03b8) = (1/2m) \u03a3 (h\u03b8(xi) - yi)\u00b2, where m is the number of training examples."
+      "The MSE cost function is J(\u03b8) = (1/2m) \u03a3 (h\u03b8(xi) - yi)\u00b2 , where m is the number of training examples."
     ],
     "type": "question"
   },
@@ -315,7 +315,7 @@
     "title": "Why is Gradient Descent preferred over the analytical Normal Equation for high-dimensional datasets?",
     "url": "question-bank.html?open=2m_q20",
     "chunks": [
-      "Gradient Descent is computationally much faster for high-dimensional datasets with many features, whereas the Normal Equation requires inverting an n x n matrix, which scales poorly as O(n\u00b3)."
+      "Gradient Descent is computationally much faster for high-dimensional datasets with many features, whereas the Normal Equation requires inverting an n x n matrix, which scales poorly as O(n\u00b3) ."
     ],
     "type": "question"
   },
@@ -491,7 +491,7 @@
     "title": "Write the mathematical formula for Mean Absolute Error (MAE).",
     "url": "question-bank.html?open=2m_q31",
     "chunks": [
-      "The formula is MAE = (1/n) \u03a3 |yi - \u0177i|, where yi is actual, \u0177i is predicted, and n is the number of samples."
+      "The formula is MAE = (1/n) \u03a3 |yi - \u0177i| , where yi is actual, \u0177i is predicted, and n is the number of samples."
     ],
     "type": "question"
   },
@@ -507,7 +507,7 @@
     "title": "State the formula for Root Mean Squared Error (RMSE) and explain its advantage over MSE.",
     "url": "question-bank.html?open=2m_q32",
     "chunks": [
-      "RMSE = \u221a((1/n) \u03a3 (yi - \u0177i)\u00b2). Its advantage is that it penalizes larger errors more heavily than MAE and shares the same units as the target variable."
+      "RMSE = \u221a((1/n) \u03a3 (yi - \u0177i)\u00b2) . Its advantage is that it penalizes larger errors more heavily than MAE and shares the same units as the target variable."
     ],
     "type": "question"
   },
@@ -555,7 +555,7 @@
     "title": "Write the Sigmoid activation function formula and state its output range.",
     "url": "question-bank.html?open=2m_q35",
     "chunks": [
-      "The Sigmoid formula is \u03c3(z) = 1 / (1 + e^(-z)). Its output range is continuously between 0 and 1, making it ideal for probability estimation."
+      "The Sigmoid formula is \u03c3(z) = 1 / (1 + e^(-z)) . Its output range is continuously between 0 and 1, making it ideal for probability estimation."
     ],
     "type": "question"
   },
@@ -587,7 +587,7 @@
     "title": "Write the single-sample log-loss (binary cross-entropy) cost function formula.",
     "url": "question-bank.html?open=2m_q37",
     "chunks": [
-      "The formula is Cost = - [y * log(\u0177) + (1 - y) * log(1 - \u0177)], where y is the true label (0 or 1) and \u0177 is the predicted probability."
+      "The formula is Cost = - [y * log(\u0177) + (1 - y) * log(1 - \u0177)] , where y is the true label (0 or 1) and \u0177 is the predicted probability."
     ],
     "type": "question"
   },
@@ -667,7 +667,7 @@
     "title": "Define Entropy in Information Theory and write its mathematical equation.",
     "url": "question-bank.html?open=2m_q42",
     "chunks": [
-      "Entropy measures the uncertainty or impurity in a dataset. Its equation is H(S) = - \u03a3 p_i * log2(p_i), where p_i is the proportion of elements in class i."
+      "Entropy measures the uncertainty or impurity in a dataset. Its equation is H(S) = - \u03a3 p_i * log2(p_i) , where p_i is the proportion of elements in class i."
     ],
     "type": "question"
   },
@@ -699,7 +699,7 @@
     "title": "State the Gini Impurity formula used for evaluating node splits in Decision Trees.",
     "url": "question-bank.html?open=2m_q44",
     "chunks": [
-      "The Gini Impurity formula is Gini = 1 - \u03a3 (p_i)\u00b2, where p_i is the probability of an item belonging to class i. It measures how often a randomly chosen element would be incorrectly labeled."
+      "The Gini Impurity formula is Gini = 1 - \u03a3 (p_i)\u00b2 , where p_i is the probability of an item belonging to class i. It measures how often a randomly chosen element would be incorrectly labeled."
     ],
     "type": "question"
   },
@@ -715,7 +715,7 @@
     "title": "State Bayes' Theorem formula and label each term ((P(A|B), P(B| A), P(A), P(B)).",
     "url": "question-bank.html?open=2m_q45",
     "chunks": [
-      "P(A|B) = [P(B|A) * P(A)] / P(B). P(A|B) is posterior probability, P(B|A) is likelihood, P(A) is prior probability, and P(B) is the marginal probability of evidence."
+      "P(A|B) = [P(B|A) * P(A)] / P(B) . P(A|B) is posterior probability, P(B|A) is likelihood, P(A) is prior probability, and P(B) is the marginal probability of evidence."
     ],
     "type": "question"
   },
@@ -827,7 +827,7 @@
     "title": "Write the mathematical formulas for Precision, Recall, and F1-Score.",
     "url": "question-bank.html?open=2m_q52",
     "chunks": [
-      "Precision = TP / (TP + FP), Recall = TP / (TP + FN), F1-Score = 2 * (Precision * Recall) / (Precision + Recall), where TP=True Positives, FP=False Positives, FN=False Negatives."
+      "Precision = TP / (TP + FP) , Recall = TP / (TP + FN) , F1-Score = 2 * (Precision * Recall) / (Precision + Recall) , where TP=True Positives, FP=False Positives, FN=False Negatives."
     ],
     "type": "question"
   },
@@ -1067,7 +1067,7 @@
     "title": "Write the structural mathematical formulation for a Simple Linear Regression model and explain all its terms.",
     "url": "question-bank.html?open=3m_q15",
     "chunks": [
-      "Formula: y = \u03b20 + \u03b21x + \u03b5. y: Dependent target variable. x: Independent predictor variable. \u03b20: Y-intercept (value of y when x=0). \u03b21: Slope coefficient (change in y for a 1-unit change in x). \u03b5: Error term."
+      "Formula: y = \u03b20 + \u03b21x + \u03b5 . y: Dependent target variable. x: Independent predictor variable. \u03b20: Y-intercept (value of y when x=0). \u03b21: Slope coefficient (change in y for a 1-unit change in x). \u03b5: Error term."
     ],
     "type": "question"
   },
@@ -1083,7 +1083,7 @@
     "title": "Explain Multiple Linear Regression and state its algebraic equation for n independent variables.",
     "url": "question-bank.html?open=3m_q16",
     "chunks": [
-      "Multiple Linear Regression extends simple regression to model the relationship between one continuous dependent variable and multiple independent variables. Equation: y = \u03b20 + \u03b21x1 + \u03b22x2 + ... + \u03b2nxn + \u03b5."
+      "Multiple Linear Regression extends simple regression to model the relationship between one continuous dependent variable and multiple independent variables. Equation: y = \u03b20 + \u03b21x1 + \u03b22x2 + ... + \u03b2nxn + \u03b5 ."
     ],
     "type": "question"
   },
@@ -1115,7 +1115,7 @@
     "title": "Explain the Ordinary Least Squares (OLS) estimation method and state the objective function it minimizes.",
     "url": "question-bank.html?open=3m_q18",
     "chunks": [
-      "Ordinary Least Squares (OLS) is a method that estimates regression coefficients by minimizing the sum of the squared residuals. Objective function: Minimize \u03a3(yi - \u0177i)\u00b2."
+      "Ordinary Least Squares (OLS) is a method that estimates regression coefficients by minimizing the sum of the squared residuals. Objective function: Minimize \u03a3(yi - \u0177i)\u00b2 ."
     ],
     "type": "question"
   },
@@ -1179,7 +1179,7 @@
     "title": "Explain Polynomial Regression and state how higher-degree terms allow it to capture non-linear data trends.",
     "url": "question-bank.html?open=3m_q22",
     "chunks": [
-      "Polynomial regression models the relationship as an nth degree polynomial (e.g., y = \u03b20 + \u03b21x + \u03b22x\u00b2). The higher-degree terms introduce curves, allowing the model to fit non-linear patterns in the data."
+      "Polynomial regression models the relationship as an nth degree polynomial (e.g., y = \u03b20 + \u03b21x + \u03b22x\u00b2 ). The higher-degree terms introduce curves, allowing the model to fit non-linear patterns in the data."
     ],
     "type": "question"
   },
@@ -1307,7 +1307,7 @@
     "title": "Write the mathematical formulas for Mean Absolute Error (MAE) and Mean Squared Error (MSE) and highlight their differences.",
     "url": "question-bank.html?open=3m_q30",
     "chunks": [
-      "MAE: (1/n) \u03a3|yi - \u0177i|. MSE: (1/n) \u03a3(yi - \u0177i)\u00b2. Differences: MSE heavily penalizes large errors because of the squaring operation, whereas MAE treats all errors proportionally and is more robust to outliers."
+      "MAE: (1/n) \u03a3|yi - \u0177i| . MSE: (1/n) \u03a3(yi - \u0177i)\u00b2 . Differences: MSE heavily penalizes large errors because of the squaring operation, whereas MAE treats all errors proportionally and is more robust to outliers."
     ],
     "type": "question"
   },
@@ -1323,7 +1323,7 @@
     "title": "Define Root Mean Squared Error (RMSE) and explain its interpretive advantage over Mean Squared Error (MSE).",
     "url": "question-bank.html?open=3m_q31",
     "chunks": [
-      "RMSE: \u221a((1/n) \u03a3(yi - \u0177i)\u00b2). The interpretive advantage of RMSE is that it expresses the error in the exact same units as the original dependent target variable, making it easier to understand practically than MSE."
+      "RMSE: \u221a((1/n) \u03a3(yi - \u0177i)\u00b2) . The interpretive advantage of RMSE is that it expresses the error in the exact same units as the original dependent target variable, making it easier to understand practically than MSE."
     ],
     "type": "question"
   },
@@ -1355,7 +1355,7 @@
     "title": "Write the mathematical formula for the Sigmoid activation function and explain how it converts real values into probabilities.",
     "url": "question-bank.html?open=3m_q33",
     "chunks": [
-      "Formula: \u03c3(z) = 1 / (1 + e^(-z)). The Sigmoid function takes any real-valued number (z) and maps it into a smooth S-curve bounded between 0 and 1, allowing the output to be interpreted as a probability."
+      "Formula: \u03c3(z) = 1 / (1 + e^(-z)) . The Sigmoid function takes any real-valued number (z) and maps it into a smooth S-curve bounded between 0 and 1, allowing the output to be interpreted as a probability."
     ],
     "type": "question"
   },
@@ -1387,7 +1387,7 @@
     "title": "Write the single-sample log-loss (binary cross-entropy) formula and explain why MSE is unsuitable for classification.",
     "url": "question-bank.html?open=3m_q35",
     "chunks": [
-      "Formula: Loss = -[y*log(p) + (1-y)*log(1-p)]. MSE is unsuitable for classification because when used with a sigmoid activation, it creates a non-convex loss function with multiple local minima, preventing gradient descent from finding the global minimum."
+      "Formula: Loss = -[y*log(p) + (1-y)*log(1-p)] . MSE is unsuitable for classification because when used with a sigmoid activation, it creates a non-convex loss function with multiple local minima, preventing gradient descent from finding the global minimum."
     ],
     "type": "question"
   },
@@ -1451,7 +1451,7 @@
     "title": "Define Entropy in Information Theory, write its mathematical expression, and state what zero entropy signifies.",
     "url": "question-bank.html?open=3m_q39",
     "chunks": [
-      "Entropy measures the level of impurity or uncertainty in a dataset. Formula: H(S) = -\u03a3(p_i * log2(p_i)). An entropy of zero signifies a perfectly pure dataset where all examples belong to exactly one single class."
+      "Entropy measures the level of impurity or uncertainty in a dataset. Formula: H(S) = -\u03a3(p_i * log2(p_i)) . An entropy of zero signifies a perfectly pure dataset where all examples belong to exactly one single class."
     ],
     "type": "question"
   },
@@ -1483,7 +1483,7 @@
     "title": "Define Gini Impurity, state its mathematical formula, and compare its computational efficiency against Entropy.",
     "url": "question-bank.html?open=3m_q41",
     "chunks": [
-      "Gini Impurity measures the probability of incorrectly classifying a randomly chosen element. Formula: Gini = 1 - \u03a3(p_i)\u00b2. It is computationally more efficient than Entropy because it does not require calculating logarithmic functions."
+      "Gini Impurity measures the probability of incorrectly classifying a randomly chosen element. Formula: Gini = 1 - \u03a3(p_i)\u00b2 . It is computationally more efficient than Entropy because it does not require calculating logarithmic functions."
     ],
     "type": "question"
   },
@@ -1499,7 +1499,7 @@
     "title": "State Bayes' Theorem formula, define each term (Prior, Likelihood, Posterior, Evidence), and explain its role in classification.",
     "url": "question-bank.html?open=3m_q42",
     "chunks": [
-      "Formula: P(A|B) = [P(B|A) * P(A)] / P(B). Prior (P(A)): Initial probability of class. Likelihood (P(B|A)): Probability of predictor given class. Posterior (P(A|B)): Updated probability. Evidence (P(B)): Total probability of predictor. It's used to calculate the probability of a class given the features."
+      "Formula: P(A|B) = [P(B|A) * P(A)] / P(B) . Prior (P(A)): Initial probability of class. Likelihood (P(B|A)): Probability of predictor given class. Posterior (P(A|B)): Updated probability. Evidence (P(B)): Total probability of predictor. It's used to calculate the probability of a class given the features."
     ],
     "type": "question"
   },
@@ -1643,7 +1643,7 @@
     "title": "1. Explain the 7-Step Machine Learning Lifecycle in detail, highlighting the core objectives of data cleaning, data preprocessing, and model validation.",
     "url": "question-bank.html?open=5m_q1",
     "chunks": [
-      "7-Step Machine Learning Lifecycle\nThe machine learning lifecycle consists of seven sequential steps that convert raw data into a functional predictive model.\n\n1. Data Gathering: Identifying and collecting relevant datasets from various sources (databases, APIs, web scraping).\n2. Data Preparation/Cleaning: The objective is to fix missing values, remove duplicates, and handle outliers. It ensures the data is accurate and consistent.\n3. Data Preprocessing & EDA: Exploring the data to find patterns. Preprocessing involves feature scaling, normalization, and encoding categorical variables.\n4. Data Split: Dividing the dataset into training and testing sets (e.g., 80/20 split) to ensure unbiased evaluation.\n5. Model Training: Selecting an appropriate algorithm and feeding the training data into it to let the model learn the underlying patterns.\n6. Model Evaluation/Validation: The objective is to test the trained model on unseen testing data to measure its performance using metrics like accuracy, RMSE, or F1-Score.\n7. Prediction & Deployment: Deploying the validated model into a production environment to make predictions on real-world, live data."
+      "7-Step Machine Learning Lifecycle The machine learning lifecycle consists of seven sequential steps that convert raw data into a functional predictive model. 1. Data Gathering: Identifying and collecting relevant datasets from various sources (databases, APIs, web scraping). 2. Data Preparation/Cleaning: The objective is to fix missing values, remove duplicates, and handle outliers. It ensures the data is accurate and consistent. 3. Data Preprocessing & EDA: Exploring the data to find patterns. Preprocessing involves feature scaling, normalization, and encoding categorical variables. 4. Data Split: Dividing the dataset into training and testing sets (e.g., 80/20 split) to ensure unbiased evaluation. 5. Model Training: Selecting an appropriate algorithm and feeding the training data into it to let the model learn the underlying patterns. 6. Model Evaluation/Validation: The objective is to test the trained model on unseen testing data to measure its performance using metrics like accuracy, RMSE, or F1-Score. 7. Prediction & Deployment: Deploying the validated model into a production environment to make predictions on real-world, live data."
     ],
     "type": "question"
   },
@@ -1659,7 +1659,7 @@
     "title": "2. Compare Supervised, Unsupervised, and Reinforcement Learning paradigms with respect to input data requirements, feedback loops, and practical target applications.",
     "url": "question-bank.html?open=5m_q2",
     "chunks": [
-      "Comparison of Learning Paradigms\nMachine learning is broadly categorized into three paradigms:\n\nSupervised Learning:\nInput Data: Requires labeled data (features and corresponding target labels).\nFeedback Loop: Direct feedback mechanism; predictions are compared to actual labels to calculate error.\nTarget Applications: Classification (e.g., spam detection), Regression (e.g., house price prediction).\nUnsupervised Learning:\nInput Data: Requires unlabeled data (only features, no target labels).\nFeedback Loop: No direct feedback; the model learns internal structures, patterns, or clusters autonomously.\nTarget Applications: Clustering (e.g., customer segmentation), Dimensionality Reduction (e.g., PCA).\nReinforcement Learning:\nInput Data: No predefined dataset; an agent interacts with an environment represented as states.\nFeedback Loop: Delayed feedback in the form of rewards or penalties based on the sequence of actions taken.\nTarget Applications: Robotics, game AI (e.g., AlphaGo), autonomous navigation."
+      "Comparison of Learning Paradigms Machine learning is broadly categorized into three paradigms: Supervised Learning: Input Data: Requires labeled data (features and corresponding target labels). Feedback Loop: Direct feedback mechanism; predictions are compared to actual labels to calculate error. Target Applications: Classification (e.g., spam detection), Regression (e.g., house price prediction). Unsupervised Learning: Input Data: Requires unlabeled data (only features, no target labels). Feedback Loop: No direct feedback; the model learns internal structures, patterns, or clusters autonomously. Target Applications: Clustering (e.g., customer segmentation), Dimensionality Reduction (e.g., PCA). Reinforcement Learning: Input Data: No predefined dataset; an agent interacts with an environment represented as states. Feedback Loop: Delayed feedback in the form of rewards or penalties based on the sequence of actions taken. Target Applications: Robotics, game AI (e.g., AlphaGo), autonomous navigation."
     ],
     "type": "question"
   },
@@ -1675,7 +1675,7 @@
     "title": "3. Define Exploratory Data Analysis (EDA). Describe how computing summary statistics and creating data visualizations aid in understanding raw datasets.",
     "url": "question-bank.html?open=5m_q3",
     "chunks": [
-      "Exploratory Data Analysis (EDA)\nExploratory Data Analysis (EDA) is the initial investigative process performed on a dataset to discover patterns, spot anomalies, test hypotheses, and check assumptions with the help of summary statistics and graphical representations.\nRole of Summary Statistics:\n\nMetrics like mean, median, standard deviation, and percentiles provide a quantitative summary of feature distributions.\nThey help in quickly identifying central tendencies and the spread of data, pointing out potential outliers.\nRole of Data Visualizations:\n\nHistograms and Box plots: Reveal the skewness, spread, and exact outlier points in numerical data.\nScatter plots: Highlight correlations and relationships between two numerical variables.\nHeatmaps: Visualize correlation matrices, helping to identify multicollinearity between features.\nVisualizations make complex datasets interpretable and guide the subsequent feature engineering and modeling choices."
+      "Exploratory Data Analysis (EDA) Exploratory Data Analysis (EDA) is the initial investigative process performed on a dataset to discover patterns, spot anomalies, test hypotheses, and check assumptions with the help of summary statistics and graphical representations. Role of Summary Statistics: Metrics like mean, median, standard deviation, and percentiles provide a quantitative summary of feature distributions. They help in quickly identifying central tendencies and the spread of data, pointing out potential outliers. Role of Data Visualizations: Histograms and Box plots: Reveal the skewness, spread, and exact outlier points in numerical data. Scatter plots: Highlight correlations and relationships between two numerical variables. Heatmaps: Visualize correlation matrices, helping to identify multicollinearity between features. Visualizations make complex datasets interpretable and guide the subsequent feature engineering and modeling choices."
     ],
     "type": "question"
   },
@@ -1691,7 +1691,7 @@
     "title": "4. Differentiate between Feature Engineering and Feature Selection. Explain the working principles of min-max scaling, standardization (z-score), and categorical label encoding.",
     "url": "question-bank.html?open=5m_q4",
     "chunks": [
-      "Feature Engineering vs. Feature Selection\nFeature Engineering involves creating new features or transforming existing ones to improve model performance (e.g., extracting day of the week from a date). Feature Selection involves choosing the most relevant subset of existing features to reduce dimensionality and noise without creating new ones.\nWorking Principles:\n\nMin-Max Scaling: Transforms numerical features to a fixed range, typically [0, 1].\nFormula: $X_{scaled} = \\frac{X - X_{min}}{X_{max} - X_{min}}$. Useful for algorithms that rely on distances (like KNN).\nStandardization (Z-score): Transforms data to have a mean of 0 and standard deviation of 1.\nFormula: $Z = \\frac{X - \\mu}{\\sigma}$. More robust to outliers than min-max scaling and preferred for gradient descent-based algorithms.\nCategorical Label Encoding: Converts categorical string values into numerical integer representations (e.g., Red=0, Green=1, Blue=2). Necessary because ML algorithms require numerical input. However, it may introduce ordinal relationships implicitly; hence, One-Hot Encoding is sometimes preferred for nominal data."
+      "Feature Engineering vs. Feature Selection Feature Engineering involves creating new features or transforming existing ones to improve model performance (e.g., extracting day of the week from a date). Feature Selection involves choosing the most relevant subset of existing features to reduce dimensionality and noise without creating new ones. Working Principles: Min-Max Scaling: Transforms numerical features to a fixed range, typically [0, 1]. Formula: $X_{scaled} = \\frac{X - X_{min}}{X_{max} - X_{min}}$. Useful for algorithms that rely on distances (like KNN). Standardization (Z-score): Transforms data to have a mean of 0 and standard deviation of 1. Formula: $Z = \\frac{X - \\mu}{\\sigma}$. More robust to outliers than min-max scaling and preferred for gradient descent-based algorithms. Categorical Label Encoding: Converts categorical string values into numerical integer representations (e.g., Red=0, Green=1, Blue=2). Necessary because ML algorithms require numerical input. However, it may introduce ordinal relationships implicitly; hence, One-Hot Encoding is sometimes preferred for nominal data."
     ],
     "type": "question"
   },
@@ -1707,7 +1707,7 @@
     "title": "5. Discuss the importance of data collection and fetching strategies. Explain how uncleaned data issues like missing attributes or outliers degrade downstream ML model fitting.",
     "url": "question-bank.html?open=5m_q5",
     "chunks": [
-      "Data Collection and Uncleaned Data Issues\nData collection is the foundation of any ML project. The quality, quantity, and representativeness of the fetched data directly govern the maximum possible performance of the predictive model. Strategies like automated API polling, web scraping, or database querying must ensure data integrity.\nImpact of Uncleaned Data:\n\nMissing Attributes: Algorithms may fail to process rows with NaN/Null values. If handled poorly (e.g., filling with zero instead of the mean), it distorts the feature distribution and misguides the learning process.\nOutliers: Extreme outlier values severely skew models that minimize squared errors (like Linear Regression), as the squared penalty for outliers pulls the decision boundary or regression line away from the majority of the data.\nInconsistencies and Duplicates: Duplicate entries can cause overfitting to certain patterns, while inconsistencies (like mixed date formats) lead to feature misinterpretation and degraded model fitting."
+      "Data Collection and Uncleaned Data Issues Data collection is the foundation of any ML project. The quality, quantity, and representativeness of the fetched data directly govern the maximum possible performance of the predictive model. Strategies like automated API polling, web scraping, or database querying must ensure data integrity. Impact of Uncleaned Data: Missing Attributes: Algorithms may fail to process rows with NaN/Null values. If handled poorly (e.g., filling with zero instead of the mean), it distorts the feature distribution and misguides the learning process. Outliers: Extreme outlier values severely skew models that minimize squared errors (like Linear Regression), as the squared penalty for outliers pulls the decision boundary or regression line away from the majority of the data. Inconsistencies and Duplicates: Duplicate entries can cause overfitting to certain patterns, while inconsistencies (like mixed date formats) lead to feature misinterpretation and degraded model fitting."
     ],
     "type": "question"
   },
@@ -1723,7 +1723,7 @@
     "title": "6. Derive the Ordinary Least Squares (OLS) error minimization framework for Simple Linear Regression and state its objective function.",
     "url": "question-bank.html?open=5m_q6",
     "chunks": [
-      "Ordinary Least Squares (OLS)\nSimple Linear Regression models the relationship between a dependent variable $y$ and an independent variable $x$ as: $\\hat{y} = mx + c$, where $m$ is the slope and $c$ is the intercept.\nObjective Function: The OLS method aims to minimize the Sum of Squared Residuals (SSR) between actual and predicted values. The cost function $J$ is:\n$J(m, c) = \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2 = \\sum_{i=1}^{n} (y_i - (mx_i + c))^2$\nDerivation Framework:\n\nTo find the optimal $m$ and $c$, we take the partial derivatives of $J$ with respect to $m$ and $c$, and set them to zero.\n$\\frac{\\partial J}{\\partial c} = -2 \\sum_{i=1}^{n} (y_i - mx_i - c) = 0 \\implies \\sum y_i = m\\sum x_i + nc$\n$\\frac{\\partial J}{\\partial m} = -2 \\sum_{i=1}^{n} x_i(y_i - mx_i - c) = 0 \\implies \\sum x_i y_i = m\\sum x_i^2 + c\\sum x_i$\nSolving these two normal equations yields the optimal formulas for slope $m$ and intercept $c$, which represent the best-fit line minimizing the squared errors."
+      "Ordinary Least Squares (OLS) Simple Linear Regression models the relationship between a dependent variable $y$ and an independent variable $x$ as: $\\hat{y} = mx + c$, where $m$ is the slope and $c$ is the intercept. Objective Function: The OLS method aims to minimize the Sum of Squared Residuals (SSR) between actual and predicted values. The cost function $J$ is: $J(m, c) = \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2 = \\sum_{i=1}^{n} (y_i - (mx_i + c))^2$ Derivation Framework: To find the optimal $m$ and $c$, we take the partial derivatives of $J$ with respect to $m$ and $c$, and set them to zero. $\\frac{\\partial J}{\\partial c} = -2 \\sum_{i=1}^{n} (y_i - mx_i - c) = 0 \\implies \\sum y_i = m\\sum x_i + nc$ $\\frac{\\partial J}{\\partial m} = -2 \\sum_{i=1}^{n} x_i(y_i - mx_i - c) = 0 \\implies \\sum x_i y_i = m\\sum x_i^2 + c\\sum x_i$ Solving these two normal equations yields the optimal formulas for slope $m$ and intercept $c$, which represent the best-fit line minimizing the squared errors."
     ],
     "type": "question"
   },
@@ -1739,7 +1739,7 @@
     "title": "7. Explain how the Gradient Descent optimization algorithm updates model weights iteratively. Contrast its performance against the analytical Normal Equation on high-dimensional datasets.",
     "url": "question-bank.html?open=5m_q7",
     "chunks": [
-      "Gradient Descent vs Normal Equation\nGradient Descent (GD):\nGD is an iterative optimization algorithm used to minimize a cost function $J(\\theta)$. It updates model weights (parameters) by moving in the direction opposite to the gradient of the cost function with respect to the weights.\n\nUpdate Rule: $\\theta_j = \\theta_j - \\alpha \\frac{\\partial J(\\theta)}{\\partial \\theta_j}$, where $\\alpha$ is the learning rate.\nIt iteratively takes steps proportional to the negative gradient until it converges to a local or global minimum.\nContrast with Normal Equation:\n\nThe Normal Equation provides an analytical, closed-form solution to linear regression: $\\theta = (X^T X)^{-1} X^T y$.\nHigh-Dimensional Datasets: The Normal Equation requires computing the inverse of an $(n \\times n)$ matrix ($X^T X$), which has a time complexity of $O(n^3)$. For large number of features (e.g., $n > 10,000$), matrix inversion becomes computationally prohibitive.\nGradient Descent scales much better with large numbers of features ($O(n^2)$ per iteration) and is highly preferred for high-dimensional datasets and models where analytical solutions do not exist."
+      "Gradient Descent vs Normal Equation Gradient Descent (GD): GD is an iterative optimization algorithm used to minimize a cost function $J(\\theta)$. It updates model weights (parameters) by moving in the direction opposite to the gradient of the cost function with respect to the weights. Update Rule: $\\theta_j = \\theta_j - \\alpha \\frac{\\partial J(\\theta)}{\\partial \\theta_j}$, where $\\alpha$ is the learning rate. It iteratively takes steps proportional to the negative gradient until it converges to a local or global minimum. Contrast with Normal Equation: The Normal Equation provides an analytical, closed-form solution to linear regression: $\\theta = (X^T X)^{-1} X^T y$. High-Dimensional Datasets: The Normal Equation requires computing the inverse of an $(n \\times n)$ matrix ($X^T X$), which has a time complexity of $O(n^3)$. For large number of features (e.g., $n > 10,000$), matrix inversion becomes computationally prohibitive. Gradient Descent scales much better with large numbers of features ($O(n^2)$ per iteration) and is highly preferred for high-dimensional datasets and models where analytical solutions do not exist."
     ],
     "type": "question"
   },
@@ -1755,7 +1755,7 @@
     "title": "8. Describe Polynomial Regression and explain how higher-degree terms capture non-linear data patterns while maintaining a linear cost function structure.",
     "url": "question-bank.html?open=5m_q8",
     "chunks": [
-      "Polynomial Regression\nPolynomial Regression is an extension of linear regression that models the relationship between the independent variable $x$ and the dependent variable $y$ as an $n$-th degree polynomial.\nCapturing Non-Linear Patterns:\n\nInstead of a simple straight line ($y = \\theta_0 + \\theta_1x$), polynomial regression introduces higher-degree terms: $y = \\theta_0 + \\theta_1x + \\theta_2x^2 + \\dots + \\theta_nx^n$.\nThese polynomial terms allow the regression curve to bend and flex, perfectly capturing non-linear trajectories and complex variance in the dataset.\nLinear Cost Function Structure:\n\nDespite fitting a non-linear curve to the data, Polynomial Regression is classified as a linear model.\nThis is because the model is linear with respect to the unknown parameters (weights $\\theta_i$). If we define $x_1 = x$, $x_2 = x^2$, etc., the equation becomes $y = \\theta_0 + \\theta_1x_1 + \\theta_2x_2 + \\dots$, which is identical to multiple linear regression.\nTherefore, the cost function (MSE) remains a convex quadratic bowl, and it can be solved using standard OLS or Gradient Descent without structural changes."
+      "Polynomial Regression Polynomial Regression is an extension of linear regression that models the relationship between the independent variable $x$ and the dependent variable $y$ as an $n$-th degree polynomial. Capturing Non-Linear Patterns: Instead of a simple straight line ($y = \\theta_0 + \\theta_1x$), polynomial regression introduces higher-degree terms: $y = \\theta_0 + \\theta_1x + \\theta_2x^2 + \\dots + \\theta_nx^n$. These polynomial terms allow the regression curve to bend and flex, perfectly capturing non-linear trajectories and complex variance in the dataset. Linear Cost Function Structure: Despite fitting a non-linear curve to the data, Polynomial Regression is classified as a linear model . This is because the model is linear with respect to the unknown parameters (weights $\\theta_i$). If we define $x_1 = x$, $x_2 = x^2$, etc., the equation becomes $y = \\theta_0 + \\theta_1x_1 + \\theta_2x_2 + \\dots$, which is identical to multiple linear regression. Therefore, the cost function (MSE) remains a convex quadratic bowl, and it can be solved using standard OLS or Gradient Descent without structural changes."
     ],
     "type": "question"
   },
@@ -1771,7 +1771,7 @@
     "title": "9. Explain the concepts of Overfitting and Underfitting. Illustrate their relationship with model complexity, training vs. testing error rates, and the Bias-Variance Tradeoff.",
     "url": "question-bank.html?open=5m_q9",
     "chunks": [
-      "Overfitting, Underfitting, and Bias-Variance Tradeoff\nUnderfitting (High Bias): Occurs when a model is too simple to capture the underlying data patterns. It performs poorly on both training and testing sets. This represents High Bias.\nOverfitting (High Variance): Occurs when a model is excessively complex, learning the noise and fluctuations in the training data rather than the true signal. It performs exceptionally well on the training data but poorly on testing data. This represents High Variance.\nRelationship with Model Complexity and Error Rates:\n\nAs model complexity increases, Training Error continuously decreases because the model fits the training points tighter.\nTesting Error initially decreases as the model learns useful patterns, but eventually starts to increase when the model becomes too complex and begins overfitting.\nBias-Variance Tradeoff: The goal of ML is to find the \"sweet spot\" of model complexity that balances bias and variance, minimizing the total error (Testing Error). Too simple = high bias, too complex = high variance."
+      "Overfitting, Underfitting, and Bias-Variance Tradeoff Underfitting (High Bias): Occurs when a model is too simple to capture the underlying data patterns. It performs poorly on both training and testing sets. This represents High Bias. Overfitting (High Variance): Occurs when a model is excessively complex, learning the noise and fluctuations in the training data rather than the true signal. It performs exceptionally well on the training data but poorly on testing data. This represents High Variance. Relationship with Model Complexity and Error Rates: As model complexity increases, Training Error continuously decreases because the model fits the training points tighter. Testing Error initially decreases as the model learns useful patterns, but eventually starts to increase when the model becomes too complex and begins overfitting. Bias-Variance Tradeoff: The goal of ML is to find the \"sweet spot\" of model complexity that balances bias and variance, minimizing the total error (Testing Error). Too simple = high bias, too complex = high variance."
     ],
     "type": "question"
   },
@@ -1787,7 +1787,7 @@
     "title": "10. Compare Ridge L2 and Lasso L1 Regularization. Explain why Lasso produces sparse solutions (zeroing weights) whereas Ridge shrinks coefficients without removing them.",
     "url": "question-bank.html?open=5m_q10",
     "chunks": [
-      "Ridge (L2) vs Lasso (L1) Regularization\nRegularization adds a penalty term to the cost function to prevent overfitting by penalizing large model weights.\nRidge Regularization (L2):\n\nCost Function: $J(\\theta) = MSE + \\lambda \\sum_{i=1}^{n} \\theta_i^2$\nIt adds the squared magnitude of coefficients as the penalty.\nShrinkage: Ridge shrinks all coefficients closer to zero but never exactly to zero. It handles multicollinearity well by distributing weights among correlated features.\nLasso Regularization (L1):\n\nCost Function: $J(\\theta) = MSE + \\lambda \\sum_{i=1}^{n} |\\theta_i|$\nIt adds the absolute value of coefficients as the penalty.\nSparse Solutions: The absolute value penalty creates a diamond-shaped constraint region. The elliptical contours of the MSE often intersect the diamond at its corners (where some coefficients are exactly zero).\nTherefore, Lasso can completely eliminate less important features, performing automatic feature selection, resulting in sparse models."
+      "Ridge (L2) vs Lasso (L1) Regularization Regularization adds a penalty term to the cost function to prevent overfitting by penalizing large model weights. Ridge Regularization (L2): Cost Function: $J(\\theta) = MSE + \\lambda \\sum_{i=1}^{n} \\theta_i^2$ It adds the squared magnitude of coefficients as the penalty. Shrinkage: Ridge shrinks all coefficients closer to zero but never exactly to zero. It handles multicollinearity well by distributing weights among correlated features. Lasso Regularization (L1): Cost Function: $J(\\theta) = MSE + \\lambda \\sum_{i=1}^{n} |\\theta_i|$ It adds the absolute value of coefficients as the penalty. Sparse Solutions: The absolute value penalty creates a diamond-shaped constraint region. The elliptical contours of the MSE often intersect the diamond at its corners (where some coefficients are exactly zero). Therefore, Lasso can completely eliminate less important features, performing automatic feature selection, resulting in sparse models."
     ],
     "type": "question"
   },
@@ -1803,7 +1803,7 @@
     "title": "11. Detail the regression evaluation metrics: MAE, MSE, RMSE, and R2 Adjusted R2. Explain why RMSE and Adjusted R2 are preferred for model interpretation.",
     "url": "question-bank.html?open=5m_q11",
     "chunks": [
-      "Regression Evaluation Metrics\n\nMean Absolute Error (MAE): $\\frac{1}{n} \\sum |y_i - \\hat{y}_i|$. The average of absolute differences. Robust to outliers but gradient is undefined at zero.\nMean Squared Error (MSE): $\\frac{1}{n} \\sum (y_i - \\hat{y}_i)^2$. Heavily penalizes large errors (outliers) due to squaring, making it useful for gradient descent. Units are squared.\nRoot Mean Squared Error (RMSE): $\\sqrt{MSE}$. The square root brings the metric back to the original unit of the target variable.\nR-Squared ($R^2$): Measures the proportion of variance in the dependent variable explained by the model. Range is 0 to 1. Higher is better.\nAdjusted $R^2$: Modifies $R^2$ by penalizing the addition of non-useful predictive features.\nWhy RMSE and Adjusted $R^2$ are Preferred:\nRMSE is highly preferred for interpretation because it is expressed in the same units as the target variable, making intuitive sense to stakeholders. Adjusted $R^2$ is preferred over standard $R^2$ in multiple regression because standard $R^2$ artificially increases whenever a new feature is added, even if it is irrelevant. Adjusted $R^2$ provides a more honest evaluation of the model\\'s true explanatory power."
+      "Regression Evaluation Metrics Mean Absolute Error (MAE): $\\frac{1}{n} \\sum |y_i - \\hat{y}_i|$. The average of absolute differences. Robust to outliers but gradient is undefined at zero. Mean Squared Error (MSE): $\\frac{1}{n} \\sum (y_i - \\hat{y}_i)^2$. Heavily penalizes large errors (outliers) due to squaring, making it useful for gradient descent. Units are squared. Root Mean Squared Error (RMSE): $\\sqrt{MSE}$. The square root brings the metric back to the original unit of the target variable. R-Squared ($R^2$): Measures the proportion of variance in the dependent variable explained by the model. Range is 0 to 1. Higher is better. Adjusted $R^2$: Modifies $R^2$ by penalizing the addition of non-useful predictive features. Why RMSE and Adjusted $R^2$ are Preferred: RMSE is highly preferred for interpretation because it is expressed in the same units as the target variable, making intuitive sense to stakeholders. Adjusted $R^2$ is preferred over standard $R^2$ in multiple regression because standard $R^2$ artificially increases whenever a new feature is added, even if it is irrelevant. Adjusted $R^2$ provides a more honest evaluation of the model\\'s true explanatory power."
     ],
     "type": "question"
   },
@@ -1819,7 +1819,7 @@
     "title": "12. Explain Logistic Regression for binary classification. Derive the Sigmoid activation function and state its mathematical properties.",
     "url": "question-bank.html?open=5m_q12",
     "chunks": [
-      "Logistic Regression and Sigmoid Function\nLogistic Regression is a supervised learning algorithm primarily used for binary classification. Unlike linear regression, which outputs continuous values, logistic regression squashes the output of a linear equation into a probability score between 0 and 1.\nThe Sigmoid Activation Function:\n\nThe linear component is $z = W^TX + b$. We pass $z$ through the Sigmoid function $\\sigma(z)$ to get probabilities.\nFormula: $\\sigma(z) = \\frac{1}{1 + e^{-z}}$\nMathematical Properties:\n\nRange: The output of the sigmoid function is strictly bound between 0 and 1: $0 \\le \\sigma(z) \\le 1$.\nS-shaped Curve: The function maps large positive values close to 1, and large negative values close to 0.\nDerivative: The derivative of the sigmoid function can be expressed in terms of itself, which makes gradient calculations computationally efficient: $\\sigma\\'(z) = \\sigma(z)(1 - \\sigma(z))$.\nDecision Boundary: Typically, a threshold of 0.5 is used; if $\\sigma(z) \\ge 0.5$, class 1 is predicted; otherwise, class 0."
+      "Logistic Regression and Sigmoid Function Logistic Regression is a supervised learning algorithm primarily used for binary classification. Unlike linear regression, which outputs continuous values, logistic regression squashes the output of a linear equation into a probability score between 0 and 1. The Sigmoid Activation Function: The linear component is $z = W^TX + b$. We pass $z$ through the Sigmoid function $\\sigma(z)$ to get probabilities. Formula: $\\sigma(z) = \\frac{1}{1 + e^{-z}}$ Mathematical Properties: Range: The output of the sigmoid function is strictly bound between 0 and 1: $0 \\le \\sigma(z) \\le 1$. S-shaped Curve: The function maps large positive values close to 1, and large negative values close to 0. Derivative: The derivative of the sigmoid function can be expressed in terms of itself, which makes gradient calculations computationally efficient: $\\sigma\\'(z) = \\sigma(z)(1 - \\sigma(z))$. Decision Boundary: Typically, a threshold of 0.5 is used; if $\\sigma(z) \\ge 0.5$, class 1 is predicted; otherwise, class 0."
     ],
     "type": "question"
   },
@@ -1835,7 +1835,7 @@
     "title": "13. Write the Log-Loss (Binary Cross-Entropy) cost function for Logistic Regression. Explain why standard MSE is non-convex and unsuitable for classification tasks.",
     "url": "question-bank.html?open=5m_q13",
     "chunks": [
-      "Log-Loss (Binary Cross-Entropy)\nThe cost function for Logistic Regression is Log-Loss, also known as Binary Cross-Entropy.\nFormula:\n$J(\\theta) = -\\frac{1}{m} \\sum_{i=1}^{m} \\left[ y^{(i)} \\log(h_\\theta(x^{(i)})) + (1 - y^{(i)}) \\log(1 - h_\\theta(x^{(i)})) \\right]$\nWhere $h_\\theta(x)$ is the sigmoid predicted probability and $y$ is the actual binary label (0 or 1).\nWhy MSE is Unsuitable:\n\nIf we use standard Mean Squared Error (MSE) for Logistic Regression, the cost function becomes $J(\\theta) = \\frac{1}{2m} \\sum (\\sigma(W^TX) - y)^2$.\nBecause the sigmoid function $\\sigma$ is non-linear, squaring it results in a non-convex cost function landscape with multiple local minima.\nGradient Descent is prone to getting stuck in these local minima, failing to find the global optimum.\nLog-Loss, conversely, guarantees a convex cost function with a single global minimum, penalizing confident wrong predictions heavily using logarithms."
+      "Log-Loss (Binary Cross-Entropy) The cost function for Logistic Regression is Log-Loss, also known as Binary Cross-Entropy. Formula: $J(\\theta) = -\\frac{1}{m} \\sum_{i=1}^{m} \\left[ y^{(i)} \\log(h_\\theta(x^{(i)})) + (1 - y^{(i)}) \\log(1 - h_\\theta(x^{(i)})) \\right]$ Where $h_\\theta(x)$ is the sigmoid predicted probability and $y$ is the actual binary label (0 or 1). Why MSE is Unsuitable: If we use standard Mean Squared Error (MSE) for Logistic Regression, the cost function becomes $J(\\theta) = \\frac{1}{2m} \\sum (\\sigma(W^TX) - y)^2$. Because the sigmoid function $\\sigma$ is non-linear, squaring it results in a non-convex cost function landscape with multiple local minima. Gradient Descent is prone to getting stuck in these local minima, failing to find the global optimum. Log-Loss, conversely, guarantees a convex cost function with a single global minimum, penalizing confident wrong predictions heavily using logarithms."
     ],
     "type": "question"
   },
@@ -1851,7 +1851,7 @@
     "title": "14. Describe the complete prediction mechanics of the K-Nearest Neighbors (KNN) algorithm. Discuss how distance metric selection and varying choices of K impact boundary smoothness and error rates.",
     "url": "question-bank.html?open=5m_q14",
     "chunks": [
-      "K-Nearest Neighbors (KNN) Algorithm\nKNN is a non-parametric, instance-based, lazy learning algorithm used for both classification and regression.\nPrediction Mechanics:\n\nGiven a new data point, calculate the distance between it and all training points.\nSort the calculated distances and identify the $K$ closest training data points (neighbors).\nFor classification, apply majority voting among the $K$ neighbors. For regression, take the average of their values.\nImpact of K and Distance Metrics:\n\nDistance Metrics: Euclidean distance is standard for continuous data, while Manhattan distance is often better for high-dimensional or grid-like data. Minkowski distance acts as a generalization of both.\nSmall K (e.g., K=1): The decision boundary is highly irregular and captures local noise. This leads to low bias but high variance (overfitting).\nLarge K: The decision boundary becomes much smoother and generalized. However, if K is too large, it overlooks local patterns, leading to high bias and underfitting. A commonly used heuristic for K is $\\sqrt{N}$."
+      "K-Nearest Neighbors (KNN) Algorithm KNN is a non-parametric, instance-based, lazy learning algorithm used for both classification and regression. Prediction Mechanics: Given a new data point, calculate the distance between it and all training points. Sort the calculated distances and identify the $K$ closest training data points (neighbors). For classification, apply majority voting among the $K$ neighbors. For regression, take the average of their values. Impact of K and Distance Metrics: Distance Metrics: Euclidean distance is standard for continuous data, while Manhattan distance is often better for high-dimensional or grid-like data. Minkowski distance acts as a generalization of both. Small K (e.g., K=1): The decision boundary is highly irregular and captures local noise. This leads to low bias but high variance (overfitting) . Large K: The decision boundary becomes much smoother and generalized. However, if K is too large, it overlooks local patterns, leading to high bias and underfitting . A commonly used heuristic for K is $\\sqrt{N}$."
     ],
     "type": "question"
   },
@@ -1867,7 +1867,7 @@
     "title": "15. Explain how Decision Trees construct splits using Entropy, Gini Impurity, and Information Gain. State the mathematical formula for each metric.",
     "url": "question-bank.html?open=5m_q15",
     "chunks": [
-      "Decision Tree Splitting Metrics\nDecision Trees build classification models in the form of a tree structure by recursively splitting the dataset based on feature thresholds that maximize class separation purity.\n\nEntropy: Measures the amount of impurity, disorder, or uncertainty in a node. A node with equal instances of all classes has maximum entropy (1.0 for binary), while a pure node has an entropy of 0.\nFormula: $E = -\\sum_{i=1}^{c} p_i \\log_2(p_i)$, where $p_i$ is the probability of class $i$.\nInformation Gain: The reduction in entropy after splitting a dataset on an attribute. The tree algorithm calculates Information Gain for every possible split and chooses the one with the highest gain.\nFormula: $IG(S, A) = Entropy(S) - \\sum \\left( \\frac{|S_v|}{|S|} \\right) Entropy(S_v)$\nGini Impurity: An alternative to entropy used by the CART algorithm. It measures the probability of misclassifying a randomly chosen element if it were randomly labeled according to the class distribution. It is computationally faster than entropy because it doesn\\'t require logarithmic calculations.\nFormula: $Gini = 1 - \\sum_{i=1}^{c} p_i^2$"
+      "Decision Tree Splitting Metrics Decision Trees build classification models in the form of a tree structure by recursively splitting the dataset based on feature thresholds that maximize class separation purity. Entropy: Measures the amount of impurity, disorder, or uncertainty in a node. A node with equal instances of all classes has maximum entropy (1.0 for binary), while a pure node has an entropy of 0. Formula: $E = -\\sum_{i=1}^{c} p_i \\log_2(p_i)$, where $p_i$ is the probability of class $i$. Information Gain: The reduction in entropy after splitting a dataset on an attribute. The tree algorithm calculates Information Gain for every possible split and chooses the one with the highest gain. Formula: $IG(S, A) = Entropy(S) - \\sum \\left( \\frac{|S_v|}{|S|} \\right) Entropy(S_v)$ Gini Impurity: An alternative to entropy used by the CART algorithm. It measures the probability of misclassifying a randomly chosen element if it were randomly labeled according to the class distribution. It is computationally faster than entropy because it doesn\\'t require logarithmic calculations. Formula: $Gini = 1 - \\sum_{i=1}^{c} p_i^2$"
     ],
     "type": "question"
   },
@@ -1883,7 +1883,7 @@
     "title": "16. Explain the mathematical foundation of the Naive Bayes Classifier using Bayes\\' Theorem. List all key assumptions made by the model regarding feature independence.",
     "url": "question-bank.html?open=5m_q16",
     "chunks": [
-      "Naive Bayes Classifier\nThe Naive Bayes classifier is a probabilistic machine learning model based on Bayes\\' Theorem, widely used for text classification tasks like spam filtering.\nMathematical Foundation:\n\nBayes\\' Theorem states: $P(y|X) = \\frac{P(X|y) \\cdot P(y)}{P(X)}$\nWhere $P(y|X)$ is the posterior probability of class $y$ given features $X$.\n$P(X|y)$ is the likelihood, and $P(y)$ is the prior probability of class $y$.\nKey Assumptions (The \"Naive\" Aspect):\n\nThe core assumption is Conditional Independence of features. It assumes that the presence or absence of a particular feature (e.g., word A) is entirely independent of the presence of any other feature (e.g., word B), given the class variable.\nMathematically, the likelihood is decomposed as: $P(X|y) = P(x_1|y) \\times P(x_2|y) \\times \\dots \\times P(x_n|y)$.\nDespite this assumption almost never holding perfectly true in real-world data (words in sentences are usually correlated), Naive Bayes often performs surprisingly well in practice."
+      "Naive Bayes Classifier The Naive Bayes classifier is a probabilistic machine learning model based on Bayes\\' Theorem, widely used for text classification tasks like spam filtering. Mathematical Foundation: Bayes\\' Theorem states: $P(y|X) = \\frac{P(X|y) \\cdot P(y)}{P(X)}$ Where $P(y|X)$ is the posterior probability of class $y$ given features $X$. $P(X|y)$ is the likelihood, and $P(y)$ is the prior probability of class $y$. Key Assumptions (The \"Naive\" Aspect): The core assumption is Conditional Independence of features. It assumes that the presence or absence of a particular feature (e.g., word A) is entirely independent of the presence of any other feature (e.g., word B), given the class variable. Mathematically, the likelihood is decomposed as: $P(X|y) = P(x_1|y) \\times P(x_2|y) \\times \\dots \\times P(x_n|y)$. Despite this assumption almost never holding perfectly true in real-world data (words in sentences are usually correlated), Naive Bayes often performs surprisingly well in practice."
     ],
     "type": "question"
   },
@@ -1899,7 +1899,7 @@
     "title": "17. Describe Support Vector Machines (SVM). Explain the concepts of Hyperplanes, Support Vectors, Maximum Margin, and the difference between Hard Margin and Soft Margin (Hinge Loss).",
     "url": "question-bank.html?open=5m_q17",
     "chunks": [
-      "Support Vector Machines (SVM)\nSVM is a powerful algorithm that finds an optimal boundary between classes in an $N$-dimensional space.\n\nHyperplane: The decision boundary separating different classes. In 2D space, it\\'s a line; in 3D, a flat plane.\nSupport Vectors: The specific data points lying closest to the hyperplane. They act as pillars; if they are moved or removed, the position of the dividing hyperplane alters. The algorithm only cares about these vectors.\nMaximum Margin: SVM aims to find the hyperplane that maximizes the margin, which is the orthogonal distance between the hyperplane and the closest support vectors of each class. A wider margin implies better generalization.\nHard Margin vs. Soft Margin:\n- Hard Margin: Strictly separates classes without allowing any misclassification. Only works if data is perfectly linearly separable and is highly sensitive to outliers.\n- Soft Margin (Hinge Loss): Introduces a regularization parameter ($C$) and slack variables to allow a few misclassifications (errors). This yields a more robust, generalized boundary in the presence of noise or overlapping data."
+      "Support Vector Machines (SVM) SVM is a powerful algorithm that finds an optimal boundary between classes in an $N$-dimensional space. Hyperplane: The decision boundary separating different classes. In 2D space, it\\'s a line; in 3D, a flat plane. Support Vectors: The specific data points lying closest to the hyperplane. They act as pillars; if they are moved or removed, the position of the dividing hyperplane alters. The algorithm only cares about these vectors. Maximum Margin: SVM aims to find the hyperplane that maximizes the margin, which is the orthogonal distance between the hyperplane and the closest support vectors of each class. A wider margin implies better generalization. Hard Margin vs. Soft Margin: - Hard Margin: Strictly separates classes without allowing any misclassification. Only works if data is perfectly linearly separable and is highly sensitive to outliers. - Soft Margin (Hinge Loss): Introduces a regularization parameter ($C$) and slack variables to allow a few misclassifications (errors). This yields a more robust, generalized boundary in the presence of noise or overlapping data."
     ],
     "type": "question"
   },
@@ -1915,7 +1915,7 @@
     "title": "18. Explain the Kernel Trick in SVM. Describe how Linear, Polynomial, and Radial Basis Function (RBF) kernels enable the separation of non-linearly separable data.",
     "url": "question-bank.html?open=5m_q18",
     "chunks": [
-      "SVM Kernel Trick\nThe Kernel Trick: Standard SVM only plots linear decision boundaries. When data is non-linearly separable, the \"Kernel Trick\" mathematically transforms the data into a higher-dimensional space where a linear hyperplane can separate the classes. It computes the dot products between data points in the expanded space efficiently, without explicitly materializing the higher-dimensional coordinates.\nTypes of Kernels:\n\nLinear Kernel: Computes standard dot products. Used when data is linearly separable in its original feature space. Fastest to train.\nPolynomial Kernel: Maps data into a polynomial feature space of degree $d$. Useful for data whose boundaries curve or form distinct shapes, commonly used in image processing.\nRadial Basis Function (RBF) Kernel: The most popular kernel. It maps data into an infinite-dimensional space using exponential functions based on the distance between points (controlled by gamma $\\gamma$). It can create highly localized, complex, island-like decision boundaries around clusters of data."
+      "SVM Kernel Trick The Kernel Trick: Standard SVM only plots linear decision boundaries. When data is non-linearly separable, the \"Kernel Trick\" mathematically transforms the data into a higher-dimensional space where a linear hyperplane can separate the classes. It computes the dot products between data points in the expanded space efficiently, without explicitly materializing the higher-dimensional coordinates. Types of Kernels: Linear Kernel: Computes standard dot products. Used when data is linearly separable in its original feature space. Fastest to train. Polynomial Kernel: Maps data into a polynomial feature space of degree $d$. Useful for data whose boundaries curve or form distinct shapes, commonly used in image processing. Radial Basis Function (RBF) Kernel: The most popular kernel. It maps data into an infinite-dimensional space using exponential functions based on the distance between points (controlled by gamma $\\gamma$). It can create highly localized, complex, island-like decision boundaries around clusters of data."
     ],
     "type": "question"
   },
@@ -1931,7 +1931,7 @@
     "title": "19. Differentiate between Bagging and Boosting ensemble methods. Explain the voting/aggregation structure of Random Forests compared to sequential gradient boosting algorithms like XGBoost and AdaBoost.",
     "url": "question-bank.html?open=5m_q19",
     "chunks": [
-      "Bagging vs. Boosting Ensemble Methods\nEnsemble methods combine multiple weak machine learning models to create a single, highly accurate strong model.\nBagging (Bootstrap Aggregating) & Random Forest:\n\nConcept: Trains multiple models independently and in parallel on random subsets of the training data (drawn with replacement).\nAggregation: Predictions are aggregated via majority voting (classification) or averaging (regression).\nRandom Forest: Uses bagging specifically on Decision Trees. It also uses random subsets of features at each split. It dramatically reduces variance (overfitting).\nBoosting (XGBoost, AdaBoost):\n\nConcept: Trains multiple models sequentially. Each new model specifically focuses on correcting the errors (misclassified instances or residuals) made by the previous models.\nAdaBoost: Adjusts weights of data points, penalizing incorrect classifications more in the next round.\nGradient Boosting (XGBoost): Fits subsequent trees directly to the residual errors of the previous sequence.\nResult: Primarily reduces bias (underfitting) and creates highly accurate models, though it is more prone to overfitting than Bagging if not tuned carefully."
+      "Bagging vs. Boosting Ensemble Methods Ensemble methods combine multiple weak machine learning models to create a single, highly accurate strong model. Bagging (Bootstrap Aggregating) & Random Forest: Concept: Trains multiple models independently and in parallel on random subsets of the training data (drawn with replacement). Aggregation: Predictions are aggregated via majority voting (classification) or averaging (regression). Random Forest: Uses bagging specifically on Decision Trees. It also uses random subsets of features at each split. It dramatically reduces variance (overfitting). Boosting (XGBoost, AdaBoost): Concept: Trains multiple models sequentially . Each new model specifically focuses on correcting the errors (misclassified instances or residuals) made by the previous models. AdaBoost: Adjusts weights of data points, penalizing incorrect classifications more in the next round. Gradient Boosting (XGBoost): Fits subsequent trees directly to the residual errors of the previous sequence. Result: Primarily reduces bias (underfitting) and creates highly accurate models, though it is more prone to overfitting than Bagging if not tuned carefully."
     ],
     "type": "question"
   },
@@ -1947,7 +1947,7 @@
     "title": "20. Construct a standard Confusion Matrix. Write the mathematical formulas for Accuracy, Precision, Recall, and F1-Score, explaining why F1-Score is critical for class-imbalanced data.",
     "url": "question-bank.html?open=5m_q20",
     "chunks": [
-      "Confusion Matrix and Metrics\nConfusion Matrix: A $2 \\times 2$ table used to evaluate binary classification performance.\n\nTrue Positive (TP): Predicted Positive, Actual Positive\nTrue Negative (TN): Predicted Negative, Actual Negative\nFalse Positive (FP - Type I Error): Predicted Positive, Actual Negative\nFalse Negative (FN - Type II Error): Predicted Negative, Actual Positive\nEvaluation Formulas:\n\nAccuracy: $\\frac{TP + TN}{TP + TN + FP + FN}$. The overall correct predictions.\nPrecision: $\\frac{TP}{TP + FP}$. Out of all predicted positives, how many were actually positive?\nRecall (Sensitivity): $\\frac{TP}{TP + FN}$. Out of all actual positives, how many did the model find?\nF1-Score: $2 \\times \\frac{Precision \\times Recall}{Precision + Recall}$ (Harmonic Mean).\nImportance of F1-Score for Imbalanced Data:\nIf a dataset has 99% Negative and 1% Positive instances, a model predicting \"Negative\" every time achieves 99% accuracy but fails its actual purpose. F1-Score completely ignores True Negatives, focusing strictly on the model\\'s ability to correctly balance identifying the minority Positive class (Recall) without generating excessive false alarms (Precision)."
+      "Confusion Matrix and Metrics Confusion Matrix: A $2 \\times 2$ table used to evaluate binary classification performance. True Positive (TP): Predicted Positive, Actual Positive True Negative (TN): Predicted Negative, Actual Negative False Positive (FP - Type I Error): Predicted Positive, Actual Negative False Negative (FN - Type II Error): Predicted Negative, Actual Positive Evaluation Formulas: Accuracy: $\\frac{TP + TN}{TP + TN + FP + FN}$. The overall correct predictions. Precision: $\\frac{TP}{TP + FP}$. Out of all predicted positives, how many were actually positive? Recall (Sensitivity): $\\frac{TP}{TP + FN}$. Out of all actual positives, how many did the model find? F1-Score: $2 \\times \\frac{Precision \\times Recall}{Precision + Recall}$ (Harmonic Mean). Importance of F1-Score for Imbalanced Data: If a dataset has 99% Negative and 1% Positive instances, a model predicting \"Negative\" every time achieves 99% accuracy but fails its actual purpose. F1-Score completely ignores True Negatives, focusing strictly on the model\\'s ability to correctly balance identifying the minority Positive class (Recall) without generating excessive false alarms (Precision)."
     ],
     "type": "question"
   },
@@ -1963,7 +1963,7 @@
     "title": "A dataset contains the following observations of study hours (X) and examination marks (Y): X: 1, 2, 3, 4, 5. Y: 35, 40, 50, 55, 65. Find the simple linear regression equation y = b0 + b1x using the least-squares method. Predict the marks for a student who studies for 6 hours.",
     "url": "question-bank.html?open=num_q1",
     "chunks": [
-      "Step-by-step solution:\n\nXYX*YX^2\n\n135351\n\n240804\n\n3501509\n\n45522016\n\n56532525\n\nSum=15Sum=245Sum=810Sum=55\n\nn = 5\n\nx\u0304 = 15/5 = 3, \u0233 = 245/5 = 49\n\nb1 = (Sum(XY) - n*x\u0304*\u0233) / (Sum(X^2) - n*x\u0304^2) = (810 - 5*3*49) / (55 - 5*9) = (810 - 735) / (55 - 45) = 75 / 10 = 7.5\n\nb0 = \u0233 - b1*x\u0304 = 49 - 7.5*3 = 49 - 22.5 = 26.5\n\nRegression equation: y = 26.5 + 7.5x\n\nFor x = 6: y = 26.5 + 7.5(6) = 26.5 + 45 = 71.5"
+      "Step-by-step solution: X Y X*Y X^2 1 35 35 1 2 40 80 4 3 50 150 9 4 55 220 16 5 65 325 25 Sum=15 Sum=245 Sum=810 Sum=55 n = 5 x\u0304 = 15/5 = 3, \u0233 = 245/5 = 49 b1 = (Sum(XY) - n*x\u0304*\u0233) / (Sum(X^2) - n*x\u0304^2) = (810 - 5*3*49) / (55 - 5*9) = (810 - 735) / (55 - 45) = 75 / 10 = 7.5 b0 = \u0233 - b1*x\u0304 = 49 - 7.5*3 = 49 - 22.5 = 26.5 Regression equation: y = 26.5 + 7.5x For x = 6: y = 26.5 + 7.5(6) = 26.5 + 45 = 71.5"
     ],
     "type": "question"
   },
@@ -1979,7 +1979,7 @@
     "title": "For the model y = b0 + b1x, the following data are given: n = 5, sum(x) = 20, sum(y) = 75, sum(x^2) = 90, sum(x*y) = 340. Calculate the values of b0 and b1, and write the final regression equation.",
     "url": "question-bank.html?open=num_q2",
     "chunks": [
-      "Step-by-step solution:\n\nn = 5, \u03a3x = 20, \u03a3y = 75, \u03a3x\u00b2 = 90, \u03a3xy = 340\n\nx\u0304 = \u03a3x / n = 20 / 5 = 4\n\n\u0233 = \u03a3y / n = 75 / 5 = 15\n\nb1 = (\u03a3xy - n*x\u0304*\u0233) / (\u03a3x\u00b2 - n*x\u0304\u00b2) = (340 - 5*4*15) / (90 - 5*(4\u00b2)) = (340 - 300) / (90 - 80) = 40 / 10 = 4\n\nb0 = \u0233 - b1*x\u0304 = 15 - 4(4) = 15 - 16 = -1\n\nFinal regression equation: y = -1 + 4x"
+      "Step-by-step solution: n = 5, \u03a3x = 20, \u03a3y = 75, \u03a3x\u00b2 = 90, \u03a3xy = 340 x\u0304 = \u03a3x / n = 20 / 5 = 4 \u0233 = \u03a3y / n = 75 / 5 = 15 b1 = (\u03a3xy - n*x\u0304*\u0233) / (\u03a3x\u00b2 - n*x\u0304\u00b2) = (340 - 5*4*15) / (90 - 5*(4\u00b2)) = (340 - 300) / (90 - 80) = 40 / 10 = 4 b0 = \u0233 - b1*x\u0304 = 15 - 4(4) = 15 - 16 = -1 Final regression equation: y = -1 + 4x"
     ],
     "type": "question"
   },
@@ -1995,7 +1995,7 @@
     "title": "A fitted regression model is y = 12 + 4.5x, where x represents advertising expenditure in thousands of rupees and y represents sales in thousands of units. Calculate the predicted sales when advertising expenditure is 8,000 rupees. Also interpret the slope and intercept.",
     "url": "question-bank.html?open=num_q3",
     "chunks": [
-      "Step-by-step solution:\n\nModel: y = 12 + 4.5x\n\nx is in thousands, so for 8,000 rupees, x = 8.\n\nPredicted sales y = 12 + 4.5(8) = 12 + 36 = 48 (i.e., 48,000 units).\n\nInterpretation:\n\nSlope (b1 = 4.5): For every 1,000 rupees increase in advertising expenditure, sales increase by 4,500 units.\n\nIntercept (b0 = 12): If advertising expenditure is 0, the expected sales are 12,000 units."
+      "Step-by-step solution: Model: y = 12 + 4.5x x is in thousands, so for 8,000 rupees, x = 8. Predicted sales y = 12 + 4.5(8) = 12 + 36 = 48 (i.e., 48,000 units). Interpretation: Slope (b1 = 4.5): For every 1,000 rupees increase in advertising expenditure, sales increase by 4,500 units. Intercept (b0 = 12): If advertising expenditure is 0, the expected sales are 12,000 units."
     ],
     "type": "question"
   },
@@ -2011,7 +2011,7 @@
     "title": "Given the following observations: X: 2, 4, 6, 8, 10. Y: 4, 7, 8, 11, 14. Calculate x_bar, y_bar, the slope b1, and the intercept b0. Estimate Y when X = 12.",
     "url": "question-bank.html?open=num_q4",
     "chunks": [
-      "Step-by-step solution:\n\nXYX*YX^2\n\n2484\n\n472816\n\n684836\n\n8118864\n\n1014140100\n\nSum=30Sum=44Sum=312Sum=220\n\nn = 5\n\nx\u0304 = 30 / 5 = 6\n\n\u0233 = 44 / 5 = 8.8\n\nb1 = (\u03a3xy - n*x\u0304*\u0233) / (\u03a3x\u00b2 - n*x\u0304\u00b2) = (312 - 5*6*8.8) / (220 - 5*(6\u00b2)) = (312 - 264) / (220 - 180) = 48 / 40 = 1.2\n\nb0 = \u0233 - b1*x\u0304 = 8.8 - 1.2(6) = 8.8 - 7.2 = 1.6\n\nEquation: y = 1.6 + 1.2x\n\nEstimate Y when X = 12: y = 1.6 + 1.2(12) = 1.6 + 14.4 = 16"
+      "Step-by-step solution: X Y X*Y X^2 2 4 8 4 4 7 28 16 6 8 48 36 8 11 88 64 10 14 140 100 Sum=30 Sum=44 Sum=312 Sum=220 n = 5 x\u0304 = 30 / 5 = 6 \u0233 = 44 / 5 = 8.8 b1 = (\u03a3xy - n*x\u0304*\u0233) / (\u03a3x\u00b2 - n*x\u0304\u00b2) = (312 - 5*6*8.8) / (220 - 5*(6\u00b2)) = (312 - 264) / (220 - 180) = 48 / 40 = 1.2 b0 = \u0233 - b1*x\u0304 = 8.8 - 1.2(6) = 8.8 - 7.2 = 1.6 Equation: y = 1.6 + 1.2x Estimate Y when X = 12: y = 1.6 + 1.2(12) = 1.6 + 14.4 = 16"
     ],
     "type": "question"
   },
@@ -2027,7 +2027,7 @@
     "title": "Consider the multiple linear regression model: y = b0 + b1x1 + b2x2. The design matrix and target vector are: X = [[1, 1, 2], [1, 2, 1], [1, 3, 4], [1, 4, 1]], y = [5, 7, 12, 13]. Calculate X^T X, X^T y, and formulate the normal equations for estimating the regression coefficients.",
     "url": "question-bank.html?open=num_q5",
     "chunks": [
-      "Step-by-step solution:\n\nX = | 1 1 2 |\n    | 1 2 1 |\n    | 1 3 4 |\n    | 1 4 1 |\n\ny = | 5 |\n    | 7 |\n    | 12|\n    | 13|\n\nX^T = | 1 1 1 1 |\n      | 1 2 3 4 |\n      | 2 1 4 1 |\n\nX^T X = | 1+1+1+1     1+2+3+4     2+1+4+1   |   | 4  10 8  |\n        | 1+2+3+4     1+4+9+16    2+2+12+4  | = | 10 30 20 |\n        | 2+1+4+1     2+2+12+4    4+1+16+1  |   | 8  20 22 |\n\nX^T y = | 5+7+12+13       |   | 37 |\n        | 5+14+36+52      | = | 107|\n        | 10+7+48+13      |   | 78 |\n\nNormal equations (X^T X b = X^T y):\n\n4b0 + 10b1 + 8b2 = 37\n\n10b0 + 30b1 + 20b2 = 107\n\n8b0 + 20b1 + 22b2 = 78"
+      "Step-by-step solution: X = | 1 1 2 | | 1 2 1 | | 1 3 4 | | 1 4 1 | y = | 5 | | 7 | | 12| | 13| X^T = | 1 1 1 1 | | 1 2 3 4 | | 2 1 4 1 | X^T X = | 1+1+1+1 1+2+3+4 2+1+4+1 | | 4 10 8 | | 1+2+3+4 1+4+9+16 2+2+12+4 | = | 10 30 20 | | 2+1+4+1 2+2+12+4 4+1+16+1 | | 8 20 22 | X^T y = | 5+7+12+13 | | 37 | | 5+14+36+52 | = | 107| | 10+7+48+13 | | 78 | Normal equations (X^T X b = X^T y): 4b0 + 10b1 + 8b2 = 37 10b0 + 30b1 + 20b2 = 107 8b0 + 20b1 + 22b2 = 78"
     ],
     "type": "question"
   },
@@ -2043,7 +2043,7 @@
     "title": "A house-price model is given by: y = 20 + 3x1 + 5x2. Here, x1 is the number of rooms and x2 is the number of parking spaces. Predict the house price when the house has 4 rooms and 2 parking spaces. Assume the price is measured in lakh rupees.",
     "url": "question-bank.html?open=num_q6",
     "chunks": [
-      "Step-by-step solution:\n\nModel: y = 20 + 3x1 + 5x2\n\nGiven: x1 = 4, x2 = 2\n\nPredicted price: y = 20 + 3(4) + 5(2) = 20 + 12 + 10 = 42\n\nThe predicted house price is 42 lakh rupees."
+      "Step-by-step solution: Model: y = 20 + 3x1 + 5x2 Given: x1 = 4, x2 = 2 Predicted price: y = 20 + 3(4) + 5(2) = 20 + 12 + 10 = 42 The predicted house price is 42 lakh rupees ."
     ],
     "type": "question"
   },
@@ -2059,7 +2059,7 @@
     "title": "For a regression model with two independent variables, suppose: X^T X = [[4, 10, 6], [10, 30, 18], [6, 18, 14]], X^T y = [30, 84, 54]. Solve the normal equations to determine the regression coefficients, if the system has a unique solution.",
     "url": "question-bank.html?open=num_q7",
     "chunks": [
-      "Step-by-step solution:\n\nNormal equations: X^T X b = X^T y\n\n1) 4b0 + 10b1 + 6b2 = 30   => 2b0 + 5b1 + 3b2 = 15\n2) 10b0 + 30b1 + 18b2 = 84 => 5b0 + 15b1 + 9b2 = 42\n3) 6b0 + 18b1 + 14b2 = 54  => 3b0 + 9b1 + 7b2 = 27\n\nFrom (1), multiply by 3: 6b0 + 15b1 + 9b2 = 45.\n\nSubtract (2): (6b0 + 15b1 + 9b2) - (5b0 + 15b1 + 9b2) = 45 - 42\n\nb0 = 3\n\nSubstitute b0 = 3 into (1): 2(3) + 5b1 + 3b2 = 15 => 5b1 + 3b2 = 9 (Equation A)\n\nSubstitute b0 = 3 into (3): 3(3) + 9b1 + 7b2 = 27 => 9b1 + 7b2 = 18 (Equation B)\n\nFrom (A): b1 = (9 - 3b2)/5\n\nSubstitute in (B): 9((9 - 3b2)/5) + 7b2 = 18\n\n81/5 - (27/5)b2 + 35/5 b2 = 90/5\n\n81 + 8b2 = 90 => 8b2 = 9 => b2 = 1.125\n\nb1 = (9 - 3(1.125))/5 = (9 - 3.375)/5 = 5.625/5 = 1.125\n\nRegression coefficients: b0 = 3, b1 = 1.125, b2 = 1.125"
+      "Step-by-step solution: Normal equations: X^T X b = X^T y 1) 4b0 + 10b1 + 6b2 = 30 => 2b0 + 5b1 + 3b2 = 15 2) 10b0 + 30b1 + 18b2 = 84 => 5b0 + 15b1 + 9b2 = 42 3) 6b0 + 18b1 + 14b2 = 54 => 3b0 + 9b1 + 7b2 = 27 From (1), multiply by 3: 6b0 + 15b1 + 9b2 = 45. Subtract (2): (6b0 + 15b1 + 9b2) - (5b0 + 15b1 + 9b2) = 45 - 42 b0 = 3 Substitute b0 = 3 into (1): 2(3) + 5b1 + 3b2 = 15 => 5b1 + 3b2 = 9 (Equation A) Substitute b0 = 3 into (3): 3(3) + 9b1 + 7b2 = 27 => 9b1 + 7b2 = 18 (Equation B) From (A): b1 = (9 - 3b2)/5 Substitute in (B): 9((9 - 3b2)/5) + 7b2 = 18 81/5 - (27/5)b2 + 35/5 b2 = 90/5 81 + 8b2 = 90 => 8b2 = 9 => b2 = 1.125 b1 = (9 - 3(1.125))/5 = (9 - 3.375)/5 = 5.625/5 = 1.125 Regression coefficients: b0 = 3, b1 = 1.125, b2 = 1.125"
     ],
     "type": "question"
   },
@@ -2075,7 +2075,7 @@
     "title": "For the model y = b0 + b1x, use the dataset: X: 1, 2. Y: 3, 5. Start with b0 = 0, b1 = 0, and learning rate = 0.1. Using the MSE cost function, calculate the gradients and update both parameters once.",
     "url": "question-bank.html?open=num_q13",
     "chunks": [
-      "Step-by-step solution:\n\nModel: \u0177 = b0 + b1*x\n\nData: (x1=1, y1=3), (x2=2, y2=5)\n\nInitial parameters: b0 = 0, b1 = 0, \u03b1 = 0.1\n\nPredictions: \u01771 = 0, \u01772 = 0\n\nErrors: e1 = \u01771 - y1 = -3, e2 = \u01772 - y2 = -5\n\nGradients of MSE (1/n * \u03a3 error * x_i):\n\n\u2202J/\u2202b0 = (1/n) * \u03a3(\u0177_i - y_i) = 1/2 * (-3 - 5) = -8 / 2 = -4\n\n\u2202J/\u2202b1 = (1/n) * \u03a3(\u0177_i - y_i) * x_i = 1/2 * (-3*1 - 5*2) = 1/2 * (-13) = -6.5\n\nParameter updates:\n\nb0_new = b0 - \u03b1 * \u2202J/\u2202b0 = 0 - 0.1 * (-4) = 0.4\n\nb1_new = b1 - \u03b1 * \u2202J/\u2202b1 = 0 - 0.1 * (-6.5) = 0.65"
+      "Step-by-step solution: Model: \u0177 = b0 + b1*x Data: (x1=1, y1=3), (x2=2, y2=5) Initial parameters: b0 = 0, b1 = 0, \u03b1 = 0.1 Predictions: \u01771 = 0, \u01772 = 0 Errors: e1 = \u01771 - y1 = -3, e2 = \u01772 - y2 = -5 Gradients of MSE (1/n * \u03a3 error * x_i): \u2202J/\u2202b0 = (1/n) * \u03a3(\u0177_i - y_i) = 1/2 * (-3 - 5) = -8 / 2 = -4 \u2202J/\u2202b1 = (1/n) * \u03a3(\u0177_i - y_i) * x_i = 1/2 * (-3*1 - 5*2) = 1/2 * (-13) = -6.5 Parameter updates: b0_new = b0 - \u03b1 * \u2202J/\u2202b0 = 0 - 0.1 * (-4) = 0.4 b1_new = b1 - \u03b1 * \u2202J/\u2202b1 = 0 - 0.1 * (-6.5) = 0.65"
     ],
     "type": "question"
   },
@@ -2091,7 +2091,7 @@
     "title": "For a single sample x = 3, y = 9, the model is y = wx, and the loss is J = 1/2(wx - y)^2. Starting with w=0 and learning rate 0.05, perform three gradient descent iterations. Report the value of w and the loss after each iteration.",
     "url": "question-bank.html?open=num_q14",
     "chunks": [
-      "Step-by-step solution:\n\nx = 3, y = 9, w_0 = 0, \u03b1 = 0.05. Loss J = 1/2(wx - y)\u00b2\n\nGradient \u2202J/\u2202w = (wx - y)*x\n\nIteration 1:\n\nw = 0\n\nError = w*x - y = 0*3 - 9 = -9\n\nLoss J = 1/2 * (-9)\u00b2 = 40.5\n\nGradient = -9 * 3 = -27\n\nw_1 = w - \u03b1*Gradient = 0 - 0.05*(-27) = 1.35\n\nIteration 2:\n\nw = 1.35\n\nError = 1.35*3 - 9 = 4.05 - 9 = -4.95\n\nLoss J = 1/2 * (-4.95)\u00b2 = 12.25125\n\nGradient = -4.95 * 3 = -14.85\n\nw_2 = 1.35 - 0.05*(-14.85) = 1.35 + 0.7425 = 2.0925\n\nIteration 3:\n\nw = 2.0925\n\nError = 2.0925*3 - 9 = 6.2775 - 9 = -2.7225\n\nLoss J = 1/2 * (-2.7225)\u00b2 = 3.706\n\nGradient = -2.7225 * 3 = -8.1675\n\nw_3 = 2.0925 - 0.05*(-8.1675) = 2.0925 + 0.408375 = 2.500875\n\nFinal Results:\n\nIter 1: w = 1.35, J = 40.5\n\nIter 2: w = 2.0925, J = 12.25125\n\nIter 3: w = 2.500875, J = 3.706"
+      "Step-by-step solution: x = 3, y = 9, w_0 = 0, \u03b1 = 0.05. Loss J = 1/2(wx - y)\u00b2 Gradient \u2202J/\u2202w = (wx - y)*x Iteration 1: w = 0 Error = w*x - y = 0*3 - 9 = -9 Loss J = 1/2 * (-9)\u00b2 = 40.5 Gradient = -9 * 3 = -27 w_1 = w - \u03b1*Gradient = 0 - 0.05*(-27) = 1.35 Iteration 2: w = 1.35 Error = 1.35*3 - 9 = 4.05 - 9 = -4.95 Loss J = 1/2 * (-4.95)\u00b2 = 12.25125 Gradient = -4.95 * 3 = -14.85 w_2 = 1.35 - 0.05*(-14.85) = 1.35 + 0.7425 = 2.0925 Iteration 3: w = 2.0925 Error = 2.0925*3 - 9 = 6.2775 - 9 = -2.7225 Loss J = 1/2 * (-2.7225)\u00b2 = 3.706 Gradient = -2.7225 * 3 = -8.1675 w_3 = 2.0925 - 0.05*(-8.1675) = 2.0925 + 0.408375 = 2.500875 Final Results: Iter 1: w = 1.35, J = 40.5 Iter 2: w = 2.0925, J = 12.25125 Iter 3: w = 2.500875, J = 3.706"
     ],
     "type": "question"
   },
@@ -2107,7 +2107,8 @@
     "title": "A dataset is given by: X: 0, 1, 2, 3. Y: 1, 3, 9, 19. Fit a quadratic model of the form: y = b0 + b1x + b2x^2. Determine the coefficients using the least-squares method.",
     "url": "question-bank.html?open=num_q16",
     "chunks": [
-      "Step-by-step solution:\n\nModel: y = b0 + b1x + b2x\u00b2\n\nXYX\u00b2X\u00b3X\u2074XYX\u00b2Y\n\n0100000\n\n1311133\n\n2948161836\n\n3199278157171\n\n\u03a3=6\u03a3=32\u03a3=14\u03a3=36\u03a3=98\u03a3=78\u03a3=210\n\nNormal equations:\n\nn*b0 + \u03a3x*b1 + \u03a3x\u00b2*b2 = \u03a3y     =>  4b0 +  6b1 + 14b2 = 32   (1)\n\u03a3x*b0 + \u03a3x\u00b2*b1 + \u03a3x\u00b3*b2 = \u03a3xy  =>  6b0 + 14b1 + 36b2 = 78   (2)\n\u03a3x\u00b2*b0 + \u03a3x\u00b3*b1 + \u03a3x\u2074*b2 = \u03a3x\u00b2y=> 14b0 + 36b1 + 98b2 = 210  (3)\n\nSimplify (1): 2b0 + 3b1 + 7b2 = 16 => 2b0 = 16 - 3b1 - 7b2\n\nSubstitute into (2) [multiply by 3 -> 6b0 = 48 - 9b1 - 21b2]:\n\n48 - 9b1 - 21b2 + 14b1 + 36b2 = 78 => 5b1 + 15b2 = 30 => b1 + 3b2 = 6 => b1 = 6 - 3b2\n\nSubstitute into (3) [multiply (1) by 7 -> 14b0 + 21b1 + 49b2 = 112, subtract from (3)]:\n\n(14b0 + 36b1 + 98b2) - (14b0 + 21b1 + 49b2) = 210 - 112\n\n15b1 + 49b2 = 98\n\nSubstitute b1 = 6 - 3b2:\n\n15(6 - 3b2) + 49b2 = 98 => 90 - 45b2 + 49b2 = 98 => 4b2 = 8 => b2 = 2\n\nThen b1 = 6 - 3(2) = 0\n\nAnd 2b0 = 16 - 3(0) - 7(2) = 16 - 14 = 2 => b0 = 1\n\nQuadratic model: y = 1 + 2x\u00b2"
+      "Step-by-step solution: Model: y = b0 + b1x + b2x\u00b2 X Y X\u00b2 X\u00b3 X\u2074 XY X\u00b2Y 0 1 0 0 0 0 0 1 3 1 1 1 3 3 2 9 4 8 16 18 36 3 19 9 27 81 57 171 \u03a3=6 \u03a3=32 \u03a3=14 \u03a3=36 \u03a3=98 \u03a3=78 \u03a3=210 Normal equations: n*b0 + \u03a3x*b1 + \u03a3x\u00b2*b2 = \u03a3y => 4b0 + 6b1 + 14b2 = 32 (1) \u03a3x*b0 + \u03a3x\u00b2*b1 + \u03a3x\u00b3*b2 = \u03a3xy => 6b0 + 14b1 + 36b2 = 78 (2) \u03a3x\u00b2*b0 + \u03a3x\u00b3*b1 + \u03a3x\u2074*b2 = \u03a3x\u00b2y=> 14b0 + 36b1 + 98b2 = 210 (3) Simplify (1): 2b0 + 3b1 + 7b2 = 16 => 2b0 = 16 - 3b1 - 7b2 Substitute into (2) [multiply by 3 -> 6b0 = 48 - 9b1 - 21b2]: 48 - 9b1 - 21b2 + 14b1 + 36b2 = 78 => 5b1 + 15b2 = 30 => b1 + 3b2 = 6 => b1 = 6 - 3b2 Substitute into (3) [multiply (1) by 7 -> 14b0 + 21b1 + 49b2 = 112, subtract from (3)]: (14b0 + 36b1 + 98b2) - (14b0 + 21b1 + 49b2) = 210 - 112 15b1 + 49b2 = 98 Substitute",
+      "b1 = 6 - 3b2: 15(6 - 3b2) + 49b2 = 98 => 90 - 45b2 + 49b2 = 98 => 4b2 = 8 => b2 = 2 Then b1 = 6 - 3(2) = 0 And 2b0 = 16 - 3(0) - 7(2) = 16 - 14 = 2 => b0 = 1 Quadratic model: y = 1 + 2x\u00b2"
     ],
     "type": "question"
   },
@@ -2123,7 +2124,7 @@
     "title": "Actual and predicted values of a regression model are: Actual (Y): 10, 15, 20, 25, 30. Predicted (Y_hat): 12, 13, 18, 28, 27. Calculate the MAE, MSE, and RMSE.",
     "url": "question-bank.html?open=num_q28",
     "chunks": [
-      "Step-by-step solution:\n\nYY_hatError (e)|e|e\u00b2\n\n1012-224\n\n1513224\n\n2018224\n\n2528-339\n\n3027339\n\nSum1230\n\nn = 5\n\nMAE (Mean Absolute Error): \u03a3|e| / n = 12 / 5 = 2.4\n\nMSE (Mean Squared Error): \u03a3e\u00b2 / n = 30 / 5 = 6.0\n\nRMSE (Root Mean Squared Error): \u221aMSE = \u221a6.0 \u2248 2.449"
+      "Step-by-step solution: Y Y_hat Error (e) |e| e\u00b2 10 12 -2 2 4 15 13 2 2 4 20 18 2 2 4 25 28 -3 3 9 30 27 3 3 9 Sum 12 30 n = 5 MAE (Mean Absolute Error): \u03a3|e| / n = 12 / 5 = 2.4 MSE (Mean Squared Error): \u03a3e\u00b2 / n = 30 / 5 = 6.0 RMSE (Root Mean Squared Error): \u221aMSE = \u221a6.0 \u2248 2.449"
     ],
     "type": "question"
   },
@@ -2139,7 +2140,7 @@
     "title": "A logistic regression model produces the linear score z=2.5. Calculate the probability using the sigmoid function. If the classification threshold is 0.5, determine the predicted class.",
     "url": "question-bank.html?open=num_u3_q1",
     "chunks": [
-      "Step-by-step solution:\n\nz = 2.5\n\nSigmoid function: P = 1 / (1 + e^(-z))\n\nP = 1 / (1 + e^(-2.5)) \u2248 1 / (1 + 0.082) \u2248 1 / 1.082 \u2248 0.924\n\nSince P = 0.924 > 0.5 (threshold), the predicted class is 1."
+      "Step-by-step solution: z = 2.5 Sigmoid function: P = 1 / (1 + e^(-z)) P = 1 / (1 + e^(-2.5)) \u2248 1 / (1 + 0.082) \u2248 1 / 1.082 \u2248 0.924 Since P = 0.924 > 0.5 (threshold), the predicted class is 1 ."
     ],
     "type": "question"
   },
@@ -2155,7 +2156,7 @@
     "title": "For a sample, the logistic regression model produces z=-1.8. Calculate the sigmoid probability and determine whether the sample belongs to class 0 or class 1 using a threshold of 0.5.",
     "url": "question-bank.html?open=num_u3_q2",
     "chunks": [
-      "Step-by-step solution:\n\nz = -1.8\n\nSigmoid function: P = 1 / (1 + e^(-z))\n\nP = 1 / (1 + e^(1.8)) \u2248 1 / (1 + 6.0496) \u2248 1 / 7.0496 \u2248 0.1418\n\nSince P = 0.1418 Class 0."
+      "Step-by-step solution: z = -1.8 Sigmoid function: P = 1 / (1 + e^(-z)) P = 1 / (1 + e^(1.8)) \u2248 1 / (1 + 6.0496) \u2248 1 / 7.0496 \u2248 0.1418 Since P = 0.1418 < 0.5 (threshold), the sample belongs to Class 0 ."
     ],
     "type": "question"
   },
@@ -2171,7 +2172,7 @@
     "title": "Consider the logistic regression model z = -3 + 0.8x1 + 1.2x2. For a data point x1=2, x2=1: Calculate z, calculate the sigmoid probability, predict the class using threshold 0.5.",
     "url": "question-bank.html?open=num_u3_q3",
     "chunks": [
-      "Step-by-step solution:\n\nModel: z = -3 + 0.8*x1 + 1.2*x2\n\nFor x1 = 2, x2 = 1:\n\nz = -3 + 0.8(2) + 1.2(1) = -3 + 1.6 + 1.2 = -0.2\n\nSigmoid probability: P = 1 / (1 + e^(-z)) = 1 / (1 + e^(0.2)) \u2248 1 / (1 + 1.2214) \u2248 1 / 2.2214 \u2248 0.450\n\nSince P = 0.450 0."
+      "Step-by-step solution: Model: z = -3 + 0.8*x1 + 1.2*x2 For x1 = 2, x2 = 1: z = -3 + 0.8(2) + 1.2(1) = -3 + 1.6 + 1.2 = -0.2 Sigmoid probability: P = 1 / (1 + e^(-z)) = 1 / (1 + e^(0.2)) \u2248 1 / (1 + 1.2214) \u2248 1 / 2.2214 \u2248 0.450 Since P = 0.450 < 0.5, predicted class is 0 ."
     ],
     "type": "question"
   },
@@ -2187,7 +2188,7 @@
     "title": "A binary classification model predicts the following probabilities for four observations: Actual y: 1, 1, 0, 0. Predicted p: 0.9, 0.7, 0.2, 0.4. Calculate the binary cross-entropy/log-loss.",
     "url": "question-bank.html?open=num_u3_q4",
     "chunks": [
-      "Step-by-step solution:\n\nLog-loss = -1/n \u03a3 [y*ln(p) + (1-y)*ln(1-p)]\n\nObs 1: y=1, p=0.9 => 1*ln(0.9) = -0.1054\n\nObs 2: y=1, p=0.7 => 1*ln(0.7) = -0.3567\n\nObs 3: y=0, p=0.2 => 1*ln(0.8) = -0.2231\n\nObs 4: y=0, p=0.4 => 1*ln(0.6) = -0.5108\n\nSum = -0.1054 - 0.3567 - 0.2231 - 0.5108 = -1.196\n\nLog-loss = -1/4 * (-1.196) = 0.299"
+      "Step-by-step solution: Log-loss = -1/n \u03a3 [y*ln(p) + (1-y)*ln(1-p)] Obs 1: y=1, p=0.9 => 1*ln(0.9) = -0.1054 Obs 2: y=1, p=0.7 => 1*ln(0.7) = -0.3567 Obs 3: y=0, p=0.2 => 1*ln(0.8) = -0.2231 Obs 4: y=0, p=0.4 => 1*ln(0.6) = -0.5108 Sum = -0.1054 - 0.3567 - 0.2231 - 0.5108 = -1.196 Log-loss = -1/4 * (-1.196) = 0.299"
     ],
     "type": "question"
   },
@@ -2203,7 +2204,7 @@
     "title": "KNN - Consider the following training data: Point A: (1,1, C=0), B: (2,2, C=0), C: (3,2, C=1), D: (5,4, C=1), E: (6,5, C=1). For query Q=(4,3), calculate distance from every point and classify using K=3.",
     "url": "question-bank.html?open=num_u3_q5",
     "chunks": [
-      "Step-by-step solution:\n\nDistances from Q(4,3) using Euclidean distance d = \u221a((x2-x1)\u00b2 + (y2-y1)\u00b2):\n\nd(A, Q) = \u221a((4-1)\u00b2 + (3-1)\u00b2) = \u221a(9 + 4) = \u221a13 \u2248 3.605\n\nd(B, Q) = \u221a((4-2)\u00b2 + (3-2)\u00b2) = \u221a(4 + 1) = \u221a5 \u2248 2.236\n\nd(C, Q) = \u221a((4-3)\u00b2 + (3-2)\u00b2) = \u221a(1 + 1) = \u221a2 \u2248 1.414\n\nd(D, Q) = \u221a((4-5)\u00b2 + (3-4)\u00b2) = \u221a(1 + 1) = \u221a2 \u2248 1.414\n\nd(E, Q) = \u221a((4-6)\u00b2 + (3-5)\u00b2) = \u221a(4 + 4) = \u221a8 \u2248 2.828\n\nThe K=3 nearest neighbors are C (d=1.414, Class=1), D (d=1.414, Class=1), and B (d=2.236, Class=0).\n\nClasses of 3 NN: {1, 1, 0}. Majority vote is Class 1."
+      "Step-by-step solution: Distances from Q(4,3) using Euclidean distance d = \u221a((x2-x1)\u00b2 + (y2-y1)\u00b2): d(A, Q) = \u221a((4-1)\u00b2 + (3-1)\u00b2) = \u221a(9 + 4) = \u221a13 \u2248 3.605 d(B, Q) = \u221a((4-2)\u00b2 + (3-2)\u00b2) = \u221a(4 + 1) = \u221a5 \u2248 2.236 d(C, Q) = \u221a((4-3)\u00b2 + (3-2)\u00b2) = \u221a(1 + 1) = \u221a2 \u2248 1.414 d(D, Q) = \u221a((4-5)\u00b2 + (3-4)\u00b2) = \u221a(1 + 1) = \u221a2 \u2248 1.414 d(E, Q) = \u221a((4-6)\u00b2 + (3-5)\u00b2) = \u221a(4 + 4) = \u221a8 \u2248 2.828 The K=3 nearest neighbors are C (d=1.414, Class=1), D (d=1.414, Class=1), and B (d=2.236, Class=0). Classes of 3 NN: {1, 1, 0}. Majority vote is Class 1 ."
     ],
     "type": "question"
   },
@@ -2219,7 +2220,7 @@
     "title": "For points P = (2,5), Q = (7,9), calculate: Euclidean distance, Manhattan distance, Squared Euclidean distance. Explain which metric gives the smallest numerical value.",
     "url": "question-bank.html?open=num_u3_q6",
     "chunks": [
-      "Step-by-step solution:\n\nEuclidean distance: \u221a((7-2)\u00b2 + (9-5)\u00b2) = \u221a(5\u00b2 + 4\u00b2) = \u221a(25 + 16) = \u221a41 \u2248 6.40\n\nManhattan distance: |7-2| + |9-5| = 5 + 4 = 9\n\nSquared Euclidean: (7-2)\u00b2 + (9-5)\u00b2 = 25 + 16 = 41\n\nEuclidean distance gives the smallest numerical value (6.40) because it measures the direct straight-line distance, whereas Manhattan measures along grid lines and Squared Euclidean squares the Euclidean distance (which is > 1 here)."
+      "Step-by-step solution: Euclidean distance: \u221a((7-2)\u00b2 + (9-5)\u00b2) = \u221a(5\u00b2 + 4\u00b2) = \u221a(25 + 16) = \u221a41 \u2248 6.40 Manhattan distance: |7-2| + |9-5| = 5 + 4 = 9 Squared Euclidean: (7-2)\u00b2 + (9-5)\u00b2 = 25 + 16 = 41 Euclidean distance gives the smallest numerical value (6.40) because it measures the direct straight-line distance, whereas Manhattan measures along grid lines and Squared Euclidean squares the Euclidean distance (which is > 1 here)."
     ],
     "type": "question"
   },
@@ -2235,7 +2236,7 @@
     "title": "Decision tree: A dataset contains 10 samples: 6 samples belong to Class A, 4 samples belong to Class B. Calculate the entropy.",
     "url": "question-bank.html?open=num_u3_q7",
     "chunks": [
-      "Step-by-step solution:\n\nTotal samples n = 10, Class A = 6, Class B = 4.\n\np_A = 6/10 = 0.6, p_B = 4/10 = 0.4\n\nEntropy H = -p_A * log2(p_A) - p_B * log2(p_B)\n\nH = -0.6 * log2(0.6) - 0.4 * log2(0.4)\n\nH \u2248 -0.6 * (-0.737) - 0.4 * (-1.322)\n\nH \u2248 0.4422 + 0.5288 = 0.971"
+      "Step-by-step solution: Total samples n = 10, Class A = 6, Class B = 4. p_A = 6/10 = 0.6, p_B = 4/10 = 0.4 Entropy H = -p_A * log2(p_A) - p_B * log2(p_B) H = -0.6 * log2(0.6) - 0.4 * log2(0.4) H \u2248 -0.6 * (-0.737) - 0.4 * (-1.322) H \u2248 0.4422 + 0.5288 = 0.971"
     ],
     "type": "question"
   },
@@ -2251,7 +2252,7 @@
     "title": "Information gain: Parent 10 (6+, 4-). Left child: 5 (4+, 1-). Right child: 5 (2+, 3-). Calculate: Entropy of parent, left child, right child, Weighted entropy, Information Gain.",
     "url": "question-bank.html?open=num_u3_q8",
     "chunks": [
-      "Step-by-step solution:\n\nParent node: 6+, 4-. Total = 10.\n\nEntropy(Parent) = -0.6*log2(0.6) - 0.4*log2(0.4) \u2248 0.971\n\nLeft child: 4+, 1-. Total = 5.\n\nEntropy(Left) = -0.8*log2(0.8) - 0.2*log2(0.2) \u2248 0.2575 + 0.4644 = 0.722\n\nRight child: 2+, 3-. Total = 5.\n\nEntropy(Right) = -0.4*log2(0.4) - 0.6*log2(0.6) \u2248 0.971\n\nWeighted entropy:\n\n(5/10)*0.722 + (5/10)*0.971 = 0.361 + 0.4855 = 0.8465\n\nInformation Gain:\n\nEntropy(Parent) - Weighted entropy = 0.971 - 0.8465 = 0.1245"
+      "Step-by-step solution: Parent node: 6+, 4-. Total = 10. Entropy(Parent) = -0.6*log2(0.6) - 0.4*log2(0.4) \u2248 0.971 Left child: 4+, 1-. Total = 5. Entropy(Left) = -0.8*log2(0.8) - 0.2*log2(0.2) \u2248 0.2575 + 0.4644 = 0.722 Right child: 2+, 3-. Total = 5. Entropy(Right) = -0.4*log2(0.4) - 0.6*log2(0.6) \u2248 0.971 Weighted entropy: (5/10)*0.722 + (5/10)*0.971 = 0.361 + 0.4855 = 0.8465 Information Gain: Entropy(Parent) - Weighted entropy = 0.971 - 0.8465 = 0.1245"
     ],
     "type": "question"
   },
@@ -2267,7 +2268,7 @@
     "title": "A parent node has 20 observations: 12 Class A, 8 Class B. A proposed split produces: Left: 8 A, 2 B. Right: 4 A, 6 B. Calculate the weighted Gini impurity of the split.",
     "url": "question-bank.html?open=num_u3_q9",
     "chunks": [
-      "Step-by-step solution:\n\nLeft node: 8 A, 2 B (Total 10)\n\nGini(Left) = 1 - (8/10)\u00b2 - (2/10)\u00b2 = 1 - 0.64 - 0.04 = 0.32\n\nRight node: 4 A, 6 B (Total 10)\n\nGini(Right) = 1 - (4/10)\u00b2 - (6/10)\u00b2 = 1 - 0.16 - 0.36 = 0.48\n\nWeighted Gini:\n\nWeight_Left = 10/20 = 0.5, Weight_Right = 10/20 = 0.5\n\nWeighted Gini = (0.5 * 0.32) + (0.5 * 0.48) = 0.16 + 0.24 = 0.40"
+      "Step-by-step solution: Left node: 8 A, 2 B (Total 10) Gini(Left) = 1 - (8/10)\u00b2 - (2/10)\u00b2 = 1 - 0.64 - 0.04 = 0.32 Right node: 4 A, 6 B (Total 10) Gini(Right) = 1 - (4/10)\u00b2 - (6/10)\u00b2 = 1 - 0.16 - 0.36 = 0.48 Weighted Gini: Weight_Left = 10/20 = 0.5, Weight_Right = 10/20 = 0.5 Weighted Gini = (0.5 * 0.32) + (0.5 * 0.48) = 0.16 + 0.24 = 0.40"
     ],
     "type": "question"
   },
@@ -2283,7 +2284,7 @@
     "title": "Suppose a spam classifier has: P(Spam) = 0.4, P(NotSpam) = 0.6. For an email containing words W1 and W2: P(W1|Spam)=0.7, P(W2|Spam)=0.8, P(W1|NotSpam)=0.2, P(W2|NotSpam)=0.3. Using Naive Bayes, determine whether the email is Spam or Not Spam.",
     "url": "question-bank.html?open=num_u3_q10",
     "chunks": [
-      "Step-by-step solution:\n\nWe calculate the unnormalized posterior probabilities:\n\nFor Spam:\n\nScore(Spam) = P(Spam) * P(W1|Spam) * P(W2|Spam)\n\nScore(Spam) = 0.4 * 0.7 * 0.8 = 0.28 * 0.8 = 0.224\n\nFor Not Spam:\n\nScore(NotSpam) = P(NotSpam) * P(W1|NotSpam) * P(W2|NotSpam)\n\nScore(NotSpam) = 0.6 * 0.2 * 0.3 = 0.12 * 0.3 = 0.036\n\nSince 0.224 > 0.036, the email is classified as Spam."
+      "Step-by-step solution: We calculate the unnormalized posterior probabilities: For Spam: Score(Spam) = P(Spam) * P(W1|Spam) * P(W2|Spam) Score(Spam) = 0.4 * 0.7 * 0.8 = 0.28 * 0.8 = 0.224 For Not Spam: Score(NotSpam) = P(NotSpam) * P(W1|NotSpam) * P(W2|NotSpam) Score(NotSpam) = 0.6 * 0.2 * 0.3 = 0.12 * 0.3 = 0.036 Since 0.224 > 0.036, the email is classified as Spam ."
     ],
     "type": "question"
   },
@@ -2299,7 +2300,7 @@
     "title": "Support vector machine: An SVM hyperplane is 2x1 + 3x2 - 6 = 0. Determine the class of the following points using f(x) = w^Tx + b and the rule f(x)>0 -> Class +1, f(x)<0 -> Class -1. Points: P1 = (1,1), P2 = (2,2), P3 = (0,1).",
     "url": "question-bank.html?open=num_u3_q11",
     "chunks": [
-      "Step-by-step solution:\n\nf(x1, x2) = 2x1 + 3x2 - 6\n\nP1 (1, 1): f(1, 1) = 2(1) + 3(1) - 6 = 2 + 3 - 6 = -1.\nSince -1 -1.\n\nP2 (2, 2): f(2, 2) = 2(2) + 3(2) - 6 = 4 + 6 - 6 = 4.\nSince 4 > 0, Class is +1.\n\nP3 (0, 1): f(0, 1) = 2(0) + 3(1) - 6 = 0 + 3 - 6 = -3.\nSince -3 -1."
+      "Step-by-step solution: f(x1, x2) = 2x1 + 3x2 - 6 P1 (1, 1): f(1, 1) = 2(1) + 3(1) - 6 = 2 + 3 - 6 = -1. Since -1 < 0, Class is -1 . P2 (2, 2): f(2, 2) = 2(2) + 3(2) - 6 = 4 + 6 - 6 = 4. Since 4 > 0, Class is +1 . P3 (0, 1): f(0, 1) = 2(0) + 3(1) - 6 = 0 + 3 - 6 = -3. Since -3 < 0, Class is -1 ."
     ],
     "type": "question"
   },
@@ -2315,7 +2316,7 @@
     "title": "Three regression trees predict the house price as: Tree 1 = 50 lakh, Tree 2 = 55 lakh, Tree 3 = 52 lakh. Calculate the Random Forest prediction using averaging.",
     "url": "question-bank.html?open=num_u3_q12",
     "chunks": [
-      "Step-by-step solution:\n\nRandom forest regression uses the average of the predictions of the individual trees.\n\nPrediction = (50 + 55 + 52) / 3 = 157 / 3 = 52.33 lakh"
+      "Step-by-step solution: Random forest regression uses the average of the predictions of the individual trees. Prediction = (50 + 55 + 52) / 3 = 157 / 3 = 52.33 lakh"
     ],
     "type": "question"
   },
@@ -2331,7 +2332,7 @@
     "title": "Three regression trees have predictions and weights: T1: Pred=100, W=0.2; T2: Pred=120, W=0.5; T3: Pred=110, W=0.3. Calculate the weighted ensemble prediction.",
     "url": "question-bank.html?open=num_u3_q13",
     "chunks": [
-      "Step-by-step solution:\n\nWeighted Prediction = (Pred1 * W1) + (Pred2 * W2) + (Pred3 * W3)\n\nSince sum of weights = 0.2 + 0.5 + 0.3 = 1.0, we just calculate the dot product.\n\nPrediction = (100 * 0.2) + (120 * 0.5) + (110 * 0.3)\n\nPrediction = 20 + 60 + 33 = 113"
+      "Step-by-step solution: Weighted Prediction = (Pred1 * W1) + (Pred2 * W2) + (Pred3 * W3) Since sum of weights = 0.2 + 0.5 + 0.3 = 1.0, we just calculate the dot product. Prediction = (100 * 0.2) + (120 * 0.5) + (110 * 0.3) Prediction = 20 + 60 + 33 = 113"
     ],
     "type": "question"
   },
@@ -2347,7 +2348,7 @@
     "title": "Multiple boosting rounds: Initial prediction: F0(x) = 20. Three weak learners produce corrections: h1(x)=10, h2(x)=6, h3(x)=4 with learning rate = 0.2. Calculate F3(x).",
     "url": "question-bank.html?open=num_u3_q14",
     "chunks": [
-      "Step-by-step solution:\n\nF_m(x) = F_{m-1}(x) + \u03b1 * h_m(x)\n\nF0(x) = 20\n\nF1(x) = F0(x) + 0.2 * h1(x) = 20 + 0.2(10) = 20 + 2 = 22\n\nF2(x) = F1(x) + 0.2 * h2(x) = 22 + 0.2(6) = 22 + 1.2 = 23.2\n\nF3(x) = F2(x) + 0.2 * h3(x) = 23.2 + 0.2(4) = 23.2 + 0.8 = 24.0\n\nThe final prediction is 24.0."
+      "Step-by-step solution: F_m(x) = F_{m-1}(x) + \u03b1 * h_m(x) F0(x) = 20 F1(x) = F0(x) + 0.2 * h1(x) = 20 + 0.2(10) = 20 + 2 = 22 F2(x) = F1(x) + 0.2 * h2(x) = 22 + 0.2(6) = 22 + 1.2 = 23.2 F3(x) = F2(x) + 0.2 * h3(x) = 23.2 + 0.2(4) = 23.2 + 0.8 = 24.0 The final prediction is 24.0 ."
     ],
     "type": "question"
   },
@@ -2363,7 +2364,7 @@
     "title": "A weak classifier correctly classifies 80 out of 100 training samples. Calculate its error rate and classifier weight.",
     "url": "question-bank.html?open=num_u3_q15",
     "chunks": [
-      "Step-by-step solution:\n\nTotal samples = 100, Correct = 80, Incorrect = 20.\n\nError rate (\u03b5): 20 / 100 = 0.2\n\nClassifier weight (\u03b1): calculated using the Adaboost formula: \u03b1 = 0.5 * ln((1 - \u03b5) / \u03b5)\n\n\u03b1 = 0.5 * ln((1 - 0.2) / 0.2) = 0.5 * ln(0.8 / 0.2) = 0.5 * ln(4)\n\n\u03b1 = 0.5 * 1.386 = 0.693"
+      "Step-by-step solution: Total samples = 100, Correct = 80, Incorrect = 20. Error rate (\u03b5): 20 / 100 = 0.2 Classifier weight (\u03b1): calculated using the Adaboost formula: \u03b1 = 0.5 * ln((1 - \u03b5) / \u03b5) \u03b1 = 0.5 * ln((1 - 0.2) / 0.2) = 0.5 * ln(0.8 / 0.2) = 0.5 * ln(4) \u03b1 = 0.5 * 1.386 = 0.693"
     ],
     "type": "question"
   },
@@ -2379,7 +2380,7 @@
     "title": "A binary classifier produces: TP=80, TN=70, FP=10, FN=20. Calculate: Accuracy, Precision, Recall, F1-score.",
     "url": "question-bank.html?open=num_u3_q16",
     "chunks": [
-      "Step-by-step solution:\n\nTotal samples = TP + TN + FP + FN = 80 + 70 + 10 + 20 = 180\n\nAccuracy: (TP + TN) / Total = (80 + 70) / 180 = 150 / 180 \u2248 0.833 (83.3%)\n\nPrecision: TP / (TP + FP) = 80 / (80 + 10) = 80 / 90 \u2248 0.889 (88.9%)\n\nRecall: TP / (TP + FN) = 80 / (80 + 20) = 80 / 100 = 0.800 (80.0%)\n\nF1-score: 2 * (Precision * Recall) / (Precision + Recall) = 2 * (0.889 * 0.8) / (0.889 + 0.8) \u2248 2 * 0.711 / 1.689 \u2248 1.422 / 1.689 \u2248 0.842"
+      "Step-by-step solution: Total samples = TP + TN + FP + FN = 80 + 70 + 10 + 20 = 180 Accuracy: (TP + TN) / Total = (80 + 70) / 180 = 150 / 180 \u2248 0.833 (83.3%) Precision: TP / (TP + FP) = 80 / (80 + 10) = 80 / 90 \u2248 0.889 (88.9%) Recall: TP / (TP + FN) = 80 / (80 + 20) = 80 / 100 = 0.800 (80.0%) F1-score: 2 * (Precision * Recall) / (Precision + Recall) = 2 * (0.889 * 0.8) / (0.889 + 0.8) \u2248 2 * 0.711 / 1.689 \u2248 1.422 / 1.689 \u2248 0.842"
     ],
     "type": "question"
   },
@@ -2395,7 +2396,7 @@
     "title": "A binary classification model gives the following probabilities: Sample 1(A=1, P=0.9), 2(0, 0.2), 3(1, 0.7), 4(0, 0.6), 5(1, 0.8), 6(0, 0.1), 7(1, 0.4), 8(0, 0.3). Using threshold 0.5: Determine predicted classes, Construct the confusion matrix, Calculate accuracy, precision, recall, F1-score, and log-loss.",
     "url": "question-bank.html?open=num_u3_q17",
     "chunks": [
-      "Step-by-step solution:\n\nPredictions (Threshold = 0.5):\n\nS1: Act=1, Prob=0.9 -> Pred=1 (TP)\n\nS2: Act=0, Prob=0.2 -> Pred=0 (TN)\n\nS3: Act=1, Prob=0.7 -> Pred=1 (TP)\n\nS4: Act=0, Prob=0.6 -> Pred=1 (FP)\n\nS5: Act=1, Prob=0.8 -> Pred=1 (TP)\n\nS6: Act=0, Prob=0.1 -> Pred=0 (TN)\n\nS7: Act=1, Prob=0.4 -> Pred=0 (FN)\n\nS8: Act=0, Prob=0.3 -> Pred=0 (TN)\n\nConfusion Matrix:\n\nPredicted 1Predicted 0\n\nActual 1TP = 3FN = 1\n\nActual 0FP = 1TN = 3\n\nMetrics:\n\nAccuracy = (3+3)/8 = 6/8 = 0.75\n\nPrecision = 3/(3+1) = 3/4 = 0.75\n\nRecall = 3/(3+1) = 3/4 = 0.75\n\nF1-score = 2(0.75*0.75)/(0.75+0.75) = 0.75\n\nLog-loss: -1/8 * \u03a3 [y*ln(p) + (1-y)*ln(1-p)]\n\nSum = ln(0.9) + ln(0.8) + ln(0.7) + ln(0.4) + ln(0.8) + ln(0.9) + ln(0.4) + ln(0.7)\n\n(S1=1:ln(0.9), S2=0:ln(0.8), S3=1:ln(0.7), S4=0:ln(0.4), S5=1:ln(0.8), S6=0:ln(0.9), S7=1:ln(0.4), S8=0:ln(0.7))\n\nSum \u2248 -0.105 - 0.223 - 0.357 - 0.916 - 0.223 - 0.105 - 0.916 - 0.357 = -3.202\n\nLog-loss = -1/8 * (-3.202) = 0.400"
+      "Step-by-step solution: Predictions (Threshold = 0.5): S1: Act=1, Prob=0.9 -> Pred=1 (TP) S2: Act=0, Prob=0.2 -> Pred=0 (TN) S3: Act=1, Prob=0.7 -> Pred=1 (TP) S4: Act=0, Prob=0.6 -> Pred=1 (FP) S5: Act=1, Prob=0.8 -> Pred=1 (TP) S6: Act=0, Prob=0.1 -> Pred=0 (TN) S7: Act=1, Prob=0.4 -> Pred=0 (FN) S8: Act=0, Prob=0.3 -> Pred=0 (TN) Confusion Matrix: Predicted 1 Predicted 0 Actual 1 TP = 3 FN = 1 Actual 0 FP = 1 TN = 3 Metrics: Accuracy = (3+3)/8 = 6/8 = 0.75 Precision = 3/(3+1) = 3/4 = 0.75 Recall = 3/(3+1) = 3/4 = 0.75 F1-score = 2(0.75*0.75)/(0.75+0.75) = 0.75 Log-loss: -1/8 * \u03a3 [y*ln(p) + (1-y)*ln(1-p)] Sum = ln(0.9) + ln(0.8) + ln(0.7) + ln(0.4) + ln(0.8) + ln(0.9) + ln(0.4) + ln(0.7) (S1=1:ln(0.9), S2=0:ln(0.8), S3=1:ln(0.7), S4=0:ln(0.4), S5=1:ln(0.8), S6=0:ln(0.9), S7=1:ln(0.4), S8=0:ln(0.7)) Sum \u2248 -0.105 - 0.223 - 0.357 - 0.916 - 0.223 - 0.105 - 0.916 - 0.357 = -3.202 Log-loss = -1/8 * (-3.202) = 0.400"
     ],
     "type": "question"
   },
@@ -2411,7 +2412,7 @@
     "title": "A decision tree predicts disease status for 100 patients: 35 true positives, 45 true negatives, 10 false positives, 10 false negatives. Calculate: Entropy of the complete dataset, Gini impurity, Accuracy, Precision, Recall, F1-score.",
     "url": "question-bank.html?open=num_u3_q18",
     "chunks": [
-      "Step-by-step solution:\n\nTP=35, TN=45, FP=10, FN=10. Total = 100.\n\nActual Positives = TP + FN = 35 + 10 = 45\n\nActual Negatives = TN + FP = 45 + 10 = 55\n\nEntropy of dataset:\n\np(+) = 0.45, p(-) = 0.55\n\nH = -0.45*log2(0.45) - 0.55*log2(0.55) \u2248 0.518 + 0.474 = 0.992\n\nGini impurity:\n\nGini = 1 - (0.45)\u00b2 - (0.55)\u00b2 = 1 - 0.2025 - 0.3025 = 1 - 0.505 = 0.495\n\nMetrics:\n\nAccuracy = (35 + 45)/100 = 0.80\n\nPrecision = 35 / (35 + 10) = 35/45 \u2248 0.778\n\nRecall = 35 / (35 + 10) = 35/45 \u2248 0.778\n\nF1-score = 2*(0.778*0.778) / (0.778+0.778) \u2248 0.778"
+      "Step-by-step solution: TP=35, TN=45, FP=10, FN=10. Total = 100. Actual Positives = TP + FN = 35 + 10 = 45 Actual Negatives = TN + FP = 45 + 10 = 55 Entropy of dataset: p(+) = 0.45, p(-) = 0.55 H = -0.45*log2(0.45) - 0.55*log2(0.55) \u2248 0.518 + 0.474 = 0.992 Gini impurity: Gini = 1 - (0.45)\u00b2 - (0.55)\u00b2 = 1 - 0.2025 - 0.3025 = 1 - 0.505 = 0.495 Metrics: Accuracy = (35 + 45)/100 = 0.80 Precision = 35 / (35 + 10) = 35/45 \u2248 0.778 Recall = 35 / (35 + 10) = 35/45 \u2248 0.778 F1-score = 2*(0.778*0.778) / (0.778+0.778) \u2248 0.778"
     ],
     "type": "question"
   },
@@ -2427,7 +2428,7 @@
     "title": "Three models provide predictions for a regression problem. Calculate the MAE and MSE for each model and determine which model performs best.",
     "url": "question-bank.html?open=num_u3_q19",
     "chunks": [
-      "Step-by-step solution:\n\nActuals: 100, 200, 150, 300\n\nRandom Forest (RF): Preds = 95, 210, 145, 290\n\nErrors: -5, 10, -5, -10\n\nAbs Errors: 5, 10, 5, 10 -> MAE = 30/4 = 7.5\n\nSq Errors: 25, 100, 25, 100 -> MSE = 250/4 = 62.5\n\nGradient Boosting (GB): Preds = 98, 205, 148, 295\n\nErrors: -2, 5, -2, -5\n\nAbs Errors: 2, 5, 2, 5 -> MAE = 14/4 = 3.5\n\nSq Errors: 4, 25, 4, 25 -> MSE = 58/4 = 14.5\n\nXGBoost (XGB): Preds = 99, 202, 152, 298\n\nErrors: -1, 2, 2, -2\n\nAbs Errors: 1, 2, 2, 2 -> MAE = 7/4 = 1.75\n\nSq Errors: 1, 4, 4, 4 -> MSE = 13/4 = 3.25\n\nConclusion: XGBoost performs best because it has the lowest MAE and MSE."
+      "Step-by-step solution: Actuals: 100, 200, 150, 300 Random Forest (RF): Preds = 95, 210, 145, 290 Errors: -5, 10, -5, -10 Abs Errors: 5, 10, 5, 10 -> MAE = 30/4 = 7.5 Sq Errors: 25, 100, 25, 100 -> MSE = 250/4 = 62.5 Gradient Boosting (GB): Preds = 98, 205, 148, 295 Errors: -2, 5, -2, -5 Abs Errors: 2, 5, 2, 5 -> MAE = 14/4 = 3.5 Sq Errors: 4, 25, 4, 25 -> MSE = 58/4 = 14.5 XGBoost (XGB): Preds = 99, 202, 152, 298 Errors: -1, 2, 2, -2 Abs Errors: 1, 2, 2, 2 -> MAE = 7/4 = 1.75 Sq Errors: 1, 4, 4, 4 -> MSE = 13/4 = 3.25 Conclusion: XGBoost performs best because it has the lowest MAE and MSE."
     ],
     "type": "question"
   },
@@ -2436,30 +2437,29 @@
     "title": "ML Cheat Sheet",
     "url": "cheat-sheet.html",
     "chunks": [
-      "Dashboard\n\n            Revision Hub\n\n                Save as PDF\n\n                Theme",
+      "Dashboard Revision Hub Save as PDF Theme",
       "Machine Learning",
-      "Dense Revision Cheat Sheet \n\nAll Units | Scannable Reference | High-Yield Syntax & Concepts\n\nQuick Jump:\nUnit I\nUnit II\nUnit III\nUnit IV\nUnit V\n\n\u2190 Dashboard",
+      "Dense Revision Cheat Sheet All Units | Scannable Reference | High-Yield Syntax & Concepts Quick Jump: Unit I Unit II Unit III Unit IV Unit V \u2190 Dashboard",
       "Unit I: Fundamentals & Hypothesis Spaces CO1",
-      "The Bias-Variance Decomposition \n\nTotal Error = Bias\u00b2 + Variance + Irreducible Error. Bias is the simplifying assumptions (underfitting). Variance is hypersensitivity to noise (overfitting).\n\nExample: Linear regression on sine wave data has high bias; a 50-depth decision tree on noisy data has high variance.\n\n            flowchart LR\n                Underfitting[\"High Bias\nUnderfitting\"] --> Optimal[\"Sweet Spot\nOptimal Tradeoff\"]\n                Optimal --> Overfitting[\"High Variance\nOverfitting\"]\n                style Optimal fill:#27ae60,stroke:#fff",
-      "Curse of Dimensionality & Manifold Hypothesis \n\nAs dimensions $D$ increase, the volume of the space grows exponentially, making data extremely sparse. The Manifold Hypothesis posits that real-world high-dimensional data actually lies on low-dimensional, non-linear manifolds embedded within the high-dimensional space.\n\nExample: 1024-pixel images exist in a 1024D space, but valid human faces only span a tiny 50D manifold within it.\n\nTrick: PCA only discovers linear manifolds. If the examiner asks to untangle a \"Swiss Roll\" dataset, you MUST use non-linear methods like ISOMAP or t-SNE!",
-      "Inductive Bias & No Free Lunch Theorem \n\nNo Free Lunch Theorem: Averaged over all possible data distributions, every algorithm performs equally well. Thus, an algorithm must make assumptions (Inductive Bias) to learn effectively.\n\nExample: CNNs have an inductive bias for spatial locality (nearby pixels are related); RNNs assume sequential temporality.",
+      "The Bias-Variance Decomposition Total Error = Bias\u00b2 + Variance + Irreducible Error. Bias is the simplifying assumptions (underfitting). Variance is hypersensitivity to noise (overfitting). Example: Linear regression on sine wave data has high bias; a 50-depth decision tree on noisy data has high variance. flowchart LR Underfitting[\"High Bias Underfitting\"] --> Optimal[\"Sweet Spot Optimal Tradeoff\"] Optimal --> Overfitting[\"High Variance Overfitting\"] style Optimal fill:#27ae60,stroke:#fff",
+      "Curse of Dimensionality & Manifold Hypothesis As dimensions $D$ increase, the volume of the space grows exponentially, making data extremely sparse. The Manifold Hypothesis posits that real-world high-dimensional data actually lies on low-dimensional, non-linear manifolds embedded within the high-dimensional space. Example: 1024-pixel images exist in a 1024D space, but valid human faces only span a tiny 50D manifold within it. Trick: PCA only discovers linear manifolds. If the examiner asks to untangle a \"Swiss Roll\" dataset, you MUST use non-linear methods like ISOMAP or t-SNE!",
+      "Inductive Bias & No Free Lunch Theorem No Free Lunch Theorem: Averaged over all possible data distributions, every algorithm performs equally well. Thus, an algorithm must make assumptions (Inductive Bias) to learn effectively. Example: CNNs have an inductive bias for spatial locality (nearby pixels are related); RNNs assume sequential temporality.",
       "Unit II: Linear Models & Optimization Convexity CO2",
-      "Logistic Regression & Cross-Entropy \n\nUses the Sigmoid function $\\sigma(z) = \\frac{1}{1 + e^{-z}}$ to map logits to probabilities. Optimized via Log-Loss (Binary Cross-Entropy), heavily penalizing confident, wrong predictions logarithmically.\n\nExample: Predicting if an email is spam. If the model outputs 0.99 for a ham email, the log-loss penalty approaches infinity.",
-      "SVMs, Maximum Margin & Kernel Trick \n\nSVMs maximize the margin $\\frac{2}{||w||}$ between support vectors. The Kernel Trick uses Mercer\u2019s theorem to implicitly compute dot products in a high-dimensional feature space without explicit transformation mapping $\\phi(x)$.\n\nExample: An RBF kernel classifying concentric circles by projecting them into 3D space where a flat hyperplane can cleanly slice them.\n\nPro-Tip: The $C$ parameter in Soft-Margin SVM controls the penalty for misclassification. Low $C$ = wide margin (high bias). High $C$ = hard margin (high variance/overfitting).",
-      "VC Dimension & PAC Learning Bounds \n\nProbably Approximately Correct (PAC) framework provides mathematical bounds on sample complexity. Vapnik-Chervonenkis (VC) Dimension is the maximum number of points a hypothesis class can perfectly shatter (memorize).\n\nExample: A 2D linear classifier has a VC dimension of 3, meaning it can perfectly classify any arrangement of 3 points, but fails on some arrangements of 4 points (like XOR).",
+      "Logistic Regression & Cross-Entropy Uses the Sigmoid function $\\sigma(z) = \\frac{1}{1 + e^{-z}}$ to map logits to probabilities. Optimized via Log-Loss (Binary Cross-Entropy), heavily penalizing confident, wrong predictions logarithmically. Example: Predicting if an email is spam. If the model outputs 0.99 for a ham email, the log-loss penalty approaches infinity.",
+      "SVMs, Maximum Margin & Kernel Trick SVMs maximize the margin $\\frac{2}{||w||}$ between support vectors. The Kernel Trick uses Mercer\u2019s theorem to implicitly compute dot products in a high-dimensional feature space without explicit transformation mapping $\\phi(x)$. Example: An RBF kernel classifying concentric circles by projecting them into 3D space where a flat hyperplane can cleanly slice them. Pro-Tip: The $C$ parameter in Soft-Margin SVM controls the penalty for misclassification. Low $C$ = wide margin (high bias). High $C$ = hard margin (high variance/overfitting).",
+      "VC Dimension & PAC Learning Bounds Probably Approximately Correct (PAC) framework provides mathematical bounds on sample complexity. Vapnik-Chervonenkis (VC) Dimension is the maximum number of points a hypothesis class can perfectly shatter (memorize). Example: A 2D linear classifier has a VC dimension of 3, meaning it can perfectly classify any arrangement of 3 points, but fails on some arrangements of 4 points (like XOR).",
       "Unit III: Ensemble Theory & Information Metrics CO3",
-      "Ensemble Meta-Algorithms \n\nBagging trains parallel models on bootstrapped data (decreases variance). Boosting trains sequential weak learners focused on correcting prior residual errors (decreases bias).\n\nExample: Random Forest (Bagging) averages 100 deep trees. XGBoost (Boosting) strings together 100 shallow stumps to minimize a gradient loss function.\n\n            flowchart TD\n                Data -->|Bootstrap| M1[Model 1]\n                Data -->|Bootstrap| M2[Model 2]\n                M1 & M2 -->|Average| Bagging[Bagging/RF]\n\n                Data2[Data] --> W1[Weak 1]\n                W1 -->|Weighted Errors| W2[Weak 2]\n                W2 --> Boosting[Boosting/XGB]",
-      "Information Gain & Gini Impurity \n\nDecision trees recursively partition data. They maximize Information Gain (reduction in Shannon Entropy $H = -\\sum p \\log_2 p$) or minimize Gini Impurity ($1 - \\sum p^2$) at each node split.\n\nExample: Predicting disease. Splitting on \"Fever = True\" yields child nodes that are much purer (lower entropy) than the parent node.\n\nTrick: Information Gain is inherently biased towards attributes with high cardinality (e.g., User ID). The examiner will test this: always use Gain Ratio to penalize high-branching attributes!",
-      "Precision-Recall vs ROC-AUC \n\nROC curve plots True Positive Rate vs False Positive Rate. PR curve plots Precision vs Recall. ROC is misleading for heavily imbalanced datasets because TNs dominate the FPR denominator.\n\nExample: Fraud detection (0.1% fraud). An ROC-AUC of 0.90 looks great, but PR-AUC reveals the model has terrible precision and produces massive false alarms.",
+      "Ensemble Meta-Algorithms Bagging trains parallel models on bootstrapped data (decreases variance). Boosting trains sequential weak learners focused on correcting prior residual errors (decreases bias). Example: Random Forest (Bagging) averages 100 deep trees. XGBoost (Boosting) strings together 100 shallow stumps to minimize a gradient loss function. flowchart TD Data -->|Bootstrap| M1[Model 1] Data -->|Bootstrap| M2[Model 2] M1 & M2 -->|Average| Bagging[Bagging/RF] Data2[Data] --> W1[Weak 1] W1 -->|Weighted Errors| W2[Weak 2] W2 --> Boosting[Boosting/XGB]",
+      "Information Gain & Gini Impurity Decision trees recursively partition data. They maximize Information Gain (reduction in Shannon Entropy $H = -\\sum p \\log_2 p$) or minimize Gini Impurity ($1 - \\sum p^2$) at each node split. Example: Predicting disease. Splitting on \"Fever = True\" yields child nodes that are much purer (lower entropy) than the parent node. Trick: Information Gain is inherently biased towards attributes with high cardinality (e.g., User ID). The examiner will test this: always use Gain Ratio to penalize high-branching attributes!",
+      "Precision-Recall vs ROC-AUC ROC curve plots True Positive Rate vs False Positive Rate. PR curve plots Precision vs Recall. ROC is misleading for heavily imbalanced datasets because TNs dominate the FPR denominator. Example: Fraud detection (0.1% fraud). An ROC-AUC of 0.90 looks great, but PR-AUC reveals the model has terrible precision and produces massive false alarms.",
       "Unit IV: Gradient Dynamics & Deep Architectures CO4",
-      "Backpropagation & The Chain Rule \n\nNeural networks update weights via gradient descent: $\\theta = \\theta - \\alpha \\nabla J(\\theta)$. Backprop efficiently calculates the gradient of the loss function with respect to weights by propagating errors backward using the calculus chain rule.\n\nExample: If a network predicts 0.9 for a dog image (label 1), backprop sends the 0.1 error backwards, nudging earlier convolutional filters to activate stronger on dog ears.",
-      "Vanishing Gradients & Modern Activations \n\nDeep networks using Sigmoid/Tanh suffer from vanishing gradients because their derivatives max out at 0.25; gradients decay exponentially through layers. ReLU ($f(x) = \\max(0, x)$) solves this by providing a constant derivative of 1 for positive inputs.\n\nExample: Training a 100-layer ResNet. With Sigmoid, the first layer never updates. With ReLU and Skip Connections, the gradient flows directly to early layers.",
-      "Regularization: L1 vs L2 (Weight Decay) \n\nL1 (Lasso): Adds $\\lambda \\sum |w|$ to the loss. Encourages sparse weight vectors (exact zeros) due to diamond-shaped constraint geometry. \nL2 (Ridge): Adds $\\lambda \\sum w^2$. Prevents exploding weights by decaying them proportionally.\n\nExample: Use L1 for gene expression data to eliminate 99% of irrelevant genes. Use L2 in Neural Networks (Weight Decay) to keep activations stable.\n\nPro-Tip: Dropout is mathematically equivalent to a form of L2 regularization, acting as an ensemble of sub-networks by randomly zeroing activations during training!",
+      "Backpropagation & The Chain Rule Neural networks update weights via gradient descent: $\\theta = \\theta - \\alpha \\nabla J(\\theta)$. Backprop efficiently calculates the gradient of the loss function with respect to weights by propagating errors backward using the calculus chain rule. Example: If a network predicts 0.9 for a dog image (label 1), backprop sends the 0.1 error backwards, nudging earlier convolutional filters to activate stronger on dog ears.",
+      "Vanishing Gradients & Modern Activations Deep networks using Sigmoid/Tanh suffer from vanishing gradients because their derivatives max out at 0.25; gradients decay exponentially through layers. ReLU ($f(x) = \\max(0, x)$) solves this by providing a constant derivative of 1 for positive inputs. Example: Training a 100-layer ResNet. With Sigmoid, the first layer never updates. With ReLU and Skip Connections, the gradient flows directly to early layers.",
+      "Regularization: L1 vs L2 (Weight Decay) L1 (Lasso): Adds $\\lambda \\sum |w|$ to the loss. Encourages sparse weight vectors (exact zeros) due to diamond-shaped constraint geometry. L2 (Ridge): Adds $\\lambda \\sum w^2$. Prevents exploding weights by decaying them proportionally. Example: Use L1 for gene expression data to eliminate 99% of irrelevant genes. Use L2 in Neural Networks (Weight Decay) to keep activations stable. Pro-Tip: Dropout is mathematically equivalent to a form of L2 regularization, acting as an ensemble of sub-networks by randomly zeroing activations during training!",
       "Unit V: Unsupervised Topology & MLOps CO5",
-      "K-Means & The E-M Algorithm \n\nK-Means is a specific instance of the Expectation-Maximization (EM) algorithm. E-step: Assign points to nearest centroid. M-step: Recalculate centroids. It converges to a local optimum minimizing within-cluster sum of squares (WCSS).\n\nExample: Clustering retail shoppers based on recency and frequency of purchases. K-Means finds $K$ distinct buyer personas.",
-      "Principal Component Analysis (PCA) Eigen-theory \n\nPCA projects data onto orthogonal axes of maximum variance. It computes the eigenvectors (directions) and eigenvalues (magnitude of variance) of the data's covariance matrix. It removes multicollinearity.\n\nExample: Given square footage and number of rooms (highly correlated), PCA collapses them into a single \"house size\" principal component axis.\n\n            graph LR\n                Data(Raw Data X) --> Cov(Covariance Matrix)\n                Cov --> Eigen(Eigen Decomposition)\n                Eigen --> Sort(Sort by top K Eigenvalues)\n                Sort --> Project(Project X onto K axes)",
-      "Data Leakage & Time-Series Validation \n\nLeakage occurs when information from the validation/test set maliciously bleeds into the training set, causing deceptively high performance that fails in production.\n\nExample: Applying `StandardScaler().fit_transform(X)` on the entire dataset before doing `train_test_split()`. The test set's mean/variance leaked into the scaler!\n\nTrick: Standard K-Fold CV on Time-Series data causes future leakage (training on Friday to predict Thursday). You must strictly use Rolling Origin / TimeSeriesSplit.",
-      "Ask AI (Lite) \n\n    Lite\n    Smart (WebGPU)\n    Deep (Cloud)\n\n                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.\n\n                Send"
+      "K-Means & The E-M Algorithm K-Means is a specific instance of the Expectation-Maximization (EM) algorithm. E-step: Assign points to nearest centroid. M-step: Recalculate centroids. It converges to a local optimum minimizing within-cluster sum of squares (WCSS). Example: Clustering retail shoppers based on recency and frequency of purchases. K-Means finds $K$ distinct buyer personas.",
+      "Principal Component Analysis (PCA) Eigen-theory PCA projects data onto orthogonal axes of maximum variance. It computes the eigenvectors (directions) and eigenvalues (magnitude of variance) of the data's covariance matrix. It removes multicollinearity. Example: Given square footage and number of rooms (highly correlated), PCA collapses them into a single \"house size\" principal component axis. graph LR Data(Raw Data X) --> Cov(Covariance Matrix) Cov --> Eigen(Eigen Decomposition) Eigen --> Sort(Sort by top K Eigenvalues) Sort --> Project(Project X onto K axes)",
+      "Data Leakage & Time-Series Validation Leakage occurs when information from the validation/test set maliciously bleeds into the training set, causing deceptively high performance that fails in production. Example: Applying `StandardScaler().fit_transform(X)` on the entire dataset before doing `train_test_split()`. The test set's mean/variance leaked into the scaler! Trick: Standard K-Fold CV on Time-Series data causes future leakage (training on Friday to predict Thursday). You must strictly use Rolling Origin / TimeSeriesSplit ."
     ],
     "type": "cheat"
   }

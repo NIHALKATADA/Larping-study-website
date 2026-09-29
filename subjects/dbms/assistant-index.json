@@ -11,7 +11,7 @@
     "title": "What is a DBMS? Discuss its advantages over a traditional file-processing system.",
     "url": "question-bank.html?open=q1",
     "chunks": [
-      "Definition\r\n\nA Database Management System (DBMS) is software that interacts with end-users, applications, and the database itself to capture and analyze data. It allows users to create, read, update, and delete data in a database.\r\n\nAdvantages over File-Processing\r\n\nData Redundancy and Inconsistency: Centralizes data, eliminating duplicate files and ensuring updates propagate everywhere.\r\n\nData Isolation: Applications do not need to know the physical structure of the data files.\r\n\nIntegrity Problems: Allows defining explicit integrity constraints (e.g., account balance > 0).\r\n\nSecurity Problems: Offers fine-grained access control and user authorization.\r\n\nConcurrent Access: Manages simultaneous access securely, preventing anomalies."
+      "Definition A Database Management System (DBMS) is software that interacts with end-users, applications, and the database itself to capture and analyze data. It allows users to create, read, update, and delete data in a database. Advantages over File-Processing Data Redundancy and Inconsistency: Centralizes data, eliminating duplicate files and ensuring updates propagate everywhere. Data Isolation: Applications do not need to know the physical structure of the data files. Integrity Problems: Allows defining explicit integrity constraints (e.g., account balance > 0). Security Problems: Offers fine-grained access control and user authorization. Concurrent Access: Manages simultaneous access securely, preventing anomalies."
     ],
     "type": "question"
   },
@@ -27,7 +27,7 @@
     "title": "What do you mean by data redundancy and data inconsistency? How does a DBMS take care of these problems?",
     "url": "question-bank.html?open=q2",
     "chunks": [
-      "Definitions\r\n\nData Redundancy: The unnecessary duplication of data in a database. (e.g., storing a student's address in both the Library and Department files).\r\n\nData Inconsistency: A consequence of redundancy where different copies of the same data hold different values (e.g., address updated in Library but not Department).\r\n\nDBMS Solution\r\n\nA DBMS minimizes redundancy by storing a single, centralized copy of the data (Data Normalization). Because there is only one authoritative copy, inconsistency is inherently prevented."
+      "Definitions Data Redundancy: The unnecessary duplication of data in a database. (e.g., storing a student's address in both the Library and Department files). Data Inconsistency: A consequence of redundancy where different copies of the same data hold different values (e.g., address updated in Library but not Department). DBMS Solution A DBMS minimizes redundancy by storing a single, centralized copy of the data (Data Normalization). Because there is only one authoritative copy, inconsistency is inherently prevented."
     ],
     "type": "question"
   },
@@ -43,7 +43,7 @@
     "title": "Give the difference between a database system and a file-based system.",
     "url": "question-bank.html?open=q3",
     "chunks": [
-      "Differences\r\n\nStructure: DB systems store data in structured formats (tables/graphs); File systems store data in plain text/binary files.\r\n\nData Independence: DB systems separate applications from data structure; File systems tightly couple applications to file formats.\r\n\nQuerying: DB systems provide robust query languages (SQL); File systems require custom application code to extract data."
+      "Differences Structure: DB systems store data in structured formats (tables/graphs); File systems store data in plain text/binary files. Data Independence: DB systems separate applications from data structure; File systems tightly couple applications to file formats. Querying: DB systems provide robust query languages (SQL); File systems require custom application code to extract data."
     ],
     "type": "question"
   },
@@ -59,7 +59,7 @@
     "title": "Draw and explain the three-level (ANSI-SPARC) architecture of a DBMS.",
     "url": "question-bank.html?open=q4",
     "chunks": [
-      "The Three Levels\r\n\nExternal Level (View Level): The highest level, describing only the part of the database relevant to a specific user group (hiding the rest).\r\n\nConceptual Level (Logical Level): Describes what data is stored in the entire database and the relationships among those data. Used by DBAs.\r\n\nInternal Level (Physical Level): Describes exactly how the data is physically stored on disk (data structures, file organizations).\r\n\n            Exam Tip: The primary objective of this architecture is to achieve Data Independence."
+      "The Three Levels External Level (View Level): The highest level, describing only the part of the database relevant to a specific user group (hiding the rest). Conceptual Level (Logical Level): Describes what data is stored in the entire database and the relationships among those data. Used by DBAs. Internal Level (Physical Level): Describes exactly how the data is physically stored on disk (data structures, file organizations). Exam Tip: The primary objective of this architecture is to achieve Data Independence ."
     ],
     "type": "question"
   },
@@ -75,7 +75,7 @@
     "title": "What is data abstraction? Discuss the three levels of data abstraction used in a DBMS.",
     "url": "question-bank.html?open=q5",
     "chunks": [
-      "Definition\r\n\nData abstraction is the process of hiding complex internal data structures and storage details from the user, presenting only a simplified, usable view of the data.\r\n\nThree Levels\r\n\nPhysical Level: Hides the complexity of block structures, indexing, and bytes on disk.\r\n\nLogical Level: Hides physical storage but reveals entities, data types, and relationships. Developers interact here.\r\n\nView Level: Hides the entire logical schema except for specific fields the end-user is authorized to see (e.g., a teller seeing only names and balances)."
+      "Definition Data abstraction is the process of hiding complex internal data structures and storage details from the user, presenting only a simplified, usable view of the data. Three Levels Physical Level: Hides the complexity of block structures, indexing, and bytes on disk. Logical Level: Hides physical storage but reveals entities, data types, and relationships. Developers interact here. View Level: Hides the entire logical schema except for specific fields the end-user is authorized to see (e.g., a teller seeing only names and balances)."
     ],
     "type": "question"
   },
@@ -91,7 +91,7 @@
     "title": "Define the terms schema and instance. Why is this distinction important?",
     "url": "question-bank.html?open=q6",
     "chunks": [
-      "Definition\r\n\nSchema: The overall logical design/blueprint of the database. It changes rarely.\r\n\nInstance: The snapshot of data residing in the database at a specific moment in time. It changes frequently.\r\n\nImportance\r\n\nThis distinction is crucial for maintaining data independence\u2014altering the schema (like adding a column) should not arbitrarily destroy the existing instances."
+      "Definition Schema: The overall logical design/blueprint of the database. It changes rarely. Instance: The snapshot of data residing in the database at a specific moment in time. It changes frequently. Importance This distinction is crucial for maintaining data independence\u2014altering the schema (like adding a column) should not arbitrarily destroy the existing instances."
     ],
     "type": "question"
   },
@@ -107,7 +107,7 @@
     "title": "What is data independence? Explain logical and physical data independence with a suitable example.",
     "url": "question-bank.html?open=q7",
     "chunks": [
-      "Definition\r\n\nData independence is the ability to modify a schema definition in one level without affecting a schema definition in the next higher level.\r\n\nTypes\r\n\nPhysical Data Independence: Ability to modify the internal/physical schema without altering the conceptual schema. Example: Changing a file from sequential to a B+ tree index to improve performance; application code doesn't change.\r\n\nLogical Data Independence: Ability to modify the conceptual schema without altering the external schema (user views). Example: Splitting an Employee table into two normalized tables; the original view can be maintained using a SQL JOIN, shielding the frontend application."
+      "Definition Data independence is the ability to modify a schema definition in one level without affecting a schema definition in the next higher level. Types Physical Data Independence: Ability to modify the internal/physical schema without altering the conceptual schema. Example: Changing a file from sequential to a B+ tree index to improve performance; application code doesn't change. Logical Data Independence: Ability to modify the conceptual schema without altering the external schema (user views). Example: Splitting an Employee table into two normalized tables; the original view can be maintained using a SQL JOIN, shielding the frontend application."
     ],
     "type": "question"
   },
@@ -123,7 +123,7 @@
     "title": "Who are the different types of database users? Briefly describe the role of each.",
     "url": "question-bank.html?open=q8",
     "chunks": [
-      "Types of Users\r\n\nParametric (Naive) Users: End-users who interact via standard GUI applications without knowing SQL (e.g., Bank Tellers).\r\n\nApplication Programmers: Software engineers who write the backend logic connecting to the DB.\r\n\nSophisticated Users: Analysts who interact directly with the DB using SQL queries to generate reports.\r\n\nDatabase Administrators (DBA): IT professionals who manage security, schemas, and performance tuning."
+      "Types of Users Parametric (Naive) Users: End-users who interact via standard GUI applications without knowing SQL (e.g., Bank Tellers). Application Programmers: Software engineers who write the backend logic connecting to the DB. Sophisticated Users: Analysts who interact directly with the DB using SQL queries to generate reports. Database Administrators (DBA): IT professionals who manage security, schemas, and performance tuning."
     ],
     "type": "question"
   },
@@ -139,7 +139,7 @@
     "title": "List the responsibilities of a Database Administrator (DBA).",
     "url": "question-bank.html?open=q9",
     "chunks": [
-      "Responsibilities\r\n\nSchema definition and modification.\r\n\nDefining storage structures and access methods (indexing).\r\n\nGranting user authority and managing access security.\r\n\nRoutine maintenance, database backups, and performance monitoring."
+      "Responsibilities Schema definition and modification. Defining storage structures and access methods (indexing). Granting user authority and managing access security. Routine maintenance, database backups, and performance monitoring."
     ],
     "type": "question"
   },
@@ -155,7 +155,7 @@
     "title": "Compare the hierarchical, network, relational and object-oriented data models. Which one is most widely used today and why?",
     "url": "question-bank.html?open=q10",
     "chunks": [
-      "Comparison\r\n\nHierarchical: Data organized in a tree structure (1:N relationships). Fast but inflexible; requires navigating rigid pointers.\r\n\nNetwork: Data organized in a graph (M:N relationships allowed). Highly complex and difficult to maintain.\r\n\nRelational: Data organized in 2D tables (relations). Uses declarative SQL. Extremely flexible and mathematically sound.\r\n\nObject-Oriented: Data stored as objects with methods, matching OOP languages. Best for complex data (e.g., CAD/CAM).\r\n\nMost Widely Used\r\n\nThe Relational Model is most widely used today due to its simplicity, robust theoretical foundation (normalization), and standard interface (SQL) which provides unparalleled data independence."
+      "Comparison Hierarchical: Data organized in a tree structure (1:N relationships). Fast but inflexible; requires navigating rigid pointers. Network: Data organized in a graph (M:N relationships allowed). Highly complex and difficult to maintain. Relational: Data organized in 2D tables (relations). Uses declarative SQL. Extremely flexible and mathematically sound. Object-Oriented: Data stored as objects with methods, matching OOP languages. Best for complex data (e.g., CAD/CAM). Most Widely Used The Relational Model is most widely used today due to its simplicity, robust theoretical foundation (normalization), and standard interface (SQL) which provides unparalleled data independence."
     ],
     "type": "question"
   },
@@ -171,7 +171,7 @@
     "title": "State the advantages of the relational model over the other data models.",
     "url": "question-bank.html?open=q11",
     "chunks": [
-      "Advantages\r\n\nSimplicity: Uses a simple tabular structure (rows and columns) that is easy to understand compared to complex graph/tree pointers.\r\n\nFlexibility: Supports ad-hoc querying using standard SQL.\r\n\nData Independence: Strong separation between logical representation and physical storage."
+      "Advantages Simplicity: Uses a simple tabular structure (rows and columns) that is easy to understand compared to complex graph/tree pointers. Flexibility: Supports ad-hoc querying using standard SQL. Data Independence: Strong separation between logical representation and physical storage."
     ],
     "type": "question"
   },
@@ -187,7 +187,7 @@
     "title": "Explain the terms super key, candidate key, primary key and foreign key with a suitable example.",
     "url": "question-bank.html?open=q12",
     "chunks": [
-      "Explanation\r\n\nSuper Key: Any combination of columns that uniquely identifies a row. (e.g., StudentID + Name)\r\n\nCandidate Key: A minimal super key; it uniquely identifies a row with no unnecessary columns. (e.g., StudentID or Email)\r\n\nPrimary Key: The specific candidate key chosen to identify rows. Cannot be NULL. (e.g., StudentID)\r\n\nForeign Key: A column that refers to the primary key of another table, enforcing referential integrity. (e.g., Dept_ID in a Student table referencing the Department table)"
+      "Explanation Super Key: Any combination of columns that uniquely identifies a row. (e.g., StudentID + Name ) Candidate Key: A minimal super key; it uniquely identifies a row with no unnecessary columns. (e.g., StudentID or Email ) Primary Key: The specific candidate key chosen to identify rows. Cannot be NULL. (e.g., StudentID ) Foreign Key: A column that refers to the primary key of another table, enforcing referential integrity. (e.g., Dept_ID in a Student table referencing the Department table)"
     ],
     "type": "question"
   },
@@ -203,7 +203,7 @@
     "title": "What are integrity constraints in a relational model? Explain domain, key, entity and referential integrity.",
     "url": "question-bank.html?open=q13",
     "chunks": [
-      "Definition\r\n\nIntegrity constraints are rules applied to a database to ensure the data is accurate, consistent, and valid.\r\n\nThe Four Constraints\r\n\nDomain Constraint: Restricts the values a column can hold to a valid set (e.g., Age must be a positive integer).\r\n\nKey Constraint: Ensures that candidate/primary keys are completely unique for every row.\r\n\nEntity Integrity: States that no part of a Primary Key can be NULL, because a NULL value cannot uniquely identify a row.\r\n\nReferential Integrity: States that if a foreign key exists in a relation, its value must either match a primary key value in the referenced relation or be NULL. (e.g., You cannot enroll a student in a non-existent Course_ID)."
+      "Definition Integrity constraints are rules applied to a database to ensure the data is accurate, consistent, and valid. The Four Constraints Domain Constraint: Restricts the values a column can hold to a valid set (e.g., Age must be a positive integer). Key Constraint: Ensures that candidate/primary keys are completely unique for every row. Entity Integrity: States that no part of a Primary Key can be NULL, because a NULL value cannot uniquely identify a row. Referential Integrity: States that if a foreign key exists in a relation, its value must either match a primary key value in the referenced relation or be NULL. (e.g., You cannot enroll a student in a non-existent Course_ID)."
     ],
     "type": "question"
   },
@@ -219,7 +219,7 @@
     "title": "What is an E-R model? List the notations used to represent an E-R diagram.",
     "url": "question-bank.html?open=q14",
     "chunks": [
-      "Definition\r\n\nThe Entity-Relationship (E-R) model is a high-level conceptual data model that visually represents entities (objects) and the relationships between them.\r\n\nNotations\r\n\nRectangle: Entity sets\r\n\nEllipse: Attributes\r\n\nDiamond: Relationship sets\r\n\nLines: Link attributes to entities and entities to relationships"
+      "Definition The Entity-Relationship (E-R) model is a high-level conceptual data model that visually represents entities (objects) and the relationships between them. Notations Rectangle: Entity sets Ellipse: Attributes Diamond: Relationship sets Lines: Link attributes to entities and entities to relationships"
     ],
     "type": "question"
   },
@@ -235,7 +235,7 @@
     "title": "Define entity, entity set, attribute and relationship, and illustrate each with a small diagram.",
     "url": "question-bank.html?open=q15",
     "chunks": [
-      "Definitions\r\n\nEntity: A real-world object with independent existence (e.g., a specific student).\r\n\nEntity Set: A collection of similar entities (e.g., all Students).\r\n\nAttribute: A property describing an entity (e.g., Name, Age).\r\n\nRelationship: An association among two or more entities (e.g., Student Enroll Course)."
+      "Definitions Entity: A real-world object with independent existence (e.g., a specific student). Entity Set: A collection of similar entities (e.g., all Students). Attribute: A property describing an entity (e.g., Name, Age). Relationship: An association among two or more entities (e.g., Student Enroll Course)."
     ],
     "type": "question"
   },
@@ -251,7 +251,7 @@
     "title": "Explain the different types of attributes, simple, composite, derived, multivalued and key attribute, with examples.",
     "url": "question-bank.html?open=q16",
     "chunks": [
-      "Attribute Types\r\n\nSimple: Indivisible atomic values (e.g., Gender).\r\n\nComposite: Can be broken down into sub-parts (e.g., Name into First Name, Last Name).\r\n\nDerived: Calculated from other attributes; not physically stored (e.g., Age derived from DOB).\r\n\nMultivalued: Can hold multiple values for a single entity (e.g., Phone_Numbers).\r\n\nKey: Uniquely identifies the entity (e.g., Roll_No)."
+      "Attribute Types Simple: Indivisible atomic values (e.g., Gender ). Composite: Can be broken down into sub-parts (e.g., Name into First Name, Last Name). Derived: Calculated from other attributes; not physically stored (e.g., Age derived from DOB). Multivalued: Can hold multiple values for a single entity (e.g., Phone_Numbers ). Key: Uniquely identifies the entity (e.g., Roll_No )."
     ],
     "type": "question"
   },
@@ -267,7 +267,7 @@
     "title": "What are the different types of relationships that can exist between two entities? Explain with diagrams.",
     "url": "question-bank.html?open=q17",
     "chunks": [
-      "Cardinality Ratios\r\n\nOne-to-One (1:1): One entity in A is associated with at most one in B. (e.g., Department 1:1 Manager).\r\n\nOne-to-Many (1:N): One entity in A is associated with many in B. (e.g., Department 1:N Employees).\r\n\nMany-to-Many (M:N): Many entities in A associated with many in B. (e.g., Student M:N Course)."
+      "Cardinality Ratios One-to-One (1:1): One entity in A is associated with at most one in B. (e.g., Department 1:1 Manager). One-to-Many (1:N): One entity in A is associated with many in B. (e.g., Department 1:N Employees). Many-to-Many (M:N): Many entities in A associated with many in B. (e.g., Student M:N Course)."
     ],
     "type": "question"
   },
@@ -283,7 +283,7 @@
     "title": "What is a weak entity set? Give a suitable example.",
     "url": "question-bank.html?open=q18",
     "chunks": [
-      "Definition\r\n\nA weak entity set lacks sufficient attributes to form a primary key. It depends on a strong entity (identifying owner) and uses the owner's key plus its own partial key to identify rows.\r\n\nExample\r\n\nA Dependent (spouse/child) of an Employee. The dependent is identified by combining their Name (partial key) with the owner's Employee ID."
+      "Definition A weak entity set lacks sufficient attributes to form a primary key. It depends on a strong entity (identifying owner) and uses the owner's key plus its own partial key to identify rows. Example A Dependent (spouse/child) of an Employee. The dependent is identified by combining their Name (partial key) with the owner's Employee ID."
     ],
     "type": "question"
   },
@@ -299,7 +299,7 @@
     "title": "Explain unary, binary and ternary relationships with the help of diagrams.",
     "url": "question-bank.html?open=q19",
     "chunks": [
-      "Degrees of Relationships\r\n\nUnary (Degree 1): Relationship between instances of a single entity set (e.g., Employee Manages Employee).\r\n\nBinary (Degree 2): Relationship between two entity sets (e.g., Student Takes Course).\r\n\nTernary (Degree 3): Relationship connecting three entity sets simultaneously (e.g., Supplier Supplies Part To Project).\r\n\n            Exam Tip: A ternary relationship is not just three binary relationships; it represents a single fact involving all three entities together."
+      "Degrees of Relationships Unary (Degree 1): Relationship between instances of a single entity set (e.g., Employee Manages Employee). Binary (Degree 2): Relationship between two entity sets (e.g., Student Takes Course). Ternary (Degree 3): Relationship connecting three entity sets simultaneously (e.g., Supplier Supplies Part To Project). Exam Tip: A ternary relationship is not just three binary relationships; it represents a single fact involving all three entities together."
     ],
     "type": "question"
   },
@@ -315,7 +315,7 @@
     "title": "Differentiate between total participation and partial participation constraints in an E-R diagram.",
     "url": "question-bank.html?open=q20",
     "chunks": [
-      "Differentiation\r\n\nTotal Participation (Mandatory): Every entity MUST participate in at least one relationship. Indicated by a double line. (e.g., Every Employee must belong to a Department).\r\n\nPartial Participation (Optional): Only some entities may participate. Indicated by a single line. (e.g., Only some Employees are Managers of a Department)."
+      "Differentiation Total Participation (Mandatory): Every entity MUST participate in at least one relationship. Indicated by a double line. (e.g., Every Employee must belong to a Department). Partial Participation (Optional): Only some entities may participate. Indicated by a single line. (e.g., Only some Employees are Managers of a Department)."
     ],
     "type": "question"
   },
@@ -331,7 +331,7 @@
     "title": "Explain generalization and specialization in the Extended E-R model with an example of each.",
     "url": "question-bank.html?open=q21",
     "chunks": [
-      "Specialization (Top-Down)\r\n\nThe process of defining a set of subclasses from a single entity type (the superclass). It involves identifying characteristics that distinguish some entities in the set from others. \n\n        Example: An Employee superclass can be specialized into Engineer, Manager, and Technician subclasses based on job role.\r\n\nGeneralization (Bottom-Up)\r\n\nThe reverse process of specialization. Multiple entity types with common attributes are synthesized into a single, generalized superclass.\n\n        Example: Car and Truck entities share attributes like Vehicle_ID and Price, so they can be generalized into a Vehicle superclass."
+      "Specialization (Top-Down) The process of defining a set of subclasses from a single entity type (the superclass). It involves identifying characteristics that distinguish some entities in the set from others. Example: An Employee superclass can be specialized into Engineer , Manager , and Technician subclasses based on job role. Generalization (Bottom-Up) The reverse process of specialization. Multiple entity types with common attributes are synthesized into a single, generalized superclass. Example: Car and Truck entities share attributes like Vehicle_ID and Price, so they can be generalized into a Vehicle superclass."
     ],
     "type": "question"
   },
@@ -347,7 +347,7 @@
     "title": "What is the difference between overlapping and disjoint specialization? Illustrate with an example.",
     "url": "question-bank.html?open=q22",
     "chunks": [
-      "Disjoint Specialization\r\n\nAn entity can be a member of at most one subclass of the specialization. Denoted by a 'd' in the circle.\n\n        Example: An Employee can be either an Hourly_Employee or a Salaried_Employee, but never both at the same time.\r\n\nOverlapping Specialization\r\n\nAn entity may be a member of more than one subclass of the specialization. Denoted by an 'o' in the circle.\n\n        Example: A Person can simultaneously be an Alumnus and an Employee of a university."
+      "Disjoint Specialization An entity can be a member of at most one subclass of the specialization. Denoted by a 'd' in the circle. Example: An Employee can be either an Hourly_Employee or a Salaried_Employee , but never both at the same time. Overlapping Specialization An entity may be a member of more than one subclass of the specialization. Denoted by an 'o' in the circle. Example: A Person can simultaneously be an Alumnus and an Employee of a university."
     ],
     "type": "question"
   },
@@ -363,7 +363,7 @@
     "title": "What is aggregation in E-R modelling? When is it required? Explain with an example.",
     "url": "question-bank.html?open=q23",
     "chunks": [
-      "Definition\r\n\nAggregation is an abstraction where a relationship set (and its associated entities) is treated as a higher-level entity set. \r\n\nWhen is it required?\r\n\nThe basic E-R model cannot express relationships among relationships. Aggregation is required when a relationship between two entities needs to participate in another relationship with a third entity.\r\n\nExample\r\n\nConsider Employee working on a Project. This forms the relationship Works_On. If we want to record the Manager who oversees this specific (Employee-Project) assignment, we aggregate Works_On into a single entity, and create a new relationship Manages between it and Manager."
+      "Definition Aggregation is an abstraction where a relationship set (and its associated entities) is treated as a higher-level entity set. When is it required? The basic E-R model cannot express relationships among relationships. Aggregation is required when a relationship between two entities needs to participate in another relationship with a third entity. Example Consider Employee working on a Project . This forms the relationship Works_On . If we want to record the Manager who oversees this specific (Employee-Project) assignment, we aggregate Works_On into a single entity, and create a new relationship Manages between it and Manager ."
     ],
     "type": "question"
   },
@@ -379,7 +379,7 @@
     "title": "Explain the concept of mapping cardinality with neat diagrams.",
     "url": "question-bank.html?open=q24",
     "chunks": [
-      "Definition\r\n\nMapping cardinality (or cardinality ratio) expresses the number of entities to which another entity can be associated via a relationship set.\r\n\nTypes\r\n\nOne-to-One (1:1): An entity in A is associated with at most one entity in B, and vice versa.\r\n\nOne-to-Many (1:N): An entity in A is associated with any number of entities in B. An entity in B is associated with at most one entity in A.\r\n\nMany-to-One (N:1): An entity in A is associated with at most one entity in B. An entity in B is associated with any number of entities in A.\r\n\nMany-to-Many (M:N): An entity in A is associated with any number of entities in B, and vice versa."
+      "Definition Mapping cardinality (or cardinality ratio) expresses the number of entities to which another entity can be associated via a relationship set. Types One-to-One (1:1): An entity in A is associated with at most one entity in B, and vice versa. One-to-Many (1:N): An entity in A is associated with any number of entities in B. An entity in B is associated with at most one entity in A. Many-to-One (N:1): An entity in A is associated with at most one entity in B. An entity in B is associated with any number of entities in A. Many-to-Many (M:N): An entity in A is associated with any number of entities in B, and vice versa."
     ],
     "type": "question"
   },
@@ -395,7 +395,7 @@
     "title": "What is a functional dependency? Why is it important in the process of database design?",
     "url": "question-bank.html?open=q25",
     "chunks": [
-      "Definition\r\n\nA functional dependency (FD) is a constraint between two sets of attributes in a relation. If A \u2192 B (A determines B), then for every valid instance of the relation, any two tuples that agree on the attribute A must also agree on the attribute B.\r\n\nImportance\r\n\nFunctional dependencies are the theoretical bedrock of Normalization. They are used to specify constraints on data, discover candidate keys, and decompose relations to eliminate redundancy and update anomalies."
+      "Definition A functional dependency (FD) is a constraint between two sets of attributes in a relation. If A \u2192 B (A determines B), then for every valid instance of the relation, any two tuples that agree on the attribute A must also agree on the attribute B. Importance Functional dependencies are the theoretical bedrock of Normalization . They are used to specify constraints on data, discover candidate keys, and decompose relations to eliminate redundancy and update anomalies."
     ],
     "type": "question"
   },
@@ -411,7 +411,7 @@
     "title": "What are insertion, deletion and update anomalies? How does normalization help remove them?",
     "url": "question-bank.html?open=q26",
     "chunks": [
-      "The Three Anomalies\r\n\nUpdate Anomaly: If data is stored redundantly, changing it in one row requires changing it in all rows. Missing one causes inconsistency (e.g., changing a department's location).\r\n\nInsertion Anomaly: The inability to add data to the database due to absence of other data (e.g., unable to add a new Department because it has no Employees yet, and Employee_ID is the primary key).\r\n\nDeletion Anomaly: The unintended loss of data when deleting a row (e.g., deleting the only employee in a department also deletes the department's information).\r\n\nHow Normalization Helps\r\n\nNormalization resolves these by decomposing large, poorly structured tables into smaller, well-structured tables where each table represents a single logical theme or entity. By linking them with foreign keys, redundancy is eliminated, which inherently solves update, insertion, and deletion anomalies."
+      "The Three Anomalies Update Anomaly: If data is stored redundantly, changing it in one row requires changing it in all rows. Missing one causes inconsistency (e.g., changing a department's location). Insertion Anomaly: The inability to add data to the database due to absence of other data (e.g., unable to add a new Department because it has no Employees yet, and Employee_ID is the primary key). Deletion Anomaly: The unintended loss of data when deleting a row (e.g., deleting the only employee in a department also deletes the department's information). How Normalization Helps Normalization resolves these by decomposing large, poorly structured tables into smaller, well-structured tables where each table represents a single logical theme or entity. By linking them with foreign keys, redundancy is eliminated, which inherently solves update, insertion, and deletion anomalies."
     ],
     "type": "question"
   },
@@ -427,7 +427,7 @@
     "title": "What is normalization? Explain 1NF, 2NF and 3NF with a suitable example.",
     "url": "question-bank.html?open=q27",
     "chunks": [
-      "Definition\r\n\nNormalization is the process of organizing data to minimize redundancy and eliminate anomalies by dividing larger tables into smaller tables and defining relationships between them using functional dependencies.\r\n\nThe Normal Forms\r\n\nFirst Normal Form (1NF): All attributes must be atomic (indivisible). No repeating groups or arrays allowed in a cell.\r\n\nSecond Normal Form (2NF): Must be in 1NF, and all non-key attributes must be fully functionally dependent on the entire primary key. (Eliminates partial dependencies).\r\n\nThird Normal Form (3NF): Must be in 2NF, and no non-key attribute can be dependent on another non-key attribute. (Eliminates transitive dependencies: X \u2192 Y and Y \u2192 Z)."
+      "Definition Normalization is the process of organizing data to minimize redundancy and eliminate anomalies by dividing larger tables into smaller tables and defining relationships between them using functional dependencies. The Normal Forms First Normal Form (1NF): All attributes must be atomic (indivisible). No repeating groups or arrays allowed in a cell. Second Normal Form (2NF): Must be in 1NF, and all non-key attributes must be fully functionally dependent on the entire primary key. (Eliminates partial dependencies). Third Normal Form (3NF): Must be in 2NF, and no non-key attribute can be dependent on another non-key attribute. (Eliminates transitive dependencies: X \u2192 Y and Y \u2192 Z)."
     ],
     "type": "question"
   },
@@ -443,7 +443,7 @@
     "title": "Define BCNF. How is it different from 3NF? Support your answer with an example.",
     "url": "question-bank.html?open=q28",
     "chunks": [
-      "Definition\r\n\nBoyce-Codd Normal Form (BCNF) requires that for every non-trivial functional dependency X \u2192 Y, X must be a super key. It is a stronger, stricter version of 3NF.\r\n\nDifference from 3NF\r\n\n3NF allows a dependency X \u2192 Y where X is NOT a super key, provided that Y is a prime attribute (part of a candidate key). BCNF does not allow this exception. A table can be in 3NF but fail BCNF if it has overlapping candidate keys.\r\n\nExample\r\n\nConsider Relation(Student, Course, Instructor). Keys are (Student, Course) and (Student, Instructor). FD: Instructor \u2192 Course. \n\n        It is in 3NF because Course is a prime attribute. However, it violates BCNF because Instructor is not a super key."
+      "Definition Boyce-Codd Normal Form (BCNF) requires that for every non-trivial functional dependency X \u2192 Y, X must be a super key. It is a stronger, stricter version of 3NF. Difference from 3NF 3NF allows a dependency X \u2192 Y where X is NOT a super key, provided that Y is a prime attribute (part of a candidate key). BCNF does not allow this exception. A table can be in 3NF but fail BCNF if it has overlapping candidate keys. Example Consider Relation(Student, Course, Instructor) . Keys are (Student, Course) and (Student, Instructor). FD: Instructor \u2192 Course . It is in 3NF because Course is a prime attribute. However, it violates BCNF because Instructor is not a super key."
     ],
     "type": "question"
   },
@@ -459,7 +459,7 @@
     "title": "Write a short note on 4NF and 5NF, with an example of each.",
     "url": "question-bank.html?open=q29",
     "chunks": [
-      "Fourth Normal Form (4NF)\r\n\nDeals with Multi-valued Dependencies (MVD). A table is in 4NF if it is in BCNF and contains no non-trivial multi-valued dependencies (where one attribute determines a set of values for another, independent of a third).\n\n        Example: An Employee has multiple Skills and multiple Dependents. Storing them in one table creates massive redundancy. We split into (Emp, Skill) and (Emp, Dependent).\r\n\nFifth Normal Form (5NF)\r\n\nDeals with Join Dependencies. Also known as Project-Join Normal Form (PJNF). A table is in 5NF if it is in 4NF and cannot be decomposed into smaller tables without losing data (lossless join). It ensures that all join dependencies are implied by candidate keys."
+      "Fourth Normal Form (4NF) Deals with Multi-valued Dependencies (MVD) . A table is in 4NF if it is in BCNF and contains no non-trivial multi-valued dependencies (where one attribute determines a set of values for another, independent of a third). Example: An Employee has multiple Skills and multiple Dependents. Storing them in one table creates massive redundancy. We split into (Emp, Skill) and (Emp, Dependent) . Fifth Normal Form (5NF) Deals with Join Dependencies . Also known as Project-Join Normal Form (PJNF). A table is in 5NF if it is in 4NF and cannot be decomposed into smaller tables without losing data (lossless join). It ensures that all join dependencies are implied by candidate keys."
     ],
     "type": "question"
   },
@@ -475,7 +475,7 @@
     "title": "What is lossless-join decomposition? Explain with an example.",
     "url": "question-bank.html?open=q30",
     "chunks": [
-      "Definition\r\n\nLossless-join decomposition means that if a relation R is decomposed into R1 and R2, joining them back together via a Natural Join will yield the exact original relation R, without any missing rows (loss of data) or extra spurious rows (creation of invalid data).\r\n\nCondition\r\n\nThe decomposition is lossless if the common attribute(s) between R1 and R2 form a super key for either R1 or R2. (i.e., R1 \u2229 R2 \u2192 R1 OR R1 \u2229 R2 \u2192 R2).\r\n\nExample\r\n\nSplitting Employee(ID, Name, Dept, Dept_Location) into Emp(ID, Name, Dept) and Department(Dept, Dept_Location) is lossless because their intersection, Dept, is a primary key for the Department table."
+      "Definition Lossless-join decomposition means that if a relation R is decomposed into R1 and R2, joining them back together via a Natural Join will yield the exact original relation R, without any missing rows (loss of data) or extra spurious rows (creation of invalid data). Condition The decomposition is lossless if the common attribute(s) between R1 and R2 form a super key for either R1 or R2. (i.e., R1 \u2229 R2 \u2192 R1 OR R1 \u2229 R2 \u2192 R2). Example Splitting Employee(ID, Name, Dept, Dept_Location) into Emp(ID, Name, Dept) and Department(Dept, Dept_Location) is lossless because their intersection, Dept , is a primary key for the Department table."
     ],
     "type": "question"
   },
@@ -491,7 +491,7 @@
     "title": "Define dependency-preserving decomposition and give a suitable example.",
     "url": "question-bank.html?open=q31",
     "chunks": [
-      "Definition\r\n\nA decomposition is dependency-preserving if the union of the functional dependencies in the decomposed relations logically implies all the functional dependencies of the original relation. This ensures that updates can be checked for validity without joining the tables back together.\r\n\nExample\r\n\nOriginal Relation: R(A, B, C)\n\n        Functional Dependencies (FDs): A \u2192 B, B \u2192 C\n\n        Decomposition: R1(A, B) and R2(B, C).\n\n        FDs in R1: A \u2192 B.\n\n        FDs in R2: B \u2192 C.\n\n        Since (A \u2192 B) \u222a (B \u2192 C) covers all original FDs, it is a dependency-preserving decomposition."
+      "Definition A decomposition is dependency-preserving if the union of the functional dependencies in the decomposed relations logically implies all the functional dependencies of the original relation. This ensures that updates can be checked for validity without joining the tables back together. Example Original Relation: R(A, B, C) Functional Dependencies (FDs): A \u2192 B, B \u2192 C Decomposition: R1(A, B) and R2(B, C). FDs in R1: A \u2192 B. FDs in R2: B \u2192 C. Since (A \u2192 B) \u222a (B \u2192 C) covers all original FDs, it is a dependency-preserving decomposition ."
     ],
     "type": "question"
   },
@@ -507,7 +507,7 @@
     "title": "Draw an E-R diagram for a University Exam System, showing all entities, attributes, relationships, keys and cardinalities clearly. Also write down its schema.",
     "url": "question-bank.html?open=q32",
     "chunks": [
-      "E-R Diagram\n\nRelational Schema\n\nStudent(Roll_No, Name, Program)\n\nCourse(Course_Code, C_Name, Credits)\n\nExam(Exam_ID, Date, Time, Course_Code)\n\nAppears(Roll_No, Exam_ID, Marks_Obtained)"
+      "E-R Diagram Relational Schema Student ( Roll_No , Name, Program) Course ( Course_Code , C_Name, Credits) Exam ( Exam_ID , Date, Time, Course_Code ) Appears ( Roll_No , Exam_ID , Marks_Obtained)"
     ],
     "type": "question"
   },
@@ -523,7 +523,7 @@
     "title": "Design an E-R diagram for an Online Book Store considering Customer, Book, Author, Order and Publisher, and write the corresponding schema.",
     "url": "question-bank.html?open=q33",
     "chunks": [
-      "E-R Diagram\n\nRelational Schema\n\nCustomer(Cust_ID, Name, Email, Address)\n\nAuthor(Auth_ID, Name, Bio)\n\nPublisher(Pub_ID, Name, Address)\n\nBook(ISBN, Title, Price, Auth_ID, Pub_ID)\n\nOrder(Order_ID, Date, Total_Amt, Cust_ID)\n\nOrder_Details(Order_ID, ISBN, Quantity)"
+      "E-R Diagram Relational Schema Customer ( Cust_ID , Name, Email, Address) Author ( Auth_ID , Name, Bio) Publisher ( Pub_ID , Name, Address) Book ( ISBN , Title, Price, Auth_ID , Pub_ID ) Order ( Order_ID , Date, Total_Amt, Cust_ID ) Order_Details ( Order_ID , ISBN , Quantity)"
     ],
     "type": "question"
   },
@@ -539,7 +539,7 @@
     "title": "A Hospital wants to maintain records of Patients and Doctors, along with the tests conducted for each patient. Draw a suitable E-R diagram and write its schema.",
     "url": "question-bank.html?open=q34",
     "chunks": [
-      "E-R Diagram\n\nRelational Schema\n\nPatient(Patient_ID, Name, DOB, Contact)\n\nDoctor(Doc_ID, Name, Specialization)\n\nTest(Test_Code, Test_Name, Cost)\n\nConsultation_Record(Record_ID, Patient_ID, Doc_ID, Test_Code, Date, Result)"
+      "E-R Diagram Relational Schema Patient ( Patient_ID , Name, DOB, Contact) Doctor ( Doc_ID , Name, Specialization) Test ( Test_Code , Test_Name, Cost) Consultation_Record ( Record_ID , Patient_ID , Doc_ID , Test_Code , Date, Result)"
     ],
     "type": "question"
   },
@@ -555,7 +555,7 @@
     "title": "Construct an E-R diagram for a Bank that offers different types of accounts and loans through several branches. Write its schema as well.",
     "url": "question-bank.html?open=q35",
     "chunks": [
-      "E-R Diagram\n\nRelational Schema\n\nBranch(Branch_Code, City, Assets)\n\nCustomer(Cust_ID, Name, Phone, Address)\n\nAccount(Acc_No, Type, Balance, Branch_Code)\n\nLoan(Loan_No, Amount, Interest_Rate, Branch_Code)\n\nHolds_Account(Cust_ID, Acc_No)\n\nTakes_Loan(Cust_ID, Loan_No)"
+      "E-R Diagram Relational Schema Branch ( Branch_Code , City, Assets) Customer ( Cust_ID , Name, Phone, Address) Account ( Acc_No , Type, Balance, Branch_Code ) Loan ( Loan_No , Amount, Interest_Rate, Branch_Code ) Holds_Account ( Cust_ID , Acc_No ) Takes_Loan ( Cust_ID , Loan_No )"
     ],
     "type": "question"
   },
@@ -571,7 +571,7 @@
     "title": "Draw an E-R diagram for a scenario where Suppliers supply different Parts used in various Projects. Clearly mark the cardinalities involved.",
     "url": "question-bank.html?open=q36",
     "chunks": [
-      "E-R Diagram (Ternary Relationship)\r\n\nSchema\r\n\nSupplies(Supp_ID, Part_ID, Proj_ID, Quantity)"
+      "E-R Diagram (Ternary Relationship) Schema Supplies ( Supp_ID , Part_ID , Proj_ID , Quantity)"
     ],
     "type": "question"
   },
@@ -587,7 +587,7 @@
     "title": "An Insurance Company records the Cars owned by its Customers and the Accidents involving each car. Draw the E-R diagram for this and write its schema.",
     "url": "question-bank.html?open=q37",
     "chunks": [
-      "E-R Diagram\n\nRelational Schema\n\nCustomer(Cust_ID, Name, Address)\n\nCar(License_Plate, Model, Year, Cust_ID)\n\nAccident(Report_No, Date, Location)\n\nInvolved_In(License_Plate, Report_No, Damage_Amount)\n\nNote: The relationship between Customer and Car is 1:N (Customer owns many Cars, Car is owned by one Customer). The relationship between Car and Accident is M:N, mapped via the 'Involved_In' associative table."
+      "E-R Diagram Relational Schema Customer ( Cust_ID , Name, Address) Car ( License_Plate , Model, Year, Cust_ID ) Accident ( Report_No , Date, Location) Involved_In ( License_Plate , Report_No , Damage_Amount) Note: The relationship between Customer and Car is 1:N (Customer owns many Cars, Car is owned by one Customer). The relationship between Car and Accident is M:N, mapped via the 'Involved_In' associative table."
     ],
     "type": "question"
   },
@@ -603,7 +603,7 @@
     "title": "Design an E-R diagram for a Company that maintains data about its Employees and the Projects they are assigned to.",
     "url": "question-bank.html?open=q38",
     "chunks": [
-      "E-R Diagram\n\nRelational Schema\n\nEmployee(Emp_ID, Name, Dept, Salary)\n\nProject(Proj_ID, Proj_Name, Budget)\n\nAssigned_To(Emp_ID, Proj_ID, Hours_Allocated)\n\nThe \"Assigned_To\" associative table resolves the M:N cardinality between Employees and Projects, and stores the descriptive attribute \"Hours_Allocated\"."
+      "E-R Diagram Relational Schema Employee ( Emp_ID , Name, Dept, Salary) Project ( Proj_ID , Proj_Name, Budget) Assigned_To ( Emp_ID , Proj_ID , Hours_Allocated) The \"Assigned_To\" associative table resolves the M:N cardinality between Employees and Projects, and stores the descriptive attribute \"Hours_Allocated\"."
     ],
     "type": "question"
   },
@@ -619,7 +619,7 @@
     "title": "A university follows a fixed procedure for admission, an application is received, checked by the registrar's office, and finally approved or rejected by the concerned department. Represent this as an E-R diagram.",
     "url": "question-bank.html?open=q39",
     "chunks": [
-      "E-R Diagram\n\nRelational Schema\n\nApplicant(Applicant_ID, Name, Email)\n\nDepartment(Dept_ID, Dept_Name)\n\nRegistrar(Staff_ID, Name)\n\nApplication(App_ID, Date_Submitted, Status, Applicant_ID, Dept_ID, Staff_ID, Decision_Date)"
+      "E-R Diagram Relational Schema Applicant ( Applicant_ID , Name, Email) Department ( Dept_ID , Dept_Name) Registrar ( Staff_ID , Name) Application ( App_ID , Date_Submitted, Status, Applicant_ID , Dept_ID , Staff_ID , Decision_Date)"
     ],
     "type": "question"
   },
@@ -635,7 +635,7 @@
     "title": "Consider an unnormalized relation Student_Marks(Rollno, Name, Subject, Marks) where a student appears in multiple rows, one per subject. Normalize it step by step up to 3NF, clearly stating the functional dependencies you have assumed.",
     "url": "question-bank.html?open=q40",
     "chunks": [
-      "Functional Dependencies (FDs)\r\n\nAssumed FDs based on logic:\r\n\nFD1: Rollno \u2192 Name (A student has one name)\r\n\nFD2: Rollno, Subject \u2192 Marks (A specific student's marks in a specific subject)\r\n\nThe primary key for the unnormalized relation is (Rollno, Subject).\r\n\nStep 1: 1NF to 2NF\r\n\nIn the original relation, Name depends ONLY on Rollno, which is a part of the primary key. This is a Partial Dependency. We decompose to eliminate it:\r\n\nStudent(Rollno, Name)\r\n\nPerformance(Rollno, Subject, Marks)\r\n\nStep 2: 2NF to 3NF\r\n\nIn the new tables, there are no non-key attributes depending on other non-key attributes (no transitive dependencies). Therefore, the tables are already in 3NF."
+      "Functional Dependencies (FDs) Assumed FDs based on logic: FD1: Rollno \u2192 Name (A student has one name) FD2: Rollno, Subject \u2192 Marks (A specific student's marks in a specific subject) The primary key for the unnormalized relation is (Rollno, Subject) . Step 1: 1NF to 2NF In the original relation, Name depends ONLY on Rollno , which is a part of the primary key. This is a Partial Dependency . We decompose to eliminate it: Student ( Rollno , Name) Performance ( Rollno, Subject , Marks) Step 2: 2NF to 3NF In the new tables, there are no non-key attributes depending on other non-key attributes (no transitive dependencies). Therefore, the tables are already in 3NF ."
     ],
     "type": "question"
   },
@@ -651,7 +651,7 @@
     "title": "A hostel management register stores the occupants of each room as shown in the table below. Redesign this data into a table that satisfies 1NF.",
     "url": "question-bank.html?open=q41",
     "chunks": [
-      "Problem Context\n\nIn the unnormalized table, a single cell (like \"Occupants\") contains multiple values (e.g., \"Alice, Bob\"), which violates the atomicity rule of 1NF.\n\n1NF Solution\n\nTo convert to 1NF, we eliminate repeating groups by ensuring each cell holds only a single, atomic value. We duplicate the room number for each occupant.\n\n                Room_No\n                Occupant\n\n                101\n                Alice\n\n                101\n                Bob\n\n                102\n                Charlie\n\nNow, the primary key becomes the composite key (Room_No, Occupant)."
+      "Problem Context In the unnormalized table, a single cell (like \"Occupants\") contains multiple values (e.g., \"Alice, Bob\"), which violates the atomicity rule of 1NF. 1NF Solution To convert to 1NF, we eliminate repeating groups by ensuring each cell holds only a single, atomic value. We duplicate the room number for each occupant. Room_No Occupant 101 Alice 101 Bob 102 Charlie Now, the primary key becomes the composite key (Room_No, Occupant) ."
     ],
     "type": "question"
   },
@@ -667,7 +667,7 @@
     "title": "The table below has the composite key (StudentID, SubjectID). Identify the partial dependencies present and decompose the table into 2NF.",
     "url": "question-bank.html?open=q42",
     "chunks": [
-      "Identifying Partial Dependencies\n\nSuppose the relation is R(StudentID, SubjectID, StudentName, Grade). The primary key is (StudentID, SubjectID).\n\nStudentID \u2192 StudentName (StudentName depends only on part of the key) \u2014 Partial Dependency\n\nStudentID, SubjectID \u2192 Grade (Grade depends on the whole key) \u2014 Full Dependency\n\nDecomposition into 2NF\n\nWe split the table to remove the partial dependency:\n\nStudent(StudentID, StudentName)\n\nEnrollment(StudentID, SubjectID, Grade)\n\nBoth tables are now in 2NF as all non-prime attributes fully depend on their respective primary keys."
+      "Identifying Partial Dependencies Suppose the relation is R(StudentID, SubjectID, StudentName, Grade) . The primary key is (StudentID, SubjectID) . StudentID \u2192 StudentName (StudentName depends only on part of the key) \u2014 Partial Dependency StudentID, SubjectID \u2192 Grade (Grade depends on the whole key) \u2014 Full Dependency Decomposition into 2NF We split the table to remove the partial dependency: Student ( StudentID , StudentName) Enrollment ( StudentID, SubjectID , Grade) Both tables are now in 2NF as all non-prime attributes fully depend on their respective primary keys."
     ],
     "type": "question"
   },
@@ -683,7 +683,7 @@
     "title": "The table below has EmployeeID as its primary key. Show that it violates 3NF, and decompose it into a set of tables that satisfy 3NF.",
     "url": "question-bank.html?open=q43",
     "chunks": [
-      "Violation of 3NF\n\nConsider Employee(EmpID, Name, DeptID, DeptName) where EmpID is the primary key.\n\nFunctional Dependencies:\n\n        1. EmpID \u2192 DeptID\n\n        2. DeptID \u2192 DeptName\n\n        Because EmpID \u2192 DeptName through DeptID, this is a Transitive Dependency. 3NF forbids non-prime attributes depending on other non-prime attributes.\n\nDecomposition into 3NF\n\nWe decompose the relation to separate the department details:\n\nEmployee(EmpID, Name, DeptID)\n\nDepartment(DeptID, DeptName)"
+      "Violation of 3NF Consider Employee(EmpID, Name, DeptID, DeptName) where EmpID is the primary key. Functional Dependencies: 1. EmpID \u2192 DeptID 2. DeptID \u2192 DeptName Because EmpID \u2192 DeptName through DeptID , this is a Transitive Dependency . 3NF forbids non-prime attributes depending on other non-prime attributes. Decomposition into 3NF We decompose the relation to separate the department details: Employee ( EmpID , Name, DeptID ) Department ( DeptID , DeptName)"
     ],
     "type": "question"
   },
@@ -699,7 +699,7 @@
     "title": "In the table below, each mentor teaches only one subject. Given that the candidate keys of this table are (StudentID, Subject) and (StudentID, Mentor), check whether it satisfies BCNF. If it does not, decompose it into BCNF.",
     "url": "question-bank.html?open=q44",
     "chunks": [
-      "Checking BCNF\n\nRelation: R(StudentID, Subject, Mentor)\n\n        FDs: {StudentID, Subject} \u2192 Mentor, and Mentor \u2192 Subject (each mentor teaches one subject).\n\n        Because Mentor \u2192 Subject exists, but Mentor is not a super key, the table violates BCNF (even though it is in 3NF since Subject is a prime attribute).\n\nBCNF Decomposition\n\nWe must pull the violating determinant out into its own table:\n\nMentor_Subject(Mentor, Subject)\n\nStudent_Mentor(StudentID, Mentor)\n\nNow all determinants are candidate keys."
+      "Checking BCNF Relation: R(StudentID, Subject, Mentor) FDs: {StudentID, Subject} \u2192 Mentor , and Mentor \u2192 Subject (each mentor teaches one subject). Because Mentor \u2192 Subject exists, but Mentor is not a super key , the table violates BCNF (even though it is in 3NF since Subject is a prime attribute). BCNF Decomposition We must pull the violating determinant out into its own table: Mentor_Subject ( Mentor , Subject) Student_Mentor ( StudentID, Mentor ) Now all determinants are candidate keys."
     ],
     "type": "question"
   },
@@ -715,7 +715,7 @@
     "title": "The table below stores a student's hobbies and the languages they know together, forcing every combination to be listed. Explain why this table is not in 4NF, and decompose it into a form that satisfies 4NF.",
     "url": "question-bank.html?open=q45",
     "chunks": [
-      "Violation of 4NF\n\nRelation: R(StudentID, Hobby, Language)\n\n        A student's hobbies are completely independent of the languages they speak. This creates two Multi-Valued Dependencies (MVDs):\n\n        StudentID \u27f6 Hobby and StudentID \u27f6 Language.\n\n        Storing them together forces a Cartesian product (e.g., 2 hobbies \u00d7 3 languages = 6 rows for one student). Since 4NF forbids non-trivial MVDs, this violates 4NF.\n\n4NF Decomposition\n\nSplit into two tables to eliminate the Cartesian product:\n\nStudent_Hobby(StudentID, Hobby)\n\nStudent_Language(StudentID, Language)"
+      "Violation of 4NF Relation: R(StudentID, Hobby, Language) A student's hobbies are completely independent of the languages they speak. This creates two Multi-Valued Dependencies (MVDs) : StudentID \u27f6 Hobby and StudentID \u27f6 Language . Storing them together forces a Cartesian product (e.g., 2 hobbies \u00d7 3 languages = 6 rows for one student). Since 4NF forbids non-trivial MVDs, this violates 4NF. 4NF Decomposition Split into two tables to eliminate the Cartesian product: Student_Hobby ( StudentID, Hobby ) Student_Language ( StudentID, Language )"
     ],
     "type": "question"
   },
@@ -731,7 +731,7 @@
     "title": "Given a relation R(A, B, C, D, E) with the functional dependency set F = {A -> B, BC -> D, D -> E}, compute the closure of {A, C} and state whether {A, C} is a candidate key of R.",
     "url": "question-bank.html?open=q46",
     "chunks": [
-      "Computing {A, C}+\n\nStart with the base set: {A, C}\n\nUsing A \u2192 B, add B. The set becomes {A, B, C}\n\nUsing BC \u2192 D (we have both B and C), add D. The set becomes {A, B, C, D}\n\nUsing D \u2192 E, add E. The set becomes {A, B, C, D, E}\n\nConclusion\n\nSince the closure of {A, C} contains all the attributes of the relation R, {A, C} is a super key. Assuming no proper subset of {A, C} can determine all attributes, {A, C} is a Candidate Key."
+      "Computing {A, C} + Start with the base set: {A, C} Using A \u2192 B , add B. The set becomes {A, B, C} Using BC \u2192 D (we have both B and C), add D. The set becomes {A, B, C, D} Using D \u2192 E , add E. The set becomes {A, B, C, D, E} Conclusion Since the closure of {A, C} contains all the attributes of the relation R, {A, C} is a super key . Assuming no proper subset of {A, C} can determine all attributes, {A, C} is a Candidate Key ."
     ],
     "type": "question"
   },
@@ -747,7 +747,7 @@
     "title": "Consider the relation Student_Course(Roll_No, Course_ID, Course_Name, Instructor) with the functional dependencies {Roll_No, Course_ID} -> Instructor, and Course_ID -> Course_Name. Identify the partial dependency present, show why the relation is not in 2NF, and decompose it into 2NF.",
     "url": "question-bank.html?open=q47",
     "chunks": [
-      "Analysis\n\nPrimary Key: (Roll_No, Course_ID)\n\n        The FD Course_ID \u2192 Course_Name is a Partial Dependency because Course_Name depends only on a part of the primary key (Course_ID), violating 2NF.\n\n2NF Decomposition\n\nCourse(Course_ID, Course_Name)\n\nStudent_Course(Roll_No, Course_ID, Instructor)\n\nNow, both relations are in 2NF."
+      "Analysis Primary Key: (Roll_No, Course_ID) The FD Course_ID \u2192 Course_Name is a Partial Dependency because Course_Name depends only on a part of the primary key (Course_ID), violating 2NF. 2NF Decomposition Course ( Course_ID , Course_Name) Student_Course ( Roll_No, Course_ID , Instructor) Now, both relations are in 2NF."
     ],
     "type": "question"
   },
@@ -763,7 +763,7 @@
     "title": "Consider the relation Employee(Emp_ID, Emp_Name, Dept_ID, Dept_Name, Dept_Location) with the functional dependencies Emp_ID -> Emp_Name, Dept_ID and Dept_ID -> Dept_Name, Dept_Location. Show that this relation is in 2NF but violates 3NF, and decompose it into 3NF.",
     "url": "question-bank.html?open=q48",
     "chunks": [
-      "Analysis\n\nPrimary Key: Emp_ID. Since the key is a single attribute, there are no partial dependencies, so it is in 2NF.\n\n        However, the FD Dept_ID \u2192 Dept_Name, Dept_Location creates a Transitive Dependency (Emp_ID \u2192 Dept_ID \u2192 Dept_Name). This violates 3NF.\n\n3NF Decomposition\n\nEmployee(Emp_ID, Emp_Name, Dept_ID)\n\nDepartment(Dept_ID, Dept_Name, Dept_Location)"
+      "Analysis Primary Key: Emp_ID . Since the key is a single attribute, there are no partial dependencies, so it is in 2NF . However, the FD Dept_ID \u2192 Dept_Name, Dept_Location creates a Transitive Dependency (Emp_ID \u2192 Dept_ID \u2192 Dept_Name). This violates 3NF. 3NF Decomposition Employee ( Emp_ID , Emp_Name, Dept_ID ) Department ( Dept_ID , Dept_Name, Dept_Location)"
     ],
     "type": "question"
   },
@@ -779,7 +779,7 @@
     "title": "Consider the relation R(Student, Subject, Teacher) with the functional dependencies {Student, Subject} -> Teacher and Teacher -> Subject. Determine whether R is in BCNF. If it is not, decompose it into a set of relations that are in BCNF.",
     "url": "question-bank.html?open=q49",
     "chunks": [
-      "Analysis\n\nCandidate Keys: (Student, Subject) and (Student, Teacher).\n\n        For the FD Teacher \u2192 Subject, Teacher is a determinant but not a super key. Therefore, R violates BCNF.\n\nBCNF Decomposition\n\nTeach_Subj(Teacher, Subject)\n\nStud_Teach(Student, Teacher)\n\nBoth tables are now strictly in BCNF."
+      "Analysis Candidate Keys: (Student, Subject) and (Student, Teacher) . For the FD Teacher \u2192 Subject , Teacher is a determinant but not a super key . Therefore, R violates BCNF. BCNF Decomposition Teach_Subj ( Teacher , Subject) Stud_Teach ( Student, Teacher ) Both tables are now strictly in BCNF."
     ],
     "type": "question"
   },
@@ -795,7 +795,7 @@
     "title": "Given a relation R(A, B, C, D) with the functional dependency set F = {AB -> C, C -> D, D -> A}, find all the candidate keys of R and state the highest normal form it satisfies.",
     "url": "question-bank.html?open=q50",
     "chunks": [
-      "Candidate Keys\n\n{A, B}+ = {A, B, C, D}\n\n{B, C}+ = {A, B, C, D} (since C \u2192 D and D \u2192 A)\n\n{B, D}+ = {A, B, C, D} (since D \u2192 A and AB \u2192 C)\n\nThe candidate keys are AB, BC, and BD. All attributes are prime attributes except none (every attribute is part of at least one candidate key).\n\nHighest Normal Form\n\nBecause there are no non-prime attributes, the relation is automatically in 3NF.\n\n        However, check BCNF: The FD C \u2192 D has determinant C, which is not a super key. Thus, it violates BCNF. The highest normal form is 3NF."
+      "Candidate Keys {A, B} + = {A, B, C, D} {B, C} + = {A, B, C, D} (since C \u2192 D and D \u2192 A) {B, D} + = {A, B, C, D} (since D \u2192 A and AB \u2192 C) The candidate keys are AB, BC, and BD . All attributes are prime attributes except none (every attribute is part of at least one candidate key). Highest Normal Form Because there are no non-prime attributes, the relation is automatically in 3NF . However, check BCNF: The FD C \u2192 D has determinant C, which is not a super key. Thus, it violates BCNF. The highest normal form is 3NF ."
     ],
     "type": "question"
   },
@@ -811,7 +811,7 @@
     "title": "What is an RDBMS? How does it differ from a DBMS?",
     "url": "question-bank.html?open=q51",
     "chunks": [
-      "Feature\n                        DBMS\n                        RDBMS\n\n                        Data Storage\n                        Stores data as files.\n                        Stores data in tabular form (rows and columns).\n\n                        Relationships\n                        Does not support relationships easily.\n                        Supports complex relationships using foreign keys."
+      "Feature DBMS RDBMS Data Storage Stores data as files. Stores data in tabular form (rows and columns). Relationships Does not support relationships easily. Supports complex relationships using foreign keys."
     ],
     "type": "question"
   },
@@ -827,7 +827,7 @@
     "title": "Explain how entities and relationships of the E-R model are represented in a relational database.",
     "url": "question-bank.html?open=q52",
     "chunks": [
-      "Strong Entities: Represented as standalone tables.\n\nRelationships (1:N): The primary key of the '1' side is added as a foreign key to the 'N' side table.\n\nRelationships (M:N): Handled by creating a new junction table containing the primary keys of both entities."
+      "Strong Entities: Represented as standalone tables. Relationships (1:N): The primary key of the '1' side is added as a foreign key to the 'N' side table. Relationships (M:N): Handled by creating a new junction table containing the primary keys of both entities."
     ],
     "type": "question"
   },
@@ -843,7 +843,7 @@
     "title": "Consider the relational schema Student(sid, sname), Course(cid, cname), Enrollment(sid, cid). Write relational algebra expressions.",
     "url": "question-bank.html?open=q53",
     "chunks": [
-      "i. Names of students enrolled in 'DBMS'\n\n\u03c0sname ( \u03c3cname='DBMS' (Student \u2a1d Enrollment \u2a1d Course) )\n\nii. Courses where 'Alice' is enrolled\n\n\u03c0cname ( \u03c3sname='Alice' (Course \u2a1d Enrollment \u2a1d Student) )"
+      "i. Names of students enrolled in 'DBMS' \u03c0 sname ( \u03c3 cname='DBMS' (Student \u2a1d Enrollment \u2a1d Course) ) ii. Courses where 'Alice' is enrolled \u03c0 cname ( \u03c3 sname='Alice' (Course \u2a1d Enrollment \u2a1d Student) )"
     ],
     "type": "question"
   },
@@ -859,7 +859,7 @@
     "title": "What are the derived operations of relational algebra? Explain Join, Intersection and Division with examples.",
     "url": "question-bank.html?open=q54",
     "chunks": [
-      "Derived operations are built using fundamental operations (\u03c3, \u03c0, \u00d7, \u222a, -).\n\nIntersection (\u2229): Returns tuples existing in both relations.\n\nJoin (\u2a1d): A cartesian product followed by a selection.\n\nDivision (\u00f7): Used for queries involving the word \"every\" (e.g., students who took all courses)."
+      "Derived operations are built using fundamental operations (\u03c3, \u03c0, \u00d7, \u222a, -). Intersection (\u2229): Returns tuples existing in both relations. Join (\u2a1d): A cartesian product followed by a selection. Division (\u00f7): Used for queries involving the word \"every\" (e.g., students who took all courses)."
     ],
     "type": "question"
   },
@@ -875,7 +875,7 @@
     "title": "Distinguish between relational algebra and relational calculus.",
     "url": "question-bank.html?open=q55",
     "chunks": [
-      "Relational Algebra\n                        Relational Calculus\n\n                        Procedural query language.\n                        Non-procedural (declarative) query language.\n\n                        Specifies what data is required and how to retrieve it.\n                        Specifies what data is required without specifying how to retrieve it."
+      "Relational Algebra Relational Calculus Procedural query language. Non-procedural (declarative) query language. Specifies what data is required and how to retrieve it. Specifies what data is required without specifying how to retrieve it."
     ],
     "type": "question"
   },
@@ -891,7 +891,7 @@
     "title": "What is the degree and cardinality of a relation?",
     "url": "question-bank.html?open=q56",
     "chunks": [
-      "Degree: The number of attributes (columns) in a relation.\n\nCardinality: The number of tuples (rows) in a relation."
+      "Degree: The number of attributes (columns) in a relation. Cardinality: The number of tuples (rows) in a relation."
     ],
     "type": "question"
   },
@@ -907,7 +907,7 @@
     "title": "What is domain relational calculus? Give an example.",
     "url": "question-bank.html?open=q57",
     "chunks": [
-      "Domain Relational Calculus (DRC) is a declarative query language where variables represent single attribute values (domains).\n\nSyntax: { <x1, x2, ..., xn> | P(x1, x2, ..., xn) }\n\nExample: { <N> | \u2203 I, A, C ( <I, N, A, C> \u2208 Student \u2227 A > 20 ) }"
+      "Domain Relational Calculus (DRC) is a declarative query language where variables represent single attribute values (domains). Syntax: { <x1, x2, ..., xn> | P(x1, x2, ..., xn) } Example: { <N> | \u2203 I, A, C ( <I, N, A, C> \u2208 Student \u2227 A > 20 ) }"
     ],
     "type": "question"
   },
@@ -923,7 +923,7 @@
     "title": "Explain DDL, DML, DCL and TCL commands with one example of each.",
     "url": "question-bank.html?open=q58",
     "chunks": [
-      "DDL: Defines structure (e.g., CREATE TABLE).\n\nDML: Manages data (e.g., INSERT INTO).\n\nDCL: Manages security (e.g., GRANT).\n\nTCL: Manages transactions (e.g., COMMIT)."
+      "DDL: Defines structure (e.g., CREATE TABLE ). DML: Manages data (e.g., INSERT INTO ). DCL: Manages security (e.g., GRANT ). TCL: Manages transactions (e.g., COMMIT )."
     ],
     "type": "question"
   },
@@ -939,7 +939,7 @@
     "title": "What is the use of CREATE, ALTER, DROP and TRUNCATE commands?",
     "url": "question-bank.html?open=q59",
     "chunks": [
-      "CREATE: Used to create new tables/objects.\n\nALTER: Used to modify an existing table structure (add/drop columns).\n\nDROP: Deletes an entire table and its structure.\n\nTRUNCATE: Deletes all rows rapidly, but keeps the structure intact."
+      "CREATE: Used to create new tables/objects. ALTER: Used to modify an existing table structure (add/drop columns). DROP: Deletes an entire table and its structure. TRUNCATE: Deletes all rows rapidly, but keeps the structure intact."
     ],
     "type": "question"
   },
@@ -955,7 +955,7 @@
     "title": "Explain the DML commands INSERT, UPDATE, DELETE and SELECT.",
     "url": "question-bank.html?open=q60",
     "chunks": [
-      "INSERT: Adds new rows.\n\nUPDATE: Modifies existing rows.\n\nDELETE: Removes specific rows.\n\nSELECT: Retrieves data from the database."
+      "INSERT: Adds new rows. UPDATE: Modifies existing rows. DELETE: Removes specific rows. SELECT: Retrieves data from the database."
     ],
     "type": "question"
   },
@@ -971,7 +971,7 @@
     "title": "What is the purpose of GRANT and REVOKE commands in SQL?",
     "url": "question-bank.html?open=q61",
     "chunks": [
-      "GRANT and REVOKE belong to the DCL (Data Control Language) category. They are used to manage database security by controlling user privileges.\n\nGRANT: Gives a user or role specific privileges on database objects.\n\n            Example: GRANT SELECT ON Employees TO user_alice;\n\nREVOKE: Removes previously granted privileges.\n\n            Example: REVOKE SELECT ON Employees FROM user_alice;"
+      "GRANT and REVOKE belong to the DCL (Data Control Language) category. They are used to manage database security by controlling user privileges. GRANT: Gives a user or role specific privileges on database objects. Example: GRANT SELECT ON Employees TO user_alice; REVOKE: Removes previously granted privileges. Example: REVOKE SELECT ON Employees FROM user_alice;"
     ],
     "type": "question"
   },
@@ -987,7 +987,7 @@
     "title": "Explain COMMIT, ROLLBACK and SAVEPOINT with a suitable example.",
     "url": "question-bank.html?open=q62",
     "chunks": [
-      "These are TCL (Transaction Control Language) commands used to manage transactions.\n\nCOMMIT: Permanently saves all changes made during the current transaction.\n\nROLLBACK: Undoes all changes made in the current transaction.\n\nSAVEPOINT: Creates a checkpoint within a transaction to rollback to later.\n\nBEGIN;\nUPDATE Accounts SET balance = balance - 1000 WHERE id = 1;\nSAVEPOINT SP1;\nUPDATE Accounts SET balance = balance + 1000 WHERE id = 2;\nROLLBACK TO SP1; -- Undoes the second update\nCOMMIT; -- Permanently saves the first update"
+      "These are TCL (Transaction Control Language) commands used to manage transactions. COMMIT: Permanently saves all changes made during the current transaction. ROLLBACK: Undoes all changes made in the current transaction. SAVEPOINT: Creates a checkpoint within a transaction to rollback to later. BEGIN; UPDATE Accounts SET balance = balance - 1000 WHERE id = 1; SAVEPOINT SP1; UPDATE Accounts SET balance = balance + 1000 WHERE id = 2; ROLLBACK TO SP1; -- Undoes the second update COMMIT; -- Permanently saves the first update"
     ],
     "type": "question"
   },
@@ -1003,7 +1003,7 @@
     "title": "What is a join? Explain the different types of joins, inner, left outer, right outer and full outer, with examples.",
     "url": "question-bank.html?open=q63",
     "chunks": [
-      "A JOIN combines rows from two or more tables based on a related column.\n\nInner Join\n\nReturns only rows with matching values in both tables.\n\nSELECT A.Name, B.Dept FROM Emp A INNER JOIN Dept B ON A.DeptID = B.DeptID;\n\nOuter Joins\n\nLeft Outer: Returns all rows from the left table, and matched rows from the right.\n\nRight Outer: Returns all rows from the right table, and matched rows from the left.\n\nFull Outer: Returns all rows when there is a match in either table."
+      "A JOIN combines rows from two or more tables based on a related column. Inner Join Returns only rows with matching values in both tables. SELECT A.Name, B.Dept FROM Emp A INNER JOIN Dept B ON A.DeptID = B.DeptID; Outer Joins Left Outer: Returns all rows from the left table, and matched rows from the right. Right Outer: Returns all rows from the right table, and matched rows from the left. Full Outer: Returns all rows when there is a match in either table."
     ],
     "type": "question"
   },
@@ -1019,7 +1019,7 @@
     "title": "Differentiate between an equi join and a natural join, with an example of each.",
     "url": "question-bank.html?open=q64",
     "chunks": [
-      "Equi Join\n                        Natural Join\n\n                        Explicitly uses the equality operator (=) in the ON clause.\n                        Implicitly matches on all columns that have the same name. No ON clause is used.\n\n                        Output contains duplicate matching columns.\n                        Output automatically removes duplicate matching columns.\n\n                        SELECT * FROM Emp JOIN Dept ON Emp.DeptID = Dept.DeptID;\n                        SELECT * FROM Emp NATURAL JOIN Dept;"
+      "Equi Join Natural Join Explicitly uses the equality operator ( = ) in the ON clause. Implicitly matches on all columns that have the same name . No ON clause is used. Output contains duplicate matching columns. Output automatically removes duplicate matching columns. SELECT * FROM Emp JOIN Dept ON Emp.DeptID = Dept.DeptID; SELECT * FROM Emp NATURAL JOIN Dept;"
     ],
     "type": "question"
   },
@@ -1035,7 +1035,7 @@
     "title": "What is a self join? What is a cross join? Explain with examples.",
     "url": "question-bank.html?open=q65",
     "chunks": [
-      "Self Join\n\nA table is joined with itself using aliases.\n\nSELECT E.Name AS Employee, M.Name AS Manager \nFROM Employee E \nJOIN Employee M ON E.ManagerID = M.EmpID;\n\nCross Join\n\nProduces the Cartesian Product of two tables (every row matched with every row).\n\nSELECT T.Name, C.RoomNo FROM Teachers T CROSS JOIN Classrooms C;"
+      "Self Join A table is joined with itself using aliases. SELECT E.Name AS Employee, M.Name AS Manager FROM Employee E JOIN Employee M ON E.ManagerID = M.EmpID; Cross Join Produces the Cartesian Product of two tables (every row matched with every row). SELECT T.Name, C.RoomNo FROM Teachers T CROSS JOIN Classrooms C;"
     ],
     "type": "question"
   },
@@ -1051,7 +1051,7 @@
     "title": "Explain the aggregate functions available in SQL, COUNT, SUM, AVG, MAX and MIN, giving an example of each.",
     "url": "question-bank.html?open=q66",
     "chunks": [
-      "Aggregate functions perform a calculation on a set of values and return a single summarizing value.\n\nCOUNT(): Returns the number of rows. SELECT COUNT(*) FROM Employees;\n\nSUM(): Returns the total sum of a column. SELECT SUM(Salary) FROM Employees;\n\nAVG(): Returns the average value. SELECT AVG(Salary) FROM Employees;\n\nMAX() / MIN(): Returns the largest / smallest value. SELECT MAX(Salary) FROM Employees;"
+      "Aggregate functions perform a calculation on a set of values and return a single summarizing value. COUNT(): Returns the number of rows. SELECT COUNT(*) FROM Employees; SUM(): Returns the total sum of a column. SELECT SUM(Salary) FROM Employees; AVG(): Returns the average value. SELECT AVG(Salary) FROM Employees; MAX() / MIN(): Returns the largest / smallest value. SELECT MAX(Salary) FROM Employees;"
     ],
     "type": "question"
   },
@@ -1067,7 +1067,7 @@
     "title": "What is the purpose of the GROUP BY clause? Explain with a suitable query.",
     "url": "question-bank.html?open=q67",
     "chunks": [
-      "The GROUP BY clause is used to arrange identical data into groups. It is typically used in conjunction with aggregate functions (COUNT, MAX, MIN, SUM, AVG).\n\nScenario: Find the total number of employees in each department.\n\nSELECT DeptID, COUNT(EmpID) AS TotalEmployees\nFROM Employee\nGROUP BY DeptID;"
+      "The GROUP BY clause is used to arrange identical data into groups. It is typically used in conjunction with aggregate functions (COUNT, MAX, MIN, SUM, AVG). Scenario: Find the total number of employees in each department. SELECT DeptID, COUNT(EmpID) AS TotalEmployees FROM Employee GROUP BY DeptID;"
     ],
     "type": "question"
   },
@@ -1083,7 +1083,7 @@
     "title": "How is the HAVING clause different from the WHERE clause? Justify with an example.",
     "url": "question-bank.html?open=q68",
     "chunks": [
-      "WHERE Clause\n                        HAVING Clause\n\n                        Filters individual rows before grouping.\n                        Filters groups after grouping.\n\n                        Cannot contain aggregate functions.\n                        Can contain aggregate functions.\n\nExample\n\nSELECT DeptID, AVG(Salary) FROM Employee\nWHERE HireDate > '2020-01-01'  -- Filters rows first\nGROUP BY DeptID\nHAVING AVG(Salary) > 50000;    -- Filters groups"
+      "WHERE Clause HAVING Clause Filters individual rows before grouping. Filters groups after grouping. Cannot contain aggregate functions. Can contain aggregate functions. Example SELECT DeptID, AVG(Salary) FROM Employee WHERE HireDate > '2020-01-01' -- Filters rows first GROUP BY DeptID HAVING AVG(Salary) > 50000; -- Filters groups"
     ],
     "type": "question"
   },
@@ -1099,7 +1099,7 @@
     "title": "Explain the use of the ORDER BY clause with an example.",
     "url": "question-bank.html?open=q69",
     "chunks": [
-      "The ORDER BY clause is used to sort the result set of a query in either ascending (ASC) or descending (DESC) order.\n\nExample: SELECT Name, Salary FROM Employee ORDER BY Salary DESC;"
+      "The ORDER BY clause is used to sort the result set of a query in either ascending (ASC) or descending (DESC) order. Example: SELECT Name, Salary FROM Employee ORDER BY Salary DESC;"
     ],
     "type": "question"
   },
@@ -1115,7 +1115,7 @@
     "title": "What are nested queries? Why are they used? Explain with a suitable example.",
     "url": "question-bank.html?open=q70",
     "chunks": [
-      "A nested query (subquery) is a query embedded within another query. They are used to break down complex queries into isolated steps.\n\nScenario: Find employees who earn a salary greater than the average salary.\n\nSELECT Name, Salary \nFROM Employee \nWHERE Salary > (SELECT AVG(Salary) FROM Employee);"
+      "A nested query (subquery) is a query embedded within another query. They are used to break down complex queries into isolated steps. Scenario: Find employees who earn a salary greater than the average salary. SELECT Name, Salary FROM Employee WHERE Salary > (SELECT AVG(Salary) FROM Employee);"
     ],
     "type": "question"
   },
@@ -1131,7 +1131,7 @@
     "title": "What is a correlated subquery? How is it different from a simple subquery?",
     "url": "question-bank.html?open=q71",
     "chunks": [
-      "Simple Subquery\n                        Correlated Subquery\n\n                        Executes completely independent of the outer query.\n                        Depends on the outer query for its values.\n\n                        Executes exactly once for the entire outer query.\n                        Executes repeatedly, once for every row processed by the outer query.\n\nExample (Correlated)\n\nSELECT Name, Salary FROM Employee E1 \nWHERE Salary > (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.DeptID);"
+      "Simple Subquery Correlated Subquery Executes completely independent of the outer query. Depends on the outer query for its values. Executes exactly once for the entire outer query. Executes repeatedly , once for every row processed by the outer query. Example (Correlated) SELECT Name, Salary FROM Employee E1 WHERE Salary > (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.DeptID);"
     ],
     "type": "question"
   },
@@ -1147,7 +1147,7 @@
     "title": "Explain the use of IN, EXISTS, ANY and ALL operators in a nested query.",
     "url": "question-bank.html?open=q72",
     "chunks": [
-      "IN: Checks if a value matches any value in a list or subquery result. \nWHERE DeptID IN (SELECT DeptID FROM Departments)\n\nEXISTS: Evaluates to TRUE if the subquery returns one or more records. \nWHERE EXISTS (SELECT * FROM Orders WHERE Orders.CustID = Customers.ID)\n\nANY (or SOME): Compares a value to each value in a list and evaluates to TRUE if any comparison is true. \nWHERE Salary > ANY (SELECT Salary FROM IT_Dept)\n\nALL: Evaluates to TRUE only if the comparison is true for all values in the list. \nWHERE Salary > ALL (SELECT Salary FROM Interns)"
+      "IN: Checks if a value matches any value in a list or subquery result. WHERE DeptID IN (SELECT DeptID FROM Departments) EXISTS: Evaluates to TRUE if the subquery returns one or more records. WHERE EXISTS (SELECT * FROM Orders WHERE Orders.CustID = Customers.ID) ANY (or SOME): Compares a value to each value in a list and evaluates to TRUE if any comparison is true. WHERE Salary > ANY (SELECT Salary FROM IT_Dept) ALL: Evaluates to TRUE only if the comparison is true for all values in the list. WHERE Salary > ALL (SELECT Salary FROM Interns)"
     ],
     "type": "question"
   },
@@ -1163,7 +1163,7 @@
     "title": "What is a view? What are its advantages?",
     "url": "question-bank.html?open=q73",
     "chunks": [
-      "A View is a virtual table based on the result-set of an SQL statement. It contains rows and columns, just like a real table, but holds no data of its own.\n\nAdvantages\n\nSecurity: Restricts access to specific rows/columns of a table.\n\nSimplicity: Hides complex joins and calculations into a single virtual table.\n\nData Independence: Insulates applications from changes in base table structures."
+      "A View is a virtual table based on the result-set of an SQL statement. It contains rows and columns, just like a real table, but holds no data of its own. Advantages Security: Restricts access to specific rows/columns of a table. Simplicity: Hides complex joins and calculations into a single virtual table. Data Independence: Insulates applications from changes in base table structures."
     ],
     "type": "question"
   },
@@ -1179,7 +1179,7 @@
     "title": "Differentiate between a simple view and a materialized view.",
     "url": "question-bank.html?open=q74",
     "chunks": [
-      "Simple View\n                        Materialized View\n\n                        Virtual table; does not store data physically.\n                        Stores the actual result data physically on disk.\n\n                        Query is executed every time the view is accessed.\n                        Data is pre-computed, providing much faster read access.\n\n                        Always shows up-to-date real-time data.\n                        Needs to be refreshed periodically to show updated data."
+      "Simple View Materialized View Virtual table; does not store data physically. Stores the actual result data physically on disk. Query is executed every time the view is accessed. Data is pre-computed, providing much faster read access. Always shows up-to-date real-time data. Needs to be refreshed periodically to show updated data."
     ],
     "type": "question"
   },
@@ -1195,7 +1195,7 @@
     "title": "Can every view be updated? Explain the limitations of an updatable view with an example.",
     "url": "question-bank.html?open=q75",
     "chunks": [
-      "No, not all views can be updated. A view is updatable only if the DBMS can unambiguously trace the update back to the underlying base table rows.\n\nLimitations (Cannot Update If:)\n\nIt contains aggregate functions (SUM, AVG, MIN, MAX).\n\nIt contains GROUP BY or HAVING clauses.\n\nIt is built using multiple tables (Joins), depending on the DBMS.\n\nIt uses the DISTINCT keyword.\n\nExample\n\nA view CREATE VIEW Dept_Salaries AS SELECT DeptID, AVG(Salary) FROM Employee GROUP BY DeptID; cannot be updated because an update to an average salary cannot be mapped to individual employees."
+      "No , not all views can be updated. A view is updatable only if the DBMS can unambiguously trace the update back to the underlying base table rows. Limitations (Cannot Update If:) It contains aggregate functions (SUM, AVG, MIN, MAX). It contains GROUP BY or HAVING clauses. It is built using multiple tables (Joins), depending on the DBMS. It uses the DISTINCT keyword. Example A view CREATE VIEW Dept_Salaries AS SELECT DeptID, AVG(Salary) FROM Employee GROUP BY DeptID; cannot be updated because an update to an average salary cannot be mapped to individual employees."
     ],
     "type": "question"
   },
@@ -1211,7 +1211,7 @@
     "title": "Explain generalization, specialization and aggregation in the Extended E-R model.",
     "url": "question-bank.html?open=q76",
     "chunks": [
-      "Specialization (Top-Down)\n\nThe process of defining a set of subclasses from an entity type based on distinguishing characteristics. \nExample: An Employee can be specialized into Hourly_Emp and Salaried_Emp.\n\nGeneralization (Bottom-Up)\n\nThe reverse of specialization. Extracting shared characteristics from multiple entity types to create a generalized superclass. \nExample: Car and Truck generalized into Vehicle.\n\nAggregation\n\nTreating a relationship between entities as a single abstract entity, allowing relationships to participate in other relationships. \nExample: A Project and Employee have a Works_On relationship. A Manager manages the entire Works_On relationship, treating it as one aggregated entity."
+      "Specialization (Top-Down) The process of defining a set of subclasses from an entity type based on distinguishing characteristics. Example: An Employee can be specialized into Hourly_Emp and Salaried_Emp . Generalization (Bottom-Up) The reverse of specialization. Extracting shared characteristics from multiple entity types to create a generalized superclass. Example: Car and Truck generalized into Vehicle . Aggregation Treating a relationship between entities as a single abstract entity, allowing relationships to participate in other relationships. Example: A Project and Employee have a Works_On relationship. A Manager manages the entire Works_On relationship, treating it as one aggregated entity."
     ],
     "type": "question"
   },
@@ -1227,7 +1227,7 @@
     "title": "What is decomposition? Explain the concepts of lossless-join and dependency-preserving decomposition.",
     "url": "question-bank.html?open=q77",
     "chunks": [
-      "Decomposition is the process of breaking down a large, poorly-designed relation into two or more smaller relations to eliminate redundancy and anomalies.\n\nLossless-Join Decomposition\n\nA decomposition of R into R1 and R2 is lossless if joining R1 and R2 back together using a Natural Join yields the exact original relation R, without generating spurious (fake) tuples.\n\nCondition: The common attributes must be a candidate key for at least one of the decomposed relations (i.e., R1 \u2229 R2 \u2192 R1 or R1 \u2229 R2 \u2192 R2).\n\nDependency-Preserving Decomposition\n\nA decomposition is dependency-preserving if all original functional dependencies can be checked and enforced using only the decomposed relations, without needing to join them back together."
+      "Decomposition is the process of breaking down a large, poorly-designed relation into two or more smaller relations to eliminate redundancy and anomalies. Lossless-Join Decomposition A decomposition of R into R1 and R2 is lossless if joining R1 and R2 back together using a Natural Join yields the exact original relation R, without generating spurious (fake) tuples. Condition: The common attributes must be a candidate key for at least one of the decomposed relations (i.e., R1 \u2229 R2 \u2192 R1 or R1 \u2229 R2 \u2192 R2 ). Dependency-Preserving Decomposition A decomposition is dependency-preserving if all original functional dependencies can be checked and enforced using only the decomposed relations, without needing to join them back together."
     ],
     "type": "question"
   },
@@ -1243,7 +1243,7 @@
     "title": "How is decomposition related to normalization? Explain with a small example.",
     "url": "question-bank.html?open=q78",
     "chunks": [
-      "Normalization uses Decomposition as its primary mechanism. When a relation violates a normal form, we decompose it into smaller relations that satisfy the normal form.\n\nExample\n\nSuppose a relation R(EmpID, EmpName, DeptID, DeptName) where EmpID \u2192 EmpName, DeptID and DeptID \u2192 DeptName.\n\nThis violates 3NF due to the transitive dependency (EmpID \u2192 DeptID \u2192 DeptName).\n\nNormalization Process: We decompose R into two relations to remove the redundancy:\n\n1. Employee(EmpID, EmpName, DeptID)\n\n2. Department(DeptID, DeptName)\n\nThis decomposition is both lossless-join (because DeptID is a primary key in Department) and dependency-preserving."
+      "Normalization uses Decomposition as its primary mechanism. When a relation violates a normal form, we decompose it into smaller relations that satisfy the normal form. Example Suppose a relation R(EmpID, EmpName, DeptID, DeptName) where EmpID \u2192 EmpName, DeptID and DeptID \u2192 DeptName . This violates 3NF due to the transitive dependency ( EmpID \u2192 DeptID \u2192 DeptName ). Normalization Process: We decompose R into two relations to remove the redundancy: 1. Employee(EmpID, EmpName, DeptID) 2. Department(DeptID, DeptName) This decomposition is both lossless-join (because DeptID is a primary key in Department) and dependency-preserving."
     ],
     "type": "question"
   },
@@ -1259,7 +1259,7 @@
     "title": "Compare relational algebra with SQL as two different ways of expressing the same query.",
     "url": "question-bank.html?open=q79",
     "chunks": [
-      "Feature\n                        Relational Algebra\n                        SQL\n\n                        Nature\n                        Theoretical, mathematical foundation. Procedural.\n                        Practical, commercial language. Declarative.\n\n                        Selection (Rows)\n                        \u03c3condition(Table)\n                        WHERE condition\n\n                        Projection (Columns)\n                        \u03c0col1, col2(Table)\n                        SELECT col1, col2\n\n                        Joins\n                        Table1 \u2a1d Table2\n                        Table1 JOIN Table2\n\n                        Duplicates\n                        Automatically removes duplicates (set semantics).\n                        Retains duplicates by default (bag semantics); requires DISTINCT to remove."
+      "Feature Relational Algebra SQL Nature Theoretical, mathematical foundation. Procedural. Practical, commercial language. Declarative. Selection (Rows) \u03c3 condition (Table) WHERE condition Projection (Columns) \u03c0 col1, col2 (Table) SELECT col1, col2 Joins Table1 \u2a1d Table2 Table1 JOIN Table2 Duplicates Automatically removes duplicates (set semantics). Retains duplicates by default (bag semantics); requires DISTINCT to remove."
     ],
     "type": "question"
   },
@@ -1275,7 +1275,7 @@
     "title": "Write a query to display the names of students who are enrolled in the course 'DBMS'.",
     "url": "question-bank.html?open=q80",
     "chunks": [
-      "Assuming the standard schema: Student(sid, sname), Course(cid, cname), Enrollment(sid, cid).\n\nSELECT s.sname \nFROM Student s\nJOIN Enrollment e ON s.sid = e.sid\nJOIN Course c ON e.cid = c.cid\nWHERE c.cname = 'DBMS';\n\nAlternative (Using Subqueries)\n\nSELECT sname FROM Student \nWHERE sid IN (\n    SELECT sid FROM Enrollment \n    WHERE cid IN (\n        SELECT cid FROM Course WHERE cname = 'DBMS'\n    )\n);"
+      "Assuming the standard schema: Student(sid, sname) , Course(cid, cname) , Enrollment(sid, cid) . SELECT s.sname FROM Student s JOIN Enrollment e ON s.sid = e.sid JOIN Course c ON e.cid = c.cid WHERE c.cname = 'DBMS'; Alternative (Using Subqueries) SELECT sname FROM Student WHERE sid IN ( SELECT sid FROM Enrollment WHERE cid IN ( SELECT cid FROM Course WHERE cname = 'DBMS' ) );"
     ],
     "type": "question"
   },
@@ -1291,7 +1291,7 @@
     "title": "Write a query to display, course-wise, how many students have enrolled in each course.",
     "url": "question-bank.html?open=q81",
     "chunks": [
-      "Using the standard schema: Course(cid, cname), Enrollment(sid, cid).\n\nSELECT c.cname, COUNT(e.sid) AS NumberOfStudents\nFROM Course c\nJOIN Enrollment e ON c.cid = e.cid\nGROUP BY c.cid, c.cname;"
+      "Using the standard schema: Course(cid, cname) , Enrollment(sid, cid) . SELECT c.cname, COUNT(e.sid) AS NumberOfStudents FROM Course c JOIN Enrollment e ON c.cid = e.cid GROUP BY c.cid, c.cname;"
     ],
     "type": "question"
   },
@@ -1307,7 +1307,7 @@
     "title": "Write a query using HAVING to display students who are enrolled in more than 3 courses.",
     "url": "question-bank.html?open=q82",
     "chunks": [
-      "SELECT s.sname, COUNT(e.cid) AS EnrolledCourses\nFROM Student s\nJOIN Enrollment e ON s.sid = e.sid\nGROUP BY s.sid, s.sname\nHAVING COUNT(e.cid) > 3;"
+      "SELECT s.sname, COUNT(e.cid) AS EnrolledCourses FROM Student s JOIN Enrollment e ON s.sid = e.sid GROUP BY s.sid, s.sname HAVING COUNT(e.cid) > 3;"
     ],
     "type": "question"
   },
@@ -1323,7 +1323,7 @@
     "title": "Write a query to display the student name along with the names of the courses they have opted for, using a suitable join.",
     "url": "question-bank.html?open=q83",
     "chunks": [
-      "We use a standard INNER JOIN to connect the three tables.\n\nSELECT s.sname, c.cname\nFROM Student s\nJOIN Enrollment e ON s.sid = e.sid\nJOIN Course c ON e.cid = c.cid;"
+      "We use a standard INNER JOIN to connect the three tables. SELECT s.sname, c.cname FROM Student s JOIN Enrollment e ON s.sid = e.sid JOIN Course c ON e.cid = c.cid;"
     ],
     "type": "question"
   },
@@ -1339,7 +1339,7 @@
     "title": "Write a query to find students who have not enrolled in any course so far.",
     "url": "question-bank.html?open=q84",
     "chunks": [
-      "Using LEFT JOIN\n\nSELECT s.sname \nFROM Student s\nLEFT JOIN Enrollment e ON s.sid = e.sid\nWHERE e.cid IS NULL;\n\nUsing NOT EXISTS\n\nSELECT sname FROM Student s\nWHERE NOT EXISTS (\n    SELECT 1 FROM Enrollment e WHERE e.sid = s.sid\n);"
+      "Using LEFT JOIN SELECT s.sname FROM Student s LEFT JOIN Enrollment e ON s.sid = e.sid WHERE e.cid IS NULL; Using NOT EXISTS SELECT sname FROM Student s WHERE NOT EXISTS ( SELECT 1 FROM Enrollment e WHERE e.sid = s.sid );"
     ],
     "type": "question"
   },
@@ -1355,7 +1355,7 @@
     "title": "Write a nested query to find the student(s) who scored the highest marks in the course 'DBMS'.",
     "url": "question-bank.html?open=q85",
     "chunks": [
-      "Assuming Enrollment(sid, cid, marks).\n\nSELECT s.sname, e.marks\nFROM Student s\nJOIN Enrollment e ON s.sid = e.sid\nJOIN Course c ON e.cid = c.cid\nWHERE c.cname = 'DBMS' \n  AND e.marks = (\n      SELECT MAX(e2.marks) \n      FROM Enrollment e2\n      JOIN Course c2 ON e2.cid = c2.cid\n      WHERE c2.cname = 'DBMS'\n  );"
+      "Assuming Enrollment(sid, cid, marks) . SELECT s.sname, e.marks FROM Student s JOIN Enrollment e ON s.sid = e.sid JOIN Course c ON e.cid = c.cid WHERE c.cname = 'DBMS' AND e.marks = ( SELECT MAX(e2.marks) FROM Enrollment e2 JOIN Course c2 ON e2.cid = c2.cid WHERE c2.cname = 'DBMS' );"
     ],
     "type": "question"
   },
@@ -1371,7 +1371,7 @@
     "title": "Create a view that shows the student name, course name and marks for every enrollment record.",
     "url": "question-bank.html?open=q86",
     "chunks": [
-      "CREATE VIEW Student_Grades AS\nSELECT s.sname, c.cname, e.marks\nFROM Student s\nJOIN Enrollment e ON s.sid = e.sid\nJOIN Course c ON e.cid = c.cid;\n\nYou can then query this view like a regular table: SELECT * FROM Student_Grades;"
+      "CREATE VIEW Student_Grades AS SELECT s.sname, c.cname, e.marks FROM Student s JOIN Enrollment e ON s.sid = e.sid JOIN Course c ON e.cid = c.cid; You can then query this view like a regular table: SELECT * FROM Student_Grades;"
     ],
     "type": "question"
   },
@@ -1387,7 +1387,7 @@
     "title": "Write a relational algebra expression to retrieve the names of students enrolled in the course 'DBMS'.",
     "url": "question-bank.html?open=q87",
     "chunks": [
-      "Relational Algebra:\n\n\u03c0sname ( Student \u2a1d Enrollment \u2a1d \u03c3cname='DBMS'(Course) )\n\nBreakdown:\n\nSelect only the course where cname is 'DBMS' (\u03c3).\n\nNatural Join (\u2a1d) the result with Enrollment and Student.\n\nProject (\u03c0) only the student name (sname)."
+      "Relational Algebra: \u03c0 sname ( Student \u2a1d Enrollment \u2a1d \u03c3 cname='DBMS' (Course) ) Breakdown: Select only the course where cname is 'DBMS' (\u03c3). Natural Join (\u2a1d) the result with Enrollment and Student. Project (\u03c0) only the student name (sname)."
     ],
     "type": "question"
   },
@@ -1403,7 +1403,7 @@
     "title": "Using the division operation of relational algebra, write an expression to find students who are enrolled in every course offered.",
     "url": "question-bank.html?open=q88",
     "chunks": [
-      "The division operator (\u00f7) is used specifically for queries involving \"every\" or \"all\".\n\nExpression:\n\n\u03c0sid(Enrollment) \u00f7 \u03c0cid(Course)\n\nTo get the student names, we natural join this result with the Student table:\n\n\u03c0sname ( Student \u2a1d (\u03c0sid, cid(Enrollment) \u00f7 \u03c0cid(Course)) )"
+      "The division operator ( \u00f7 ) is used specifically for queries involving \"every\" or \"all\". Expression: \u03c0 sid (Enrollment) \u00f7 \u03c0 cid (Course) To get the student names, we natural join this result with the Student table: \u03c0 sname ( Student \u2a1d (\u03c0 sid, cid (Enrollment) \u00f7 \u03c0 cid (Course)) )"
     ],
     "type": "question"
   },
@@ -1419,7 +1419,7 @@
     "title": "Write a correlated subquery to list students who have scored more than the average marks obtained in their respective course.",
     "url": "question-bank.html?open=q89",
     "chunks": [
-      "SELECT s.sname, e1.cid, e1.marks\nFROM Student s\nJOIN Enrollment e1 ON s.sid = e1.sid\nWHERE e1.marks > (\n    SELECT AVG(e2.marks)\n    FROM Enrollment e2\n    WHERE e1.cid = e2.cid\n);\n\nThe inner query recalculates the average marks dynamically for every row of the outer query, matching the cid."
+      "SELECT s.sname, e1.cid, e1.marks FROM Student s JOIN Enrollment e1 ON s.sid = e1.sid WHERE e1.marks > ( SELECT AVG(e2.marks) FROM Enrollment e2 WHERE e1.cid = e2.cid ); The inner query recalculates the average marks dynamically for every row of the outer query, matching the cid ."
     ],
     "type": "question"
   },
@@ -1435,7 +1435,7 @@
     "title": "What is the use of CREATE TABLE, ALTER TABLE and DROP TABLE commands? Why are DDL statements said to be auto-committed?",
     "url": "question-bank.html?open=q90",
     "chunks": [
-      "CREATE TABLE is used to create a new table in the database.\nALTER TABLE is used to add, delete, or modify columns in an existing table.\nDROP TABLE is used to delete an existing table completely (including its structure and data).\nDDL statements are auto-committed because they alter the database schema directly and cannot be rolled back in most RDBMS like MySQL and Oracle."
+      "CREATE TABLE is used to create a new table in the database. ALTER TABLE is used to add, delete, or modify columns in an existing table. DROP TABLE is used to delete an existing table completely (including its structure and data). DDL statements are auto-committed because they alter the database schema directly and cannot be rolled back in most RDBMS like MySQL and Oracle."
     ],
     "type": "question"
   },
@@ -1451,7 +1451,7 @@
     "title": "Write a CREATE TABLE statement for a Library_Book table having Book_ID, Title, Author, Price and Published_Date, choosing appropriate data types.",
     "url": "question-bank.html?open=q91",
     "chunks": [
-      "CREATE TABLE Library_Book (\n    Book_ID INT PRIMARY KEY,\n    Title VARCHAR(100),\n    Author VARCHAR(50),\n    Price DECIMAL(8,2),\n    Published_Date DATE\n);"
+      "CREATE TABLE Library_Book ( Book_ID INT PRIMARY KEY, Title VARCHAR(100), Author VARCHAR(50), Price DECIMAL(8,2), Published_Date DATE );"
     ],
     "type": "question"
   },
@@ -1467,7 +1467,7 @@
     "title": "Write a query to add a column Email of type VARCHAR(40) to the Student table.",
     "url": "question-bank.html?open=q92",
     "chunks": [
-      "ALTER TABLE Student\nADD Email VARCHAR(40);"
+      "ALTER TABLE Student ADD Email VARCHAR(40);"
     ],
     "type": "question"
   },
@@ -1483,7 +1483,7 @@
     "title": "Write a query to change the data type of the Fees column in the Student table to DECIMAL(10,2).",
     "url": "question-bank.html?open=q93",
     "chunks": [
-      "ALTER TABLE Student\nMODIFY Fees DECIMAL(10,2);"
+      "ALTER TABLE Student MODIFY Fees DECIMAL(10,2);"
     ],
     "type": "question"
   },
@@ -1499,7 +1499,7 @@
     "title": "Write a query to rename the Course column of the Student table as Program.",
     "url": "question-bank.html?open=q94",
     "chunks": [
-      "ALTER TABLE Student\nRENAME COLUMN Course TO Program;\n\n(Note: Syntax varies slightly between RDBMS. In older MySQL versions, CHANGE Course Program VARCHAR(...) is used)."
+      "ALTER TABLE Student RENAME COLUMN Course TO Program; (Note: Syntax varies slightly between RDBMS. In older MySQL versions, CHANGE Course Program VARCHAR(...) is used)."
     ],
     "type": "question"
   },
@@ -1515,7 +1515,7 @@
     "title": "Write a query to rename the table Student to Student_Info.",
     "url": "question-bank.html?open=q95",
     "chunks": [
-      "ALTER TABLE Student\nRENAME TO Student_Info;\n\nAlternatively: RENAME TABLE Student TO Student_Info;"
+      "ALTER TABLE Student RENAME TO Student_Info; Alternatively: RENAME TABLE Student TO Student_Info;"
     ],
     "type": "question"
   },
@@ -1531,7 +1531,7 @@
     "title": "Using CREATE TABLE ... AS SELECT, write a query to create a backup table Student_Backup from the Student table.",
     "url": "question-bank.html?open=q96",
     "chunks": [
-      "CREATE TABLE Student_Backup AS\nSELECT * FROM Student;"
+      "CREATE TABLE Student_Backup AS SELECT * FROM Student;"
     ],
     "type": "question"
   },
@@ -1547,7 +1547,7 @@
     "title": "Give the difference between DELETE, TRUNCATE and DROP commands.",
     "url": "question-bank.html?open=q97",
     "chunks": [
-      "DELETE is a DML command used to remove specific rows based on a WHERE clause. It can be rolled back.\n\nTRUNCATE is a DDL command that removes all rows from a table quickly by deallocating the pages. It cannot be rolled back and resets identity columns.\n\nDROP is a DDL command that completely deletes the table structure and its data from the database."
+      "DELETE is a DML command used to remove specific rows based on a WHERE clause. It can be rolled back. TRUNCATE is a DDL command that removes all rows from a table quickly by deallocating the pages. It cannot be rolled back and resets identity columns. DROP is a DDL command that completely deletes the table structure and its data from the database."
     ],
     "type": "question"
   },
@@ -1563,7 +1563,7 @@
     "title": "Explain the five constraints NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY and CHECK, giving an example of each.",
     "url": "question-bank.html?open=q98",
     "chunks": [
-      "NOT NULL: Ensures a column cannot have a NULL value. Ex: Name VARCHAR(50) NOT NULL\n\nUNIQUE: Ensures all values in a column are distinct. Ex: Email VARCHAR(50) UNIQUE\n\nPRIMARY KEY: Uniquely identifies each record. It is NOT NULL + UNIQUE. Ex: ID INT PRIMARY KEY\n\nFOREIGN KEY: Ensures referential integrity by linking to a primary key in another table. Ex: FOREIGN KEY (DeptID) REFERENCES Dept(ID)\n\nCHECK: Ensures values in a column satisfy a specific condition. Ex: Age INT CHECK (Age >= 18)"
+      "NOT NULL : Ensures a column cannot have a NULL value. Ex: Name VARCHAR(50) NOT NULL UNIQUE : Ensures all values in a column are distinct. Ex: Email VARCHAR(50) UNIQUE PRIMARY KEY : Uniquely identifies each record. It is NOT NULL + UNIQUE. Ex: ID INT PRIMARY KEY FOREIGN KEY : Ensures referential integrity by linking to a primary key in another table. Ex: FOREIGN KEY (DeptID) REFERENCES Dept(ID) CHECK : Ensures values in a column satisfy a specific condition. Ex: Age INT CHECK (Age >= 18)"
     ],
     "type": "question"
   },
@@ -1579,7 +1579,7 @@
     "title": "What is the difference between a column-level and a table-level constraint? When is a table-level constraint compulsory?",
     "url": "question-bank.html?open=q99",
     "chunks": [
-      "Column-level constraints are defined immediately after the data type of a column. Table-level constraints are defined at the end of the table creation and can span multiple columns.\nA table-level constraint is compulsory when defining a composite key (a constraint that involves more than one column)."
+      "Column-level constraints are defined immediately after the data type of a column. Table-level constraints are defined at the end of the table creation and can span multiple columns. A table-level constraint is compulsory when defining a composite key (a constraint that involves more than one column)."
     ],
     "type": "question"
   },
@@ -1595,7 +1595,7 @@
     "title": "Write a CREATE TABLE statement for Department(Dept_ID, Dept_Name), keeping Dept_ID as the primary key.",
     "url": "question-bank.html?open=q100",
     "chunks": [
-      "CREATE TABLE Department (\n    Dept_ID INT PRIMARY KEY,\n    Dept_Name VARCHAR(50)\n);"
+      "CREATE TABLE Department ( Dept_ID INT PRIMARY KEY, Dept_Name VARCHAR(50) );"
     ],
     "type": "question"
   },
@@ -1611,7 +1611,7 @@
     "title": "Write a CREATE TABLE statement for Employee(Emp_ID, Name, Email, Dept_ID, Salary), where Emp_ID is the primary key, Name cannot be left blank and Email must be unique.",
     "url": "question-bank.html?open=q101",
     "chunks": [
-      "CREATE TABLE Employee (\n    Emp_ID INT PRIMARY KEY,\n    Name VARCHAR(50) NOT NULL,\n    Email VARCHAR(50) UNIQUE,\n    Dept_ID INT,\n    Salary DECIMAL(10,2)\n);"
+      "CREATE TABLE Employee ( Emp_ID INT PRIMARY KEY, Name VARCHAR(50) NOT NULL, Email VARCHAR(50) UNIQUE, Dept_ID INT, Salary DECIMAL(10,2) );"
     ],
     "type": "question"
   },
@@ -1627,7 +1627,7 @@
     "title": "Using ALTER TABLE, add a foreign key on Employee.Dept_ID referencing Department.Dept_ID.",
     "url": "question-bank.html?open=q102",
     "chunks": [
-      "ALTER TABLE Employee\nADD CONSTRAINT fk_dept\nFOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);"
+      "ALTER TABLE Employee ADD CONSTRAINT fk_dept FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);"
     ],
     "type": "question"
   },
@@ -1643,7 +1643,7 @@
     "title": "Using ALTER TABLE, put a check constraint on the Employee table so that Salary is always greater than zero.",
     "url": "question-bank.html?open=q103",
     "chunks": [
-      "ALTER TABLE Employee\nADD CONSTRAINT chk_salary CHECK (Salary > 0);"
+      "ALTER TABLE Employee ADD CONSTRAINT chk_salary CHECK (Salary > 0);"
     ],
     "type": "question"
   },
@@ -1675,7 +1675,7 @@
     "title": "Explain the numeric functions ROUND, TRUNCATE, CEIL, FLOOR, ABS, MOD, POWER and SQRT, giving an example of each.",
     "url": "question-bank.html?open=q105",
     "chunks": [
-      "ROUND(n, d): Rounds n to d decimal places. ROUND(3.456, 2) \u2192 3.46\n\nTRUNCATE(n, d): Cuts off n at d decimal places without rounding. TRUNCATE(3.456, 2) \u2192 3.45\n\nCEIL(n): Returns the smallest integer \u2265 n. CEIL(3.14) \u2192 4\n\nFLOOR(n): Returns the largest integer \u2264 n. FLOOR(3.8) \u2192 3\n\nABS(n): Returns the absolute (positive) value. ABS(-5) \u2192 5\n\nMOD(x, y): Returns the remainder of x/y. MOD(10, 3) \u2192 1\n\nPOWER(x, y): Returns x raised to power y. POWER(2, 3) \u2192 8\n\nSQRT(n): Returns the square root. SQRT(16) \u2192 4"
+      "ROUND(n, d) : Rounds n to d decimal places. ROUND(3.456, 2) \u2192 3.46 TRUNCATE(n, d) : Cuts off n at d decimal places without rounding. TRUNCATE(3.456, 2) \u2192 3.45 CEIL(n) : Returns the smallest integer \u2265 n . CEIL(3.14) \u2192 4 FLOOR(n) : Returns the largest integer \u2264 n . FLOOR(3.8) \u2192 3 ABS(n) : Returns the absolute (positive) value. ABS(-5) \u2192 5 MOD(x, y) : Returns the remainder of x/y. MOD(10, 3) \u2192 1 POWER(x, y) : Returns x raised to power y. POWER(2, 3) \u2192 8 SQRT(n) : Returns the square root. SQRT(16) \u2192 4"
     ],
     "type": "question"
   },
@@ -1691,7 +1691,7 @@
     "title": "Round off 78.3456 to 2 decimal places using ROUND, and also truncate it to 2 decimal places using TRUNCATE. Why do the two results come out different?",
     "url": "question-bank.html?open=q106",
     "chunks": [
-      "SELECT ROUND(78.3456, 2);    -- Result: 78.35\nSELECT TRUNCATE(78.3456, 2); -- Result: 78.34\n\nReason: ROUND evaluates the third decimal digit (5) and mathematically rounds up. TRUNCATE simply drops all digits after the 2nd decimal place without any mathematical evaluation."
+      "SELECT ROUND(78.3456, 2); -- Result: 78.35 SELECT TRUNCATE(78.3456, 2); -- Result: 78.34 Reason : ROUND evaluates the third decimal digit (5) and mathematically rounds up. TRUNCATE simply drops all digits after the 2nd decimal place without any mathematical evaluation."
     ],
     "type": "question"
   },
@@ -1707,7 +1707,7 @@
     "title": "Write a query on PRODUCT_MAST to display each Product_Name along with its Price rounded to the nearest whole number.",
     "url": "question-bank.html?open=q107",
     "chunks": [
-      "SELECT Product_Name, ROUND(Price, 0) AS Rounded_Price\nFROM PRODUCT_MAST;"
+      "SELECT Product_Name, ROUND(Price, 0) AS Rounded_Price FROM PRODUCT_MAST;"
     ],
     "type": "question"
   },
@@ -1723,7 +1723,7 @@
     "title": "Find the remainder when 29 is divided by 4 using MOD, and use the same function to check whether 29 is odd or even.",
     "url": "question-bank.html?open=q108",
     "chunks": [
-      "-- Find remainder\nSELECT MOD(29, 4);\n\n-- Check if odd/even (if remainder is 1, it is odd)\nSELECT MOD(29, 2);"
+      "-- Find remainder SELECT MOD(29, 4); -- Check if odd/even (if remainder is 1, it is odd) SELECT MOD(29, 2);"
     ],
     "type": "question"
   },
@@ -1755,7 +1755,7 @@
     "title": "Explain the date functions CURDATE, DATEDIFF, DATE_ADD/DATE_SUB and DATE_FORMAT, giving an example of each.",
     "url": "question-bank.html?open=q110",
     "chunks": [
-      "CURDATE(): Returns the current system date. Ex: SELECT CURDATE();\n\nDATEDIFF(date1, date2): Returns the number of days between two dates. Ex: SELECT DATEDIFF('2023-10-10', '2023-10-01'); \u2192 9\n\nDATE_ADD(date, INTERVAL expr unit): Adds a time interval to a date. Ex: SELECT DATE_ADD('2023-01-01', INTERVAL 5 DAY);\n\nDATE_FORMAT(date, format): Formats a date string. Ex: SELECT DATE_FORMAT(CURDATE(), '%Y-%m-%d');"
+      "CURDATE() : Returns the current system date. Ex: SELECT CURDATE(); DATEDIFF(date1, date2) : Returns the number of days between two dates. Ex: SELECT DATEDIFF('2023-10-10', '2023-10-01'); \u2192 9 DATE_ADD(date, INTERVAL expr unit) : Adds a time interval to a date. Ex: SELECT DATE_ADD('2023-01-01', INTERVAL 5 DAY); DATE_FORMAT(date, format) : Formats a date string. Ex: SELECT DATE_FORMAT(CURDATE(), '%Y-%m-%d');"
     ],
     "type": "question"
   },
@@ -1771,7 +1771,7 @@
     "title": "Explain the string functions CONCAT, UPPER/LOWER, LENGTH, SUBSTRING and TRIM/REPLACE, giving an example of each.",
     "url": "question-bank.html?open=q111",
     "chunks": [
-      "CONCAT(s1, s2): Joins two or more strings. Ex: CONCAT('Data', 'base') \u2192 'Database'\n\nUPPER(s) / LOWER(s): Converts a string to all uppercase or lowercase. Ex: UPPER('sql') \u2192 'SQL'\n\nLENGTH(s): Returns the number of characters in a string. Ex: LENGTH('DBMS') \u2192 4\n\nSUBSTRING(s, start, len): Extracts a part of a string. Ex: SUBSTRING('Database', 1, 4) \u2192 'Data'\n\nTRIM(s): Removes leading and trailing spaces. Ex: TRIM('  SQL  ') \u2192 'SQL'\n\nREPLACE(s, old, new): Replaces all occurrences of a substring. Ex: REPLACE('DBMS', 'M', 'B') \u2192 'DBBS'"
+      "CONCAT(s1, s2) : Joins two or more strings. Ex: CONCAT('Data', 'base') \u2192 'Database' UPPER(s) / LOWER(s) : Converts a string to all uppercase or lowercase. Ex: UPPER('sql') \u2192 'SQL' LENGTH(s) : Returns the number of characters in a string. Ex: LENGTH('DBMS') \u2192 4 SUBSTRING(s, start, len) : Extracts a part of a string. Ex: SUBSTRING('Database', 1, 4) \u2192 'Data' TRIM(s) : Removes leading and trailing spaces. Ex: TRIM(' SQL ') \u2192 'SQL' REPLACE(s, old, new) : Replaces all occurrences of a substring. Ex: REPLACE('DBMS', 'M', 'B') \u2192 'DBBS'"
     ],
     "type": "question"
   },
@@ -1787,7 +1787,7 @@
     "title": "Using DATEDIFF, find the number of days between '2023-01-01' and '2023-12-31'.",
     "url": "question-bank.html?open=q112",
     "chunks": [
-      "SELECT DATEDIFF('2023-12-31', '2023-01-01') AS Days_Difference;\n\n(Note: Syntax may vary slightly by DBMS. In MySQL, it returns 364.)"
+      "SELECT DATEDIFF('2023-12-31', '2023-01-01') AS Days_Difference; (Note: Syntax may vary slightly by DBMS. In MySQL, it returns 364.)"
     ],
     "type": "question"
   },
@@ -1819,7 +1819,7 @@
     "title": "Write a query to extract only the year and month from the date '2025-03-22'.",
     "url": "question-bank.html?open=q114",
     "chunks": [
-      "SELECT YEAR('2025-03-22') AS Year, MONTH('2025-03-22') AS Month;\n\nAlternatively, using DATE_FORMAT in MySQL: SELECT DATE_FORMAT('2025-03-22', '%Y-%m');"
+      "SELECT YEAR('2025-03-22') AS Year, MONTH('2025-03-22') AS Month; Alternatively, using DATE_FORMAT in MySQL: SELECT DATE_FORMAT('2025-03-22', '%Y-%m');"
     ],
     "type": "question"
   },
@@ -1835,7 +1835,7 @@
     "title": "Write a query on the STUDENT table that displays the full name of every student by joining First_Name and Last_Name with a space in between.",
     "url": "question-bank.html?open=q115",
     "chunks": [
-      "SELECT CONCAT(First_Name, ' ', Last_Name) AS Full_Name \nFROM STUDENT;"
+      "SELECT CONCAT(First_Name, ' ', Last_Name) AS Full_Name FROM STUDENT;"
     ],
     "type": "question"
   },
@@ -1851,7 +1851,7 @@
     "title": "Find the length of the string 'Normalization', and separately extract its first six characters using SUBSTRING.",
     "url": "question-bank.html?open=q116",
     "chunks": [
-      "SELECT LENGTH('Normalization') AS Str_Length,\n       SUBSTRING('Normalization', 1, 6) AS Extracted_Str;"
+      "SELECT LENGTH('Normalization') AS Str_Length, SUBSTRING('Normalization', 1, 6) AS Extracted_Str;"
     ],
     "type": "question"
   },
@@ -1867,7 +1867,7 @@
     "title": "Explain UNION, UNION ALL, INTERSECT and MINUS/EXCEPT with an example of each. What condition must both the SELECT statements satisfy before these operators can be applied?",
     "url": "question-bank.html?open=q117",
     "chunks": [
-      "Set Operators:\n\nUNION: Combines results of two queries, removing duplicates.\n\nUNION ALL: Combines results of two queries, keeping all duplicates.\n\nINTERSECT: Returns only the rows that appear in both queries.\n\nMINUS / EXCEPT: Returns rows from the first query that are not present in the second.\n\nCondition for application (Union Compatibility):\n\nBoth SELECT statements must have the same number of columns.\n\nThe corresponding columns must have compatible data types in the same order."
+      "Set Operators: UNION : Combines results of two queries, removing duplicates. UNION ALL : Combines results of two queries, keeping all duplicates. INTERSECT : Returns only the rows that appear in both queries. MINUS / EXCEPT : Returns rows from the first query that are not present in the second. Condition for application (Union Compatibility): Both SELECT statements must have the same number of columns. The corresponding columns must have compatible data types in the same order."
     ],
     "type": "question"
   },
@@ -1883,7 +1883,7 @@
     "title": "Write a query to list every student who is a member of CLUB_CODING or CLUB_MUSIC or both, with no name repeated.",
     "url": "question-bank.html?open=q118",
     "chunks": [
-      "SELECT Name FROM CLUB_CODING\nUNION\nSELECT Name FROM CLUB_MUSIC;"
+      "SELECT Name FROM CLUB_CODING UNION SELECT Name FROM CLUB_MUSIC;"
     ],
     "type": "question"
   },
@@ -1899,7 +1899,7 @@
     "title": "Write a query that lists all the rows of CLUB_CODING and CLUB_MUSIC together without removing duplicate names.",
     "url": "question-bank.html?open=q119",
     "chunks": [
-      "SELECT Name FROM CLUB_CODING\nUNION ALL\nSELECT Name FROM CLUB_MUSIC;"
+      "SELECT Name FROM CLUB_CODING UNION ALL SELECT Name FROM CLUB_MUSIC;"
     ],
     "type": "question"
   },
@@ -1915,7 +1915,7 @@
     "title": "Write a query to find students who are members of both CLUB_CODING and CLUB_MUSIC.",
     "url": "question-bank.html?open=q120",
     "chunks": [
-      "SELECT Name FROM CLUB_CODING\nINTERSECT\nSELECT Name FROM CLUB_MUSIC;"
+      "SELECT Name FROM CLUB_CODING INTERSECT SELECT Name FROM CLUB_MUSIC;"
     ],
     "type": "question"
   },
@@ -1931,7 +1931,7 @@
     "title": "Write a query to find students who are in CLUB_CODING but not in CLUB_MUSIC. Does the order of the two tables in this query matter? Explain.",
     "url": "question-bank.html?open=q121",
     "chunks": [
-      "SELECT Name FROM CLUB_CODING\nEXCEPT   -- (or MINUS in Oracle)\nSELECT Name FROM CLUB_MUSIC;\n\nYes, the order matters. A EXCEPT B returns elements in A that are not in B. B EXCEPT A would return students in CLUB_MUSIC who are not in CLUB_CODING."
+      "SELECT Name FROM CLUB_CODING EXCEPT -- (or MINUS in Oracle) SELECT Name FROM CLUB_MUSIC; Yes, the order matters. A EXCEPT B returns elements in A that are not in B. B EXCEPT A would return students in CLUB_MUSIC who are not in CLUB_CODING."
     ],
     "type": "question"
   },
@@ -1947,7 +1947,7 @@
     "title": "What is a transaction? Explain the ACID properties with the help of a bank transfer example.",
     "url": "question-bank.html?open=q122",
     "chunks": [
-      "A transaction is a logical unit of work consisting of one or more SQL statements that must be executed entirely or not at all.\n\nACID Properties (Bank Transfer Example: A to B):\n\nAtomicity: \"All or nothing.\" If money is deducted from A, it MUST be credited to B. If either fails, the entire transaction is rolled back.\n\nConsistency: The database must remain in a valid state. The total sum of A + B's balances must be the same before and after the transaction.\n\nIsolation: Concurrent transactions do not interfere with each other. If another transaction reads A's balance during the transfer, it will see the state either strictly before or strictly after, not midway.\n\nDurability: Once the transaction is committed, the changes are permanent and will survive system crashes.\n\nTransaction State Diagram"
+      "A transaction is a logical unit of work consisting of one or more SQL statements that must be executed entirely or not at all. ACID Properties (Bank Transfer Example: A to B): Atomicity : \"All or nothing.\" If money is deducted from A, it MUST be credited to B. If either fails, the entire transaction is rolled back. Consistency : The database must remain in a valid state. The total sum of A + B's balances must be the same before and after the transaction. Isolation : Concurrent transactions do not interfere with each other. If another transaction reads A's balance during the transfer, it will see the state either strictly before or strictly after, not midway. Durability : Once the transaction is committed, the changes are permanent and will survive system crashes. Transaction State Diagram"
     ],
     "type": "question"
   },
@@ -1963,7 +1963,7 @@
     "title": "Explain COMMIT, ROLLBACK and SAVEPOINT with a suitable example on the ACCOUNT table.",
     "url": "question-bank.html?open=q123",
     "chunks": [
-      "COMMIT: Saves all changes made during the current transaction permanently.\n\nROLLBACK: Undoes all changes made during the current transaction, reverting to the last commit.\n\nSAVEPOINT: Sets a marker within a transaction so you can roll back to that specific point without canceling the entire transaction.\n\nSTART TRANSACTION;\nUPDATE ACCOUNT SET Balance = Balance - 500 WHERE Acc_No = 'A101';\nSAVEPOINT step1;\nUPDATE ACCOUNT SET Balance = Balance + 500 WHERE Acc_No = 'A102';\n-- If something goes wrong here:\nROLLBACK TO step1; -- Undoes only the A102 update\nCOMMIT; -- Saves the final state"
+      "COMMIT : Saves all changes made during the current transaction permanently. ROLLBACK : Undoes all changes made during the current transaction, reverting to the last commit. SAVEPOINT : Sets a marker within a transaction so you can roll back to that specific point without canceling the entire transaction. START TRANSACTION; UPDATE ACCOUNT SET Balance = Balance - 500 WHERE Acc_No = 'A101'; SAVEPOINT step1; UPDATE ACCOUNT SET Balance = Balance + 500 WHERE Acc_No = 'A102'; -- If something goes wrong here: ROLLBACK TO step1; -- Undoes only the A102 update COMMIT; -- Saves the final state"
     ],
     "type": "question"
   },
@@ -1979,7 +1979,7 @@
     "title": "Write a transaction that transfers Rs. 3000 from account A102 to account A103, placing a SAVEPOINT just before the transfer, and finally commit it.",
     "url": "question-bank.html?open=q124",
     "chunks": [
-      "START TRANSACTION;\nSAVEPOINT before_transfer;\n\nUPDATE ACCOUNT \nSET Balance = Balance - 3000 \nWHERE Acc_No = 'A102';\n\nUPDATE ACCOUNT \nSET Balance = Balance + 3000 \nWHERE Acc_No = 'A103';\n\nCOMMIT;"
+      "START TRANSACTION; SAVEPOINT before_transfer; UPDATE ACCOUNT SET Balance = Balance - 3000 WHERE Acc_No = 'A102'; UPDATE ACCOUNT SET Balance = Balance + 3000 WHERE Acc_No = 'A103'; COMMIT;"
     ],
     "type": "question"
   },
@@ -1995,7 +1995,7 @@
     "title": "Using a searched CASE statement, classify each account's Balance as 'High' if it is 25000 or more, 'Medium' if it is 15000 or more, and 'Low' otherwise.",
     "url": "question-bank.html?open=q125",
     "chunks": [
-      "SELECT Acc_No, Name, Balance,\n    CASE \n        WHEN Balance >= 25000 THEN 'High'\n        WHEN Balance >= 15000 THEN 'Medium'\n        ELSE 'Low'\n    END AS Balance_Category\nFROM ACCOUNT;"
+      "SELECT Acc_No, Name, Balance, CASE WHEN Balance >= 25000 THEN 'High' WHEN Balance >= 15000 THEN 'Medium' ELSE 'Low' END AS Balance_Category FROM ACCOUNT;"
     ],
     "type": "question"
   },
@@ -2011,7 +2011,7 @@
     "title": "Write a query using IF() that marks accounts with Balance below 15000 as 'Low Balance Alert' and the rest as 'OK'.",
     "url": "question-bank.html?open=q126",
     "chunks": [
-      "SELECT Acc_No, Name, Balance,\n    IF(Balance < 15000, 'Low Balance Alert', 'OK') AS Status\nFROM ACCOUNT;"
+      "SELECT Acc_No, Name, Balance, IF(Balance < 15000, 'Low Balance Alert', 'OK') AS Status FROM ACCOUNT;"
     ],
     "type": "question"
   },
@@ -2027,7 +2027,7 @@
     "title": "Write a query using COALESCE() that displays the Nominee_Name column, showing 'Not Registered' wherever this value is missing.",
     "url": "question-bank.html?open=q127",
     "chunks": [
-      "SELECT Acc_No, Name, \n    COALESCE(Nominee_Name, 'Not Registered') AS Nominee\nFROM ACCOUNT;"
+      "SELECT Acc_No, Name, COALESCE(Nominee_Name, 'Not Registered') AS Nominee FROM ACCOUNT;"
     ],
     "type": "question"
   },
@@ -2043,7 +2043,7 @@
     "title": "In one or two lines each, state the purpose of a stored procedure, a sequence (AUTO_INCREMENT in MySQL), a cursor and a trigger.",
     "url": "question-bank.html?open=q128",
     "chunks": [
-      "Stored Procedure: A pre-compiled collection of SQL statements saved in the database that can be executed as a single callable routine.\n\nSequence (AUTO_INCREMENT): Automatically generates unique, sequential numeric values, typically used for primary keys.\n\nCursor: A database object used to retrieve and process rows one by one from a result set inside a stored procedure.\n\nTrigger: A special type of stored procedure that automatically executes (fires) in response to specific DML events (INSERT, UPDATE, DELETE) on a table."
+      "Stored Procedure : A pre-compiled collection of SQL statements saved in the database that can be executed as a single callable routine. Sequence (AUTO_INCREMENT) : Automatically generates unique, sequential numeric values, typically used for primary keys. Cursor : A database object used to retrieve and process rows one by one from a result set inside a stored procedure. Trigger : A special type of stored procedure that automatically executes (fires) in response to specific DML events (INSERT, UPDATE, DELETE) on a table."
     ],
     "type": "question"
   },
@@ -2059,7 +2059,7 @@
     "title": "What is the difference between a BEFORE trigger and an AFTER trigger? What do the keywords NEW and OLD refer to inside a trigger?",
     "url": "question-bank.html?open=q129",
     "chunks": [
-      "BEFORE Trigger executes before the triggering DML operation is applied (useful for validation/modification of incoming data). AFTER Trigger executes after the operation (useful for auditing or cascading changes to other tables).\n\nNEW refers to the incoming data (being inserted or updated). OLD refers to the existing data in the table before the operation (being updated or deleted)."
+      "BEFORE Trigger executes before the triggering DML operation is applied (useful for validation/modification of incoming data). AFTER Trigger executes after the operation (useful for auditing or cascading changes to other tables). NEW refers to the incoming data (being inserted or updated). OLD refers to the existing data in the table before the operation (being updated or deleted)."
     ],
     "type": "question"
   },
@@ -2075,7 +2075,7 @@
     "title": "What is the purpose of exception handling in a stored procedure? Briefly explain DECLARE ... HANDLER and the SIGNAL statement.",
     "url": "question-bank.html?open=q130",
     "chunks": [
-      "Exception handling ensures that if an error occurs during execution, the stored procedure can catch it and gracefully handle it (e.g., rolling back a transaction) instead of crashing.\n\nDECLARE ... HANDLER: Defines a block of code to execute when a specific error or condition occurs (e.g., DECLARE CONTINUE HANDLER FOR SQLEXCEPTION).\n\nSIGNAL: Used to artificially raise a custom error or exception, returning a custom SQLSTATE and message to the caller."
+      "Exception handling ensures that if an error occurs during execution, the stored procedure can catch it and gracefully handle it (e.g., rolling back a transaction) instead of crashing. DECLARE ... HANDLER : Defines a block of code to execute when a specific error or condition occurs (e.g., DECLARE CONTINUE HANDLER FOR SQLEXCEPTION ). SIGNAL : Used to artificially raise a custom error or exception, returning a custom SQLSTATE and message to the caller."
     ],
     "type": "question"
   },
@@ -2084,31 +2084,30 @@
     "title": "DBMS Cheat Sheet",
     "url": "cheat-sheet.html",
     "chunks": [
-      "Dashboard\n\n            Revision Hub\n\n                Save as PDF\n\n                Theme",
+      "Dashboard Revision Hub Save as PDF Theme",
       "Database Management Systems",
-      "Dense Revision Cheat Sheet \n\nAll Units | Scannable Reference | High-Yield Syntax & Concepts\n\n                Quick Jump: \n                Unit I\n                Unit II\n                Unit III\n                Unit IV\n                Unit V\n\n            Mode: Paper",
+      "Dense Revision Cheat Sheet All Units | Scannable Reference | High-Yield Syntax & Concepts Quick Jump: Unit I Unit II Unit III Unit IV Unit V Mode: Paper",
       "Unit I: Introduction to DBMS CO1",
-      "Architecture & Data Independence U1 \n\nThe 3-schema architecture separates user views (External), logic (Conceptual), and storage (Internal). It ensures data independence, allowing changes in one schema without affecting others.\n\nExample: Changing file structure from sequential to B+ tree (Physical Independence) doesn't alter SQL queries at the Conceptual level.\n\nPro-Tip: Logical data independence is much harder to achieve than physical, as application logic tightly binds to the conceptual schema.",
-      "Keys & Constraints U1 \n\nSuper keys identify tuples uniquely. Candidate keys are minimal super keys. Primary keys are chosen candidate keys. Foreign keys enforce referential integrity between tables.\n\nExample: `{EmpID, Email}` is a Super Key. `EmpID` is a Candidate and Primary Key.\n\nExam Trap: A relation can have multiple candidate keys but strictly ONE primary key. Nulls are not allowed in PKs (Entity Integrity).",
-      "Normalization: 1NF to BCNF U1 \n\n1NF mandates atomic domains. 2NF removes partial dependencies (non-prime depends on part of PK). 3NF eliminates transitive dependencies. BCNF strictly enforces every determinant as a candidate key.\n\nExample: If `City -> Zip` and `Zip -> State`, `City -> State` is a transitive dependency violating 3NF.\n\nExam Trap: BCNF decomposition may result in the loss of functional dependency preservation, unlike 3NF which guarantees both lossless join and dependency preservation.",
-      "Deep Dive: ER to Relational Mapping U1 \n\n                erDiagram\n                    EMPLOYEE ||--o{ DEPENDENT : \"has (weak)\"\n                    EMPLOYEE { string EmpID PK }\n                    DEPENDENT { string DepName PK \"Partial\" }\n\nStrong entities map directly to tables. Weak entities map to tables using a composite key: their own partial key + the strong entity's primary key. M:N relationships require a separate junction table.\n\nExample: The DEPENDENT table uses `(EmpID, DepName)` as its primary key.\n\nPro-Tip: In total participation, foreign key constraints often use `ON DELETE CASCADE` to maintain consistency.",
+      "Architecture & Data Independence U1 The 3-schema architecture separates user views (External), logic (Conceptual), and storage (Internal). It ensures data independence, allowing changes in one schema without affecting others. Example: Changing file structure from sequential to B+ tree (Physical Independence) doesn't alter SQL queries at the Conceptual level. Pro-Tip: Logical data independence is much harder to achieve than physical, as application logic tightly binds to the conceptual schema.",
+      "Keys & Constraints U1 Super keys identify tuples uniquely. Candidate keys are minimal super keys. Primary keys are chosen candidate keys. Foreign keys enforce referential integrity between tables. Example: `{EmpID, Email}` is a Super Key. `EmpID` is a Candidate and Primary Key. Exam Trap: A relation can have multiple candidate keys but strictly ONE primary key. Nulls are not allowed in PKs (Entity Integrity).",
+      "Normalization: 1NF to BCNF U1 1NF mandates atomic domains. 2NF removes partial dependencies (non-prime depends on part of PK). 3NF eliminates transitive dependencies. BCNF strictly enforces every determinant as a candidate key. Example: If `City -> Zip` and `Zip -> State`, `City -> State` is a transitive dependency violating 3NF. Exam Trap: BCNF decomposition may result in the loss of functional dependency preservation, unlike 3NF which guarantees both lossless join and dependency preservation.",
+      "Deep Dive: ER to Relational Mapping U1 erDiagram EMPLOYEE ||--o{ DEPENDENT : \"has (weak)\" EMPLOYEE { string EmpID PK } DEPENDENT { string DepName PK \"Partial\" } Strong entities map directly to tables. Weak entities map to tables using a composite key: their own partial key + the strong entity's primary key. M:N relationships require a separate junction table. Example: The DEPENDENT table uses `(EmpID, DepName)` as its primary key. Pro-Tip: In total participation, foreign key constraints often use `ON DELETE CASCADE` to maintain consistency.",
       "Unit II: Relational Database Concepts CO2",
-      "Relational Algebra Core U2 \n\nA procedural query language defining execution steps. Core operators include Selection (\u03c3, row filter), Projection (\u03c0, column filter), Cartesian Product (\u00d7), Set Difference (-), and Union (\u222a).\n\nExample: `\u03c0_name(\u03c3_age>20(Student))` filters students older than 20, projecting only their names.\n\nExam Trap: Union compatibility requires relations to have identical degree (number of attributes) and compatible domains.",
-      "Advanced Relational Algebra U2 \n\nDerived operators simplify queries: Natural Join (\u22c8) implicitly matches common attributes, and Division (\u00f7) identifies universal quantification scenarios (e.g., \"all\").\n\nExample: `Students \u00f7 Courses` returns students who have enrolled in EVERY available course.\n\nPro-Tip: The Division operator is technically derived using Projection, Set Difference, and Cartesian Product.",
-      "Tuple vs Domain Relational Calculus U2 \n\nCalculus is non-procedural (describes WHAT to fetch, not HOW). TRC evaluates on a per-tuple basis. DRC evaluates attributes using domain variables.\n\nExample (TRC): `{t | t \u2208 Student \u2227 t.age > 20}`.\n\nExam Trap: Unsafe queries (like infinite sets `{t | \u00ac(t \u2208 Student)}`) are possible in calculus but syntactically disallowed in safe TRC systems.",
+      "Relational Algebra Core U2 A procedural query language defining execution steps. Core operators include Selection (\u03c3, row filter), Projection (\u03c0, column filter), Cartesian Product (\u00d7), Set Difference (-), and Union (\u222a). Example: `\u03c0_name(\u03c3_age>20(Student))` filters students older than 20, projecting only their names. Exam Trap: Union compatibility requires relations to have identical degree (number of attributes) and compatible domains.",
+      "Advanced Relational Algebra U2 Derived operators simplify queries: Natural Join (\u22c8) implicitly matches common attributes, and Division (\u00f7) identifies universal quantification scenarios (e.g., \"all\"). Example: `Students \u00f7 Courses` returns students who have enrolled in EVERY available course. Pro-Tip: The Division operator is technically derived using Projection, Set Difference, and Cartesian Product.",
+      "Tuple vs Domain Relational Calculus U2 Calculus is non-procedural (describes WHAT to fetch, not HOW). TRC evaluates on a per-tuple basis. DRC evaluates attributes using domain variables. Example (TRC): `{t | t \u2208 Student \u2227 t.age > 20}`. Exam Trap: Unsafe queries (like infinite sets `{t | \u00ac(t \u2208 Student)}`) are possible in calculus but syntactically disallowed in safe TRC systems.",
       "Unit III: Structured Query Language (SQL) CO3",
-      "SQL Execution Pipeline U3 \n\n                flowchart LR\n                    F[FROM] --> W[WHERE] --> G[GROUP BY] --> H[HAVING] --> S[SELECT] --> O[ORDER BY]\n\nUnderstanding logical execution order prevents semantic errors. `WHERE` filters rows prior to aggregation, while `HAVING` filters aggregated buckets.\n\nExample: You cannot use a column alias defined in `SELECT` inside the `WHERE` clause, because `WHERE` executes first.\n\nPro-Tip: This is why `COUNT(*)` in `WHERE` throws an error; aggregation hasn't happened yet!",
-      "Correlated Subqueries U3 \n\nAn inner query that references columns from the outer query. It executes row-by-row iteratively for each tuple processed by the outer query, degrading performance.\n\nExample: `SELECT * FROM Emp e1 WHERE Salary > (SELECT AVG(Salary) FROM Emp e2 WHERE e1.Dept = e2.Dept)`\n\nExam Trap: Contrast with non-correlated subqueries which execute exactly once. Use `EXISTS` instead of `IN` for correlated lookups to short-circuit execution.",
-      "Triggers & Views U3 \n\nViews are virtual tables providing logical independence. Triggers execute procedural code in response to DML events (INSERT/UPDATE/DELETE), typically enforcing complex business rules.\n\nExample: `CREATE TRIGGER BeforeDelete BEFORE DELETE ON Users FOR EACH ROW ...`\n\nPro-Tip: A \"Mutating Table Error\" occurs when a row-level trigger attempts to query the same table that invoked it.",
+      "SQL Execution Pipeline U3 flowchart LR F[FROM] --> W[WHERE] --> G[GROUP BY] --> H[HAVING] --> S[SELECT] --> O[ORDER BY] Understanding logical execution order prevents semantic errors. `WHERE` filters rows prior to aggregation, while `HAVING` filters aggregated buckets. Example: You cannot use a column alias defined in `SELECT` inside the `WHERE` clause, because `WHERE` executes first. Pro-Tip: This is why `COUNT(*)` in `WHERE` throws an error; aggregation hasn't happened yet!",
+      "Correlated Subqueries U3 An inner query that references columns from the outer query. It executes row-by-row iteratively for each tuple processed by the outer query, degrading performance. Example: `SELECT * FROM Emp e1 WHERE Salary > (SELECT AVG(Salary) FROM Emp e2 WHERE e1.Dept = e2.Dept)` Exam Trap: Contrast with non-correlated subqueries which execute exactly once. Use `EXISTS` instead of `IN` for correlated lookups to short-circuit execution.",
+      "Triggers & Views U3 Views are virtual tables providing logical independence. Triggers execute procedural code in response to DML events (INSERT/UPDATE/DELETE), typically enforcing complex business rules. Example: `CREATE TRIGGER BeforeDelete BEFORE DELETE ON Users FOR EACH ROW ...` Pro-Tip: A \"Mutating Table Error\" occurs when a row-level trigger attempts to query the same table that invoked it.",
       "Unit IV: Transaction Processing CO4",
-      "ACID & Schedules U4 \n\nTransactions guarantee Atomicity, Consistency, Isolation, and Durability. Serializability ensures concurrent execution yields results identical to some serial sequence, preventing anomalies like Dirty Reads.\n\nExample: Using a Conflict Graph, if there's a cycle between transactions (e.g., T1 reads what T2 writes, and T2 reads what T1 writes), it is NOT conflict-serializable.\n\nExam Trap: View serializability is less strict than conflict serializability and accommodates blind writes (writing without reading).",
-      "Deadlock Prevention (Wait-Die vs Wound-Wait) U4 \n\n                stateDiagram-v2\n                    state Wait-Die(Non-Preemptive) {\n                        OlderTxn --> YoungerTxn : Waits\n                        YoungerTxn --> OlderTxn : Dies (Rollback)\n                    }\n                    state Wound-Wait(Preemptive) {\n                        OlderTxn2 --> YoungerTxn2 : Wounds (Preempts)\n                        YoungerTxn2 --> OlderTxn2 : Waits\n                    }\n\nUsing timestamps to prevent deadlocks: Wait-Die allows older transactions to wait for younger ones, while younger ones die. Wound-Wait preempts (wounds) the younger transaction holding the lock.\n\nExample: In Wound-Wait, if T1 (older) requests a lock held by T2 (younger), T2 is aborted and its locks are released to T1.\n\nPro-Tip: A transaction that \"dies\" or is \"wounded\" retains its original timestamp upon restart, ensuring it eventually becomes the oldest and completes without starvation.",
-      "ARIES Crash Recovery U4 \n\nUtilizes Write-Ahead Logging (WAL) with Steal/No-Force buffer policies. The protocol executes three phases: Analysis, REDO (repeats history to reconstruct crash state), and UNDO (rolls back uncommitted txns).\n\nExample: Log Sequence Numbers (LSNs) link chain records. The REDO phase re-applies logs starting from the RedoLSN found in the checkpoint.\n\nExam Trap: Compensation Log Records (CLRs) are written during the UNDO phase to ensure that if a crash occurs *during* recovery, UNDO operations are not repeated.",
+      "ACID & Schedules U4 Transactions guarantee Atomicity, Consistency, Isolation, and Durability. Serializability ensures concurrent execution yields results identical to some serial sequence, preventing anomalies like Dirty Reads. Example: Using a Conflict Graph, if there's a cycle between transactions (e.g., T1 reads what T2 writes, and T2 reads what T1 writes), it is NOT conflict-serializable. Exam Trap: View serializability is less strict than conflict serializability and accommodates blind writes (writing without reading).",
+      "Deadlock Prevention (Wait-Die vs Wound-Wait) U4 stateDiagram-v2 state Wait-Die(Non-Preemptive) { OlderTxn --> YoungerTxn : Waits YoungerTxn --> OlderTxn : Dies (Rollback) } state Wound-Wait(Preemptive) { OlderTxn2 --> YoungerTxn2 : Wounds (Preempts) YoungerTxn2 --> OlderTxn2 : Waits } Using timestamps to prevent deadlocks: Wait-Die allows older transactions to wait for younger ones, while younger ones die. Wound-Wait preempts (wounds) the younger transaction holding the lock. Example: In Wound-Wait, if T1 (older) requests a lock held by T2 (younger), T2 is aborted and its locks are released to T1. Pro-Tip: A transaction that \"dies\" or is \"wounded\" retains its original timestamp upon restart, ensuring it eventually becomes the oldest and completes without starvation.",
+      "ARIES Crash Recovery U4 Utilizes Write-Ahead Logging (WAL) with Steal/No-Force buffer policies. The protocol executes three phases: Analysis, REDO (repeats history to reconstruct crash state), and UNDO (rolls back uncommitted txns). Example: Log Sequence Numbers (LSNs) link chain records. The REDO phase re-applies logs starting from the RedoLSN found in the checkpoint. Exam Trap: Compensation Log Records (CLRs) are written during the UNDO phase to ensure that if a crash occurs *during* recovery, UNDO operations are not repeated.",
       "Unit V: Advanced DB & MongoDB CO5",
-      "CAP Theorem & NoSQL U5 \n\nDistributed systems can strictly guarantee only two out of Consistency, Availability, and Partition tolerance. NoSQL systems scale horizontally and typically relax Consistency (AP) or Availability (CP).\n\nExample: MongoDB operates as a CP system by default (elects a primary, halts writes if partition causes primary loss).\n\nExam Trap: Network partitions (P) are unavoidable in distributed systems. Therefore, the real architectural choice is always between C and A.",
-      "MongoDB Documents & BSON U5 \n\nMongoDB eschews rigid relational schemas in favor of dynamic BSON (Binary JSON) documents. Data modeling shifts from normalization (joining tables) to embedding (storing related data inside a single document).\n\nExample: `{ _id: 1, name: \"Alice\", address: { city: \"NY\", zip: \"10001\" } }`\n\nPro-Tip: Embed data for 1:1 or 1:few relationships to optimize read performance. Reference data for 1:Many or N:M to avoid hitting the 16MB document size limit.",
-      "Aggregation Pipeline U5 \n\nA multi-stage framework for data transformation, analogous to SQL `GROUP BY` and `JOIN`. Documents pass through stages like `$match` (filter), `$group` (aggregate), and `$project` (reshape).\n\nExample: `db.sales.aggregate([{ $match: { status: \"A\" } }, { $group: { _id: \"$item\", total: { $sum: \"$amount\" } } }])`\n\nExam Trap: Stage order drastically impacts performance! Always place `$match` and `$sort` stages as early as possible to leverage indexes and reduce the dataset flowing into memory-intensive `$group` stages.\n\n\ufeff",
-      "Ask AI (Lite) \n\n    Lite\n    Smart (WebGPU)\n    Deep (Cloud)\n\n                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.\n\n                Send"
+      "CAP Theorem & NoSQL U5 Distributed systems can strictly guarantee only two out of Consistency, Availability, and Partition tolerance. NoSQL systems scale horizontally and typically relax Consistency (AP) or Availability (CP). Example: MongoDB operates as a CP system by default (elects a primary, halts writes if partition causes primary loss). Exam Trap: Network partitions (P) are unavoidable in distributed systems. Therefore, the real architectural choice is always between C and A.",
+      "MongoDB Documents & BSON U5 MongoDB eschews rigid relational schemas in favor of dynamic BSON (Binary JSON) documents. Data modeling shifts from normalization (joining tables) to embedding (storing related data inside a single document). Example: `{ _id: 1, name: \"Alice\", address: { city: \"NY\", zip: \"10001\" } }` Pro-Tip: Embed data for 1:1 or 1:few relationships to optimize read performance. Reference data for 1:Many or N:M to avoid hitting the 16MB document size limit.",
+      "Aggregation Pipeline U5 A multi-stage framework for data transformation, analogous to SQL `GROUP BY` and `JOIN`. Documents pass through stages like `$match` (filter), `$group` (aggregate), and `$project` (reshape). Example: `db.sales.aggregate([{ $match: { status: \"A\" } }, { $group: { _id: \"$item\", total: { $sum: \"$amount\" } } }])` Exam Trap: Stage order drastically impacts performance! Always place `$match` and `$sort` stages as early as possible to leverage indexes and reduce the dataset flowing into memory-intensive `$group` stages. \ufeff"
     ],
     "type": "cheat"
   },

@@ -450,7 +450,8 @@ export class AssistantLLM extends AssistantCore {
 
         let activeModel = this.isDeepMode ? "Qwen 2.5 27B (Groq Cloud API)" : (this.modelId || "Llama 3.2 (Local WebGPU)");
         
-        let sysPrompt = `You are the elite study assistant for ${this.subjectId.toUpperCase()} (B.Tech) inside Revision Hub.
+        const SUBJECT = this.subjectId.toUpperCase();
+        let sysPrompt = `You are the elite study assistant for ${SUBJECT} (B.Tech) inside Revision Hub.
 Model: ${activeModel}.
 
 FACTS ABOUT THIS PLATFORM (do not claim anything else):

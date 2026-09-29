@@ -11,7 +11,7 @@
     "title": "Define programming paradigm and name any two programming paradigms other than OOP.",
     "url": "question-bank.html?open=q1",
     "chunks": [
-      "A programming paradigm is a fundamental style or approach to programming, dictating how tasks are structured and executed.\n\nTwo other paradigms besides Object-Oriented Programming (OOP) are:\n\nProcedural Programming (e.g., C)\n\nFunctional Programming (e.g., Haskell, LISP)"
+      "A programming paradigm is a fundamental style or approach to programming, dictating how tasks are structured and executed. Two other paradigms besides Object-Oriented Programming (OOP) are: Procedural Programming (e.g., C) Functional Programming (e.g., Haskell, LISP)"
     ],
     "type": "question"
   },
@@ -27,7 +27,7 @@
     "title": "When was Java officially announced by Sun Microsystems, and what was its original name?",
     "url": "question-bank.html?open=q2",
     "chunks": [
-      "Java was officially announced by Sun Microsystems in 1995. Its original name during development was Oak (named after an oak tree outside James Gosling's office)."
+      "Java was officially announced by Sun Microsystems in 1995 . Its original name during development was Oak (named after an oak tree outside James Gosling's office)."
     ],
     "type": "question"
   },
@@ -43,7 +43,7 @@
     "title": "Define Object-Oriented Programming and list the six pillars of OOP.",
     "url": "question-bank.html?open=q3",
     "chunks": [
-      "Object-Oriented Programming (OOP) is a paradigm centered around \"objects\" (which contain data in the form of fields and code in the form of methods) rather than \"actions\" or logic.\n\nThe six pillars (or core concepts) of OOP are:\n\nClass\n\nObject\n\nEncapsulation\n\nAbstraction\n\nInheritance\n\nPolymorphism"
+      "Object-Oriented Programming (OOP) is a paradigm centered around \"objects\" (which contain data in the form of fields and code in the form of methods) rather than \"actions\" or logic. The six pillars (or core concepts) of OOP are: Class Object Encapsulation Abstraction Inheritance Polymorphism"
     ],
     "type": "question"
   },
@@ -59,7 +59,7 @@
     "title": "Differentiate between a class and an object with one suitable example.",
     "url": "question-bank.html?open=q4",
     "chunks": [
-      "ClassObject\n\nA logical template or blueprint.A physical entity/instance created from a class.\n\nDoes not allocate memory when created.Allocates memory in the heap when instantiated.\n\nDeclared using the class keyword.Created using the new keyword.\n\nExample: If Car is a class (the blueprint), then a Red Tesla Model S is an object (an actual car)."
+      "Class Object A logical template or blueprint. A physical entity/instance created from a class. Does not allocate memory when created. Allocates memory in the heap when instantiated. Declared using the class keyword. Created using the new keyword. Example: If Car is a class (the blueprint), then a Red Tesla Model S is an object (an actual car)."
     ],
     "type": "question"
   },
@@ -75,7 +75,7 @@
     "title": "Define encapsulation, abstraction, inheritance, and polymorphism.",
     "url": "question-bank.html?open=q5",
     "chunks": [
-      "Encapsulation: Wrapping data (variables) and code (methods) together into a single unit (class), protecting the data from outside interference.\n\nAbstraction: Hiding internal implementation details and exposing only the necessary functionalities to the user.\n\nInheritance: A mechanism where a new class (child) inherits properties and behaviors from an existing class (parent), promoting code reusability.\n\nPolymorphism: The ability of a single entity (method, object, or operator) to take on multiple forms and behave differently based on the context."
+      "Encapsulation: Wrapping data (variables) and code (methods) together into a single unit (class), protecting the data from outside interference. Abstraction: Hiding internal implementation details and exposing only the necessary functionalities to the user. Inheritance: A mechanism where a new class (child) inherits properties and behaviors from an existing class (parent), promoting code reusability. Polymorphism: The ability of a single entity (method, object, or operator) to take on multiple forms and behave differently based on the context."
     ],
     "type": "question"
   },
@@ -91,7 +91,7 @@
     "title": "What is the difference between procedural and object-oriented programming?",
     "url": "question-bank.html?open=q6",
     "chunks": [
-      "Procedural Programming (POP)Object-Oriented Programming (OOP)\n\nProgram is divided into small parts called functions.Program is divided into parts called objects.\n\nFollows a Top-Down approach.Follows a Bottom-Up approach.\n\nData is freely moving and less secure.Data is hidden (encapsulated) and highly secure.\n\nExample: C, PascalExample: Java, C++, Python"
+      "Procedural Programming (POP) Object-Oriented Programming (OOP) Program is divided into small parts called functions . Program is divided into parts called objects . Follows a Top-Down approach. Follows a Bottom-Up approach. Data is freely moving and less secure. Data is hidden (encapsulated) and highly secure. Example: C, Pascal Example: Java, C++, Python"
     ],
     "type": "question"
   },
@@ -107,7 +107,7 @@
     "title": "What are JDK, JRE, and JVM?",
     "url": "question-bank.html?open=q7",
     "chunks": [
-      "JDK (Java Development Kit): A full software development environment. It contains the JRE plus development tools like the compiler (javac) and debugger.\n\nJRE (Java Runtime Environment): The environment required to run Java programs. It contains the JVM and core class libraries.\n\nJVM (Java Virtual Machine): An abstract machine that executes Java Bytecode. It makes Java platform-independent."
+      "JDK (Java Development Kit): A full software development environment. It contains the JRE plus development tools like the compiler ( javac ) and debugger. JRE (Java Runtime Environment): The environment required to run Java programs. It contains the JVM and core class libraries. JVM (Java Virtual Machine): An abstract machine that executes Java Bytecode. It makes Java platform-independent."
     ],
     "type": "question"
   },
@@ -123,7 +123,7 @@
     "title": "What is bytecode, and why is Java considered platform-independent?",
     "url": "question-bank.html?open=q8",
     "chunks": [
-      "Bytecode is a highly optimized set of instructions generated by the Java compiler (javac) after compiling the source code. It is not machine code, but rather intermediate code.\n\nJava is platform-independent because the compiler generates this bytecode instead of native machine code. This bytecode can be executed on any operating system as long as that system has a JVM (Java Virtual Machine) installed to interpret it (Write Once, Run Anywhere)."
+      "Bytecode is a highly optimized set of instructions generated by the Java compiler ( javac ) after compiling the source code. It is not machine code, but rather intermediate code. Java is platform-independent because the compiler generates this bytecode instead of native machine code. This bytecode can be executed on any operating system as long as that system has a JVM (Java Virtual Machine) installed to interpret it (Write Once, Run Anywhere)."
     ],
     "type": "question"
   },
@@ -139,7 +139,7 @@
     "title": "What is a Java package? Give two examples of commonly used packages.",
     "url": "question-bank.html?open=q9",
     "chunks": [
-      "A Java package is a mechanism for organizing related classes and interfaces into a single namespace. It prevents naming conflicts and controls access (encapsulation).\n\nTwo Examples:\n\njava.util (Contains utility classes like Scanner, ArrayList)\n\njava.lang (Contains core classes like String, Math. It is imported automatically)"
+      "A Java package is a mechanism for organizing related classes and interfaces into a single namespace. It prevents naming conflicts and controls access (encapsulation). Two Examples: java.util (Contains utility classes like Scanner, ArrayList) java.lang (Contains core classes like String, Math. It is imported automatically)"
     ],
     "type": "question"
   },
@@ -155,7 +155,7 @@
     "title": "List the four access modifiers in Java and state the default access level.",
     "url": "question-bank.html?open=q10",
     "chunks": [
-      "The four access modifiers in Java (from most restrictive to least) are:\n\nprivate (accessible only within the same class)\n\ndefault (no keyword; accessible only within the same package)\n\nprotected (accessible within the same package and subclasses in other packages)\n\npublic (accessible from anywhere)\n\nIf no modifier is specified, the access level is default (package-private)."
+      "The four access modifiers in Java (from most restrictive to least) are: private (accessible only within the same class) default (no keyword; accessible only within the same package) protected (accessible within the same package and subclasses in other packages) public (accessible from anywhere) If no modifier is specified, the access level is default (package-private)."
     ],
     "type": "question"
   },
@@ -171,7 +171,7 @@
     "title": "What is a class and what is an object in Java? Give one difference between them.",
     "url": "question-bank.html?open=q11",
     "chunks": [
-      "A class is a user-defined blueprint or prototype from which objects are created. An object is a runtime instance of a class that has state and behavior.\n\nDifference: A class is a logical entity that consumes no memory upon declaration, whereas an object is a physical entity that consumes memory space in the heap when instantiated."
+      "A class is a user-defined blueprint or prototype from which objects are created. An object is a runtime instance of a class that has state and behavior. Difference: A class is a logical entity that consumes no memory upon declaration, whereas an object is a physical entity that consumes memory space in the heap when instantiated."
     ],
     "type": "question"
   },
@@ -187,7 +187,7 @@
     "title": "What is the purpose of the new keyword in Java? Where is the newly created object stored?",
     "url": "question-bank.html?open=q12",
     "chunks": [
-      "The new keyword in Java is used to create a new object or array by allocating memory at runtime. It essentially instantiates a class.\n\nStorage: The newly created object is always stored in the Heap memory."
+      "The new keyword in Java is used to create a new object or array by allocating memory at runtime. It essentially instantiates a class. Storage: The newly created object is always stored in the Heap memory."
     ],
     "type": "question"
   },
@@ -203,7 +203,7 @@
     "title": "What is the difference between an instance variable and a local variable? State any two differences.",
     "url": "question-bank.html?open=q13",
     "chunks": [
-      "Instance VariableLocal Variable\n\nDeclared inside a class but outside any method.Declared inside a method, constructor, or block.\n\nGets a default value (e.g., 0 for int) if not initialized.Does not get a default value; must be initialized before use."
+      "Instance Variable Local Variable Declared inside a class but outside any method. Declared inside a method, constructor, or block. Gets a default value (e.g., 0 for int) if not initialized. Does not get a default value; must be initialized before use."
     ],
     "type": "question"
   },
@@ -219,7 +219,7 @@
     "title": "What is a constructor in Java? State any two rules of a constructor.",
     "url": "question-bank.html?open=q14",
     "chunks": [
-      "A constructor is a special block of code that is called automatically when an object is instantiated. It is used to initialize the state of the object.\n\nRules:\n\nThe constructor name must exactly match the class name.\n\nA constructor must not have an explicit return type (not even void)."
+      "A constructor is a special block of code that is called automatically when an object is instantiated. It is used to initialize the state of the object. Rules: The constructor name must exactly match the class name. A constructor must not have an explicit return type (not even void )."
     ],
     "type": "question"
   },
@@ -235,7 +235,7 @@
     "title": "What is constructor overloading? On what basis does the compiler distinguish overloaded constructors?",
     "url": "question-bank.html?open=q15",
     "chunks": [
-      "Constructor Overloading is a technique of having more than one constructor in a class with different parameter lists. It allows objects to be initialized in different ways.\n\nThe compiler distinguishes them based on the number of parameters, the types of the parameters, and the order of the parameters."
+      "Constructor Overloading is a technique of having more than one constructor in a class with different parameter lists. It allows objects to be initialized in different ways. The compiler distinguishes them based on the number of parameters , the types of the parameters , and the order of the parameters ."
     ],
     "type": "question"
   },
@@ -251,7 +251,7 @@
     "title": "What is constructor chaining? Name the two keywords used for constructor chaining.",
     "url": "question-bank.html?open=q16",
     "chunks": [
-      "Constructor chaining is the process of calling one constructor from another constructor with respect to the current object. It helps avoid duplicate code.\n\nThe two keywords used are:\n\nthis(): Used to call a constructor of the same class.\n\nsuper(): Used to call a constructor of the superclass (parent class)."
+      "Constructor chaining is the process of calling one constructor from another constructor with respect to the current object. It helps avoid duplicate code. The two keywords used are: this() : Used to call a constructor of the same class. super() : Used to call a constructor of the superclass (parent class)."
     ],
     "type": "question"
   },
@@ -267,7 +267,7 @@
     "title": "What is the purpose of the this keyword in Java? State any two uses.",
     "url": "question-bank.html?open=q17",
     "chunks": [
-      "The this keyword is a reference variable that refers to the current object on which the method or constructor is being invoked.\n\nTwo Uses:\n\nTo resolve shadowing when instance variables and local parameters share the same name (e.g., this.name = name;).\n\nTo invoke another constructor in the same class (using this())."
+      "The this keyword is a reference variable that refers to the current object on which the method or constructor is being invoked. Two Uses: To resolve shadowing when instance variables and local parameters share the same name (e.g., this.name = name; ). To invoke another constructor in the same class (using this() )."
     ],
     "type": "question"
   },
@@ -283,7 +283,7 @@
     "title": "What is Garbage Collection in Java? When does an object become eligible for garbage collection?",
     "url": "question-bank.html?open=q18",
     "chunks": [
-      "Garbage Collection (GC) is the process by which Java programs perform automatic memory management, freeing up the heap by deleting objects that are no longer in use.\n\nAn object becomes eligible for garbage collection when it is completely unreferenced (i.e., no live thread can access it). This happens if its reference is set to null, if it is created anonymously, or if references are reassigned."
+      "Garbage Collection (GC) is the process by which Java programs perform automatic memory management, freeing up the heap by deleting objects that are no longer in use. An object becomes eligible for garbage collection when it is completely unreferenced (i.e., no live thread can access it). This happens if its reference is set to null , if it is created anonymously, or if references are reassigned."
     ],
     "type": "question"
   },
@@ -299,7 +299,7 @@
     "title": "What is autoboxing and unboxing in Java?",
     "url": "question-bank.html?open=q19",
     "chunks": [
-      "Autoboxing: The automatic conversion that the Java compiler makes between the primitive types and their corresponding object wrapper classes (e.g., converting int to Integer).\n\nUnboxing: The reverse process; converting an object of a wrapper type back to its corresponding primitive value (e.g., converting Integer to int)."
+      "Autoboxing: The automatic conversion that the Java compiler makes between the primitive types and their corresponding object wrapper classes (e.g., converting int to Integer ). Unboxing: The reverse process; converting an object of a wrapper type back to its corresponding primitive value (e.g., converting Integer to int )."
     ],
     "type": "question"
   },
@@ -315,7 +315,7 @@
     "title": "What is String immutability? State one benefit of immutable Strings.",
     "url": "question-bank.html?open=q20",
     "chunks": [
-      "String immutability means that once a String object is created, its value or state cannot be changed. Any operation that alters the string creates a brand new String object rather than modifying the original.\n\nBenefit: It makes Strings thread-safe and allows caching in the String Constant Pool, which saves memory."
+      "String immutability means that once a String object is created, its value or state cannot be changed. Any operation that alters the string creates a brand new String object rather than modifying the original. Benefit: It makes Strings thread-safe and allows caching in the String Constant Pool, which saves memory."
     ],
     "type": "question"
   },
@@ -331,7 +331,7 @@
     "title": "Define inheritance. List the different types of inheritance supported in Java.",
     "url": "question-bank.html?open=q21",
     "chunks": [
-      "Inheritance is a mechanism where a new class acquires the properties and methods of an existing class, establishing an IS-A relationship and promoting code reuse.\n\nTypes supported in Java (via classes):\n\nSingle Inheritance\n\nMultilevel Inheritance\n\nHierarchical Inheritance\n\n(Note: Multiple and Hybrid inheritance are not supported through classes, only through interfaces)."
+      "Inheritance is a mechanism where a new class acquires the properties and methods of an existing class, establishing an IS-A relationship and promoting code reuse. Types supported in Java (via classes): Single Inheritance Multilevel Inheritance Hierarchical Inheritance (Note: Multiple and Hybrid inheritance are not supported through classes, only through interfaces)."
     ],
     "type": "question"
   },
@@ -347,7 +347,7 @@
     "title": "What is the purpose of the super keyword? List any two uses.",
     "url": "question-bank.html?open=q22",
     "chunks": [
-      "The super keyword is a reference variable used to refer to the immediate parent class object.\n\nTwo Uses:\n\nTo invoke the immediate parent class constructor (e.g., super();).\n\nTo invoke an overridden method in the parent class (e.g., super.display();)."
+      "The super keyword is a reference variable used to refer to the immediate parent class object. Two Uses: To invoke the immediate parent class constructor (e.g., super(); ). To invoke an overridden method in the parent class (e.g., super.display(); )."
     ],
     "type": "question"
   },
@@ -363,7 +363,7 @@
     "title": "What is the Object class? Name any two methods of the Object class.",
     "url": "question-bank.html?open=q23",
     "chunks": [
-      "The Object class (located in the java.lang package) is the root class of the Java class hierarchy. Every class in Java directly or indirectly inherits from the Object class.\n\nTwo Methods:\n\ntoString()\n\nequals(Object obj)"
+      "The Object class (located in the java.lang package) is the root class of the Java class hierarchy. Every class in Java directly or indirectly inherits from the Object class. Two Methods: toString() equals(Object obj)"
     ],
     "type": "question"
   },
@@ -379,7 +379,7 @@
     "title": "Define method overloading and method overriding.",
     "url": "question-bank.html?open=q24",
     "chunks": [
-      "Method Overloading: Creating multiple methods in the same class with the same name but different parameters (compile-time polymorphism).\n\nMethod Overriding: Providing a specific implementation in a subclass for a method that is already defined in its parent class. The method signature must be identical (run-time polymorphism)."
+      "Method Overloading: Creating multiple methods in the same class with the same name but different parameters (compile-time polymorphism). Method Overriding: Providing a specific implementation in a subclass for a method that is already defined in its parent class. The method signature must be identical (run-time polymorphism)."
     ],
     "type": "question"
   },
@@ -395,7 +395,7 @@
     "title": "What is polymorphism? Name its two types.",
     "url": "question-bank.html?open=q25",
     "chunks": [
-      "Polymorphism is the ability of an object or method to take on many forms, allowing the same interface to be used for different underlying forms (data types).\n\nTwo Types:\n\nCompile-time Polymorphism (Static binding, e.g., Method Overloading).\n\nRun-time Polymorphism (Dynamic binding, e.g., Method Overriding)."
+      "Polymorphism is the ability of an object or method to take on many forms, allowing the same interface to be used for different underlying forms (data types). Two Types: Compile-time Polymorphism (Static binding, e.g., Method Overloading). Run-time Polymorphism (Dynamic binding, e.g., Method Overriding)."
     ],
     "type": "question"
   },
@@ -411,7 +411,7 @@
     "title": "What is dynamic binding? Why is it also called late binding?",
     "url": "question-bank.html?open=q26",
     "chunks": [
-      "Dynamic Binding is the process where the compiler does not resolve the method call at compile time, but rather the JVM determines the actual method implementation to execute at runtime based on the actual object type.\n\nIt is called late binding because the binding of the method call to the method body is delayed until the program is actually executing."
+      "Dynamic Binding is the process where the compiler does not resolve the method call at compile time, but rather the JVM determines the actual method implementation to execute at runtime based on the actual object type. It is called late binding because the binding of the method call to the method body is delayed until the program is actually executing."
     ],
     "type": "question"
   },
@@ -427,7 +427,7 @@
     "title": "Define upcasting and downcasting in Java.",
     "url": "question-bank.html?open=q27",
     "chunks": [
-      "Upcasting: Casting a subclass reference variable to a superclass reference. This is done automatically and implicitly by the compiler.\n\nDowncasting: Casting a superclass reference variable back to a subclass reference. This must be done explicitly by the programmer and requires checking to prevent ClassCastException."
+      "Upcasting: Casting a subclass reference variable to a superclass reference. This is done automatically and implicitly by the compiler. Downcasting: Casting a superclass reference variable back to a subclass reference. This must be done explicitly by the programmer and requires checking to prevent ClassCastException ."
     ],
     "type": "question"
   },
@@ -443,7 +443,7 @@
     "title": "What is the purpose of the instanceof operator?",
     "url": "question-bank.html?open=q28",
     "chunks": [
-      "The instanceof operator is a binary operator used to test whether a given object is an instance of a specific class, subclass, or interface. It returns true or false.\n\nIt is primarily used to check object types before attempting a downcast, preventing runtime exceptions."
+      "The instanceof operator is a binary operator used to test whether a given object is an instance of a specific class, subclass, or interface. It returns true or false . It is primarily used to check object types before attempting a downcast , preventing runtime exceptions."
     ],
     "type": "question"
   },
@@ -459,7 +459,7 @@
     "title": "What is an abstract class? What is an interface?",
     "url": "question-bank.html?open=q29",
     "chunks": [
-      "Abstract Class: A class declared with the abstract keyword that cannot be instantiated. It can contain both abstract methods (without a body) and concrete methods.\n\nInterface: A completely \"abstract class\" that acts as a contract. In modern Java, it primarily contains abstract methods and static constants, though it can now have default methods. A class implements an interface."
+      "Abstract Class: A class declared with the abstract keyword that cannot be instantiated. It can contain both abstract methods (without a body) and concrete methods. Interface: A completely \"abstract class\" that acts as a contract. In modern Java, it primarily contains abstract methods and static constants, though it can now have default methods. A class implements an interface."
     ],
     "type": "question"
   },
@@ -475,7 +475,7 @@
     "title": "What are generics in Java? Give one example of a generic type parameter.",
     "url": "question-bank.html?open=q30",
     "chunks": [
-      "Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods. This provides stronger type checks at compile time and removes the need for explicit casting.\n\nExample: <T> is a generic type parameter where T stands for Type. Example usage: List<String> list = new ArrayList<String>();"
+      "Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods. This provides stronger type checks at compile time and removes the need for explicit casting. Example: <T> is a generic type parameter where T stands for Type. Example usage: List<String> list = new ArrayList<String>();"
     ],
     "type": "question"
   },
@@ -491,7 +491,7 @@
     "title": "Explain the Top-Down and Bottom-Up approaches with a suitable example.",
     "url": "question-bank.html?open=q31",
     "chunks": [
-      "Top-Down Approach: The problem is broken down into smaller sub-problems. It focuses on the main algorithm first, then the details (used in Procedural Programming like C).\nExample: Building a car by first designing the full car, then breaking it down into engine, wheels, and doors.\n\nBottom-Up Approach: The smaller modules or objects are designed first, and then integrated together to form the complete system (used in Object-Oriented Programming like Java).\nExample: Designing the engine, wheels, and doors first as independent objects, then assembling them to build the car."
+      "Top-Down Approach: The problem is broken down into smaller sub-problems. It focuses on the main algorithm first, then the details (used in Procedural Programming like C). Example: Building a car by first designing the full car, then breaking it down into engine, wheels, and doors. Bottom-Up Approach: The smaller modules or objects are designed first, and then integrated together to form the complete system (used in Object-Oriented Programming like Java). Example: Designing the engine, wheels, and doors first as independent objects, then assembling them to build the car."
     ],
     "type": "question"
   },
@@ -507,7 +507,7 @@
     "title": "Explain how Java evolved from Oak and mention any three important features of Java.",
     "url": "question-bank.html?open=q32",
     "chunks": [
-      "Java was originally developed by James Gosling at Sun Microsystems in 1991 for interactive television and consumer electronics. It was initially named Oak. It was later renamed Java in 1995 and shifted focus to the World Wide Web because of its platform independence.\n\nThree Important Features:\n\nPlatform Independent: Write once, run anywhere (WORA) using Bytecode and JVM.\n\nObject-Oriented: Everything is an object; follows OOP principles strictly.\n\nRobust & Secure: Strong memory management, automatic garbage collection, and no explicit pointers."
+      "Java was originally developed by James Gosling at Sun Microsystems in 1991 for interactive television and consumer electronics. It was initially named Oak . It was later renamed Java in 1995 and shifted focus to the World Wide Web because of its platform independence. Three Important Features: Platform Independent: Write once, run anywhere (WORA) using Bytecode and JVM. Object-Oriented: Everything is an object; follows OOP principles strictly. Robust & Secure: Strong memory management, automatic garbage collection, and no explicit pointers."
     ],
     "type": "question"
   },
@@ -523,7 +523,7 @@
     "title": "Explain the role of JDK, JRE, and JVM in executing a Java program.",
     "url": "question-bank.html?open=q33",
     "chunks": [
-      "JDK (Java Development Kit): The complete toolbox for a developer. It provides the compiler (javac) which translates the .java source code into a .class file (bytecode).\n\nJRE (Java Runtime Environment): The environment where the Java program runs. It provides the core class libraries and packages required for execution.\n\nJVM (Java Virtual Machine): The core engine inside the JRE. It reads the bytecode line by line, interprets it, and executes it on the host operating system."
+      "JDK (Java Development Kit): The complete toolbox for a developer. It provides the compiler ( javac ) which translates the .java source code into a .class file (bytecode). JRE (Java Runtime Environment): The environment where the Java program runs. It provides the core class libraries and packages required for execution. JVM (Java Virtual Machine): The core engine inside the JRE. It reads the bytecode line by line, interprets it, and executes it on the host operating system."
     ],
     "type": "question"
   },
@@ -539,7 +539,7 @@
     "title": "Explain the basic structure of a Java program and write the standard main() method signature.",
     "url": "question-bank.html?open=q34",
     "chunks": [
-      "A basic Java program consists of a class definition containing methods. The entry point of any standalone Java application is the main method.\n\npublic class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\n\npublic: Accessible from anywhere.\n\nstatic: Can be called without instantiating the class.\n\nvoid: Returns nothing.\n\nString[] args: Command-line arguments."
+      "A basic Java program consists of a class definition containing methods. The entry point of any standalone Java application is the main method. public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hello, World!\"); } } public : Accessible from anywhere. static : Can be called without instantiating the class. void : Returns nothing. String[] args : Command-line arguments."
     ],
     "type": "question"
   },
@@ -555,7 +555,7 @@
     "title": "Explain Java identifiers, naming rules, comments, and the importance of proper coding conventions.",
     "url": "question-bank.html?open=q35",
     "chunks": [
-      "Identifiers: Names given to classes, variables, and methods.\n\nRules: Must start with a letter, _, or $. Cannot be a keyword. Case-sensitive.\n\nComments: Used to explain code. Single-line (//) and Multi-line (/* ... */).\n\nCoding Conventions:\n\nClasses: PascalCase\n\nMethods/Variables: camelCase\n\nConstants: UPPER_SNAKE_CASE\n\nImportance: Improves code readability, maintainability, and collaboration among developers."
+      "Identifiers: Names given to classes, variables, and methods. Rules: Must start with a letter, _ , or $ . Cannot be a keyword. Case-sensitive. Comments: Used to explain code. Single-line ( // ) and Multi-line ( /* ... */ ). Coding Conventions: Classes: PascalCase Methods/Variables: camelCase Constants: UPPER_SNAKE_CASE Importance: Improves code readability, maintainability, and collaboration among developers."
     ],
     "type": "question"
   },
@@ -571,7 +571,7 @@
     "title": "Explain built-in and user-defined packages with suitable examples. Also explain the purpose of the import statement.",
     "url": "question-bank.html?open=q36",
     "chunks": [
-      "Built-in Packages: Provided by the Java API. Example: java.util, java.io.\n\nUser-defined Packages: Created by the programmer to group related classes. Example: package com.mycompany.utils;\n\nImport Statement: Used to bring a class or an entire package into visibility so it can be used without typing its fully qualified name (e.g., import java.util.Scanner;)."
+      "Built-in Packages: Provided by the Java API. Example: java.util , java.io . User-defined Packages: Created by the programmer to group related classes. Example: package com.mycompany.utils; Import Statement: Used to bring a class or an entire package into visibility so it can be used without typing its fully qualified name (e.g., import java.util.Scanner; )."
     ],
     "type": "question"
   },
@@ -587,7 +587,7 @@
     "title": "Explain the four access modifiers in Java with respect to their accessibility.",
     "url": "question-bank.html?open=q37",
     "chunks": [
-      "ModifierSame ClassSame PackageSubclass (Diff Pkg)Diff Pkg (Non-subclass)\n\nPrivateYesNoNoNo\n\nDefaultYesYesNoNo\n\nProtectedYesYesYesNo\n\nPublicYesYesYesYes"
+      "Modifier Same Class Same Package Subclass (Diff Pkg) Diff Pkg (Non-subclass) Private Yes No No No Default Yes Yes No No Protected Yes Yes Yes No Public Yes Yes Yes Yes"
     ],
     "type": "question"
   },
@@ -603,7 +603,7 @@
     "title": "Differentiate between variable scope and lifetime. Also explain dynamic initialization.",
     "url": "question-bank.html?open=q38",
     "chunks": [
-      "Scope: The region of the code where a variable is visible and accessible (e.g., block scope, method scope).\n\nLifetime: The duration of time a variable exists in memory during program execution.\n\nDynamic Initialization: Initializing a variable at runtime using an expression or method call, rather than a hardcoded constant. Example: double c = Math.sqrt(a*a + b*b);"
+      "Scope: The region of the code where a variable is visible and accessible (e.g., block scope, method scope). Lifetime: The duration of time a variable exists in memory during program execution. Dynamic Initialization: Initializing a variable at runtime using an expression or method call, rather than a hardcoded constant. Example: double c = Math.sqrt(a*a + b*b);"
     ],
     "type": "question"
   },
@@ -619,7 +619,7 @@
     "title": "Explain Java data types and differentiate between primitive and reference data types.",
     "url": "question-bank.html?open=q39",
     "chunks": [
-      "Primitive Data Types: Predefined by Java and hold actual values. There are 8: byte, short, int, long, float, double, char, boolean. They are stored in stack memory and have a fixed size.\n\nReference Data Types: User-defined (except Arrays and Strings) and hold references (memory addresses) to the actual objects. They are stored in heap memory. Examples: Classes, Interfaces, Arrays."
+      "Primitive Data Types: Predefined by Java and hold actual values. There are 8: byte, short, int, long, float, double, char, boolean . They are stored in stack memory and have a fixed size. Reference Data Types: User-defined (except Arrays and Strings) and hold references (memory addresses) to the actual objects. They are stored in heap memory. Examples: Classes, Interfaces, Arrays."
     ],
     "type": "question"
   },
@@ -635,7 +635,7 @@
     "title": "Explain one-dimensional and two-dimensional arrays, and differentiate between for, while, and do-while loops.",
     "url": "question-bank.html?open=q40",
     "chunks": [
-      "Arrays:\n\n1D Array: A linear list of elements. int[] arr = new int[5];\n\n2D Array: An array of arrays (a matrix). int[][] matrix = new int[3][3];\n\nLoops:\n\nfor: Used when the number of iterations is known in advance.\n\nwhile: Used when iterations are unknown; condition is checked before execution (entry-controlled).\n\ndo-while: Condition is checked after execution (exit-controlled); guarantees execution at least once."
+      "Arrays: 1D Array: A linear list of elements. int[] arr = new int[5]; 2D Array: An array of arrays (a matrix). int[][] matrix = new int[3][3]; Loops: for: Used when the number of iterations is known in advance. while: Used when iterations are unknown; condition is checked before execution (entry-controlled). do-while: Condition is checked after execution (exit-controlled); guarantees execution at least once."
     ],
     "type": "question"
   },
@@ -651,7 +651,7 @@
     "title": "Explain the difference between stack and heap memory in Java with respect to object creation and references.",
     "url": "question-bank.html?open=q41",
     "chunks": [
-      "Heap Memory: This is where all actual objects and instance variables are stored. It is dynamically allocated at runtime when the new keyword is used. It is managed by the Garbage Collector.\n\nStack Memory: This is where all local variables, method calls, and object references are stored. When you write Car c = new Car();, the object itself goes in the heap, but the reference variable c is kept in the stack, pointing to the heap memory address."
+      "Heap Memory: This is where all actual objects and instance variables are stored. It is dynamically allocated at runtime when the new keyword is used. It is managed by the Garbage Collector. Stack Memory: This is where all local variables, method calls, and object references are stored. When you write Car c = new Car(); , the object itself goes in the heap, but the reference variable c is kept in the stack, pointing to the heap memory address."
     ],
     "type": "question"
   },
@@ -667,7 +667,7 @@
     "title": "Explain the default values of instance variables for int, double, char, boolean, and object reference types.",
     "url": "question-bank.html?open=q42",
     "chunks": [
-      "When instance variables are not explicitly initialized, Java assigns them default values:\n\nint (and byte, short, long): 0\n\ndouble (and float): 0.0\n\nchar: '\\u0000' (null character)\n\nboolean: false\n\nObject References (String, arrays, custom classes): null"
+      "When instance variables are not explicitly initialized, Java assigns them default values: int (and byte, short, long): 0 double (and float): 0.0 char : '\\u0000' (null character) boolean : false Object References (String, arrays, custom classes): null"
     ],
     "type": "question"
   },
@@ -683,7 +683,7 @@
     "title": "Explain default/no-argument and parameterized constructors with suitable examples.",
     "url": "question-bank.html?open=q43",
     "chunks": [
-      "Default / No-Argument Constructor: Takes no parameters. If no constructor is defined, the compiler provides one automatically. Used for default initialization.\n\nclass Box {\n    Box() { System.out.println(\"Empty box created\"); }\n}\n\nParameterized Constructor: Takes parameters to initialize the object with specific values upon creation.\n\nclass Box {\n    int size;\n    Box(int s) { this.size = s; }\n}"
+      "Default / No-Argument Constructor: Takes no parameters. If no constructor is defined, the compiler provides one automatically. Used for default initialization. class Box { Box() { System.out.println(\"Empty box created\"); } } Parameterized Constructor: Takes parameters to initialize the object with specific values upon creation. class Box { int size; Box(int s) { this.size = s; } }"
     ],
     "type": "question"
   },
@@ -699,7 +699,7 @@
     "title": "Explain constructor overloading with a suitable Java example.",
     "url": "question-bank.html?open=q44",
     "chunks": [
-      "Constructor Overloading allows a class to have multiple constructors with different parameter lists, giving flexibility in how an object is initialized.\n\nclass Rectangle {\n    int length, width;\n\n    // Constructor 1: Default (Square)\n    Rectangle() {\n        length = 5; width = 5;\n    }\n\n    // Constructor 2: Parameterized\n    Rectangle(int l, int w) {\n        length = l; width = w;\n    }\n}"
+      "Constructor Overloading allows a class to have multiple constructors with different parameter lists, giving flexibility in how an object is initialized. class Rectangle { int length, width; // Constructor 1: Default (Square) Rectangle() { length = 5; width = 5; } // Constructor 2: Parameterized Rectangle(int l, int w) { length = l; width = w; } }"
     ],
     "type": "question"
   },
@@ -715,7 +715,7 @@
     "title": "Differentiate between constructor overloading and constructor chaining. Also mention the keywords used for constructor chaining.",
     "url": "question-bank.html?open=q45",
     "chunks": [
-      "Constructor Overloading: Having multiple separate constructors in the same class to handle different initialization scenarios.\n\nConstructor Chaining: The process where one constructor explicitly calls another constructor (either within the same class or from the parent class) to reuse initialization logic.\n\nKeywords for Chaining:\n\nthis() - Calls another constructor in the same class.\n\nsuper() - Calls a constructor in the parent class."
+      "Constructor Overloading: Having multiple separate constructors in the same class to handle different initialization scenarios. Constructor Chaining: The process where one constructor explicitly calls another constructor (either within the same class or from the parent class) to reuse initialization logic. Keywords for Chaining: this() - Calls another constructor in the same class. super() - Calls a constructor in the parent class."
     ],
     "type": "question"
   },
@@ -731,7 +731,7 @@
     "title": "Explain any three uses of the this keyword with suitable examples.",
     "url": "question-bank.html?open=q46",
     "chunks": [
-      "Resolve Shadowing: Used to distinguish instance variables from local parameters.\nthis.name = name;\n\nConstructor Chaining: Used to invoke another constructor in the same class.\nthis(10); // Calls parameterized constructor\n\nPass as Argument: Used to pass the current object as a parameter to another method.\nhelper.printDetails(this);"
+      "Resolve Shadowing: Used to distinguish instance variables from local parameters. this.name = name; Constructor Chaining: Used to invoke another constructor in the same class. this(10); // Calls parameterized constructor Pass as Argument: Used to pass the current object as a parameter to another method. helper.printDetails(this);"
     ],
     "type": "question"
   },
@@ -747,7 +747,7 @@
     "title": "Explain private, default, protected, and public access modifiers in Java.",
     "url": "question-bank.html?open=q47",
     "chunks": [
-      "Private: The most restrictive. Accessible only within the class where it is declared. Used for data hiding.\n\nDefault: (No keyword). Accessible only by classes within the same package.\n\nProtected: Accessible within the same package, and by subclasses located in other packages.\n\nPublic: The least restrictive. Accessible from any class anywhere in the program."
+      "Private: The most restrictive. Accessible only within the class where it is declared. Used for data hiding. Default: (No keyword). Accessible only by classes within the same package. Protected: Accessible within the same package, and by subclasses located in other packages. Public: The least restrictive. Accessible from any class anywhere in the program."
     ],
     "type": "question"
   },
@@ -763,7 +763,7 @@
     "title": "Explain the Character wrapper class and any four useful methods of the Character class.",
     "url": "question-bank.html?open=q48",
     "chunks": [
-      "The Character class (in java.lang) wraps a primitive char value in an object. It provides numerous utility methods for character manipulation.\n\nFour Useful Methods:\n\nCharacter.isLetter(ch): Returns true if the character is a letter.\n\nCharacter.isDigit(ch): Returns true if the character is a number.\n\nCharacter.isUpperCase(ch): Returns true if the character is uppercase.\n\nCharacter.toLowerCase(ch): Converts the character to lowercase."
+      "The Character class (in java.lang ) wraps a primitive char value in an object. It provides numerous utility methods for character manipulation. Four Useful Methods: Character.isLetter(ch) : Returns true if the character is a letter. Character.isDigit(ch) : Returns true if the character is a number. Character.isUpperCase(ch) : Returns true if the character is uppercase. Character.toLowerCase(ch) : Converts the character to lowercase."
     ],
     "type": "question"
   },
@@ -779,7 +779,7 @@
     "title": "Explain the two ways of creating a String in Java: using a string literal and using the new keyword.",
     "url": "question-bank.html?open=q49",
     "chunks": [
-      "String Literal: String s = \"Hello\";\nThe JVM first checks the String Constant Pool. If \"Hello\" exists, it returns the reference. If not, it creates it. This is highly memory-efficient.\n\nnew Keyword: String s = new String(\"Hello\");\nThe JVM forces the creation of a brand new String object in the Heap memory, bypassing the pool entirely, even if \"Hello\" already exists in the pool."
+      "String Literal: String s = \"Hello\"; The JVM first checks the String Constant Pool . If \"Hello\" exists, it returns the reference. If not, it creates it. This is highly memory-efficient. new Keyword: String s = new String(\"Hello\"); The JVM forces the creation of a brand new String object in the Heap memory, bypassing the pool entirely, even if \"Hello\" already exists in the pool."
     ],
     "type": "question"
   },
@@ -795,7 +795,7 @@
     "title": "Differentiate between = = and equals() when comparing String objects with a suitable example.",
     "url": "question-bank.html?open=q50",
     "chunks": [
-      "== Operator: Compares the memory references (addresses) of two objects to see if they point to the exact same object in memory.\n\nequals() Method: Compares the actual contents/values of the two objects for logical equality.\n\nString s1 = new String(\"Java\");\nString s2 = new String(\"Java\");\n\nSystem.out.println(s1 == s2);      // false (different heap objects)\nSystem.out.println(s1.equals(s2)); // true (same content)"
+      "== Operator: Compares the memory references (addresses) of two objects to see if they point to the exact same object in memory. equals() Method: Compares the actual contents/values of the two objects for logical equality. String s1 = new String(\"Java\"); String s2 = new String(\"Java\"); System.out.println(s1 == s2); // false (different heap objects) System.out.println(s1.equals(s2)); // true (same content)"
     ],
     "type": "question"
   },
@@ -811,7 +811,7 @@
     "title": "Explain single, multilevel, hierarchical, and hybrid inheritance with suitable examples.",
     "url": "question-bank.html?open=q51",
     "chunks": [
-      "Single: Class B inherits from Class A. (Dog inherits Animal)\n\nMultilevel: Class C inherits from Class B, which inherits from Class A. (Puppy inherits Dog inherits Animal)\n\nHierarchical: Multiple classes inherit from a single Class A. (Dog and Cat both inherit Animal)\n\nHybrid: A combination of two or more types. In Java, true hybrid inheritance involving multiple parents is only achievable via Interfaces to avoid the Diamond Problem."
+      "Single: Class B inherits from Class A. (Dog inherits Animal) Multilevel: Class C inherits from Class B, which inherits from Class A. (Puppy inherits Dog inherits Animal) Hierarchical: Multiple classes inherit from a single Class A. (Dog and Cat both inherit Animal) Hybrid: A combination of two or more types. In Java, true hybrid inheritance involving multiple parents is only achievable via Interfaces to avoid the Diamond Problem."
     ],
     "type": "question"
   },
@@ -827,7 +827,7 @@
     "title": "Explain the three major uses of the super keyword with suitable examples.",
     "url": "question-bank.html?open=q52",
     "chunks": [
-      "Invoke Parent Constructor: super(); (Must be the first line in the child constructor).\n\nInvoke Parent Method: Used when the child has overridden the method. super.display();\n\nAccess Parent Variable: Used when the child class hides a parent's variable with the same name. System.out.println(super.x);"
+      "Invoke Parent Constructor: super(); (Must be the first line in the child constructor). Invoke Parent Method: Used when the child has overridden the method. super.display(); Access Parent Variable: Used when the child class hides a parent's variable with the same name. System.out.println(super.x);"
     ],
     "type": "question"
   },
@@ -843,7 +843,7 @@
     "title": "Explain the Object class and the purpose of toString(), equals(), hashCode(), and getClass().",
     "url": "question-bank.html?open=q53",
     "chunks": [
-      "The Object class is the universal superclass of all Java classes.\n\ntoString(): Returns a string representation of the object (often overridden to show field values).\n\nequals(): Used to compare the logical equality of two objects.\n\nhashCode(): Returns an integer hash code value for the object, crucial for collections like HashMap.\n\ngetClass(): Returns the runtime class object of the current instance (used in reflection)."
+      "The Object class is the universal superclass of all Java classes. toString() : Returns a string representation of the object (often overridden to show field values). equals() : Used to compare the logical equality of two objects. hashCode() : Returns an integer hash code value for the object, crucial for collections like HashMap . getClass() : Returns the runtime class object of the current instance (used in reflection)."
     ],
     "type": "question"
   },
@@ -859,7 +859,7 @@
     "title": "Differentiate between method overloading and method overriding with suitable examples.",
     "url": "question-bank.html?open=q54",
     "chunks": [
-      "Method OverloadingMethod Overriding\n\nOccurs within the same class.Occurs between parent and child classes.\n\nParameters must be different.Parameters must be exactly the same.\n\nResolved at Compile-Time (Static Binding).Resolved at Run-Time (Dynamic Binding).\n\nExample: add(int a, int b) vs add(double a, double b)Example: Animal.sound() overridden by Dog.sound()"
+      "Method Overloading Method Overriding Occurs within the same class . Occurs between parent and child classes. Parameters must be different. Parameters must be exactly the same. Resolved at Compile-Time (Static Binding). Resolved at Run-Time (Dynamic Binding). Example: add(int a, int b) vs add(double a, double b) Example: Animal.sound() overridden by Dog.sound()"
     ],
     "type": "question"
   },
@@ -875,7 +875,7 @@
     "title": "Differentiate between compile-time and run-time polymorphism in Java.",
     "url": "question-bank.html?open=q55",
     "chunks": [
-      "Compile-time Polymorphism: Achieved through Method Overloading. The compiler knows exactly which method to call based on the method signature (number and type of arguments). Fast execution because binding happens early.\n\nRun-time Polymorphism: Achieved through Method Overriding. A parent reference points to a child object. The JVM determines which overridden method to execute during runtime based on the actual object type, not the reference type."
+      "Compile-time Polymorphism: Achieved through Method Overloading. The compiler knows exactly which method to call based on the method signature (number and type of arguments). Fast execution because binding happens early. Run-time Polymorphism: Achieved through Method Overriding. A parent reference points to a child object. The JVM determines which overridden method to execute during runtime based on the actual object type , not the reference type."
     ],
     "type": "question"
   },
@@ -891,7 +891,7 @@
     "title": "Explain dynamic binding and object casting with reference to upcasting and downcasting.",
     "url": "question-bank.html?open=q56",
     "chunks": [
-      "Dynamic Binding is resolving a method call at runtime depending on the actual object.\n\nUpcasting: Casting a subclass to a superclass. It is automatic. Animal a = new Dog(); This triggers dynamic binding when overridden methods are called.\n\nDowncasting: Casting a superclass back to a subclass. It must be explicit. Dog d = (Dog) a; This is needed to access methods specific only to the child class."
+      "Dynamic Binding is resolving a method call at runtime depending on the actual object. Upcasting: Casting a subclass to a superclass. It is automatic. Animal a = new Dog(); This triggers dynamic binding when overridden methods are called. Downcasting: Casting a superclass back to a subclass. It must be explicit. Dog d = (Dog) a; This is needed to access methods specific only to the child class."
     ],
     "type": "question"
   },
@@ -907,7 +907,7 @@
     "title": "Explain the instanceof operator and its importance before performing downcasting.",
     "url": "question-bank.html?open=q57",
     "chunks": [
-      "The instanceof operator checks if an object is an instance of a specific class or interface.\n\nImportance in Downcasting: Downcasting a parent reference to a child reference is dangerous because if the parent reference doesn't actually hold that specific child object, the JVM throws a ClassCastException. Using if (obj instanceof Dog) { Dog d = (Dog) obj; } ensures the downcast is mathematically safe."
+      "The instanceof operator checks if an object is an instance of a specific class or interface. Importance in Downcasting: Downcasting a parent reference to a child reference is dangerous because if the parent reference doesn't actually hold that specific child object, the JVM throws a ClassCastException . Using if (obj instanceof Dog) { Dog d = (Dog) obj; } ensures the downcast is mathematically safe."
     ],
     "type": "question"
   },
@@ -923,7 +923,7 @@
     "title": "Differentiate between an abstract class and an interface. Also state how interfaces support multiple inheritance.",
     "url": "question-bank.html?open=q58",
     "chunks": [
-      "Abstract ClassInterface\n\nCan have both abstract and concrete methods.Historically only abstract methods (now allows default methods).\n\nCan have state (instance variables).Only public static final constants.\n\nA class can extend only one abstract class.A class can implement multiple interfaces.\n\nMultiple Inheritance: Java prevents a class from extending multiple classes to avoid ambiguity, but it allows a class to implement multiple interfaces because interfaces (traditionally) have no implementation to clash."
+      "Abstract Class Interface Can have both abstract and concrete methods. Historically only abstract methods (now allows default methods). Can have state (instance variables). Only public static final constants. A class can extend only one abstract class. A class can implement multiple interfaces. Multiple Inheritance: Java prevents a class from extending multiple classes to avoid ambiguity, but it allows a class to implement multiple interfaces because interfaces (traditionally) have no implementation to clash."
     ],
     "type": "question"
   },
@@ -939,7 +939,7 @@
     "title": "Explain generics and their advantages. What do the type parameters T, E, K, and V represent?",
     "url": "question-bank.html?open=q59",
     "chunks": [
-      "Generics allow classes, interfaces, and methods to operate on specified data types as parameters, providing compile-time type safety.\n\nAdvantages: Prevents ClassCastException at runtime and eliminates the need for manual type-casting.\n\nCommon Parameters:\n\nT: Type (General)\n\nE: Element (Used heavily in Collections like ArrayList)\n\nK: Key (Used in Maps)\n\nV: Value (Used in Maps)"
+      "Generics allow classes, interfaces, and methods to operate on specified data types as parameters, providing compile-time type safety. Advantages: Prevents ClassCastException at runtime and eliminates the need for manual type-casting. Common Parameters: T : Type (General) E : Element (Used heavily in Collections like ArrayList) K : Key (Used in Maps) V : Value (Used in Maps)"
     ],
     "type": "question"
   },
@@ -955,7 +955,7 @@
     "title": "Explain ArrayList and packages in Java. Mention common operations of ArrayList and the purpose of packages.",
     "url": "question-bank.html?open=q60",
     "chunks": [
-      "ArrayList: A resizable-array implementation of the List interface found in java.util. Unlike standard arrays, it grows and shrinks dynamically.\n\nCommon Operations: add(), remove(), get(), size().\n\nPackages: Containers that group related classes and interfaces together.\n\nPurpose: To prevent naming conflicts, group related code logically, and control access visibility (via package-private modifiers)."
+      "ArrayList: A resizable-array implementation of the List interface found in java.util . Unlike standard arrays, it grows and shrinks dynamically. Common Operations: add() , remove() , get() , size() . Packages: Containers that group related classes and interfaces together. Purpose: To prevent naming conflicts, group related code logically, and control access visibility (via package-private modifiers)."
     ],
     "type": "question"
   },
@@ -971,7 +971,7 @@
     "title": "Compare procedural programming and OOP with respect to approach, data handling, security, reusability, inheritance, and polymorphism.",
     "url": "question-bank.html?open=q61",
     "chunks": [
-      "FeatureProcedural ProgrammingObject-Oriented Programming\n\nApproachTop-Down approach.Bottom-Up approach.\n\nData HandlingData moves freely between functions globally.Data is tied to objects and controlled via methods.\n\nSecurityLow security (no access modifiers).High security (data hiding via encapsulation & modifiers).\n\nReusabilityLow (code duplication is common).High (achieved via Inheritance and objects).\n\nInheritanceNot supported.Supported (Single, Multilevel, Hierarchical).\n\nPolymorphismNot supported.Supported (Overloading, Overriding)."
+      "Feature Procedural Programming Object-Oriented Programming Approach Top-Down approach. Bottom-Up approach. Data Handling Data moves freely between functions globally. Data is tied to objects and controlled via methods. Security Low security (no access modifiers). High security (data hiding via encapsulation & modifiers). Reusability Low (code duplication is common). High (achieved via Inheritance and objects). Inheritance Not supported. Supported (Single, Multilevel, Hierarchical). Polymorphism Not supported. Supported (Overloading, Overriding)."
     ],
     "type": "question"
   },
@@ -987,7 +987,7 @@
     "title": "Explain the six pillars of OOP\u2014class, object, encapsulation, abstraction, inheritance, and polymorphism\u2014with suitable examples.",
     "url": "question-bank.html?open=q62",
     "chunks": [
-      "Class: A blueprint for creating objects. Ex: A Vehicle class defining speed and color.\n\nObject: A real-world instance of a class. Ex: A specific red Ferrari.\n\nEncapsulation: Wrapping data and methods into a single unit to protect the data. Ex: A capsule containing medicine; private variables accessed via getters/setters.\n\nAbstraction: Hiding complex implementation details and showing only essentials. Ex: Driving a car without knowing how the internal combustion engine works.\n\nInheritance: A child class acquiring properties from a parent class. Ex: Dog inherits from Animal.\n\nPolymorphism: One entity taking many forms. Ex: A sound() method that barks for a Dog but meows for a Cat."
+      "Class: A blueprint for creating objects. Ex: A Vehicle class defining speed and color. Object: A real-world instance of a class. Ex: A specific red Ferrari. Encapsulation: Wrapping data and methods into a single unit to protect the data. Ex: A capsule containing medicine; private variables accessed via getters/setters. Abstraction: Hiding complex implementation details and showing only essentials. Ex: Driving a car without knowing how the internal combustion engine works. Inheritance: A child class acquiring properties from a parent class. Ex: Dog inherits from Animal . Polymorphism: One entity taking many forms. Ex: A sound() method that barks for a Dog but meows for a Cat."
     ],
     "type": "question"
   },
@@ -1003,7 +1003,7 @@
     "title": "Explain Java's platform independence in detail, from source code compilation to bytecode execution through the JVM.",
     "url": "question-bank.html?open=q63",
     "chunks": [
-      "Java's \"Write Once, Run Anywhere\" capability relies on its two-step execution process:\n\nCompilation: The developer writes Program.java (Source Code). The Java Compiler (javac) compiles this into Program.class. Instead of compiling it into machine-specific code (like C++), it compiles it into Bytecode. This bytecode is entirely independent of the underlying OS or hardware.\n\nExecution: The compiled bytecode is transported to any machine (Windows, Mac, Linux). That machine must have a JVM (Java Virtual Machine) installed. The JVM reads the bytecode and translates it into the specific machine-level instructions native to that exact operating system.\n\nTherefore, while the JVM is platform-dependent, the Java program (bytecode) itself is totally platform-independent."
+      "Java's \"Write Once, Run Anywhere\" capability relies on its two-step execution process: Compilation: The developer writes Program.java (Source Code). The Java Compiler ( javac ) compiles this into Program.class . Instead of compiling it into machine-specific code (like C++), it compiles it into Bytecode . This bytecode is entirely independent of the underlying OS or hardware. Execution: The compiled bytecode is transported to any machine (Windows, Mac, Linux). That machine must have a JVM (Java Virtual Machine) installed. The JVM reads the bytecode and translates it into the specific machine-level instructions native to that exact operating system. Therefore, while the JVM is platform- dependent , the Java program (bytecode) itself is totally platform- independent ."
     ],
     "type": "question"
   },
@@ -1019,7 +1019,7 @@
     "title": "Write a Java program containing a class, instance variables, constructor, method, and objects. Explain the execution of the program.",
     "url": "question-bank.html?open=q64",
     "chunks": [
-      "class Car {\n    String model; // Instance variable\n\n    // Constructor\n    Car(String m) {\n        model = m;\n    }\n\n    // Method\n    void display() {\n        System.out.println(\"Car Model: \" + model);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Car c1 = new Car(\"Tesla\"); // Object creation\n        c1.display(); // Method invocation\n    }\n}\n\nExecution: The JVM enters the main method. It encounters the new keyword, which allocates heap memory for a Car object. The constructor Car(\"Tesla\") is called, initializing the model instance variable to \"Tesla\". Finally, the display() method is invoked on the c1 object, printing the output to the console."
+      "class Car { String model; // Instance variable // Constructor Car(String m) { model = m; } // Method void display() { System.out.println(\"Car Model: \" + model); } } public class Main { public static void main(String[] args) { Car c1 = new Car(\"Tesla\"); // Object creation c1.display(); // Method invocation } } Execution: The JVM enters the main method. It encounters the new keyword, which allocates heap memory for a Car object. The constructor Car(\"Tesla\") is called, initializing the model instance variable to \"Tesla\". Finally, the display() method is invoked on the c1 object, printing the output to the console."
     ],
     "type": "question"
   },
@@ -1035,7 +1035,7 @@
     "title": "Explain Java packages and access modifiers. Write a suitable program demonstrating private, default, protected, and public members.",
     "url": "question-bank.html?open=q65",
     "chunks": [
-      "Packages group related classes to avoid name clashes. Access Modifiers control the visibility of classes and members.\n\npackage mypack;\n\npublic class AccessDemo {\n    private int priv = 1;     // Only this class\n    int def = 2;              // Only this package\n    protected int prot = 3;   // This package + subclasses\n    public int pub = 4;       // Everywhere\n\n    public void show() {\n        System.out.println(priv + def + prot + pub);\n    }\n}"
+      "Packages group related classes to avoid name clashes. Access Modifiers control the visibility of classes and members. package mypack; public class AccessDemo { private int priv = 1; // Only this class int def = 2; // Only this package protected int prot = 3; // This package + subclasses public int pub = 4; // Everywhere public void show() { System.out.println(priv + def + prot + pub); } }"
     ],
     "type": "question"
   },
@@ -1051,7 +1051,7 @@
     "title": "Explain Java data types, arrays, and operators with suitable examples. Evaluate the expression 5 + 3 * 2 % 4 using operator precedence.",
     "url": "question-bank.html?open=q66",
     "chunks": [
-      "Data Types: Primitives (int x = 5;) and References (String s = \"Hi\";).\n\nArrays: Homogeneous collections. int[] arr = {1, 2, 3};\n\nOperators: Arithmetic (+, -), Relational (>, ==), Logical (&&, ||).\n\nEvaluation of 5 + 3 * 2 % 4:\n\nPrecedence of * and % is higher than +. They evaluate left-to-right.\n\n3 * 2 = 6\n\n6 % 4 = 2 (Remainder of 6 divided by 4)\n\n5 + 2 = 7"
+      "Data Types: Primitives ( int x = 5; ) and References ( String s = \"Hi\"; ). Arrays: Homogeneous collections. int[] arr = {1, 2, 3}; Operators: Arithmetic ( + , - ), Relational ( > , == ), Logical ( && , || ). Evaluation of 5 + 3 * 2 % 4 : Precedence of * and % is higher than + . They evaluate left-to-right. 3 * 2 = 6 6 % 4 = 2 (Remainder of 6 divided by 4) 5 + 2 = 7"
     ],
     "type": "question"
   },
@@ -1067,7 +1067,7 @@
     "title": "Write a Java program to create a Book class with title and price fields. Create two objects with different values and display their details.",
     "url": "question-bank.html?open=q67",
     "chunks": [
-      "class Book {\n    String title;\n    double price;\n\n    Book(String t, double p) {\n        title = t;\n        price = p;\n    }\n\n    void display() {\n        System.out.println(\"Title: \" + title + \", Price: $\" + price);\n    }\n}\n\npublic class Library {\n    public static void main(String[] args) {\n        Book b1 = new Book(\"Java Complete Reference\", 45.99);\n        Book b2 = new Book(\"Head First Java\", 35.50);\n\n        b1.display();\n        b2.display();\n    }\n}"
+      "class Book { String title; double price; Book(String t, double p) { title = t; price = p; } void display() { System.out.println(\"Title: \" + title + \", Price: $\" + price); } } public class Library { public static void main(String[] args) { Book b1 = new Book(\"Java Complete Reference\", 45.99); Book b2 = new Book(\"Head First Java\", 35.50); b1.display(); b2.display(); } }"
     ],
     "type": "question"
   },
@@ -1083,7 +1083,7 @@
     "title": "Write a Java program using an array and loops to calculate the average marks of five students.",
     "url": "question-bank.html?open=q68",
     "chunks": [
-      "public class AverageMarks {\n    public static void main(String[] args) {\n        int[] marks = {85, 90, 78, 92, 88};\n        int sum = 0;\n\n        for (int i = 0; i < marks.length; i++) {\n            sum += marks[i];\n        }\n\n        double average = (double) sum / marks.length;\n        System.out.println(\"Average Marks: \" + average);\n    }\n}"
+      "public class AverageMarks { public static void main(String[] args) { int[] marks = {85, 90, 78, 92, 88}; int sum = 0; for (int i = 0; i < marks.length; i++) { sum += marks[i]; } double average = (double) sum / marks.length; System.out.println(\"Average Marks: \" + average); } }"
     ],
     "type": "question"
   },
@@ -1099,7 +1099,7 @@
     "title": "Explain Java control statements with suitable examples of if-else, switch-case, loops, break, continue, and the ternary operator.",
     "url": "question-bank.html?open=q69",
     "chunks": [
-      "if-else: Branching based on a boolean. if(x > 0) { ... } else { ... }\n\nswitch-case: Multi-way branch. switch(day) { case 1: ... break; }\n\nloops: Repeating code. for(int i=0; i<5; i++) { ... }\n\nbreak: Exits the entire loop or switch immediately.\n\ncontinue: Skips the current iteration and proceeds to the next iteration of the loop.\n\nTernary Operator: A one-line if-else. int max = (a > b) ? a : b;"
+      "if-else: Branching based on a boolean. if(x > 0) { ... } else { ... } switch-case: Multi-way branch. switch(day) { case 1: ... break; } loops: Repeating code. for(int i=0; i<5; i++) { ... } break: Exits the entire loop or switch immediately. continue: Skips the current iteration and proceeds to the next iteration of the loop. Ternary Operator: A one-line if-else. int max = (a > b) ? a : b;"
     ],
     "type": "question"
   },
@@ -1115,7 +1115,7 @@
     "title": "Write a Java program that uses an array, loop, and conditional statement to count negative numbers and display the result.",
     "url": "question-bank.html?open=q70",
     "chunks": [
-      "public class NegativeCounter {\n    public static void main(String[] args) {\n        int[] numbers = {5, -2, 9, -8, 0, -1, 3};\n        int count = 0;\n\n        for(int num : numbers) {\n            if(num < 0) {\n                count++;\n            }\n        }\n\n        System.out.println(\"Total negative numbers: \" + count);\n    }\n}"
+      "public class NegativeCounter { public static void main(String[] args) { int[] numbers = {5, -2, 9, -8, 0, -1, 3}; int count = 0; for(int num : numbers) { if(num < 0) { count++; } } System.out.println(\"Total negative numbers: \" + count); } }"
     ],
     "type": "question"
   },
@@ -1131,7 +1131,7 @@
     "title": "Explain Classes and Objects in Java in detail. Describe how objects are created using new, how multiple objects of the same class maintain independent instance variables, and illustrate with a suitable example.",
     "url": "question-bank.html?open=q71",
     "chunks": [
-      "A Class is a blueprint. An Object is a physical instance. The new keyword allocates distinct heap memory for every object created.\n\nBecause each object gets its own memory block in the heap, they maintain independent copies of instance variables. Changing the variable in one object does not affect the other.\n\nclass Account {\n    int balance;\n}\npublic class Main {\n    public static void main(String[] args) {\n        Account acc1 = new Account();\n        Account acc2 = new Account();\n\n        acc1.balance = 500;\n        acc2.balance = 1000;\n        // acc1 and acc2 are independent.\n    }\n}"
+      "A Class is a blueprint. An Object is a physical instance. The new keyword allocates distinct heap memory for every object created. Because each object gets its own memory block in the heap, they maintain independent copies of instance variables . Changing the variable in one object does not affect the other. class Account { int balance; } public class Main { public static void main(String[] args) { Account acc1 = new Account(); Account acc2 = new Account(); acc1.balance = 500; acc2.balance = 1000; // acc1 and acc2 are independent. } }"
     ],
     "type": "question"
   },
@@ -1147,7 +1147,7 @@
     "title": "Explain instance variables and local variables in Java. Discuss their declaration, default/initialization requirements, lifetime, and memory behavior with suitable examples.",
     "url": "question-bank.html?open=q72",
     "chunks": [
-      "PropertyInstance VariableLocal Variable\n\nDeclarationInside class, outside methods.Inside a method or block.\n\nMemoryStored in the Heap (inside the object).Stored in the Stack.\n\nLifetimeLives as long as the object lives.Destroyed when the method execution completes.\n\nInitializationAutomatically initialized to defaults (0, null).NO default value. Must be explicitly initialized."
+      "Property Instance Variable Local Variable Declaration Inside class, outside methods. Inside a method or block. Memory Stored in the Heap (inside the object). Stored in the Stack . Lifetime Lives as long as the object lives. Destroyed when the method execution completes. Initialization Automatically initialized to defaults (0, null). NO default value. Must be explicitly initialized."
     ],
     "type": "question"
   },
@@ -1163,7 +1163,7 @@
     "title": "Explain constructors in Java in detail. Discuss constructor rules, default/no-argument constructor, parameterized constructor, and the role of constructors in object initialization.",
     "url": "question-bank.html?open=q73",
     "chunks": [
-      "Constructors are special blocks invoked when an object is instantiated via new.\n\nRules: Must have the exact same name as the class. Cannot have a return type.\n\nRole: They allocate default or specific values to instance variables the moment the object is born, ensuring the object starts in a valid state.\n\nDefault Constructor: Generated by the compiler if none exists. Initializes fields to 0/null.\n\nNo-Argument Constructor: Explicitly written without parameters to run specific setup code.\n\nParameterized Constructor: Accepts arguments to dynamically set up the object."
+      "Constructors are special blocks invoked when an object is instantiated via new . Rules: Must have the exact same name as the class. Cannot have a return type. Role: They allocate default or specific values to instance variables the moment the object is born, ensuring the object starts in a valid state. Default Constructor: Generated by the compiler if none exists. Initializes fields to 0/null. No-Argument Constructor: Explicitly written without parameters to run specific setup code. Parameterized Constructor: Accepts arguments to dynamically set up the object."
     ],
     "type": "question"
   },
@@ -1179,7 +1179,7 @@
     "title": "Explain constructor overloading and constructor chaining in Java. Compare their purpose, implementation, and execution using suitable examples involving this() and super().",
     "url": "question-bank.html?open=q74",
     "chunks": [
-      "Overloading allows a class to have multiple constructors with different parameters. Chaining allows these constructors to call each other, or call the parent's constructor, to avoid duplicating initialization logic.\n\nclass Parent {\n    Parent() { System.out.println(\"Parent init\"); }\n}\nclass Child extends Parent {\n    int x, y;\n\n    Child() {\n        this(0, 0); // Constructor Chaining via this()\n    }\n\n    Child(int x, int y) { // Overloaded constructor\n        super(); // Constructor Chaining via super() to Parent\n        this.x = x;\n        this.y = y;\n    }\n}"
+      "Overloading allows a class to have multiple constructors with different parameters. Chaining allows these constructors to call each other, or call the parent's constructor, to avoid duplicating initialization logic. class Parent { Parent() { System.out.println(\"Parent init\"); } } class Child extends Parent { int x, y; Child() { this(0, 0); // Constructor Chaining via this() } Child(int x, int y) { // Overloaded constructor super(); // Constructor Chaining via super() to Parent this.x = x; this.y = y; } }"
     ],
     "type": "question"
   },
@@ -1195,7 +1195,7 @@
     "title": "Explain the this keyword in Java. Discuss its major uses, including resolving field parameter shadowing, invoking another method, constructor chaining using this(), passing the current object, and returning the current object.",
     "url": "question-bank.html?open=q75",
     "chunks": [
-      "The this keyword is a reference to the current executing object.\n\nShadowing: When a parameter has the same name as a field: this.age = age;\n\nMethod invocation: Explicitly calling another method: this.doWork();\n\nChaining: Calling another constructor: this(name, age);\n\nPassing as Argument: Passing the current instance to an event listener: button.addListener(this);\n\nReturning: Used in builder patterns to chain method calls: return this;"
+      "The this keyword is a reference to the current executing object. Shadowing: When a parameter has the same name as a field: this.age = age; Method invocation: Explicitly calling another method: this.doWork(); Chaining: Calling another constructor: this(name, age); Passing as Argument: Passing the current instance to an event listener: button.addListener(this); Returning: Used in builder patterns to chain method calls: return this;"
     ],
     "type": "question"
   },
@@ -1211,7 +1211,7 @@
     "title": "Explain Garbage Collection and finalization in Java. Discuss different situations in which an object becomes eligible for GC, the role of finalize(), why finalize() is deprecated, and modern alternatives such as try-with-resources and Cleaner.",
     "url": "question-bank.html?open=q76",
     "chunks": [
-      "Garbage Collection automatically deallocates memory for objects that are no longer reachable.\n\nEligibility: An object is eligible if its reference is set to null, reassigned, or created anonymously.\n\nfinalize(): A method in the Object class historically called by the GC just before destroying the object to release non-Java resources.\n\nDeprecation: finalize() was deprecated in Java 9 because it is unpredictable, impacts performance, and can cause memory leaks if implemented poorly.\n\nModern Alternatives: Use try-with-resources (implementing AutoCloseable) for deterministic resource cleanup, or the java.lang.ref.Cleaner API."
+      "Garbage Collection automatically deallocates memory for objects that are no longer reachable. Eligibility: An object is eligible if its reference is set to null , reassigned, or created anonymously. finalize(): A method in the Object class historically called by the GC just before destroying the object to release non-Java resources. Deprecation: finalize() was deprecated in Java 9 because it is unpredictable, impacts performance, and can cause memory leaks if implemented poorly. Modern Alternatives: Use try-with-resources (implementing AutoCloseable ) for deterministic resource cleanup, or the java.lang.ref.Cleaner API."
     ],
     "type": "question"
   },
@@ -1227,7 +1227,7 @@
     "title": "Explain all four access modifiers in Java \u2014 private, default, protected, and public. Compare their accessibility within the class, package, subclasses, and outside packages with suitable examples.",
     "url": "question-bank.html?open=q77",
     "chunks": [
-      "ModifierSame ClassSame PackageSubclass (Diff Pkg)World (Diff Pkg)\n\nprivateYesNoNoNo\n\n(default)YesYesNoNo\n\nprotectedYesYesYesNo\n\npublicYesYesYesYes\n\nExample: Use private for sensitive data like passwords. Use public for API methods meant for everyone. Use protected for methods meant to be overridden by subclasses."
+      "Modifier Same Class Same Package Subclass (Diff Pkg) World (Diff Pkg) private Yes No No No (default) Yes Yes No No protected Yes Yes Yes No public Yes Yes Yes Yes Example: Use private for sensitive data like passwords. Use public for API methods meant for everyone. Use protected for methods meant to be overridden by subclasses."
     ],
     "type": "question"
   },
@@ -1243,7 +1243,7 @@
     "title": "Explain the Character wrapper class in Java. Discuss wrapper classes, primitive-to-wrapper mapping, autoboxing, unboxing, and important methods such as isLetter(), isDigit(), isWhitespace(), isUpperCase(), and isLowerCase().",
     "url": "question-bank.html?open=q78",
     "chunks": [
-      "Wrapper Classes encapsulate primitive types into objects. The mapping is straight-forward (e.g., int \u2192 Integer, char \u2192 Character). Autoboxing is the automatic conversion to wrapper; unboxing is the reverse.\n\nCharacter Class Methods:\n\nisLetter('A') \u2192 true\n\nisDigit('5') \u2192 true\n\nisWhitespace(' ') \u2192 true\n\nisUpperCase('A') \u2192 true\n\nisLowerCase('a') \u2192 true"
+      "Wrapper Classes encapsulate primitive types into objects. The mapping is straight-forward (e.g., int \u2192 Integer , char \u2192 Character ). Autoboxing is the automatic conversion to wrapper; unboxing is the reverse. Character Class Methods: isLetter('A') \u2192 true isDigit('5') \u2192 true isWhitespace(' ') \u2192 true isUpperCase('A') \u2192 true isLowerCase('a') \u2192 true"
     ],
     "type": "question"
   },
@@ -1259,7 +1259,7 @@
     "title": "Explain the String class in Java in detail. Discuss String immutability, String literals, the new keyword, String Constant Pool, == versus equals(), and important String methods with examples.",
     "url": "question-bank.html?open=q79",
     "chunks": [
-      "The String class represents an array of characters. Strings are immutable; once created, their value cannot change.\n\nLiterals vs New: String s1 = \"Java\"; creates/reuses a string in the highly-efficient String Constant Pool. String s2 = new String(\"Java\"); forces a new allocation in the normal Heap.\n\n== vs equals(): s1 == s2 compares memory addresses (returns false here). s1.equals(s2) compares the actual text characters (returns true).\n\nMethods: length(), substring(start, end), toUpperCase(), concat(str)."
+      "The String class represents an array of characters. Strings are immutable ; once created, their value cannot change. Literals vs New: String s1 = \"Java\"; creates/reuses a string in the highly-efficient String Constant Pool . String s2 = new String(\"Java\"); forces a new allocation in the normal Heap. == vs equals(): s1 == s2 compares memory addresses (returns false here). s1.equals(s2) compares the actual text characters (returns true). Methods: length() , substring(start, end) , toUpperCase() , concat(str) ."
     ],
     "type": "question"
   },
@@ -1275,7 +1275,7 @@
     "title": "Compare String, StringBuffer, and StringBuilder in Java. Discuss their mutability, thread safety, performance, and appropriate use cases. Also explain important StringBuffer methods such as append(), insert(), replace(), delete(), and reverse().",
     "url": "question-bank.html?open=q80",
     "chunks": [
-      "FeatureStringStringBufferStringBuilder\n\nMutabilityImmutableMutableMutable\n\nThread SafetyYesYes (Synchronized)No (Not Synchronized)\n\nPerformanceSlow for concatModerateFastest\n\nStringBuffer Methods:\n\nappend(\"A\"): Adds \"A\" to the end.\n\ninsert(1, \"A\"): Inserts \"A\" at index 1.\n\nreplace(1, 3, \"X\"): Replaces substring.\n\ndelete(1, 3): Removes characters.\n\nreverse(): Reverses the sequence."
+      "Feature String StringBuffer StringBuilder Mutability Immutable Mutable Mutable Thread Safety Yes Yes (Synchronized) No (Not Synchronized) Performance Slow for concat Moderate Fastest StringBuffer Methods: append(\"A\") : Adds \"A\" to the end. insert(1, \"A\") : Inserts \"A\" at index 1. replace(1, 3, \"X\") : Replaces substring. delete(1, 3) : Removes characters. reverse() : Reverses the sequence."
     ],
     "type": "question"
   },
@@ -1291,7 +1291,7 @@
     "title": "Explain all major types of inheritance in Java\u2014single, multilevel, hierarchical, hybrid, and multiple inheritance. Also explain how multiple inheritance is achieved using interfaces.",
     "url": "question-bank.html?open=q81",
     "chunks": [
-      "Single: Class A \u2192 Class B\n\nMultilevel: Class A \u2192 Class B \u2192 Class C\n\nHierarchical: Class A \u2192 Class B, Class A \u2192 Class C\n\nMultiple: Class A, Class B \u2192 Class C. Not supported directly through classes due to the Diamond Problem.\n\nHybrid: A mix of the above.\n\nMultiple Inheritance via Interfaces: Because interfaces traditionally do not hold implementation or state, a single Java class can implement multiple interfaces without ambiguity over whose method to inherit."
+      "Single: Class A \u2192 Class B Multilevel: Class A \u2192 Class B \u2192 Class C Hierarchical: Class A \u2192 Class B, Class A \u2192 Class C Multiple: Class A, Class B \u2192 Class C. Not supported directly through classes due to the Diamond Problem. Hybrid: A mix of the above. Multiple Inheritance via Interfaces: Because interfaces traditionally do not hold implementation or state, a single Java class can implement multiple interfaces without ambiguity over whose method to inherit."
     ],
     "type": "question"
   },
@@ -1307,7 +1307,7 @@
     "title": "Write a Java program demonstrating the use of the super keyword to access a parent class variable, method, and constructor.",
     "url": "question-bank.html?open=q82",
     "chunks": [
-      "class Parent {\n    int x = 10;\n    Parent() { System.out.println(\"Parent Constructor\"); }\n    void show() { System.out.println(\"Parent Show\"); }\n}\n\nclass Child extends Parent {\n    int x = 20;\n    Child() {\n        super(); // 1. Parent Constructor\n    }\n    void display() {\n        super.show(); // 2. Parent Method\n        System.out.println(\"Child x: \" + x);\n        System.out.println(\"Parent x: \" + super.x); // 3. Parent Variable\n    }\n}"
+      "class Parent { int x = 10; Parent() { System.out.println(\"Parent Constructor\"); } void show() { System.out.println(\"Parent Show\"); } } class Child extends Parent { int x = 20; Child() { super(); // 1. Parent Constructor } void display() { super.show(); // 2. Parent Method System.out.println(\"Child x: \" + x); System.out.println(\"Parent x: \" + super.x); // 3. Parent Variable } }"
     ],
     "type": "question"
   },
@@ -1323,7 +1323,7 @@
     "title": "Explain the Object class in detail and demonstrate the use of toString(), equals(), hashCode(), and getClass() with suitable examples.",
     "url": "question-bank.html?open=q83",
     "chunks": [
-      "The Object class is the root of the class hierarchy.\n\nclass Person {\n    String name;\n    Person(String n) { name = n; }\n\n    // Overriding toString\n    public String toString() { return \"Person: \" + name; }\n\n    // Overriding equals\n    public boolean equals(Object obj) {\n        if(obj instanceof Person) {\n            return this.name.equals(((Person)obj).name);\n        }\n        return false;\n    }\n}\n\n// Usage:\nPerson p = new Person(\"John\");\nSystem.out.println(p.toString());\nSystem.out.println(p.hashCode());\nSystem.out.println(p.getClass().getName());"
+      "The Object class is the root of the class hierarchy. class Person { String name; Person(String n) { name = n; } // Overriding toString public String toString() { return \"Person: \" + name; } // Overriding equals public boolean equals(Object obj) { if(obj instanceof Person) { return this.name.equals(((Person)obj).name); } return false; } } // Usage: Person p = new Person(\"John\"); System.out.println(p.toString()); System.out.println(p.hashCode()); System.out.println(p.getClass().getName());"
     ],
     "type": "question"
   },
@@ -1339,7 +1339,7 @@
     "title": "Write a Java program to demonstrate method overloading and method overriding. Explain how they represent compile-time and run-time polymorphism respectively.",
     "url": "question-bank.html?open=q84",
     "chunks": [
-      "class MathOps {\n    // Overloading (Compile-time Polymorphism)\n    int add(int a, int b) { return a + b; }\n    double add(double a, double b) { return a + b; }\n}\n\nclass Animal {\n    void sound() { System.out.println(\"Generic sound\"); }\n}\nclass Dog extends Animal {\n    // Overriding (Run-time Polymorphism)\n    @Override\n    void sound() { System.out.println(\"Bark\"); }\n}\n\nCompile-time: The compiler binds the add() method based on the parameter data types provided. Run-time: The JVM binds the sound() method based on whether the actual heap object is an Animal or a Dog."
+      "class MathOps { // Overloading (Compile-time Polymorphism) int add(int a, int b) { return a + b; } double add(double a, double b) { return a + b; } } class Animal { void sound() { System.out.println(\"Generic sound\"); } } class Dog extends Animal { // Overriding (Run-time Polymorphism) @Override void sound() { System.out.println(\"Bark\"); } } Compile-time: The compiler binds the add() method based on the parameter data types provided. Run-time: The JVM binds the sound() method based on whether the actual heap object is an Animal or a Dog ."
     ],
     "type": "question"
   },
@@ -1355,7 +1355,7 @@
     "title": "Explain dynamic binding in detail with a Java program using a superclass reference and subclass object. Also explain how method overriding is resolved at run time.",
     "url": "question-bank.html?open=q85",
     "chunks": [
-      "Dynamic Binding occurs when the compiler cannot determine the method implementation at compile time, so the JVM resolves it during execution.\n\nclass Vehicle {\n    void move() { System.out.println(\"Moving\"); }\n}\nclass Car extends Vehicle {\n    @Override\n    void move() { System.out.println(\"Driving on wheels\"); }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Vehicle v = new Car(); // Superclass ref, Subclass object\n        v.move(); // Outputs: Driving on wheels\n    }\n}\n\nAt compile time, the compiler ensures move() exists in Vehicle. At runtime, the JVM notices the object is actually a Car and executes the overridden version."
+      "Dynamic Binding occurs when the compiler cannot determine the method implementation at compile time, so the JVM resolves it during execution. class Vehicle { void move() { System.out.println(\"Moving\"); } } class Car extends Vehicle { @Override void move() { System.out.println(\"Driving on wheels\"); } } public class Main { public static void main(String[] args) { Vehicle v = new Car(); // Superclass ref, Subclass object v.move(); // Outputs: Driving on wheels } } At compile time, the compiler ensures move() exists in Vehicle . At runtime, the JVM notices the object is actually a Car and executes the overridden version."
     ],
     "type": "question"
   },
@@ -1371,7 +1371,7 @@
     "title": "Explain object casting in Java with suitable examples of upcasting and downcasting. Demonstrate the use of instanceof to perform safe downcasting.",
     "url": "question-bank.html?open=q86",
     "chunks": [
-      "class Animal {}\nclass Dog extends Animal {\n    void bark() { System.out.println(\"Woof\"); }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // Upcasting (Automatic)\n        Animal a = new Dog(); \n\n        // Downcasting (Explicit & requires checking)\n        if (a instanceof Dog) {\n            Dog d = (Dog) a;\n            d.bark(); // Safe to call child-specific method\n        }\n    }\n}"
+      "class Animal {} class Dog extends Animal { void bark() { System.out.println(\"Woof\"); } } public class Main { public static void main(String[] args) { // Upcasting (Automatic) Animal a = new Dog(); // Downcasting (Explicit & requires checking) if (a instanceof Dog) { Dog d = (Dog) a; d.bark(); // Safe to call child-specific method } } }"
     ],
     "type": "question"
   },
@@ -1387,7 +1387,7 @@
     "title": "Explain abstract classes in Java. Write a program containing an abstract class, abstract method, concrete method, constructor, and subclass implementation.",
     "url": "question-bank.html?open=q87",
     "chunks": [
-      "abstract class Shape {\n    Shape() { System.out.println(\"Shape created\"); }\n\n    // Abstract method (no body)\n    abstract void draw();\n\n    // Concrete method\n    void display() { System.out.println(\"Displaying shape\"); }\n}\n\nclass Circle extends Shape {\n    @Override\n    void draw() {\n        System.out.println(\"Drawing Circle\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Shape s = new Circle();\n        s.display();\n        s.draw();\n    }\n}"
+      "abstract class Shape { Shape() { System.out.println(\"Shape created\"); } // Abstract method (no body) abstract void draw(); // Concrete method void display() { System.out.println(\"Displaying shape\"); } } class Circle extends Shape { @Override void draw() { System.out.println(\"Drawing Circle\"); } } public class Main { public static void main(String[] args) { Shape s = new Circle(); s.display(); s.draw(); } }"
     ],
     "type": "question"
   },
@@ -1403,7 +1403,7 @@
     "title": "Explain interfaces in Java and compare them with abstract classes. Write a program in which a class implements multiple interfaces.",
     "url": "question-bank.html?open=q88",
     "chunks": [
-      "Interfaces define contracts (mostly abstract methods). Unlike Abstract classes which can have state and constructors, interfaces cannot maintain instance state.\n\ninterface Printable {\n    void print();\n}\ninterface Showable {\n    void show();\n}\n\nclass Document implements Printable, Showable {\n    public void print() { System.out.println(\"Printing\"); }\n    public void show() { System.out.println(\"Showing\"); }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Document doc = new Document();\n        doc.print();\n        doc.show();\n    }\n}"
+      "Interfaces define contracts (mostly abstract methods). Unlike Abstract classes which can have state and constructors, interfaces cannot maintain instance state. interface Printable { void print(); } interface Showable { void show(); } class Document implements Printable, Showable { public void print() { System.out.println(\"Printing\"); } public void show() { System.out.println(\"Showing\"); } } public class Main { public static void main(String[] args) { Document doc = new Document(); doc.print(); doc.show(); } }"
     ],
     "type": "question"
   },
@@ -1419,7 +1419,7 @@
     "title": "Explain generic programming in Java. Write examples of a generic class and a generic method, and state the advantages of type safety and code reusability.",
     "url": "question-bank.html?open=q89",
     "chunks": [
-      "Generics allow parameters for types, catching type errors at compile-time instead of runtime.\n\n// Generic Class\nclass Box<T> {\n    private T item;\n    public void set(T t) { item = t; }\n    public T get() { return item; }\n}\n\n// Generic Method\npublic <E> void printArray(E[] array) {\n    for(E element : array) { System.out.println(element); }\n}\n\nAdvantages: Code can be reused for any object type while maintaining rigorous type safety without explicit casting."
+      "Generics allow parameters for types, catching type errors at compile-time instead of runtime. // Generic Class class Box<T> { private T item; public void set(T t) { item = t; } public T get() { return item; } } // Generic Method public <E> void printArray(E[] array) { for(E element : array) { System.out.println(element); } } Advantages: Code can be reused for any object type while maintaining rigorous type safety without explicit casting."
     ],
     "type": "question"
   },
@@ -1435,7 +1435,7 @@
     "title": "Write a Java program using ArrayList<String> to add, display, access, remove, search, and count elements. Also explain built-in and user-defined packages with suitable examples.",
     "url": "question-bank.html?open=q90",
     "chunks": [
-      "import java.util.ArrayList;\n\npublic class ListDemo {\n    public static void main(String[] args) {\n        ArrayList<String> list = new ArrayList<>();\n\n        list.add(\"Apple\");   // Add\n        list.add(\"Banana\");\n\n        System.out.println(list.get(0)); // Access\n\n        list.remove(\"Apple\"); // Remove\n\n        boolean hasBanana = list.contains(\"Banana\"); // Search\n        int total = list.size(); // Count\n\n        System.out.println(\"Total: \" + total + \", Has Banana: \" + hasBanana);\n    }\n}\n\nPackages: java.util is a built-in package. If we created package com.myutils; at the top, it would be user-defined."
+      "import java.util.ArrayList; public class ListDemo { public static void main(String[] args) { ArrayList<String> list = new ArrayList<>(); list.add(\"Apple\"); // Add list.add(\"Banana\"); System.out.println(list.get(0)); // Access list.remove(\"Apple\"); // Remove boolean hasBanana = list.contains(\"Banana\"); // Search int total = list.size(); // Count System.out.println(\"Total: \" + total + \", Has Banana: \" + hasBanana); } } Packages: java.util is a built-in package. If we created package com.myutils; at the top, it would be user-defined."
     ],
     "type": "question"
   },
@@ -1444,30 +1444,29 @@
     "title": "JAVA Cheat Sheet",
     "url": "cheat-sheet.html",
     "chunks": [
-      "Dashboard\n\n            Revision Hub\n\n                Save as PDF\n\n                Theme",
+      "Dashboard Revision Hub Save as PDF Theme",
       "Java Programming",
-      "Dense Revision Cheat Sheet \n\nAll Units | Scannable Reference | High-Yield Syntax & Concepts\n\nQuick Jump:\nUnit I\nUnit II\nUnit III\nUnit IV\nUnit V\n\n\u2190 Dashboard",
+      "Dense Revision Cheat Sheet All Units | Scannable Reference | High-Yield Syntax & Concepts Quick Jump: Unit I Unit II Unit III Unit IV Unit V \u2190 Dashboard",
       "Unit I: Introduction & Basics CO1",
-      "JVM Ecosystem & Internals \n\nJava compiles to bytecode, making it platform-independent (WORA). The ClassLoader Subsystem handles dynamic class loading, linking, and initialization. The Execution Engine parses bytecode using an Interpreter and a JIT (Just-In-Time) compiler.\n\njavac App.java // Produces App.class (Bytecode)\njava App       // JVM Execution Engine runs Bytecode\n\n            Trap: ClassNotFoundException vs NoClassDefFoundError. ClassNotFoundException is thrown during explicit dynamic loading (e.g., Class.forName()). NoClassDefFoundError occurs if a class was present at compile-time but is missing at runtime during implicit loading.",
-      "Data Types & Memory Semantics \n\nPrimitives reside on the Thread Stack; Objects reside on the Shared Heap. Java explicitly defines sizes regardless of the OS (e.g., int is always 32-bit). Object references themselves are passed by value (a copy of the reference is passed).\n\nint x = 5; // Stack primitive\nInteger y = Integer.valueOf(5); // Heap object reference on stack\n\n            Pro Tip: Autoboxing & Constant Pool. Integer a = 100; Integer b = 100; a == b is TRUE because integers between -128 and 127 are cached in the IntegerCache. Outside this range, they are distinct objects!",
-      "JVM Architecture Diagram \n\n            flowchart TD\n                A[Java Source Code] --> B[Javac Compiler]\n                B --> C[Bytecode .class]\n                C --> D[ClassLoader Subsystem]\n                D --> E[Runtime Data Areas: Heap, Stack, Metaspace]\n                E --> F[Execution Engine: Interpreter + JIT]",
+      "JVM Ecosystem & Internals Java compiles to bytecode, making it platform-independent (WORA). The ClassLoader Subsystem handles dynamic class loading, linking, and initialization. The Execution Engine parses bytecode using an Interpreter and a JIT (Just-In-Time) compiler. javac App.java // Produces App.class (Bytecode) java App // JVM Execution Engine runs Bytecode Trap: ClassNotFoundException vs NoClassDefFoundError. ClassNotFoundException is thrown during explicit dynamic loading (e.g., Class.forName() ). NoClassDefFoundError occurs if a class was present at compile-time but is missing at runtime during implicit loading.",
+      "Data Types & Memory Semantics Primitives reside on the Thread Stack; Objects reside on the Shared Heap. Java explicitly defines sizes regardless of the OS (e.g., int is always 32-bit). Object references themselves are passed by value (a copy of the reference is passed). int x = 5; // Stack primitive Integer y = Integer.valueOf(5); // Heap object reference on stack Pro Tip: Autoboxing & Constant Pool. Integer a = 100; Integer b = 100; a == b is TRUE because integers between -128 and 127 are cached in the IntegerCache. Outside this range, they are distinct objects!",
+      "JVM Architecture Diagram flowchart TD A[Java Source Code] --> B[Javac Compiler] B --> C[Bytecode .class] C --> D[ClassLoader Subsystem] D --> E[Runtime Data Areas: Heap, Stack, Metaspace] E --> F[Execution Engine: Interpreter + JIT]",
       "Unit II: Core Mechanics & OOP CO2",
-      "Polymorphism & Dynamic Dispatch \n\nMethod overloading is compile-time polymorphism (Static Binding). Method overriding is runtime polymorphism (Dynamic Dispatch/Binding), utilizing the vtable to invoke the subclass implementation. super is used to invoke the overridden superclass method.\n\nParent obj = new Child();\nobj.display(); // Calls Child's display() at runtime\n\n            Trap: Method Hiding. You cannot override static methods. If a child class defines the same static method, it hides the parent's method. The call is resolved at compile-time based on the reference type, not the object type!",
-      "Interfaces vs Abstract Classes \n\nInterfaces define contracts (can have default and static methods since Java 8). Abstract classes can hold state (instance variables) and constructors. A class can implement multiple interfaces but extend only one class.\n\ninterface Flyer { default void land() { /* body */ } }\nabstract class Bird { abstract void sing(); }\n\n            Pro Tip: The Diamond Problem. If a class implements two interfaces with identical default methods, the compiler forces you to override the method and explicitly invoke the desired interface's method using InterfaceName.super.method().",
-      "Constructors & Initialization Blocks \n\nInstance Initialization Blocks (IIB) run before the constructor but after the call to super(). Static blocks run once when the class is loaded by the ClassLoader. Constructors can be chained using this().\n\nclass Demo {\n    static { System.out.println(\"Static Init\"); }\n    { System.out.println(\"Instance Init\"); }\n    Demo() { System.out.println(\"Constructor\"); }\n}",
+      "Polymorphism & Dynamic Dispatch Method overloading is compile-time polymorphism (Static Binding). Method overriding is runtime polymorphism (Dynamic Dispatch/Binding), utilizing the vtable to invoke the subclass implementation. super is used to invoke the overridden superclass method. Parent obj = new Child(); obj.display(); // Calls Child's display() at runtime Trap: Method Hiding. You cannot override static methods. If a child class defines the same static method, it hides the parent's method. The call is resolved at compile-time based on the reference type , not the object type!",
+      "Interfaces vs Abstract Classes Interfaces define contracts (can have default and static methods since Java 8). Abstract classes can hold state (instance variables) and constructors. A class can implement multiple interfaces but extend only one class. interface Flyer { default void land() { /* body */ } } abstract class Bird { abstract void sing(); } Pro Tip: The Diamond Problem. If a class implements two interfaces with identical default methods, the compiler forces you to override the method and explicitly invoke the desired interface's method using InterfaceName.super.method() .",
+      "Constructors & Initialization Blocks Instance Initialization Blocks (IIB) run before the constructor but after the call to super() . Static blocks run once when the class is loaded by the ClassLoader. Constructors can be chained using this() . class Demo { static { System.out.println(\"Static Init\"); } { System.out.println(\"Instance Init\"); } Demo() { System.out.println(\"Constructor\"); } }",
       "Unit III: Memory, Multithreading & Concurrency CO3",
-      "Garbage Collection & Memory Tuning \n\nGC reclaims unreachable objects. The Heap is divided into Young Gen (Eden, S0, S1) and Old Gen. Objects surviving multiple Minor GCs are promoted. ZGC and G1GC are modern concurrent collectors minimizing pause times.\n\nSystem.gc(); // Suggests GC, doesn't guarantee it.\n// TLABs (Thread-Local Allocation Buffers) speed up Eden allocation.\n\n            Trap: Memory Leaks. Java can have memory leaks if strong references to unused objects are maintained (e.g., an ever-growing static HashMap). The GC will not clear them!",
-      "Thread Synchronization & Visibility \n\nsynchronized utilizes intrinsic locks (monitors) to guarantee mutual exclusion. The volatile keyword guarantees memory visibility across threads by reading/writing directly to Main Memory instead of CPU caches, but it does NOT guarantee atomicity.\n\nvolatile boolean flag = true;\nsynchronized(this) { count++; } // Prevents Race Conditions\n\n            Pro Tip: Happens-Before Relationship. A write to a volatile field happens-before every subsequent read of that field. This prevents instruction reordering by the JIT compiler and CPU, ensuring safe publication.",
-      "Thread Lifecycle Diagram \n\n            stateDiagram-v2\n                [*] --> NEW\n                NEW --> RUNNABLE : start()\n                RUNNABLE --> RUNNING : Thread Scheduler\n                RUNNING --> WAITING : wait(), join()\n                WAITING --> RUNNABLE : notify()\n                RUNNING --> BLOCKED : sync block\n                BLOCKED --> RUNNABLE : Lock acquired\n                RUNNING --> TERMINATED : run() completes",
+      "Garbage Collection & Memory Tuning GC reclaims unreachable objects. The Heap is divided into Young Gen (Eden, S0, S1) and Old Gen. Objects surviving multiple Minor GCs are promoted. ZGC and G1GC are modern concurrent collectors minimizing pause times. System.gc(); // Suggests GC, doesn't guarantee it. // TLABs (Thread-Local Allocation Buffers) speed up Eden allocation. Trap: Memory Leaks. Java can have memory leaks if strong references to unused objects are maintained (e.g., an ever-growing static HashMap ). The GC will not clear them!",
+      "Thread Synchronization & Visibility synchronized utilizes intrinsic locks (monitors) to guarantee mutual exclusion. The volatile keyword guarantees memory visibility across threads by reading/writing directly to Main Memory instead of CPU caches, but it does NOT guarantee atomicity. volatile boolean flag = true; synchronized(this) { count++; } // Prevents Race Conditions Pro Tip: Happens-Before Relationship. A write to a volatile field happens-before every subsequent read of that field. This prevents instruction reordering by the JIT compiler and CPU, ensuring safe publication.",
+      "Thread Lifecycle Diagram stateDiagram-v2 [*] --> NEW NEW --> RUNNABLE : start() RUNNABLE --> RUNNING : Thread Scheduler RUNNING --> WAITING : wait(), join() WAITING --> RUNNABLE : notify() RUNNING --> BLOCKED : sync block BLOCKED --> RUNNABLE : Lock acquired RUNNING --> TERMINATED : run() completes",
       "Unit IV: Collections Framework & Generics CO4",
-      "Generics & Type Erasure \n\nGenerics provide compile-time type safety. Type Erasure means the JVM removes generic type info during compilation to maintain backward compatibility, replacing them with upper bounds or Object. You cannot instantiate a generic array (new T[]).\n\nList<String> list = new ArrayList<>();\n// Compiles to: List list = new ArrayList();\n\n            Trap: Covariance vs Contravariance (PECS). List<Object> is NOT a supertype of List<String>. Use wildcards: ? extends T for Producer (read-only), ? super T for Consumer (write-only).",
-      "Collections Internals (HashMap) \n\nHashMap computes the hash of the key to find the bucket array index. If collisions occur, it forms a LinkedList. To prevent DoS attacks via collision degradation, Java 8 introduced the Treeification Threshold (8), transforming lists into Red-Black Trees for O(log n) lookup.\n\nMap<String, Integer> map = new HashMap<>();\nmap.put(\"Key\", 1); // Uses hashCode() and equals()\n\n            Pro Tip: ConcurrentHashMap. Instead of locking the entire map (like HashTable), ConcurrentHashMap uses CAS (Compare-And-Swap) operations and synchronizes only the specific node (bucket) being updated, allowing high concurrency.",
-      "Collections Hierarchy Diagram \n\n            flowchart TD\n                Iterable --> Collection\n                Collection --> List\n                Collection --> Set\n                Collection --> Queue\n                List --> ArrayList\n                List --> LinkedList\n                Set --> HashSet\n                Map --> HashMap",
+      "Generics & Type Erasure Generics provide compile-time type safety. Type Erasure means the JVM removes generic type info during compilation to maintain backward compatibility, replacing them with upper bounds or Object . You cannot instantiate a generic array ( new T[] ). List<String> list = new ArrayList<>(); // Compiles to: List list = new ArrayList(); Trap: Covariance vs Contravariance (PECS). List<Object> is NOT a supertype of List<String> . Use wildcards: ? extends T for Producer (read-only), ? super T for Consumer (write-only).",
+      "Collections Internals (HashMap) HashMap computes the hash of the key to find the bucket array index. If collisions occur, it forms a LinkedList. To prevent DoS attacks via collision degradation, Java 8 introduced the Treeification Threshold (8) , transforming lists into Red-Black Trees for O(log n) lookup. Map<String, Integer> map = new HashMap<>(); map.put(\"Key\", 1); // Uses hashCode() and equals() Pro Tip: ConcurrentHashMap. Instead of locking the entire map (like HashTable ), ConcurrentHashMap uses CAS (Compare-And-Swap) operations and synchronizes only the specific node (bucket) being updated, allowing high concurrency.",
+      "Collections Hierarchy Diagram flowchart TD Iterable --> Collection Collection --> List Collection --> Set Collection --> Queue List --> ArrayList List --> LinkedList Set --> HashSet Map --> HashMap",
       "Unit V: Exceptions & Modern Java 8+ Features CO5",
-      "Exception Handling & Hierarchy \n\nThrowable is the root. Error (JVM crash) and RuntimeException (logic bugs) are Unchecked. Everything else (e.g., IOException) is Checked and must be handled. try-with-resources automatically closes objects implementing AutoCloseable.\n\ntry (BufferedReader br = new BufferedReader(new FileReader(\"x.txt\"))) {\n    br.readLine();\n} catch (IOException e) { /* handled */ }\n\n            Trap: Finally Overwrite. If a try block returns a value (e.g., 5), but the finally block also has a return statement (e.g., 10), the finally block silently overwrites the result. The method returns 10!",
-      "Lambdas & Streams API \n\nStreams enable declarative data processing. Intermediate operations (filter, map) are lazy and do nothing until a Terminal operation (collect, reduce) is invoked. Lambdas (->) implement Functional Interfaces (SAM: Single Abstract Method).\n\nList<Integer> evens = list.stream()\n    .filter(n -> n % 2 == 0) // Lazy Intermediate\n    .collect(Collectors.toList()); // Terminal Execution\n\n            Pro Tip: invokedynamic. Lambdas are NOT anonymous inner classes. The compiler uses the invokedynamic bytecode instruction to generate the lambda implementation dynamically at runtime, heavily optimizing memory and class-loading overhead.",
-      "String Pool & Immutability \n\nString objects are immutable; modifying one creates a new instance. String literals are stored in the String Constant Pool to save memory. Use StringBuilder for heavy concatenations to avoid generating garbage objects.\n\nString s1 = \"Hi\"; String s2 = new String(\"Hi\");\n// s1 == s2 is FALSE (s2 is forced into the main Heap).\n// s1.equals(s2) is TRUE.",
-      "Ask AI (Lite) \n\n    Lite\n    Smart (WebGPU)\n    Deep (Cloud)\n\n                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.\n\n                Send"
+      "Exception Handling & Hierarchy Throwable is the root. Error (JVM crash) and RuntimeException (logic bugs) are Unchecked . Everything else (e.g., IOException ) is Checked and must be handled. try-with-resources automatically closes objects implementing AutoCloseable . try (BufferedReader br = new BufferedReader(new FileReader(\"x.txt\"))) { br.readLine(); } catch (IOException e) { /* handled */ } Trap: Finally Overwrite. If a try block returns a value (e.g., 5), but the finally block also has a return statement (e.g., 10), the finally block silently overwrites the result. The method returns 10!",
+      "Lambdas & Streams API Streams enable declarative data processing. Intermediate operations ( filter , map ) are lazy and do nothing until a Terminal operation ( collect , reduce ) is invoked. Lambdas ( -> ) implement Functional Interfaces (SAM: Single Abstract Method). List<Integer> evens = list.stream() .filter(n -> n % 2 == 0) // Lazy Intermediate .collect(Collectors.toList()); // Terminal Execution Pro Tip: invokedynamic. Lambdas are NOT anonymous inner classes. The compiler uses the invokedynamic bytecode instruction to generate the lambda implementation dynamically at runtime, heavily optimizing memory and class-loading overhead.",
+      "String Pool & Immutability String objects are immutable; modifying one creates a new instance. String literals are stored in the String Constant Pool to save memory. Use StringBuilder for heavy concatenations to avoid generating garbage objects. String s1 = \"Hi\"; String s2 = new String(\"Hi\"); // s1 == s2 is FALSE (s2 is forced into the main Heap). // s1.equals(s2) is TRUE."
     ],
     "type": "cheat"
   }

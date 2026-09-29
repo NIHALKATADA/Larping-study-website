@@ -11,7 +11,7 @@
     "title": "Determine whether each of the following is a proposition. If it is a proposition, state whether it is True or False. (a) Every prime number greater than 2 is odd. (b) 7 + 8 = 16. (c) The Moon is a planet. (d) India is located in Asia.",
     "url": "question-bank.html?open=u1_pa_q1",
     "chunks": [
-      "(a) It is a proposition. It is True.\n(b) It is a proposition. It is False (since 7+8=15).\n(c) It is a proposition. It is False (the Moon is a satellite, not a planet).\n(d) It is a proposition. It is True."
+      "(a) It is a proposition. It is True . (b) It is a proposition. It is False (since 7+8=15). (c) It is a proposition. It is False (the Moon is a satellite, not a planet). (d) It is a proposition. It is True ."
     ],
     "type": "question"
   },
@@ -27,7 +27,7 @@
     "title": "Let p: It is raining, q: I carry an umbrella. Translate the following symbolic propositions into English. (a) p \u2227 q (b) p \u2228 q",
     "url": "question-bank.html?open=u1_pa_q2",
     "chunks": [
-      "(a) p \u2227 q: It is raining and I carry an umbrella.\n(b) p \u2228 q: It is raining or I carry an umbrella."
+      "(a) p \u2227 q: It is raining and I carry an umbrella. (b) p \u2228 q: It is raining or I carry an umbrella."
     ],
     "type": "question"
   },
@@ -43,7 +43,7 @@
     "title": "Write the negation of each of the following statements. (a) Today is Monday. (b) The computer is connected to the internet. (c) The file is encrypted. (d) The classroom is empty.",
     "url": "question-bank.html?open=u1_pa_q3",
     "chunks": [
-      "(a) Today is not Monday.\n(b) The computer is not connected to the internet.\n(c) The file is not encrypted.\n(d) The classroom is not empty."
+      "(a) Today is not Monday. (b) The computer is not connected to the internet. (c) The file is not encrypted. (d) The classroom is not empty."
     ],
     "type": "question"
   },
@@ -59,7 +59,7 @@
     "title": "If a number is divisible by 4, then it is even. Write its (a) converse and (b) inverse",
     "url": "question-bank.html?open=u1_pa_q4",
     "chunks": [
-      "Let p: A number is divisible by 4. q: It is even. The statement is p \u2192 q.\n(a) Converse (q \u2192 p): If a number is even, then it is divisible by 4.\n(b) Inverse (\u00acp \u2192 \u00acq): If a number is not divisible by 4, then it is not even."
+      "Let p: A number is divisible by 4. q: It is even. The statement is p \u2192 q. (a) Converse (q \u2192 p): If a number is even, then it is divisible by 4. (b) Inverse (\u00acp \u2192 \u00acq): If a number is not divisible by 4, then it is not even."
     ],
     "type": "question"
   },
@@ -75,7 +75,7 @@
     "title": "Show the compound proposition (p \u2194 q) \u2261 (p \u2192 q) \u2227 (q \u2192 p) is logically equivalent.",
     "url": "question-bank.html?open=u1_pa_q5",
     "chunks": [
-      "This is a standard logical equivalence definition. We can show it using a truth table:\npqp \u2194 qp \u2192 qq \u2192 p(p \u2192 q) \u2227 (q \u2192 p)\nTTTTTT\nTFFFTF\nFTFTFF\nFFTTTT\nSince columns 3 and 6 match exactly, the statements are logically equivalent."
+      "This is a standard logical equivalence definition. We can show it using a truth table: p q p \u2194 q p \u2192 q q \u2192 p (p \u2192 q) \u2227 (q \u2192 p) T T T T T T T F F F T F F T F T F F F F T T T T Since columns 3 and 6 match exactly, the statements are logically equivalent."
     ],
     "type": "question"
   },
@@ -91,7 +91,7 @@
     "title": "Let p: It is raining, q: I carry an umbrella, r: I wear a raincoat. Write the following statements in symbolic form. (a) It is raining and I carry an umbrella. (b) It is not raining but I wear a raincoat.",
     "url": "question-bank.html?open=u1_pa_q6",
     "chunks": [
-      "(a) p \u2227 q\n(b) \u00acp \u2227 r (Note: 'but' translates to logical AND)"
+      "(a) p \u2227 q (b) \u00acp \u2227 r (Note: 'but' translates to logical AND)"
     ],
     "type": "question"
   },
@@ -107,7 +107,7 @@
     "title": "Let p, q, r be as mentioned in Q6. Translate the following symbolic propositions into English (a) p \u2192 q (b) p \u2194 q (c) p \u2295 q",
     "url": "question-bank.html?open=u1_pa_q7",
     "chunks": [
-      "(a) p \u2192 q: If it is raining, then I carry an umbrella.\n(b) p \u2194 q: It is raining if and only if I carry an umbrella.\n(c) p \u2295 q: Either it is raining or I carry an umbrella, but not both."
+      "(a) p \u2192 q: If it is raining, then I carry an umbrella. (b) p \u2194 q: It is raining if and only if I carry an umbrella. (c) p \u2295 q: Either it is raining or I carry an umbrella, but not both."
     ],
     "type": "question"
   },
@@ -123,7 +123,7 @@
     "title": "Using a truth table, determine whether p \u2228 \u00acp is a Tautology, Contradiction, or Contingency.",
     "url": "question-bank.html?open=u1_pa_q8",
     "chunks": [
-      "p\u00acpp \u2228 \u00acp\nTFT\nFTT\nSince all truth values in the final column are True, p \u2228 \u00acp is a Tautology."
+      "p \u00acp p \u2228 \u00acp T F T F T T Since all truth values in the final column are True, p \u2228 \u00acp is a Tautology ."
     ],
     "type": "question"
   },
@@ -139,7 +139,7 @@
     "title": "Define the following terms with examples. (a) Tautology (b) Conditional Statement",
     "url": "question-bank.html?open=u1_pa_q9",
     "chunks": [
-      "(a) Tautology: A compound proposition that is always true, regardless of the truth values of the propositional variables that occur in it. Example: p \u2228 \u00acp (Either it is raining or it is not raining).\n(b) Conditional Statement: A statement of the form p \u2192 q, which is false only when p is true and q is false. It is read as 'if p, then q'. Example: If it rains, then I will stay at home."
+      "(a) Tautology: A compound proposition that is always true, regardless of the truth values of the propositional variables that occur in it. Example: p \u2228 \u00acp (Either it is raining or it is not raining). (b) Conditional Statement: A statement of the form p \u2192 q, which is false only when p is true and q is false. It is read as 'if p, then q'. Example: If it rains, then I will stay at home."
     ],
     "type": "question"
   },
@@ -155,7 +155,7 @@
     "title": "Construct the truth table of the following: (a) (p \u2192 q) (b) (\u00acp \u2228 q).",
     "url": "question-bank.html?open=u1_pa_q10",
     "chunks": [
-      "pq\u00acpp \u2192 q\u00acp \u2228 q\nTTFTT\nTFFFF\nFTTTT\nFFTTT\nNote that both (p \u2192 q) and (\u00acp \u2228 q) have the same truth values."
+      "p q \u00acp p \u2192 q \u00acp \u2228 q T T F T T T F F F F F T T T T F F T T T Note that both (p \u2192 q) and (\u00acp \u2228 q) have the same truth values."
     ],
     "type": "question"
   },
@@ -171,7 +171,7 @@
     "title": "Let p: It is raining, q: I carry an umbrella, r: I wear a raincoat. Write the following statements in symbolic form (a) Either I carry an umbrella or wear a raincoat, but not both. (b) I carry an umbrella if and only if it is raining.",
     "url": "question-bank.html?open=u1_pb_q1",
     "chunks": [
-      "(a) q \u2295 r (or equivalently, (q \u2228 r) \u2227 \u00ac(q \u2227 r))\n(b) q \u2194 p"
+      "(a) q \u2295 r (or equivalently, (q \u2228 r) \u2227 \u00ac(q \u2227 r)) (b) q \u2194 p"
     ],
     "type": "question"
   },
@@ -187,7 +187,7 @@
     "title": "Let p, q, r be as above. Translate the following symbolic propositions into English (a) (p \u2227 q) \u2192 r (b) (p \u2228 q) \u2227 \u00acr",
     "url": "question-bank.html?open=u1_pb_q2",
     "chunks": [
-      "(a) (p \u2227 q) \u2192 r: If it is raining and I carry an umbrella, then I wear a raincoat.\n(b) (p \u2228 q) \u2227 \u00acr: It is raining or I carry an umbrella, and I do not wear a raincoat."
+      "(a) (p \u2227 q) \u2192 r: If it is raining and I carry an umbrella, then I wear a raincoat. (b) (p \u2228 q) \u2227 \u00acr: It is raining or I carry an umbrella, and I do not wear a raincoat."
     ],
     "type": "question"
   },
@@ -203,8 +203,8 @@
     "title": "Construct the complete truth table for each of the following (a) (p \u2227 q) \u2192 p (b) (p \u2192 q) \u2227 (q \u2192 p)",
     "url": "question-bank.html?open=u1_pb_q3",
     "chunks": [
-      "(a) (p \u2227 q) \u2192 p \npqp \u2227 q(p \u2227 q) \u2192 p\nTTTT\nTFFT\nFTFT\nFFFT",
-      "(b) (p \u2192 q) \u2227 (q \u2192 p) \npqp \u2192 qq \u2192 p(p \u2192 q) \u2227 (q \u2192 p)\nTTTTT\nTFFTF\nFTTFF\nFFTTT"
+      "(a) (p \u2227 q) \u2192 p p q p \u2227 q (p \u2227 q) \u2192 p T T T T T F F T F T F T F F F T",
+      "(b) (p \u2192 q) \u2227 (q \u2192 p) p q p \u2192 q q \u2192 p (p \u2192 q) \u2227 (q \u2192 p) T T T T T T F F T F F T T F F F F T T T"
     ],
     "type": "question"
   },
@@ -220,7 +220,7 @@
     "title": "Let p and q be the propositions \u201cThe election is decided\u201d and \u201cThe votes have been counted,\u201d respectively. Express each of these compound propositions as an English sentence. (a) \u00acq \u2192 \u00acp (b) \u00acp \u2192 \u00acq (c) \u00acq \u2228 (\u00acp \u2227 q)",
     "url": "question-bank.html?open=u1_pb_q4",
     "chunks": [
-      "(a) \u00acq \u2192 \u00acp: If the votes have not been counted, then the election is not decided.\n(b) \u00acp \u2192 \u00acq: If the election is not decided, then the votes have not been counted.\n(c) \u00acq \u2228 (\u00acp \u2227 q): The votes have not been counted, or the election is not decided and the votes have been counted."
+      "(a) \u00acq \u2192 \u00acp: If the votes have not been counted, then the election is not decided. (b) \u00acp \u2192 \u00acq: If the election is not decided, then the votes have not been counted. (c) \u00acq \u2228 (\u00acp \u2227 q): The votes have not been counted, or the election is not decided and the votes have been counted."
     ],
     "type": "question"
   },
@@ -236,7 +236,7 @@
     "title": "Determine whether these biconditional are true or false. a) 2 + 2 = 4 if and only if 1 + 1 = 2. b) 1 + 1 = 2 if and only if 2 + 3 = 4. c) 1 + 1 = 3 if and only if monkeys can fly",
     "url": "question-bank.html?open=u1_pb_q5",
     "chunks": [
-      "A biconditional (p \u2194 q) is true if both p and q have the same truth value.\n(a) p: 2+2=4 (True). q: 1+1=2 (True). T \u2194 T is True.\n(b) p: 1+1=2 (True). q: 2+3=4 (False). T \u2194 F is False.\n(c) p: 1+1=3 (False). q: monkeys can fly (False). F \u2194 F is True."
+      "A biconditional (p \u2194 q) is true if both p and q have the same truth value. (a) p: 2+2=4 (True). q: 1+1=2 (True). T \u2194 T is True . (b) p: 1+1=2 (True). q: 2+3=4 (False). T \u2194 F is False . (c) p: 1+1=3 (False). q: monkeys can fly (False). F \u2194 F is True ."
     ],
     "type": "question"
   },
@@ -252,8 +252,8 @@
     "title": "Using a truth table, determine whether which of the following is a Tautology, Contradiction, or Contingency. (a) (p \u2192 q) \u2228 (q \u2192 p) (b) (p \u2192 q) \u2194 (\u00acq \u2192 \u00acp)",
     "url": "question-bank.html?open=u1_pb_q6",
     "chunks": [
-      "(a) (p \u2192 q) \u2228 (q \u2192 p) \npqp \u2192 qq \u2192 p(p \u2192 q) \u2228 (q \u2192 p)\nTTTTT\nTFFTT\nFTTFT\nFFTTT\nAll values are True, so it is a Tautology.",
-      "(b) (p \u2192 q) \u2194 (\u00acq \u2192 \u00acp) \npq\u00acp\u00acqp \u2192 q\u00acq \u2192 \u00acp(p \u2192 q) \u2194 (\u00acq \u2192 \u00acp)\nTTFFTTT\nTFFTFFT\nFTTFTTT\nFFTTTTT\nAll values are True, so it is a Tautology."
+      "(a) (p \u2192 q) \u2228 (q \u2192 p) p q p \u2192 q q \u2192 p (p \u2192 q) \u2228 (q \u2192 p) T T T T T T F F T T F T T F T F F T T T All values are True, so it is a Tautology .",
+      "(b) (p \u2192 q) \u2194 (\u00acq \u2192 \u00acp) p q \u00acp \u00acq p \u2192 q \u00acq \u2192 \u00acp (p \u2192 q) \u2194 (\u00acq \u2192 \u00acp) T T F F T T T T F F T F F T F T T F T T T F F T T T T T All values are True, so it is a Tautology ."
     ],
     "type": "question"
   },
@@ -269,8 +269,8 @@
     "title": "Construct a truth table for each of the following compound propositions. (a) (p \u2192 q) \u2194 (\u00acq \u2192 \u00acp) (b) (p \u2192 q) \u2192 (q \u2192 p)",
     "url": "question-bank.html?open=u1_pb_q7",
     "chunks": [
-      "(a) (p \u2192 q) \u2194 (\u00acq \u2192 \u00acp) \npq\u00acp\u00acqp \u2192 q\u00acq \u2192 \u00acp(p \u2192 q) \u2194 (\u00acq \u2192 \u00acp)\nTTFFTTT\nTFFTFFT\nFTTFTTT\nFFTTTTT",
-      "(b) (p \u2192 q) \u2192 (q \u2192 p) \npqp \u2192 qq \u2192 p(p \u2192 q) \u2192 (q \u2192 p)\nTTTTT\nTFFTT\nFTTFF\nFFTTT"
+      "(a) (p \u2192 q) \u2194 (\u00acq \u2192 \u00acp) p q \u00acp \u00acq p \u2192 q \u00acq \u2192 \u00acp (p \u2192 q) \u2194 (\u00acq \u2192 \u00acp) T T F F T T T T F F T F F T F T T F T T T F F T T T T T",
+      "(b) (p \u2192 q) \u2192 (q \u2192 p) p q p \u2192 q q \u2192 p (p \u2192 q) \u2192 (q \u2192 p) T T T T T T F F T T F T T F F F F T T T"
     ],
     "type": "question"
   },
@@ -286,7 +286,7 @@
     "title": "State the converse, contrapositive, and inverse of each of these conditional statements. When I stay up late, it is necessary that I sleep until noon",
     "url": "question-bank.html?open=u1_pb_q8",
     "chunks": [
-      "Original statement: If I stay up late, then I sleep until noon. (p: I stay up late, q: I sleep until noon. p \u2192 q)\nConverse (q \u2192 p): If I sleep until noon, then I stay up late.\nInverse (\u00acp \u2192 \u00acq): If I do not stay up late, then I do not sleep until noon.\nContrapositive (\u00acq \u2192 \u00acp): If I do not sleep until noon, then I do not stay up late."
+      "Original statement: If I stay up late, then I sleep until noon. (p: I stay up late, q: I sleep until noon. p \u2192 q) Converse (q \u2192 p): If I sleep until noon, then I stay up late. Inverse (\u00acp \u2192 \u00acq): If I do not stay up late, then I do not sleep until noon. Contrapositive (\u00acq \u2192 \u00acp): If I do not sleep until noon, then I do not stay up late."
     ],
     "type": "question"
   },
@@ -302,7 +302,7 @@
     "title": "Using logical laws (without truth tables), prove the following (a) (p \u2192 q) \u2261 (\u00acq \u2192 \u00acp) (b) \u00ac(p \u2192 q) \u2261 p \u2227 \u00acq",
     "url": "question-bank.html?open=u1_pb_q9",
     "chunks": [
-      "(a) Prove: (p \u2192 q) \u2261 (\u00acq \u2192 \u00acp)\nLHS = p \u2192 q\n\u2261 \u00acp \u2228 q (Implication law)\n\u2261 q \u2228 \u00acp (Commutative law)\n\u2261 \u00ac(\u00acq) \u2228 \u00acp (Double negation)\n\u2261 \u00acq \u2192 \u00acp (Implication law) = RHS. Hence Proved.\n(b) Prove: \u00ac(p \u2192 q) \u2261 p \u2227 \u00acq\nLHS = \u00ac(p \u2192 q)\n\u2261 \u00ac(\u00acp \u2228 q) (Implication law)\n\u2261 \u00ac(\u00acp) \u2227 \u00acq (De Morgan's law)\n\u2261 p \u2227 \u00acq (Double negation) = RHS. Hence Proved."
+      "(a) Prove: (p \u2192 q) \u2261 (\u00acq \u2192 \u00acp) LHS = p \u2192 q \u2261 \u00acp \u2228 q (Implication law) \u2261 q \u2228 \u00acp (Commutative law) \u2261 \u00ac(\u00acq) \u2228 \u00acp (Double negation) \u2261 \u00acq \u2192 \u00acp (Implication law) = RHS. Hence Proved. (b) Prove: \u00ac(p \u2192 q) \u2261 p \u2227 \u00acq LHS = \u00ac(p \u2192 q) \u2261 \u00ac(\u00acp \u2228 q) (Implication law) \u2261 \u00ac(\u00acp) \u2227 \u00acq (De Morgan's law) \u2261 p \u2227 \u00acq (Double negation) = RHS. Hence Proved."
     ],
     "type": "question"
   },
@@ -318,8 +318,8 @@
     "title": "Using truth tables, prove the following (a) (p \u2227 q) \u2228 (\u00acp \u2227 q) \u2261 q (b) (p \u2228 q) \u2227 (p \u2228 \u00acq) \u2261 p",
     "url": "question-bank.html?open=u1_pb_q10",
     "chunks": [
-      "(a) (p \u2227 q) \u2228 (\u00acp \u2227 q) \u2261 q \npq\u00acpp \u2227 q\u00acp \u2227 q(p \u2227 q) \u2228 (\u00acp \u2227 q)\nTTFTFT\nTFFFFF\nFTTFTT\nFFTFFF\nThe last column is identical to the 'q' column. Hence proved.",
-      "(b) (p \u2228 q) \u2227 (p \u2228 \u00acq) \u2261 p \npq\u00acqp \u2228 qp \u2228 \u00acq(p \u2228 q) \u2227 (p \u2228 \u00acq)\nTTFTTT\nTFTTTT\nFTFTFF\nFFTFTF\nThe last column is identical to the 'p' column. Hence proved."
+      "(a) (p \u2227 q) \u2228 (\u00acp \u2227 q) \u2261 q p q \u00acp p \u2227 q \u00acp \u2227 q (p \u2227 q) \u2228 (\u00acp \u2227 q) T T F T F T T F F F F F F T T F T T F F T F F F The last column is identical to the 'q' column. Hence proved.",
+      "(b) (p \u2228 q) \u2227 (p \u2228 \u00acq) \u2261 p p q \u00acq p \u2228 q p \u2228 \u00acq (p \u2228 q) \u2227 (p \u2228 \u00acq) T T F T T T T F T T T T F T F T F F F F T F T F The last column is identical to the 'p' column. Hence proved."
     ],
     "type": "question"
   },
@@ -335,7 +335,7 @@
     "title": "Let p and q be the propositions p: It is below freezing and q: It is snowing. Write these propositions using p and q and logical connectives (including negations). (a) It is below freezing but not snowing. (b) It is not below freezing and it is not snowing. (c) It is either snowing or below freezing (or both). (d) Either it is below freezing or it is snowing, but it is not snowing if it is below freezing. (e) That it is below freezing is necessary and sufficient for it to be snowing.",
     "url": "question-bank.html?open=u1_pc_q1",
     "chunks": [
-      "(a) p \u2227 \u00acq\n(b) \u00acp \u2227 \u00acq\n(c) p \u2228 q\n(d) (p \u2228 q) \u2227 (p \u2192 \u00acq)\n(e) p \u2194 q"
+      "(a) p \u2227 \u00acq (b) \u00acp \u2227 \u00acq (c) p \u2228 q (d) (p \u2228 q) \u2227 (p \u2192 \u00acq) (e) p \u2194 q"
     ],
     "type": "question"
   },
@@ -351,8 +351,8 @@
     "title": "Using a truth table, determine whether each of the following is a Tautology, Contradiction, or Contingency (a) (p \u2227 (q \u2192 r)) \u2192 ((p \u2227 q) \u2192 r) (b) ((p \u2192 q) \u2227 (p \u2192 r)) \u2227 p",
     "url": "question-bank.html?open=u1_pc_q2",
     "chunks": [
-      "(a) (p \u2227 (q \u2192 r)) \u2192 ((p \u2227 q) \u2192 r) \npqrq\u2192rp\u2227(q\u2192r)p\u2227q(p\u2227q)\u2192rResult\nTTTTTTTT\nTTFFFTFT\nTFTTTFTT\nTFFTTFTT\nFTTTFFTT\nFTFFFFTT\nFFTTFFTT\nFFFTFFTT\nAll values are True, so it is a Tautology.",
-      "(b) ((p \u2192 q) \u2227 (p \u2192 r)) \u2227 p \npqrp\u2192qp\u2192r(p\u2192q)\u2227(p\u2192r)Result\nTTTTTTT\nTTFTFFF\nTFTFTFF\nTFFFFFF\nFTTTTTF\nFTFTTTF\nFFTTTTF\nFFFTTTF\nContains both True and False values, so it is a Contingency."
+      "(a) (p \u2227 (q \u2192 r)) \u2192 ((p \u2227 q) \u2192 r) p q r q\u2192r p\u2227(q\u2192r) p\u2227q (p\u2227q)\u2192r Result T T T T T T T T T T F F F T F T T F T T T F T T T F F T T F T T F T T T F F T T F T F F F F T T F F T T F F T T F F F T F F T T All values are True, so it is a Tautology .",
+      "(b) ((p \u2192 q) \u2227 (p \u2192 r)) \u2227 p p q r p\u2192q p\u2192r (p\u2192q)\u2227(p\u2192r) Result T T T T T T T T T F T F F F T F T F T F F T F F F F F F F T T T T T F F T F T T T F F F T T T T F F F F T T T F Contains both True and False values, so it is a Contingency ."
     ],
     "type": "question"
   },
@@ -369,8 +369,8 @@
     "url": "question-bank.html?open=u1_pc_q3",
     "chunks": [
       "Since these involve 3 variables (p, q, r), we construct an 8-row truth table for each. (Left as exercise for detailed 8 rows).",
-      "(a) (p \u2194 q) \u2295 (\u00acp \u2194 \u00acr) \nWe evaluate p \u2194 q and \u00acp \u2194 \u00acr separately for 8 rows, then apply XOR.",
-      "(b) (\u00acp \u2194 \u00acq) \u2194 (q \u2194 r) \nEvaluate \u00acp \u2194 \u00acq and q \u2194 r separately for 8 rows, then apply biconditional."
+      "(a) (p \u2194 q) \u2295 (\u00acp \u2194 \u00acr) We evaluate p \u2194 q and \u00acp \u2194 \u00acr separately for 8 rows, then apply XOR.",
+      "(b) (\u00acp \u2194 \u00acq) \u2194 (q \u2194 r) Evaluate \u00acp \u2194 \u00acq and q \u2194 r separately for 8 rows, then apply biconditional."
     ],
     "type": "question"
   },
@@ -386,7 +386,7 @@
     "title": "Let p, q, and r be the propositions p: You have the flu. q: You miss the final examination. r: You pass the course. Express each of these propositions as an English sentence. (a) q \u2192 \u00acr (b) \u00acq \u2194 r (c) p \u2228 q \u2228 r (d) (p \u2192 \u00acr) \u2228 (q \u2192 \u00acr) (e) (p \u2227 q) \u2228 (\u00acq \u2227 r)",
     "url": "question-bank.html?open=u1_pc_q4",
     "chunks": [
-      "(a) q \u2192 \u00acr: If you miss the final examination, then you do not pass the course.\n(b) \u00acq \u2194 r: You do not miss the final examination if and only if you pass the course.\n(c) p \u2228 q \u2228 r: You have the flu, or you miss the final examination, or you pass the course.\n(d) (p \u2192 \u00acr) \u2228 (q \u2192 \u00acr): If you have the flu, then you do not pass the course, or if you miss the final examination, then you do not pass the course.\n(e) (p \u2227 q) \u2228 (\u00acq \u2227 r): You have the flu and miss the final examination, or you do not miss the final examination and you pass the course."
+      "(a) q \u2192 \u00acr: If you miss the final examination, then you do not pass the course. (b) \u00acq \u2194 r: You do not miss the final examination if and only if you pass the course. (c) p \u2228 q \u2228 r: You have the flu, or you miss the final examination, or you pass the course. (d) (p \u2192 \u00acr) \u2228 (q \u2192 \u00acr): If you have the flu, then you do not pass the course, or if you miss the final examination, then you do not pass the course. (e) (p \u2227 q) \u2228 (\u00acq \u2227 r): You have the flu and miss the final examination, or you do not miss the final examination and you pass the course."
     ],
     "type": "question"
   },
@@ -402,8 +402,8 @@
     "title": "State the converse, contrapositive, and inverse of each of these conditional statements. (a) If it snows tonight, then I will stay at home. (b) I go to the beach whenever it is a sunny summer day.",
     "url": "question-bank.html?open=u1_pc_q5",
     "chunks": [
-      "(a) If it snows tonight, then I will stay at home. \nLet p: It snows tonight, q: I stay at home.\nConverse (q \u2192 p): If I stay at home, then it snows tonight.\nInverse (\u00acp \u2192 \u00acq): If it does not snow tonight, then I will not stay at home.\nContrapositive (\u00acq \u2192 \u00acp): If I do not stay at home, then it does not snow tonight.",
-      "(b) I go to the beach whenever it is a sunny summer day. \nThis means: If it is a sunny summer day, then I go to the beach. (p: It is a sunny summer day, q: I go to the beach)\nConverse: If I go to the beach, then it is a sunny summer day.\nInverse: If it is not a sunny summer day, then I do not go to the beach.\nContrapositive: If I do not go to the beach, then it is not a sunny summer day."
+      "(a) If it snows tonight, then I will stay at home. Let p: It snows tonight, q: I stay at home. Converse (q \u2192 p): If I stay at home, then it snows tonight. Inverse (\u00acp \u2192 \u00acq): If it does not snow tonight, then I will not stay at home. Contrapositive (\u00acq \u2192 \u00acp): If I do not stay at home, then it does not snow tonight.",
+      "(b) I go to the beach whenever it is a sunny summer day. This means: If it is a sunny summer day, then I go to the beach. (p: It is a sunny summer day, q: I go to the beach) Converse: If I go to the beach, then it is a sunny summer day. Inverse: If it is not a sunny summer day, then I do not go to the beach. Contrapositive: If I do not go to the beach, then it is not a sunny summer day."
     ],
     "type": "question"
   },
@@ -419,7 +419,7 @@
     "title": "Show that \u00ac(p \u2228 (\u00acp \u2227 q)) and \u00acp \u2227 \u00acq are logically equivalent by developing a series of logical equivalences.",
     "url": "question-bank.html?open=u1_pc_q6",
     "chunks": [
-      "We start with the LHS:\n\u00ac(p \u2228 (\u00acp \u2227 q))\n\u2261 \u00acp \u2227 \u00ac(\u00acp \u2227 q) (De Morgan's law)\n\u2261 \u00acp \u2227 (\u00ac(\u00acp) \u2228 \u00acq) (De Morgan's law)\n\u2261 \u00acp \u2227 (p \u2228 \u00acq) (Double negation law)\n\u2261 (\u00acp \u2227 p) \u2228 (\u00acp \u2227 \u00acq) (Distributive law)\n\u2261 F \u2228 (\u00acp \u2227 \u00acq) (Negation law)\n\u2261 \u00acp \u2227 \u00acq (Identity law)\nThis is exactly the RHS. Hence proved."
+      "We start with the LHS: \u00ac(p \u2228 (\u00acp \u2227 q)) \u2261 \u00acp \u2227 \u00ac(\u00acp \u2227 q) (De Morgan's law) \u2261 \u00acp \u2227 (\u00ac(\u00acp) \u2228 \u00acq) (De Morgan's law) \u2261 \u00acp \u2227 (p \u2228 \u00acq) (Double negation law) \u2261 (\u00acp \u2227 p) \u2228 (\u00acp \u2227 \u00acq) (Distributive law) \u2261 F \u2228 (\u00acp \u2227 \u00acq) (Negation law) \u2261 \u00acp \u2227 \u00acq (Identity law) This is exactly the RHS. Hence proved."
     ],
     "type": "question"
   },
@@ -435,7 +435,7 @@
     "title": "Define the following terms with suitable truth table: (a) Tautology (b) Biconditional Statement (c) Contingency (d) Contrapositive (e) Exclusive OR",
     "url": "question-bank.html?open=u1_pc_q7",
     "chunks": [
-      "(a) Tautology: A proposition that is always true. Ex: p \u2228 \u00acp.\n(b) Biconditional Statement: p \u2194 q. True when both have same truth value.\n(c) Contingency: A proposition that is neither a tautology nor a contradiction (has both True and False values).\n(d) Contrapositive: Of p \u2192 q is \u00acq \u2192 \u00acp. They are logically equivalent.\n(e) Exclusive OR: p \u2295 q. True when exactly one of p or q is true."
+      "(a) Tautology: A proposition that is always true. Ex: p \u2228 \u00acp. (b) Biconditional Statement: p \u2194 q. True when both have same truth value. (c) Contingency: A proposition that is neither a tautology nor a contradiction (has both True and False values). (d) Contrapositive: Of p \u2192 q is \u00acq \u2192 \u00acp. They are logically equivalent. (e) Exclusive OR: p \u2295 q. True when exactly one of p or q is true."
     ],
     "type": "question"
   },
@@ -451,7 +451,7 @@
     "title": "Determine whether each of these conditional statements is true or false. (a) If 1 + 1 = 2, then 2 + 2 = 5. (b) If 1 + 1 = 3, then 2 + 2 = 4. (c) If 1 + 1 = 3, then 2 + 2 = 5. (d) If monkeys can fly, then 1 + 1 = 3. (e) If 1 + 1 = 2, then dogs can fly",
     "url": "question-bank.html?open=u1_pc_q8",
     "chunks": [
-      "A conditional statement (p \u2192 q) is false only when p is True and q is False.\n(a) T \u2192 F is False.\n(b) F \u2192 T is True.\n(c) F \u2192 F is True.\n(d) F \u2192 F is True.\n(e) T \u2192 F is False."
+      "A conditional statement (p \u2192 q) is false only when p is True and q is False. (a) T \u2192 F is False . (b) F \u2192 T is True . (c) F \u2192 F is True . (d) F \u2192 F is True . (e) T \u2192 F is False ."
     ],
     "type": "question"
   },
@@ -467,7 +467,7 @@
     "title": "Express these system specifications using the propositions p \u201cThe user enters a valid password,\u201d q \u201cAccess is granted,\u201d and r \u201cThe user has paid the subscription fee\u201d and logical connectives (including negations). (a) \u201cThe user has paid the subscription fee, but does not enter a valid password.\u201d (b) \u201cAccess is granted whenever the user has paid the subscription fee and enters a valid password.\u201d",
     "url": "question-bank.html?open=u1_pc_q9",
     "chunks": [
-      "(a) r \u2227 \u00acp\n(b) (r \u2227 p) \u2192 q"
+      "(a) r \u2227 \u00acp (b) (r \u2227 p) \u2192 q"
     ],
     "type": "question"
   },
@@ -483,7 +483,7 @@
     "title": "Using truth tables, prove the following pair of equivalences (a) ((p \u2192 q) \u2227 (p \u2192 r)) \u2261 (p \u2192 (q \u2227 r)) (b) (p \u2192 (q \u2227 r)) \u2261 (p \u2192 q) \u2227 (p \u2192 r)",
     "url": "question-bank.html?open=u1_pc_q10",
     "chunks": [
-      "We construct an 8-row truth table for p, q, and r to evaluate both expressions.\npqrp\u2192qp\u2192r(p\u2192q)\u2227(p\u2192r)q\u2227rp\u2192(q\u2227r)\nTTTTTTTT\nTTFTFFFF\nTFTFTFFF\nTFFFFFFF\nFTTTTTTT\nFTFTTTFT\nFFTTTTFT\nFFFTTTFT\nSince the column for ((p \u2192 q) \u2227 (p \u2192 r)) and the column for (p \u2192 (q \u2227 r)) have the exact same truth values, the two statements are logically equivalent. This proves both (a) and (b)."
+      "We construct an 8-row truth table for p, q, and r to evaluate both expressions. p q r p\u2192q p\u2192r (p\u2192q)\u2227(p\u2192r) q\u2227r p\u2192(q\u2227r) T T T T T T T T T T F T F F F F T F T F T F F F T F F F F F F F F T T T T T T T F T F T T T F T F F T T T T F T F F F T T T F T Since the column for ((p \u2192 q) \u2227 (p \u2192 r)) and the column for (p \u2192 (q \u2227 r)) have the exact same truth values, the two statements are logically equivalent. This proves both (a) and (b)."
     ],
     "type": "question"
   },
@@ -499,7 +499,7 @@
     "title": "Write the characteristic equation corresponding to: a_n - 5a_{n-1} + 6a_{n-2} = 0 and find its complete solution.",
     "url": "question-bank.html?open=u2_a1",
     "chunks": [
-      "The characteristic equation is r^2 - 5r + 6 = 0.\nFactoring gives (r - 2)(r - 3) = 0, so the roots are r = 2 and r = 3.\nThe complete solution is an = c12n + c23n."
+      "The characteristic equation is r^2 - 5r + 6 = 0 . Factoring gives (r - 2)(r - 3) = 0 , so the roots are r = 2 and r = 3 . The complete solution is a n = c 1 2 n + c 2 3 n ."
     ],
     "type": "question"
   },
@@ -515,7 +515,7 @@
     "title": "Write the solution of the following Generating function: G(x) = 1 / (1 - 2x)",
     "url": "question-bank.html?open=u2_a2",
     "chunks": [
-      "The generating function 1 / (1 - rx) corresponds to the sequence r^n.\nHere, r = 2, so the solution is an = 2n."
+      "The generating function 1 / (1 - rx) corresponds to the sequence r^n . Here, r = 2 , so the solution is a n = 2 n ."
     ],
     "type": "question"
   },
@@ -531,7 +531,7 @@
     "title": "Find the number of ways of arranging 3 different books on a shelf from total 5 books?",
     "url": "question-bank.html?open=u2_a3",
     "chunks": [
-      "This is a permutation problem since the order of arrangement matters.\nNumber of ways = 5P3 = 5! / (5 - 3)! = 5! / 2! = 5 \u00d7 4 \u00d7 3 = 60."
+      "This is a permutation problem since the order of arrangement matters. Number of ways = 5 P 3 = 5! / (5 - 3)! = 5! / 2! = 5 \u00d7 4 \u00d7 3 = 60 ."
     ],
     "type": "question"
   },
@@ -547,7 +547,7 @@
     "title": "Find a2 and a3 terms of the following recurrence relation a_n = a_{n-1}^2 if a_1 = 2.",
     "url": "question-bank.html?open=u2_a4",
     "chunks": [
-      "Given a1 = 2.\na2 = a12 = 22 = 4.\na3 = a22 = 42 = 16."
+      "Given a 1 = 2 . a 2 = a 1 2 = 2 2 = 4 . a 3 = a 2 2 = 4 2 = 16 ."
     ],
     "type": "question"
   },
@@ -563,7 +563,7 @@
     "title": "Identify which of the following recurrence relations are linear homogeneous recurrence relations with constant coefficients. Also, find their degrees.",
     "url": "question-bank.html?open=u2_a5",
     "chunks": [
-      "(a) an = an-1 + an-5 is a linear homogeneous recurrence relation with constant coefficients. Its degree is 5.\n(b) an = an-13 + an-2 + n is not linear (due to the cube) and not homogeneous (due to the +n term)."
+      "(a) a n = a n-1 + a n-5 is a linear homogeneous recurrence relation with constant coefficients . Its degree is 5 . (b) a n = a n-1 3 + a n-2 + n is not linear (due to the cube) and not homogeneous (due to the +n term)."
     ],
     "type": "question"
   },
@@ -579,7 +579,7 @@
     "title": "Find the value of: (i) 7P2 and (ii) 9C2",
     "url": "question-bank.html?open=u2_a6",
     "chunks": [
-      "(i) 7P2 = 7! / (7-2)! = 7 \u00d7 6 = 42.\n(ii) 9C2 = 9! / (2! \u00d7 (9-2)!) = (9 \u00d7 8) / 2 = 36."
+      "(i) 7 P 2 = 7! / (7-2)! = 7 \u00d7 6 = 42 . (ii) 9 C 2 = 9! / (2! \u00d7 (9-2)!) = (9 \u00d7 8) / 2 = 36 ."
     ],
     "type": "question"
   },
@@ -595,7 +595,7 @@
     "title": "Find the number of ways to select 3 students from a group of 8 students.",
     "url": "question-bank.html?open=u2_a7",
     "chunks": [
-      "This is a combination problem since the order of selection does not matter.\nNumber of ways = 8C3 = 8! / (3! \u00d7 5!) = (8 \u00d7 7 \u00d7 6) / 6 = 56."
+      "This is a combination problem since the order of selection does not matter. Number of ways = 8 C 3 = 8! / (3! \u00d7 5!) = (8 \u00d7 7 \u00d7 6) / 6 = 56 ."
     ],
     "type": "question"
   },
@@ -611,7 +611,7 @@
     "title": "Find the generating function for the sequence: 1,2,3,4, ...",
     "url": "question-bank.html?open=u2_a8",
     "chunks": [
-      "The generating function for the constant sequence 1, 1, 1, ... is 1 / (1-x).\nDifferentiating with respect to x gives the sequence 1, 2, 3, ..., so the generating function is 1 / (1-x)2."
+      "The generating function for the constant sequence 1, 1, 1, ... is 1 / (1-x) . Differentiating with respect to x gives the sequence 1, 2, 3, ..., so the generating function is 1 / (1-x) 2 ."
     ],
     "type": "question"
   },
@@ -627,7 +627,7 @@
     "title": "Solve the following recurrence relation: a_n = 4a_{n-1} - a_{n-2}",
     "url": "question-bank.html?open=u2_a9",
     "chunks": [
-      "The characteristic equation is r^2 - 4r + 1 = 0.\nUsing the quadratic formula, the roots are r = (4 \u00b1 \u221a12) / 2 = 2 \u00b1 \u221a3.\nThe solution is an = c1(2 + \u221a3)n + c2(2 - \u221a3)n."
+      "The characteristic equation is r^2 - 4r + 1 = 0 . Using the quadratic formula, the roots are r = (4 \u00b1 \u221a12) / 2 = 2 \u00b1 \u221a3 . The solution is a n = c 1 (2 + \u221a3) n + c 2 (2 - \u221a3) n ."
     ],
     "type": "question"
   },
@@ -643,7 +643,7 @@
     "title": "Check the following terms are the solution of given recurrence relation or not:",
     "url": "question-bank.html?open=u2_a10",
     "chunks": [
-      "(i) Substitute an = n2 into 2an-1 - an-2 + 2: \n2(n-1)2 - (n-2)2 + 2 = 2(n2 - 2n + 1) - (n2 - 4n + 4) + 2 = n2 = an. Yes, it is a solution.\n(ii) Substitute an = 2n + 1 into 2an-1 - 1: \n2(2n-1 + 1) - 1 = 2n + 2 - 1 = 2n + 1 = an. Yes, it is a solution."
+      "(i) Substitute a n = n 2 into 2a n-1 - a n-2 + 2 : 2(n-1) 2 - (n-2) 2 + 2 = 2(n 2 - 2n + 1) - (n 2 - 4n + 4) + 2 = n 2 = a n . Yes, it is a solution. (ii) Substitute a n = 2 n + 1 into 2a n-1 - 1 : 2(2 n-1 + 1) - 1 = 2 n + 2 - 1 = 2 n + 1 = a n . Yes, it is a solution."
     ],
     "type": "question"
   },
@@ -659,7 +659,7 @@
     "title": "Find the order and degree of the following recurrence relations:",
     "url": "question-bank.html?open=u2_b1",
     "chunks": [
-      "(i) an = 3an-1 + 2an-2 - an-3: Order = 3, Degree = 1.\n(ii) an = an-1 + 2: Order = 1, Degree = 1.\n(iii) (an)2 - 4an-1an-2 = 0: Order = 2, Degree = 2."
+      "(i) a n = 3a n-1 + 2a n-2 - a n-3 : Order = 3 , Degree = 1 . (ii) a n = a n-1 + 2 : Order = 1 , Degree = 1 . (iii) (a n ) 2 - 4a n-1 a n-2 = 0 : Order = 2 , Degree = 2 ."
     ],
     "type": "question"
   },
@@ -675,7 +675,7 @@
     "title": "Find next three terms of the following recurrence relations:",
     "url": "question-bank.html?open=u2_b2",
     "chunks": [
-      "(i) an = 3an-1 - 2an-2 + n, a1 = 1, a2 = 4.\na3 = 3(4) - 2(1) + 3 = 13.\na4 = 3(13) - 2(4) + 4 = 35.\na5 = 3(35) - 2(13) + 5 = 84.\n(ii) an = n \u010b an-1 - an-2, a1 = 1, a2 = 3.\na3 = 3(3) - 1 = 8.\na4 = 4(8) - 3 = 29.\na5 = 5(29) - 8 = 137."
+      "(i) a n = 3a n-1 - 2a n-2 + n , a 1 = 1, a 2 = 4 . a 3 = 3(4) - 2(1) + 3 = 13 . a 4 = 3(13) - 2(4) + 4 = 35 . a 5 = 3(35) - 2(13) + 5 = 84 . (ii) a n = n \u010b a n-1 - a n-2 , a 1 = 1, a 2 = 3 . a 3 = 3(3) - 1 = 8 . a 4 = 4(8) - 3 = 29 . a 5 = 5(29) - 8 = 137 ."
     ],
     "type": "question"
   },
@@ -691,7 +691,7 @@
     "title": "Solve the following recurrence relation: a_n = 10a_{n-1} - 25a_{n-2}, a_0 = 3, a_1 = 25",
     "url": "question-bank.html?open=u2_b3",
     "chunks": [
-      "Characteristic equation: r^2 - 10r + 25 = 0 \u21d2 (r - 5)^2 = 0, so r = 5 (repeated).\nGeneral solution: an = (c1 + c2n)5n.\nFor n=0: 3 = c1.\nFor n=1: 25 = (3 + c2) \u00d7 5 \u21d2 3 + c2 = 5 \u21d2 c2 = 2.\nSolution: an = (3 + 2n)5n."
+      "Characteristic equation: r^2 - 10r + 25 = 0 \u21d2 (r - 5)^2 = 0 , so r = 5 (repeated). General solution: a n = (c 1 + c 2 n)5 n . For n=0 : 3 = c 1 . For n=1 : 25 = (3 + c 2 ) \u00d7 5 \u21d2 3 + c 2 = 5 \u21d2 c 2 = 2 . Solution: a n = (3 + 2n)5 n ."
     ],
     "type": "question"
   },
@@ -707,7 +707,7 @@
     "title": "A committee of 4 students is to be selected from 6 boys and 5 girls. In how many ways can the committee be formed?",
     "url": "question-bank.html?open=u2_b4",
     "chunks": [
-      "Total students = 6 boys + 5 girls = 11.\nWe need to select a committee of 4 from 11.\nNumber of ways = 11C4 = 11! / (4! \u00d7 7!) = (11 \u00d7 10 \u00d7 9 \u00d7 8) / (4 \u00d7 3 \u00d7 2 \u00d7 1) = 330 ways."
+      "Total students = 6 boys + 5 girls = 11. We need to select a committee of 4 from 11. Number of ways = 11 C 4 = 11! / (4! \u00d7 7!) = (11 \u00d7 10 \u00d7 9 \u00d7 8) / (4 \u00d7 3 \u00d7 2 \u00d7 1) = 330 ways."
     ],
     "type": "question"
   },
@@ -723,7 +723,7 @@
     "title": "Solve the following recurrence relation by using generating function: a_n = 7a_{n-1}, a_0 = -2",
     "url": "question-bank.html?open=u2_b5",
     "chunks": [
-      "Multiply by x^n and sum for n \u2265 1: \u03a3 anxn = 7x \u03a3 an-1xn-1.\nLet G(x) be the generating function. Then G(x) - a0 = 7xG(x).\nG(x) (1 - 7x) = -2 \u21d2 G(x) = -2 / (1 - 7x).\nThe coefficient of x^n in G(x) gives the sequence: an = -2 \u00d7 7n."
+      "Multiply by x^n and sum for n \u2265 1: \u03a3 a n x n = 7x \u03a3 a n-1 x n-1 . Let G(x) be the generating function. Then G(x) - a 0 = 7xG(x) . G(x) (1 - 7x) = -2 \u21d2 G(x) = -2 / (1 - 7x) . The coefficient of x^n in G(x) gives the sequence: a n = -2 \u00d7 7 n ."
     ],
     "type": "question"
   },
@@ -739,7 +739,7 @@
     "title": "How many different 4-letter words can be formed using the letters of the word MATH, when each letter can be used only once?",
     "url": "question-bank.html?open=u2_b6",
     "chunks": [
-      "The word MATH has 4 distinct letters.\nThe number of 4-letter words that can be formed is the number of permutations of 4 letters, which is 4! = 4 \u00d7 3 \u00d7 2 \u00d7 1 = 24."
+      "The word MATH has 4 distinct letters. The number of 4-letter words that can be formed is the number of permutations of 4 letters, which is 4! = 4 \u00d7 3 \u00d7 2 \u00d7 1 = 24 ."
     ],
     "type": "question"
   },
@@ -755,7 +755,7 @@
     "title": "Solve the following recurrence relation: a_n = 6a_{n-1} - 9a_{n-2}, a_0 = 1, a_1 = 9",
     "url": "question-bank.html?open=u2_b7",
     "chunks": [
-      "Characteristic equation: r^2 - 6r + 9 = 0 \u21d2 (r - 3)^2 = 0. Root: r = 3 (repeated).\nGeneral solution: an = (c1 + c2n)3n.\nFor n=0: c1 = 1.\nFor n=1: (1 + c2)3 = 9 \u21d2 1 + c2 = 3 \u21d2 c2 = 2.\nSolution: an = (1 + 2n)3n."
+      "Characteristic equation: r^2 - 6r + 9 = 0 \u21d2 (r - 3)^2 = 0 . Root: r = 3 (repeated). General solution: a n = (c 1 + c 2 n)3 n . For n=0 : c 1 = 1 . For n=1 : (1 + c 2 )3 = 9 \u21d2 1 + c 2 = 3 \u21d2 c 2 = 2 . Solution: a n = (1 + 2n)3 n ."
     ],
     "type": "question"
   },
@@ -771,7 +771,7 @@
     "title": "Solve the following recurrence relation: a_n - 4a_{n-1} + 5a_{n-2} - 2a_{n-3} = 0 given a_0 = 1, a_1 = 3, a_2 = 8",
     "url": "question-bank.html?open=u2_b8",
     "chunks": [
-      "Characteristic equation: r^3 - 4r^2 + 5r - 2 = 0.\nFactoring gives (r - 1)^2(r - 2) = 0, so roots are r = 1, 1, 2.\nGeneral solution: an = c1 + c2n + c32n.\nFrom conditions:\nc1 + c3 = 1\nc1 + c2 + 2c3 = 3\nc1 + 2c2 + 4c3 = 8.\nSolving yields c1 = -2, c2 = -1, c3 = 3.\nSolution: an = -2 - n + 3(2n)."
+      "Characteristic equation: r^3 - 4r^2 + 5r - 2 = 0 . Factoring gives (r - 1)^2(r - 2) = 0 , so roots are r = 1, 1, 2 . General solution: a n = c 1 + c 2 n + c 3 2 n . From conditions: c 1 + c 3 = 1 c 1 + c 2 + 2c 3 = 3 c 1 + 2c 2 + 4c 3 = 8 . Solving yields c 1 = -2, c 2 = -1, c 3 = 3 . Solution: a n = -2 - n + 3(2 n ) ."
     ],
     "type": "question"
   },
@@ -787,7 +787,7 @@
     "title": "Solve the following recurrence relation: a_n - 6a_{n-1} + 11a_{n-2} - 6a_{n-3} = 0, given a_0 = 1, a_1 = 6, a_2 = 20",
     "url": "question-bank.html?open=u2_b9",
     "chunks": [
-      "Characteristic equation: r^3 - 6r^2 + 11r - 6 = 0.\nFactoring gives (r - 1)(r - 2)(r - 3) = 0, so roots are 1, 2, 3.\nGeneral solution: an = c1 + c22n + c33n.\nFrom conditions:\nc1 + c2 + c3 = 1\nc1 + 2c2 + 3c3 = 6\nc1 + 4c2 + 9c3 = 20.\nSolving yields c1 = 2, c2 = -3, c3 = 2.\nSolution: an = 2 - 3(2n) + 2(3n)."
+      "Characteristic equation: r^3 - 6r^2 + 11r - 6 = 0 . Factoring gives (r - 1)(r - 2)(r - 3) = 0 , so roots are 1, 2, 3 . General solution: a n = c 1 + c 2 2 n + c 3 3 n . From conditions: c 1 + c 2 + c 3 = 1 c 1 + 2c 2 + 3c 3 = 6 c 1 + 4c 2 + 9c 3 = 20 . Solving yields c 1 = 2, c 2 = -3, c 3 = 2 . Solution: a n = 2 - 3(2 n ) + 2(3 n ) ."
     ],
     "type": "question"
   },
@@ -803,7 +803,7 @@
     "title": "Solve the following recurrence relation by using generating function: a_n = 3a_{n-1} + 2a_{n-2} given a_0 = 1, a_1 = 3",
     "url": "question-bank.html?open=u2_b10",
     "chunks": [
-      "Let G(x) be the generating function. Multiply by x^n and sum:\nG(x) - 1 - 3x = 3x(G(x) - 1) + 2x^2 G(x).\nG(x)(1 - 3x - 2x^2) = 1 \u21d2 G(x) = 1 / (1 - 3x - 2x^2).\nLet the roots of 1 - 3x - 2x^2 = 0 be finding roots of r^2 - 3r - 2 = 0, r = (3 \u00b1 \u221a17)/2.\nThe sequence is given by expanding via partial fractions, resulting in an = c1((3 + \u221a17)/2)n + c2((3 - \u221a17)/2)n where constants are found from initial conditions."
+      "Let G(x) be the generating function. Multiply by x^n and sum: G(x) - 1 - 3x = 3x(G(x) - 1) + 2x^2 G(x) . G(x)(1 - 3x - 2x^2) = 1 \u21d2 G(x) = 1 / (1 - 3x - 2x^2) . Let the roots of 1 - 3x - 2x^2 = 0 be finding roots of r^2 - 3r - 2 = 0 , r = (3 \u00b1 \u221a17)/2 . The sequence is given by expanding via partial fractions, resulting in a n = c 1 ((3 + \u221a17)/2) n + c 2 ((3 - \u221a17)/2) n where constants are found from initial conditions."
     ],
     "type": "question"
   },
@@ -819,7 +819,7 @@
     "title": "Find the value of n: (n + 1)P_3 = 5 x nP_2",
     "url": "question-bank.html?open=u2_c1",
     "chunks": [
-      "Using the permutation formula: (n+1)! / (n+1-3)! = 5 \u00d7 [n! / (n-2)!].\n(n+1)! / (n-2)! = 5 \u00d7 n! / (n-2)!\nCanceling (n-2)! from both sides gives (n+1)! = 5 \u00d7 n!.\n(n+1)n! = 5n! \u21d2 n + 1 = 5 \u21d2 n = 4."
+      "Using the permutation formula: (n+1)! / (n+1-3)! = 5 \u00d7 [n! / (n-2)!] . (n+1)! / (n-2)! = 5 \u00d7 n! / (n-2)! Canceling (n-2)! from both sides gives (n+1)! = 5 \u00d7 n! . (n+1)n! = 5n! \u21d2 n + 1 = 5 \u21d2 n = 4 ."
     ],
     "type": "question"
   },
@@ -835,7 +835,7 @@
     "title": "Solve the following recurrence relation by using generating function: a_n = 3a_{n-1} - 2a_{n-2} given a_0 = 2, a_1 = 5",
     "url": "question-bank.html?open=u2_c2",
     "chunks": [
-      "Let G(x) be the generating function. G(x) - 2 - 5x = 3x(G(x) - 2) - 2x^2 G(x).\nG(x)(1 - 3x + 2x^2) = 2 - x \u21d2 G(x) = (2 - x) / ((1 - x)(1 - 2x)).\nUsing partial fractions: (2 - x) / ((1 - x)(1 - 2x)) = A / (1 - x) + B / (1 - 2x).\nSolving gives A = -1 and B = 3. Thus, G(x) = -1/(1 - x) + 3/(1 - 2x).\nSolution: an = 3(2n) - 1."
+      "Let G(x) be the generating function. G(x) - 2 - 5x = 3x(G(x) - 2) - 2x^2 G(x) . G(x)(1 - 3x + 2x^2) = 2 - x \u21d2 G(x) = (2 - x) / ((1 - x)(1 - 2x)) . Using partial fractions: (2 - x) / ((1 - x)(1 - 2x)) = A / (1 - x) + B / (1 - 2x) . Solving gives A = -1 and B = 3 . Thus, G(x) = -1/(1 - x) + 3/(1 - 2x) . Solution: a n = 3(2 n ) - 1 ."
     ],
     "type": "question"
   },
@@ -851,7 +851,7 @@
     "title": "Solve the following recurrence relation: a_{n+2} - 7a_{n+1} + 12a_n = 0, given a_1 = 2, a_2 = 7.",
     "url": "question-bank.html?open=u2_c3",
     "chunks": [
-      "Characteristic equation: r^2 - 7r + 12 = 0 \u21d2 (r - 3)(r - 4) = 0. Roots: 3, 4.\nGeneral solution: an = c13n + c24n.\nUsing conditions: 3c1 + 4c2 = 2 and 9c1 + 16c2 = 7.\nMultiply first by 4: 12c1 + 16c2 = 8. Subtracting the second gives 3c1 = 1 \u21d2 c1 = 1/3.\nThen 4c2 = 2 - 1 = 1 \u21d2 c2 = 1/4.\nSolution: an = 3n-1 + 4n-1."
+      "Characteristic equation: r^2 - 7r + 12 = 0 \u21d2 (r - 3)(r - 4) = 0 . Roots: 3, 4. General solution: a n = c 1 3 n + c 2 4 n . Using conditions: 3c 1 + 4c 2 = 2 and 9c 1 + 16c 2 = 7 . Multiply first by 4: 12c 1 + 16c 2 = 8 . Subtracting the second gives 3c 1 = 1 \u21d2 c 1 = 1/3 . Then 4c 2 = 2 - 1 = 1 \u21d2 c 2 = 1/4 . Solution: a n = 3 n-1 + 4 n-1 ."
     ],
     "type": "question"
   },
@@ -867,7 +867,7 @@
     "title": "Solve the following recurrence relation: a_n - 5a_{n-1} + 7a_{n-2} - 3a_{n-3} = 0; a_0 = 2, a_1 = 5, a_2 = 12",
     "url": "question-bank.html?open=u2_c4",
     "chunks": [
-      "Characteristic equation: r^3 - 5r^2 + 7r - 3 = 0. Roots: 1, 1, 3.\nGeneral solution: an = c1 + c2n + c33n.\nSolving conditions: c1 + c3 = 2, c1 + c2 + 3c3 = 5, c1 + 2c2 + 9c3 = 12.\nWe get c1 = 1, c2 = 1, c3 = 1.\nSolution: an = 1 + n + 3n."
+      "Characteristic equation: r^3 - 5r^2 + 7r - 3 = 0 . Roots: 1, 1, 3 . General solution: a n = c 1 + c 2 n + c 3 3 n . Solving conditions: c 1 + c 3 = 2 , c 1 + c 2 + 3c 3 = 5 , c 1 + 2c 2 + 9c 3 = 12 . We get c 1 = 1, c 2 = 1, c 3 = 1 . Solution: a n = 1 + n + 3 n ."
     ],
     "type": "question"
   },
@@ -883,7 +883,7 @@
     "title": "Solve the following recurrence relation: a_{n+3} - 5a_{n+2} + 8a_{n+1} - 4a_n = 0, given a_1 = 2, a_2 = 5, a_3 = 14",
     "url": "question-bank.html?open=u2_c5",
     "chunks": [
-      "Characteristic equation: r^3 - 5r^2 + 8r - 4 = 0. Roots: 1, 2, 2.\nGeneral solution: an = c1 + (c2 + c3n)2n.\nSolving with conditions gives c1 = 5, c2 = -3, c3 = 1.5.\nSolution: an = 5 + (-3 + 1.5n)2n."
+      "Characteristic equation: r^3 - 5r^2 + 8r - 4 = 0 . Roots: 1, 2, 2 . General solution: a n = c 1 + (c 2 + c 3 n)2 n . Solving with conditions gives c 1 = 5, c 2 = -3, c 3 = 1.5 . Solution: a n = 5 + (-3 + 1.5n)2 n ."
     ],
     "type": "question"
   },
@@ -899,7 +899,7 @@
     "title": "Solve the following recurrence relation: a_n = 11a_{n-1} - 38a_{n-2} + 40a_{n-3}, subject to a_0 = 3, a_1 = 9, a_2 = 27.",
     "url": "question-bank.html?open=u2_c6",
     "chunks": [
-      "Characteristic equation: r^3 - 11r^2 + 38r - 40 = 0. Roots: 2, 4, 5.\nGeneral solution: an = c12n + c24n + c35n.\nUsing conditions, solving 3 equations gives the constants for the exact solution."
+      "Characteristic equation: r^3 - 11r^2 + 38r - 40 = 0 . Roots: 2, 4, 5 . General solution: a n = c 1 2 n + c 2 4 n + c 3 5 n . Using conditions, solving 3 equations gives the constants for the exact solution."
     ],
     "type": "question"
   },
@@ -915,7 +915,7 @@
     "title": "Solve the following recurrence relation by using generating function: a_n = 2a_{n-1} + 3a_{n-2} given a_0 = 1, a_1 = 2",
     "url": "question-bank.html?open=u2_c7",
     "chunks": [
-      "Let G(x) be the generating function. G(x) - 1 - 2x = 2x(G(x) - 1) + 3x^2 G(x).\nG(x)(1 - 2x - 3x^2) = 1 \u21d2 G(x) = 1 / ((1 - 3x)(1 + x)).\nUsing partial fractions: 1 / ((1 - 3x)(1 + x)) = A / (1 - 3x) + B / (1 + x) gives A = 3/4, B = 1/4.\nSolution: an = (3/4)3n + (1/4)(-1)n."
+      "Let G(x) be the generating function. G(x) - 1 - 2x = 2x(G(x) - 1) + 3x^2 G(x) . G(x)(1 - 2x - 3x^2) = 1 \u21d2 G(x) = 1 / ((1 - 3x)(1 + x)) . Using partial fractions: 1 / ((1 - 3x)(1 + x)) = A / (1 - 3x) + B / (1 + x) gives A = 3/4 , B = 1/4 . Solution: a n = (3/4)3 n + (1/4)(-1) n ."
     ],
     "type": "question"
   },
@@ -931,7 +931,7 @@
     "title": "Solve the following recurrence relation: a_{n+3} - 5a_{n+2} + 8a_{n+1} - 4a_n = 0 given a_1 = 1, a_2 = 4, a_3 = 11",
     "url": "question-bank.html?open=u2_c8",
     "chunks": [
-      "Characteristic equation: r^3 - 5r^2 + 8r - 4 = 0. Roots: 1, 2, 2.\nGeneral solution: an = c1 + (c2 + c3n)2n.\nApplying conditions a1 = 1, a2 = 4, a3 = 11 allows us to solve for constants c1, c2, c3."
+      "Characteristic equation: r^3 - 5r^2 + 8r - 4 = 0 . Roots: 1, 2, 2 . General solution: a n = c 1 + (c 2 + c 3 n)2 n . Applying conditions a 1 = 1, a 2 = 4, a 3 = 11 allows us to solve for constants c 1 , c 2 , c 3 ."
     ],
     "type": "question"
   },
@@ -947,7 +947,7 @@
     "title": "Solve the following recurrence relation: a_n = 8a_{n-1} - 21a_{n-2} + 18a_{n-3}, subject to a_0 = 1, a_1 = 5, a_2 = 19.",
     "url": "question-bank.html?open=u2_c9",
     "chunks": [
-      "Characteristic equation: r^3 - 8r^2 + 21r - 18 = 0. Roots: 2, 3, 3.\nGeneral solution: an = c12n + (c2 + c3n)3n.\nConditions: c1 + c2 = 1, 2c1 + 3(c2 + c3) = 5, 4c1 + 9(c2 + 2c3) = 19. Solving gives constants c1, c2, c3."
+      "Characteristic equation: r^3 - 8r^2 + 21r - 18 = 0 . Roots: 2, 3, 3 . General solution: a n = c 1 2 n + (c 2 + c 3 n)3 n . Conditions: c 1 + c 2 = 1 , 2c 1 + 3(c 2 + c 3 ) = 5 , 4c 1 + 9(c 2 + 2c 3 ) = 19 . Solving gives constants c 1 , c 2 , c 3 ."
     ],
     "type": "question"
   },
@@ -963,7 +963,7 @@
     "title": "Solve the following recurrence relation by using generating function: a_n = a_{n-1} + a_{n-2} given a_0 = 0, a_1 = 1",
     "url": "question-bank.html?open=u2_c10",
     "chunks": [
-      "This is the Fibonacci sequence.\nLet G(x) be the generating function. G(x) - x = x G(x) + x^2 G(x).\nG(x)(1 - x - x^2) = x \u21d2 G(x) = x / (1 - x - x^2).\nUsing partial fractions with roots of 1 - x - x^2 = 0, we get Binet's formula: an = (1/\u221a5) [ ((1+\u221a5)/2)n - ((1-\u221a5)/2)n ]."
+      "This is the Fibonacci sequence. Let G(x) be the generating function. G(x) - x = x G(x) + x^2 G(x) . G(x)(1 - x - x^2) = x \u21d2 G(x) = x / (1 - x - x^2) . Using partial fractions with roots of 1 - x - x^2 = 0 , we get Binet's formula: a n = (1/\u221a5) [ ((1+\u221a5)/2) n - ((1-\u221a5)/2) n ] ."
     ],
     "type": "question"
   },
@@ -979,7 +979,7 @@
     "title": "Define the following terms with graphs: (i) Complete Bipartite Graph (ii) Complete graph",
     "url": "question-bank.html?open=u3_a_q1",
     "chunks": [
-      "(i) Complete Bipartite Graph: A bipartite graph $G=(V, E)$ with partition $V = V_1 \\cup V_2$ is a complete bipartite graph if every vertex in $V_1$ is connected to every vertex in $V_2$. Denoted as $K_{m,n}$ where $m=|V_1|$ and $n=|V_2|$.\n(ii) Complete graph: A simple graph in which every pair of distinct vertices is connected by a unique edge. A complete graph on $n$ vertices is denoted as $K_n$."
+      "(i) Complete Bipartite Graph: A bipartite graph $G=(V, E)$ with partition $V = V_1 \\cup V_2$ is a complete bipartite graph if every vertex in $V_1$ is connected to every vertex in $V_2$. Denoted as $K_{m,n}$ where $m=|V_1|$ and $n=|V_2|$. (ii) Complete graph: A simple graph in which every pair of distinct vertices is connected by a unique edge. A complete graph on $n$ vertices is denoted as $K_n$."
     ],
     "type": "question"
   },
@@ -995,7 +995,7 @@
     "title": "Draw the following graphs: (i) K_5 (ii) C_4",
     "url": "question-bank.html?open=u3_a_q2",
     "chunks": [
-      "(i) $K_5$: A complete graph with 5 vertices. Every vertex is connected to every other vertex, having 10 edges in total.\n(ii) $C_4$: A cycle graph with 4 vertices. It forms a square with vertices connected in a closed loop, having 4 edges."
+      "(i) $K_5$: A complete graph with 5 vertices. Every vertex is connected to every other vertex, having 10 edges in total. (ii) $C_4$: A cycle graph with 4 vertices. It forms a square with vertices connected in a closed loop, having 4 edges."
     ],
     "type": "question"
   },
@@ -1043,7 +1043,7 @@
     "title": "Determine the types of following graphs.",
     "url": "question-bank.html?open=u3_a_q5",
     "chunks": [
-      "(i) This graph has parallel edges between a and b, and b and d. Thus, it is a multigraph.\n(ii) This directed graph has self-loops (on a, c, e) and directed edges. It is a directed pseudograph."
+      "(i) This graph has parallel edges between a and b, and b and d. Thus, it is a multigraph . (ii) This directed graph has self-loops (on a, c, e) and directed edges. It is a directed pseudograph ."
     ],
     "type": "question"
   },
@@ -1059,7 +1059,7 @@
     "title": "A graph has 6 vertices with degrees 3, 3, 4, 2, 2, 2. Verify whether such a graph can exist, and if it does, find the total number of edges.",
     "url": "question-bank.html?open=u3_b_q5",
     "chunks": [
-      "According to the Handshaking Theorem, the sum of degrees of all vertices equals $2|E|$.\nSum of degrees = 3 + 3 + 4 + 2 + 2 + 2 = 16.\nSince the sum is even, such a graph can exist.\nTotal number of edges $|E| = 16 / 2 = 8$."
+      "According to the Handshaking Theorem, the sum of degrees of all vertices equals $2|E|$. Sum of degrees = 3 + 3 + 4 + 2 + 2 + 2 = 16. Since the sum is even, such a graph can exist. Total number of edges $|E| = 16 / 2 = 8$."
     ],
     "type": "question"
   },
@@ -1075,7 +1075,7 @@
     "title": "(a) A graph has 15 edges. It has one vertex of degree 6, two vertices of degree 5 each, and three vertices of degree 4 each. All remaining vertices have degree 1. Find the total number of vertices in the graph. (b) A graph has 6 vertices with degrees 2,3,4,2,5,x. If the graph has 10 edges, find x.",
     "url": "question-bank.html?open=u3_c_q2",
     "chunks": [
-      "(a) Total edges $|E| = 15$. Sum of degrees = $2 \\times 15 = 30$.\nGiven degrees: one vertex of 6, two of 5, three of 4. Let the number of vertices of degree 1 be $k$.\nSum = $6 + 2(5) + 3(4) + k(1) = 6 + 10 + 12 + k = 28 + k$.\nSo, $28 + k = 30 \\implies k = 2$.\nTotal vertices = $1 + 2 + 3 + 2 = 8$.\n(b) Total edges $|E| = 10$. Sum of degrees = 20.\nSum of given degrees = $2+3+4+2+5+x = 16+x$.\nSo, $16+x = 20 \\implies x = 4$."
+      "(a) Total edges $|E| = 15$. Sum of degrees = $2 \\times 15 = 30$. Given degrees: one vertex of 6, two of 5, three of 4. Let the number of vertices of degree 1 be $k$. Sum = $6 + 2(5) + 3(4) + k(1) = 6 + 10 + 12 + k = 28 + k$. So, $28 + k = 30 \\implies k = 2$. Total vertices = $1 + 2 + 3 + 2 = 8$. (b) Total edges $|E| = 10$. Sum of degrees = 20. Sum of given degrees = $2+3+4+2+5+x = 16+x$. So, $16+x = 20 \\implies x = 4$."
     ],
     "type": "question"
   },
@@ -1084,34 +1084,33 @@
     "title": "MATHS Cheat Sheet",
     "url": "cheat-sheet.html",
     "chunks": [
-      "Dashboard\n\n            Revision Hub\n\n                Save as PDF\n\n                Theme",
-      "Discrete Mathematics Cheat Sheet \n\nLogic | Recurrence Relations | Graph Theory | Set Theory | Automata\n\n                Quick Jump: \n                Unit I\n                Unit II\n                Unit III\n                Unit IV\n                Unit V\n\n                Mode: Dark",
+      "Dashboard Revision Hub Save as PDF Theme",
+      "Discrete Mathematics Cheat Sheet Logic | Recurrence Relations | Graph Theory | Set Theory | Automata Quick Jump: Unit I Unit II Unit III Unit IV Unit V Mode: Dark",
       "Unit I: Propositional Logic CO1",
-      "Fundamental Logic Operators \n\nConnectives establish truth-functional relationships between propositions. Master implications (\\(p \\rightarrow q\\)) and biconditionals (\\(p \\leftrightarrow q\\)), as they form the bedrock of mathematical proofs.\n\nExample: \"If it rains (p), then the ground is wet (q).\" \\(p \\rightarrow q\\).",
-      "Logical Equivalences \n\nDe Morgan's Laws (\\(\\neg(p \\land q) \\equiv \\neg p \\lor \\neg q\\)) and Implication Equivalence (\\(p \\rightarrow q \\equiv \\neg p \\lor q\\)) are pivotal for simplifying compound propositions without brute-force truth tables.\n\nExample: \"It's false that I am cold AND tired\" equals \"I am not cold OR I am not tired.\"",
-      "Predicates & Quantifiers \n\nExaminer Trick: Nested Quantifiers. Remember that \\(\\forall x \\exists y\\) is NOT equivalent to \\(\\exists y \\forall x\\). The order dictates dependency!\n\nUniversal (\\(\\forall\\)) implies all elements in the domain; Existential (\\(\\exists\\)) asserts at least one exists. Negating them flips the quantifier.\n\nExample: \\(\\neg(\\forall x P(x)) \\equiv \\exists x \\neg P(x)\\).",
-      "Rules of Inference \n\nModus Ponens (\\(p, p \\rightarrow q \\vdash q\\)) and Modus Tollens (\\(\\neg q, p \\rightarrow q \\vdash \\neg p\\)) validate arguments syntactically.\n\nNiche Topic: Fallacy of Affirming the Consequent. Given \\(p \\rightarrow q\\) and \\(q\\), concluding \\(p\\) is invalid.\n\nExample: If it rains, ground is wet. Ground is wet. Therefore, it rained (Invalid!).",
+      "Fundamental Logic Operators Connectives establish truth-functional relationships between propositions. Master implications (\\(p \\rightarrow q\\)) and biconditionals (\\(p \\leftrightarrow q\\)), as they form the bedrock of mathematical proofs. Example: \"If it rains (p), then the ground is wet (q).\" \\(p \\rightarrow q\\).",
+      "Logical Equivalences De Morgan's Laws (\\(\\neg(p \\land q) \\equiv \\neg p \\lor \\neg q\\)) and Implication Equivalence (\\(p \\rightarrow q \\equiv \\neg p \\lor q\\)) are pivotal for simplifying compound propositions without brute-force truth tables. Example: \"It's false that I am cold AND tired\" equals \"I am not cold OR I am not tired.\"",
+      "Predicates & Quantifiers Examiner Trick: Nested Quantifiers. Remember that \\(\\forall x \\exists y\\) is NOT equivalent to \\(\\exists y \\forall x\\). The order dictates dependency! Universal (\\(\\forall\\)) implies all elements in the domain; Existential (\\(\\exists\\)) asserts at least one exists. Negating them flips the quantifier. Example: \\(\\neg(\\forall x P(x)) \\equiv \\exists x \\neg P(x)\\).",
+      "Rules of Inference Modus Ponens (\\(p, p \\rightarrow q \\vdash q\\)) and Modus Tollens (\\(\\neg q, p \\rightarrow q \\vdash \\neg p\\)) validate arguments syntactically. Niche Topic: Fallacy of Affirming the Consequent. Given \\(p \\rightarrow q\\) and \\(q\\), concluding \\(p\\) is invalid. Example: If it rains, ground is wet. Ground is wet. Therefore, it rained (Invalid!).",
       "Unit II: Counting Methods CO2",
-      "Pigeonhole Principle \n\nIf \\(N\\) items are placed into \\(k\\) boxes, at least one box contains \\(\\lceil N/k \\rceil\\) items. Crucial for existence proofs without direct construction.\n\nExample: Among 13 people, at least 2 were born in the same month.",
-      "Combinatorics: Stars and Bars \n\nNiche Topic: Stars & Bars (Multiset Coefficients). Finds non-negative integer solutions to \\(x_1 + x_2 + ... + x_k = n\\).\n\nFormula is \\(C(n + k - 1, k - 1)\\). Applies when items are indistinguishable but bins are distinct.\n\nExample: Distributing 10 identical candies among 3 children: \\(C(10+3-1, 3-1) = 66\\).",
-      "Linear Recurrence Relations \n\nCharacterize sequences via previous terms. Solve \\(a_n = c_1a_{n-1} + c_2a_{n-2}\\) using the characteristic equation \\(r^2 - c_1r - c_2 = 0\\).\n\nExample: Fibonacci \\(a_n = a_{n-1} + a_{n-2}\\) gives roots \\((1 \\pm \\sqrt{5})/2\\).",
-      "Generating Functions \n\nExaminer Trick: Using partial fraction decomposition to extract coefficients from \\(G(x) = \\sum a_n x^n\\).\n\nTranslates sequence convolution into polynomial multiplication, elegantly solving non-homogeneous recurrences.\n\nExample: Sequence 1, 1, 1... corresponds to \\(1/(1-x)\\).",
+      "Pigeonhole Principle If \\(N\\) items are placed into \\(k\\) boxes, at least one box contains \\(\\lceil N/k \\rceil\\) items. Crucial for existence proofs without direct construction. Example: Among 13 people, at least 2 were born in the same month.",
+      "Combinatorics: Stars and Bars Niche Topic: Stars & Bars (Multiset Coefficients). Finds non-negative integer solutions to \\(x_1 + x_2 + ... + x_k = n\\). Formula is \\(C(n + k - 1, k - 1)\\). Applies when items are indistinguishable but bins are distinct. Example: Distributing 10 identical candies among 3 children: \\(C(10+3-1, 3-1) = 66\\).",
+      "Linear Recurrence Relations Characterize sequences via previous terms. Solve \\(a_n = c_1a_{n-1} + c_2a_{n-2}\\) using the characteristic equation \\(r^2 - c_1r - c_2 = 0\\). Example: Fibonacci \\(a_n = a_{n-1} + a_{n-2}\\) gives roots \\((1 \\pm \\sqrt{5})/2\\).",
+      "Generating Functions Examiner Trick: Using partial fraction decomposition to extract coefficients from \\(G(x) = \\sum a_n x^n\\). Translates sequence convolution into polynomial multiplication, elegantly solving non-homogeneous recurrences. Example: Sequence 1, 1, 1... corresponds to \\(1/(1-x)\\).",
       "Unit III: Graph Theory CO3",
-      "Handshaking Lemma \n\nThe sum of degrees of all vertices equals \\(2|E|\\). A foundational invariant proving odd-degree vertices must occur in pairs.\n\nExample: A graph with 5 vertices of degree 3 cannot exist since \\(15 \\neq 2|E|\\).",
-      "Euler & Hamilton Paths \n\nExaminer Trick: Euler traverses all edges exactly once; Hamilton traverses all vertices exactly once. Do not conflate them!\n\nEuler circuits require all vertices to have an even degree. Hamiltonian has no simple definitive check (NP-complete).\n\nExample: \\(K_3\\) has both paths, but \\(K_{2,3}\\) is not Hamiltonian.\n\n                        graph TD\n                            A((Odd)) --- B((Odd))\n                            A --- C((Even))\n                            B --- C\n                            C --- D((Even))\n                            C --- E((Even))\n                            D --- E",
-      "Graph Isomorphism \n\nTwo graphs are isomorphic if a bijection preserves adjacency. Invariants: vertex count, edge count, and degree sequence.\n\nExample: A square and a 4-cycle drawn as a figure-eight are isomorphic.",
-      "Bipartite Graphs & Matching \n\nNiche Topic: Hall's Marriage Theorem. A bipartite graph \\(G=(V_1, V_2, E)\\) has a complete matching for \\(V_1\\) iff \\(|N(S)| \\ge |S|\\) for all \\(S \\subseteq V_1\\).\n\nA graph is bipartite if and only if it contains no odd-length cycles.\n\nExample: Assigning 3 workers to 3 tasks optimally without overlap.",
+      "Handshaking Lemma The sum of degrees of all vertices equals \\(2|E|\\). A foundational invariant proving odd-degree vertices must occur in pairs. Example: A graph with 5 vertices of degree 3 cannot exist since \\(15 \\neq 2|E|\\).",
+      "Euler & Hamilton Paths Examiner Trick: Euler traverses all edges exactly once; Hamilton traverses all vertices exactly once. Do not conflate them! Euler circuits require all vertices to have an even degree. Hamiltonian has no simple definitive check (NP-complete). Example: \\(K_3\\) has both paths, but \\(K_{2,3}\\) is not Hamiltonian. graph TD A((Odd)) --- B((Odd)) A --- C((Even)) B --- C C --- D((Even)) C --- E((Even)) D --- E",
+      "Graph Isomorphism Two graphs are isomorphic if a bijection preserves adjacency. Invariants: vertex count, edge count, and degree sequence. Example: A square and a 4-cycle drawn as a figure-eight are isomorphic.",
+      "Bipartite Graphs & Matching Niche Topic: Hall's Marriage Theorem. A bipartite graph \\(G=(V_1, V_2, E)\\) has a complete matching for \\(V_1\\) iff \\(|N(S)| \\ge |S|\\) for all \\(S \\subseteq V_1\\). A graph is bipartite if and only if it contains no odd-length cycles. Example: Assigning 3 workers to 3 tasks optimally without overlap.",
       "Unit IV: Set Theory & Relations CO4",
-      "Set Operations & Power Sets \n\nOperations include union, intersection, difference, and symmetric difference (\\(\\oplus\\)). The power set \\(\\mathcal{P}(S)\\) contains all subsets.\n\nExample: If \\(S = \\{1, 2\\}\\), \\(\\mathcal{P}(S) = \\{\\emptyset, \\{1\\}, \\{2\\}, \\{1, 2\\}\\}\\). Size is \\(2^n\\).",
-      "Equivalence Relations \n\nA relation must be reflexive (\\(xRx\\)), symmetric (\\(xRy \\implies yRx\\)), and transitive (\\(xRy \\land yRz \\implies xRz\\)). Forms equivalence classes.\n\nExample: Congruence modulo \\(n\\), where \\(a \\equiv b \\pmod n\\) divides \\(\\mathbb{Z}\\) into \\(n\\) classes.",
-      "Partial Orderings (Posets) \n\nExaminer Trick: Hasse Diagrams. Ensure you remove reflexive loops and transitive edges to depict minimal/maximal elements accurately.\n\nRequires reflexivity, antisymmetry (\\(xRy \\land yRx \\implies x=y\\)), and transitivity.\n\nExample: The \"divides\" relation on integers forms a poset, visualizable via Hasse.\n\n                        graph BT\n                            1 --> 2\n                            1 --> 3\n                            2 --> 6\n                            3 --> 6",
-      "Injective, Surjective, Bijective \n\nNiche Topic: Cardinality mappings. If a bijection exists between two sets, they share the same cardinality (\\(\\aleph_0\\) for countably infinite).\n\nInjective (1-to-1): no two \\(x\\) map to same \\(y\\). Surjective (onto): every \\(y\\) is mapped. Bijective: both, thus invertible.\n\nExample: \\(f(x) = 2x\\) from \\(\\mathbb{R}\\) to \\(\\mathbb{R}\\) is bijective.",
+      "Set Operations & Power Sets Operations include union, intersection, difference, and symmetric difference (\\(\\oplus\\)). The power set \\(\\mathcal{P}(S)\\) contains all subsets. Example: If \\(S = \\{1, 2\\}\\), \\(\\mathcal{P}(S) = \\{\\emptyset, \\{1\\}, \\{2\\}, \\{1, 2\\}\\}\\). Size is \\(2^n\\).",
+      "Equivalence Relations A relation must be reflexive (\\(xRx\\)), symmetric (\\(xRy \\implies yRx\\)), and transitive (\\(xRy \\land yRz \\implies xRz\\)). Forms equivalence classes. Example: Congruence modulo \\(n\\), where \\(a \\equiv b \\pmod n\\) divides \\(\\mathbb{Z}\\) into \\(n\\) classes.",
+      "Partial Orderings (Posets) Examiner Trick: Hasse Diagrams. Ensure you remove reflexive loops and transitive edges to depict minimal/maximal elements accurately. Requires reflexivity, antisymmetry (\\(xRy \\land yRx \\implies x=y\\)), and transitivity. Example: The \"divides\" relation on integers forms a poset, visualizable via Hasse. graph BT 1 --> 2 1 --> 3 2 --> 6 3 --> 6",
+      "Injective, Surjective, Bijective Niche Topic: Cardinality mappings. If a bijection exists between two sets, they share the same cardinality (\\(\\aleph_0\\) for countably infinite). Injective (1-to-1): no two \\(x\\) map to same \\(y\\). Surjective (onto): every \\(y\\) is mapped. Bijective: both, thus invertible. Example: \\(f(x) = 2x\\) from \\(\\mathbb{R}\\) to \\(\\mathbb{R}\\) is bijective.",
       "Unit V: Trees & Automata CO5",
-      "Tree Properties \n\nA tree is a connected, undirected graph with no simple circuits. It inherently possesses \\(n-1\\) edges for \\(n\\) vertices.\n\nExample: A hierarchical file system directory structure.",
-      "Spanning Trees \n\nExaminer Trick: Kruskal's vs Prim's. Both find Minimum Spanning Trees, but Kruskal sorts edges globally while Prim expands locally from a node.\n\nA subgraph that contains all vertices and is a tree. Critical for optimizing network routing with minimal cost.\n\nExample: Connecting 5 cities with the least amount of copper wire.",
-      "Finite State Machines (FSMs) \n\nNiche Topic: Pumping Lemma for Regular Languages. Used exclusively to prove a language is NOT regular by demonstrating string repetition violations.\n\nDFAs have exactly one transition per state-symbol pair. NFAs allow multiple. They are computationally equivalent in expressive power.\n\nExample: A vending machine dispensing a soda only after exactly 50 cents is inserted.\n\n                        stateDiagram-v2\n                            [*] --> q0\n                            q0 --> q1: 1\n                            q1 --> q0: 0\n                            q1 --> q2: 1\n                            q2 --> [*]",
-      "Boolean Algebra \n\nA distributive lattice representing logical operations. Simplification uses consensus theorem and Karnaugh maps to minimize circuit gates.\n\nExample: \\(AB + AB' = A(B + B') = A\\).\n\n\ufeff",
-      "Ask AI (Lite) \n\n    Lite\n    Smart (WebGPU)\n    Deep (Cloud)\n\n                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.\n\n                Send"
+      "Tree Properties A tree is a connected, undirected graph with no simple circuits. It inherently possesses \\(n-1\\) edges for \\(n\\) vertices. Example: A hierarchical file system directory structure.",
+      "Spanning Trees Examiner Trick: Kruskal's vs Prim's. Both find Minimum Spanning Trees, but Kruskal sorts edges globally while Prim expands locally from a node. A subgraph that contains all vertices and is a tree. Critical for optimizing network routing with minimal cost. Example: Connecting 5 cities with the least amount of copper wire.",
+      "Finite State Machines (FSMs) Niche Topic: Pumping Lemma for Regular Languages. Used exclusively to prove a language is NOT regular by demonstrating string repetition violations. DFAs have exactly one transition per state-symbol pair. NFAs allow multiple. They are computationally equivalent in expressive power. Example: A vending machine dispensing a soda only after exactly 50 cents is inserted. stateDiagram-v2 [*] --> q0 q0 --> q1: 1 q1 --> q0: 0 q1 --> q2: 1 q2 --> [*]",
+      "Boolean Algebra A distributive lattice representing logical operations. Simplification uses consensus theorem and Karnaugh maps to minimize circuit gates. Example: \\(AB + AB' = A(B + B') = A\\). \ufeff"
     ],
     "type": "cheat"
   }

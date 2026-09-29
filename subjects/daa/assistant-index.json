@@ -11,7 +11,7 @@
     "title": "Define an algorithm. Write any four characteristics of a good algorithm.",
     "url": "question-bank.html?open=u1q1",
     "chunks": [
-      "An algorithm is a step-by-step procedure or set of rules to be followed in calculations or other problem-solving operations. Characteristics:\n\nFiniteness: Must terminate after a finite number of steps.\nDefiniteness: Each step must be precisely defined.\nInput: Has zero or more inputs.\nOutput: Produces one or more outputs.\nEffectiveness: Operations must be basic enough to be done exactly and in finite time."
+      "An algorithm is a step-by-step procedure or set of rules to be followed in calculations or other problem-solving operations. Characteristics: Finiteness: Must terminate after a finite number of steps. Definiteness: Each step must be precisely defined. Input: Has zero or more inputs. Output: Produces one or more outputs. Effectiveness: Operations must be basic enough to be done exactly and in finite time."
     ],
     "type": "question"
   },
@@ -27,7 +27,7 @@
     "title": "What is pseudocode? Mention two advantages of representing an algorithm using pseudocode.",
     "url": "question-bank.html?open=u1q2",
     "chunks": [
-      "Pseudocode is an informal, high-level description of the operating principle of a computer program or algorithm. Advantages:\n\nEasier for humans to read and understand compared to actual code.\nIndependent of any specific programming language, making it versatile."
+      "Pseudocode is an informal, high-level description of the operating principle of a computer program or algorithm. Advantages: Easier for humans to read and understand compared to actual code. Independent of any specific programming language, making it versatile."
     ],
     "type": "question"
   },
@@ -43,7 +43,7 @@
     "title": "Differentiate between time complexity and space complexity with one example.",
     "url": "question-bank.html?open=u1q3",
     "chunks": [
-      "Time Complexity: The amount of time an algorithm takes to run as a function of the length of the input. Space Complexity: The amount of memory an algorithm requires to run as a function of the length of the input.\nExample: Mergesort has a time complexity of O(n log n) and space complexity of O(n), whereas Bubble sort has time complexity O(n^2) but space complexity O(1)."
+      "Time Complexity: The amount of time an algorithm takes to run as a function of the length of the input. Space Complexity: The amount of memory an algorithm requires to run as a function of the length of the input. Example: Mergesort has a time complexity of O(n log n) and space complexity of O(n), whereas Bubble sort has time complexity O(n^2) but space complexity O(1)."
     ],
     "type": "question"
   },
@@ -75,7 +75,7 @@
     "title": "What is the difference between best-case, worst-case, and average-case analysis?",
     "url": "question-bank.html?open=u1q5",
     "chunks": [
-      "Best-case: The minimum time required for program execution for any input of size n.\nWorst-case: The maximum time required for program execution for any input of size n. (Provides an upper bound).\nAverage-case: The expected time required for program execution over all possible inputs of size n."
+      "Best-case: The minimum time required for program execution for any input of size n. Worst-case: The maximum time required for program execution for any input of size n. (Provides an upper bound). Average-case: The expected time required for program execution over all possible inputs of size n."
     ],
     "type": "question"
   },
@@ -107,7 +107,7 @@
     "title": "What is amortized analysis? Explain the aggregate method in one or two sentences.",
     "url": "question-bank.html?open=u1q8",
     "chunks": [
-      "Amortized analysis calculates the average time taken per operation, over a sequence of operations, guaranteeing the average performance even if a single operation is expensive.\nAggregate method: It computes the total time T(n) for a sequence of n operations and sets the amortized cost per operation to T(n)/n."
+      "Amortized analysis calculates the average time taken per operation, over a sequence of operations, guaranteeing the average performance even if a single operation is expensive. Aggregate method: It computes the total time T(n) for a sequence of n operations and sets the amortized cost per operation to T(n)/n ."
     ],
     "type": "question"
   },
@@ -139,7 +139,7 @@
     "title": "Find the time complexity of the following code: if (n > 100) x = x + 1; else x = x - 1; Also mention the best and worst case.",
     "url": "question-bank.html?open=u1q10",
     "chunks": [
-      "The time complexity is O(1). The condition evaluation takes O(1) time, and both the if block and else block contain basic arithmetic operations taking O(1) time.\nBest case: O(1)\nWorst case: O(1)"
+      "The time complexity is O(1) . The condition evaluation takes O(1) time, and both the if block and else block contain basic arithmetic operations taking O(1) time. Best case: O(1) Worst case: O(1)"
     ],
     "type": "question"
   },
@@ -155,7 +155,7 @@
     "title": "Find the time complexity: for(i = 1; i <= n; i++) { printf(\"%d\", i); }",
     "url": "question-bank.html?open=u1q11",
     "chunks": [
-      "The loop variable i goes from 1 to n, incrementing by 1 each time. The loop runs exactly n times.\nNumber of iterations: n.\nFinal time complexity: O(n)."
+      "The loop variable i goes from 1 to n , incrementing by 1 each time. The loop runs exactly n times. Number of iterations: n . Final time complexity: O(n) ."
     ],
     "type": "question"
   },
@@ -171,7 +171,7 @@
     "title": "Find the time complexity: for(i = 1; i <= n; i = i + 2) { count++; }",
     "url": "question-bank.html?open=u1q12",
     "chunks": [
-      "The loop variable i starts at 1 and increases by 2 in each iteration (1, 3, 5, ..., n). The loop runs roughly n/2 times.\nExecution count: n/2 times.\nFinal time complexity: O(n)."
+      "The loop variable i starts at 1 and increases by 2 in each iteration (1, 3, 5, ..., n). The loop runs roughly n/2 times. Execution count: n/2 times. Final time complexity: O(n) ."
     ],
     "type": "question"
   },
@@ -187,7 +187,7 @@
     "title": "Find the time complexity: for(i = 1; i <= n; i++) { for(j = 1; j <= n; j++) { count++; } }",
     "url": "question-bank.html?open=u1q13",
     "chunks": [
-      "The outer loop runs n times. For each iteration of the outer loop, the inner loop runs n times. Total iterations = n * n = n2.\nFinal time complexity: O(n2)."
+      "The outer loop runs n times. For each iteration of the outer loop, the inner loop runs n times. Total iterations = n * n = n 2 . Final time complexity: O(n 2 ) ."
     ],
     "type": "question"
   },
@@ -203,7 +203,7 @@
     "title": "Find the time complexity: for(i = 1; i <= n; i++) { for(j = 1; j <= i; j++) { count++; } }",
     "url": "question-bank.html?open=u1q14",
     "chunks": [
-      "The outer loop runs n times. The inner loop runs i times. The total number of executions is the sum of the first n integers:\nSummation: 1 + 2 + 3 + ... + n = n(n+1)/2 = (n2 + n)/2.\nFinal time complexity: O(n2)."
+      "The outer loop runs n times. The inner loop runs i times. The total number of executions is the sum of the first n integers: Summation: 1 + 2 + 3 + ... + n = n(n+1)/2 = (n 2 + n)/2 . Final time complexity: O(n 2 ) ."
     ],
     "type": "question"
   },
@@ -219,7 +219,7 @@
     "title": "Find the time complexity: for(i = 1; i <= n; i = i * 2) { printf(\"%d\", i); }",
     "url": "question-bank.html?open=u1q15",
     "chunks": [
-      "The loop variable i starts at 1 and multiplies by 2 each time. Sequence of i values: 1, 2, 4, 8, ..., 2k.\nThe loop terminates when 2k > n, which means k \u2248 log2(n). The total iterations is roughly log2(n).\nFinal time complexity: O(log n)."
+      "The loop variable i starts at 1 and multiplies by 2 each time. Sequence of i values: 1, 2, 4, 8, ..., 2 k . The loop terminates when 2 k > n, which means k \u2248 log 2 (n). The total iterations is roughly log 2 (n). Final time complexity: O(log n) ."
     ],
     "type": "question"
   },
@@ -235,7 +235,7 @@
     "title": "Define algorithm correctness. Differentiate between partial correctness and total correctness with suitable examples.",
     "url": "question-bank.html?open=u2q1",
     "chunks": [
-      "Algorithm Correctness: An algorithm is correct if, for every valid input, it halts and produces the correct output as defined by its specifications.\n\nPartial Correctness: If the algorithm halts, it produces the correct output (but it might not halt). Example: A while(true) loop that searches for an element and breaks when found. If the element isn't there, it might loop forever.\nTotal Correctness: The algorithm is guaranteed to halt, and when it halts, it produces the correct output. Example: A standard for-loop based linear search that scans an array from start to end and returns true/false."
+      "Algorithm Correctness: An algorithm is correct if, for every valid input, it halts and produces the correct output as defined by its specifications. Partial Correctness: If the algorithm halts, it produces the correct output (but it might not halt). Example: A while(true) loop that searches for an element and breaks when found. If the element isn't there, it might loop forever. Total Correctness: The algorithm is guaranteed to halt, and when it halts, it produces the correct output. Example: A standard for-loop based linear search that scans an array from start to end and returns true/false."
     ],
     "type": "question"
   },
@@ -251,7 +251,7 @@
     "title": "What is a loop invariant? Explain the three steps\u2014initialization, maintenance, and termination\u2014used to prove the correctness of an algorithm.",
     "url": "question-bank.html?open=u2q2",
     "chunks": [
-      "A loop invariant is a condition or property that is true before and after each iteration of a loop. It is used to prove the correctness of loop structures.\n\nInitialization: The invariant must be true before the first iteration of the loop.\nMaintenance: If it is true before an iteration of the loop, it remains true before the next iteration.\nTermination: When the loop terminates, the invariant gives us a useful property that helps show the algorithm is correct."
+      "A loop invariant is a condition or property that is true before and after each iteration of a loop. It is used to prove the correctness of loop structures. Initialization: The invariant must be true before the first iteration of the loop. Maintenance: If it is true before an iteration of the loop, it remains true before the next iteration. Termination: When the loop terminates, the invariant gives us a useful property that helps show the algorithm is correct."
     ],
     "type": "question"
   },
@@ -267,7 +267,7 @@
     "title": "Explain how loop invariants can be used to prove the correctness of a sorting algorithm.",
     "url": "question-bank.html?open=u2q3",
     "chunks": [
-      "In sorting algorithms like Insertion Sort, a loop invariant can be defined as: 'At the start of each iteration i, the subarray A[0...i-1] consists of the elements originally in A[0...i-1], but in sorted order.'\n\nInitialization: For i=1, A[0] is just a single element, which is trivially sorted.\nMaintenance: During iteration i, the algorithm inserts A[i] into its correct position in A[0...i-1], making A[0...i] sorted.\nTermination: The loop ends when i = n. The invariant states that A[0...n-1] is sorted, which means the entire array is sorted, proving correctness."
+      "In sorting algorithms like Insertion Sort, a loop invariant can be defined as: 'At the start of each iteration i , the subarray A[0...i-1] consists of the elements originally in A[0...i-1], but in sorted order.' Initialization: For i=1, A[0] is just a single element, which is trivially sorted. Maintenance: During iteration i , the algorithm inserts A[i] into its correct position in A[0...i-1], making A[0...i] sorted. Termination: The loop ends when i = n. The invariant states that A[0...n-1] is sorted, which means the entire array is sorted, proving correctness."
     ],
     "type": "question"
   },
@@ -283,7 +283,7 @@
     "title": "Perform a complete dry run of Bubble Sort on the array: 64, 25, 12, 22, 11, 90, 34, 5, 78, 43.",
     "url": "question-bank.html?open=u2q4",
     "chunks": [
-      "Initial array: [64, 25, 12, 22, 11, 90, 34, 5, 78, 43]\nPassArray StateComparisonsSwaps\n1[25, 12, 22, 11, 64, 34, 5, 78, 43, 90]98\n2[12, 22, 11, 25, 34, 5, 64, 43, 78, 90]86\n3[12, 11, 22, 25, 5, 34, 43, 64, 78, 90]73\n4[11, 12, 22, 5, 25, 34, 43, 64, 78, 90]62\n5[11, 12, 5, 22, 25, 34, 43, 64, 78, 90]51\n6[11, 5, 12, 22, 25, 34, 43, 64, 78, 90]41\n7[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]31\n8[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]20\n9[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]10\nTotal Comparisons: 45, Total Swaps: 22"
+      "Initial array: [64, 25, 12, 22, 11, 90, 34, 5, 78, 43] Pass Array State Comparisons Swaps 1 [25, 12, 22, 11, 64, 34, 5, 78, 43, 90] 9 8 2 [12, 22, 11, 25, 34, 5, 64, 43, 78, 90] 8 6 3 [12, 11, 22, 25, 5, 34, 43, 64, 78, 90] 7 3 4 [11, 12, 22, 5, 25, 34, 43, 64, 78, 90] 6 2 5 [11, 12, 5, 22, 25, 34, 43, 64, 78, 90] 5 1 6 [11, 5, 12, 22, 25, 34, 43, 64, 78, 90] 4 1 7 [5, 11, 12, 22, 25, 34, 43, 64, 78, 90] 3 1 8 [5, 11, 12, 22, 25, 34, 43, 64, 78, 90] 2 0 9 [5, 11, 12, 22, 25, 34, 43, 64, 78, 90] 1 0 Total Comparisons: 45, Total Swaps: 22"
     ],
     "type": "question"
   },
@@ -299,7 +299,7 @@
     "title": "Perform a complete dry run of Bubble Sort on: 90, 80, 70, 60, 50, 40, 30, 20, 10.",
     "url": "question-bank.html?open=u2q5",
     "chunks": [
-      "Initial array: [90, 80, 70, 60, 50, 40, 30, 20, 10]\nPassArray StateComparisonsSwaps\n1[80, 70, 60, 50, 40, 30, 20, 10, 90]88\n2[70, 60, 50, 40, 30, 20, 10, 80, 90]77\n3[60, 50, 40, 30, 20, 10, 70, 80, 90]66\n4[50, 40, 30, 20, 10, 60, 70, 80, 90]55\n5[40, 30, 20, 10, 50, 60, 70, 80, 90]44\n6[30, 20, 10, 40, 50, 60, 70, 80, 90]33\n7[20, 10, 30, 40, 50, 60, 70, 80, 90]22\n8[10, 20, 30, 40, 50, 60, 70, 80, 90]11\nTotal Comparisons: 36, Total Swaps: 36"
+      "Initial array: [90, 80, 70, 60, 50, 40, 30, 20, 10] Pass Array State Comparisons Swaps 1 [80, 70, 60, 50, 40, 30, 20, 10, 90] 8 8 2 [70, 60, 50, 40, 30, 20, 10, 80, 90] 7 7 3 [60, 50, 40, 30, 20, 10, 70, 80, 90] 6 6 4 [50, 40, 30, 20, 10, 60, 70, 80, 90] 5 5 5 [40, 30, 20, 10, 50, 60, 70, 80, 90] 4 4 6 [30, 20, 10, 40, 50, 60, 70, 80, 90] 3 3 7 [20, 10, 30, 40, 50, 60, 70, 80, 90] 2 2 8 [10, 20, 30, 40, 50, 60, 70, 80, 90] 1 1 Total Comparisons: 36, Total Swaps: 36"
     ],
     "type": "question"
   },
@@ -315,7 +315,7 @@
     "title": "Apply Selection Sort on the array: 29, 10, 14, 37, 13, 25, 8, 42, 17.",
     "url": "question-bank.html?open=u2q6",
     "chunks": [
-      "Initial array: [29, 10, 14, 37, 13, 25, 8, 42, 17]\nPassMin SelectedArray State\n18[8, 10, 14, 37, 13, 25, 29, 42, 17]\n210[8, 10, 14, 37, 13, 25, 29, 42, 17]\n313[8, 10, 13, 37, 14, 25, 29, 42, 17]\n414[8, 10, 13, 14, 37, 25, 29, 42, 17]\n517[8, 10, 13, 14, 17, 25, 29, 42, 37]\n625[8, 10, 13, 14, 17, 25, 29, 42, 37]\n729[8, 10, 13, 14, 17, 25, 29, 42, 37]\n837[8, 10, 13, 14, 17, 25, 29, 37, 42]"
+      "Initial array: [29, 10, 14, 37, 13, 25, 8, 42, 17] Pass Min Selected Array State 1 8 [8, 10, 14, 37, 13, 25, 29, 42, 17] 2 10 [8, 10, 14, 37, 13, 25, 29, 42, 17] 3 13 [8, 10, 13, 37, 14, 25, 29, 42, 17] 4 14 [8, 10, 13, 14, 37, 25, 29, 42, 17] 5 17 [8, 10, 13, 14, 17, 25, 29, 42, 37] 6 25 [8, 10, 13, 14, 17, 25, 29, 42, 37] 7 29 [8, 10, 13, 14, 17, 25, 29, 42, 37] 8 37 [8, 10, 13, 14, 17, 25, 29, 37, 42]"
     ],
     "type": "question"
   },
@@ -331,7 +331,7 @@
     "title": "Apply Selection Sort on: 64, 25, 12, 22, 11, 90, 34, 5, 78, 43.",
     "url": "question-bank.html?open=u2q7",
     "chunks": [
-      "Initial array: [64, 25, 12, 22, 11, 90, 34, 5, 78, 43]\nPassMin SelectedArray State\n15[5, 25, 12, 22, 11, 90, 34, 64, 78, 43]\n211[5, 11, 12, 22, 25, 90, 34, 64, 78, 43]\n312[5, 11, 12, 22, 25, 90, 34, 64, 78, 43]\n422[5, 11, 12, 22, 25, 90, 34, 64, 78, 43]\n525[5, 11, 12, 22, 25, 90, 34, 64, 78, 43]\n634[5, 11, 12, 22, 25, 34, 90, 64, 78, 43]\n743[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]\n864[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]\n978[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]"
+      "Initial array: [64, 25, 12, 22, 11, 90, 34, 5, 78, 43] Pass Min Selected Array State 1 5 [5, 25, 12, 22, 11, 90, 34, 64, 78, 43] 2 11 [5, 11, 12, 22, 25, 90, 34, 64, 78, 43] 3 12 [5, 11, 12, 22, 25, 90, 34, 64, 78, 43] 4 22 [5, 11, 12, 22, 25, 90, 34, 64, 78, 43] 5 25 [5, 11, 12, 22, 25, 90, 34, 64, 78, 43] 6 34 [5, 11, 12, 22, 25, 34, 90, 64, 78, 43] 7 43 [5, 11, 12, 22, 25, 34, 43, 64, 78, 90] 8 64 [5, 11, 12, 22, 25, 34, 43, 64, 78, 90] 9 78 [5, 11, 12, 22, 25, 34, 43, 64, 78, 90]"
     ],
     "type": "question"
   },
@@ -347,7 +347,7 @@
     "title": "Perform a complete dry run of Insertion Sort on: 45, 12, 78, 34, 23, 9, 56, 67, 18, 5.",
     "url": "question-bank.html?open=u2q8",
     "chunks": [
-      "Initial array: [45, 12, 78, 34, 23, 9, 56, 67, 18, 5]\nElement InsertedArray State\n12[12, 45, 78, 34, 23, 9, 56, 67, 18, 5]\n78[12, 45, 78, 34, 23, 9, 56, 67, 18, 5]\n34[12, 34, 45, 78, 23, 9, 56, 67, 18, 5]\n23[12, 23, 34, 45, 78, 9, 56, 67, 18, 5]\n9[9, 12, 23, 34, 45, 78, 56, 67, 18, 5]\n56[9, 12, 23, 34, 45, 56, 78, 67, 18, 5]\n67[9, 12, 23, 34, 45, 56, 67, 78, 18, 5]\n18[9, 12, 18, 23, 34, 45, 56, 67, 78, 5]\n5[5, 9, 12, 18, 23, 34, 45, 56, 67, 78]"
+      "Initial array: [45, 12, 78, 34, 23, 9, 56, 67, 18, 5] Element Inserted Array State 12 [12, 45, 78, 34, 23, 9, 56, 67, 18, 5] 78 [12, 45, 78, 34, 23, 9, 56, 67, 18, 5] 34 [12, 34, 45, 78, 23, 9, 56, 67, 18, 5] 23 [12, 23, 34, 45, 78, 9, 56, 67, 18, 5] 9 [9, 12, 23, 34, 45, 78, 56, 67, 18, 5] 56 [9, 12, 23, 34, 45, 56, 78, 67, 18, 5] 67 [9, 12, 23, 34, 45, 56, 67, 78, 18, 5] 18 [9, 12, 18, 23, 34, 45, 56, 67, 78, 5] 5 [5, 9, 12, 18, 23, 34, 45, 56, 67, 78]"
     ],
     "type": "question"
   },
@@ -363,7 +363,7 @@
     "title": "Apply Insertion Sort to the array: 9, 8, 7, 6, 5, 4, 3, 2, 1.",
     "url": "question-bank.html?open=u2q9",
     "chunks": [
-      "Initial array: [9, 8, 7, 6, 5, 4, 3, 2, 1]\nElement InsertedArray State\n8[8, 9, 7, 6, 5, 4, 3, 2, 1]\n7[7, 8, 9, 6, 5, 4, 3, 2, 1]\n6[6, 7, 8, 9, 5, 4, 3, 2, 1]\n5[5, 6, 7, 8, 9, 4, 3, 2, 1]\n4[4, 5, 6, 7, 8, 9, 3, 2, 1]\n3[3, 4, 5, 6, 7, 8, 9, 2, 1]\n2[2, 3, 4, 5, 6, 7, 8, 9, 1]\n1[1, 2, 3, 4, 5, 6, 7, 8, 9]"
+      "Initial array: [9, 8, 7, 6, 5, 4, 3, 2, 1] Element Inserted Array State 8 [8, 9, 7, 6, 5, 4, 3, 2, 1] 7 [7, 8, 9, 6, 5, 4, 3, 2, 1] 6 [6, 7, 8, 9, 5, 4, 3, 2, 1] 5 [5, 6, 7, 8, 9, 4, 3, 2, 1] 4 [4, 5, 6, 7, 8, 9, 3, 2, 1] 3 [3, 4, 5, 6, 7, 8, 9, 2, 1] 2 [2, 3, 4, 5, 6, 7, 8, 9, 1] 1 [1, 2, 3, 4, 5, 6, 7, 8, 9]"
     ],
     "type": "question"
   },
@@ -379,7 +379,7 @@
     "title": "Construct a Max Heap from the following array using the bottom-up heap construction method: 45, 20, 14, 12, 31, 7, 11, 13, 8, 10.",
     "url": "question-bank.html?open=u2q10",
     "chunks": [
-      "Initial Array: [45, 20, 14, 12, 31, 7, 11, 13, 8, 10]\nNodes from index (n/2 - 1) down to 0 are heapified.\n\ni = 4 (value 31): Children are 10. 31 > 10. No swap.\ni = 3 (value 12): Children are 13, 8. Swap 12 with 13. State: [45, 20, 14, 13, 31, 7, 11, 12, 8, 10]\ni = 2 (value 14): Children are 7, 11. 14 > 11, 7. No swap.\ni = 1 (value 20): Children are 13, 31. Swap 20 with 31. State: [45, 31, 14, 13, 20, 7, 11, 12, 8, 10]\ni = 0 (value 45): Children are 31, 14. 45 > 31. No swap.\nFinal Max Heap: [45, 31, 14, 13, 20, 7, 11, 12, 8, 10]"
+      "Initial Array: [45, 20, 14, 12, 31, 7, 11, 13, 8, 10] Nodes from index (n/2 - 1) down to 0 are heapified. i = 4 (value 31): Children are 10. 31 > 10. No swap. i = 3 (value 12): Children are 13, 8. Swap 12 with 13. State: [45, 20, 14, 13, 31, 7, 11, 12, 8, 10] i = 2 (value 14): Children are 7, 11. 14 > 11, 7. No swap. i = 1 (value 20): Children are 13, 31. Swap 20 with 31. State: [45, 31, 14, 13, 20, 7, 11, 12, 8, 10] i = 0 (value 45): Children are 31, 14. 45 > 31. No swap. Final Max Heap: [45, 31, 14, 13, 20, 7, 11, 12, 8, 10]"
     ],
     "type": "question"
   },
@@ -395,7 +395,7 @@
     "title": "Perform a complete dry run of Heap Sort on: 25, 17, 36, 2, 3, 100, 1, 19, 7.",
     "url": "question-bank.html?open=u2q11",
     "chunks": [
-      "Initial: [25, 17, 36, 2, 3, 100, 1, 19, 7]\nStep 1: Build Max Heap\n\ni=3 (value 2): children 19, 7. Swap with 19 -> [..., 19, 3, 100, 1, 2, 7]\ni=2 (value 36): children 100, 1. Swap with 100 -> [..., 100, 1, 2, 7]\ni=1 (value 17): children 19, 3. Swap with 19 -> [..., 19, 100, ...]\ni=0 (value 25): children 19, 100. Swap with 100 -> [100, 19, 25, ...]\nMax Heap: [100, 19, 36, 17, 3, 25, 1, 2, 7]\nStep 2: Extract & Heapify\n\nSwap 100 & 7 -> Heapify(0) -> [36, 19, 25, 17, 3, 7, 1, 2] | Sorted: [100]\nSwap 36 & 2 -> Heapify(0) -> [25, 19, 7, 17, 3, 2, 1] | Sorted: [36, 100]\n... process continues until sorted ...\nFinal Array: [1, 2, 3, 7, 17, 19, 25, 36, 100]"
+      "Initial: [25, 17, 36, 2, 3, 100, 1, 19, 7] Step 1: Build Max Heap i=3 (value 2): children 19, 7. Swap with 19 -> [..., 19, 3, 100, 1, 2, 7] i=2 (value 36): children 100, 1. Swap with 100 -> [..., 100, 1, 2, 7] i=1 (value 17): children 19, 3. Swap with 19 -> [..., 19, 100, ...] i=0 (value 25): children 19, 100. Swap with 100 -> [100, 19, 25, ...] Max Heap: [100, 19, 36, 17, 3, 25, 1, 2, 7] Step 2: Extract & Heapify Swap 100 & 7 -> Heapify(0) -> [36, 19, 25, 17, 3, 7, 1, 2] | Sorted: [100] Swap 36 & 2 -> Heapify(0) -> [25, 19, 7, 17, 3, 2, 1] | Sorted: [36, 100] ... process continues until sorted ... Final Array: [1, 2, 3, 7, 17, 19, 25, 36, 100]"
     ],
     "type": "question"
   },
@@ -411,7 +411,7 @@
     "title": "Apply Counting Sort on the array: 4, 2, 7, 3, 2, 1, 6, 4, 3, 5.",
     "url": "question-bank.html?open=u2q12",
     "chunks": [
-      "Input: [4, 2, 7, 3, 2, 1, 6, 4, 3, 5]\nCount array: [0, 1, 2, 2, 2, 1, 1, 1]\nCumulative count array: [0, 0, 1, 3, 5, 7, 8, 9]\nOutput array: [1, 2, 2, 3, 3, 4, 4, 5, 6, 7]"
+      "Input: [4, 2, 7, 3, 2, 1, 6, 4, 3, 5] Count array: [0, 1, 2, 2, 2, 1, 1, 1] Cumulative count array: [0, 0, 1, 3, 5, 7, 8, 9] Output array: [1, 2, 2, 3, 3, 4, 4, 5, 6, 7]"
     ],
     "type": "question"
   },
@@ -427,7 +427,7 @@
     "title": "Perform a complete dry run of Counting Sort on: 3, 1, 4, 1, 2, 7, 5, 3, 6, 2.",
     "url": "question-bank.html?open=u2q13",
     "chunks": [
-      "Input: [3, 1, 4, 1, 2, 7, 5, 3, 6, 2]\nCount array: [0, 2, 2, 2, 1, 1, 1, 1]\nCumulative count array: [0, 0, 2, 4, 6, 7, 8, 9]\nOutput array: [1, 1, 2, 2, 3, 3, 4, 5, 6, 7]"
+      "Input: [3, 1, 4, 1, 2, 7, 5, 3, 6, 2] Count array: [0, 2, 2, 2, 1, 1, 1, 1] Cumulative count array: [0, 0, 2, 4, 6, 7, 8, 9] Output array: [1, 1, 2, 2, 3, 3, 4, 5, 6, 7]"
     ],
     "type": "question"
   },
@@ -443,7 +443,7 @@
     "title": "Perform a complete dry run of Radix Sort on: 170, 45, 75, 90, 802, 24, 2, 66, 329, 501.",
     "url": "question-bank.html?open=u2q14",
     "chunks": [
-      "Initial Array: [170, 45, 75, 90, 802, 24, 2, 66, 329, 501]\nPass 1 (Units digit):\nBuckets / Sorted: [170, 90, 501, 802, 2, 24, 45, 75, 66, 329]\nPass 2 (Tens digit):\nBuckets / Sorted: [802, 2, 501, 24, 329, 45, 66, 170, 75, 90]\nPass 3 (Hundreds digit):\nBuckets / Sorted: [2, 24, 45, 66, 75, 90, 170, 329, 501, 802]\nFinal Sorted Array: [2, 24, 45, 66, 75, 90, 170, 329, 501, 802]"
+      "Initial Array: [170, 45, 75, 90, 802, 24, 2, 66, 329, 501] Pass 1 (Units digit): Buckets / Sorted: [170, 90, 501, 802, 2, 24, 45, 75, 66, 329] Pass 2 (Tens digit): Buckets / Sorted: [802, 2, 501, 24, 329, 45, 66, 170, 75, 90] Pass 3 (Hundreds digit): Buckets / Sorted: [2, 24, 45, 66, 75, 90, 170, 329, 501, 802] Final Sorted Array: [2, 24, 45, 66, 75, 90, 170, 329, 501, 802]"
     ],
     "type": "question"
   },
@@ -459,7 +459,7 @@
     "title": "Apply Radix Sort on: 329, 457, 657, 839, 436, 720, 355, 12, 98.",
     "url": "question-bank.html?open=u2q15",
     "chunks": [
-      "Initial Array: [329, 457, 657, 839, 436, 720, 355, 12, 98]\nPass 1 (Units): [720, 12, 355, 436, 457, 657, 98, 329, 839]\nPass 2 (Tens): [12, 720, 329, 436, 839, 355, 457, 657, 98]\nPass 3 (Hundreds): [12, 98, 329, 355, 436, 457, 657, 720, 839]\nThe sorting algorithm (like counting sort) at each digit must be stable so that elements with the same current digit remain in the relative order established by previous, less-significant digits."
+      "Initial Array: [329, 457, 657, 839, 436, 720, 355, 12, 98] Pass 1 (Units): [720, 12, 355, 436, 457, 657, 98, 329, 839] Pass 2 (Tens): [12, 720, 329, 436, 839, 355, 457, 657, 98] Pass 3 (Hundreds): [12, 98, 329, 355, 436, 457, 657, 720, 839] The sorting algorithm (like counting sort) at each digit must be stable so that elements with the same current digit remain in the relative order established by previous, less-significant digits."
     ],
     "type": "question"
   },
@@ -475,7 +475,7 @@
     "title": "Perform a complete dry run of Bucket Sort on: 0.42, 0.32, 0.73, 0.52, 0.25, 0.91, 0.63, 0.18, 0.37, 0.81.",
     "url": "question-bank.html?open=u2q16",
     "chunks": [
-      "Initial Array: [0.42, 0.32, 0.73, 0.52, 0.25, 0.91, 0.63, 0.18, 0.37, 0.81]\n10 buckets (index 0 to 9) computed by floor(10 * value):\n\nB1: [0.18]\nB2: [0.25]\nB3: [0.32, 0.37]\nB4: [0.42]\nB5: [0.52]\nB6: [0.63]\nB7: [0.73]\nB8: [0.81]\nB9: [0.91]\nSort each bucket (already sorted or trivial). Concatenate all buckets.\nFinal Sorted Array: [0.18, 0.25, 0.32, 0.37, 0.42, 0.52, 0.63, 0.73, 0.81, 0.91]"
+      "Initial Array: [0.42, 0.32, 0.73, 0.52, 0.25, 0.91, 0.63, 0.18, 0.37, 0.81] 10 buckets (index 0 to 9) computed by floor(10 * value): B1: [0.18] B2: [0.25] B3: [0.32, 0.37] B4: [0.42] B5: [0.52] B6: [0.63] B7: [0.73] B8: [0.81] B9: [0.91] Sort each bucket (already sorted or trivial). Concatenate all buckets. Final Sorted Array: [0.18, 0.25, 0.32, 0.37, 0.42, 0.52, 0.63, 0.73, 0.81, 0.91]"
     ],
     "type": "question"
   },
@@ -491,7 +491,7 @@
     "title": "Compare Bubble, Selection, Insertion, Heap, Counting, Radix, Bucket Sort complexities.",
     "url": "question-bank.html?open=u2q17",
     "chunks": [
-      "AlgorithmBest-caseAverage-caseWorst-case\nBubble SortO(n)O(n2)O(n2)\nSelection SortO(n2)O(n2)O(n2)\nInsertion SortO(n)O(n2)O(n2)\nHeap SortO(n log n)O(n log n)O(n log n)\nCounting SortO(n+k)O(n+k)O(n+k)\nRadix SortO(d(n+k))O(d(n+k))O(d(n+k))\nBucket SortO(n+k)O(n)O(n2)"
+      "Algorithm Best-case Average-case Worst-case Bubble Sort O(n) O(n 2 ) O(n 2 ) Selection Sort O(n 2 ) O(n 2 ) O(n 2 ) Insertion Sort O(n) O(n 2 ) O(n 2 ) Heap Sort O(n log n) O(n log n) O(n log n) Counting Sort O(n+k) O(n+k) O(n+k) Radix Sort O(d(n+k)) O(d(n+k)) O(d(n+k)) Bucket Sort O(n+k) O(n) O(n 2 )"
     ],
     "type": "question"
   },
@@ -507,7 +507,7 @@
     "title": "Compare Bubble, Selection, Insertion on 64, 34, 25, 12, 22, 11, 90, 45, 78, 33.",
     "url": "question-bank.html?open=u2q18",
     "chunks": [
-      "All three have worst-case O(n^2). However, for an almost-sorted array, Insertion Sort is highly preferable because its best-case time complexity approaches O(n) as it only compares a few elements before finding the correct position. Bubble sort can also be O(n) if a flag is used to break early, but it generally involves more swaps. Selection Sort is always O(n^2) comparisons."
+      "All three have worst-case O(n^2). However, for an almost-sorted array , Insertion Sort is highly preferable because its best-case time complexity approaches O(n) as it only compares a few elements before finding the correct position. Bubble sort can also be O(n) if a flag is used to break early, but it generally involves more swaps. Selection Sort is always O(n^2) comparisons."
     ],
     "type": "question"
   },
@@ -523,7 +523,7 @@
     "title": "Perform a complete dry run of Heap Sort on: 20, 15, 30, 5, 10, 25, 35, 2, 8, 12.",
     "url": "question-bank.html?open=u2q19",
     "chunks": [
-      "Initial Array: [20, 15, 30, 5, 10, 25, 35, 2, 8, 12]\nBuild Max Heap:\nHeapify from index 4 down to 0.\nResulting Max Heap: [35, 15, 30, 8, 12, 25, 20, 2, 5, 10]\nExtraction & Heapify:\nExtract 35, move 10 to root, heapify. -> [30, 15, 25, 8, 12, 10, 20, 2, 5] | [35]\n... continue extracting max ...\nFinal Sorted Array: [2, 5, 8, 10, 12, 15, 20, 25, 30, 35]"
+      "Initial Array: [20, 15, 30, 5, 10, 25, 35, 2, 8, 12] Build Max Heap: Heapify from index 4 down to 0. Resulting Max Heap: [35, 15, 30, 8, 12, 25, 20, 2, 5, 10] Extraction & Heapify: Extract 35, move 10 to root, heapify. -> [30, 15, 25, 8, 12, 10, 20, 2, 5] | [35] ... continue extracting max ... Final Sorted Array: [2, 5, 8, 10, 12, 15, 20, 25, 30, 35]"
     ],
     "type": "question"
   },
@@ -539,7 +539,7 @@
     "title": "Determine whether array represents a Max Heap: 16, 14, 10, 8, 7, 9, 3, 2, 4, 1.",
     "url": "question-bank.html?open=u2q20",
     "chunks": [
-      "For an array to be a Max Heap, every parent A[i] must be >= its children A[2i+1] and A[2i+2].\n\ni=0 (16): children 14, 10. Valid.\ni=1 (14): children 8, 7. Valid.\ni=2 (10): children 9, 3. Valid.\ni=3 (8): children 2, 4. Valid.\ni=4 (7): child 1. Valid.\nThe array is a valid Max Heap. No violations found."
+      "For an array to be a Max Heap, every parent A[i] must be >= its children A[2i+1] and A[2i+2]. i=0 (16): children 14, 10. Valid. i=1 (14): children 8, 7. Valid. i=2 (10): children 9, 3. Valid. i=3 (8): children 2, 4. Valid. i=4 (7): child 1. Valid. The array is a valid Max Heap. No violations found."
     ],
     "type": "question"
   },
@@ -555,7 +555,7 @@
     "title": "Explain the difference between BUILD-MAX-HEAP and MAX-HEAPIFY.",
     "url": "question-bank.html?open=u2q21",
     "chunks": [
-      "MAX-HEAPIFY: Maintains the max-heap property for a given node, assuming its left and right subtrees are already max heaps. It has a time complexity of O(log n).\nBUILD-MAX-HEAP: Constructs a max heap from an unordered array by calling MAX-HEAPIFY in a bottom-up manner on all non-leaf nodes. It has a time complexity of O(n)."
+      "MAX-HEAPIFY: Maintains the max-heap property for a given node, assuming its left and right subtrees are already max heaps. It has a time complexity of O(log n). BUILD-MAX-HEAP: Constructs a max heap from an unordered array by calling MAX-HEAPIFY in a bottom-up manner on all non-leaf nodes. It has a time complexity of O(n)."
     ],
     "type": "question"
   },
@@ -571,7 +571,7 @@
     "title": "Define a heap. Differentiate between a Max Heap and a Min Heap.",
     "url": "question-bank.html?open=u2q22",
     "chunks": [
-      "A Heap is a specialized tree-based data structure that satisfies the heap property, typically implemented as an almost complete binary tree.\n\nMax Heap: The value of each node is greater than or equal to the values of its children. The largest element is at the root. Example: [100, 19, 36]\nMin Heap: The value of each node is less than or equal to the values of its children. The smallest element is at the root. Example: [1, 2, 3]"
+      "A Heap is a specialized tree-based data structure that satisfies the heap property, typically implemented as an almost complete binary tree. Max Heap: The value of each node is greater than or equal to the values of its children. The largest element is at the root. Example: [100, 19, 36] Min Heap: The value of each node is less than or equal to the values of its children. The smallest element is at the root. Example: [1, 2, 3]"
     ],
     "type": "question"
   },
@@ -587,7 +587,7 @@
     "title": "Define the Divide and Conquer paradigm. Explain its three basic steps with a suitable example.",
     "url": "question-bank.html?open=q1",
     "chunks": [
-      "Divide and Conquer Paradigm\n\nThe Divide and Conquer paradigm is an algorithmic design strategy that solves a problem by recursively breaking it down into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. The solutions to the sub-problems are then combined to give a solution to the original problem.\n\nIt consists of three basic steps:\n\nDivide: Break the given problem into smaller sub-problems.\n\nConquer: Recursively solve these sub-problems. If the sub-problem size is small enough, solve it directly (base case).\n\nCombine: Merge the solutions of the sub-problems to form the solution of the original problem.\n\nExample: Merge Sort\n\nIn Merge Sort:\n\nDivide: Divide the unsorted array of size n into two sub-arrays of size n/2.\n\nConquer: Recursively sort the two sub-arrays using Merge Sort.\n\nCombine: Merge the two sorted sub-arrays into a single sorted array."
+      "Divide and Conquer Paradigm The Divide and Conquer paradigm is an algorithmic design strategy that solves a problem by recursively breaking it down into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. The solutions to the sub-problems are then combined to give a solution to the original problem. It consists of three basic steps: Divide: Break the given problem into smaller sub-problems. Conquer: Recursively solve these sub-problems. If the sub-problem size is small enough, solve it directly (base case). Combine: Merge the solutions of the sub-problems to form the solution of the original problem. Example: Merge Sort In Merge Sort: Divide: Divide the unsorted array of size n into two sub-arrays of size n/2 . Conquer: Recursively sort the two sub-arrays using Merge Sort. Combine: Merge the two sorted sub-arrays into a single sorted array."
     ],
     "type": "question"
   },
@@ -603,7 +603,7 @@
     "title": "What are the divide, conquer, and combine steps in a Divide and Conquer algorithm?",
     "url": "question-bank.html?open=q2",
     "chunks": [
-      "The three main steps of the Divide and Conquer strategy are:\n\nDivide: This step involves breaking the original problem into a set of smaller sub-problems. The sub-problems should represent a smaller instance of the same original problem.\n\nConquer: This step involves solving the sub-problems recursively. If the sub-problem is small enough (the base case), it is solved directly without further division.\n\nCombine: This step involves taking the solutions to the sub-problems and merging them together to formulate the solution to the original problem."
+      "The three main steps of the Divide and Conquer strategy are: Divide: This step involves breaking the original problem into a set of smaller sub-problems. The sub-problems should represent a smaller instance of the same original problem. Conquer: This step involves solving the sub-problems recursively. If the sub-problem is small enough (the base case), it is solved directly without further division. Combine: This step involves taking the solutions to the sub-problems and merging them together to formulate the solution to the original problem."
     ],
     "type": "question"
   },
@@ -619,7 +619,7 @@
     "title": "Explain the general structure of a Divide and Conquer algorithm. How is it different from an iterative algorithm?",
     "url": "question-bank.html?open=q3",
     "chunks": [
-      "General Structure\n\nThe general structure of a Divide and Conquer algorithm can be represented recursively:\n\nAlgorithm DAndC(P)\n{\n    if Small(P) then\n        return S(P); // Solve directly\n    else\n    {\n        Divide P into smaller instances P1, P2, ..., Pk, k \u2265 1;\n        Apply DAndC to each of these subproblems;\n        return Combine(DAndC(P1), DAndC(P2), ..., DAndC(Pk));\n    }\n}\n\nDifference from Iterative Algorithms\n\nControl Flow: Divide and Conquer algorithms rely heavily on recursion (functions calling themselves), whereas iterative algorithms use loops (for, while) to repeat tasks.\n\nState Management: In recursion, state is maintained implicitly by the call stack. In iteration, variables explicitly hold state (like loop counters).\n\nApproach: Divide and conquer works top-down (breaking large to small), while dynamic programming or iterative methods can work bottom-up (solving small to build large)."
+      "General Structure The general structure of a Divide and Conquer algorithm can be represented recursively: Algorithm DAndC(P) { if Small(P) then return S(P); // Solve directly else { Divide P into smaller instances P1, P2, ..., Pk, k \u2265 1; Apply DAndC to each of these subproblems; return Combine(DAndC(P1), DAndC(P2), ..., DAndC(Pk)); } } Difference from Iterative Algorithms Control Flow: Divide and Conquer algorithms rely heavily on recursion (functions calling themselves), whereas iterative algorithms use loops (for, while) to repeat tasks. State Management: In recursion, state is maintained implicitly by the call stack. In iteration, variables explicitly hold state (like loop counters). Approach: Divide and conquer works top-down (breaking large to small), while dynamic programming or iterative methods can work bottom-up (solving small to build large)."
     ],
     "type": "question"
   },
@@ -635,7 +635,7 @@
     "title": "Identify whether the following algorithms use the Divide and Conquer technique. Give reasons for your answer: Binary Search, Merge Sort, Quick Sort, Bubble Sort",
     "url": "question-bank.html?open=q4",
     "chunks": [
-      "Binary Search: Yes. It divides the array into two halves, compares the target with the middle element, and recursively conquers only one of the halves. The combine step is trivial (returning the index).\n\nMerge Sort: Yes. It divides the array into two halves, recursively sorts each half (conquer), and then merges the two sorted halves (combine).\n\nQuick Sort: Yes. It chooses a pivot to divide the array into two partitions (smaller than pivot and greater than pivot), recursively sorts the partitions (conquer). Combine is trivial as sorting is done in place.\n\nBubble Sort: No. It is an iterative comparison-based algorithm that repeatedly swaps adjacent elements if they are in the wrong order. It does not divide the problem into smaller subproblems or use recursion."
+      "Binary Search: Yes . It divides the array into two halves, compares the target with the middle element, and recursively conquers only one of the halves. The combine step is trivial (returning the index). Merge Sort: Yes . It divides the array into two halves, recursively sorts each half (conquer), and then merges the two sorted halves (combine). Quick Sort: Yes . It chooses a pivot to divide the array into two partitions (smaller than pivot and greater than pivot), recursively sorts the partitions (conquer). Combine is trivial as sorting is done in place. Bubble Sort: No . It is an iterative comparison-based algorithm that repeatedly swaps adjacent elements if they are in the wrong order. It does not divide the problem into smaller subproblems or use recursion."
     ],
     "type": "question"
   },
@@ -651,7 +651,7 @@
     "title": "Explain the advantages and limitations of the Divide and Conquer approach.",
     "url": "question-bank.html?open=q5",
     "chunks": [
-      "Advantages\n\nSolving Complex Problems: Makes solving conceptually difficult problems easier by breaking them down into simpler, smaller sub-problems.\n\nParallelism: Sub-problems are independent and can often be executed in parallel on multi-core processors.\n\nMemory Access Efficiency: Can be designed to optimize cache usage, as smaller sub-problems fit easily into the CPU cache.\n\nEfficiency: Often yields algorithms with faster time complexities, e.g., reducing O(n\u00b2) to O(n log n) in sorting.\n\nLimitations\n\nOverhead: The recursion and function call stack overhead can make them slower for small inputs compared to simple iterative approaches.\n\nSpace Complexity: Deep recursion trees can lead to stack overflow or require excessive auxiliary space.\n\nRepeated Subproblems: If not careful, overlapping subproblems can be solved multiple times, leading to inefficiencies (better handled by Dynamic Programming)."
+      "Advantages Solving Complex Problems: Makes solving conceptually difficult problems easier by breaking them down into simpler, smaller sub-problems. Parallelism: Sub-problems are independent and can often be executed in parallel on multi-core processors. Memory Access Efficiency: Can be designed to optimize cache usage, as smaller sub-problems fit easily into the CPU cache. Efficiency: Often yields algorithms with faster time complexities, e.g., reducing O(n\u00b2) to O(n log n) in sorting. Limitations Overhead: The recursion and function call stack overhead can make them slower for small inputs compared to simple iterative approaches. Space Complexity: Deep recursion trees can lead to stack overflow or require excessive auxiliary space. Repeated Subproblems: If not careful, overlapping subproblems can be solved multiple times, leading to inefficiencies (better handled by Dynamic Programming)."
     ],
     "type": "question"
   },
@@ -667,7 +667,7 @@
     "title": "What is a recurrence relation? Explain its role in analyzing the time complexity of recursive algorithms.",
     "url": "question-bank.html?open=q6",
     "chunks": [
-      "A recurrence relation is an equation or inequality that describes a mathematical function in terms of its value on smaller inputs.\n\nRole in Analyzing Time Complexity:\n\nWhen an algorithm contains a recursive call, its running time can be described by a recurrence relation. For example, in Merge Sort, solving a problem of size n involves two subproblems of size n/2, and merging takes linear time O(n). This gives the recurrence:\n\nT(n) = 2T(n/2) + O(n)\n\nBy solving this recurrence relation (using methods like the Substitution Method, Recursion Tree Method, or Master Theorem), we can express the time complexity of the algorithm in Big-O notation (e.g., O(n log n))."
+      "A recurrence relation is an equation or inequality that describes a mathematical function in terms of its value on smaller inputs. Role in Analyzing Time Complexity: When an algorithm contains a recursive call, its running time can be described by a recurrence relation. For example, in Merge Sort, solving a problem of size n involves two subproblems of size n/2 , and merging takes linear time O(n) . This gives the recurrence: T(n) = 2T(n/2) + O(n) By solving this recurrence relation (using methods like the Substitution Method, Recursion Tree Method, or Master Theorem), we can express the time complexity of the algorithm in Big-O notation (e.g., O(n log n))."
     ],
     "type": "question"
   },
@@ -683,7 +683,7 @@
     "title": "Solve the following recurrence using the substitution method: T(n) = 2T(n/2) + n",
     "url": "question-bank.html?open=q7",
     "chunks": [
-      "Recurrence: T(n) = 2T(n/2) + n\n\nGuess: T(n) = O(n log n). We need to prove that T(n) \u2264 c \u00b7 n log n for some constant c > 0.\n\nProof by induction:\n\nAssume the bound holds for n/2, i.e., T(n/2) \u2264 c \u00b7 (n/2) log(n/2).\n\nSubstitute this into the recurrence:\n\n T(n) \u2264 2 \u00b7 [c \u00b7 (n/2) log(n/2)] + n\n\n T(n) \u2264 c \u00b7 n log(n/2) + n\n\n T(n) \u2264 c \u00b7 n(log n - log 2) + n\n\n T(n) \u2264 c \u00b7 n log n - c \u00b7 n + n\n\nWe want T(n) \u2264 c \u00b7 n log n. This holds true if:\n\n c \u00b7 n log n - c \u00b7 n + n \u2264 c \u00b7 n log n\n\n -c \u00b7 n + n \u2264 0\n\n c \u2265 1\n\nSince we can choose c \u2265 1, the guess is correct.\n\nResult: T(n) = O(n log n)"
+      "Recurrence: T(n) = 2T(n/2) + n Guess: T(n) = O(n log n). We need to prove that T(n) \u2264 c \u00b7 n log n for some constant c > 0. Proof by induction: Assume the bound holds for n/2, i.e., T(n/2) \u2264 c \u00b7 (n/2) log(n/2). Substitute this into the recurrence: T(n) \u2264 2 \u00b7 [c \u00b7 (n/2) log(n/2)] + n T(n) \u2264 c \u00b7 n log(n/2) + n T(n) \u2264 c \u00b7 n(log n - log 2) + n T(n) \u2264 c \u00b7 n log n - c \u00b7 n + n We want T(n) \u2264 c \u00b7 n log n. This holds true if: c \u00b7 n log n - c \u00b7 n + n \u2264 c \u00b7 n log n -c \u00b7 n + n \u2264 0 c \u2265 1 Since we can choose c \u2265 1, the guess is correct. Result: T(n) = O(n log n)"
     ],
     "type": "question"
   },
@@ -699,7 +699,7 @@
     "title": "Solve the following recurrence using the substitution method: T(n) = T(n/2) + 1",
     "url": "question-bank.html?open=q12",
     "chunks": [
-      "Recurrence: T(n) = T(n/2) + 1\n\nGuess: T(n) = O(log n). We prove T(n) \u2264 c \u00b7 log n for some constant c.\n\nProof by induction:\n\nAssume T(n/2) \u2264 c \u00b7 log(n/2)\n\nSubstitute into recurrence:\n\n T(n) \u2264 c \u00b7 log(n/2) + 1\n\n T(n) \u2264 c \u00b7 (log n - 1) + 1\n\n T(n) \u2264 c \u00b7 log n - c + 1\n\nWe want T(n) \u2264 c \u00b7 log n. This requires:\n\n - c + 1 \u2264 0 \u21d2 c \u2265 1\n\nSince we can find a constant c (c \u2265 1) such that the condition holds, the guess is correct.\n\nResult: T(n) = O(log n)"
+      "Recurrence: T(n) = T(n/2) + 1 Guess: T(n) = O(log n). We prove T(n) \u2264 c \u00b7 log n for some constant c. Proof by induction: Assume T(n/2) \u2264 c \u00b7 log(n/2) Substitute into recurrence: T(n) \u2264 c \u00b7 log(n/2) + 1 T(n) \u2264 c \u00b7 (log n - 1) + 1 T(n) \u2264 c \u00b7 log n - c + 1 We want T(n) \u2264 c \u00b7 log n. This requires: - c + 1 \u2264 0 \u21d2 c \u2265 1 Since we can find a constant c (c \u2265 1) such that the condition holds, the guess is correct. Result: T(n) = O(log n)"
     ],
     "type": "question"
   },
@@ -715,7 +715,7 @@
     "title": "Solve the following recurrence using the Master Method: T(n) = 2T(n/2) + n",
     "url": "question-bank.html?open=q14",
     "chunks": [
-      "The Master Theorem applies to recurrences of the form: T(n) = aT(n/b) + f(n)\n\nGiven: T(n) = 2T(n/2) + n\n\na = 2\n\nb = 2\n\nf(n) = n\n\nCalculate nlogba:\n\nnlog22 = n1 = n\n\nCompare f(n) with nlogba:\n\nf(n) = n, and nlogba = n. They are equal, which matches Case 2 of the Master Theorem (f(n) = \u0398(nlogba)).\n\nFormula for Case 2: T(n) = \u0398(nlogba log n)\n\nResult: T(n) = \u0398(n log n)"
+      "The Master Theorem applies to recurrences of the form: T(n) = aT(n/b) + f(n) Given: T(n) = 2T(n/2) + n a = 2 b = 2 f(n) = n Calculate n log b a : n log 2 2 = n 1 = n Compare f(n) with n log b a : f(n) = n, and n log b a = n. They are equal, which matches Case 2 of the Master Theorem (f(n) = \u0398(n log b a )). Formula for Case 2: T(n) = \u0398(n log b a log n) Result: T(n) = \u0398(n log n)"
     ],
     "type": "question"
   },
@@ -731,7 +731,7 @@
     "title": "Solve the following recurrence using the Master Method: T(n) = 4T(n/2) + n",
     "url": "question-bank.html?open=q15",
     "chunks": [
-      "Given: T(n) = 4T(n/2) + n\n\na = 4\n\nb = 2\n\nf(n) = n\n\nCalculate nlogba:\n\nnlog24 = n2\n\nCompare f(n) with nlogba:\n\nf(n) = O(n2 - \u03b5) for \u03b5 = 1. Since f(n) grows polynomially slower than nlogba, this is Case 1 of the Master Theorem.\n\nFormula for Case 1: T(n) = \u0398(nlogba)\n\nResult: T(n) = \u0398(n2)"
+      "Given: T(n) = 4T(n/2) + n a = 4 b = 2 f(n) = n Calculate n log b a : n log 2 4 = n 2 Compare f(n) with n log b a : f(n) = O(n 2 - \u03b5 ) for \u03b5 = 1. Since f(n) grows polynomially slower than n log b a , this is Case 1 of the Master Theorem. Formula for Case 1: T(n) = \u0398(n log b a ) Result: T(n) = \u0398(n 2 )"
     ],
     "type": "question"
   },
@@ -747,7 +747,7 @@
     "title": "Solve the following recurrence using the Master Method: T(n) = 4T(n/2) + n\u00b2",
     "url": "question-bank.html?open=q16",
     "chunks": [
-      "Given: T(n) = 4T(n/2) + n\u00b2\n\na = 4\n\nb = 2\n\nf(n) = n\u00b2\n\nCalculate nlogba:\n\nnlog24 = n2\n\nCompare f(n) with nlogba:\n\nf(n) = n\u00b2 and nlogba = n\u00b2. They are equal. This matches Case 2 of the Master Theorem (f(n) = \u0398(nlogba)).\n\nFormula for Case 2: T(n) = \u0398(nlogba log n)\n\nResult: T(n) = \u0398(n\u00b2 log n)"
+      "Given: T(n) = 4T(n/2) + n\u00b2 a = 4 b = 2 f(n) = n\u00b2 Calculate n log b a : n log 2 4 = n 2 Compare f(n) with n log b a : f(n) = n\u00b2 and n log b a = n\u00b2. They are equal. This matches Case 2 of the Master Theorem (f(n) = \u0398(n log b a )). Formula for Case 2: T(n) = \u0398(n log b a log n) Result: T(n) = \u0398(n\u00b2 log n)"
     ],
     "type": "question"
   },
@@ -763,7 +763,7 @@
     "title": "Solve the following recurrence using the Master Method: T(n) = 8T(n/2) + n\u00b2",
     "url": "question-bank.html?open=q17",
     "chunks": [
-      "Given: T(n) = 8T(n/2) + n\u00b2\n\na = 8\n\nb = 2\n\nf(n) = n\u00b2\n\nCalculate nlogba:\n\nnlog28 = n3\n\nCompare f(n) with nlogba:\n\nf(n) = O(n3 - \u03b5) for \u03b5 = 1. Since f(n) grows polynomially slower than nlogba, this is Case 1 of the Master Theorem.\n\nFormula for Case 1: T(n) = \u0398(nlogba)\n\nResult: T(n) = \u0398(n3)"
+      "Given: T(n) = 8T(n/2) + n\u00b2 a = 8 b = 2 f(n) = n\u00b2 Calculate n log b a : n log 2 8 = n 3 Compare f(n) with n log b a : f(n) = O(n 3 - \u03b5 ) for \u03b5 = 1. Since f(n) grows polynomially slower than n log b a , this is Case 1 of the Master Theorem. Formula for Case 1: T(n) = \u0398(n log b a ) Result: T(n) = \u0398(n 3 )"
     ],
     "type": "question"
   },
@@ -779,7 +779,7 @@
     "title": "Solve the following recurrence using the Master Method: T(n) = T(n/2) + 1",
     "url": "question-bank.html?open=q18",
     "chunks": [
-      "Given: T(n) = T(n/2) + 1\n\na = 1\n\nb = 2\n\nf(n) = 1 (which is n0)\n\nCalculate nlogba:\n\nnlog21 = n0 = 1\n\nCompare f(n) with nlogba:\n\nf(n) = 1, and nlogba = 1. They are equal, which matches Case 2 of the Master Theorem (f(n) = \u0398(nlogba)).\n\nFormula for Case 2: T(n) = \u0398(nlogba log n)\n\nResult: T(n) = \u0398(1 \u00b7 log n) = \u0398(log n)"
+      "Given: T(n) = T(n/2) + 1 a = 1 b = 2 f(n) = 1 (which is n 0 ) Calculate n log b a : n log 2 1 = n 0 = 1 Compare f(n) with n log b a : f(n) = 1, and n log b a = 1. They are equal, which matches Case 2 of the Master Theorem (f(n) = \u0398(n log b a )). Formula for Case 2: T(n) = \u0398(n log b a log n) Result: T(n) = \u0398(1 \u00b7 log n) = \u0398(log n)"
     ],
     "type": "question"
   },
@@ -795,7 +795,7 @@
     "title": "Perform a complete dry run of Binary Search on the sorted array: 5, 12, 18, 23, 31, 37, 45, 52, 64, 71, 85. Search for the element 45. Show the values of low, high, mid, and the comparison at every step.",
     "url": "question-bank.html?open=q19",
     "chunks": [
-      "Array: A = [5, 12, 18, 23, 31, 37, 45, 52, 64, 71, 85]\n\nIndices: 0 to 10 (size n=11)\n\nTarget (x): 45\n\nSteplowhighmid = (low+high)/2A[mid]ComparisonAction\n\n1010(0+10)/2 = 5A[5] = 3737 < 45x is greater, search right half. Set low = mid + 1 = 6.\n\n2610(6+10)/2 = 8A[8] = 6464 > 45x is smaller, search left half. Set high = mid - 1 = 7.\n\n367(6+7)/2 = 6A[6] = 4545 == 45Match found! Return index 6.\n\nResult: Element 45 found at index 6."
+      "Array: A = [5, 12, 18, 23, 31, 37, 45, 52, 64, 71, 85] Indices: 0 to 10 (size n=11) Target (x): 45 Step low high mid = (low+high)/2 A[mid] Comparison Action 1 0 10 (0+10)/2 = 5 A[5] = 37 37 < 45 x is greater, search right half. Set low = mid + 1 = 6. 2 6 10 (6+10)/2 = 8 A[8] = 64 64 > 45 x is smaller, search left half. Set high = mid - 1 = 7. 3 6 7 (6+7)/2 = 6 A[6] = 45 45 == 45 Match found! Return index 6. Result: Element 45 found at index 6."
     ],
     "type": "question"
   },
@@ -811,7 +811,7 @@
     "title": "Perform a complete dry run of Binary Search on: 3, 8, 12, 17, 21, 29, 34, 41, 56, 63, 72, 89. Search for 50 and show why the search terminates unsuccessfully.",
     "url": "question-bank.html?open=q20",
     "chunks": [
-      "Array: A = [3, 8, 12, 17, 21, 29, 34, 41, 56, 63, 72, 89]\n\nIndices: 0 to 11 (size n=12)\n\nTarget (x): 50\n\nSteplowhighmid = (low+high)/2A[mid]ComparisonAction\n\n1011(0+11)/2 = 5A[5] = 2929 < 50Set low = mid + 1 = 6\n\n2611(6+11)/2 = 8A[8] = 5656 > 50Set high = mid - 1 = 7\n\n367(6+7)/2 = 6A[6] = 3434 < 50Set low = mid + 1 = 7\n\n477(7+7)/2 = 7A[7] = 4141 < 50Set low = mid + 1 = 8\n\nTermination: In step 5, low becomes 8 and high is 7. The condition low \u2264 high is violated (8 \u2264 7 is False). The loop terminates, and the search returns an unsuccessful result (element not found)."
+      "Array: A = [3, 8, 12, 17, 21, 29, 34, 41, 56, 63, 72, 89] Indices: 0 to 11 (size n=12) Target (x): 50 Step low high mid = (low+high)/2 A[mid] Comparison Action 1 0 11 (0+11)/2 = 5 A[5] = 29 29 < 50 Set low = mid + 1 = 6 2 6 11 (6+11)/2 = 8 A[8] = 56 56 > 50 Set high = mid - 1 = 7 3 6 7 (6+7)/2 = 6 A[6] = 34 34 < 50 Set low = mid + 1 = 7 4 7 7 (7+7)/2 = 7 A[7] = 41 41 < 50 Set low = mid + 1 = 8 Termination: In step 5, low becomes 8 and high is 7. The condition low \u2264 high is violated (8 \u2264 7 is False). The loop terminates, and the search returns an unsuccessful result (element not found)."
     ],
     "type": "question"
   },
@@ -827,7 +827,7 @@
     "title": "Compare Linear Search and Binary Search with respect to their best-case, average-case, and worst-case time complexities.",
     "url": "question-bank.html?open=q21",
     "chunks": [
-      "Search TypeBest-CaseAverage-CaseWorst-CasePrerequisite\n\nLinear Search\nO(1) (Item is at index 0)\nO(n) (Item is in the middle)\nO(n) (Item is at the end or not present)\nNone (Works on unsorted arrays)\n\nBinary Search\nO(1) (Item is the middle element)\nO(log n)\nO(log n) (Item is at extremes or not present)\nArray must be sorted"
+      "Search Type Best-Case Average-Case Worst-Case Prerequisite Linear Search O(1) (Item is at index 0) O(n) (Item is in the middle) O(n) (Item is at the end or not present) None (Works on unsorted arrays) Binary Search O(1) (Item is the middle element) O(log n) O(log n) (Item is at extremes or not present) Array must be sorted"
     ],
     "type": "question"
   },
@@ -843,7 +843,7 @@
     "title": "Explain why Binary Search requires the input array to be sorted. What happens if Binary Search is applied to an unsorted array?",
     "url": "question-bank.html?open=q22",
     "chunks": [
-      "Why Sorting is Required: Binary search fundamentally relies on the ordering of elements. It compares the target value to the middle element and mathematically eliminates half of the remaining search space based on that comparison. If target < mid, it knows the target must be in the left half, because all elements in the left half are smaller than the middle element.\n\nIf Applied to an Unsorted Array: The logic breaks down. Comparing the target to the middle element gives no reliable information about where the target might be located in the rest of the array. The search might discard the half that actually contains the target, leading to a false negative (returning \"not found\" even when the element exists)."
+      "Why Sorting is Required: Binary search fundamentally relies on the ordering of elements. It compares the target value to the middle element and mathematically eliminates half of the remaining search space based on that comparison. If target < mid , it knows the target must be in the left half, because all elements in the left half are smaller than the middle element. If Applied to an Unsorted Array: The logic breaks down. Comparing the target to the middle element gives no reliable information about where the target might be located in the rest of the array. The search might discard the half that actually contains the target, leading to a false negative (returning \"not found\" even when the element exists)."
     ],
     "type": "question"
   },
@@ -859,7 +859,7 @@
     "title": "Explain how the Divide and Conquer technique can be used to find the maximum and minimum elements of an array.",
     "url": "question-bank.html?open=q23",
     "chunks": [
-      "The Divide and Conquer Max-Min algorithm finds both the maximum and minimum elements simultaneously by recursively breaking the array into halves.\n\nDivide: Split the array into two halves.\n\nConquer: Recursively find the (max, min) pair for the left half and the (max, min) pair for the right half.\n\nBase Cases:\n\nIf the subarray has 1 element, return it as both max and min.\n\nIf the subarray has 2 elements, compare them and return the larger as max and the smaller as min.\n\nCombine: Compare the max of the left half with the max of the right half to get the overall max. Compare the min of the left half with the min of the right half to get the overall min."
+      "The Divide and Conquer Max-Min algorithm finds both the maximum and minimum elements simultaneously by recursively breaking the array into halves. Divide: Split the array into two halves. Conquer: Recursively find the (max, min) pair for the left half and the (max, min) pair for the right half. Base Cases: If the subarray has 1 element, return it as both max and min. If the subarray has 2 elements, compare them and return the larger as max and the smaller as min. Combine: Compare the max of the left half with the max of the right half to get the overall max. Compare the min of the left half with the min of the right half to get the overall min."
     ],
     "type": "question"
   },
@@ -875,7 +875,7 @@
     "title": "Perform a complete dry run of the Max-Min algorithm on: 35, 12, 48, 7, 23, 56, 19, 4, 31, 15. Show the division, recursive comparisons, and final maximum and minimum values.",
     "url": "question-bank.html?open=q24",
     "chunks": [
-      "Array: A = [35, 12, 48, 7, 23, 56, 19, 4, 31, 15] (indices 0 to 9)\n\nRecursive Divisions\n\nMaxMin(0, 9)\n\nmid = 4\n\nLeft: MaxMin(0, 4) \u2192 A[0..4] = [35, 12, 48, 7, 23]\n\nmid = 2\n\nLeft: MaxMin(0, 2) \u2192 [35, 12, 48]\n\nmid = 1\n\nLeft: MaxMin(0, 1) \u2192 [35, 12]. Base case: Returns (max=35, min=12)\n\nRight: MaxMin(2, 2) \u2192 [48]. Base case: Returns (max=48, min=48)\n\nCombine(0, 2): max(35, 48)=48, min(12, 48)=12. Returns (48, 12)\n\nRight: MaxMin(3, 4) \u2192 [7, 23]\n\nBase case: Returns (max=23, min=7)\n\nCombine(0, 4): max(48, 23)=48, min(12, 7)=7. Returns (48, 7)\n\nRight: MaxMin(5, 9) \u2192 A[5..9] = [56, 19, 4, 31, 15]\n\nmid = 7\n\nLeft: MaxMin(5, 7) \u2192 [56, 19, 4]\n\nmid = 6\n\nLeft: MaxMin(5, 6) \u2192 [56, 19]. Base case: Returns (max=56, min=19)\n\nRight: MaxMin(7, 7) \u2192 [4]. Base case: Returns (max=4, min=4)\n\nCombine(5, 7): max(56, 4)=56, min(19, 4)=4. Returns (56, 4)\n\nRight: MaxMin(8, 9) \u2192 [31, 15]\n\nBase case: Returns (max=31, min=15)\n\nCombine(5, 9): max(56, 31)=56, min(4, 15)=4. Returns (56, 4)\n\nFinal Combine(0, 9): max(48, 56)=56, min(7, 4)=4. Returns (56, 4)\n\nFinal Result: Maximum = 56, Minimum = 4"
+      "Array: A = [35, 12, 48, 7, 23, 56, 19, 4, 31, 15] (indices 0 to 9) Recursive Divisions MaxMin(0, 9) mid = 4 Left: MaxMin(0, 4) \u2192 A[0..4] = [35, 12, 48, 7, 23] mid = 2 Left: MaxMin(0, 2) \u2192 [35, 12, 48] mid = 1 Left: MaxMin(0, 1) \u2192 [35, 12]. Base case: Returns (max=35, min=12) Right: MaxMin(2, 2) \u2192 [48]. Base case: Returns (max=48, min=48) Combine(0, 2): max(35, 48)=48, min(12, 48)=12. Returns (48, 12) Right: MaxMin(3, 4) \u2192 [7, 23] Base case: Returns (max=23, min=7) Combine(0, 4): max(48, 23)=48, min(12, 7)=7. Returns (48, 7) Right: MaxMin(5, 9) \u2192 A[5..9] = [56, 19, 4, 31, 15] mid = 7 Left: MaxMin(5, 7) \u2192 [56, 19, 4] mid = 6 Left: MaxMin(5, 6) \u2192 [56, 19]. Base case: Returns (max=56, min=19) Right: MaxMin(7, 7) \u2192 [4]. Base case: Returns (max=4, min=4) Combine(5, 7): max(56, 4)=56, min(19, 4)=4. Returns (56, 4) Right: MaxMin(8, 9) \u2192 [31, 15] Base case: Returns (max=31, min=15) Combine(5, 9): max(56, 31)=56, min(4, 15)=4. Returns (56, 4) Final Combine(0, 9): max(48, 56)=56, min(7, 4)=4. Returns (56, 4) Final Result: Maximum = 56, Minimum = 4"
     ],
     "type": "question"
   },
@@ -891,7 +891,7 @@
     "title": "Perform a complete dry run of Merge Sort on: 38, 27, 43, 3, 9, 82, 10, 15, 21, 6. Show all division and merging steps.",
     "url": "question-bank.html?open=q27",
     "chunks": [
-      "Initial Array: [38, 27, 43, 3, 9, 82, 10, 15, 21, 6]\n\nDivide Phase\n\nSplit recursively into halves until single elements remain.\n\n[38, 27, 43, 3, 9] and [82, 10, 15, 21, 6]\n\n[38, 27, 43], [3, 9] | [82, 10, 15], [21, 6]\n\n[38, 27], [43] | [3], [9] | [82, 10], [15] | [21], [6]\n\n[38], [27] | [43] | [3] | [9] | [82], [10] | [15] | [21] | [6]\n\nMerge Phase\n\nMerge sorted sub-arrays back together in sorted order.\n\nMerge size 1 to 2: [27, 38], [43] | [3, 9] | [10, 82], [15] | [6, 21]\n\nMerge size 2 to 3/4: [27, 38, 43] | [3, 9] | [10, 15, 82] | [6, 21]\n\nMerge halves: [3, 9, 27, 38, 43] and [6, 10, 15, 21, 82]\n\nFinal Merge: [3, 6, 9, 10, 15, 21, 27, 38, 43, 82]"
+      "Initial Array: [38, 27, 43, 3, 9, 82, 10, 15, 21, 6] Divide Phase Split recursively into halves until single elements remain. [38, 27, 43, 3, 9] and [82, 10, 15, 21, 6] [38, 27, 43], [3, 9] | [82, 10, 15], [21, 6] [38, 27], [43] | [3], [9] | [82, 10], [15] | [21], [6] [38], [27] | [43] | [3] | [9] | [82], [10] | [15] | [21] | [6] Merge Phase Merge sorted sub-arrays back together in sorted order. Merge size 1 to 2: [27, 38], [43] | [3, 9] | [10, 82], [15] | [6, 21] Merge size 2 to 3/4: [27, 38, 43] | [3, 9] | [10, 15, 82] | [6, 21] Merge halves: [3, 9, 27, 38, 43] and [6, 10, 15, 21, 82] Final Merge: [3, 6, 9, 10, 15, 21, 27, 38, 43, 82]"
     ],
     "type": "question"
   },
@@ -907,7 +907,7 @@
     "title": "Perform a complete dry run of Quick Sort on: 64, 25, 12, 22, 11, 90, 34, 5, 78, 43. Assume the first element is selected as the pivot. Show each partitioning step.",
     "url": "question-bank.html?open=q32",
     "chunks": [
-      "Initial Array: [64, 25, 12, 22, 11, 90, 34, 5, 78, 43]\n\nStep 1: Partition around 64 (Pivot = 64)\n\nElements smaller than 64 go to the left, larger to the right.\n\nLeft: [25, 12, 22, 11, 34, 5, 43]\n\nRight: [90, 78]\n\nArray after partition 1: [25, 12, 22, 11, 34, 5, 43] , 64 , [90, 78]\n\nStep 2: Recursive Calls\n\nLeft partition: [25, 12, 22, 11, 34, 5, 43] (Pivot = 25)\n\nLeft of 25: [12, 22, 11, 5]\n\nRight of 25: [34, 43]\n\nArray becomes: [12, 22, 11, 5] , 25 , [34, 43]\n\nSub-Left: [12, 22, 11, 5] (Pivot = 12)\n\nLeft: [11, 5]\n\nRight: [22]\n\nArray becomes: [11, 5] , 12 , [22]\n\nSub-Sub-Left: [11, 5] (Pivot = 11)\n\nLeft: [5], Right: []\n\nArray becomes: [5] , 11\n\nSub-Right of 25: [34, 43] (Pivot = 34)\n\nLeft: [], Right: [43]\n\nArray becomes: 34 , [43]\n\nRight partition of 64: [90, 78] (Pivot = 90)\n\nLeft: [78], Right: []\n\nArray becomes: [78] , 90\n\nCombining all partitions\n\nFinal sorted array: [5, 11, 12, 22, 25, 34, 43, 64, 78, 90]"
+      "Initial Array: [64, 25, 12, 22, 11, 90, 34, 5, 78, 43] Step 1: Partition around 64 (Pivot = 64) Elements smaller than 64 go to the left, larger to the right. Left: [25, 12, 22, 11, 34, 5, 43] Right: [90, 78] Array after partition 1: [25, 12, 22, 11, 34, 5, 43] , 64 , [90, 78] Step 2: Recursive Calls Left partition: [25, 12, 22, 11, 34, 5, 43] (Pivot = 25) Left of 25: [12, 22, 11, 5] Right of 25: [34, 43] Array becomes: [12, 22, 11, 5] , 25 , [34, 43] Sub-Left: [12, 22, 11, 5] (Pivot = 12) Left: [11, 5] Right: [22] Array becomes: [11, 5] , 12 , [22] Sub-Sub-Left: [11, 5] (Pivot = 11) Left: [5], Right: [] Array becomes: [5] , 11 Sub-Right of 25: [34, 43] (Pivot = 34) Left: [], Right: [43] Array becomes: 34 , [43] Right partition of 64: [90, 78] (Pivot = 90) Left: [78], Right: [] Array becomes: [78] , 90 Combining all partitions Final sorted array: [5, 11, 12, 22, 25, 34, 43, 64, 78, 90]"
     ],
     "type": "question"
   },
@@ -923,7 +923,7 @@
     "title": "Explain the best-case, average-case, and worst-case time complexity of Quick Sort.",
     "url": "question-bank.html?open=q35",
     "chunks": [
-      "Best Case: O(n log n)\n\nOccurs when the pivot chosen at each step divides the array into two roughly equal halves. The recursion tree has a depth of log(n) and partitioning at each level takes O(n) time. Recurrence: T(n) = 2T(n/2) + O(n)\n\nAverage Case: O(n log n)\n\nOccurs when the pivot randomly divides the array into proportional splits (e.g., 9-to-1 split or 3-to-1 split). Even an unbalanced split like 99-to-1 results in an O(n log n) running time, as the depth of the tree is bounded by a logarithmic function.\n\nWorst Case: O(n\u00b2)\n\nOccurs when the pivot is consistently the smallest or largest element, leading to completely unbalanced partitions (one sub-array of size n-1, and one of size 0). This creates a skewed recursion tree of depth n. Example: sorting an already sorted array when the first or last element is chosen as the pivot. Recurrence: T(n) = T(n-1) + O(n)"
+      "Best Case: O(n log n) Occurs when the pivot chosen at each step divides the array into two roughly equal halves. The recursion tree has a depth of log(n) and partitioning at each level takes O(n) time. Recurrence: T(n) = 2T(n/2) + O(n) Average Case: O(n log n) Occurs when the pivot randomly divides the array into proportional splits (e.g., 9-to-1 split or 3-to-1 split). Even an unbalanced split like 99-to-1 results in an O(n log n) running time, as the depth of the tree is bounded by a logarithmic function. Worst Case: O(n\u00b2) Occurs when the pivot is consistently the smallest or largest element, leading to completely unbalanced partitions (one sub-array of size n-1, and one of size 0). This creates a skewed recursion tree of depth n. Example: sorting an already sorted array when the first or last element is chosen as the pivot. Recurrence: T(n) = T(n-1) + O(n)"
     ],
     "type": "question"
   },
@@ -939,7 +939,7 @@
     "title": "Compare conventional matrix multiplication and Strassen's Matrix Multiplication with respect to the number of multiplications and asymptotic time complexity.",
     "url": "question-bank.html?open=q44",
     "chunks": [
-      "FeatureConventional Matrix MultiplicationStrassen's Matrix Multiplication\n\nMethod\nUses 3 nested loops to compute dot products of rows and columns.\nUses Divide and Conquer, breaking n x n matrices into 4 (n/2 x n/2) sub-matrices.\n\nMultiplications per step\n8 multiplications for a 2x2 division step.\n7 multiplications for a 2x2 division step (optimized mathematically).\n\nAdditions/Subtractions\n4 additions.\n18 additions/subtractions (increased overhead).\n\nRecurrence Relation\nT(n) = 8T(n/2) + O(n\u00b2)\nT(n) = 7T(n/2) + O(n\u00b2)\n\nAsymptotic Time Complexity\nO(n3)\nO(nlog27) \u2248 O(n2.81)\n\nConclusion: Strassen's algorithm reduces the number of recursive multiplications from 8 to 7, bringing down the asymptotic time complexity. However, due to the overhead of extra additions, it is practically faster only for very large matrices."
+      "Feature Conventional Matrix Multiplication Strassen's Matrix Multiplication Method Uses 3 nested loops to compute dot products of rows and columns. Uses Divide and Conquer, breaking n x n matrices into 4 (n/2 x n/2) sub-matrices. Multiplications per step 8 multiplications for a 2x2 division step. 7 multiplications for a 2x2 division step (optimized mathematically). Additions/Subtractions 4 additions. 18 additions/subtractions (increased overhead). Recurrence Relation T(n) = 8T(n/2) + O(n\u00b2) T(n) = 7T(n/2) + O(n\u00b2) Asymptotic Time Complexity O(n 3 ) O(n log 2 7 ) \u2248 O(n 2.81 ) Conclusion: Strassen's algorithm reduces the number of recursive multiplications from 8 to 7, bringing down the asymptotic time complexity. However, due to the overhead of extra additions, it is practically faster only for very large matrices."
     ],
     "type": "question"
   },
@@ -955,7 +955,7 @@
     "title": "Explain how the Divide and Conquer technique can be used for multiplication of large integers.",
     "url": "question-bank.html?open=q45",
     "chunks": [
-      "When integers are very large (e.g., hundreds of digits in cryptography), standard multiplication (O(n\u00b2)) is too slow. The Divide and Conquer technique (Karatsuba algorithm) speeds this up.\n\nProcess:\n\nDivide: Split each n-digit number into two halves (high and low parts).\n\nExample: X = A*10^(n/2) + B and Y = C*10^(n/2) + D\n\nStandard Divide and Conquer: Compute four partial products (AC, AD, BC, BD). This yields T(n) = 4T(n/2) + O(n) \u2192 O(n\u00b2).\n\nKaratsuba Optimization: Compute only three products recursively:\n\nP1 = A * C\n\nP2 = B * D\n\nP3 = (A + B) * (C + D)\n\n  The middle term (AD + BC) is derived as P3 - P1 - P2.\n\nConquer and Combine: This reduces the recurrence to T(n) = 3T(n/2) + O(n), improving the time complexity to O(nlog23) \u2248 O(n1.585)."
+      "When integers are very large (e.g., hundreds of digits in cryptography), standard multiplication (O(n\u00b2)) is too slow. The Divide and Conquer technique (Karatsuba algorithm) speeds this up. Process: Divide: Split each n-digit number into two halves (high and low parts). Example: X = A*10^(n/2) + B and Y = C*10^(n/2) + D Standard Divide and Conquer: Compute four partial products (AC, AD, BC, BD). This yields T(n) = 4T(n/2) + O(n) \u2192 O(n\u00b2). Karatsuba Optimization: Compute only three products recursively: P1 = A * C P2 = B * D P3 = (A + B) * (C + D) The middle term (AD + BC) is derived as P3 - P1 - P2 . Conquer and Combine: This reduces the recurrence to T(n) = 3T(n/2) + O(n) , improving the time complexity to O(n log 2 3 ) \u2248 O(n 1.585 )."
     ],
     "type": "question"
   },
@@ -971,7 +971,7 @@
     "title": "Is merge sort a stable sorting algorithm? Explain.",
     "url": "question-bank.html?open=q49",
     "chunks": [
-      "Yes, Merge Sort is a stable sorting algorithm.\n\nExplanation: A sorting algorithm is stable if it preserves the relative order of equal elements. In Merge Sort, stability is maintained during the merge step. When combining two sorted sub-arrays, if elements are equal, the element from the left sub-array (which appeared earlier in the original array) is explicitly chosen to be placed into the merged array first. By doing this, the original relative ordering of equal elements is preserved."
+      "Yes, Merge Sort is a stable sorting algorithm. Explanation: A sorting algorithm is stable if it preserves the relative order of equal elements. In Merge Sort, stability is maintained during the merge step. When combining two sorted sub-arrays, if elements are equal, the element from the left sub-array (which appeared earlier in the original array) is explicitly chosen to be placed into the merged array first. By doing this, the original relative ordering of equal elements is preserved."
     ],
     "type": "question"
   },
@@ -987,7 +987,7 @@
     "title": "When would you select merge sort instead of quick sort?",
     "url": "question-bank.html?open=q50",
     "chunks": [
-      "Merge Sort is preferred over Quick Sort in the following scenarios:\n\nStability is Required: Merge Sort is inherently stable, whereas Quick Sort is not.\n\nWorst-Case Guarantees: Merge Sort guarantees O(n log n) time complexity in all cases. Quick Sort can degrade to O(n\u00b2) in the worst case (e.g., already sorted arrays with bad pivot choice).\n\nSorting Linked Lists: Merge Sort performs excellently on linked lists because elements don't need contiguous memory access for random swaps (unlike Quick Sort). The O(n) auxiliary space requirement of Merge Sort is also reduced to O(1) for linked lists.\n\nExternal Sorting: When the dataset is too large to fit in RAM and resides on disk, Merge Sort's predictable sequential access patterns make it the preferred choice."
+      "Merge Sort is preferred over Quick Sort in the following scenarios: Stability is Required: Merge Sort is inherently stable, whereas Quick Sort is not. Worst-Case Guarantees: Merge Sort guarantees O(n log n) time complexity in all cases. Quick Sort can degrade to O(n\u00b2) in the worst case (e.g., already sorted arrays with bad pivot choice). Sorting Linked Lists: Merge Sort performs excellently on linked lists because elements don't need contiguous memory access for random swaps (unlike Quick Sort). The O(n) auxiliary space requirement of Merge Sort is also reduced to O(1) for linked lists. External Sorting: When the dataset is too large to fit in RAM and resides on disk, Merge Sort's predictable sequential access patterns make it the preferred choice."
     ],
     "type": "question"
   },
@@ -996,33 +996,32 @@
     "title": "DAA Cheat Sheet",
     "url": "cheat-sheet.html",
     "chunks": [
-      "Dashboard\n\n            Revision Hub\n\n                Save as PDF\n\n                Theme",
+      "Dashboard Revision Hub Save as PDF Theme",
       "Design and Analysis of Algorithms",
-      "Dense Revision Cheat Sheet \n\nAll Units | Scannable Reference | High-Yield Syntax & Concepts\n\nQuick Jump:\nUnit I\nUnit II\nUnit III\nUnit IV\nUnit V\n\n\u2190 Dashboard",
+      "Dense Revision Cheat Sheet All Units | Scannable Reference | High-Yield Syntax & Concepts Quick Jump: Unit I Unit II Unit III Unit IV Unit V \u2190 Dashboard",
       "Unit I: Introduction & Foundations CO1",
-      "Algorithm Fundamentals \n\nA rigorous sequence of unambiguous computational steps transforming input to output. Crucial properties include definiteness (unambiguous steps) and effectiveness (basic feasible operations).\n\nExample: Euclid's algorithm for GCD(a,b) where a=12, b=8 yields 4 via systematic reduction.",
-      "Loop Invariants (Correctness Proofs) \n\nFormal logical assertions that remain true before, during, and after loop execution, utilized inductively to prove algorithmic correctness.\n\nExample: In Insertion Sort, `A[1...i-1]` is always sorted before the i-th iteration commences.\n\n            Pro Tip: Examiners test initialization, maintenance, and termination. Ensure the termination property directly implies the overall postcondition.",
-      "Asymptotic Notations \n\nMathematical abstractions characterizing growth rates: O(n) (asymptotic upper bound, worst-case), \u03a9(n) (lower bound, best-case), and \u0398(n) (tight bound, average-case).\n\nExample: Mergesort is strictly \u0398(n log n) as best and worst-case trees have identical depth.",
-      "Recurrence Solving (Substitution) \n\nA deductive technique establishing asymptotic complexity by positing a bound and applying mathematical induction to verify it against the recurrence relation.\n\nExample: T(n) = 2T(n/2) + n. Guess O(n log n), prove T(n) \u2264 c(n log n) inductively.\n\n            Exam Trap: When using Substitution, you must explicitly prove the exact form of your guess. Do not ignore lower-order terms during the inductive step!",
+      "Algorithm Fundamentals A rigorous sequence of unambiguous computational steps transforming input to output. Crucial properties include definiteness (unambiguous steps) and effectiveness (basic feasible operations). Example: Euclid's algorithm for GCD(a,b) where a=12, b=8 yields 4 via systematic reduction.",
+      "Loop Invariants (Correctness Proofs) Formal logical assertions that remain true before, during, and after loop execution, utilized inductively to prove algorithmic correctness. Example: In Insertion Sort, `A[1...i-1]` is always sorted before the i-th iteration commences. Pro Tip: Examiners test initialization, maintenance, and termination. Ensure the termination property directly implies the overall postcondition.",
+      "Asymptotic Notations Mathematical abstractions characterizing growth rates: O(n) (asymptotic upper bound, worst-case), \u03a9(n) (lower bound, best-case), and \u0398(n) (tight bound, average-case). Example: Mergesort is strictly \u0398(n log n) as best and worst-case trees have identical depth.",
+      "Recurrence Solving (Substitution) A deductive technique establishing asymptotic complexity by positing a bound and applying mathematical induction to verify it against the recurrence relation. Example: T(n) = 2T(n/2) + n. Guess O(n log n), prove T(n) \u2264 c(n log n) inductively. Exam Trap: When using Substitution, you must explicitly prove the exact form of your guess. Do not ignore lower-order terms during the inductive step!",
       "Unit II: Core Algorithmic Paradigms CO2",
-      "Divide and Conquer Methodology \n\nA paradigm that recursively partitions a problem into disjoint subproblems, solves them, and amalgamates their solutions. Relies heavily on recurrence relations.\n\nExample: Strassen's Matrix Multiplication reduces subproblems from 8 to 7, dropping complexity to O(n^2.81).",
-      "Master Theorem Deep-Dive \n\nA deterministic method for solving recurrences of the form T(n) = aT(n/b) + f(n). Compares f(n) against n^(log_b(a)) using polynomial boundedness.\n\nExample: T(n) = 9T(n/3) + n. a=9, b=3, log_3(9)=2. n^2 > n, hence Case 1: T(n) = \u0398(n^2).\n\n            Exam Trap: The Master Theorem ONLY applies if the difference between f(n) and n^(log_b(a)) is polynomially large. It fails for T(n) = 2T(n/2) + n log n!",
-      "Greedy Paradigm & Matroids \n\nAn optimization strategy making locally optimal choices with the heuristic that it converges to a global optimum. Only valid if the problem exhibits the greedy-choice property and optimal substructure.\n\nExample: Huffman Coding optimally minimizes prefix-free code length by greedily merging lowest frequency nodes.",
-      "Paradigm Decision Tree \n\n            flowchart TD\n                A[Optimization Problem] --> B{Overlapping Subproblems?}\n                B -- Yes --> C(Dynamic Programming)\n                B -- No --> D{Optimal Substructure?}\n                D -- Yes & Greedy Choice --> E(Greedy Algorithm)\n                D -- Yes & Disjoint --> F(Divide & Conquer)\n\nExample: Use this mental model to quickly classify DP (Fibonacci) vs Divide & Conquer (Merge Sort).",
+      "Divide and Conquer Methodology A paradigm that recursively partitions a problem into disjoint subproblems, solves them, and amalgamates their solutions. Relies heavily on recurrence relations. Example: Strassen's Matrix Multiplication reduces subproblems from 8 to 7, dropping complexity to O(n^2.81).",
+      "Master Theorem Deep-Dive A deterministic method for solving recurrences of the form T(n) = aT(n/b) + f(n). Compares f(n) against n^(log_b(a)) using polynomial boundedness. Example: T(n) = 9T(n/3) + n. a=9, b=3, log_3(9)=2. n^2 > n, hence Case 1: T(n) = \u0398(n^2). Exam Trap: The Master Theorem ONLY applies if the difference between f(n) and n^(log_b(a)) is polynomially large. It fails for T(n) = 2T(n/2) + n log n!",
+      "Greedy Paradigm & Matroids An optimization strategy making locally optimal choices with the heuristic that it converges to a global optimum. Only valid if the problem exhibits the greedy-choice property and optimal substructure. Example: Huffman Coding optimally minimizes prefix-free code length by greedily merging lowest frequency nodes.",
+      "Paradigm Decision Tree flowchart TD A[Optimization Problem] --> B{Overlapping Subproblems?} B -- Yes --> C(Dynamic Programming) B -- No --> D{Optimal Substructure?} D -- Yes & Greedy Choice --> E(Greedy Algorithm) D -- Yes & Disjoint --> F(Divide & Conquer) Example: Use this mental model to quickly classify DP (Fibonacci) vs Divide & Conquer (Merge Sort).",
       "Unit III: Dynamic Programming & Complexity CO3",
-      "Dynamic Programming (DP) \n\nSystematically exhausts all possibilities by caching solutions to overlapping subproblems (memoization/tabulation), guaranteeing a global optimum for complex state spaces.\n\nExample: Matrix Chain Multiplication optimally parenthesizes a chain of matrices in O(n^3) using a cost table.",
-      "Bellman-Ford vs Dijkstra \n\n            graph LR\n                A((S)) -- 5 --> B((U))\n                A -- 4 --> C((V))\n                B -- -6 --> C\n\nDijkstra uses a priority queue (Greedy) but fails catastrophically with negative weights. Bellman-Ford repeatedly relaxes all edges (DP) and detects negative cycles on the V-th pass.\n\nExample: Routing in networks where path costs can become negative due to subsidies requires Bellman-Ford.",
-      "0/1 vs Fractional Knapsack \n\nFractional allows splitting items (solvable greedily by sorting value/weight ratio). 0/1 strictly forbids splitting, invalidating the greedy choice and mandating DP.\n\nExample: Packing discrete gold bars (0/1 DP) vs packing gold dust (Fractional Greedy).\n\n            Exam Trap: Applying greedy value/weight ratio to 0/1 Knapsack is the most common student error. Always use the DP table: `dp[i][w] = max(dp[i-1][w], val[i] + dp[i-1][w-wt[i]])`.",
+      "Dynamic Programming (DP) Systematically exhausts all possibilities by caching solutions to overlapping subproblems (memoization/tabulation), guaranteeing a global optimum for complex state spaces. Example: Matrix Chain Multiplication optimally parenthesizes a chain of matrices in O(n^3) using a cost table.",
+      "Bellman-Ford vs Dijkstra graph LR A((S)) -- 5 --> B((U)) A -- 4 --> C((V)) B -- -6 --> C Dijkstra uses a priority queue (Greedy) but fails catastrophically with negative weights. Bellman-Ford repeatedly relaxes all edges (DP) and detects negative cycles on the V-th pass. Example: Routing in networks where path costs can become negative due to subsidies requires Bellman-Ford.",
+      "0/1 vs Fractional Knapsack Fractional allows splitting items (solvable greedily by sorting value/weight ratio). 0/1 strictly forbids splitting, invalidating the greedy choice and mandating DP. Example: Packing discrete gold bars (0/1 DP) vs packing gold dust (Fractional Greedy). Exam Trap: Applying greedy value/weight ratio to 0/1 Knapsack is the most common student error. Always use the DP table: `dp[i][w] = max(dp[i-1][w], val[i] + dp[i-1][w-wt[i]])`.",
       "Unit IV: Advanced Graph Algorithms CO4",
-      "Minimum Spanning Trees (MST) \n\nAcutely optimizes network connectivity. Kruskal's sorts edges globally (uses Disjoint-Set/Union-Find). Prim's grows a single tree locally from a root (uses Min-Heap).\n\nExample: Kruskal's O(E log E) is ideal for sparse graphs; Prim's O(E + V log V) with Fibonacci heaps dominates dense graphs.",
-      "Network Flow (Ford-Fulkerson) \n\nCalculates the maximum flow in a flow network. It iteratively finds augmenting paths in a residual graph until none exist. Relies heavily on the Max-Flow Min-Cut theorem.\n\nExample: Maximizing water flow through a plumbing network with distinct pipe capacities.\n\n            Pro Tip: The Edmonds-Karp implementation uses BFS to find augmenting paths, strictly bounding execution time to O(V E^2) unlike naive DFS.",
-      "All-Pairs Shortest Path (Floyd-Warshall) \n\nA quintessential DP algorithm computing shortest paths between all vertex pairs in O(V^3) time. It incrementally allows intermediate vertices from {1...k}.\n\nExample: Generating a complete distance matrix for a GPS routing system between all major cities.",
+      "Minimum Spanning Trees (MST) Acutely optimizes network connectivity. Kruskal's sorts edges globally (uses Disjoint-Set/Union-Find). Prim's grows a single tree locally from a root (uses Min-Heap). Example: Kruskal's O(E log E) is ideal for sparse graphs; Prim's O(E + V log V) with Fibonacci heaps dominates dense graphs.",
+      "Network Flow (Ford-Fulkerson) Calculates the maximum flow in a flow network. It iteratively finds augmenting paths in a residual graph until none exist. Relies heavily on the Max-Flow Min-Cut theorem. Example: Maximizing water flow through a plumbing network with distinct pipe capacities. Pro Tip: The Edmonds-Karp implementation uses BFS to find augmenting paths, strictly bounding execution time to O(V E^2) unlike naive DFS.",
+      "All-Pairs Shortest Path (Floyd-Warshall) A quintessential DP algorithm computing shortest paths between all vertex pairs in O(V^3) time. It incrementally allows intermediate vertices from {1...k}. Example: Generating a complete distance matrix for a GPS routing system between all major cities.",
       "Unit V: NP-Completeness & Approximation CO5",
-      "P vs NP Classes \n\nP: Solvable in polynomial time. NP: Solutions are verifiable in polynomial time by a non-deterministic Turing machine.\n\nExample: Sorting is in P. Sudoku solving is in NP (fast to check a solved board, hard to solve).",
-      "NP-Complete Reductions \n\nA problem Y is NP-Complete if it's in NP and every NP problem polynomial-time reduces to Y. To prove a new problem Y is NPC, reduce a known NPC problem X to Y.\n\nExample: Reducing 3-SAT (known NPC) to Clique (target Y) to prove Clique is NP-Complete.\n\n            Exam Trap: Reduction direction matters! To prove Y is hard, reduce the KNOWN hard problem X to Y (X -> Y). Reducing Y to X proves nothing about Y's difficulty.",
-      "Approximation Algorithms \n\nHeuristics for NP-Hard problems that guarantee a solution within a specific multiplicative factor (\u03c1) of the absolute optimal cost in polynomial time.\n\nExample: The 2-Approximation for Vertex Cover using a greedy maximal matching guarantees the cover is at most twice the optimal size.",
-      "Complexity Hierarchy \n\n            flowchart BT\n                P((P)) --> NP((NP))\n                NPC((NP-Complete)) --> NP\n                NPC -.-> NPH((NP-Hard))\n                NP -.-> NPH\n\nExample: Halting Problem is NP-Hard but not NP-Complete (since it's undecidable and thus not in NP).\n\n\ufeff",
-      "Ask AI (Lite) \n\n    Lite\n    Smart (WebGPU)\n    Deep (Cloud)\n\n                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.\n\n                Send"
+      "P vs NP Classes P: Solvable in polynomial time. NP: Solutions are verifiable in polynomial time by a non-deterministic Turing machine. Example: Sorting is in P. Sudoku solving is in NP (fast to check a solved board, hard to solve).",
+      "NP-Complete Reductions A problem Y is NP-Complete if it's in NP and every NP problem polynomial-time reduces to Y. To prove a new problem Y is NPC, reduce a known NPC problem X to Y. Example: Reducing 3-SAT (known NPC) to Clique (target Y) to prove Clique is NP-Complete. Exam Trap: Reduction direction matters! To prove Y is hard, reduce the KNOWN hard problem X to Y (X -> Y). Reducing Y to X proves nothing about Y's difficulty.",
+      "Approximation Algorithms Heuristics for NP-Hard problems that guarantee a solution within a specific multiplicative factor (\u03c1) of the absolute optimal cost in polynomial time. Example: The 2-Approximation for Vertex Cover using a greedy maximal matching guarantees the cover is at most twice the optimal size.",
+      "Complexity Hierarchy flowchart BT P((P)) --> NP((NP)) NPC((NP-Complete)) --> NP NPC -.-> NPH((NP-Hard)) NP -.-> NPH Example: Halting Problem is NP-Hard but not NP-Complete (since it's undecidable and thus not in NP). \ufeff"
     ],
     "type": "cheat"
   }
