@@ -222,11 +222,14 @@ export async function initAuthUI() {
     function renderUI(user) {
         if (user) {
             const name = user.user_metadata?.display_name || user.email.split('@')[0];
+            const isSubPage = window.location.pathname.includes('/subjects/');
+            const profileUrl = isSubPage ? '../../profile.html' : './profile.html';
         
             authContainer.innerHTML = `
-                <div style="font-size: 0.9rem; color: #a0a0a5;" class="user-indicator">
+                <div style="font-size: 0.9rem; color: #a0a0a5; margin-right: 0.5rem;" class="user-indicator">
                     Hi, <strong style="color: white;"></strong>
                 </div>
+                <a href="${profileUrl}" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.9rem; text-decoration: none;">Profile</a>
                 <button id="authLogoutBtn" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.9rem;">Log Out</button>
             `;
         
@@ -234,6 +237,9 @@ export async function initAuthUI() {
         
             document.getElementById('authLogoutBtn').onclick = async () => {
                 await signOut();
+                if (window.location.pathname.includes('profile.html')) {
+                    window.location.href = isSubPage ? '../../index.html' : './index.html';
+                }
             };
         } else {
             authContainer.innerHTML = `
