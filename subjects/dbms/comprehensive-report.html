@@ -570,51 +570,75 @@
 </div>
 <script>
         let assistantApp = null;
-        async function openAssistant() {
-            if (document.querySelector('.ask-ai-btn') && document.querySelector('.ask-ai-btn').getAttribute('data-dragged') === 'true') return;
-            const modal = document.getElementById('assistantModal');
-            if (modal.style.display === 'flex') {
-                closeAssistant();
-                return;
-            }
-            modal.style.display = 'flex';
-            // Removed FAB hide so it stays visible
-            // slight delay for transition
-            setTimeout(() => {
-                modal.style.opacity = '1';
-                modal.style.transform = 'translateY(0)';
-            }, 10);
-            if (window.innerWidth > 768) {
-                document.getElementById('assistantInput').focus();
-            }
-            if (!assistantApp) {
+let assistantCloseTimer = null;
+let isAssistantOpen = false;
+
+async function openAssistant() {
+    if (document.querySelector('.ask-ai-btn')?.getAttribute('data-dragged') === 'true') return;
+    
+    const modal = document.getElementById('assistantModal');
+    
+    // Toggle closed if already open
+    if (isAssistantOpen) {
+        closeAssistant();
+        return;
+    }
+
+    // Cancel any pending close timer from rapid clicks
+    if (assistantCloseTimer) {
+        clearTimeout(assistantCloseTimer);
+        assistantCloseTimer = null;
+    }
+
+    isAssistantOpen = true;
+    modal.style.display = 'flex';
+    
+    // Removed FAB hide so it stays visible
+    
+    // Force DOM reflow so transition plays reliably
+    void modal.offsetHeight;
+    
+    modal.style.opacity = '1';
+    modal.style.transform = 'translateY(0)';
+    if (window.innerWidth > 768) {
+        document.getElementById('assistantInput').focus();
+    }
+
+    if (!assistantApp) {
                 try {
                     const { initAssistant } = await import('../../shared/assistant-ui.js');
                     assistantApp = await initAssistant('dbms');
                     if (!assistantApp) throw new Error("App init failed");
                 } catch (e) {
-                    console.error(e);
+                    console.error('Assistant init failed:', e);
                     const msgs = document.getElementById('assistantMessages');
-                    msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
+                    const isFileProtocol = window.location.protocol === 'file:';
+                    msgs.innerHTML = `<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">${isFileProtocol ? 'I am blocked by your browser\'s security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).' : 'Assistant failed to initialize: ' + e.message}</div>`;
                 }
             }
         }
         function closeAssistant() {
-            // FAB stays independent now
-            const modal = document.getElementById('assistantModal');
-            modal.style.opacity = '0';
-            modal.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-                modal.style.display = 'none';
-            }, 300);
-        }
+    const modal = document.getElementById('assistantModal');
+    isAssistantOpen = false;
+    
+    // FAB stays independent now
+    
+    modal.style.opacity = '0';
+    modal.style.transform = 'translateY(20px)';
+    
+    if (assistantCloseTimer) clearTimeout(assistantCloseTimer);
+    assistantCloseTimer = setTimeout(() => {
+        modal.style.display = 'none';
+        assistantCloseTimer = null;
+    }, 300);
+}
         function submitAssistantQuery(q) {
             const input = document.getElementById('assistantInput');
             const query = q || input.value.trim();
             if (!query) return;
             if (!assistantApp) {
                 const msgs = document.getElementById('assistantMessages');
-                msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
+                msgs.innerHTML = `<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>`;
                 return;
             }
             input.value = '';

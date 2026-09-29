@@ -187,9 +187,9 @@ def build_subject(subject_dir, templates_dir, data_dir):
         })
         
     # 2. Cheat Sheet Items
-    cheat_sheet_path = subject_dir / 'cheat-sheet.html'
-    if cheat_sheet_path.exists():
-        with open(cheat_sheet_path, 'r', encoding='utf-8') as f:
+    comprehensive_report_path = subject_dir / 'comprehensive-report.html'
+    if comprehensive_report_path.exists():
+        with open(comprehensive_report_path, 'r', encoding='utf-8') as f:
             cheat_html = f.read()
             # Find body content
             body_match = re.search(r'<body[^>]*>(.*?)</body>', cheat_html, re.DOTALL | re.IGNORECASE)
@@ -205,9 +205,9 @@ def build_subject(subject_dir, templates_dir, data_dir):
             
             chunks = chunk_html(cheat_html)
             assistant_index.append({
-                "id": "cheat-sheet",
+                "id": "comprehensive-report",
                 "title": f"{subject_code} Cheat Sheet",
-                "url": "cheat-sheet.html",
+                "url": "comprehensive-report.html",
                 "chunks": chunks,
                 "type": "cheat"
             })
