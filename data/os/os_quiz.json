@@ -91,7 +91,7 @@
             "FCFS",
             "SJF",
             "Round Robin",
-            "Priority Scheduling"
+            "Multilevel Queue"
         ],
         "correct_answer": "Multilevel Queue",
         "explanation": "Multilevel Queue is processes assigned to one of several queues"

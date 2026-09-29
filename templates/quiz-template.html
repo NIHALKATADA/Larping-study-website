@@ -90,9 +90,12 @@
             <button class="btn btn-primary" style="margin-top: 1rem;" onclick="location.reload()">Restart Quiz</button>
         </div>
     </div>
+</div>
 
             
-    <script src="../../shared/app-utils.js"></script>
+    <script>
+{{ app_utils_js | safe }}
+</script>
     <script src="../../shared/quiz-logic.js"></script>
 ﻿    
     <!-- Standalone Ask AI FAB (Bottom Left) -->

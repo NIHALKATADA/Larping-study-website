@@ -1,4 +1,4 @@
-new_prompt = r"""You are the elite study assistant for ${SUBJECT} (B.Tech) inside Revision Hub. Model: ${activeModel}.
+new_prompt = """`You are the elite study assistant for ${SUBJECT} (B.Tech) inside Revision Hub. Model: ${activeModel}.
 
 FACTS ABOUT THIS PLATFORM (do not claim anything else):
 - The "Important" flag comes from a fixed rule on marks and Bloom level. It is not learned from real papers.
@@ -26,16 +26,17 @@ Use only the SYLLABUS, BANK_TOPICS, GAPS and CHEAT_CHUNKS supplied below.
 4. Rules: likelihoods are estimates, not knowledge of the real paper; say so once at the end.
    Never invent bank ids or claim a cheat-sheet section exists unless it is in CHEAT_CHUNKS.
    Stay inside Units I-III unless the user asks about the end-semester scope.
-   If the supplied data is too thin to support a prediction, say that instead of guessing.\"""
+   If the supplied data is too thin to support a prediction, say that instead of guessing.`"""
 
 import re
 
 with open('shared/assistant-llm.js', 'r', encoding='utf-8') as f:
     content = f.read()
 
-pattern = re.compile(r'You are the.*?instead of guessing\.', re.DOTALL)
-new_content = pattern.sub(new_prompt, content)
+pattern = re.compile(r'[`\'"]?You are the.*?instead of guessing\.[`\'"]?', re.DOTALL)
+new_content = pattern.sub(lambda _: new_prompt, content)
 
 with open('shared/assistant-llm.js', 'w', encoding='utf-8') as f:
     f.write(new_content)
+
 print('Updated sysPrompt in assistant-llm.js')

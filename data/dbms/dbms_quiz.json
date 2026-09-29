@@ -56,10 +56,10 @@
         "type": "mcq",
         "question": "Which concept is described by: no multivalued dependencies?",
         "options": [
-            "1NF",
             "2NF",
             "3NF",
-            "BCNF"
+            "BCNF",
+            "4NF"
         ],
         "correct_answer": "4NF",
         "explanation": "4NF is defined by no multivalued dependencies"
@@ -72,7 +72,7 @@
             "1NF",
             "2NF",
             "3NF",
-            "BCNF"
+            "5NF"
         ],
         "correct_answer": "5NF",
         "explanation": "5NF is defined by no join dependencies"
@@ -169,7 +169,7 @@
             "Clustered index",
             "Non-clustered index",
             "Hash index",
-            "B-tree"
+            "Write-ahead logging"
         ],
         "correct_answer": "Write-ahead logging",
         "explanation": "Write-ahead logging is defined by logs changes before writing to disk"

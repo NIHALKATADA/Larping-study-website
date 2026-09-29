@@ -1,0 +1,19 @@
+{
+  "name": "revision-hub",
+  "version": "1.0.0",
+  "description": "Revision Hub is a statically generated, premium study portal designed with a sleek, high-end \"Black Glass\" aesthetic. It centralizes syllabus-aligned question banks, midterm study guides, and high-yield cheat sheets across multiple university subjects. The interface is meticulously crafted to be distraction-free for high-pressure, late-night study sessions.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "jsdom": "^30.1.1"
+  }
+}

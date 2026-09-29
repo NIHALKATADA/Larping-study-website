@@ -196,14 +196,15 @@
             </div>
 
         </div>
-        </main>
-    </div>
+        </div>
+    </main>
+</div>
 
     <script src="course-data.js"></script>
     
     <div id="stickyProgressWidget" style="position: fixed; bottom: 2rem; right: 2rem; background: var(--card-bg); padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 1px solid var(--border-color); z-index: 1000; display: flex; flex-direction: column; gap: 0.5rem; min-width: 250px;">
         <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem;">Review Progress</span>
+            <span style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem;">Your Progress</span>
             <span id="progressText" style="font-size: 0.85rem; font-weight: bold; color: var(--primary-teal);">0 / 0</span>
         </div>
         <div style="width: 100%; background: var(--bg-color); border-radius: 8px; height: 8px; overflow: hidden; margin-top: 0.2rem; border: 1px solid var(--border-color);">
@@ -211,7 +212,9 @@
         </div>
     </div>
 
-<script src="../../shared/app-utils.js"></script>
+<script>
+{{ app_utils_js | safe }}
+</script>
 
     <!-- Floating Action Button (FAB) -->
     <div class="fab-container">

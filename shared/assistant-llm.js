@@ -164,6 +164,7 @@ export class AssistantLLM extends AssistantCore {
     }
 
     async showModelSelection(m1, m3, m7, recommendedClass, limitsMsg) {
+        document.querySelectorAll('#model-selection-ui').forEach(el => el.remove());
         const div = document.createElement('div');
         div.className = 'msg assistant';
         div.style.padding = '1rem';
@@ -215,7 +216,14 @@ export class AssistantLLM extends AssistantCore {
         localStorage.setItem('preferredSmartModel', modelId);
         if (tier) localStorage.setItem('preferredSmartTier', tier);
         
-        let selUi = document.getElementById('model-selection-ui');
+        let selUis = document.querySelectorAll('#model-selection-ui');
+        let selUi = selUis.length > 0 ? selUis[selUis.length - 1] : null;
+        
+        if (selUis.length > 1) {
+            for (let i = 0; i < selUis.length - 1; i++) {
+                selUis[i].remove();
+            }
+        }
         if (!selUi) {
             selUi = document.createElement('div');
             selUi.className = 'msg assistant';
@@ -451,8 +459,7 @@ export class AssistantLLM extends AssistantCore {
         let activeModel = this.isDeepMode ? "Qwen 2.5 27B (Groq Cloud API)" : (this.modelId || "Llama 3.2 (Local WebGPU)");
         
         const SUBJECT = this.subjectId.toUpperCase();
-        let sysPrompt = `You are the elite study assistant for ${SUBJECT} (B.Tech) inside Revision Hub.
-Model: ${activeModel}.
+        let sysPrompt = `You are the elite study assistant for ${SUBJECT} (B.Tech) inside Revision Hub. Model: ${activeModel}.
 
 FACTS ABOUT THIS PLATFORM (do not claim anything else):
 - The "Important" flag comes from a fixed rule on marks and Bloom level. It is not learned from real papers.
@@ -460,9 +467,7 @@ FACTS ABOUT THIS PLATFORM (do not claim anything else):
 - Cite bank questions by id in the form [id], never by number alone.
 
 NORMAL MODE
-Answer from the REFERENCE NOTES when they help. Match depth to marks (2m: 2-3 lines,
-3m: short paragraph, 5m: structured with an example). If notes do not cover it, say
-"Not in your question bank" before giving a general answer.
+Answer from the REFERENCE NOTES when they help. Match depth to marks (2m: 2-3 lines, 3m: short paragraph, 5m: structured with an example). If notes do not cover it, say "Not in your question bank" before giving a general answer.
 
 PREDICT MODE (when the user asks for likely questions, "what else can come", or what to revise last-minute):
 Use only the SYLLABUS, BANK_TOPICS, GAPS and CHEAT_CHUNKS supplied below.
@@ -475,12 +480,10 @@ Use only the SYLLABUS, BANK_TOPICS, GAPS and CHEAT_CHUNKS supplied below.
    - Unit | Marks | Bloom | Likelihood: High/Medium (High only if 2+ evidence types apply)
    - Why: one line naming the evidence
    - Model answer sized to the marks
-   - Cheat-sheet check: "Covered" only if a CHEAT_CHUNK actually contains the needed facts,
-     quoting the heading. Otherwise "Gap" followed by a ready-to-paste snippet:
+   - Cheat-sheet check: "Covered" only if a CHEAT_CHUNK actually contains the needed facts, quoting the heading. Otherwise "Gap" followed by a ready-to-paste snippet:
      <div class="cheat-card"><h4>TITLE</h4><ul><li>...</li></ul></div>
      and the unit section it belongs in.
-3. If a High-likelihood question is a Gap, say so first and list gap snippets together at the
-   end as "Add to cheat sheet".
+3. If a High-likelihood question is a Gap, say so first and list gap snippets together at the end as "Add to cheat sheet".
 4. Rules: likelihoods are estimates, not knowledge of the real paper; say so once at the end.
    Never invent bank ids or claim a cheat-sheet section exists unless it is in CHEAT_CHUNKS.
    Stay inside Units I-III unless the user asks about the end-semester scope.
@@ -492,10 +495,10 @@ Use only the SYLLABUS, BANK_TOPICS, GAPS and CHEAT_CHUNKS supplied below.
                 let gapsData = [];
                 if (gapsRes.ok) gapsData = await gapsRes.json();
                 
-                let syllabus = this.indexData.filter(d => d.type === 'syllabus').map(d => d.chunks.join(' ')).join('\\n');
-                let cheatChunks = this.indexData.filter(d => d.type === 'cheat').slice(0, 4).map(d => d.chunks.join('\\n')).join('\\n\\n');
-                let bankHits = searchResults.filter(r => r.doc.type === 'question').slice(0, 15).map(r => `[${r.doc.id}] ${r.doc.title}`).join('\\n');
-                let gapsList = gapsData.slice(0, 15).map(g => JSON.stringify(g)).join('\\n');
+                let syllabus = this.indexData.filter(d => d.type === 'syllabus').map(d => d.chunks.join(' ')).join('\n');
+                let cheatChunks = this.indexData.filter(d => d.type === 'cheat').slice(0, 4).map(d => d.chunks.join('\n')).join('\n\n');
+                let bankHits = searchResults.filter(r => r.doc.type === 'question').slice(0, 15).map(r => `[${r.doc.id}] ${r.doc.title}`).join('\n');
+                let gapsList = gapsData.slice(0, 15).map(g => JSON.stringify(g)).join('\n');
 
                 sysPrompt += `\n\nSYLLABUS:\n${syllabus}\n\nBANK_TOPICS:\n${bankHits}\n\nCHEAT_CHUNKS:\n${cheatChunks}\n\nGAPS:\n${gapsList}`;
             } catch (e) {

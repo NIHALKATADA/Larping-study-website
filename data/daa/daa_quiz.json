@@ -59,7 +59,7 @@
             "Bubble Sort",
             "Merge Sort",
             "Quick Sort",
-            "Heap Sort"
+            "Insertion Sort"
         ],
         "correct_answer": "Insertion Sort",
         "explanation": "Insertion Sort is build sorted array one element at a time"
@@ -72,7 +72,7 @@
             "Bubble Sort",
             "Merge Sort",
             "Quick Sort",
-            "Heap Sort"
+            "Selection Sort"
         ],
         "correct_answer": "Selection Sort",
         "explanation": "Selection Sort is repeatedly find minimum element"

@@ -231,6 +231,6 @@ The project utilizes Vercel Serverless Functions (`api/chat.js`) to securely com
 
 ## Recent Updates (v2.2)
 - **Enhanced Predictive Picker:** The Outcome-Based Education (OBE) Predictive Bias Matrix now enforces a strict score >= 9.0 minimum threshold.
-- **RAG Embedding Purity:** Modified uild_site.py to pre-clean and purge all chat UI widgets (.ask-ai-widget, .fab-main) via BeautifulSoup before chunking HTML.
+- **RAG Embedding Purity:** Modified build_site.py to pre-clean and purge all chat UI widgets (.ask-ai-widget, .fab-main) via BeautifulSoup before chunking HTML.
 - **AI Backend Standardization:** All Vercel Serverless configurations and documentation successfully migrated from Gemini to Groq API (llama-3.1-70b-versatile, qwen2.5-32b).
 - **Prompt Architecture:** The AI Assistant System Prompt was rewritten to forcefully enforce Midterm scopes (Units I-III), analyze gaps, and verify cheat sheet coverage interactively.

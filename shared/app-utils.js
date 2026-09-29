@@ -2,25 +2,41 @@
 // CRITICAL PATH — runs immediately (no defer)
 // Theme must apply before first paint to avoid flash
 // ==========================================
-const pathParts = window.location.pathname.split('/');
-const subjectName = pathParts[pathParts.length - 2] || 'default';
+const utilsPathParts = window.location.pathname.split('/');
+const utilsSubjectName = utilsPathParts[utilsPathParts.length - 2] || 'default';
 const THEME_KEY = 'global_theme';
-const REVIEWED_KEY = subjectName + '_reviewed';
+const REVIEWED_KEY = utilsSubjectName + '_reviewed';
 let hasCelebrated = false;
 
 // Apply theme immediately to avoid FOUC
-const savedTheme = localStorage.getItem(THEME_KEY) || 'dark';
+
+const safeStorage = {
+    getItem: function(key) {
+        try { return localStorage.getItem(key); }
+        catch (e) { return null; }
+    },
+    setItem: function(key, value) {
+        try { localStorage.setItem(key, value); }
+        catch (e) { }
+    },
+    removeItem: function(key) {
+        try { localStorage.removeItem(key); }
+        catch (e) { }
+    }
+};
+
+const savedTheme = safeStorage.getItem(THEME_KEY) || 'dark';
 document.documentElement.setAttribute('data-theme', savedTheme);
 
 // Disable native scroll restoration — it fights with our deferred setup
 // and causes the page to jump to a stale position after layout completes.
-if ('scrollRestoration' in history) {
+try { if ('scrollRestoration' in history) {
     if (document.getElementById('subjects-grid')) {
         history.scrollRestoration = 'manual';
     } else {
         history.scrollRestoration = 'auto';
     }
-}
+} } catch (e) { console.error('History error', e); }
 if (document.getElementById('subjects-grid')) {
     window.scrollTo(0, 0);
     // Double safeguard for browsers that process scroll late
@@ -51,15 +67,7 @@ if (openId) {
 const ANIM_DURATION = 280; // ms — matches CSS entry animation duration
 
 function deferUntilAfterAnimation(fn) {
-    // Wait for animation to nearly complete, then use requestIdleCallback
-    // for zero-jank setup during the browser's free time.
-    setTimeout(() => {
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(fn, { timeout: 500 });
-        } else {
-            fn(); // Safari fallback
-        }
-    }, ANIM_DURATION);
+    setTimeout(fn, ANIM_DURATION);
 }
 
 // ==========================================
@@ -88,18 +96,19 @@ function updateProgressBar() {
 }
 
 function loadReviewState() {
-    let reviewed = JSON.parse(localStorage.getItem(REVIEWED_KEY) || '{}');
+    let reviewed = (() => { try { return JSON.parse(safeStorage.getItem(REVIEWED_KEY) || '{}'); } catch(e) { return {}; } })();
+    if (!reviewed || typeof reviewed !== 'object') reviewed = {};
     let hasGhost = false;
     if (reviewed[""]) { delete reviewed[""]; hasGhost = true; }
     if (reviewed["null"]) { delete reviewed["null"]; hasGhost = true; }
-    if (hasGhost) localStorage.setItem(REVIEWED_KEY, JSON.stringify(reviewed));
+    if (hasGhost) safeStorage.setItem(REVIEWED_KEY, JSON.stringify(reviewed));
     document.querySelectorAll('.review-cb').forEach(cb => {
         const cardId = cb.closest('.q-card').id;
         cb.checked = !!reviewed[cardId];
         cb.addEventListener('change', (e) => {
-            const currentState = JSON.parse(localStorage.getItem(REVIEWED_KEY) || '{}');
+            const currentState = (() => { try { return JSON.parse(safeStorage.getItem(REVIEWED_KEY) || '{}'); } catch(e) { return {}; } })();
             currentState[cardId] = e.target.checked;
-            localStorage.setItem(REVIEWED_KEY, JSON.stringify(currentState));
+            safeStorage.setItem(REVIEWED_KEY, JSON.stringify(currentState));
             updateProgressBar();
         });
     });
@@ -132,7 +141,7 @@ function toggleAll() {
 function applyFilters() {
     const cards = document.querySelectorAll('.q-card');
     const searchInput = document.getElementById('search-box') || document.getElementById('searchInput');
-    const filterFeedbackText = document.getElementById('filter-feedback-text');
+    const filterFeedbackText = document.getElementById('showing-text');
     const noResultsMsg = document.getElementById('no-results');
     const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
     const activeUnits = Array.from(document.querySelectorAll('.unit-cb:checked')).map(cb => cb.value);
@@ -204,46 +213,45 @@ function applyFilters() {
 // ==========================================
 deferUntilAfterAnimation(() => {
 
-    // Add staggered entrance animations to cards (q-cards and cheat-cards)
-    const qCards = document.querySelectorAll('.q-card, .cheat-card');
-    if (qCards.length > 0) {
-        const cardObserver = new IntersectionObserver((entries, obs) => {
-            requestAnimationFrame(() => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        obs.unobserve(entry.target);
-                    }
+    try {
+        const qCards = document.querySelectorAll('.q-card, .cheat-card');
+        if (qCards.length > 0) {
+            const cardObserver = new IntersectionObserver((entries, obs) => {
+                requestAnimationFrame(() => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            obs.unobserve(entry.target);
+                        }
+                    });
                 });
-            });
-        }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
+            }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
 
-        let visibleIndex = 0;
-        qCards.forEach((card) => {
-            card.classList.add('reveal-on-scroll');
-            const rect = card.getBoundingClientRect();
-            // Stagger only initially visible elements above the fold
-            if (rect.top > 0 && rect.top < window.innerHeight + 100) {
-                // Wait for skeleton to start fading (~0.2s from now) + stagger
-                const delay = 0.2 + (visibleIndex * 0.08);
-                card.style.transitionDelay = delay + 's';
-                visibleIndex++;
-            } else {
-                card.style.transitionDelay = '0.05s';
-            }
-            cardObserver.observe(card);
-        });
-    }
-    // Review state & progress bar
-    loadReviewState();
-    if (typeof applyFilters === "function") applyFilters();
+            let visibleIndex = 0;
+            qCards.forEach((card) => {
+                card.classList.add('reveal-on-scroll');
+                const rect = card.getBoundingClientRect();
+                if (rect.top > 0 && rect.top < window.innerHeight + 100) {
+                    const delay = 0.2 + (visibleIndex * 0.08);
+                    card.style.transitionDelay = delay + 's';
+                    visibleIndex++;
+                } else {
+                    card.style.transitionDelay = '0.05s';
+                }
+                cardObserver.observe(card);
+            });
+        }
+    } catch (e) { console.error("Observer Error", e); }
+    
+    try { loadReviewState(); } catch(e) { console.error("loadReviewState Error", e); }
+    try { if (typeof applyFilters === "function") applyFilters(); } catch(e) { console.error("applyFilters Error", e); }
 
     // Reset button
     const resetProgressBtn = document.getElementById('resetProgressBtn');
     if (resetProgressBtn) {
         resetProgressBtn.addEventListener('click', () => {
             if (confirm("Are you sure you want to reset all your review marks?")) {
-                localStorage.removeItem(REVIEWED_KEY);
+                safeStorage.removeItem(REVIEWED_KEY);
                 document.querySelectorAll('.review-cb').forEach(cb => { cb.checked = false; });
                 updateProgressBar();
             }
@@ -405,13 +413,13 @@ window.markAllReviewed = function() {
     const allCb = document.querySelectorAll('.review-cb');
     const checkedCount = document.querySelectorAll('.review-cb:checked').length;
     const isAllMarked = (checkedCount === allCb.length && allCb.length > 0);
-    const currentState = JSON.parse(localStorage.getItem(REVIEWED_KEY) || '{}');
+    const currentState = (() => { try { return JSON.parse(safeStorage.getItem(REVIEWED_KEY) || '{}'); } catch(e) { return {}; } })();
     allCb.forEach(cb => {
         cb.checked = !isAllMarked;
         const card = cb.closest('.q-card');
         if (card && card.id) currentState[card.id] = !isAllMarked;
     });
-    localStorage.setItem(REVIEWED_KEY, JSON.stringify(currentState));
+    safeStorage.setItem(REVIEWED_KEY, JSON.stringify(currentState));
     updateProgressBar();
     const fabLabel = document.querySelector('button[onclick*="markAllReviewed"] span');
     if (fabLabel) fabLabel.innerText = isAllMarked ? "Mark All" : "Unmark All";
@@ -525,9 +533,9 @@ window.gradeQuiz = function(knewIt) {
         const cb = card.querySelector('.review-cb');
         if (cb && !cb.checked) {
             cb.checked = true;
-            const s = JSON.parse(localStorage.getItem(REVIEWED_KEY) || '{}');
+            const s = (() => { try { return JSON.parse(safeStorage.getItem(REVIEWED_KEY) || '{}'); } catch(e) { return {}; } })();
             s[card.id] = true;
-            localStorage.setItem(REVIEWED_KEY, JSON.stringify(s));
+            safeStorage.setItem(REVIEWED_KEY, JSON.stringify(s));
             updateProgressBar();
         }
     }

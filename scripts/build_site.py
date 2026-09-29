@@ -1,3 +1,5 @@
+import os
+
 import json
 import re
 import html
@@ -86,29 +88,24 @@ def extract_course_data_chunks(course_data_path):
             with open(course_data_path, 'r', encoding='utf-16') as f:
                 content = f.read()
         
-        # Find everything between units: [ and the end of the COURSE_DATA object or the next property
-        units_match = re.search(r'units:\s*\[(.*?)\]\s*(?:,\s*[a-zA-Z]+:|\}\s*;)', content, re.DOTALL)
-        if units_match:
-            units_str = units_match.group(1)
-            unit_objs = re.findall(r'\{(.*?)\}', units_str, re.DOTALL)
-            for u in unit_objs:
-                unit_num = re.search(r'unit:\s*"([^"]+)"', u)
-                title = re.search(r'title:\s*"([^"]+)"', u)
-                topics_match = re.search(r'topics:\s*\[(.*?)\]', u, re.DOTALL)
-                
-                chunk_text = []
-                if unit_num and title:
-                    chunk_text.append(f"Unit {unit_num.group(1)}: {title.group(1)}")
-                if topics_match:
-                    topics = re.findall(r'"([^"]+)"', topics_match.group(1))
-                    chunk_text.extend(topics)
-                if chunk_text:
-                    chunks.append(" ".join(chunk_text))
+        unit_blocks = re.findall(r'unit:\s*"([^"]+)",\s*title:\s*"([^"]+)",\s*topics:\s*\[(.*?)\]', content, re.DOTALL)
+        for unit_num, title, topics_str in unit_blocks:
+            chunk_text = []
+            if unit_num and title:
+                chunk_text.append(f"Unit {unit_num}: {title}")
+            if topics_str:
+                topics = re.findall(r'"([^"]+)"', topics_str)
+                chunk_text.extend(topics)
+            if chunk_text:
+                chunks.append(" ".join(chunk_text))
     except Exception as e:
         print(f"Error parsing course data {course_data_path}:", e)
     return chunks
 
 def build_subject(subject_dir, templates_dir, data_dir):
+    with open(subject_dir.parent.parent / "shared" / "app-utils.js", "r", encoding="utf-8") as f:
+        app_utils_js = f.read()
+
     subject_id = subject_dir.name
     questions_path = data_dir / subject_id / f"{subject_id}_questions.json"
     
@@ -134,7 +131,7 @@ def build_subject(subject_dir, templates_dir, data_dir):
         is_midterm=False, 
         subject_code=subject_code,
         subject_id=subject_id,
-        subject_full_name=subject_full_name
+        subject_full_name=subject_full_name, app_utils_js=app_utils_js
     )
     with open(subject_dir / 'question-bank.html', 'w', encoding='utf-8') as f:
         f.write(output_html)
@@ -147,7 +144,7 @@ def build_subject(subject_dir, templates_dir, data_dir):
         is_midterm=True, 
         subject_code=subject_code,
         subject_id=subject_id,
-        subject_full_name=subject_full_name
+        subject_full_name=subject_full_name, app_utils_js=app_utils_js
     )
     with open(subject_dir / 'midterm-important.html', 'w', encoding='utf-8') as f:
         f.write(output_midterm)
@@ -273,3 +270,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

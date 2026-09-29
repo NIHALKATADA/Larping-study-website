@@ -91,7 +91,7 @@
             "Method overloading",
             "Method overriding",
             "final",
-            "static"
+            "abstract"
         ],
         "correct_answer": "abstract",
         "explanation": "abstract maps to class that cannot be instantiated"
@@ -104,7 +104,7 @@
             "Method overloading",
             "Method overriding",
             "final",
-            "static"
+            "interface"
         ],
         "correct_answer": "interface",
         "explanation": "interface maps to contract for classes to implement"

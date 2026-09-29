@@ -91,7 +91,7 @@
             "Derivative",
             "Integral",
             "Gradient",
-            "Jacobian"
+            "Hessian"
         ],
         "correct_answer": "Hessian",
         "explanation": "Hessian is matrix of second-order partial derivatives"
@@ -104,7 +104,7 @@
             "Derivative",
             "Integral",
             "Gradient",
-            "Jacobian"
+            "Taylor Series"
         ],
         "correct_answer": "Taylor Series",
         "explanation": "Taylor Series is infinite sum representation of a function"

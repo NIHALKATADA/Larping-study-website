@@ -1,371 +1,574 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="paper">
+
+<html data-theme="paper" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DBMS Cheat Sheet</title>
-    <link rel="stylesheet" href="../../shared/design-system.css">
-    
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DBMS Comprehensive Report</title>
+<link href="../../shared/design-system.css" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 </head>
 <body>
-    <div class="glow-bg"></div>
-    <nav class="smart-topbar">
-        <div class="topbar-left">
-            <a href="../../index.html" class="btn btn-secondary sleek-back">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                <span class="desktop-title">Dashboard</span>
-            </a>
-            <span class="topbar-logo desktop-title">Revision Hub</span>
-        </div>
-        <div class="topbar-right">
-            <button onclick="downloadPDF()" class="btn btn-secondary" style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; padding: 0.4rem 0.8rem; background: rgba(255,255,255,0.1);">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+<div class="glow-bg"></div>
+<nav class="smart-topbar">
+<div class="topbar-left">
+<a class="btn btn-secondary sleek-back" href="../../index.html">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" style="margin-right: 6px;" viewbox="0 0 24 24" width="16"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg>
+<span class="desktop-title">Dashboard</span>
+</a>
+<span class="topbar-logo desktop-title">Revision Hub</span>
+</div>
+<div class="topbar-right">
+<button class="btn btn-secondary" onclick="downloadPDF()" style="display: flex; align-items: center; gap: 8px; font-size: 0.9rem; padding: 0.4rem 0.8rem; background: rgba(255,255,255,0.1);">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
                 Save as PDF
             </button>
-            <button id="themeToggleBtn" class="btn btn-secondary theme-toggle">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
-                <span class="desktop-title">Theme</span>
-            </button>
-        </div>
-    </nav>
-
-    <header class="banner">
-        
-        <h1>Database Management Systems</h1>
-        <h2>Dense Revision Cheat Sheet</h2>
-        <p class="scope-note">All Units | Scannable Reference | High-Yield Syntax & Concepts</p>
-    </header>
-
-    <div class="layout-wrapper" style="display: block;">
-        
-        <div class="controls" style="flex-direction: row; justify-content: space-between; align-items: center;">
-            
-            <div>
-                <strong>Quick Jump:</strong> 
-                <a href="#unit1" style="margin-right: 1rem;">Unit I</a>
-                <a href="#unit2" style="margin-right: 1rem;">Unit II</a>
-                <a href="#unit3" style="margin-right: 1rem;">Unit III</a>
-                <a href="#unit4" style="margin-right: 1rem;">Unit IV</a>
-                <a href="#unit5">Unit V</a>
-            </div>
-            <button class="btn btn-secondary" id="themeToggleBtn">Mode: Paper</button>
-        </div>
-
-        <!-- UNIT 1 -->
-        
+<button class="btn btn-secondary theme-toggle" id="themeToggleBtn">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path></svg>
+<span class="desktop-title">Theme</span>
+</button>
+</div>
+</nav>
+<header class="banner">
+<h1>Database Management Systems</h1>
+<h2>Dense Revision Comprehensive Report</h2>
+<p class="scope-note">All Units | Scannable Reference | High-Yield Syntax &amp; Concepts</p>
+</header>
+<div class="layout-wrapper" style="display: block;">
+<div class="controls" style="flex-direction: row; justify-content: space-between; align-items: center;">
+<div>
+<strong>Quick Jump:</strong>
+<a href="#unit1" style="margin-right: 1rem;">Unit I</a>
+<a href="#unit2" style="margin-right: 1rem;">Unit II</a>
+<a href="#unit3" style="margin-right: 1rem;">Unit III</a>
+<a href="#unit4" style="margin-right: 1rem;">Unit IV</a>
+<a href="#unit5">Unit V</a>
+</div>
+<button class="btn btn-secondary" id="themeToggleBtn">Mode: Paper</button>
+</div>
+<!-- UNIT 1 -->
 <div style="display: grid; width: 100%;">
-    <div id="pureSkeleton">
-        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-            <div class="skel-line" style="height: 1.8rem; width: 250px; border-radius: 6px;"></div>
-            <div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
-        </div>
-        <div class="cheat-grid" style="margin-bottom: 3rem;">
-            
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        </div>
-        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-            <div class="skel-line" style="height: 1.8rem; width: 200px; border-radius: 6px;"></div>
-            <div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
-        </div>
-        <div class="cheat-grid" style="margin-bottom: 3rem;">
-            
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        </div>
-    </div>
-    <div id="realContentWrapper">
+<div id="pureSkeleton">
+<div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+<div class="skel-line" style="height: 1.8rem; width: 250px; border-radius: 6px;"></div>
+<div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
+</div>
+<div class="cheat-grid" style="margin-bottom: 3rem;">
+<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+</div>
+<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+</div>
+<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+</div>
+<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+</div>
+<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+</div>
+<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+</div>
+</div>
+<div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+<div class="skel-line" style="height: 1.8rem; width: 200px; border-radius: 6px;"></div>
+<div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
+</div>
+<div class="cheat-grid" style="margin-bottom: 3rem;">
+<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+</div>
+<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+</div>
+<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
+<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
+<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
+</div>
+</div>
+</div>
+<div id="realContentWrapper">
 <div class="unit-section" id="unit1">
-    <h3>Unit I: Introduction to DBMS <span class="badge unit-1">CO1</span></h3>
-    <div class="cheat-grid">
-        <div class="cheat-card">
-            <h4>Architecture & Data Independence <span class="badge unit-1">U1</span></h4>
-            <p>The 3-schema architecture separates user views (External), logic (Conceptual), and storage (Internal). It ensures data independence, allowing changes in one schema without affecting others.</p>
-            <div class="example"><strong>Example:</strong> Changing file structure from sequential to B+ tree (Physical Independence) doesn't alter SQL queries at the Conceptual level.</div>
-            <div class="pro-tip">
-                <div><strong>Pro-Tip:</strong> Logical data independence is much harder to achieve than physical, as application logic tightly binds to the conceptual schema.</div>
-            </div>
-        </div>
-        <div class="cheat-card">
-            <h4>Keys & Constraints <span class="badge unit-1">U1</span></h4>
-            <p>Super keys identify tuples uniquely. Candidate keys are minimal super keys. Primary keys are chosen candidate keys. Foreign keys enforce referential integrity between tables.</p>
-            <div class="example"><strong>Example:</strong> `{EmpID, Email}` is a Super Key. `EmpID` is a Candidate and Primary Key.</div>
-            <div class="exam-trap">
-                <div><strong>Exam Trap:</strong> A relation can have multiple candidate keys but strictly ONE primary key. Nulls are not allowed in PKs (Entity Integrity).</div>
-            </div>
-        </div>
-        <div class="cheat-card">
-            <h4>Normalization: 1NF to BCNF <span class="badge unit-1">U1</span></h4>
-            <p>1NF mandates atomic domains. 2NF removes partial dependencies (non-prime depends on part of PK). 3NF eliminates transitive dependencies. BCNF strictly enforces every determinant as a candidate key.</p>
-            <div class="example"><strong>Example:</strong> If `City -> Zip` and `Zip -> State`, `City -> State` is a transitive dependency violating 3NF.</div>
-            <div class="exam-trap">
-                <div><strong>Exam Trap:</strong> BCNF decomposition may result in the loss of functional dependency preservation, unlike 3NF which guarantees both lossless join and dependency preservation.</div>
-            </div>
-        </div>
-        <div class="cheat-card" style="grid-column: span 2;">
-            <h4>Deep Dive: ER to Relational Mapping <span class="badge unit-1">U1</span></h4>
-            <div class="compact-svg">
-                <div class="mermaid">
+<h3>Unit I: Introduction to DBMS <span class="badge unit-1">CO1</span></h3>
+<div class="cheat-grid">
+<div class="cheat-card">
+<h4>Architecture &amp; Data Independence <span class="badge unit-1">U1</span></h4>
+<p>The 3-schema architecture separates user views (External), logic (Conceptual), and storage (Internal). It ensures data independence, allowing changes in one schema without affecting others.</p>
+<div class="example"><strong>Example:</strong> Changing file structure from sequential to B+ tree (Physical Independence) doesn't alter SQL queries at the Conceptual level.</div>
+<div class="pro-tip">
+<div><strong>Pro-Tip:</strong> Logical data independence is much harder to achieve than physical, as application logic tightly binds to the conceptual schema.</div>
+</div>
+</div>
+<div class="cheat-card">
+<h4>Keys &amp; Constraints <span class="badge unit-1">U1</span></h4>
+<p>Super keys identify tuples uniquely. Candidate keys are minimal super keys. Primary keys are chosen candidate keys. Foreign keys enforce referential integrity between tables.</p>
+<div class="example"><strong>Example:</strong> `{EmpID, Email}` is a Super Key. `EmpID` is a Candidate and Primary Key.</div>
+<div class="exam-trap">
+<div><strong>Exam Trap:</strong> A relation can have multiple candidate keys but strictly ONE primary key. Nulls are not allowed in PKs (Entity Integrity).</div>
+</div>
+</div>
+<div class="cheat-card">
+<h4>Normalization: 1NF to BCNF <span class="badge unit-1">U1</span></h4>
+<p>1NF mandates atomic domains. 2NF removes partial dependencies (non-prime depends on part of PK). 3NF eliminates transitive dependencies. BCNF strictly enforces every determinant as a candidate key.</p>
+<div class="example"><strong>Example:</strong> If `City -&gt; Zip` and `Zip -&gt; State`, `City -&gt; State` is a transitive dependency violating 3NF.</div>
+<div class="exam-trap">
+<div><strong>Exam Trap:</strong> BCNF decomposition may result in the loss of functional dependency preservation, unlike 3NF which guarantees both lossless join and dependency preservation.</div>
+</div>
+</div>
+<div class="cheat-card" style="grid-column: span 2;">
+<h4>Deep Dive: ER to Relational Mapping <span class="badge unit-1">U1</span></h4>
+<div class="compact-svg">
+<div class="mermaid">
                 erDiagram
                     EMPLOYEE ||--o{ DEPENDENT : "has (weak)"
                     EMPLOYEE { string EmpID PK }
                     DEPENDENT { string DepName PK "Partial" }
                 </div>
-            </div>
-            <p>Strong entities map directly to tables. Weak entities map to tables using a composite key: their own partial key + the strong entity's primary key. M:N relationships require a separate junction table.</p>
-            <div class="example"><strong>Example:</strong> The DEPENDENT table uses `(EmpID, DepName)` as its primary key.</div>
-            <div class="pro-tip">
-                <div><strong>Pro-Tip:</strong> In total participation, foreign key constraints often use `ON DELETE CASCADE` to maintain consistency.</div>
-            </div>
-        </div>
-    </div>
 </div>
-
-<div class="unit-section" id="unit2">
-    <h3>Unit II: Relational Database Concepts <span class="badge unit-2">CO2</span></h3>
-    <div class="cheat-grid">
-        <div class="cheat-card">
-            <h4>Relational Algebra Core <span class="badge unit-2">U2</span></h4>
-            <p>A procedural query language defining execution steps. Core operators include Selection (σ, row filter), Projection (π, column filter), Cartesian Product (×), Set Difference (-), and Union (∪).</p>
-            <div class="example"><strong>Example:</strong> `π_name(σ_age>20(Student))` filters students older than 20, projecting only their names.</div>
-            <div class="exam-trap">
-                <div><strong>Exam Trap:</strong> Union compatibility requires relations to have identical degree (number of attributes) and compatible domains.</div>
-            </div>
-        </div>
-        <div class="cheat-card">
-            <h4>Advanced Relational Algebra <span class="badge unit-2">U2</span></h4>
-            <p>Derived operators simplify queries: Natural Join (⋈) implicitly matches common attributes, and Division (÷) identifies universal quantification scenarios (e.g., "all").</p>
-            <div class="example"><strong>Example:</strong> `Students ÷ Courses` returns students who have enrolled in EVERY available course.</div>
-            <div class="pro-tip">
-                <div><strong>Pro-Tip:</strong> The Division operator is technically derived using Projection, Set Difference, and Cartesian Product.</div>
-            </div>
-        </div>
-        <div class="cheat-card">
-            <h4>Tuple vs Domain Relational Calculus <span class="badge unit-2">U2</span></h4>
-            <p>Calculus is non-procedural (describes WHAT to fetch, not HOW). TRC evaluates on a per-tuple basis. DRC evaluates attributes using domain variables.</p>
-            <div class="example"><strong>Example (TRC):</strong> `{t | t ∈ Student ∧ t.age > 20}`.</div>
-            <div class="exam-trap">
-                <div><strong>Exam Trap:</strong> Unsafe queries (like infinite sets `{t | ¬(t ∈ Student)}`) are possible in calculus but syntactically disallowed in safe TRC systems.</div>
-            </div>
-        </div>
-    </div>
+<p>Strong entities map directly to tables. Weak entities map to tables using a composite key: their own partial key + the strong entity's primary key. M:N relationships require a separate junction table.</p>
+<div class="example"><strong>Example:</strong> The DEPENDENT table uses `(EmpID, DepName)` as its primary key.</div>
+<div class="pro-tip">
+<div><strong>Pro-Tip:</strong> In total participation, foreign key constraints often use `ON DELETE CASCADE` to maintain consistency.</div>
 </div>
-
-<div class="unit-section" id="unit3">
-    <h3>Unit III: Structured Query Language (SQL) <span class="badge unit-3">CO3</span></h3>
-    <div class="cheat-grid">
-        <div class="cheat-card" style="grid-column: span 2;">
-            <h4>SQL Execution Pipeline <span class="badge unit-3">U3</span></h4>
-            <div class="compact-svg">
-                <div class="mermaid">
-                flowchart LR
-                    F[FROM] --> W[WHERE] --> G[GROUP BY] --> H[HAVING] --> S[SELECT] --> O[ORDER BY]
+</div>
+<div class="cheat-card">
+<h4>University Exam System <span class="badge unit-1">ER Diagram</span></h4>
+<div class="compact-svg">
+<div class="mermaid">
+                erDiagram
+                    STUDENT ||--o{ APPEARS : "appears in"
+                    EXAM ||--o{ APPEARS : "has"
+                    COURSE ||--o{ EXAM : "has"
+                    STUDENT {
+                        string Roll_No PK
+                        string Name
+                        string Program
+                    }
+                    COURSE {
+                        string Course_Code PK
+                        string C_Name
+                        string Credits
+                    }
+                    EXAM {
+                        string Exam_ID PK
+                        string Date
+                        string Time
+                        string Course_Code FK
+                    }
+                    APPEARS {
+                        string Roll_No FK
+                        string Exam_ID FK
+                        int Marks_Obtained
+                    }
                 </div>
-            </div>
-            <p>Understanding logical execution order prevents semantic errors. `WHERE` filters rows prior to aggregation, while `HAVING` filters aggregated buckets.</p>
-            <div class="example"><strong>Example:</strong> You cannot use a column alias defined in `SELECT` inside the `WHERE` clause, because `WHERE` executes first.</div>
-            <div class="pro-tip">
-                <div><strong>Pro-Tip:</strong> This is why `COUNT(*)` in `WHERE` throws an error; aggregation hasn't happened yet!</div>
-            </div>
-        </div>
-        <div class="cheat-card">
-            <h4>Correlated Subqueries <span class="badge unit-3">U3</span></h4>
-            <p>An inner query that references columns from the outer query. It executes row-by-row iteratively for each tuple processed by the outer query, degrading performance.</p>
-            <div class="example"><strong>Example:</strong> `SELECT * FROM Emp e1 WHERE Salary > (SELECT AVG(Salary) FROM Emp e2 WHERE e1.Dept = e2.Dept)`</div>
-            <div class="exam-trap">
-                <div><strong>Exam Trap:</strong> Contrast with non-correlated subqueries which execute exactly once. Use `EXISTS` instead of `IN` for correlated lookups to short-circuit execution.</div>
-            </div>
-        </div>
-        <div class="cheat-card">
-            <h4>Triggers & Views <span class="badge unit-3">U3</span></h4>
-            <p>Views are virtual tables providing logical independence. Triggers execute procedural code in response to DML events (INSERT/UPDATE/DELETE), typically enforcing complex business rules.</p>
-            <div class="example"><strong>Example:</strong> `CREATE TRIGGER BeforeDelete BEFORE DELETE ON Users FOR EACH ROW ...`</div>
-            <div class="pro-tip">
-                <div><strong>Pro-Tip:</strong> A "Mutating Table Error" occurs when a row-level trigger attempts to query the same table that invoked it.</div>
-            </div>
-        </div>
-    </div>
 </div>
-
+<p><strong>Relational Schema:</strong></p>
+<ul>
+<li><strong>Student</strong>(<u>Roll_No</u>, Name, Program)</li>
+<li><strong>Course</strong>(<u>Course_Code</u>, C_Name, Credits)</li>
+<li><strong>Exam</strong>(<u>Exam_ID</u>, Date, Time, <em>Course_Code</em>)</li>
+<li><strong>Appears</strong>(<u><em>Roll_No</em>, <em>Exam_ID</em></u>, Marks_Obtained)</li>
+</ul>
+</div><div class="cheat-card">
+<h4>Online Book Store <span class="badge unit-1">ER Diagram</span></h4>
+<div class="compact-svg">
+<div class="mermaid">
+                erDiagram
+                    CUSTOMER ||--o{ ORDER : "places"
+                    ORDER ||--o{ ORDER_DETAILS : "contains"
+                    BOOK ||--o{ ORDER_DETAILS : "contained in"
+                    AUTHOR ||--o{ BOOK : "writes"
+                    PUBLISHER ||--o{ BOOK : "publishes"
+                    CUSTOMER {
+                        string Cust_ID PK
+                        string Name
+                        string Email
+                        string Address
+                    }
+                    AUTHOR {
+                        string Auth_ID PK
+                        string Name
+                        string Bio
+                    }
+                    PUBLISHER {
+                        string Pub_ID PK
+                        string Name
+                        string Address
+                    }
+                    BOOK {
+                        string ISBN PK
+                        string Title
+                        float Price
+                        string Auth_ID FK
+                        string Pub_ID FK
+                    }
+                    ORDER {
+                        string Order_ID PK
+                        date Date
+                        float Total_Amt
+                        string Cust_ID FK
+                    }
+                    ORDER_DETAILS {
+                        string Order_ID FK
+                        string ISBN FK
+                        int Quantity
+                    }
+                </div>
+</div>
+<p><strong>Relational Schema:</strong></p>
+<ul>
+<li><strong>Customer</strong>(<u>Cust_ID</u>, Name, Email, Address)</li>
+<li><strong>Author</strong>(<u>Auth_ID</u>, Name, Bio)</li>
+<li><strong>Publisher</strong>(<u>Pub_ID</u>, Name, Address)</li>
+<li><strong>Book</strong>(<u>ISBN</u>, Title, Price, <em>Auth_ID</em>, <em>Pub_ID</em>)</li>
+<li><strong>Order</strong>(<u>Order_ID</u>, Date, Total_Amt, <em>Cust_ID</em>)</li>
+<li><strong>Order_Details</strong>(<u><em>Order_ID</em>, <em>ISBN</em></u>, Quantity)</li>
+</ul>
+</div><div class="cheat-card">
+<h4>Hospital System <span class="badge unit-1">ER Diagram</span></h4>
+<div class="compact-svg">
+<div class="mermaid">
+                erDiagram
+                    PATIENT ||--o{ CONSULTATION_RECORD : "undergoes"
+                    DOCTOR ||--o{ CONSULTATION_RECORD : "conducts"
+                    TEST ||--o{ CONSULTATION_RECORD : "includes"
+                    PATIENT {
+                        string Patient_ID PK
+                        string Name
+                        string DOB
+                        string Contact
+                    }
+                    DOCTOR {
+                        string Doc_ID PK
+                        string Name
+                        string Specialization
+                    }
+                    TEST {
+                        string Test_Code PK
+                        string Test_Name
+                        float Cost
+                    }
+                    CONSULTATION_RECORD {
+                        string Record_ID PK
+                        string Patient_ID FK
+                        string Doc_ID FK
+                        string Test_Code FK
+                        date Date
+                        string Result
+                    }
+                </div>
+</div>
+<p><strong>Relational Schema:</strong></p>
+<ul>
+<li><strong>Patient</strong>(<u>Patient_ID</u>, Name, DOB, Contact)</li>
+<li><strong>Doctor</strong>(<u>Doc_ID</u>, Name, Specialization)</li>
+<li><strong>Test</strong>(<u>Test_Code</u>, Test_Name, Cost)</li>
+<li><strong>Consultation_Record</strong>(<u>Record_ID</u>, <em>Patient_ID</em>, <em>Doc_ID</em>, <em>Test_Code</em>, Date, Result)</li>
+</ul>
+</div><div class="cheat-card">
+<h4>Bank System <span class="badge unit-1">ER Diagram</span></h4>
+<div class="compact-svg">
+<div class="mermaid">
+                erDiagram
+                    BRANCH ||--o{ ACCOUNT : "maintains"
+                    BRANCH ||--o{ LOAN : "issues"
+                    CUSTOMER ||--o{ HOLDS_ACCOUNT : "holds"
+                    ACCOUNT ||--o{ HOLDS_ACCOUNT : "held by"
+                    CUSTOMER ||--o{ TAKES_LOAN : "takes"
+                    LOAN ||--o{ TAKES_LOAN : "taken by"
+                    BRANCH {
+                        string Branch_Code PK
+                        string City
+                        float Assets
+                    }
+                    CUSTOMER {
+                        string Cust_ID PK
+                        string Name
+                        string Phone
+                        string Address
+                    }
+                    ACCOUNT {
+                        string Acc_No PK
+                        string Type
+                        float Balance
+                        string Branch_Code FK
+                    }
+                    LOAN {
+                        string Loan_No PK
+                        float Amount
+                        float Interest_Rate
+                        string Branch_Code FK
+                    }
+                    HOLDS_ACCOUNT {
+                        string Cust_ID FK
+                        string Acc_No FK
+                    }
+                    TAKES_LOAN {
+                        string Cust_ID FK
+                        string Loan_No FK
+                    }
+                </div>
+</div>
+<p><strong>Relational Schema:</strong></p>
+<ul>
+<li><strong>Branch</strong>(<u>Branch_Code</u>, City, Assets)</li>
+<li><strong>Customer</strong>(<u>Cust_ID</u>, Name, Phone, Address)</li>
+<li><strong>Account</strong>(<u>Acc_No</u>, Type, Balance, <em>Branch_Code</em>)</li>
+<li><strong>Loan</strong>(<u>Loan_No</u>, Amount, Interest_Rate, <em>Branch_Code</em>)</li>
+<li><strong>Holds_Account</strong>(<u><em>Cust_ID</em>, <em>Acc_No</em></u>)</li>
+<li><strong>Takes_Loan</strong>(<u><em>Cust_ID</em>, <em>Loan_No</em></u>)</li>
+</ul>
+</div><div class="cheat-card">
+<h4>Normalization Applied Example <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
+<p><b>Given:</b> R(Student, Subject, Teacher, Mentor) with FDs: Student → Mentor, Mentor → Subject, Subject → Teacher.</p>
+<p><b>Check 3NF:</b> Student → Mentor is fine (Student is a candidate key). But Mentor → Subject has a non-prime determinant (Mentor) that is not a superkey, violating 3NF.</p>
+<p><b>Decomposition into 3NF:</b></p>
+<ul>
+<li>R1(Mentor, Subject) — from Mentor → Subject</li>
+<li>R2(Subject, Teacher) — from Subject → Teacher</li>
+<li>R3(Student, Mentor) — from Student → Mentor (preserves candidate key)</li>
+</ul>
+</div></div>
+</div>
+<div class="unit-section" id="unit2">
+<h3>Unit II: Relational Database Concepts <span class="badge unit-2">CO2</span></h3>
+<div class="cheat-grid">
+<div class="cheat-card">
+<h4>Relational Algebra Core <span class="badge unit-2">U2</span></h4>
+<p>A procedural query language defining execution steps. Core operators include Selection (σ, row filter), Projection (π, column filter), Cartesian Product (×), Set Difference (-), and Union (∪).</p>
+<div class="example"><strong>Example:</strong> `π_name(σ_age&gt;20(Student))` filters students older than 20, projecting only their names.</div>
+<div class="exam-trap">
+<div><strong>Exam Trap:</strong> Union compatibility requires relations to have identical degree (number of attributes) and compatible domains.</div>
+</div>
+</div>
+<div class="cheat-card">
+<h4>Advanced Relational Algebra <span class="badge unit-2">U2</span></h4>
+<p>Derived operators simplify queries: Natural Join (⋈) implicitly matches common attributes, and Division (÷) identifies universal quantification scenarios (e.g., "all").</p>
+<div class="example"><strong>Example:</strong> `Students ÷ Courses` returns students who have enrolled in EVERY available course.</div>
+<div class="pro-tip">
+<div><strong>Pro-Tip:</strong> The Division operator is technically derived using Projection, Set Difference, and Cartesian Product.</div>
+</div>
+</div>
+<div class="cheat-card">
+<h4>Tuple vs Domain Relational Calculus <span class="badge unit-2">U2</span></h4>
+<p>Calculus is non-procedural (describes WHAT to fetch, not HOW). TRC evaluates on a per-tuple basis. DRC evaluates attributes using domain variables.</p>
+<div class="example"><strong>Example (TRC):</strong> `{t | t ∈ Student ∧ t.age &gt; 20}`.</div>
+<div class="exam-trap">
+<div><strong>Exam Trap:</strong> Unsafe queries (like infinite sets `{t | ¬(t ∈ Student)}`) are possible in calculus but syntactically disallowed in safe TRC systems.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="unit-section" id="unit3">
+<h3>Unit III: Structured Query Language (SQL) <span class="badge unit-3">CO3</span></h3>
+<div class="cheat-grid">
+<div class="cheat-card" style="grid-column: span 2;">
+<h4>SQL Execution Pipeline <span class="badge unit-3">U3</span></h4>
+<div class="compact-svg">
+<div class="mermaid">
+                flowchart LR
+                    F[FROM] --&gt; W[WHERE] --&gt; G[GROUP BY] --&gt; H[HAVING] --&gt; S[SELECT] --&gt; O[ORDER BY]
+                </div>
+</div>
+<p>Understanding logical execution order prevents semantic errors. `WHERE` filters rows prior to aggregation, while `HAVING` filters aggregated buckets.</p>
+<div class="example"><strong>Example:</strong> You cannot use a column alias defined in `SELECT` inside the `WHERE` clause, because `WHERE` executes first.</div>
+<div class="pro-tip">
+<div><strong>Pro-Tip:</strong> This is why `COUNT(*)` in `WHERE` throws an error; aggregation hasn't happened yet!</div>
+</div>
+</div>
+<div class="cheat-card">
+<h4>Correlated Subqueries <span class="badge unit-3">U3</span></h4>
+<p>An inner query that references columns from the outer query. It executes row-by-row iteratively for each tuple processed by the outer query, degrading performance.</p>
+<div class="example"><strong>Example:</strong> `SELECT * FROM Emp e1 WHERE Salary &gt; (SELECT AVG(Salary) FROM Emp e2 WHERE e1.Dept = e2.Dept)`</div>
+<div class="exam-trap">
+<div><strong>Exam Trap:</strong> Contrast with non-correlated subqueries which execute exactly once. Use `EXISTS` instead of `IN` for correlated lookups to short-circuit execution.</div>
+</div>
+</div>
+<div class="cheat-card">
+<h4>Triggers &amp; Views <span class="badge unit-3">U3</span></h4>
+<p>Views are virtual tables providing logical independence. Triggers execute procedural code in response to DML events (INSERT/UPDATE/DELETE), typically enforcing complex business rules.</p>
+<div class="example"><strong>Example:</strong> `CREATE TRIGGER BeforeDelete BEFORE DELETE ON Users FOR EACH ROW ...`</div>
+<div class="pro-tip">
+<div><strong>Pro-Tip:</strong> A "Mutating Table Error" occurs when a row-level trigger attempts to query the same table that invoked it.</div>
+</div>
+</div>
+<div class="cheat-card">
+<h4>DDL, DML, DCL &amp; TCL Commands <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
+<table>
+<thead><tr><th>Category</th><th>Purpose</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><b>DDL</b> (Data Definition)</td><td>Define/modify schema</td><td><code>CREATE TABLE Students (id INT PRIMARY KEY, name VARCHAR(50));</code></td></tr>
+<tr><td><b>DML</b> (Data Manipulation)</td><td>Query/modify data</td><td><code>INSERT INTO Students VALUES (1, 'Nihal');</code></td></tr>
+<tr><td><b>DCL</b> (Data Control)</td><td>Manage permissions</td><td><code>GRANT SELECT ON Students TO user1;</code></td></tr>
+<tr><td><b>TCL</b> (Transaction Control)</td><td>Manage transactions</td><td><code>COMMIT; / ROLLBACK; / SAVEPOINT sp1;</code></td></tr>
+</tbody>
+</table>
+</div><div class="cheat-card">
+<h4>Types of Joins <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
+<table>
+<thead><tr><th>Join Type</th><th>Returns</th></tr></thead>
+<tbody>
+<tr><td><b>INNER JOIN</b></td><td>Only rows with matching keys in both tables.</td></tr>
+<tr><td><b>LEFT OUTER JOIN</b></td><td>All rows from left table + matched rows from right (NULLs for non-matches).</td></tr>
+<tr><td><b>RIGHT OUTER JOIN</b></td><td>All rows from right table + matched rows from left.</td></tr>
+<tr><td><b>FULL OUTER JOIN</b></td><td>All rows from both tables (NULLs where no match exists).</td></tr>
+<tr><td><b>CROSS JOIN</b></td><td>Cartesian product of both tables (every row × every row).</td></tr>
+<tr><td><b>NATURAL JOIN</b></td><td>Automatically joins on columns with the same name.</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
 <div class="unit-section" id="unit4">
-    <h3>Unit IV: Transaction Processing <span class="badge marks">CO4</span></h3>
-    <div class="cheat-grid">
-        <div class="cheat-card">
-            <h4>ACID & Schedules <span class="badge marks">U4</span></h4>
-            <p>Transactions guarantee Atomicity, Consistency, Isolation, and Durability. Serializability ensures concurrent execution yields results identical to some serial sequence, preventing anomalies like Dirty Reads.</p>
-            <div class="example"><strong>Example:</strong> Using a Conflict Graph, if there's a cycle between transactions (e.g., T1 reads what T2 writes, and T2 reads what T1 writes), it is NOT conflict-serializable.</div>
-            <div class="exam-trap">
-                <div><strong>Exam Trap:</strong> View serializability is less strict than conflict serializability and accommodates blind writes (writing without reading).</div>
-            </div>
-        </div>
-        <div class="cheat-card" style="grid-column: span 2;">
-            <h4>Deadlock Prevention (Wait-Die vs Wound-Wait) <span class="badge marks">U4</span></h4>
-            <div class="compact-svg">
-                <div class="mermaid">
+<h3>Unit IV: Transaction Processing <span class="badge marks">CO4</span></h3>
+<div class="cheat-grid">
+<div class="cheat-card">
+<h4>ACID &amp; Schedules <span class="badge marks">U4</span></h4>
+<p>Transactions guarantee Atomicity, Consistency, Isolation, and Durability. Serializability ensures concurrent execution yields results identical to some serial sequence, preventing anomalies like Dirty Reads.</p>
+<div class="example"><strong>Example:</strong> Using a Conflict Graph, if there's a cycle between transactions (e.g., T1 reads what T2 writes, and T2 reads what T1 writes), it is NOT conflict-serializable.</div>
+<div class="exam-trap">
+<div><strong>Exam Trap:</strong> View serializability is less strict than conflict serializability and accommodates blind writes (writing without reading).</div>
+</div>
+</div>
+<div class="cheat-card" style="grid-column: span 2;">
+<h4>Deadlock Prevention (Wait-Die vs Wound-Wait) <span class="badge marks">U4</span></h4>
+<div class="compact-svg">
+<div class="mermaid">
                 stateDiagram-v2
                     state Wait-Die(Non-Preemptive) {
-                        OlderTxn --> YoungerTxn : Waits
-                        YoungerTxn --> OlderTxn : Dies (Rollback)
+                        OlderTxn --&gt; YoungerTxn : Waits
+                        YoungerTxn --&gt; OlderTxn : Dies (Rollback)
                     }
                     state Wound-Wait(Preemptive) {
-                        OlderTxn2 --> YoungerTxn2 : Wounds (Preempts)
-                        YoungerTxn2 --> OlderTxn2 : Waits
+                        OlderTxn2 --&gt; YoungerTxn2 : Wounds (Preempts)
+                        YoungerTxn2 --&gt; OlderTxn2 : Waits
                     }
                 </div>
-            </div>
-            <p>Using timestamps to prevent deadlocks: Wait-Die allows older transactions to wait for younger ones, while younger ones die. Wound-Wait preempts (wounds) the younger transaction holding the lock.</p>
-            <div class="example"><strong>Example:</strong> In Wound-Wait, if T1 (older) requests a lock held by T2 (younger), T2 is aborted and its locks are released to T1.</div>
-            <div class="pro-tip">
-                <div><strong>Pro-Tip:</strong> A transaction that "dies" or is "wounded" retains its original timestamp upon restart, ensuring it eventually becomes the oldest and completes without starvation.</div>
-            </div>
-        </div>
-        <div class="cheat-card">
-            <h4>ARIES Crash Recovery <span class="badge marks">U4</span></h4>
-            <p>Utilizes Write-Ahead Logging (WAL) with Steal/No-Force buffer policies. The protocol executes three phases: Analysis, REDO (repeats history to reconstruct crash state), and UNDO (rolls back uncommitted txns).</p>
-            <div class="example"><strong>Example:</strong> Log Sequence Numbers (LSNs) link chain records. The REDO phase re-applies logs starting from the RedoLSN found in the checkpoint.</div>
-            <div class="exam-trap">
-                <div><strong>Exam Trap:</strong> Compensation Log Records (CLRs) are written during the UNDO phase to ensure that if a crash occurs *during* recovery, UNDO operations are not repeated.</div>
-            </div>
-        </div>
-    </div>
 </div>
-
+<p>Using timestamps to prevent deadlocks: Wait-Die allows older transactions to wait for younger ones, while younger ones die. Wound-Wait preempts (wounds) the younger transaction holding the lock.</p>
+<div class="example"><strong>Example:</strong> In Wound-Wait, if T1 (older) requests a lock held by T2 (younger), T2 is aborted and its locks are released to T1.</div>
+<div class="pro-tip">
+<div><strong>Pro-Tip:</strong> A transaction that "dies" or is "wounded" retains its original timestamp upon restart, ensuring it eventually becomes the oldest and completes without starvation.</div>
+</div>
+</div>
+<div class="cheat-card">
+<h4>ARIES Crash Recovery <span class="badge marks">U4</span></h4>
+<p>Utilizes Write-Ahead Logging (WAL) with Steal/No-Force buffer policies. The protocol executes three phases: Analysis, REDO (repeats history to reconstruct crash state), and UNDO (rolls back uncommitted txns).</p>
+<div class="example"><strong>Example:</strong> Log Sequence Numbers (LSNs) link chain records. The REDO phase re-applies logs starting from the RedoLSN found in the checkpoint.</div>
+<div class="exam-trap">
+<div><strong>Exam Trap:</strong> Compensation Log Records (CLRs) are written during the UNDO phase to ensure that if a crash occurs *during* recovery, UNDO operations are not repeated.</div>
+</div>
+</div>
+</div>
+</div>
 <div class="unit-section" id="unit5">
-    <h3>Unit V: Advanced DB & MongoDB <span class="badge marks">CO5</span></h3>
-    <div class="cheat-grid">
-        <div class="cheat-card">
-            <h4>CAP Theorem & NoSQL <span class="badge marks">U5</span></h4>
-            <p>Distributed systems can strictly guarantee only two out of Consistency, Availability, and Partition tolerance. NoSQL systems scale horizontally and typically relax Consistency (AP) or Availability (CP).</p>
-            <div class="example"><strong>Example:</strong> MongoDB operates as a CP system by default (elects a primary, halts writes if partition causes primary loss).</div>
-            <div class="exam-trap">
-                <div><strong>Exam Trap:</strong> Network partitions (P) are unavoidable in distributed systems. Therefore, the real architectural choice is always between C and A.</div>
-            </div>
-        </div>
-        <div class="cheat-card">
-            <h4>MongoDB Documents & BSON <span class="badge marks">U5</span></h4>
-            <p>MongoDB eschews rigid relational schemas in favor of dynamic BSON (Binary JSON) documents. Data modeling shifts from normalization (joining tables) to embedding (storing related data inside a single document).</p>
-            <div class="example"><strong>Example:</strong> `{ _id: 1, name: "Alice", address: { city: "NY", zip: "10001" } }`</div>
-            <div class="pro-tip">
-                <div><strong>Pro-Tip:</strong> Embed data for 1:1 or 1:few relationships to optimize read performance. Reference data for 1:Many or N:M to avoid hitting the 16MB document size limit.</div>
-            </div>
-        </div>
-        <div class="cheat-card">
-            <h4>Aggregation Pipeline <span class="badge marks">U5</span></h4>
-            <p>A multi-stage framework for data transformation, analogous to SQL `GROUP BY` and `JOIN`. Documents pass through stages like `$match` (filter), `$group` (aggregate), and `$project` (reshape).</p>
-            <div class="example"><strong>Example:</strong> `db.sales.aggregate([{ $match: { status: "A" } }, { $group: { _id: "$item", total: { $sum: "$amount" } } }])`</div>
-            <div class="exam-trap">
-                <div><strong>Exam Trap:</strong> Stage order drastically impacts performance! Always place `$match` and `$sort` stages as early as possible to leverage indexes and reduce the dataset flowing into memory-intensive `$group` stages.</div>
-            </div>
-        </div>
-    </div>
+<h3>Unit V: Advanced DB &amp; MongoDB <span class="badge marks">CO5</span></h3>
+<div class="cheat-grid">
+<div class="cheat-card">
+<h4>CAP Theorem &amp; NoSQL <span class="badge marks">U5</span></h4>
+<p>Distributed systems can strictly guarantee only two out of Consistency, Availability, and Partition tolerance. NoSQL systems scale horizontally and typically relax Consistency (AP) or Availability (CP).</p>
+<div class="example"><strong>Example:</strong> MongoDB operates as a CP system by default (elects a primary, halts writes if partition causes primary loss).</div>
+<div class="exam-trap">
+<div><strong>Exam Trap:</strong> Network partitions (P) are unavoidable in distributed systems. Therefore, the real architectural choice is always between C and A.</div>
 </div>
-
-    <!-- INTERACTIVITY SCRIPT -->
-        </div>
+</div>
+<div class="cheat-card">
+<h4>MongoDB Documents &amp; BSON <span class="badge marks">U5</span></h4>
+<p>MongoDB eschews rigid relational schemas in favor of dynamic BSON (Binary JSON) documents. Data modeling shifts from normalization (joining tables) to embedding (storing related data inside a single document).</p>
+<div class="example"><strong>Example:</strong> `{ _id: 1, name: "Alice", address: { city: "NY", zip: "10001" } }`</div>
+<div class="pro-tip">
+<div><strong>Pro-Tip:</strong> Embed data for 1:1 or 1:few relationships to optimize read performance. Reference data for 1:Many or N:M to avoid hitting the 16MB document size limit.</div>
+</div>
+</div>
+<div class="cheat-card">
+<h4>Aggregation Pipeline <span class="badge marks">U5</span></h4>
+<p>A multi-stage framework for data transformation, analogous to SQL `GROUP BY` and `JOIN`. Documents pass through stages like `$match` (filter), `$group` (aggregate), and `$project` (reshape).</p>
+<div class="example"><strong>Example:</strong> `db.sales.aggregate([{ $match: { status: "A" } }, { $group: { _id: "$item", total: { $sum: "$amount" } } }])`</div>
+<div class="exam-trap">
+<div><strong>Exam Trap:</strong> Stage order drastically impacts performance! Always place `$match` and `$sort` stages as early as possible to leverage indexes and reduce the dataset flowing into memory-intensive `$group` stages.</div>
+</div>
+</div>
+</div>
+</div>
+<!-- INTERACTIVITY SCRIPT -->
+</div>
 </div>
 <script src="../../shared/app-utils.js"></script>
 ﻿    
     <!-- Standalone Ask AI FAB (Bottom Left) -->
-    <button class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI" aria-label="Ask AI">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2zM12 8c2.2 0 4 1.8 4 4v5c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-5c0-2.2 1.8-4 4-4zM6 12v5h2v-5H6zm10 0v5h2v-5h-2z"/></svg>
-    </button>
-
-    <!-- Ask AI Chat Widget -->
-    <div id="assistantModal" class="ask-ai-widget" style="display: none; flex-direction: column; background: rgba(15,15,20,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); overflow: hidden; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0; transform: translateY(20px); pointer-events: auto;">
-        <div class="modal-header" style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: flex; align-items: center; gap: 15px;">
-                <h2 id="aiModalTitle" style="margin: 0; font-size: 1.25rem;">Ask AI <span style="font-size: 0.8em; font-weight: normal; color: var(--text-muted);">(Lite)</span></h2>
-                <select id="aiModeSelect" onchange="window.assistantLLMInstance && window.assistantLLMInstance.setMode && window.assistantLLMInstance.setMode(this.value)" style="font-size: 0.85em; color: var(--text-muted); background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; cursor: pointer; outline: none;">
-    <option value="lite" style="background:#1a1a1a;">Lite</option>
-    <option value="smart" style="background:#1a1a1a;">Smart (WebGPU)</option>
-    <option value="deep" style="background:#1a1a1a;">Deep (Cloud)</option>
+<button aria-label="Ask AI" class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24"><path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2zM12 8c2.2 0 4 1.8 4 4v5c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-5c0-2.2 1.8-4 4-4zM6 12v5h2v-5H6zm10 0v5h2v-5h-2z"></path></svg>
+</button>
+<!-- Ask AI Chat Widget -->
+<div class="ask-ai-widget" id="assistantModal" style="display: none; flex-direction: column; background: rgba(15,15,20,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); overflow: hidden; transition: opacity 0.3s ease, transform 0.3s ease; opacity: 0; transform: translateY(20px); pointer-events: auto;">
+<div class="modal-header" style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+<div style="display: flex; align-items: center; gap: 15px;">
+<h2 id="aiModalTitle" style="margin: 0; font-size: 1.25rem;">Ask AI <span style="font-size: 0.8em; font-weight: normal; color: var(--text-muted);">(Lite)</span></h2>
+<select id="aiModeSelect" onchange="window.assistantLLMInstance &amp;&amp; window.assistantLLMInstance.setMode &amp;&amp; window.assistantLLMInstance.setMode(this.value)" style="font-size: 0.85em; color: var(--text-muted); background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; cursor: pointer; outline: none;">
+<option style="background:#1a1a1a;" value="lite">Lite</option>
+<option style="background:#1a1a1a;" value="smart">Smart (WebGPU)</option>
+<option style="background:#1a1a1a;" value="deep">Deep (Cloud)</option>
 </select>
-                
-            </div>
-            
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" aria-label="Close modal" onclick="closeAssistant()" style="background: none; border: none; color: var(--text-muted); cursor: pointer;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            </button>
-        </div>
-        <div id="assistantMessages" class="modal-body" style="flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; scrollbar-width: thin;">
-            <div class="msg assistant" style="padding: 1rem; border-radius: 8px; background: rgba(255,255,255,0.05); border-left: 3px solid var(--primary-blue); line-height: 1.5;">
+</div>
+<button aria-label="Clear chat" class="clear-btn" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
+<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line></svg>
+</button><button aria-label="Pin modal" class="pin-btn" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><line x1="12" x2="12" y1="17" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
+</button><button aria-label="Close modal" class="close-modal" onclick="closeAssistant()" style="background: none; border: none; color: var(--text-muted); cursor: pointer;">
+<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+</button>
+</div>
+<div class="modal-body" id="assistantMessages" style="flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; scrollbar-width: thin;">
+<div class="msg assistant" style="padding: 1rem; border-radius: 8px; background: rgba(255,255,255,0.05); border-left: 3px solid var(--primary-blue); line-height: 1.5;">
                 Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.
             </div>
-        </div>
-        <div class="assistant-input-area" style="padding: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-            <form id="assistantForm" onsubmit="event.preventDefault(); submitAssistantQuery();" style="display: flex; gap: 0.5rem;">
-                <input type="text" id="assistantInput" autocomplete="off" placeholder="Ask something..." style="flex: 1; padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: white;">
-                <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1rem;">Send</button>
-            </form>
-        </div>
-    </div>
-
-    <script>
+</div>
+<div class="assistant-input-area" style="padding: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+<form id="assistantForm" onsubmit="event.preventDefault(); submitAssistantQuery();" style="display: flex; gap: 0.5rem;">
+<input autocomplete="off" id="assistantInput" placeholder="Ask something..." style="flex: 1; padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.5); color: white;" type="text"/>
+<button class="btn btn-primary" style="padding: 0.75rem 1rem;" type="submit">Send</button>
+</form>
+</div>
+</div>
+<script>
         let assistantApp = null;
         async function openAssistant() {
             if (document.querySelector('.ask-ai-btn') && document.querySelector('.ask-ai-btn').getAttribute('data-dragged') === 'true') return;
@@ -418,8 +621,5 @@
             assistantApp.handleQuery(query);
         }
     </script>
-
-</body>
-
+</div></body>
 </html>
-
