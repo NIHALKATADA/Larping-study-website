@@ -1471,5 +1471,18 @@
       "Direct Memory Access (DMA) A specialized hardware controller takes over the system bus to transfer massive data blocks directly between an I/O device and RAM, bypassing the CPU to prevent cycle stealing. Example: A Gigabit network card writing incoming packets directly to a buffer in RAM while the CPU continues executing a game. \ufeff"
     ],
     "type": "cheat"
+  },
+  {
+    "id": "syllabus",
+    "title": "OS Syllabus & Topics",
+    "url": "index.html",
+    "chunks": [
+      "Unit I: Introduction to Operating Systems and System Structure Operating System Objectives and Functions Computer-System Organization, Computer-System Architecture Operating-System Operations, Operating-System Structure Process Management Overview, Memory Management Overview, Storage Management Overview Protection and Security System Calls and Types of System Calls",
+      "Unit II: Process Management and CPU Scheduling Process Concept, Operations on Processes, Process States Process Control Block (PCB) Threads and Types of Threads, Multicore and Multithreading CPU Scheduling Concepts and Algorithms Thread Scheduling",
+      "Unit III: Process Synchronization and Concurrency Principles of Concurrency Interprocess Communication using Shared Memory and Message Passing Race Condition, Critical Section Problem Peterson's Solution, Fork() and Join() Synchronization Hardware Support Mutex Locks, Semaphores and their Implementation Classical Synchronization Problems including Bounded Buffer, Readers-Writers, Dining Philosophers, and Monitors",
+      "Unit IV: Deadlocks and Memory Management Deadlock Characterization, Deadlock Prevention, Ostrich Algorithm Deadlock Avoidance using Banker's Algorithm Deadlock Detection and Recovery Resource Allocation Graph, Wait-for Graph Address Binding, Swapping Contiguous Memory Allocation Segmentation, Paging",
+      "Unit V: Virtual Memory, File Systems, and Disk Management Virtual Memory Concepts, Demand Paging, Copy-on-Write Page Replacement Algorithms Allocation of Frames, Thrashing File and Directory Structure, Unix I-node Structure Disk Structure, Disk Attachment Disk Scheduling Algorithms"
+    ],
+    "type": "syllabus"
   }
 ]

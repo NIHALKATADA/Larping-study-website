@@ -86,7 +86,8 @@ def extract_course_data_chunks(course_data_path):
             with open(course_data_path, 'r', encoding='utf-16') as f:
                 content = f.read()
         
-        units_match = re.search(r'units:\s*\[(.*?)\]\s*,\s*examScheme', content, re.DOTALL)
+        # Find everything between units: [ and the end of the COURSE_DATA object or the next property
+        units_match = re.search(r'units:\s*\[(.*?)\]\s*(?:,\s*[a-zA-Z]+:|\}\s*;)', content, re.DOTALL)
         if units_match:
             units_str = units_match.group(1)
             unit_objs = re.findall(r'\{(.*?)\}', units_str, re.DOTALL)

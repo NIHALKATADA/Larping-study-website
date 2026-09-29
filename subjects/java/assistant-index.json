@@ -1469,5 +1469,18 @@
       "String Pool & Immutability String objects are immutable; modifying one creates a new instance. String literals are stored in the String Constant Pool to save memory. Use StringBuilder for heavy concatenations to avoid generating garbage objects. String s1 = \"Hi\"; String s2 = new String(\"Hi\"); // s1 == s2 is FALSE (s2 is forced into the main Heap). // s1.equals(s2) is TRUE."
     ],
     "type": "cheat"
+  },
+  {
+    "id": "syllabus",
+    "title": "JAVA Syllabus & Topics",
+    "url": "index.html",
+    "chunks": [
+      "Unit I: Basics of Java Programming Introduction to Java Basics of Java programming Data types, Variables, Operators Control structures including selection, Looping Java methods, Overloading Math class Arrays in java",
+      "Unit II: Introduction to Object and Class Basics of objects and classes in java Constructors, Finalizer Visibility modifiers Methods and objects Inbuilt classes like String, Character, String Buffer, File this reference",
+      "Unit III: Object Oriented Programming Concepts Inheritance in java, Super and sub class, Overriding Object class Polymorphism, Dynamic binding Generic programming Casting objects Instance of operator Abstract class Interface in java Package in java UTIL package",
+      "Unit IV: Event Handling and GUI Programming Event handling in java, Event types, Mouse and key events GUI Basics, Panels, Frames Layout Managers: Flow Layout, Border Layout, Grid Layout GUI components like Buttons, Check Boxes, Radio Buttons, Labels, Text Fields, Text Areas, Combo Boxes, Lists, Menus, Dialog Box Applet and its life cycle",
+      "Unit V: Multithreading and Exception Handling Multithreading in java: Thread life cycle and methods Runnable interface, Thread synchronization Exception handling with try-catch-finally Collections in java Introduction to JavaBeans and Network Programming"
+    ],
+    "type": "syllabus"
   }
 ]

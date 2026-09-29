@@ -1089,6 +1089,20 @@
     "subject": "daa"
   },
   {
+    "id": "syllabus",
+    "title": "DAA Syllabus & Topics",
+    "url": "subjects/daa/index.html",
+    "chunks": [
+      "Unit I: Foundations of Algorithms Basics of Algorithms, Characteristics of Good Algorithms, Algorithm Representation (Pseudocode) Time and Space Complexity, Asymptotic Notations (Big-O, Big-\u03a9, Big-\u0398), Best, Worst and Average Case Analysis Algorithm Analysis: Analyzing Control Statements (Sequential, Selection and Loops) Introduction to Amortized Analysis (Aggregate Method \u2013 concept only)",
+      "Unit II: Sorting Algorithms and Basic Analysis Techniques Algorithm Correctness, Loop Invariants and Correctness Basic Sorting Algorithms and Their Analysis: Bubble Sort, Selection Sort, Insertion Sort, Heap Sort Linear-Time Sorting Algorithms: Counting Sort, Radix Sort and Bucket Sort",
+      "Unit III: Divide and Conquer Techniques Introduction to Divide and Conquer Paradigm Recurrence Relations, Methods for Solving Recurrences, Master Method for Solving Divide-and-Conquer Recurrences Applications: Binary Search, Max-Min Problem, Merge Sort, Quick Sort, Randomized Quick Sort (Random Pivot Selection \u2013 concept only) Strassen's Matrix Multiplication, Large Integer Multiplication",
+      "Unit IV: Dynamic Programming and Greedy Algorithm Dynamic Programming: Introduction to Dynamic Programming, Principle of Optimality, Overlapping Subproblems, Memoization and Tabulation Applications: Fibonacci Sequence (motivation), Binomial Coefficient, Coin Change Problem, Matrix Chain Multiplication, Longest Common Subsequence (LCS), 0/1 Knapsack Problem Greedy Algorithms: Greedy Strategy, Greedy Choice Property, Comparison of Greedy and Dynamic Programming Applications: Activity Selection, Huffman Coding, Job Scheduling",
+      "Unit V: Advanced Problem Solving and Complexity Theory Backtracking: General Backtracking Strategy, N-Queens Problem, Travelling Salesman Problem (TSP), Minimax Principle Graph Algorithms: Dijkstra's Single-Source Shortest Path Algorithm, Floyd-Warshall All-Pairs Shortest Path Algorithm String Matching Algorithms: Na\u00efve String Matching Algorithm, Rabin-Karp Algorithm"
+    ],
+    "type": "syllabus",
+    "subject": "daa"
+  },
+  {
     "id": "q1",
     "q_num": 1,
     "unit": "I",
@@ -3332,20 +3346,6 @@
     "subject": "dbms"
   },
   {
-    "id": "syllabus",
-    "title": "DBMS Syllabus & Topics",
-    "url": "subjects/dbms/index.html",
-    "chunks": [
-      "Unit I: Introduction to DBMS Introduction to DBMS, its characteristics, advantages and applications DBMS vs file system 3-level (ANSI-SPARC) database architecture Data abstraction, schema and instance Data models: relational, hierarchical, network, object-oriented, NoSQL Relational model, keys and constraints ER modeling and cardinality constraints Normalization: 1NF, 2NF, 3NF, 4NF, BCNF, 5NF",
-      "Unit II: Relational Database Concepts Introduction to RDBMS, entities and relationships Relational algebra and relational calculus SQL basics: DDL, DML, DCL, TCL Relational operations and query writing Aggregate functions, nested queries GROUP BY and ORDER BY clauses Joins and views Extended ER model: generalization, specialization, aggregation Decomposition concepts",
-      "Unit III: Structured Query Language - SQL Table creation and alteration Constraints: primary key, foreign key, unique, not null, check SQL functions: numeric, date, string Set operations Transaction control commands: COMMIT, ROLLBACK, SAVEPOINT Control flow commands, cursors and sequences Triggers and stored procedures Exception handling in DBMS",
-      "Unit IV: Transaction Processing and Database Management Transactions: ACID properties, state diagram Serializability of schedules, consistent/inconsistent state Serial & non-serial schedules; recoverable & non-recoverable schedules Cascading rollback and cascade-less schedules Recovery from transaction failures: log-based recovery, checkpoints Concurrency control: lock-based techniques, shared/exclusive locks Two-phase locking protocol, concurrency control manager, lock manager Indexing and hashing: file organization, primary/secondary indexing Clustered/non-clustered indexes, B-tree and B+ tree indexing Static and dynamic hashing techniques Recoverability: types of recovery, failures and their types Deadlocks: detection using wait-for-graph, recovery schemes Introduction to data warehouse, data marts and ETL process",
-      "Unit V: Advanced Databases and MongoDB Advanced database systems, distributed and cloud databases NoSQL databases and types, Big Data databases MongoDB architecture, collections and documents CRUD operations, indexing, aggregation framework Replication concepts Comparison of RDBMS and NoSQL databases Real-world applications of MongoDB"
-    ],
-    "type": "syllabus",
-    "subject": "dbms"
-  },
-  {
     "id": "q1",
     "q_num": 1,
     "unit": "I",
@@ -4908,6 +4908,20 @@
     "subject": "java"
   },
   {
+    "id": "syllabus",
+    "title": "JAVA Syllabus & Topics",
+    "url": "subjects/java/index.html",
+    "chunks": [
+      "Unit I: Basics of Java Programming Introduction to Java Basics of Java programming Data types, Variables, Operators Control structures including selection, Looping Java methods, Overloading Math class Arrays in java",
+      "Unit II: Introduction to Object and Class Basics of objects and classes in java Constructors, Finalizer Visibility modifiers Methods and objects Inbuilt classes like String, Character, String Buffer, File this reference",
+      "Unit III: Object Oriented Programming Concepts Inheritance in java, Super and sub class, Overriding Object class Polymorphism, Dynamic binding Generic programming Casting objects Instance of operator Abstract class Interface in java Package in java UTIL package",
+      "Unit IV: Event Handling and GUI Programming Event handling in java, Event types, Mouse and key events GUI Basics, Panels, Frames Layout Managers: Flow Layout, Border Layout, Grid Layout GUI components like Buttons, Check Boxes, Radio Buttons, Labels, Text Fields, Text Areas, Combo Boxes, Lists, Menus, Dialog Box Applet and its life cycle",
+      "Unit V: Multithreading and Exception Handling Multithreading in java: Thread life cycle and methods Runnable interface, Thread synchronization Exception handling with try-catch-finally Collections in java Introduction to JavaBeans and Network Programming"
+    ],
+    "type": "syllabus",
+    "subject": "java"
+  },
+  {
     "id": "u1_pa_q1",
     "q_num": 1,
     "unit": "I",
@@ -6088,6 +6102,20 @@
       "Boolean Algebra A distributive lattice representing logical operations. Simplification uses consensus theorem and Karnaugh maps to minimize circuit gates. Example: \\(AB + AB' = A(B + B') = A\\). \ufeff"
     ],
     "type": "cheat",
+    "subject": "maths"
+  },
+  {
+    "id": "syllabus",
+    "title": "MATHS Syllabus & Topics",
+    "url": "subjects/maths/index.html",
+    "chunks": [
+      "Logical operators Conditional propositions Tautology and Contradiction English to logic conversion",
+      "Permutation and Combinations Recurrence relations Generating functions",
+      "Graph terminology Special graphs Adjacency and incidence matrices Graph isomorphisms",
+      "Path and connectivity Euler and Hamilton Paths Planar Graphs Colouring of a graph",
+      "Reflexive, Symmetric and Transitive Equivalence relations Partial order relations Hasse diagram"
+    ],
+    "type": "syllabus",
     "subject": "maths"
   },
   {
@@ -8708,6 +8736,20 @@
     "subject": "ml"
   },
   {
+    "id": "syllabus",
+    "title": "ML Syllabus & Topics",
+    "url": "subjects/ml/index.html",
+    "chunks": [
+      "Unit I: Foundations of Machine Learning & Data Pipelines History and evolution of Machine Learning Supervised, Unsupervised, and Reinforcement Learning paradigms and significance of model training The 7-Step Machine Learning Lifecycle Data fetching/collection strategies, data cleaning principles, data preprocessing Exploratory Data Analysis (EDA) and data visualization techniques Feature Engineering/selection Model selection/fitting, and fundamental validation",
+      "Unit II: Regression Paradigms & Mathematical Formulations Linear Regression: Simple and Multiple Linear Regression models, structural mathematical formulation, ordinary least squares (OLS) derivation, and objective function optimization using Gradient Descent Polynomial Regression and capturing non-linear trends Overfitting and underfitting concepts Regularization frameworks: Ridge (L2) and Lasso (L1) regressions with their mathematical formulas Evaluation metrics: Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R\u00b2 / Adjusted R\u00b2 coefficients",
+      "Unit III: Classification Frameworks & Numerical Analysis Logistic Regression: Sigmoid activation function, log-loss mathematical formula, and binary decision boundaries K-Nearest Neighbors (KNN): distance mechanics Decision Trees: Information Gain, Entropy, and Gini Impurity splits Naive Bayes Classifier: Conditional probability and Bayes' Theorem application SVM: support vector machine, hyperplane Random Forest Regressor: Ensemble and Voting Structure XGBoost, Gradient Boost and AdaBoost Evaluation metrics: Confusion Matrix, Accuracy, Precision, Recall, and F1-Score",
+      "Unit IV: Unsupervised Learning & Clustering Mechanics Unsupervised learning principles and data structural properties Centroid-based clustering: K-Means algorithm, mathematical objective function, and optimization via the Elbow method Density-based clustering: DBSCAN mechanics (definitions of core, border, and noise points using epsilon and minimum points parameters) Hierarchical clustering: Agglomerative approach, building and interpreting dendrograms, and linkage criteria variations (single, complete, average) Introduction to Self-Organizing Maps (SOM) basics for dimensionality representation",
+      "Unit V: Reinforcement Learning Foundations & Machine Learning Applications Core concepts of reinforcement learning through interactions with dynamic environments The Reinforcement Learning framework: structural components (Agent, Environment, State, Action, Reward, Action Spaces, and Policy Functions), dynamic interaction modeling, and feedback-driven learning Introduction to Markov Decision Processes (MDPs), value functions, and policy optimization Applications of reinforcement learning in machine learning for intelligent decision-making, recommendation systems, robotics, and autonomous systems Hands-on: Introduction to simulated environments, configuring observation and action spaces, implementing basic reinforcement learning algorithms (e.g., Q-Learning), and developing simple goal-oriented agents using the OpenAI Gym (Gymnasium) simulation toolkit"
+    ],
+    "type": "syllabus",
+    "subject": "ml"
+  },
+  {
     "id": "q1",
     "q_num": 1,
     "unit": "I",
@@ -10269,6 +10311,20 @@
       "Direct Memory Access (DMA) A specialized hardware controller takes over the system bus to transfer massive data blocks directly between an I/O device and RAM, bypassing the CPU to prevent cycle stealing. Example: A Gigabit network card writing incoming packets directly to a buffer in RAM while the CPU continues executing a game. \ufeff"
     ],
     "type": "cheat",
+    "subject": "os"
+  },
+  {
+    "id": "syllabus",
+    "title": "OS Syllabus & Topics",
+    "url": "subjects/os/index.html",
+    "chunks": [
+      "Unit I: Introduction to Operating Systems and System Structure Operating System Objectives and Functions Computer-System Organization, Computer-System Architecture Operating-System Operations, Operating-System Structure Process Management Overview, Memory Management Overview, Storage Management Overview Protection and Security System Calls and Types of System Calls",
+      "Unit II: Process Management and CPU Scheduling Process Concept, Operations on Processes, Process States Process Control Block (PCB) Threads and Types of Threads, Multicore and Multithreading CPU Scheduling Concepts and Algorithms Thread Scheduling",
+      "Unit III: Process Synchronization and Concurrency Principles of Concurrency Interprocess Communication using Shared Memory and Message Passing Race Condition, Critical Section Problem Peterson's Solution, Fork() and Join() Synchronization Hardware Support Mutex Locks, Semaphores and their Implementation Classical Synchronization Problems including Bounded Buffer, Readers-Writers, Dining Philosophers, and Monitors",
+      "Unit IV: Deadlocks and Memory Management Deadlock Characterization, Deadlock Prevention, Ostrich Algorithm Deadlock Avoidance using Banker's Algorithm Deadlock Detection and Recovery Resource Allocation Graph, Wait-for Graph Address Binding, Swapping Contiguous Memory Allocation Segmentation, Paging",
+      "Unit V: Virtual Memory, File Systems, and Disk Management Virtual Memory Concepts, Demand Paging, Copy-on-Write Page Replacement Algorithms Allocation of Frames, Thrashing File and Directory Structure, Unix I-node Structure Disk Structure, Disk Attachment Disk Scheduling Algorithms"
+    ],
+    "type": "syllabus",
     "subject": "os"
   }
 ]

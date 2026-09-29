@@ -1024,5 +1024,18 @@
       "Complexity Hierarchy flowchart BT P((P)) --> NP((NP)) NPC((NP-Complete)) --> NP NPC -.-> NPH((NP-Hard)) NP -.-> NPH Example: Halting Problem is NP-Hard but not NP-Complete (since it's undecidable and thus not in NP). \ufeff"
     ],
     "type": "cheat"
+  },
+  {
+    "id": "syllabus",
+    "title": "DAA Syllabus & Topics",
+    "url": "index.html",
+    "chunks": [
+      "Unit I: Foundations of Algorithms Basics of Algorithms, Characteristics of Good Algorithms, Algorithm Representation (Pseudocode) Time and Space Complexity, Asymptotic Notations (Big-O, Big-\u03a9, Big-\u0398), Best, Worst and Average Case Analysis Algorithm Analysis: Analyzing Control Statements (Sequential, Selection and Loops) Introduction to Amortized Analysis (Aggregate Method \u2013 concept only)",
+      "Unit II: Sorting Algorithms and Basic Analysis Techniques Algorithm Correctness, Loop Invariants and Correctness Basic Sorting Algorithms and Their Analysis: Bubble Sort, Selection Sort, Insertion Sort, Heap Sort Linear-Time Sorting Algorithms: Counting Sort, Radix Sort and Bucket Sort",
+      "Unit III: Divide and Conquer Techniques Introduction to Divide and Conquer Paradigm Recurrence Relations, Methods for Solving Recurrences, Master Method for Solving Divide-and-Conquer Recurrences Applications: Binary Search, Max-Min Problem, Merge Sort, Quick Sort, Randomized Quick Sort (Random Pivot Selection \u2013 concept only) Strassen's Matrix Multiplication, Large Integer Multiplication",
+      "Unit IV: Dynamic Programming and Greedy Algorithm Dynamic Programming: Introduction to Dynamic Programming, Principle of Optimality, Overlapping Subproblems, Memoization and Tabulation Applications: Fibonacci Sequence (motivation), Binomial Coefficient, Coin Change Problem, Matrix Chain Multiplication, Longest Common Subsequence (LCS), 0/1 Knapsack Problem Greedy Algorithms: Greedy Strategy, Greedy Choice Property, Comparison of Greedy and Dynamic Programming Applications: Activity Selection, Huffman Coding, Job Scheduling",
+      "Unit V: Advanced Problem Solving and Complexity Theory Backtracking: General Backtracking Strategy, N-Queens Problem, Travelling Salesman Problem (TSP), Minimax Principle Graph Algorithms: Dijkstra's Single-Source Shortest Path Algorithm, Floyd-Warshall All-Pairs Shortest Path Algorithm String Matching Algorithms: Na\u00efve String Matching Algorithm, Rabin-Karp Algorithm"
+    ],
+    "type": "syllabus"
   }
 ]

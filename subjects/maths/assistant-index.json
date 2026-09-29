@@ -1113,5 +1113,18 @@
       "Boolean Algebra A distributive lattice representing logical operations. Simplification uses consensus theorem and Karnaugh maps to minimize circuit gates. Example: \\(AB + AB' = A(B + B') = A\\). \ufeff"
     ],
     "type": "cheat"
+  },
+  {
+    "id": "syllabus",
+    "title": "MATHS Syllabus & Topics",
+    "url": "index.html",
+    "chunks": [
+      "Logical operators Conditional propositions Tautology and Contradiction English to logic conversion",
+      "Permutation and Combinations Recurrence relations Generating functions",
+      "Graph terminology Special graphs Adjacency and incidence matrices Graph isomorphisms",
+      "Path and connectivity Euler and Hamilton Paths Planar Graphs Colouring of a graph",
+      "Reflexive, Symmetric and Transitive Equivalence relations Partial order relations Hasse diagram"
+    ],
+    "type": "syllabus"
   }
 ]

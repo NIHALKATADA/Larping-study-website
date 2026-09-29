@@ -2110,18 +2110,5 @@
       "Aggregation Pipeline U5 A multi-stage framework for data transformation, analogous to SQL `GROUP BY` and `JOIN`. Documents pass through stages like `$match` (filter), `$group` (aggregate), and `$project` (reshape). Example: `db.sales.aggregate([{ $match: { status: \"A\" } }, { $group: { _id: \"$item\", total: { $sum: \"$amount\" } } }])` Exam Trap: Stage order drastically impacts performance! Always place `$match` and `$sort` stages as early as possible to leverage indexes and reduce the dataset flowing into memory-intensive `$group` stages. \ufeff"
     ],
     "type": "cheat"
-  },
-  {
-    "id": "syllabus",
-    "title": "DBMS Syllabus & Topics",
-    "url": "index.html",
-    "chunks": [
-      "Unit I: Introduction to DBMS Introduction to DBMS, its characteristics, advantages and applications DBMS vs file system 3-level (ANSI-SPARC) database architecture Data abstraction, schema and instance Data models: relational, hierarchical, network, object-oriented, NoSQL Relational model, keys and constraints ER modeling and cardinality constraints Normalization: 1NF, 2NF, 3NF, 4NF, BCNF, 5NF",
-      "Unit II: Relational Database Concepts Introduction to RDBMS, entities and relationships Relational algebra and relational calculus SQL basics: DDL, DML, DCL, TCL Relational operations and query writing Aggregate functions, nested queries GROUP BY and ORDER BY clauses Joins and views Extended ER model: generalization, specialization, aggregation Decomposition concepts",
-      "Unit III: Structured Query Language - SQL Table creation and alteration Constraints: primary key, foreign key, unique, not null, check SQL functions: numeric, date, string Set operations Transaction control commands: COMMIT, ROLLBACK, SAVEPOINT Control flow commands, cursors and sequences Triggers and stored procedures Exception handling in DBMS",
-      "Unit IV: Transaction Processing and Database Management Transactions: ACID properties, state diagram Serializability of schedules, consistent/inconsistent state Serial & non-serial schedules; recoverable & non-recoverable schedules Cascading rollback and cascade-less schedules Recovery from transaction failures: log-based recovery, checkpoints Concurrency control: lock-based techniques, shared/exclusive locks Two-phase locking protocol, concurrency control manager, lock manager Indexing and hashing: file organization, primary/secondary indexing Clustered/non-clustered indexes, B-tree and B+ tree indexing Static and dynamic hashing techniques Recoverability: types of recovery, failures and their types Deadlocks: detection using wait-for-graph, recovery schemes Introduction to data warehouse, data marts and ETL process",
-      "Unit V: Advanced Databases and MongoDB Advanced database systems, distributed and cloud databases NoSQL databases and types, Big Data databases MongoDB architecture, collections and documents CRUD operations, indexing, aggregation framework Replication concepts Comparison of RDBMS and NoSQL databases Real-world applications of MongoDB"
-    ],
-    "type": "syllabus"
   }
 ]
