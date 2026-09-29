@@ -113,7 +113,7 @@
         "unit": "I",
         "bloom": "L2",
         "marks": 2,
-        "important": true,
+        "important": false,
         "score": 8.5,
         "co": "CO1",
         "title": "What is the historical significance of model training in the evolution of Machine Learning?",
@@ -224,7 +224,7 @@
         "important": false,
         "score": 7.8,
         "co": "CO2",
-        "title": "Write the Mean Squared Error (MSE) cost function Jθ used in linear regression.",
+        "title": "Write the Mean Squared Error (MSE) cost function J\u03b8 used in linear regression.",
         "answer_html": "<p>The MSE cost function is <code>J(&theta;) = (1/2m) &Sigma; (h&theta;(xi) - yi)&sup2;</code>, where <code>m</code> is the number of training examples.</p>"
     },
     {
@@ -233,7 +233,7 @@
         "unit": "II",
         "bloom": "L2",
         "marks": 2,
-        "important": true,
+        "important": false,
         "score": 8.5,
         "co": "CO2",
         "title": "Why is Gradient Descent preferred over the analytical Normal Equation for high-dimensional datasets?",
@@ -248,7 +248,7 @@
         "important": false,
         "score": 7.7,
         "co": "CO2",
-        "title": "What is the learning rate α in Gradient Descent, and what happens if it is set too high?",
+        "title": "What is the learning rate \u03b1 in Gradient Descent, and what happens if it is set too high?",
         "answer_html": "<p>The learning rate <code>&alpha;</code> determines the step size taken in the direction of the gradient. If it is set too high, Gradient Descent may overshoot the minimum and fail to converge or diverge entirely.</p>"
     },
     {
@@ -533,7 +533,7 @@
         "unit": "III",
         "bloom": "L1",
         "marks": 2,
-        "important": true,
+        "important": false,
         "score": 8.6,
         "co": "CO3",
         "title": "State Bayes' Theorem formula and label each term ((P(A|B), P(B| A), P(A), P(B)).",
@@ -677,7 +677,7 @@
         "unit": "I",
         "bloom": "L2",
         "marks": 3,
-        "important": true,
+        "important": false,
         "score": 8.7,
         "co": "CO1",
         "title": "Explain the role of Feature Engineering and distinguish it from feature selection.",
@@ -797,11 +797,11 @@
         "unit": "II",
         "bloom": "L3",
         "marks": 3,
-        "important": true,
+        "important": false,
         "score": 8.8,
         "co": "CO2",
         "title": "Write the structural mathematical formulation for a Simple Linear Regression model and explain all its terms.",
-        "answer_html": "<p>Formula: <code>y = β0 + β1x + ε</code>. <b>y:</b> Dependent target variable. <b>x:</b> Independent predictor variable. <b>β0:</b> Y-intercept (value of y when x=0). <b>β1:</b> Slope coefficient (change in y for a 1-unit change in x). <b>ε:</b> Error term.</p>"
+        "answer_html": "<p>Formula: <code>y = \u03b20 + \u03b21x + \u03b5</code>. <b>y:</b> Dependent target variable. <b>x:</b> Independent predictor variable. <b>\u03b20:</b> Y-intercept (value of y when x=0). <b>\u03b21:</b> Slope coefficient (change in y for a 1-unit change in x). <b>\u03b5:</b> Error term.</p>"
     },
     {
         "id": "3m_q16",
@@ -813,7 +813,7 @@
         "score": 5.1,
         "co": "CO2",
         "title": "Explain Multiple Linear Regression and state its algebraic equation for n independent variables.",
-        "answer_html": "<p>Multiple Linear Regression extends simple regression to model the relationship between one continuous dependent variable and multiple independent variables. Equation: <code>y = β0 + β1x1 + β2x2 + ... + βnxn + ε</code>.</p>"
+        "answer_html": "<p>Multiple Linear Regression extends simple regression to model the relationship between one continuous dependent variable and multiple independent variables. Equation: <code>y = \u03b20 + \u03b21x1 + \u03b22x2 + ... + \u03b2nxn + \u03b5</code>.</p>"
     },
     {
         "id": "3m_q17",
@@ -825,7 +825,7 @@
         "score": 6.1,
         "co": "CO2",
         "title": "Define residual error in linear regression and explain its geometric interpretation.",
-        "answer_html": "<p>A residual error is the difference between the actual observed value and the predicted value (e = y - ŷ). Geometrically, it represents the vertical distance from a data point to the fitted regression line.</p>"
+        "answer_html": "<p>A residual error is the difference between the actual observed value and the predicted value (e = y - \u0177). Geometrically, it represents the vertical distance from a data point to the fitted regression line.</p>"
     },
     {
         "id": "3m_q18",
@@ -837,7 +837,7 @@
         "score": 5.9,
         "co": "CO2",
         "title": "Explain the Ordinary Least Squares (OLS) estimation method and state the objective function it minimizes.",
-        "answer_html": "<p>Ordinary Least Squares (OLS) is a method that estimates regression coefficients by minimizing the sum of the squared residuals. Objective function: Minimize <code>Σ(yi - ŷi)²</code>.</p>"
+        "answer_html": "<p>Ordinary Least Squares (OLS) is a method that estimates regression coefficients by minimizing the sum of the squared residuals. Objective function: Minimize <code>\u03a3(yi - \u0177i)\u00b2</code>.</p>"
     },
     {
         "id": "3m_q19",
@@ -848,8 +848,8 @@
         "important": false,
         "score": 5.7,
         "co": "CO2",
-        "title": "Describe the role of the Mean Squared Error (MSE) cost function J(θ) in optimizing regression parameters.",
-        "answer_html": "<p>MSE averages the squared differences between predicted and actual values. In optimizing regression parameters, the MSE serves as the cost function J(θ); the algorithm (like Gradient Descent) minimizes J(θ) to find the best-fitting weights.</p>"
+        "title": "Describe the role of the Mean Squared Error (MSE) cost function J(\u03b8) in optimizing regression parameters.",
+        "answer_html": "<p>MSE averages the squared differences between predicted and actual values. In optimizing regression parameters, the MSE serves as the cost function J(\u03b8); the algorithm (like Gradient Descent) minimizes J(\u03b8) to find the best-fitting weights.</p>"
     },
     {
         "id": "3m_q20",
@@ -872,8 +872,8 @@
         "important": false,
         "score": 8.0,
         "co": "CO2",
-        "title": "Define the learning rate (α) in Gradient Descent and explain the consequences of setting it too high or too low.",
-        "answer_html": "<p>The learning rate (α) determines the step size at each iteration. If α is too high, the algorithm may overshoot the minimum and diverge. If α is too low, convergence will be exceedingly slow and might get stuck in local minima.</p>"
+        "title": "Define the learning rate (\u03b1) in Gradient Descent and explain the consequences of setting it too high or too low.",
+        "answer_html": "<p>The learning rate (\u03b1) determines the step size at each iteration. If \u03b1 is too high, the algorithm may overshoot the minimum and diverge. If \u03b1 is too low, convergence will be exceedingly slow and might get stuck in local minima.</p>"
     },
     {
         "id": "3m_q22",
@@ -885,7 +885,7 @@
         "score": 6.1,
         "co": "CO2",
         "title": "Explain Polynomial Regression and state how higher-degree terms allow it to capture non-linear data trends.",
-        "answer_html": "<p>Polynomial regression models the relationship as an nth degree polynomial (e.g., <code>y = β0 + β1x + β2x²</code>). The higher-degree terms introduce curves, allowing the model to fit non-linear patterns in the data.</p>"
+        "answer_html": "<p>Polynomial regression models the relationship as an nth degree polynomial (e.g., <code>y = \u03b20 + \u03b21x + \u03b22x\u00b2</code>). The higher-degree terms introduce curves, allowing the model to fit non-linear patterns in the data.</p>"
     },
     {
         "id": "3m_q23",
@@ -897,7 +897,7 @@
         "score": 7.2,
         "co": "CO2",
         "title": "Discuss why Polynomial Regression is technically classified as a linear model despite fitting non-linear curves.",
-        "answer_html": "<p>It is technically a linear model because the regression equation is linear in its parameters (the coefficients β). The relationship between the parameters and the dependent variable remains linear, even though the features (x², x³) are non-linear.</p>"
+        "answer_html": "<p>It is technically a linear model because the regression equation is linear in its parameters (the coefficients \u03b2). The relationship between the parameters and the dependent variable remains linear, even though the features (x\u00b2, x\u00b3) are non-linear.</p>"
     },
     {
         "id": "3m_q24",
@@ -957,7 +957,7 @@
         "score": 5.8,
         "co": "CO2",
         "title": "Compare Ridge L2 and Lasso L1 regression with respect to their mathematical penalty terms and impact on weights.",
-        "answer_html": "<p><b>Ridge (L2):</b> Adds a penalty proportional to the sum of squared weights (λΣw²). It shrinks weights but rarely to zero. <b>Lasso (L1):</b> Adds a penalty proportional to the sum of absolute weights (λΣ|w|). It can force some weights exactly to zero.</p>"
+        "answer_html": "<p><b>Ridge (L2):</b> Adds a penalty proportional to the sum of squared weights (\u03bb\u03a3w\u00b2). It shrinks weights but rarely to zero. <b>Lasso (L1):</b> Adds a penalty proportional to the sum of absolute weights (\u03bb\u03a3|w|). It can force some weights exactly to zero.</p>"
     },
     {
         "id": "3m_q29",
@@ -977,11 +977,11 @@
         "unit": "II",
         "bloom": "L3",
         "marks": 3,
-        "important": true,
+        "important": false,
         "score": 8.8,
         "co": "CO2",
         "title": "Write the mathematical formulas for Mean Absolute Error (MAE) and Mean Squared Error (MSE) and highlight their differences.",
-        "answer_html": "<p><b>MAE:</b> <code>(1/n) Σ|yi - ŷi|</code>. <b>MSE:</b> <code>(1/n) Σ(yi - ŷi)²</code>. Differences: MSE heavily penalizes large errors because of the squaring operation, whereas MAE treats all errors proportionally and is more robust to outliers.</p>"
+        "answer_html": "<p><b>MAE:</b> <code>(1/n) \u03a3|yi - \u0177i|</code>. <b>MSE:</b> <code>(1/n) \u03a3(yi - \u0177i)\u00b2</code>. Differences: MSE heavily penalizes large errors because of the squaring operation, whereas MAE treats all errors proportionally and is more robust to outliers.</p>"
     },
     {
         "id": "3m_q31",
@@ -993,7 +993,7 @@
         "score": 7.0,
         "co": "CO2",
         "title": "Define Root Mean Squared Error (RMSE) and explain its interpretive advantage over Mean Squared Error (MSE).",
-        "answer_html": "<p><b>RMSE:</b> <code>√((1/n) Σ(yi - ŷi)²)</code>. The interpretive advantage of RMSE is that it expresses the error in the exact same units as the original dependent target variable, making it easier to understand practically than MSE.</p>"
+        "answer_html": "<p><b>RMSE:</b> <code>\u221a((1/n) \u03a3(yi - \u0177i)\u00b2)</code>. The interpretive advantage of RMSE is that it expresses the error in the exact same units as the original dependent target variable, making it easier to understand practically than MSE.</p>"
     },
     {
         "id": "3m_q32",
@@ -1005,7 +1005,7 @@
         "score": 8.1,
         "co": "CO2",
         "title": "Explain the R2 (R-squared) goodness-of-fit metric and distinguish it from Adjusted R2 in multiple regression.",
-        "answer_html": "<p>R-squared measures the proportion of variance in the dependent variable explained by the model (0 to 1). Adjusted R-squared modifies R² by penalizing the addition of unnecessary independent variables, preventing artificial score inflation in multiple regression.</p>"
+        "answer_html": "<p>R-squared measures the proportion of variance in the dependent variable explained by the model (0 to 1). Adjusted R-squared modifies R\u00b2 by penalizing the addition of unnecessary independent variables, preventing artificial score inflation in multiple regression.</p>"
     },
     {
         "id": "3m_q33",
@@ -1017,7 +1017,7 @@
         "score": 6.4,
         "co": "CO3",
         "title": "Write the mathematical formula for the Sigmoid activation function and explain how it converts real values into probabilities.",
-        "answer_html": "<p>Formula: <code>σ(z) = 1 / (1 + e^(-z))</code>. The Sigmoid function takes any real-valued number (z) and maps it into a smooth S-curve bounded between 0 and 1, allowing the output to be interpreted as a probability.</p>"
+        "answer_html": "<p>Formula: <code>\u03c3(z) = 1 / (1 + e^(-z))</code>. The Sigmoid function takes any real-valued number (z) and maps it into a smooth S-curve bounded between 0 and 1, allowing the output to be interpreted as a probability.</p>"
     },
     {
         "id": "3m_q34",
@@ -1029,7 +1029,7 @@
         "score": 5.7,
         "co": "CO3",
         "title": "Explain how binary decision boundaries are defined and applied in Logistic Regression using a probability threshold.",
-        "answer_html": "<p>Logistic regression outputs a probability between 0 and 1. A threshold (typically 0.5) is defined: if p ≥ 0.5, the class is predicted as 1; if p &lt; 0.5, class 0. This threshold establishes a linear decision boundary separating the classes.</p>"
+        "answer_html": "<p>Logistic regression outputs a probability between 0 and 1. A threshold (typically 0.5) is defined: if p \u2265 0.5, the class is predicted as 1; if p &lt; 0.5, class 0. This threshold establishes a linear decision boundary separating the classes.</p>"
     },
     {
         "id": "3m_q35",
@@ -1065,7 +1065,7 @@
         "score": 5.3,
         "co": "CO3",
         "title": "Write the Euclidean distance formula between two points in n-dimensional space and explain its purpose in KNN.",
-        "answer_html": "<p>Formula: <code>d = √(Σ(xi - yi)²)</code> from i=1 to n. In KNN, it quantifies the geometric similarity or 'closeness' between the test instance and training instances to identify the nearest neighbors.</p>"
+        "answer_html": "<p>Formula: <code>d = \u221a(\u03a3(xi - yi)\u00b2)</code> from i=1 to n. In KNN, it quantifies the geometric similarity or 'closeness' between the test instance and training instances to identify the nearest neighbors.</p>"
     },
     {
         "id": "3m_q38",
@@ -1089,7 +1089,7 @@
         "score": 5.4,
         "co": "CO3",
         "title": "Define Entropy in Information Theory, write its mathematical expression, and state what zero entropy signifies.",
-        "answer_html": "<p>Entropy measures the level of impurity or uncertainty in a dataset. Formula: <code>H(S) = -Σ(p_i * log2(p_i))</code>. An entropy of zero signifies a perfectly pure dataset where all examples belong to exactly one single class.</p>"
+        "answer_html": "<p>Entropy measures the level of impurity or uncertainty in a dataset. Formula: <code>H(S) = -\u03a3(p_i * log2(p_i))</code>. An entropy of zero signifies a perfectly pure dataset where all examples belong to exactly one single class.</p>"
     },
     {
         "id": "3m_q40",
@@ -1113,7 +1113,7 @@
         "score": 7.7,
         "co": "CO3",
         "title": "Define Gini Impurity, state its mathematical formula, and compare its computational efficiency against Entropy.",
-        "answer_html": "<p>Gini Impurity measures the probability of incorrectly classifying a randomly chosen element. Formula: <code>Gini = 1 - Σ(p_i)²</code>. It is computationally more efficient than Entropy because it does not require calculating logarithmic functions.</p>"
+        "answer_html": "<p>Gini Impurity measures the probability of incorrectly classifying a randomly chosen element. Formula: <code>Gini = 1 - \u03a3(p_i)\u00b2</code>. It is computationally more efficient than Entropy because it does not require calculating logarithmic functions.</p>"
     },
     {
         "id": "3m_q42",
@@ -1337,7 +1337,7 @@
         "unit": "II",
         "bloom": "L4",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.8,
         "co": "CO2",
         "title": "10. Compare Ridge L2 and Lasso L1 Regularization. Explain why Lasso produces sparse solutions (zeroing weights) whereas Ridge shrinks coefficients without removing them.",
@@ -1361,7 +1361,7 @@
         "unit": "III",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.7,
         "co": "CO3",
         "title": "12. Explain Logistic Regression for binary classification. Derive the Sigmoid activation function and state its mathematical properties.",
@@ -1397,7 +1397,7 @@
         "unit": "III",
         "bloom": "L4",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.9,
         "co": "CO3",
         "title": "15. Explain how Decision Trees construct splits using Entropy, Gini Impurity, and Information Gain. State the mathematical formula for each metric.",
@@ -1433,7 +1433,7 @@
         "unit": "III",
         "bloom": "L4",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.7,
         "co": "CO3",
         "title": "18. Explain the Kernel Trick in SVM. Describe how Linear, Polynomial, and Radial Basis Function (RBF) kernels enable the separation of non-linearly separable data.",
@@ -1473,7 +1473,7 @@
         "score": 9.5,
         "co": "CO2",
         "title": "A dataset contains the following observations of study hours (X) and examination marks (Y): X: 1, 2, 3, 4, 5. Y: 35, 40, 50, 55, 65. Find the simple linear regression equation y = b0 + b1x using the least-squares method. Predict the marks for a student who studies for 6 hours.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<table>\n<tr><th>X</th><th>Y</th><th>X*Y</th><th>X^2</th></tr>\n<tr><td>1</td><td>35</td><td>35</td><td>1</td></tr>\n<tr><td>2</td><td>40</td><td>80</td><td>4</td></tr>\n<tr><td>3</td><td>50</td><td>150</td><td>9</td></tr>\n<tr><td>4</td><td>55</td><td>220</td><td>16</td></tr>\n<tr><td>5</td><td>65</td><td>325</td><td>25</td></tr>\n<tr><td><b>Sum=15</b></td><td><b>Sum=245</b></td><td><b>Sum=810</b></td><td><b>Sum=55</b></td></tr>\n</table>\n<p>n = 5</p>\n<p>x̄ = 15/5 = 3, ȳ = 245/5 = 49</p>\n<p>b1 = (Sum(XY) - n*x̄*ȳ) / (Sum(X^2) - n*x̄^2) = (810 - 5*3*49) / (55 - 5*9) = (810 - 735) / (55 - 45) = 75 / 10 = 7.5</p>\n<p>b0 = ȳ - b1*x̄ = 49 - 7.5*3 = 49 - 22.5 = 26.5</p>\n<p>Regression equation: <b>y = 26.5 + 7.5x</b></p>\n<p>For x = 6: y = 26.5 + 7.5(6) = 26.5 + 45 = <b>71.5</b></p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<table>\n<tr><th>X</th><th>Y</th><th>X*Y</th><th>X^2</th></tr>\n<tr><td>1</td><td>35</td><td>35</td><td>1</td></tr>\n<tr><td>2</td><td>40</td><td>80</td><td>4</td></tr>\n<tr><td>3</td><td>50</td><td>150</td><td>9</td></tr>\n<tr><td>4</td><td>55</td><td>220</td><td>16</td></tr>\n<tr><td>5</td><td>65</td><td>325</td><td>25</td></tr>\n<tr><td><b>Sum=15</b></td><td><b>Sum=245</b></td><td><b>Sum=810</b></td><td><b>Sum=55</b></td></tr>\n</table>\n<p>n = 5</p>\n<p>x\u0304 = 15/5 = 3, \u0233 = 245/5 = 49</p>\n<p>b1 = (Sum(XY) - n*x\u0304*\u0233) / (Sum(X^2) - n*x\u0304^2) = (810 - 5*3*49) / (55 - 5*9) = (810 - 735) / (55 - 45) = 75 / 10 = 7.5</p>\n<p>b0 = \u0233 - b1*x\u0304 = 49 - 7.5*3 = 49 - 22.5 = 26.5</p>\n<p>Regression equation: <b>y = 26.5 + 7.5x</b></p>\n<p>For x = 6: y = 26.5 + 7.5(6) = 26.5 + 45 = <b>71.5</b></p>"
     },
     {
         "id": "num_q2",
@@ -1485,7 +1485,7 @@
         "score": 9.2,
         "co": "CO2",
         "title": "For the model y = b0 + b1x, the following data are given: n = 5, sum(x) = 20, sum(y) = 75, sum(x^2) = 90, sum(x*y) = 340. Calculate the values of b0 and b1, and write the final regression equation.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p>n = 5, Σx = 20, Σy = 75, Σx² = 90, Σxy = 340</p>\n<p>x̄ = Σx / n = 20 / 5 = 4</p>\n<p>ȳ = Σy / n = 75 / 5 = 15</p>\n<p>b1 = (Σxy - n*x̄*ȳ) / (Σx² - n*x̄²) = (340 - 5*4*15) / (90 - 5*(4²)) = (340 - 300) / (90 - 80) = 40 / 10 = 4</p>\n<p>b0 = ȳ - b1*x̄ = 15 - 4(4) = 15 - 16 = -1</p>\n<p>Final regression equation: <b>y = -1 + 4x</b></p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p>n = 5, \u03a3x = 20, \u03a3y = 75, \u03a3x\u00b2 = 90, \u03a3xy = 340</p>\n<p>x\u0304 = \u03a3x / n = 20 / 5 = 4</p>\n<p>\u0233 = \u03a3y / n = 75 / 5 = 15</p>\n<p>b1 = (\u03a3xy - n*x\u0304*\u0233) / (\u03a3x\u00b2 - n*x\u0304\u00b2) = (340 - 5*4*15) / (90 - 5*(4\u00b2)) = (340 - 300) / (90 - 80) = 40 / 10 = 4</p>\n<p>b0 = \u0233 - b1*x\u0304 = 15 - 4(4) = 15 - 16 = -1</p>\n<p>Final regression equation: <b>y = -1 + 4x</b></p>"
     },
     {
         "id": "num_q3",
@@ -1493,7 +1493,7 @@
         "unit": "I",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.5,
         "co": "CO2",
         "title": "A fitted regression model is y = 12 + 4.5x, where x represents advertising expenditure in thousands of rupees and y represents sales in thousands of units. Calculate the predicted sales when advertising expenditure is 8,000 rupees. Also interpret the slope and intercept.",
@@ -1505,11 +1505,11 @@
         "unit": "I",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.9,
         "co": "CO2",
         "title": "Given the following observations: X: 2, 4, 6, 8, 10. Y: 4, 7, 8, 11, 14. Calculate x_bar, y_bar, the slope b1, and the intercept b0. Estimate Y when X = 12.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<table>\n<tr><th>X</th><th>Y</th><th>X*Y</th><th>X^2</th></tr>\n<tr><td>2</td><td>4</td><td>8</td><td>4</td></tr>\n<tr><td>4</td><td>7</td><td>28</td><td>16</td></tr>\n<tr><td>6</td><td>8</td><td>48</td><td>36</td></tr>\n<tr><td>8</td><td>11</td><td>88</td><td>64</td></tr>\n<tr><td>10</td><td>14</td><td>140</td><td>100</td></tr>\n<tr><td><b>Sum=30</b></td><td><b>Sum=44</b></td><td><b>Sum=312</b></td><td><b>Sum=220</b></td></tr>\n</table>\n<p>n = 5</p>\n<p>x̄ = 30 / 5 = <b>6</b></p>\n<p>ȳ = 44 / 5 = <b>8.8</b></p>\n<p>b1 = (Σxy - n*x̄*ȳ) / (Σx² - n*x̄²) = (312 - 5*6*8.8) / (220 - 5*(6²)) = (312 - 264) / (220 - 180) = 48 / 40 = <b>1.2</b></p>\n<p>b0 = ȳ - b1*x̄ = 8.8 - 1.2(6) = 8.8 - 7.2 = <b>1.6</b></p>\n<p>Equation: y = 1.6 + 1.2x</p>\n<p>Estimate Y when X = 12: y = 1.6 + 1.2(12) = 1.6 + 14.4 = <b>16</b></p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<table>\n<tr><th>X</th><th>Y</th><th>X*Y</th><th>X^2</th></tr>\n<tr><td>2</td><td>4</td><td>8</td><td>4</td></tr>\n<tr><td>4</td><td>7</td><td>28</td><td>16</td></tr>\n<tr><td>6</td><td>8</td><td>48</td><td>36</td></tr>\n<tr><td>8</td><td>11</td><td>88</td><td>64</td></tr>\n<tr><td>10</td><td>14</td><td>140</td><td>100</td></tr>\n<tr><td><b>Sum=30</b></td><td><b>Sum=44</b></td><td><b>Sum=312</b></td><td><b>Sum=220</b></td></tr>\n</table>\n<p>n = 5</p>\n<p>x\u0304 = 30 / 5 = <b>6</b></p>\n<p>\u0233 = 44 / 5 = <b>8.8</b></p>\n<p>b1 = (\u03a3xy - n*x\u0304*\u0233) / (\u03a3x\u00b2 - n*x\u0304\u00b2) = (312 - 5*6*8.8) / (220 - 5*(6\u00b2)) = (312 - 264) / (220 - 180) = 48 / 40 = <b>1.2</b></p>\n<p>b0 = \u0233 - b1*x\u0304 = 8.8 - 1.2(6) = 8.8 - 7.2 = <b>1.6</b></p>\n<p>Equation: y = 1.6 + 1.2x</p>\n<p>Estimate Y when X = 12: y = 1.6 + 1.2(12) = 1.6 + 14.4 = <b>16</b></p>"
     },
     {
         "id": "num_q5",
@@ -1517,7 +1517,7 @@
         "unit": "I",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.5,
         "co": "CO2",
         "title": "Consider the multiple linear regression model: y = b0 + b1x1 + b2x2. The design matrix and target vector are: X = [[1, 1, 2], [1, 2, 1], [1, 3, 4], [1, 4, 1]], y = [5, 7, 12, 13]. Calculate X^T X, X^T y, and formulate the normal equations for estimating the regression coefficients.",
@@ -1557,7 +1557,7 @@
         "score": 9.6,
         "co": "CO2",
         "title": "For the model y = b0 + b1x, use the dataset: X: 1, 2. Y: 3, 5. Start with b0 = 0, b1 = 0, and learning rate = 0.1. Using the MSE cost function, calculate the gradients and update both parameters once.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p>Model: ŷ = b0 + b1*x</p>\n<p>Data: (x1=1, y1=3), (x2=2, y2=5)</p>\n<p>Initial parameters: b0 = 0, b1 = 0, α = 0.1</p>\n<p>Predictions: ŷ1 = 0, ŷ2 = 0</p>\n<p>Errors: e1 = ŷ1 - y1 = -3, e2 = ŷ2 - y2 = -5</p>\n<p>Gradients of MSE (1/n * Σ error * x_i):</p>\n<p>∂J/∂b0 = (1/n) * Σ(ŷ_i - y_i) = 1/2 * (-3 - 5) = -8 / 2 = -4</p>\n<p>∂J/∂b1 = (1/n) * Σ(ŷ_i - y_i) * x_i = 1/2 * (-3*1 - 5*2) = 1/2 * (-13) = -6.5</p>\n<p>Parameter updates:</p>\n<p>b0_new = b0 - α * ∂J/∂b0 = 0 - 0.1 * (-4) = <b>0.4</b></p>\n<p>b1_new = b1 - α * ∂J/∂b1 = 0 - 0.1 * (-6.5) = <b>0.65</b></p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p>Model: \u0177 = b0 + b1*x</p>\n<p>Data: (x1=1, y1=3), (x2=2, y2=5)</p>\n<p>Initial parameters: b0 = 0, b1 = 0, \u03b1 = 0.1</p>\n<p>Predictions: \u01771 = 0, \u01772 = 0</p>\n<p>Errors: e1 = \u01771 - y1 = -3, e2 = \u01772 - y2 = -5</p>\n<p>Gradients of MSE (1/n * \u03a3 error * x_i):</p>\n<p>\u2202J/\u2202b0 = (1/n) * \u03a3(\u0177_i - y_i) = 1/2 * (-3 - 5) = -8 / 2 = -4</p>\n<p>\u2202J/\u2202b1 = (1/n) * \u03a3(\u0177_i - y_i) * x_i = 1/2 * (-3*1 - 5*2) = 1/2 * (-13) = -6.5</p>\n<p>Parameter updates:</p>\n<p>b0_new = b0 - \u03b1 * \u2202J/\u2202b0 = 0 - 0.1 * (-4) = <b>0.4</b></p>\n<p>b1_new = b1 - \u03b1 * \u2202J/\u2202b1 = 0 - 0.1 * (-6.5) = <b>0.65</b></p>"
     },
     {
         "id": "num_q14",
@@ -1565,11 +1565,11 @@
         "unit": "II",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.9,
         "co": "CO2",
         "title": "For a single sample x = 3, y = 9, the model is y = wx, and the loss is J = 1/2(wx - y)^2. Starting with w=0 and learning rate 0.05, perform three gradient descent iterations. Report the value of w and the loss after each iteration.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p>x = 3, y = 9, w_0 = 0, α = 0.05. Loss J = 1/2(wx - y)²</p>\n<p>Gradient ∂J/∂w = (wx - y)*x</p>\n<p><b>Iteration 1:</b></p>\n<ul>\n<li>w = 0</li>\n<li>Error = w*x - y = 0*3 - 9 = -9</li>\n<li>Loss J = 1/2 * (-9)² = 40.5</li>\n<li>Gradient = -9 * 3 = -27</li>\n<li>w_1 = w - α*Gradient = 0 - 0.05*(-27) = 1.35</li>\n</ul>\n<p><b>Iteration 2:</b></p>\n<ul>\n<li>w = 1.35</li>\n<li>Error = 1.35*3 - 9 = 4.05 - 9 = -4.95</li>\n<li>Loss J = 1/2 * (-4.95)² = 12.25125</li>\n<li>Gradient = -4.95 * 3 = -14.85</li>\n<li>w_2 = 1.35 - 0.05*(-14.85) = 1.35 + 0.7425 = 2.0925</li>\n</ul>\n<p><b>Iteration 3:</b></p>\n<ul>\n<li>w = 2.0925</li>\n<li>Error = 2.0925*3 - 9 = 6.2775 - 9 = -2.7225</li>\n<li>Loss J = 1/2 * (-2.7225)² = 3.706</li>\n<li>Gradient = -2.7225 * 3 = -8.1675</li>\n<li>w_3 = 2.0925 - 0.05*(-8.1675) = 2.0925 + 0.408375 = 2.500875</li>\n</ul>\n<p><b>Final Results:</b><br/>\nIter 1: w = 1.35, J = 40.5<br/>\nIter 2: w = 2.0925, J = 12.25125<br/>\nIter 3: w = 2.500875, J = 3.706</p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p>x = 3, y = 9, w_0 = 0, \u03b1 = 0.05. Loss J = 1/2(wx - y)\u00b2</p>\n<p>Gradient \u2202J/\u2202w = (wx - y)*x</p>\n<p><b>Iteration 1:</b></p>\n<ul>\n<li>w = 0</li>\n<li>Error = w*x - y = 0*3 - 9 = -9</li>\n<li>Loss J = 1/2 * (-9)\u00b2 = 40.5</li>\n<li>Gradient = -9 * 3 = -27</li>\n<li>w_1 = w - \u03b1*Gradient = 0 - 0.05*(-27) = 1.35</li>\n</ul>\n<p><b>Iteration 2:</b></p>\n<ul>\n<li>w = 1.35</li>\n<li>Error = 1.35*3 - 9 = 4.05 - 9 = -4.95</li>\n<li>Loss J = 1/2 * (-4.95)\u00b2 = 12.25125</li>\n<li>Gradient = -4.95 * 3 = -14.85</li>\n<li>w_2 = 1.35 - 0.05*(-14.85) = 1.35 + 0.7425 = 2.0925</li>\n</ul>\n<p><b>Iteration 3:</b></p>\n<ul>\n<li>w = 2.0925</li>\n<li>Error = 2.0925*3 - 9 = 6.2775 - 9 = -2.7225</li>\n<li>Loss J = 1/2 * (-2.7225)\u00b2 = 3.706</li>\n<li>Gradient = -2.7225 * 3 = -8.1675</li>\n<li>w_3 = 2.0925 - 0.05*(-8.1675) = 2.0925 + 0.408375 = 2.500875</li>\n</ul>\n<p><b>Final Results:</b><br/>\nIter 1: w = 1.35, J = 40.5<br/>\nIter 2: w = 2.0925, J = 12.25125<br/>\nIter 3: w = 2.500875, J = 3.706</p>"
     },
     {
         "id": "num_q16",
@@ -1577,11 +1577,11 @@
         "unit": "II",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.6,
         "co": "CO2",
         "title": "A dataset is given by: X: 0, 1, 2, 3. Y: 1, 3, 9, 19. Fit a quadratic model of the form: y = b0 + b1x + b2x^2. Determine the coefficients using the least-squares method.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p>Model: y = b0 + b1x + b2x²</p>\n<table>\n<tr><th>X</th><th>Y</th><th>X²</th><th>X³</th><th>X⁴</th><th>XY</th><th>X²Y</th></tr>\n<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\n<tr><td>1</td><td>3</td><td>1</td><td>1</td><td>1</td><td>3</td><td>3</td></tr>\n<tr><td>2</td><td>9</td><td>4</td><td>8</td><td>16</td><td>18</td><td>36</td></tr>\n<tr><td>3</td><td>19</td><td>9</td><td>27</td><td>81</td><td>57</td><td>171</td></tr>\n<tr><td><b>Σ=6</b></td><td><b>Σ=32</b></td><td><b>Σ=14</b></td><td><b>Σ=36</b></td><td><b>Σ=98</b></td><td><b>Σ=78</b></td><td><b>Σ=210</b></td></tr>\n</table>\n<p>Normal equations:</p>\n<pre>\nn*b0 + Σx*b1 + Σx²*b2 = Σy     =>  4b0 +  6b1 + 14b2 = 32   (1)\nΣx*b0 + Σx²*b1 + Σx³*b2 = Σxy  =>  6b0 + 14b1 + 36b2 = 78   (2)\nΣx²*b0 + Σx³*b1 + Σx⁴*b2 = Σx²y=> 14b0 + 36b1 + 98b2 = 210  (3)\n</pre>\n<p>Simplify (1): 2b0 + 3b1 + 7b2 = 16 => 2b0 = 16 - 3b1 - 7b2</p>\n<p>Substitute into (2) [multiply by 3 -> 6b0 = 48 - 9b1 - 21b2]:</p>\n<p>48 - 9b1 - 21b2 + 14b1 + 36b2 = 78 => 5b1 + 15b2 = 30 => b1 + 3b2 = 6 => <b>b1 = 6 - 3b2</b></p>\n<p>Substitute into (3) [multiply (1) by 7 -> 14b0 + 21b1 + 49b2 = 112, subtract from (3)]:</p>\n<p>(14b0 + 36b1 + 98b2) - (14b0 + 21b1 + 49b2) = 210 - 112</p>\n<p>15b1 + 49b2 = 98</p>\n<p>Substitute b1 = 6 - 3b2:</p>\n<p>15(6 - 3b2) + 49b2 = 98 => 90 - 45b2 + 49b2 = 98 => 4b2 = 8 => <b>b2 = 2</b></p>\n<p>Then b1 = 6 - 3(2) = <b>0</b></p>\n<p>And 2b0 = 16 - 3(0) - 7(2) = 16 - 14 = 2 => <b>b0 = 1</b></p>\n<p>Quadratic model: <b>y = 1 + 2x²</b></p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p>Model: y = b0 + b1x + b2x\u00b2</p>\n<table>\n<tr><th>X</th><th>Y</th><th>X\u00b2</th><th>X\u00b3</th><th>X\u2074</th><th>XY</th><th>X\u00b2Y</th></tr>\n<tr><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>\n<tr><td>1</td><td>3</td><td>1</td><td>1</td><td>1</td><td>3</td><td>3</td></tr>\n<tr><td>2</td><td>9</td><td>4</td><td>8</td><td>16</td><td>18</td><td>36</td></tr>\n<tr><td>3</td><td>19</td><td>9</td><td>27</td><td>81</td><td>57</td><td>171</td></tr>\n<tr><td><b>\u03a3=6</b></td><td><b>\u03a3=32</b></td><td><b>\u03a3=14</b></td><td><b>\u03a3=36</b></td><td><b>\u03a3=98</b></td><td><b>\u03a3=78</b></td><td><b>\u03a3=210</b></td></tr>\n</table>\n<p>Normal equations:</p>\n<pre>\nn*b0 + \u03a3x*b1 + \u03a3x\u00b2*b2 = \u03a3y     =>  4b0 +  6b1 + 14b2 = 32   (1)\n\u03a3x*b0 + \u03a3x\u00b2*b1 + \u03a3x\u00b3*b2 = \u03a3xy  =>  6b0 + 14b1 + 36b2 = 78   (2)\n\u03a3x\u00b2*b0 + \u03a3x\u00b3*b1 + \u03a3x\u2074*b2 = \u03a3x\u00b2y=> 14b0 + 36b1 + 98b2 = 210  (3)\n</pre>\n<p>Simplify (1): 2b0 + 3b1 + 7b2 = 16 => 2b0 = 16 - 3b1 - 7b2</p>\n<p>Substitute into (2) [multiply by 3 -> 6b0 = 48 - 9b1 - 21b2]:</p>\n<p>48 - 9b1 - 21b2 + 14b1 + 36b2 = 78 => 5b1 + 15b2 = 30 => b1 + 3b2 = 6 => <b>b1 = 6 - 3b2</b></p>\n<p>Substitute into (3) [multiply (1) by 7 -> 14b0 + 21b1 + 49b2 = 112, subtract from (3)]:</p>\n<p>(14b0 + 36b1 + 98b2) - (14b0 + 21b1 + 49b2) = 210 - 112</p>\n<p>15b1 + 49b2 = 98</p>\n<p>Substitute b1 = 6 - 3b2:</p>\n<p>15(6 - 3b2) + 49b2 = 98 => 90 - 45b2 + 49b2 = 98 => 4b2 = 8 => <b>b2 = 2</b></p>\n<p>Then b1 = 6 - 3(2) = <b>0</b></p>\n<p>And 2b0 = 16 - 3(0) - 7(2) = 16 - 14 = 2 => <b>b0 = 1</b></p>\n<p>Quadratic model: <b>y = 1 + 2x\u00b2</b></p>"
     },
     {
         "id": "num_q28",
@@ -1593,7 +1593,7 @@
         "score": 9.6,
         "co": "CO2",
         "title": "Actual and predicted values of a regression model are: Actual (Y): 10, 15, 20, 25, 30. Predicted (Y_hat): 12, 13, 18, 28, 27. Calculate the MAE, MSE, and RMSE.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<table>\n<tr><th>Y</th><th>Y_hat</th><th>Error (e)</th><th>|e|</th><th>e²</th></tr>\n<tr><td>10</td><td>12</td><td>-2</td><td>2</td><td>4</td></tr>\n<tr><td>15</td><td>13</td><td>2</td><td>2</td><td>4</td></tr>\n<tr><td>20</td><td>18</td><td>2</td><td>2</td><td>4</td></tr>\n<tr><td>25</td><td>28</td><td>-3</td><td>3</td><td>9</td></tr>\n<tr><td>30</td><td>27</td><td>3</td><td>3</td><td>9</td></tr>\n<tr><td><b>Sum</b></td><td></td><td></td><td><b>12</b></td><td><b>30</b></td></tr>\n</table>\n<p>n = 5</p>\n<p><b>MAE (Mean Absolute Error):</b> Σ|e| / n = 12 / 5 = <b>2.4</b></p>\n<p><b>MSE (Mean Squared Error):</b> Σe² / n = 30 / 5 = <b>6.0</b></p>\n<p><b>RMSE (Root Mean Squared Error):</b> √MSE = √6.0 ≈ <b>2.449</b></p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<table>\n<tr><th>Y</th><th>Y_hat</th><th>Error (e)</th><th>|e|</th><th>e\u00b2</th></tr>\n<tr><td>10</td><td>12</td><td>-2</td><td>2</td><td>4</td></tr>\n<tr><td>15</td><td>13</td><td>2</td><td>2</td><td>4</td></tr>\n<tr><td>20</td><td>18</td><td>2</td><td>2</td><td>4</td></tr>\n<tr><td>25</td><td>28</td><td>-3</td><td>3</td><td>9</td></tr>\n<tr><td>30</td><td>27</td><td>3</td><td>3</td><td>9</td></tr>\n<tr><td><b>Sum</b></td><td></td><td></td><td><b>12</b></td><td><b>30</b></td></tr>\n</table>\n<p>n = 5</p>\n<p><b>MAE (Mean Absolute Error):</b> \u03a3|e| / n = 12 / 5 = <b>2.4</b></p>\n<p><b>MSE (Mean Squared Error):</b> \u03a3e\u00b2 / n = 30 / 5 = <b>6.0</b></p>\n<p><b>RMSE (Root Mean Squared Error):</b> \u221aMSE = \u221a6.0 \u2248 <b>2.449</b></p>"
     },
     {
         "id": "num_u3_q1",
@@ -1605,7 +1605,7 @@
         "score": 9.7,
         "co": "CO2",
         "title": "A logistic regression model produces the linear score z=2.5. Calculate the probability using the sigmoid function. If the classification threshold is 0.5, determine the predicted class.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p>z = 2.5</p>\n<p>Sigmoid function: P = 1 / (1 + e^(-z))</p>\n<p>P = 1 / (1 + e^(-2.5)) ≈ 1 / (1 + 0.082) ≈ 1 / 1.082 ≈ <b>0.924</b></p>\n<p>Since P = 0.924 > 0.5 (threshold), the predicted class is <b>1</b>.</p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p>z = 2.5</p>\n<p>Sigmoid function: P = 1 / (1 + e^(-z))</p>\n<p>P = 1 / (1 + e^(-2.5)) \u2248 1 / (1 + 0.082) \u2248 1 / 1.082 \u2248 <b>0.924</b></p>\n<p>Since P = 0.924 > 0.5 (threshold), the predicted class is <b>1</b>.</p>"
     },
     {
         "id": "num_u3_q2",
@@ -1613,11 +1613,11 @@
         "unit": "III",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.6,
         "co": "CO2",
         "title": "For a sample, the logistic regression model produces z=-1.8. Calculate the sigmoid probability and determine whether the sample belongs to class 0 or class 1 using a threshold of 0.5.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p>z = -1.8</p>\n<p>Sigmoid function: P = 1 / (1 + e^(-z))</p>\n<p>P = 1 / (1 + e^(1.8)) ≈ 1 / (1 + 6.0496) ≈ 1 / 7.0496 ≈ <b>0.1418</b></p>\n<p>Since P = 0.1418 < 0.5 (threshold), the sample belongs to <b>Class 0</b>.</p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p>z = -1.8</p>\n<p>Sigmoid function: P = 1 / (1 + e^(-z))</p>\n<p>P = 1 / (1 + e^(1.8)) \u2248 1 / (1 + 6.0496) \u2248 1 / 7.0496 \u2248 <b>0.1418</b></p>\n<p>Since P = 0.1418 < 0.5 (threshold), the sample belongs to <b>Class 0</b>.</p>"
     },
     {
         "id": "num_u3_q3",
@@ -1629,7 +1629,7 @@
         "score": 9.1,
         "co": "CO2",
         "title": "Consider the logistic regression model z = -3 + 0.8x1 + 1.2x2. For a data point x1=2, x2=1: Calculate z, calculate the sigmoid probability, predict the class using threshold 0.5.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p>Model: z = -3 + 0.8*x1 + 1.2*x2</p>\n<p>For x1 = 2, x2 = 1:</p>\n<p>z = -3 + 0.8(2) + 1.2(1) = -3 + 1.6 + 1.2 = <b>-0.2</b></p>\n<p>Sigmoid probability: P = 1 / (1 + e^(-z)) = 1 / (1 + e^(0.2)) ≈ 1 / (1 + 1.2214) ≈ 1 / 2.2214 ≈ <b>0.450</b></p>\n<p>Since P = 0.450 < 0.5, predicted class is <b>0</b>.</p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p>Model: z = -3 + 0.8*x1 + 1.2*x2</p>\n<p>For x1 = 2, x2 = 1:</p>\n<p>z = -3 + 0.8(2) + 1.2(1) = -3 + 1.6 + 1.2 = <b>-0.2</b></p>\n<p>Sigmoid probability: P = 1 / (1 + e^(-z)) = 1 / (1 + e^(0.2)) \u2248 1 / (1 + 1.2214) \u2248 1 / 2.2214 \u2248 <b>0.450</b></p>\n<p>Since P = 0.450 < 0.5, predicted class is <b>0</b>.</p>"
     },
     {
         "id": "num_u3_q4",
@@ -1637,11 +1637,11 @@
         "unit": "III",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.6,
         "co": "CO2",
         "title": "A binary classification model predicts the following probabilities for four observations: Actual y: 1, 1, 0, 0. Predicted p: 0.9, 0.7, 0.2, 0.4. Calculate the binary cross-entropy/log-loss.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p>Log-loss = -1/n Σ [y*ln(p) + (1-y)*ln(1-p)]</p>\n<ul>\n<li>Obs 1: y=1, p=0.9 => 1*ln(0.9) = -0.1054</li>\n<li>Obs 2: y=1, p=0.7 => 1*ln(0.7) = -0.3567</li>\n<li>Obs 3: y=0, p=0.2 => 1*ln(0.8) = -0.2231</li>\n<li>Obs 4: y=0, p=0.4 => 1*ln(0.6) = -0.5108</li>\n</ul>\n<p>Sum = -0.1054 - 0.3567 - 0.2231 - 0.5108 = -1.196</p>\n<p>Log-loss = -1/4 * (-1.196) = <b>0.299</b></p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p>Log-loss = -1/n \u03a3 [y*ln(p) + (1-y)*ln(1-p)]</p>\n<ul>\n<li>Obs 1: y=1, p=0.9 => 1*ln(0.9) = -0.1054</li>\n<li>Obs 2: y=1, p=0.7 => 1*ln(0.7) = -0.3567</li>\n<li>Obs 3: y=0, p=0.2 => 1*ln(0.8) = -0.2231</li>\n<li>Obs 4: y=0, p=0.4 => 1*ln(0.6) = -0.5108</li>\n</ul>\n<p>Sum = -0.1054 - 0.3567 - 0.2231 - 0.5108 = -1.196</p>\n<p>Log-loss = -1/4 * (-1.196) = <b>0.299</b></p>"
     },
     {
         "id": "num_u3_q5",
@@ -1653,7 +1653,7 @@
         "score": 9.5,
         "co": "CO2",
         "title": "KNN - Consider the following training data: Point A: (1,1, C=0), B: (2,2, C=0), C: (3,2, C=1), D: (5,4, C=1), E: (6,5, C=1). For query Q=(4,3), calculate distance from every point and classify using K=3.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p>Distances from Q(4,3) using Euclidean distance d = √((x2-x1)² + (y2-y1)²):</p>\n<ul>\n<li>d(A, Q) = √((4-1)² + (3-1)²) = √(9 + 4) = √13 ≈ 3.605</li>\n<li>d(B, Q) = √((4-2)² + (3-2)²) = √(4 + 1) = √5 ≈ 2.236</li>\n<li>d(C, Q) = √((4-3)² + (3-2)²) = √(1 + 1) = √2 ≈ 1.414</li>\n<li>d(D, Q) = √((4-5)² + (3-4)²) = √(1 + 1) = √2 ≈ 1.414</li>\n<li>d(E, Q) = √((4-6)² + (3-5)²) = √(4 + 4) = √8 ≈ 2.828</li>\n</ul>\n<p>The K=3 nearest neighbors are C (d=1.414, Class=1), D (d=1.414, Class=1), and B (d=2.236, Class=0).</p>\n<p>Classes of 3 NN: {1, 1, 0}. Majority vote is <b>Class 1</b>.</p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p>Distances from Q(4,3) using Euclidean distance d = \u221a((x2-x1)\u00b2 + (y2-y1)\u00b2):</p>\n<ul>\n<li>d(A, Q) = \u221a((4-1)\u00b2 + (3-1)\u00b2) = \u221a(9 + 4) = \u221a13 \u2248 3.605</li>\n<li>d(B, Q) = \u221a((4-2)\u00b2 + (3-2)\u00b2) = \u221a(4 + 1) = \u221a5 \u2248 2.236</li>\n<li>d(C, Q) = \u221a((4-3)\u00b2 + (3-2)\u00b2) = \u221a(1 + 1) = \u221a2 \u2248 1.414</li>\n<li>d(D, Q) = \u221a((4-5)\u00b2 + (3-4)\u00b2) = \u221a(1 + 1) = \u221a2 \u2248 1.414</li>\n<li>d(E, Q) = \u221a((4-6)\u00b2 + (3-5)\u00b2) = \u221a(4 + 4) = \u221a8 \u2248 2.828</li>\n</ul>\n<p>The K=3 nearest neighbors are C (d=1.414, Class=1), D (d=1.414, Class=1), and B (d=2.236, Class=0).</p>\n<p>Classes of 3 NN: {1, 1, 0}. Majority vote is <b>Class 1</b>.</p>"
     },
     {
         "id": "num_u3_q6",
@@ -1665,7 +1665,7 @@
         "score": 9.5,
         "co": "CO2",
         "title": "For points P = (2,5), Q = (7,9), calculate: Euclidean distance, Manhattan distance, Squared Euclidean distance. Explain which metric gives the smallest numerical value.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<ul>\n<li><b>Euclidean distance:</b> √((7-2)² + (9-5)²) = √(5² + 4²) = √(25 + 16) = √41 ≈ <b>6.40</b></li>\n<li><b>Manhattan distance:</b> |7-2| + |9-5| = 5 + 4 = <b>9</b></li>\n<li><b>Squared Euclidean:</b> (7-2)² + (9-5)² = 25 + 16 = <b>41</b></li>\n</ul>\n<p><b>Euclidean distance</b> gives the smallest numerical value (6.40) because it measures the direct straight-line distance, whereas Manhattan measures along grid lines and Squared Euclidean squares the Euclidean distance (which is > 1 here).</p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<ul>\n<li><b>Euclidean distance:</b> \u221a((7-2)\u00b2 + (9-5)\u00b2) = \u221a(5\u00b2 + 4\u00b2) = \u221a(25 + 16) = \u221a41 \u2248 <b>6.40</b></li>\n<li><b>Manhattan distance:</b> |7-2| + |9-5| = 5 + 4 = <b>9</b></li>\n<li><b>Squared Euclidean:</b> (7-2)\u00b2 + (9-5)\u00b2 = 25 + 16 = <b>41</b></li>\n</ul>\n<p><b>Euclidean distance</b> gives the smallest numerical value (6.40) because it measures the direct straight-line distance, whereas Manhattan measures along grid lines and Squared Euclidean squares the Euclidean distance (which is > 1 here).</p>"
     },
     {
         "id": "num_u3_q7",
@@ -1673,11 +1673,11 @@
         "unit": "III",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.7,
         "co": "CO2",
         "title": "Decision tree: A dataset contains 10 samples: 6 samples belong to Class A, 4 samples belong to Class B. Calculate the entropy.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p>Total samples n = 10, Class A = 6, Class B = 4.</p>\n<p>p_A = 6/10 = 0.6, p_B = 4/10 = 0.4</p>\n<p>Entropy H = -p_A * log2(p_A) - p_B * log2(p_B)</p>\n<p>H = -0.6 * log2(0.6) - 0.4 * log2(0.4)</p>\n<p>H ≈ -0.6 * (-0.737) - 0.4 * (-1.322)</p>\n<p>H ≈ 0.4422 + 0.5288 = <b>0.971</b></p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p>Total samples n = 10, Class A = 6, Class B = 4.</p>\n<p>p_A = 6/10 = 0.6, p_B = 4/10 = 0.4</p>\n<p>Entropy H = -p_A * log2(p_A) - p_B * log2(p_B)</p>\n<p>H = -0.6 * log2(0.6) - 0.4 * log2(0.4)</p>\n<p>H \u2248 -0.6 * (-0.737) - 0.4 * (-1.322)</p>\n<p>H \u2248 0.4422 + 0.5288 = <b>0.971</b></p>"
     },
     {
         "id": "num_u3_q8",
@@ -1689,7 +1689,7 @@
         "score": 9.1,
         "co": "CO2",
         "title": "Information gain: Parent 10 (6+, 4-). Left child: 5 (4+, 1-). Right child: 5 (2+, 3-). Calculate: Entropy of parent, left child, right child, Weighted entropy, Information Gain.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p><b>Parent node:</b> 6+, 4-. Total = 10.<br/>\nEntropy(Parent) = -0.6*log2(0.6) - 0.4*log2(0.4) ≈ <b>0.971</b></p>\n<p><b>Left child:</b> 4+, 1-. Total = 5.<br/>\nEntropy(Left) = -0.8*log2(0.8) - 0.2*log2(0.2) ≈ 0.2575 + 0.4644 = <b>0.722</b></p>\n<p><b>Right child:</b> 2+, 3-. Total = 5.<br/>\nEntropy(Right) = -0.4*log2(0.4) - 0.6*log2(0.6) ≈ <b>0.971</b></p>\n<p><b>Weighted entropy:</b><br/>\n(5/10)*0.722 + (5/10)*0.971 = 0.361 + 0.4855 = <b>0.8465</b></p>\n<p><b>Information Gain:</b><br/>\nEntropy(Parent) - Weighted entropy = 0.971 - 0.8465 = <b>0.1245</b></p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p><b>Parent node:</b> 6+, 4-. Total = 10.<br/>\nEntropy(Parent) = -0.6*log2(0.6) - 0.4*log2(0.4) \u2248 <b>0.971</b></p>\n<p><b>Left child:</b> 4+, 1-. Total = 5.<br/>\nEntropy(Left) = -0.8*log2(0.8) - 0.2*log2(0.2) \u2248 0.2575 + 0.4644 = <b>0.722</b></p>\n<p><b>Right child:</b> 2+, 3-. Total = 5.<br/>\nEntropy(Right) = -0.4*log2(0.4) - 0.6*log2(0.6) \u2248 <b>0.971</b></p>\n<p><b>Weighted entropy:</b><br/>\n(5/10)*0.722 + (5/10)*0.971 = 0.361 + 0.4855 = <b>0.8465</b></p>\n<p><b>Information Gain:</b><br/>\nEntropy(Parent) - Weighted entropy = 0.971 - 0.8465 = <b>0.1245</b></p>"
     },
     {
         "id": "num_u3_q9",
@@ -1701,7 +1701,7 @@
         "score": 9.2,
         "co": "CO2",
         "title": "A parent node has 20 observations: 12 Class A, 8 Class B. A proposed split produces: Left: 8 A, 2 B. Right: 4 A, 6 B. Calculate the weighted Gini impurity of the split.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p><b>Left node:</b> 8 A, 2 B (Total 10)<br/>\nGini(Left) = 1 - (8/10)² - (2/10)² = 1 - 0.64 - 0.04 = 0.32</p>\n<p><b>Right node:</b> 4 A, 6 B (Total 10)<br/>\nGini(Right) = 1 - (4/10)² - (6/10)² = 1 - 0.16 - 0.36 = 0.48</p>\n<p><b>Weighted Gini:</b><br/>\nWeight_Left = 10/20 = 0.5, Weight_Right = 10/20 = 0.5<br/>\nWeighted Gini = (0.5 * 0.32) + (0.5 * 0.48) = 0.16 + 0.24 = <b>0.40</b></p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p><b>Left node:</b> 8 A, 2 B (Total 10)<br/>\nGini(Left) = 1 - (8/10)\u00b2 - (2/10)\u00b2 = 1 - 0.64 - 0.04 = 0.32</p>\n<p><b>Right node:</b> 4 A, 6 B (Total 10)<br/>\nGini(Right) = 1 - (4/10)\u00b2 - (6/10)\u00b2 = 1 - 0.16 - 0.36 = 0.48</p>\n<p><b>Weighted Gini:</b><br/>\nWeight_Left = 10/20 = 0.5, Weight_Right = 10/20 = 0.5<br/>\nWeighted Gini = (0.5 * 0.32) + (0.5 * 0.48) = 0.16 + 0.24 = <b>0.40</b></p>"
     },
     {
         "id": "num_u3_q10",
@@ -1709,7 +1709,7 @@
         "unit": "III",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.8,
         "co": "CO2",
         "title": "Suppose a spam classifier has: P(Spam) = 0.4, P(NotSpam) = 0.6. For an email containing words W1 and W2: P(W1|Spam)=0.7, P(W2|Spam)=0.8, P(W1|NotSpam)=0.2, P(W2|NotSpam)=0.3. Using Naive Bayes, determine whether the email is Spam or Not Spam.",
@@ -1745,7 +1745,7 @@
         "unit": "III",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.8,
         "co": "CO2",
         "title": "Three regression trees have predictions and weights: T1: Pred=100, W=0.2; T2: Pred=120, W=0.5; T3: Pred=110, W=0.3. Calculate the weighted ensemble prediction.",
@@ -1761,7 +1761,7 @@
         "score": 9.2,
         "co": "CO2",
         "title": "Multiple boosting rounds: Initial prediction: F0(x) = 20. Three weak learners produce corrections: h1(x)=10, h2(x)=6, h3(x)=4 with learning rate = 0.2. Calculate F3(x).",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p>F_m(x) = F_{m-1}(x) + α * h_m(x)</p>\n<ul>\n<li>F0(x) = 20</li>\n<li>F1(x) = F0(x) + 0.2 * h1(x) = 20 + 0.2(10) = 20 + 2 = 22</li>\n<li>F2(x) = F1(x) + 0.2 * h2(x) = 22 + 0.2(6) = 22 + 1.2 = 23.2</li>\n<li>F3(x) = F2(x) + 0.2 * h3(x) = 23.2 + 0.2(4) = 23.2 + 0.8 = <b>24.0</b></li>\n</ul>\n<p>The final prediction is <b>24.0</b>.</p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p>F_m(x) = F_{m-1}(x) + \u03b1 * h_m(x)</p>\n<ul>\n<li>F0(x) = 20</li>\n<li>F1(x) = F0(x) + 0.2 * h1(x) = 20 + 0.2(10) = 20 + 2 = 22</li>\n<li>F2(x) = F1(x) + 0.2 * h2(x) = 22 + 0.2(6) = 22 + 1.2 = 23.2</li>\n<li>F3(x) = F2(x) + 0.2 * h3(x) = 23.2 + 0.2(4) = 23.2 + 0.8 = <b>24.0</b></li>\n</ul>\n<p>The final prediction is <b>24.0</b>.</p>"
     },
     {
         "id": "num_u3_q15",
@@ -1773,7 +1773,7 @@
         "score": 9.4,
         "co": "CO2",
         "title": "A weak classifier correctly classifies 80 out of 100 training samples. Calculate its error rate and classifier weight.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p>Total samples = 100, Correct = 80, Incorrect = 20.</p>\n<p><b>Error rate (ε):</b> 20 / 100 = <b>0.2</b></p>\n<p><b>Classifier weight (α):</b> calculated using the Adaboost formula: α = 0.5 * ln((1 - ε) / ε)</p>\n<p>α = 0.5 * ln((1 - 0.2) / 0.2) = 0.5 * ln(0.8 / 0.2) = 0.5 * ln(4)</p>\n<p>α = 0.5 * 1.386 = <b>0.693</b></p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p>Total samples = 100, Correct = 80, Incorrect = 20.</p>\n<p><b>Error rate (\u03b5):</b> 20 / 100 = <b>0.2</b></p>\n<p><b>Classifier weight (\u03b1):</b> calculated using the Adaboost formula: \u03b1 = 0.5 * ln((1 - \u03b5) / \u03b5)</p>\n<p>\u03b1 = 0.5 * ln((1 - 0.2) / 0.2) = 0.5 * ln(0.8 / 0.2) = 0.5 * ln(4)</p>\n<p>\u03b1 = 0.5 * 1.386 = <b>0.693</b></p>"
     },
     {
         "id": "num_u3_q16",
@@ -1781,11 +1781,11 @@
         "unit": "III",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.8,
         "co": "CO2",
         "title": "A binary classifier produces: TP=80, TN=70, FP=10, FN=20. Calculate: Accuracy, Precision, Recall, F1-score.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p>Total samples = TP + TN + FP + FN = 80 + 70 + 10 + 20 = 180</p>\n<ul>\n<li><b>Accuracy:</b> (TP + TN) / Total = (80 + 70) / 180 = 150 / 180 ≈ <b>0.833</b> (83.3%)</li>\n<li><b>Precision:</b> TP / (TP + FP) = 80 / (80 + 10) = 80 / 90 ≈ <b>0.889</b> (88.9%)</li>\n<li><b>Recall:</b> TP / (TP + FN) = 80 / (80 + 20) = 80 / 100 = <b>0.800</b> (80.0%)</li>\n<li><b>F1-score:</b> 2 * (Precision * Recall) / (Precision + Recall) = 2 * (0.889 * 0.8) / (0.889 + 0.8) ≈ 2 * 0.711 / 1.689 ≈ 1.422 / 1.689 ≈ <b>0.842</b></li>\n</ul>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p>Total samples = TP + TN + FP + FN = 80 + 70 + 10 + 20 = 180</p>\n<ul>\n<li><b>Accuracy:</b> (TP + TN) / Total = (80 + 70) / 180 = 150 / 180 \u2248 <b>0.833</b> (83.3%)</li>\n<li><b>Precision:</b> TP / (TP + FP) = 80 / (80 + 10) = 80 / 90 \u2248 <b>0.889</b> (88.9%)</li>\n<li><b>Recall:</b> TP / (TP + FN) = 80 / (80 + 20) = 80 / 100 = <b>0.800</b> (80.0%)</li>\n<li><b>F1-score:</b> 2 * (Precision * Recall) / (Precision + Recall) = 2 * (0.889 * 0.8) / (0.889 + 0.8) \u2248 2 * 0.711 / 1.689 \u2248 1.422 / 1.689 \u2248 <b>0.842</b></li>\n</ul>"
     },
     {
         "id": "num_u3_q17",
@@ -1793,11 +1793,11 @@
         "unit": "III",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.9,
         "co": "CO2",
         "title": "A binary classification model gives the following probabilities: Sample 1(A=1, P=0.9), 2(0, 0.2), 3(1, 0.7), 4(0, 0.6), 5(1, 0.8), 6(0, 0.1), 7(1, 0.4), 8(0, 0.3). Using threshold 0.5: Determine predicted classes, Construct the confusion matrix, Calculate accuracy, precision, recall, F1-score, and log-loss.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p><b>Predictions (Threshold = 0.5):</b></p>\n<ul>\n<li>S1: Act=1, Prob=0.9 -> Pred=1 (TP)</li>\n<li>S2: Act=0, Prob=0.2 -> Pred=0 (TN)</li>\n<li>S3: Act=1, Prob=0.7 -> Pred=1 (TP)</li>\n<li>S4: Act=0, Prob=0.6 -> Pred=1 (FP)</li>\n<li>S5: Act=1, Prob=0.8 -> Pred=1 (TP)</li>\n<li>S6: Act=0, Prob=0.1 -> Pred=0 (TN)</li>\n<li>S7: Act=1, Prob=0.4 -> Pred=0 (FN)</li>\n<li>S8: Act=0, Prob=0.3 -> Pred=0 (TN)</li>\n</ul>\n<p><b>Confusion Matrix:</b></p>\n<table>\n<tr><th></th><th>Predicted 1</th><th>Predicted 0</th></tr>\n<tr><th>Actual 1</th><td>TP = 3</td><td>FN = 1</td></tr>\n<tr><th>Actual 0</th><td>FP = 1</td><td>TN = 3</td></tr>\n</table>\n<p><b>Metrics:</b></p>\n<ul>\n<li>Accuracy = (3+3)/8 = 6/8 = <b>0.75</b></li>\n<li>Precision = 3/(3+1) = 3/4 = <b>0.75</b></li>\n<li>Recall = 3/(3+1) = 3/4 = <b>0.75</b></li>\n<li>F1-score = 2(0.75*0.75)/(0.75+0.75) = <b>0.75</b></li>\n</ul>\n<p><b>Log-loss:</b> -1/8 * Σ [y*ln(p) + (1-y)*ln(1-p)]</p>\n<p>Sum = ln(0.9) + ln(0.8) + ln(0.7) + ln(0.4) + ln(0.8) + ln(0.9) + ln(0.4) + ln(0.7)<br/>\n(S1=1:ln(0.9), S2=0:ln(0.8), S3=1:ln(0.7), S4=0:ln(0.4), S5=1:ln(0.8), S6=0:ln(0.9), S7=1:ln(0.4), S8=0:ln(0.7))</p>\n<p>Sum ≈ -0.105 - 0.223 - 0.357 - 0.916 - 0.223 - 0.105 - 0.916 - 0.357 = -3.202</p>\n<p>Log-loss = -1/8 * (-3.202) = <b>0.400</b></p>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p><b>Predictions (Threshold = 0.5):</b></p>\n<ul>\n<li>S1: Act=1, Prob=0.9 -> Pred=1 (TP)</li>\n<li>S2: Act=0, Prob=0.2 -> Pred=0 (TN)</li>\n<li>S3: Act=1, Prob=0.7 -> Pred=1 (TP)</li>\n<li>S4: Act=0, Prob=0.6 -> Pred=1 (FP)</li>\n<li>S5: Act=1, Prob=0.8 -> Pred=1 (TP)</li>\n<li>S6: Act=0, Prob=0.1 -> Pred=0 (TN)</li>\n<li>S7: Act=1, Prob=0.4 -> Pred=0 (FN)</li>\n<li>S8: Act=0, Prob=0.3 -> Pred=0 (TN)</li>\n</ul>\n<p><b>Confusion Matrix:</b></p>\n<table>\n<tr><th></th><th>Predicted 1</th><th>Predicted 0</th></tr>\n<tr><th>Actual 1</th><td>TP = 3</td><td>FN = 1</td></tr>\n<tr><th>Actual 0</th><td>FP = 1</td><td>TN = 3</td></tr>\n</table>\n<p><b>Metrics:</b></p>\n<ul>\n<li>Accuracy = (3+3)/8 = 6/8 = <b>0.75</b></li>\n<li>Precision = 3/(3+1) = 3/4 = <b>0.75</b></li>\n<li>Recall = 3/(3+1) = 3/4 = <b>0.75</b></li>\n<li>F1-score = 2(0.75*0.75)/(0.75+0.75) = <b>0.75</b></li>\n</ul>\n<p><b>Log-loss:</b> -1/8 * \u03a3 [y*ln(p) + (1-y)*ln(1-p)]</p>\n<p>Sum = ln(0.9) + ln(0.8) + ln(0.7) + ln(0.4) + ln(0.8) + ln(0.9) + ln(0.4) + ln(0.7)<br/>\n(S1=1:ln(0.9), S2=0:ln(0.8), S3=1:ln(0.7), S4=0:ln(0.4), S5=1:ln(0.8), S6=0:ln(0.9), S7=1:ln(0.4), S8=0:ln(0.7))</p>\n<p>Sum \u2248 -0.105 - 0.223 - 0.357 - 0.916 - 0.223 - 0.105 - 0.916 - 0.357 = -3.202</p>\n<p>Log-loss = -1/8 * (-3.202) = <b>0.400</b></p>"
     },
     {
         "id": "num_u3_q18",
@@ -1809,7 +1809,7 @@
         "score": 9.8,
         "co": "CO2",
         "title": "A decision tree predicts disease status for 100 patients: 35 true positives, 45 true negatives, 10 false positives, 10 false negatives. Calculate: Entropy of the complete dataset, Gini impurity, Accuracy, Precision, Recall, F1-score.",
-        "answer_html": "<p>Step-by-step solution:</p>\n<p>TP=35, TN=45, FP=10, FN=10. Total = 100.</p>\n<p>Actual Positives = TP + FN = 35 + 10 = 45</p>\n<p>Actual Negatives = TN + FP = 45 + 10 = 55</p>\n<p><b>Entropy of dataset:</b><br/>\np(+) = 0.45, p(-) = 0.55<br/>\nH = -0.45*log2(0.45) - 0.55*log2(0.55) ≈ 0.518 + 0.474 = <b>0.992</b></p>\n<p><b>Gini impurity:</b><br/>\nGini = 1 - (0.45)² - (0.55)² = 1 - 0.2025 - 0.3025 = 1 - 0.505 = <b>0.495</b></p>\n<p><b>Metrics:</b></p>\n<ul>\n<li>Accuracy = (35 + 45)/100 = <b>0.80</b></li>\n<li>Precision = 35 / (35 + 10) = 35/45 ≈ <b>0.778</b></li>\n<li>Recall = 35 / (35 + 10) = 35/45 ≈ <b>0.778</b></li>\n<li>F1-score = 2*(0.778*0.778) / (0.778+0.778) ≈ <b>0.778</b></li>\n</ul>"
+        "answer_html": "<p>Step-by-step solution:</p>\n<p>TP=35, TN=45, FP=10, FN=10. Total = 100.</p>\n<p>Actual Positives = TP + FN = 35 + 10 = 45</p>\n<p>Actual Negatives = TN + FP = 45 + 10 = 55</p>\n<p><b>Entropy of dataset:</b><br/>\np(+) = 0.45, p(-) = 0.55<br/>\nH = -0.45*log2(0.45) - 0.55*log2(0.55) \u2248 0.518 + 0.474 = <b>0.992</b></p>\n<p><b>Gini impurity:</b><br/>\nGini = 1 - (0.45)\u00b2 - (0.55)\u00b2 = 1 - 0.2025 - 0.3025 = 1 - 0.505 = <b>0.495</b></p>\n<p><b>Metrics:</b></p>\n<ul>\n<li>Accuracy = (35 + 45)/100 = <b>0.80</b></li>\n<li>Precision = 35 / (35 + 10) = 35/45 \u2248 <b>0.778</b></li>\n<li>Recall = 35 / (35 + 10) = 35/45 \u2248 <b>0.778</b></li>\n<li>F1-score = 2*(0.778*0.778) / (0.778+0.778) \u2248 <b>0.778</b></li>\n</ul>"
     },
     {
         "id": "num_u3_q19",

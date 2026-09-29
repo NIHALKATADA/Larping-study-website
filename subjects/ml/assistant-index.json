@@ -151,7 +151,7 @@
     "bloom": "L2",
     "co": "CO1",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "What is the historical significance of model training in the evolution of Machine Learning?",
     "url": "question-bank.html?open=2m_q10",
     "chunks": [
@@ -311,7 +311,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "Why is Gradient Descent preferred over the analytical Normal Equation for high-dimensional datasets?",
     "url": "question-bank.html?open=2m_q20",
     "chunks": [
@@ -711,7 +711,7 @@
     "bloom": "L1",
     "co": "CO3",
     "score": 8.6,
-    "important": true,
+    "important": false,
     "title": "State Bayes' Theorem formula and label each term ((P(A|B), P(B| A), P(A), P(B)).",
     "url": "question-bank.html?open=2m_q45",
     "chunks": [
@@ -903,7 +903,7 @@
     "bloom": "L2",
     "co": "CO1",
     "score": 8.7,
-    "important": true,
+    "important": false,
     "title": "Explain the role of Feature Engineering and distinguish it from feature selection.",
     "url": "question-bank.html?open=3m_q5",
     "chunks": [
@@ -1063,7 +1063,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.8,
-    "important": true,
+    "important": false,
     "title": "Write the structural mathematical formulation for a Simple Linear Regression model and explain all its terms.",
     "url": "question-bank.html?open=3m_q15",
     "chunks": [
@@ -1303,7 +1303,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.8,
-    "important": true,
+    "important": false,
     "title": "Write the mathematical formulas for Mean Absolute Error (MAE) and Mean Squared Error (MSE) and highlight their differences.",
     "url": "question-bank.html?open=3m_q30",
     "chunks": [
@@ -1783,7 +1783,7 @@
     "bloom": "L4",
     "co": "CO2",
     "score": 8.8,
-    "important": true,
+    "important": false,
     "title": "10. Compare Ridge L2 and Lasso L1 Regularization. Explain why Lasso produces sparse solutions (zeroing weights) whereas Ridge shrinks coefficients without removing them.",
     "url": "question-bank.html?open=5m_q10",
     "chunks": [
@@ -1815,7 +1815,7 @@
     "bloom": "L3",
     "co": "CO3",
     "score": 8.7,
-    "important": true,
+    "important": false,
     "title": "12. Explain Logistic Regression for binary classification. Derive the Sigmoid activation function and state its mathematical properties.",
     "url": "question-bank.html?open=5m_q12",
     "chunks": [
@@ -1863,7 +1863,7 @@
     "bloom": "L4",
     "co": "CO3",
     "score": 8.9,
-    "important": true,
+    "important": false,
     "title": "15. Explain how Decision Trees construct splits using Entropy, Gini Impurity, and Information Gain. State the mathematical formula for each metric.",
     "url": "question-bank.html?open=5m_q15",
     "chunks": [
@@ -1911,7 +1911,7 @@
     "bloom": "L4",
     "co": "CO3",
     "score": 8.7,
-    "important": true,
+    "important": false,
     "title": "18. Explain the Kernel Trick in SVM. Describe how Linear, Polynomial, and Radial Basis Function (RBF) kernels enable the separation of non-linearly separable data.",
     "url": "question-bank.html?open=5m_q18",
     "chunks": [
@@ -1991,7 +1991,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "A fitted regression model is y = 12 + 4.5x, where x represents advertising expenditure in thousands of rupees and y represents sales in thousands of units. Calculate the predicted sales when advertising expenditure is 8,000 rupees. Also interpret the slope and intercept.",
     "url": "question-bank.html?open=num_q3",
     "chunks": [
@@ -2007,7 +2007,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.9,
-    "important": true,
+    "important": false,
     "title": "Given the following observations: X: 2, 4, 6, 8, 10. Y: 4, 7, 8, 11, 14. Calculate x_bar, y_bar, the slope b1, and the intercept b0. Estimate Y when X = 12.",
     "url": "question-bank.html?open=num_q4",
     "chunks": [
@@ -2023,7 +2023,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "Consider the multiple linear regression model: y = b0 + b1x1 + b2x2. The design matrix and target vector are: X = [[1, 1, 2], [1, 2, 1], [1, 3, 4], [1, 4, 1]], y = [5, 7, 12, 13]. Calculate X^T X, X^T y, and formulate the normal equations for estimating the regression coefficients.",
     "url": "question-bank.html?open=num_q5",
     "chunks": [
@@ -2087,7 +2087,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.9,
-    "important": true,
+    "important": false,
     "title": "For a single sample x = 3, y = 9, the model is y = wx, and the loss is J = 1/2(wx - y)^2. Starting with w=0 and learning rate 0.05, perform three gradient descent iterations. Report the value of w and the loss after each iteration.",
     "url": "question-bank.html?open=num_q14",
     "chunks": [
@@ -2103,7 +2103,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.6,
-    "important": true,
+    "important": false,
     "title": "A dataset is given by: X: 0, 1, 2, 3. Y: 1, 3, 9, 19. Fit a quadratic model of the form: y = b0 + b1x + b2x^2. Determine the coefficients using the least-squares method.",
     "url": "question-bank.html?open=num_q16",
     "chunks": [
@@ -2151,7 +2151,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.6,
-    "important": true,
+    "important": false,
     "title": "For a sample, the logistic regression model produces z=-1.8. Calculate the sigmoid probability and determine whether the sample belongs to class 0 or class 1 using a threshold of 0.5.",
     "url": "question-bank.html?open=num_u3_q2",
     "chunks": [
@@ -2183,7 +2183,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.6,
-    "important": true,
+    "important": false,
     "title": "A binary classification model predicts the following probabilities for four observations: Actual y: 1, 1, 0, 0. Predicted p: 0.9, 0.7, 0.2, 0.4. Calculate the binary cross-entropy/log-loss.",
     "url": "question-bank.html?open=num_u3_q4",
     "chunks": [
@@ -2231,7 +2231,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.7,
-    "important": true,
+    "important": false,
     "title": "Decision tree: A dataset contains 10 samples: 6 samples belong to Class A, 4 samples belong to Class B. Calculate the entropy.",
     "url": "question-bank.html?open=num_u3_q7",
     "chunks": [
@@ -2279,7 +2279,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.8,
-    "important": true,
+    "important": false,
     "title": "Suppose a spam classifier has: P(Spam) = 0.4, P(NotSpam) = 0.6. For an email containing words W1 and W2: P(W1|Spam)=0.7, P(W2|Spam)=0.8, P(W1|NotSpam)=0.2, P(W2|NotSpam)=0.3. Using Naive Bayes, determine whether the email is Spam or Not Spam.",
     "url": "question-bank.html?open=num_u3_q10",
     "chunks": [
@@ -2327,7 +2327,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.8,
-    "important": true,
+    "important": false,
     "title": "Three regression trees have predictions and weights: T1: Pred=100, W=0.2; T2: Pred=120, W=0.5; T3: Pred=110, W=0.3. Calculate the weighted ensemble prediction.",
     "url": "question-bank.html?open=num_u3_q13",
     "chunks": [
@@ -2375,7 +2375,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.8,
-    "important": true,
+    "important": false,
     "title": "A binary classifier produces: TP=80, TN=70, FP=10, FN=20. Calculate: Accuracy, Precision, Recall, F1-score.",
     "url": "question-bank.html?open=num_u3_q16",
     "chunks": [
@@ -2391,7 +2391,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.9,
-    "important": true,
+    "important": false,
     "title": "A binary classification model gives the following probabilities: Sample 1(A=1, P=0.9), 2(0, 0.2), 3(1, 0.7), 4(0, 0.6), 5(1, 0.8), 6(0, 0.1), 7(1, 0.4), 8(0, 0.3). Using threshold 0.5: Determine predicted classes, Construct the confusion matrix, Calculate accuracy, precision, recall, F1-score, and log-loss.",
     "url": "question-bank.html?open=num_u3_q17",
     "chunks": [
@@ -2438,29 +2438,28 @@
     "chunks": [
       "Dashboard\n\n            Revision Hub\n\n                Save as PDF\n\n                Theme",
       "Machine Learning",
-      "Dense Revision Cheat Sheet \n\nAll Units | Scannable Reference | High-Yield Syntax & Concepts\n\nQuick Jump:\nUnit I\nUnit II\nUnit III\nUnit IV\nUnit V\n\n\u2190 Dashboard\nMode: Dark",
-      "Unit I: Introduction & Basics CO1",
-      "ML Paradigms \n\nParadigmData TypeGoal\n\nSupervisedLabeledPredict targets\n\nUnsupervisedUnlabeledFind hidden patterns\n\nReinforcementState-ActionMaximize reward",
-      "Regularization \n\nPrevents overfitting by penalizing complex models.\n\nTypePenalty TermEffect\n\nRidge (L2)\u03bb \u2211 \u03b8i2Shrinks coefficients near zero\n\nLasso (L1)\u03bb \u2211 |\u03b8i|Feature selection (coeffs = 0)",
-      "Naive Bayes Classifier \n\nBayes' Theorem:\n\nP(A|B) = [P(B|A) * P(A)] / P(B)\n\nP(A|B): Posterior\n\nP(B|A): Likelihood\n\nP(A): Prior\n\nP(B): Marginal",
-      "Unit II: Core Mechanics CO2",
-      "7-Step ML Lifecycle \n\nData Collection\n\nData Preparation (Cleaning)\n\nExploratory Data Analysis (EDA)\n\nFeature Engineering\n\nModel Training\n\nModel Evaluation (Validation)\n\nDeployment",
-      "Logistic Regression \n\nSigmoid Function:\n\n\u03c3(z) = 1 / (1 + e-z)\n\nOutput range: [0, 1]\n\nLog-Loss (Binary Cross-Entropy):\n\nCost = -[y log(\u0177) + (1-y)log(1-\u0177)]",
-      "Support Vector Machines (SVM) \n\nHyperplane: Linear decision boundary separating classes.\n\nSupport Vectors: Closest data points to hyperplane.\n\nHard vs Soft Margin: Soft margin allows misclassifications (slack) to prevent overfitting.\n\nKernel Trick: Maps data to higher dims (RBF, Poly) for non-linear separation.",
-      "Unit III: Advanced Concepts CO3",
-      "Linear Regression \n\nHypothesis: h\u03b8(x) = \u03b80 + \u03b81x1 + ... + \u03b8nxn\n\nCost Function (MSE):\n\nJ(\u03b8) = (1/2m) \u2211 (h\u03b8(x(i)) - y(i))2\n\nGoal: Minimize sum of squared residual errors (OLS).",
-      "Confusion Matrix Formulas \n\nMetricFormula\n\nAccuracy(TP+TN) / (P+N)\n\nPrecisionTP / (TP+FP)\n\nRecall (TPR)TP / (TP+FN)\n\nF1-Score2 * (P*R)/(P+R)",
-      "Ensemble Methods \n\nAlgorithmMechanism\n\nRandom ForestBagging (Parallel decision trees + voting/averaging)\n\nAdaBoostBoosting (Sequential models fixing previous errors)\n\nXGBoost / GBMGradient Boosting (Optimizes loss sequentially)",
-      "Unit IV: Design Patterns & Architectures CO4",
-      "Gradient Descent \n\nIterative optimization algorithm.\n\nUpdate Rule:\n\n\u03b8j := \u03b8j - \u03b1 * \u2202J(\u03b8)/\u2202\u03b8j\n\n\u03b1 = Learning Rate\n\nToo high: Overshoots minimum\n\nToo low: Slow convergence",
-      "K-Nearest Neighbors (KNN) \n\nNon-parametric, instance-based learning.\n\nEuclidean Distance:\n\nd(p, q) = \u221a(\u2211 (qi - pi)2)\n\nChoosing K:\n\n                Small K = Overfitting (High variance)\n\n                Large K = Underfitting (High bias)",
-      "Bias-Variance Tradeoff \n\nIssueBiasVarianceFix\n\nUnderfittingHighLowIncrease complexity\n\nOverfittingLowHighRegularize, more data, prune",
-      "Unit V: Modern Ecosystem CO5",
-      "Regression Metrics \n\nMetricFormula\n\nMAE(1/n) \u2211 |yi - \u0177i|\n\nMSE(1/n) \u2211 (yi - \u0177i)2\n\nRMSE\u221a(MSE)\n\nR21 - (SSres / SStot)",
-      "Decision Trees \n\nEntropy:\n\nH(S) = - \u2211 pi log2(pi)\n\nGini Impurity:\n\nGini = 1 - \u2211 pi2\n\nInformation Gain: Reduction in entropy after splitting a node.",
-      "Data Scaling \n\nMin-Max Normalization:\n\nx' = (x - xmin) / (xmax - xmin)\n\nZ-Score Standardization:\n\nz = (x - \u03bc) / \u03c3\n\nEnsures features with large ranges don't dominate distance calculations.\n\n\ufeff",
-      "Ask AI (Lite) Lite Smart (WebGPU) Deep (Cloud) Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next. Send let assistantApp = null; async function openAssistant() { if (document.querySelector('.ask-ai-btn') && document.querySelector('.ask-ai-btn').getAttribute('data-dragged') === 'true') return; const modal = document.getElementById('assistantModal'); if (modal.style.display === 'flex') { closeAssistant(); return; } modal.style.display = 'flex'; // Removed FAB hide so it stays visible // slight delay for transition setTimeout(() => { modal.style.opacity = '1'; modal.style.transform = 'translateY(0)'; }, 10); if (window.innerWidth > 768) { document.getElementById('assistantInput').focus(); } if (!assistantApp) { try { const { initAssistant } = await import('../../shared/assistant-ui.js'); assistantApp = await initAssistant('ml'); if (!assistantApp) throw new Error(\"App init failed\"); } catch (e) { console.error(e); const msgs = document.getElementById('assistantMessages'); msgs.innerHTML = I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).; } } } function closeAssistant() { // FAB stays independent now const modal = document.getElementById('assistantModal'); modal.style.opacity = '0'; modal.style.transform = 'translateY(20px)'; setTimeout(() => { modal.style.display = 'none'; }, 300); } function submitAssistantQuery(q) { const input = document.getElementById('assistantInput'); const query = q || input.value.trim(); if",
-      "(!query) return; if (!assistantApp) { const msgs = document.getElementById('assistantMessages'); msgs.innerHTML = I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).; return; } input.value = ''; assistantApp.handleQuery(query); }"
+      "Dense Revision Cheat Sheet \n\nAll Units | Scannable Reference | High-Yield Syntax & Concepts\n\nQuick Jump:\nUnit I\nUnit II\nUnit III\nUnit IV\nUnit V\n\n\u2190 Dashboard",
+      "Unit I: Fundamentals & Hypothesis Spaces CO1",
+      "The Bias-Variance Decomposition \n\nTotal Error = Bias\u00b2 + Variance + Irreducible Error. Bias is the simplifying assumptions (underfitting). Variance is hypersensitivity to noise (overfitting).\n\nExample: Linear regression on sine wave data has high bias; a 50-depth decision tree on noisy data has high variance.\n\n            flowchart LR\n                Underfitting[\"High Bias\nUnderfitting\"] --> Optimal[\"Sweet Spot\nOptimal Tradeoff\"]\n                Optimal --> Overfitting[\"High Variance\nOverfitting\"]\n                style Optimal fill:#27ae60,stroke:#fff",
+      "Curse of Dimensionality & Manifold Hypothesis \n\nAs dimensions $D$ increase, the volume of the space grows exponentially, making data extremely sparse. The Manifold Hypothesis posits that real-world high-dimensional data actually lies on low-dimensional, non-linear manifolds embedded within the high-dimensional space.\n\nExample: 1024-pixel images exist in a 1024D space, but valid human faces only span a tiny 50D manifold within it.\n\nTrick: PCA only discovers linear manifolds. If the examiner asks to untangle a \"Swiss Roll\" dataset, you MUST use non-linear methods like ISOMAP or t-SNE!",
+      "Inductive Bias & No Free Lunch Theorem \n\nNo Free Lunch Theorem: Averaged over all possible data distributions, every algorithm performs equally well. Thus, an algorithm must make assumptions (Inductive Bias) to learn effectively.\n\nExample: CNNs have an inductive bias for spatial locality (nearby pixels are related); RNNs assume sequential temporality.",
+      "Unit II: Linear Models & Optimization Convexity CO2",
+      "Logistic Regression & Cross-Entropy \n\nUses the Sigmoid function $\\sigma(z) = \\frac{1}{1 + e^{-z}}$ to map logits to probabilities. Optimized via Log-Loss (Binary Cross-Entropy), heavily penalizing confident, wrong predictions logarithmically.\n\nExample: Predicting if an email is spam. If the model outputs 0.99 for a ham email, the log-loss penalty approaches infinity.",
+      "SVMs, Maximum Margin & Kernel Trick \n\nSVMs maximize the margin $\\frac{2}{||w||}$ between support vectors. The Kernel Trick uses Mercer\u2019s theorem to implicitly compute dot products in a high-dimensional feature space without explicit transformation mapping $\\phi(x)$.\n\nExample: An RBF kernel classifying concentric circles by projecting them into 3D space where a flat hyperplane can cleanly slice them.\n\nPro-Tip: The $C$ parameter in Soft-Margin SVM controls the penalty for misclassification. Low $C$ = wide margin (high bias). High $C$ = hard margin (high variance/overfitting).",
+      "VC Dimension & PAC Learning Bounds \n\nProbably Approximately Correct (PAC) framework provides mathematical bounds on sample complexity. Vapnik-Chervonenkis (VC) Dimension is the maximum number of points a hypothesis class can perfectly shatter (memorize).\n\nExample: A 2D linear classifier has a VC dimension of 3, meaning it can perfectly classify any arrangement of 3 points, but fails on some arrangements of 4 points (like XOR).",
+      "Unit III: Ensemble Theory & Information Metrics CO3",
+      "Ensemble Meta-Algorithms \n\nBagging trains parallel models on bootstrapped data (decreases variance). Boosting trains sequential weak learners focused on correcting prior residual errors (decreases bias).\n\nExample: Random Forest (Bagging) averages 100 deep trees. XGBoost (Boosting) strings together 100 shallow stumps to minimize a gradient loss function.\n\n            flowchart TD\n                Data -->|Bootstrap| M1[Model 1]\n                Data -->|Bootstrap| M2[Model 2]\n                M1 & M2 -->|Average| Bagging[Bagging/RF]\n\n                Data2[Data] --> W1[Weak 1]\n                W1 -->|Weighted Errors| W2[Weak 2]\n                W2 --> Boosting[Boosting/XGB]",
+      "Information Gain & Gini Impurity \n\nDecision trees recursively partition data. They maximize Information Gain (reduction in Shannon Entropy $H = -\\sum p \\log_2 p$) or minimize Gini Impurity ($1 - \\sum p^2$) at each node split.\n\nExample: Predicting disease. Splitting on \"Fever = True\" yields child nodes that are much purer (lower entropy) than the parent node.\n\nTrick: Information Gain is inherently biased towards attributes with high cardinality (e.g., User ID). The examiner will test this: always use Gain Ratio to penalize high-branching attributes!",
+      "Precision-Recall vs ROC-AUC \n\nROC curve plots True Positive Rate vs False Positive Rate. PR curve plots Precision vs Recall. ROC is misleading for heavily imbalanced datasets because TNs dominate the FPR denominator.\n\nExample: Fraud detection (0.1% fraud). An ROC-AUC of 0.90 looks great, but PR-AUC reveals the model has terrible precision and produces massive false alarms.",
+      "Unit IV: Gradient Dynamics & Deep Architectures CO4",
+      "Backpropagation & The Chain Rule \n\nNeural networks update weights via gradient descent: $\\theta = \\theta - \\alpha \\nabla J(\\theta)$. Backprop efficiently calculates the gradient of the loss function with respect to weights by propagating errors backward using the calculus chain rule.\n\nExample: If a network predicts 0.9 for a dog image (label 1), backprop sends the 0.1 error backwards, nudging earlier convolutional filters to activate stronger on dog ears.",
+      "Vanishing Gradients & Modern Activations \n\nDeep networks using Sigmoid/Tanh suffer from vanishing gradients because their derivatives max out at 0.25; gradients decay exponentially through layers. ReLU ($f(x) = \\max(0, x)$) solves this by providing a constant derivative of 1 for positive inputs.\n\nExample: Training a 100-layer ResNet. With Sigmoid, the first layer never updates. With ReLU and Skip Connections, the gradient flows directly to early layers.",
+      "Regularization: L1 vs L2 (Weight Decay) \n\nL1 (Lasso): Adds $\\lambda \\sum |w|$ to the loss. Encourages sparse weight vectors (exact zeros) due to diamond-shaped constraint geometry. \nL2 (Ridge): Adds $\\lambda \\sum w^2$. Prevents exploding weights by decaying them proportionally.\n\nExample: Use L1 for gene expression data to eliminate 99% of irrelevant genes. Use L2 in Neural Networks (Weight Decay) to keep activations stable.\n\nPro-Tip: Dropout is mathematically equivalent to a form of L2 regularization, acting as an ensemble of sub-networks by randomly zeroing activations during training!",
+      "Unit V: Unsupervised Topology & MLOps CO5",
+      "K-Means & The E-M Algorithm \n\nK-Means is a specific instance of the Expectation-Maximization (EM) algorithm. E-step: Assign points to nearest centroid. M-step: Recalculate centroids. It converges to a local optimum minimizing within-cluster sum of squares (WCSS).\n\nExample: Clustering retail shoppers based on recency and frequency of purchases. K-Means finds $K$ distinct buyer personas.",
+      "Principal Component Analysis (PCA) Eigen-theory \n\nPCA projects data onto orthogonal axes of maximum variance. It computes the eigenvectors (directions) and eigenvalues (magnitude of variance) of the data's covariance matrix. It removes multicollinearity.\n\nExample: Given square footage and number of rooms (highly correlated), PCA collapses them into a single \"house size\" principal component axis.\n\n            graph LR\n                Data(Raw Data X) --> Cov(Covariance Matrix)\n                Cov --> Eigen(Eigen Decomposition)\n                Eigen --> Sort(Sort by top K Eigenvalues)\n                Sort --> Project(Project X onto K axes)",
+      "Data Leakage & Time-Series Validation \n\nLeakage occurs when information from the validation/test set maliciously bleeds into the training set, causing deceptively high performance that fails in production.\n\nExample: Applying `StandardScaler().fit_transform(X)` on the entire dataset before doing `train_test_split()`. The test set's mean/variance leaked into the scaler!\n\nTrick: Standard K-Fold CV on Time-Series data causes future leakage (training on Friday to predict Thursday). You must strictly use Rolling Origin / TimeSeriesSplit.",
+      "Ask AI (Lite) \n\n    Lite\n    Smart (WebGPU)\n    Deep (Cloud)\n\n                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.\n\n                Send"
     ],
     "type": "cheat"
   }

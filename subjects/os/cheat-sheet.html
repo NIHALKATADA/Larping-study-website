@@ -6,6 +6,8 @@
 <title>OS Cheat Sheet</title>
 <link href="../../shared/design-system.css" rel="stylesheet"/>
 
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 </head>
 <body>
     <div class="glow-bg"></div>
@@ -46,7 +48,12 @@
 </div>
 <div>
 <a class="btn btn-secondary" href="../../index.html" style="margin-right: 1rem;">← Dashboard</a>
-<button class="btn btn-secondary" id="themeToggleBtn">Mode: Dark</button>
+
+
+
+
+
+
 </div>
 </div>
 
@@ -58,6 +65,7 @@
             <div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
         </div>
         <div class="cheat-grid" style="margin-bottom: 3rem;">
+
             
         <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
             <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
@@ -132,173 +140,186 @@
         </div>
     </div>
     <div id="realContentWrapper">
-<div class="unit-section" id="unit1">
-<h3>Unit I: Introduction &amp; Basics <span class="badge unit-1">CO1</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>OS Basics &amp; Functions</h4>
-<ul>
-<li><strong>Process Mgmt:</strong> Scheduling, creation, termination.</li>
-<li><strong>Memory Mgmt:</strong> RAM allocation/deallocation.</li>
-<li><strong>File Mgmt:</strong> Organizing files and directories.</li>
-<li><strong>Device Mgmt:</strong> I/O management &amp; drivers.</li>
-</ul>
-</div><div class="cheat-card">
-<h4>Process Schedulers</h4>
-<ul>
-<li><strong>Long-Term (Job):</strong> Disk → Ready Queue. Controls multiprogramming.</li>
-<li><strong>Short-Term (CPU):</strong> Ready Queue → CPU. Fast.</li>
-<li><strong>Medium-Term:</strong> Swaps processes (RAM ↔ Disk).</li>
-</ul>
-</div><div class="cheat-card">
-<h4>Deadlock Handling</h4>
-<ul>
-<li><strong>Prevention:</strong> Negate 1 of 4 conditions.</li>
-<li><strong>Avoidance:</strong> Banker's Algorithm (Safe states).</li>
-<li><strong>Detection &amp; Recovery:</strong> Wait-for graphs, killing processes.</li>
-<li><strong>Ignorance:</strong> Ostrich Algorithm (Unix/Windows).</li>
-</ul>
-</div><div class="cheat-card">
-<h4>I/O Operations</h4>
-<table>
-<tr><th>Method</th><th>CPU Involvement</th></tr>
-<tr><td>Programmed I/O</td><td>High (Polling)</td></tr>
-<tr><td>Interrupt-Driven</td><td>Medium (Per byte/word interrupt)</td></tr>
-<tr><td>DMA</td><td>Low (Handles blocks, CPU free)</td></tr>
-</table>
-</div></div>
-</div>
+        <div class="unit-section" id="unit1">
+            <h3>Unit I: Fundamentals &amp; Bootstrapping <span class="badge unit-1">CO1</span></h3>
+            <div class="cheat-grid">
+                <div class="cheat-card">
+                    <h4>Deep Dive: Process State Transition</h4>
+                    <div class="compact-svg">
+                        <div class="mermaid">
+                        stateDiagram-v2
+                            [*] --> New
+                            New --> Ready : Admitted
+                            Ready --> Running : Scheduler Dispatch
+                            Running --> Ready : Interrupt
+                            Running --> Waiting : I/O or Event Wait
+                            Waiting --> Ready : I/O or Event Completion
+                            Running --> Terminated : Exit
+                            Terminated --> [*]
+                        </div>
+                    </div>
+                    <ul style="margin-top: 10px;">
+                        <li><strong>Context Switching:</strong> Saving the state of a PCB (Program Control Block) and loading a new one. It is pure overhead, no useful work gets done.</li>
+                        <li><strong>Paging vs Segmentation:</strong> Paging divides memory into fixed-size blocks (pages/frames) eliminating external fragmentation. Segmentation divides memory into variable-sized logical blocks (functions, objects) avoiding internal fragmentation.</li>
+                        <li><strong>TLB (Translation Lookaside Buffer):</strong> A hardware cache for the page table. A TLB hit avoids the slow memory access required to look up a page frame.</li>
+                    </ul>
+                </div>
+                <div class="cheat-card">
+                    <h4>Deep Dive: Concurrency & Traps</h4>
+                    <ul>
+                        <li><strong>Deadlocks (Banker's Algorithm):</strong> Avoids deadlocks by simulating the allocation of predetermined maximum possible amounts of all resources, and checks if the system remains in a "safe state".</li>
+                        <li><strong>Belady's Anomaly:</strong> Increasing the number of page frames results in an INCREASE in page faults. Occurs strictly with FIFO page replacement.</li>
+                        <li><strong>Priority Inversion:</strong> A low priority task holds a lock needed by a high priority task, but a medium priority task preempts the low one, blocking the high priority task forever. Fix: Priority Inheritance.</li>
+                        <li><strong>Thrashing:</strong> CPU utilization drops to 0% because processes spend all their time swapping pages to disk instead of executing.</li>
+                    </ul>
+                </div>
+                <div class="cheat-card">
+                    <h4>System Calls &amp; Interrupts</h4>
+                    <p>A <strong>system call</strong> transitions the CPU from user mode to kernel mode via a software interrupt (trap). It provides controlled access to protected OS services. An <strong>interrupt vector</strong> table routes execution to the correct handler routine in memory.</p>
+                    <p><em>Example:</em> <code>fork()</code> triggering a <code>0x80</code> instruction in x86 architectures.</p>
+                </div>
+                
+                <div class="cheat-card">
+                    <h4>Dual-Mode Operation</h4>
+                    <p>Hardware support ensures isolation. Mode bit (0=Kernel, 1=User) prevents user code from executing privileged instructions (e.g., halting CPU, memory mapping). Timer interrupts forcibly return control to the OS.</p>
+                    <p><em>Example:</em> A user program trying to execute a <code>CLI</code> (clear interrupts) instruction triggers a protection fault.</p>
+                    <div class="exam-trap"><strong>Examiner Trap:</strong> Distinguish between a hardware interrupt (asynchronous external signal) and a trap (synchronous software-generated exception).</div>
+                </div>
+                
+                <div class="cheat-card">
+                    <h4>OS Kernel Architectures</h4>
+                    <p><strong>Monolithic:</strong> Entire OS runs in kernel space (Linux). High throughput, but bugs crash the system. <strong>Microkernel:</strong> Only bare essentials (IPC, basic scheduling) run in kernel space; rest in user space (Mach, QNX). Highly resilient but IPC overhead limits speed.</p>
+                    <p><em>Example:</em> Linux kernel panics due to a faulty GPU driver, whereas QNX just restarts the driver service.</p>
+                    <div class="pro-tip"><strong>Pro-Tip:</strong> Hybrid kernels (Windows NT, macOS XNU) dynamically load modules into a monolithic core, combining both approaches.</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="unit-section" id="unit2">
+            <h3>Unit II: Process Management &amp; Threads <span class="badge unit-1">CO2</span></h3>
+            <div class="cheat-grid">
+                <div class="cheat-card">
+                    <h4>Process State Transitions</h4>
+                    <p>Processes migrate through queues. <strong>Context Switching</strong> saves the current Process Control Block (PCB) and loads the next. It is pure overhead where no useful computation occurs.</p>
+                    <p><em>Example:</em> Process waits on <code>read()</code>, moving from Running to Blocked state.</p>
+                    <div class="compact-svg">
+                        <div class="mermaid">
+                        stateDiagram-v2
+                            New --> Ready: Admitted
+                            Ready --> Running: Dispatched
+                            Running --> Ready: Interrupt/Preempt
+                            Running --> Blocked: I/O Request
+                            Blocked --> Ready: I/O Complete
+                            Running --> Terminated: Exit
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cheat-card">
+                    <h4>CPU Scheduling Tactics</h4>
+                    <p><strong>SJF (Shortest Job First):</strong> Provably optimal for average waiting time, but risks starvation. <strong>Round Robin (RR):</strong> Time-slices (quanta) prevent starvation; heavily relies on quantum length tuning.</p>
+                    <p><em>Example:</em> A 10ms quantum in RR perfectly balances responsiveness for interactive tasks against context-switching overhead.</p>
+                    <div class="exam-trap"><strong>Examiner Trap:</strong> Non-preemptive SJF vs. Preemptive SRTF (Shortest Remaining Time First). SRTF recalculates burst times dynamically.</div>
+                </div>
+                
+                <div class="cheat-card">
+                    <h4>Multithreading Models</h4>
+                    <p><strong>Many-to-One:</strong> Thread library maps multiple user threads to one kernel thread. Fast but blocks the entire process if one thread blocks. <strong>One-to-One:</strong> Direct mapping (Linux, Windows). High concurrency but high kernel overhead.</p>
+                    <p><em>Example:</em> A Web server using One-to-One threading can still serve requests if one thread blocks on disk I/O.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="unit-section" id="unit3">
+            <h3>Unit III: Concurrency &amp; Deadlocks <span class="badge unit-1">CO3</span></h3>
+            <div class="cheat-grid">
+                <div class="cheat-card">
+                    <h4>Critical Section &amp; Semaphores</h4>
+                    <p>A critical section requires <em>Mutual Exclusion, Progress, and Bounded Waiting</em>. <strong>Semaphores</strong> are integer variables accessed via atomic <code>wait(P)</code> and <code>signal(V)</code> operations to orchestrate access.</p>
+                    <p><em>Example:</em> Using a counting semaphore initialized to 5 to restrict maximum concurrent database connections.</p>
+                    <div class="exam-trap"><strong>Examiner Trap:</strong> A Mutex is NOT just a binary semaphore. Mutexes have ownership; only the locking thread can unlock. Semaphores can be signaled by any thread.</div>
+                </div>
+            
+                <div class="cheat-card">
+                    <h4>Priority Inversion &amp; Inheritance</h4>
+                    <p>Occurs when a lower-priority task holds a lock needed by a higher-priority task, while a medium-priority task preempts the low one, effectively starving the high-priority task. <strong>Priority Inheritance Protocol (PIP)</strong> temporarily boosts the lower task's priority.</p>
+                    <p><em>Example:</em> The Mars Pathfinder rover resetting due to priority inversion on the data bus mutex.</p>
+                </div>
+            
+                <div class="cheat-card">
+                    <h4>Deadlock Characterization</h4>
+                    <p>Requires four simultaneous conditions: Mutual Exclusion, Hold &amp; Wait, No Preemption, Circular Wait. <strong>Banker's Algorithm</strong> statically analyzes max resource claims to ensure the system remains in a "safe state".</p>
+                    <p><em>Example:</em> A safe sequence <code>&lt;P1, P3, P2&gt;</code> guarantees all processes can finish without deadlocking.</p>
+                    <div class="compact-svg">
+                        <div class="mermaid">
+                        graph LR
+                            P1((Process 1)) --&gt;|Requests| R1[Resource A]
+                            R1 --&gt;|Assigned to| P2((Process 2))
+                            P2 --&gt;|Requests| R2[Resource B]
+                            R2 --&gt;|Assigned to| P1
+                        </div>
+                    </div>
+                    <div class="pro-tip"><strong>Pro-Tip:</strong> The <em>Ostrich Algorithm</em> (ignoring deadlocks entirely) is actively used by Linux/Windows due to the high overhead of continuous prevention.</div>
+                </div>
+            </div>
+        </div>
 
-<div class="unit-section" id="unit2">
-<h3>Unit II: Core Mechanics <span class="badge unit-1">CO2</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Dual-Mode Operation</h4>
-<table>
-<tr><th>Mode</th><th>Bit</th><th>Access</th></tr>
-<tr><td>Kernel</td><td>0</td><td>Full hardware &amp; instructions</td></tr>
-<tr><td>User</td><td>1</td><td>Restricted access</td></tr>
-</table>
-<p><em>Timer Interrupts</em> prevent user programs from hogging CPU.</p>
-</div><div class="cheat-card">
-<h4>Scheduling Metrics</h4>
-<ul>
-<li><strong>Arrival Time (AT):</strong> When process enters Ready.</li>
-<li><strong>Burst Time (BT):</strong> CPU time needed.</li>
-<li><strong>Completion Time (CT):</strong> When process finishes.</li>
-<li><strong>TAT:</strong> CT - AT</li>
-<li><strong>WT:</strong> TAT - BT</li>
-</ul>
-</div><div class="cheat-card">
-<h4>Memory Management</h4>
-<ul>
-<li><strong>Paging:</strong> Fixed-size blocks (Pages/Frames). No external fragmentation.</li>
-<li><strong>Segmentation:</strong> Variable-size logical segments (Code, Data). External fragmentation possible.</li>
-<li><strong>TLB:</strong> Hardware cache for Page Table entries.</li>
-</ul>
-</div></div>
-</div>
+        <div class="unit-section" id="unit4">
+            <h3>Unit IV: Memory Management <span class="badge unit-1">CO4</span></h3>
+            <div class="cheat-grid">
+                <div class="cheat-card">
+                    <h4>Paging &amp; Translation Lookaside Buffer</h4>
+                    <p>Memory is divided into fixed-size frames (physical) and pages (logical), eliminating external fragmentation. The <strong>TLB</strong> is a fast associative cache mapping virtual pages to physical frames, drastically reducing the latency of a two-step memory access.</p>
+                    <p><em>Example:</em> A TLB hit allows direct memory access; a miss requires traversing the hierarchical page table in main memory.</p>
+                    <div class="exam-trap"><strong>Examiner Trap:</strong> Internal fragmentation is still possible in paging if a process doesn't exactly fill its final allocated frame.</div>
+                </div>
+            
+                <div class="cheat-card">
+                    <h4>Virtual Memory &amp; Demand Paging</h4>
+                    <p>Creates an illusion of continuous memory exceeding physical RAM. Pages are lazily loaded on a <strong>Page Fault</strong>. If RAM is full, a victim page is swapped to disk.</p>
+                    <p><em>Example:</em> Opening a 10GB video file on a machine with 4GB RAM by mapping only the active chunks.</p>
+                </div>
+            
+                <div class="cheat-card">
+                    <h4>Thrashing &amp; Belady's Anomaly</h4>
+                    <p><strong>Thrashing</strong> happens when the system spends more time swapping pages than executing code. Cured by adjusting the Working Set. <strong>Belady's Anomaly</strong> is a counterintuitive phenomenon where adding more frames <em>increases</em> page faults.</p>
+                    <p><em>Example:</em> FIFO replacement suffering Belady's Anomaly on the reference string <code>1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5</code>.</p>
+                </div>
+            </div>
+        </div>
 
-<div class="unit-section" id="unit3">
-<h3>Unit III: Advanced Concepts <span class="badge unit-1">CO3</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>OS Architectures</h4>
-<ul>
-<li><strong>Monolithic:</strong> High performance, hard to maintain (e.g., Early Linux).</li>
-<li><strong>Microkernel:</strong> Highly stable/secure, slow due to IPC (e.g., Mach).</li>
-<li><strong>Module-Based (Hybrid):</strong> Best of both; dynamic modules (Modern Linux).</li>
-</ul>
-</div><div class="cheat-card">
-<h4>Scheduling Algorithms</h4>
-<table>
-<tr><th>Algo</th><th>Type</th><th>Pros/Cons</th></tr>
-<tr><td>FCFS</td><td>Non-Preemp</td><td>Simple / Convoy Effect</td></tr>
-<tr><td>SJF</td><td>Non-Preemp</td><td>Min Avg WT / Starvation</td></tr>
-<tr><td>SRTF</td><td>Preemptive</td><td>Min WT / Overhead</td></tr>
-<tr><td>RR</td><td>Preemptive</td><td>Fairness / Time Quantum</td></tr>
-</table>
-</div><div class="cheat-card">
-<h4>Page Replacement Algos</h4>
-<table>
-<tr><th>Algo</th><th>Logic</th><th>Issue</th></tr>
-<tr><td>FIFO</td><td>Oldest replaced</td><td>Belady's Anomaly</td></tr>
-<tr><td>LRU</td><td>Least recently used replaced</td><td>High hardware cost</td></tr>
-<tr><td>Optimal</td><td>Replace used furthest in future</td><td>Hard to predict</td></tr>
-</table>
-</div></div>
-</div>
-
-<div class="unit-section" id="unit4">
-<h3>Unit IV: Design Patterns &amp; Architectures <span class="badge unit-1">CO4</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Process Life Cycle</h4>
-<div class="compact-svg">
-<svg viewbox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<marker id="arrow" markerheight="6" markerwidth="6" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path></marker>
-</defs>
-<rect fill="var(--card-bg)" height="40" rx="20" stroke="currentColor" stroke-width="2" width="80" x="20" y="80"></rect>
-<text fill="currentColor" text-anchor="middle" x="60" y="105">New</text>
-<rect fill="var(--card-bg)" height="40" rx="20" stroke="currentColor" stroke-width="2" width="80" x="150" y="80"></rect>
-<text fill="currentColor" text-anchor="middle" x="190" y="105">Ready</text>
-<rect fill="var(--card-bg)" height="40" rx="20" stroke="currentColor" stroke-width="2" width="80" x="300" y="80"></rect>
-<text fill="currentColor" text-anchor="middle" x="340" y="105">Running</text>
-<rect fill="var(--card-bg)" height="40" rx="20" stroke="currentColor" stroke-width="2" width="80" x="225" y="150"></rect>
-<text fill="currentColor" text-anchor="middle" x="265" y="175">Waiting</text>
-<rect fill="var(--card-bg)" height="40" rx="20" stroke="currentColor" stroke-width="2" width="100" x="450" y="80"></rect>
-<text fill="currentColor" text-anchor="middle" x="500" y="105">Terminated</text>
-<line marker-end="url(#arrow)" stroke="currentColor" stroke-width="2" x1="100" x2="140" y1="100" y2="100"></line>
-<line marker-end="url(#arrow)" stroke="currentColor" stroke-width="2" x1="230" x2="290" y1="90" y2="90"></line>
-<line marker-end="url(#arrow)" stroke="currentColor" stroke-width="2" x1="290" x2="230" y1="110" y2="110"></line>
-<line marker-end="url(#arrow)" stroke="currentColor" stroke-width="2" x1="380" x2="440" y1="100" y2="100"></line>
-<line marker-end="url(#arrow)" stroke="currentColor" stroke-width="2" x1="340" x2="285" y1="120" y2="150"></line>
-<line marker-end="url(#arrow)" stroke="currentColor" stroke-width="2" x1="225" x2="190" y1="150" y2="120"></line>
-</svg>
-</div>
-</div><div class="cheat-card">
-<h4>Threads</h4>
-<table>
-<tr><th>User Threads</th><th>Kernel Threads</th></tr>
-<tr><td>Managed by User Lib</td><td>Managed by OS Kernel</td></tr>
-<tr><td>OS unaware</td><td>OS aware</td></tr>
-<tr><td>Fast context switch</td><td>Slower context switch</td></tr>
-<tr><td>Blocks entire process</td><td>Others can run if blocked</td></tr>
-</table>
-</div><div class="cheat-card">
-<h4>Virtual Memory &amp; Thrashing</h4>
-<p><strong>Virtual Memory:</strong> Allows execution of processes not completely in RAM. Uses Swap space on disk.</p>
-<p><strong>Thrashing:</strong> System spends more time paging than executing due to high page fault rate.</p>
-</div></div>
-</div>
-
-<div class="unit-section" id="unit5">
-<h3>Unit V: Modern Ecosystem <span class="badge unit-1">CO5</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>PCB &amp; Context Switch</h4>
-<p><strong>PCB Stores:</strong> State, PID, PC, Registers, Memory Limits.</p>
-<p><strong>Context Switch:</strong> Saving state of old process into its PCB &amp; loading state of new process from its PCB.</p>
-</div><div class="cheat-card">
-<h4>Deadlock Conditions (Coffman)</h4>
-<ol>
-<li><strong>Mutual Exclusion:</strong> ≥1 resource is non-shareable.</li>
-<li><strong>Hold and Wait:</strong> Holding a resource while waiting for another.</li>
-<li><strong>No Preemption:</strong> Resources can't be taken forcibly.</li>
-<li><strong>Circular Wait:</strong> A → B → C → A.</li>
-</ol>
-</div><div class="cheat-card">
-<h4>Disk Scheduling</h4>
-<ul>
-<li><strong>FCFS:</strong> Simple, poor performance.</li>
-<li><strong>SSTF:</strong> Shortest Seek Time First. Starvation possible.</li>
-<li><strong>SCAN:</strong> Elevator algo (goes to one end, reverses).</li>
-<li><strong>C-SCAN:</strong> Circular SCAN (returns to start without servicing on way back).</li>
-</ul>
-</div></div>
-</div>
-</div>
+        <div class="unit-section" id="unit5">
+            <h3>Unit V: Storage &amp; File Systems <span class="badge unit-1">CO5</span></h3>
+            <div class="cheat-grid">
+                <div class="cheat-card">
+                    <h4>Disk Scheduling Algorithms</h4>
+                    <p>Minimizing head movement (seek time) is critical. <strong>SSTF</strong> picks the closest request but starves distant ones. <strong>C-SCAN (Circular Elevator)</strong> moves the head continuously from inner to outer tracks, providing uniform wait times.</p>
+                    <p><em>Example:</em> C-SCAN servicing cylinders in the sequence: <code>10, 30, 90, 150, 199, 0, 5</code>.</p>
+                </div>
+            
+                <div class="cheat-card">
+                    <h4>File System Structures (Inodes)</h4>
+                    <p>Unix <strong>Inodes</strong> separate metadata (permissions, sizes, timestamps) from actual data blocks. They use direct, single, double, and triple indirect pointers to accommodate massive files without bloating the inode table.</p>
+                    <p><em>Example:</em> A 10GB file utilizing a double-indirect pointer, traversing two pointer blocks before hitting the actual data block.</p>
+                    <div class="compact-svg">
+                        <div class="mermaid">
+                        flowchart LR
+                            Inode --&gt; Direct[Direct Blocks]
+                            Inode --&gt; Single[Single Indirect]
+                            Single --&gt; Blocks[Data Blocks]
+                            Inode --&gt; Double[Double Indirect]
+                        </div>
+                    </div>
+                    <div class="exam-trap"><strong>Examiner Trap:</strong> Inodes do NOT store the file name. The directory structure maps file names to inode numbers.</div>
+                </div>
+            
+                <div class="cheat-card">
+                    <h4>Direct Memory Access (DMA)</h4>
+                    <p>A specialized hardware controller takes over the system bus to transfer massive data blocks directly between an I/O device and RAM, bypassing the CPU to prevent cycle stealing.</p>
+                    <p><em>Example:</em> A Gigabit network card writing incoming packets directly to a buffer in RAM while the CPU continues executing a game.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <script src="../../shared/app-utils.js"></script>
@@ -369,7 +390,7 @@
                 } catch (e) {
                     console.error(e);
                     const msgs = document.getElementById('assistantMessages');
-                    msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
+                    msgs.innerHTML = '<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser\'s security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>';
                 }
             }
         }
@@ -388,7 +409,7 @@
             if (!query) return;
             if (!assistantApp) {
                 const msgs = document.getElementById('assistantMessages');
-                msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
+                msgs.innerHTML = '<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser\'s security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>';
                 return;
             }
             input.value = '';
@@ -399,4 +420,3 @@
 </body>
 
 </html>
-

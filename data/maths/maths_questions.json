@@ -5,7 +5,7 @@
         "unit": "I",
         "bloom": "L2",
         "marks": 2,
-        "important": true,
+        "important": false,
         "score": 5.5,
         "co": "CO1",
         "title": "Determine whether each of the following is a proposition. If it is a proposition, state whether it is True or False. (a) Every prime number greater than 2 is odd. (b) 7 + 8 = 16. (c) The Moon is a planet. (d) India is located in Asia.",
@@ -17,7 +17,7 @@
         "unit": "I",
         "bloom": "L2",
         "marks": 2,
-        "important": true,
+        "important": false,
         "score": 8.2,
         "co": "CO1",
         "title": "Let p: It is raining, q: I carry an umbrella. Translate the following symbolic propositions into English. (a) p \u2227 q (b) p \u2228 q",
@@ -53,7 +53,7 @@
         "unit": "I",
         "bloom": "L3",
         "marks": 2,
-        "important": true,
+        "important": false,
         "score": 6.6,
         "co": "CO1",
         "title": "Show the compound proposition (p \u2194 q) \u2261 (p \u2192 q) \u2227 (q \u2192 p) is logically equivalent.",
@@ -65,7 +65,7 @@
         "unit": "I",
         "bloom": "L2",
         "marks": 2,
-        "important": false,
+        "important": true,
         "score": 9.3,
         "co": "CO1",
         "title": "Let p: It is raining, q: I carry an umbrella, r: I wear a raincoat. Write the following statements in symbolic form. (a) It is raining and I carry an umbrella. (b) It is not raining but I wear a raincoat.",
@@ -113,7 +113,7 @@
         "unit": "I",
         "bloom": "L3",
         "marks": 2,
-        "important": true,
+        "important": false,
         "score": 7.8,
         "co": "CO1",
         "title": "Construct the truth table of the following: (a) (p \u2192 q) (b) (\u00acp \u2228 q).",
@@ -137,7 +137,7 @@
         "unit": "I",
         "bloom": "L2",
         "marks": 3,
-        "important": false,
+        "important": true,
         "score": 9.6,
         "co": "CO1",
         "title": "Let p, q, r be as above. Translate the following symbolic propositions into English (a) (p \u2227 q) \u2192 r (b) (p \u2228 q) \u2227 \u00acr",
@@ -161,7 +161,7 @@
         "unit": "I",
         "bloom": "L3",
         "marks": 3,
-        "important": true,
+        "important": false,
         "score": 8.0,
         "co": "CO1",
         "title": "Let p and q be the propositions \u201cThe election is decided\u201d and \u201cThe votes have been counted,\u201d respectively. Express each of these compound propositions as an English sentence. (a) \u00acq \u2192 \u00acp (b) \u00acp \u2192 \u00acq (c) \u00acq \u2228 (\u00acp \u2227 q)",
@@ -197,7 +197,7 @@
         "unit": "I",
         "bloom": "L3",
         "marks": 3,
-        "important": true,
+        "important": false,
         "score": 7.2,
         "co": "CO1",
         "title": "Construct a truth table for each of the following compound propositions. (a) (p \u2192 q) \u2194 (\u00acq \u2192 \u00acp) (b) (p \u2192 q) \u2192 (q \u2192 p)",
@@ -233,7 +233,7 @@
         "unit": "I",
         "bloom": "L3",
         "marks": 3,
-        "important": true,
+        "important": false,
         "score": 6.9,
         "co": "CO1",
         "title": "Using truth tables, prove the following (a) (p \u2227 q) \u2228 (\u00acp \u2227 q) \u2261 q (b) (p \u2228 q) \u2227 (p \u2228 \u00acq) \u2261 p",
@@ -269,7 +269,7 @@
         "unit": "I",
         "bloom": "L3",
         "marks": 5,
-        "important": false,
+        "important": true,
         "score": 9.5,
         "co": "CO1",
         "title": "Construct a truth table for each of the following compound propositions. (a) (p \u2194 q) \u2295 (\u00acp \u2194 \u00acr) (b) (\u00acp \u2194 \u00acq) \u2194 (q \u2194 r)",
@@ -293,7 +293,7 @@
         "unit": "I",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 5.2,
         "co": "CO1",
         "title": "State the converse, contrapositive, and inverse of each of these conditional statements. (a) If it snows tonight, then I will stay at home. (b) I go to the beach whenever it is a sunny summer day.",
@@ -329,7 +329,7 @@
         "unit": "I",
         "bloom": "L3",
         "marks": 5,
-        "important": false,
+        "important": true,
         "score": 9.2,
         "co": "CO1",
         "title": "Determine whether each of these conditional statements is true or false. (a) If 1 + 1 = 2, then 2 + 2 = 5. (b) If 1 + 1 = 3, then 2 + 2 = 4. (c) If 1 + 1 = 3, then 2 + 2 = 5. (d) If monkeys can fly, then 1 + 1 = 3. (e) If 1 + 1 = 2, then dogs can fly",
@@ -341,7 +341,7 @@
         "unit": "I",
         "bloom": "L3",
         "marks": 5,
-        "important": true,
+        "important": false,
         "score": 8.6,
         "co": "CO1",
         "title": "Express these system specifications using the propositions p \u201cThe user enters a valid password,\u201d q \u201cAccess is granted,\u201d and r \u201cThe user has paid the subscription fee\u201d and logical connectives (including negations). (a) \u201cThe user has paid the subscription fee, but does not enter a valid password.\u201d (b) \u201cAccess is granted whenever the user has paid the subscription fee and enters a valid password.\u201d",
@@ -404,7 +404,7 @@
         "co": "CO2",
         "title": "Find a2 and a3 terms of the following recurrence relation a_n = a_{n-1}^2 if a_1 = 2.",
         "answer_html": "<p>Given <code>a<sub>1</sub> = 2</code>.</p><p><code>a<sub>2</sub> = a<sub>1</sub><sup>2</sup> = 2<sup>2</sup> = 4</code>.</p><p><code>a<sub>3</sub> = a<sub>2</sub><sup>2</sup> = 4<sup>2</sup> = 16</code>.</p>",
-        "important": false,
+        "important": true,
         "score": 9.6
     },
     {
@@ -452,7 +452,7 @@
         "co": "CO2",
         "title": "Find the generating function for the sequence: 1,2,3,4, ...",
         "answer_html": "<p>The generating function for the constant sequence 1, 1, 1, ... is <code>1 / (1-x)</code>.</p><p>Differentiating with respect to x gives the sequence 1, 2, 3, ..., so the generating function is <strong><code>1 / (1-x)<sup>2</sup></code></strong>.</p>",
-        "important": true,
+        "important": false,
         "score": 6.7
     },
     {
@@ -464,7 +464,7 @@
         "co": "CO2",
         "title": "Solve the following recurrence relation: a_n = 4a_{n-1} - a_{n-2}",
         "answer_html": "<p>The characteristic equation is <code>r^2 - 4r + 1 = 0</code>.</p><p>Using the quadratic formula, the roots are <code>r = (4 &plusmn; &radic;12) / 2 = 2 &plusmn; &radic;3</code>.</p><p>The solution is <strong>a<sub>n</sub> = c<sub>1</sub>(2 + &radic;3)<sup>n</sup> + c<sub>2</sub>(2 - &radic;3)<sup>n</sup></strong>.</p>",
-        "important": true,
+        "important": false,
         "score": 7.2
     },
     {
@@ -512,7 +512,7 @@
         "co": "CO2",
         "title": "Solve the following recurrence relation: a_n = 10a_{n-1} - 25a_{n-2}, a_0 = 3, a_1 = 25",
         "answer_html": "<p>Characteristic equation: <code>r^2 - 10r + 25 = 0 &rArr; (r - 5)^2 = 0</code>, so <code>r = 5</code> (repeated).</p><p>General solution: <code>a<sub>n</sub> = (c<sub>1</sub> + c<sub>2</sub>n)5<sup>n</sup></code>.</p><p>For <code>n=0</code>: <code>3 = c<sub>1</sub></code>.</p><p>For <code>n=1</code>: <code>25 = (3 + c<sub>2</sub>) &times; 5 &rArr; 3 + c<sub>2</sub> = 5 &rArr; c<sub>2</sub> = 2</code>.</p><p>Solution: <strong>a<sub>n</sub> = (3 + 2n)5<sup>n</sup></strong>.</p>",
-        "important": false,
+        "important": true,
         "score": 9.2
     },
     {
@@ -548,7 +548,7 @@
         "co": "CO2",
         "title": "How many different 4-letter words can be formed using the letters of the word MATH, when each letter can be used only once?",
         "answer_html": "<p>The word MATH has 4 distinct letters.</p><p>The number of 4-letter words that can be formed is the number of permutations of 4 letters, which is <code>4! = 4 &times; 3 &times; 2 &times; 1 = 24</code>.</p>",
-        "important": false,
+        "important": true,
         "score": 9.2
     },
     {
@@ -560,7 +560,7 @@
         "co": "CO2",
         "title": "Solve the following recurrence relation: a_n = 6a_{n-1} - 9a_{n-2}, a_0 = 1, a_1 = 9",
         "answer_html": "<p>Characteristic equation: <code>r^2 - 6r + 9 = 0 &rArr; (r - 3)^2 = 0</code>. Root: <code>r = 3</code> (repeated).</p><p>General solution: <code>a<sub>n</sub> = (c<sub>1</sub> + c<sub>2</sub>n)3<sup>n</sup></code>.</p><p>For <code>n=0</code>: <code>c<sub>1</sub> = 1</code>.</p><p>For <code>n=1</code>: <code>(1 + c<sub>2</sub>)3 = 9 &rArr; 1 + c<sub>2</sub> = 3 &rArr; c<sub>2</sub> = 2</code>.</p><p>Solution: <strong>a<sub>n</sub> = (1 + 2n)3<sup>n</sup></strong>.</p>",
-        "important": true,
+        "important": false,
         "score": 8.2
     },
     {
@@ -572,7 +572,7 @@
         "co": "CO2",
         "title": "Solve the following recurrence relation: a_n - 4a_{n-1} + 5a_{n-2} - 2a_{n-3} = 0 given a_0 = 1, a_1 = 3, a_2 = 8",
         "answer_html": "<p>Characteristic equation: <code>r^3 - 4r^2 + 5r - 2 = 0</code>.</p><p>Factoring gives <code>(r - 1)^2(r - 2) = 0</code>, so roots are <code>r = 1, 1, 2</code>.</p><p>General solution: <code>a<sub>n</sub> = c<sub>1</sub> + c<sub>2</sub>n + c<sub>3</sub>2<sup>n</sup></code>.</p><p>From conditions:<br><code>c<sub>1</sub> + c<sub>3</sub> = 1</code><br><code>c<sub>1</sub> + c<sub>2</sub> + 2c<sub>3</sub> = 3</code><br><code>c<sub>1</sub> + 2c<sub>2</sub> + 4c<sub>3</sub> = 8</code>.</p><p>Solving yields <code>c<sub>1</sub> = -2, c<sub>2</sub> = -1, c<sub>3</sub> = 3</code>.</p><p>Solution: <strong>a<sub>n</sub> = -2 - n + 3(2<sup>n</sup>)</strong>.</p>",
-        "important": true,
+        "important": false,
         "score": 9.2
     },
     {
@@ -596,7 +596,7 @@
         "co": "CO2",
         "title": "Solve the following recurrence relation by using generating function: a_n = 3a_{n-1} + 2a_{n-2} given a_0 = 1, a_1 = 3",
         "answer_html": "<p>Let G(x) be the generating function. Multiply by x^n and sum:<br><code>G(x) - 1 - 3x = 3x(G(x) - 1) + 2x^2 G(x)</code>.</p><p><code>G(x)(1 - 3x - 2x^2) = 1</code> &rArr; <code>G(x) = 1 / (1 - 3x - 2x^2)</code>.</p><p>Let the roots of <code>1 - 3x - 2x^2 = 0</code> be finding roots of <code>r^2 - 3r - 2 = 0</code>, <code>r = (3 &plusmn; &radic;17)/2</code>.</p><p>The sequence is given by expanding via partial fractions, resulting in <strong>a<sub>n</sub> = c<sub>1</sub>((3 + &radic;17)/2)<sup>n</sup> + c<sub>2</sub>((3 - &radic;17)/2)<sup>n</sup></strong> where constants are found from initial conditions.</p>",
-        "important": true,
+        "important": false,
         "score": 7.4
     },
     {
@@ -620,7 +620,7 @@
         "co": "CO2",
         "title": "Solve the following recurrence relation by using generating function: a_n = 3a_{n-1} - 2a_{n-2} given a_0 = 2, a_1 = 5",
         "answer_html": "<p>Let G(x) be the generating function. <code>G(x) - 2 - 5x = 3x(G(x) - 2) - 2x^2 G(x)</code>.</p><p><code>G(x)(1 - 3x + 2x^2) = 2 - x</code> &rArr; <code>G(x) = (2 - x) / ((1 - x)(1 - 2x))</code>.</p><p>Using partial fractions: <code>(2 - x) / ((1 - x)(1 - 2x)) = A / (1 - x) + B / (1 - 2x)</code>.</p><p>Solving gives <code>A = -1</code> and <code>B = 3</code>. Thus, <code>G(x) = -1/(1 - x) + 3/(1 - 2x)</code>.</p><p>Solution: <strong>a<sub>n</sub> = 3(2<sup>n</sup>) - 1</strong>.</p>",
-        "important": true,
+        "important": false,
         "score": 7.2
     },
     {
@@ -632,7 +632,7 @@
         "co": "CO2",
         "title": "Solve the following recurrence relation: a_{n+2} - 7a_{n+1} + 12a_n = 0, given a_1 = 2, a_2 = 7.",
         "answer_html": "<p>Characteristic equation: <code>r^2 - 7r + 12 = 0 &rArr; (r - 3)(r - 4) = 0</code>. Roots: 3, 4.</p><p>General solution: <code>a<sub>n</sub> = c<sub>1</sub>3<sup>n</sup> + c<sub>2</sub>4<sup>n</sup></code>.</p><p>Using conditions: <code>3c<sub>1</sub> + 4c<sub>2</sub> = 2</code> and <code>9c<sub>1</sub> + 16c<sub>2</sub> = 7</code>.</p><p>Multiply first by 4: <code>12c<sub>1</sub> + 16c<sub>2</sub> = 8</code>. Subtracting the second gives <code>3c<sub>1</sub> = 1 &rArr; c<sub>1</sub> = 1/3</code>.</p><p>Then <code>4c<sub>2</sub> = 2 - 1 = 1 &rArr; c<sub>2</sub> = 1/4</code>.</p><p>Solution: <strong>a<sub>n</sub> = 3<sup>n-1</sup> + 4<sup>n-1</sup></strong>.</p>",
-        "important": true,
+        "important": false,
         "score": 8.5
     },
     {
@@ -656,7 +656,7 @@
         "co": "CO2",
         "title": "Solve the following recurrence relation: a_{n+3} - 5a_{n+2} + 8a_{n+1} - 4a_n = 0, given a_1 = 2, a_2 = 5, a_3 = 14",
         "answer_html": "<p>Characteristic equation: <code>r^3 - 5r^2 + 8r - 4 = 0</code>. Roots: <code>1, 2, 2</code>.</p><p>General solution: <code>a<sub>n</sub> = c<sub>1</sub> + (c<sub>2</sub> + c<sub>3</sub>n)2<sup>n</sup></code>.</p><p>Solving with conditions gives <code>c<sub>1</sub> = 5, c<sub>2</sub> = -3, c<sub>3</sub> = 1.5</code>.</p><p>Solution: <strong>a<sub>n</sub> = 5 + (-3 + 1.5n)2<sup>n</sup></strong>.</p>",
-        "important": true,
+        "important": false,
         "score": 6.2
     },
     {
@@ -680,7 +680,7 @@
         "co": "CO2",
         "title": "Solve the following recurrence relation by using generating function: a_n = 2a_{n-1} + 3a_{n-2} given a_0 = 1, a_1 = 2",
         "answer_html": "<p>Let G(x) be the generating function. <code>G(x) - 1 - 2x = 2x(G(x) - 1) + 3x^2 G(x)</code>.</p><p><code>G(x)(1 - 2x - 3x^2) = 1</code> &rArr; <code>G(x) = 1 / ((1 - 3x)(1 + x))</code>.</p><p>Using partial fractions: <code>1 / ((1 - 3x)(1 + x)) = A / (1 - 3x) + B / (1 + x)</code> gives <code>A = 3/4</code>, <code>B = 1/4</code>.</p><p>Solution: <strong>a<sub>n</sub> = (3/4)3<sup>n</sup> + (1/4)(-1)<sup>n</sup></strong>.</p>",
-        "important": true,
+        "important": false,
         "score": 5.8
     },
     {
@@ -692,7 +692,7 @@
         "co": "CO2",
         "title": "Solve the following recurrence relation: a_{n+3} - 5a_{n+2} + 8a_{n+1} - 4a_n = 0 given a_1 = 1, a_2 = 4, a_3 = 11",
         "answer_html": "<p>Characteristic equation: <code>r^3 - 5r^2 + 8r - 4 = 0</code>. Roots: <code>1, 2, 2</code>.</p><p>General solution: <code>a<sub>n</sub> = c<sub>1</sub> + (c<sub>2</sub> + c<sub>3</sub>n)2<sup>n</sup></code>.</p><p>Applying conditions <code>a<sub>1</sub> = 1, a<sub>2</sub> = 4, a<sub>3</sub> = 11</code> allows us to solve for constants <code>c<sub>1</sub>, c<sub>2</sub>, c<sub>3</sub></code>.</p>",
-        "important": true,
+        "important": false,
         "score": 8.5
     },
     {
@@ -704,7 +704,7 @@
         "co": "CO2",
         "title": "Solve the following recurrence relation: a_n = 8a_{n-1} - 21a_{n-2} + 18a_{n-3}, subject to a_0 = 1, a_1 = 5, a_2 = 19.",
         "answer_html": "<p>Characteristic equation: <code>r^3 - 8r^2 + 21r - 18 = 0</code>. Roots: <code>2, 3, 3</code>.</p><p>General solution: <code>a<sub>n</sub> = c<sub>1</sub>2<sup>n</sup> + (c<sub>2</sub> + c<sub>3</sub>n)3<sup>n</sup></code>.</p><p>Conditions: <code>c<sub>1</sub> + c<sub>2</sub> = 1</code>, <code>2c<sub>1</sub> + 3(c<sub>2</sub> + c<sub>3</sub>) = 5</code>, <code>4c<sub>1</sub> + 9(c<sub>2</sub> + 2c<sub>3</sub>) = 19</code>. Solving gives constants <code>c<sub>1</sub>, c<sub>2</sub>, c<sub>3</sub></code>.</p>",
-        "important": true,
+        "important": false,
         "score": 6.1
     },
     {
@@ -716,7 +716,7 @@
         "co": "CO2",
         "title": "Solve the following recurrence relation by using generating function: a_n = a_{n-1} + a_{n-2} given a_0 = 0, a_1 = 1",
         "answer_html": "<p>This is the Fibonacci sequence.</p><p>Let G(x) be the generating function. <code>G(x) - x = x G(x) + x^2 G(x)</code>.</p><p><code>G(x)(1 - x - x^2) = x</code> &rArr; <code>G(x) = x / (1 - x - x^2)</code>.</p><p>Using partial fractions with roots of <code>1 - x - x^2 = 0</code>, we get Binet's formula: <strong>a<sub>n</sub> = (1/&radic;5) [ ((1+&radic;5)/2)<sup>n</sup> - ((1-&radic;5)/2)<sup>n</sup> ]</strong>.</p>",
-        "important": true,
+        "important": false,
         "score": 6.7
     },
     {
@@ -725,7 +725,7 @@
         "unit": "III",
         "bloom": "L1",
         "marks": 2,
-        "important": true,
+        "important": false,
         "score": 5.4,
         "co": "CO3",
         "title": "Define the following terms with graphs: (i) Complete Bipartite Graph (ii) Complete graph",
@@ -749,7 +749,7 @@
         "unit": "III",
         "bloom": "L2",
         "marks": 2,
-        "important": true,
+        "important": false,
         "score": 6.9,
         "co": "CO3",
         "title": "Find degree of the following graph.",
@@ -761,7 +761,7 @@
         "unit": "III",
         "bloom": "L1",
         "marks": 2,
-        "important": true,
+        "important": false,
         "score": 5.5,
         "co": "CO3",
         "title": "State the Handshaking Theorem.",
@@ -773,7 +773,7 @@
         "unit": "III",
         "bloom": "L2",
         "marks": 2,
-        "important": true,
+        "important": false,
         "score": 8.1,
         "co": "CO3",
         "title": "Determine the types of following graphs.",

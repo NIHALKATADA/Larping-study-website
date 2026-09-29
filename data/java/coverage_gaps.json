@@ -1,0 +1,430 @@
+[
+  {
+    "id": "q31",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.0,
+    "missing_terms": [
+      "top-down",
+      "bottom-up",
+      "approaches",
+      "suitable"
+    ],
+    "title": "Explain the Top-Down and Bottom-Up approaches with a suitable example."
+  },
+  {
+    "id": "q36",
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.0,
+    "missing_terms": [
+      "built-in",
+      "user-defined",
+      "packages",
+      "suitable",
+      "purpose",
+      "import"
+    ],
+    "title": "Explain built-in and user-defined packages with suitable examples. Also explain the purpose of the import statement."
+  },
+  {
+    "id": "q40",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.0,
+    "missing_terms": [
+      "one-dimensional",
+      "two-dimensional",
+      "arrays",
+      "while",
+      "do-while",
+      "loops"
+    ],
+    "title": "Explain one-dimensional and two-dimensional arrays, and differentiate between for, while, and do-while loops."
+  },
+  {
+    "id": "q28",
+    "unit": "III",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.0,
+    "missing_terms": [
+      "purpose",
+      "instanceof",
+      "operator"
+    ],
+    "title": "What is the purpose of the instanceof operator?"
+  },
+  {
+    "id": "q35",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.11,
+    "missing_terms": [
+      "identifiers",
+      "naming",
+      "rules",
+      "comments",
+      "importance",
+      "proper",
+      "coding",
+      "conventions"
+    ],
+    "title": "Explain Java identifiers, naming rules, comments, and the importance of proper coding conventions."
+  },
+  {
+    "id": "q65",
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.17,
+    "missing_terms": [
+      "packages",
+      "access",
+      "modifiers",
+      "suitable",
+      "program",
+      "demonstrating",
+      "private",
+      "protected"
+    ],
+    "title": "Explain Java packages and access modifiers. Write a suitable program demonstrating private, default, protected, and public members."
+  },
+  {
+    "id": "q51",
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.17,
+    "missing_terms": [
+      "multilevel",
+      "hierarchical",
+      "hybrid",
+      "inheritance",
+      "suitable"
+    ],
+    "title": "Explain single, multilevel, hierarchical, and hybrid inheritance with suitable examples."
+  },
+  {
+    "id": "q57",
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.17,
+    "missing_terms": [
+      "instanceof",
+      "operator",
+      "importance",
+      "performing",
+      "downcasting"
+    ],
+    "title": "Explain the instanceof operator and its importance before performing downcasting."
+  },
+  {
+    "id": "q37",
+    "unit": "II",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.2,
+    "missing_terms": [
+      "access",
+      "modifiers",
+      "respect",
+      "accessibility"
+    ],
+    "title": "Explain the four access modifiers in Java with respect to their accessibility."
+  },
+  {
+    "id": "q13",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.2,
+    "missing_terms": [
+      "difference",
+      "variable",
+      "local",
+      "differences"
+    ],
+    "title": "What is the difference between an instance variable and a local variable? State any two differences."
+  },
+  {
+    "id": "q90",
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.21,
+    "missing_terms": [
+      "program",
+      "add",
+      "access",
+      "remove",
+      "search",
+      "count",
+      "elements",
+      "built-in"
+    ],
+    "title": "Write a Java program using ArrayList<String> to add, display, access, remove, search, and count elements. Also explain built-in and user-def"
+  },
+  {
+    "id": "q66",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.22,
+    "missing_terms": [
+      "arrays",
+      "operators",
+      "suitable",
+      "evaluate",
+      "expression",
+      "operator",
+      "precedence"
+    ],
+    "title": "Explain Java data types, arrays, and operators with suitable examples. Evaluate the expression 5 + 3 * 2 % 4 using operator precedence."
+  },
+  {
+    "id": "q68",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.25,
+    "missing_terms": [
+      "program",
+      "loops",
+      "calculate",
+      "average",
+      "marks",
+      "students"
+    ],
+    "title": "Write a Java program using an array and loops to calculate the average marks of five students."
+  },
+  {
+    "id": "q59",
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.25,
+    "missing_terms": [
+      "advantages",
+      "parameters",
+      "represent"
+    ],
+    "title": "Explain generics and their advantages. What do the type parameters T, E, K, and V represent?"
+  },
+  {
+    "id": "q5",
+    "unit": "II",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.25,
+    "missing_terms": [
+      "encapsulation",
+      "abstraction",
+      "inheritance"
+    ],
+    "title": "Define encapsulation, abstraction, inheritance, and polymorphism."
+  },
+  {
+    "id": "q6",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.25,
+    "missing_terms": [
+      "difference",
+      "procedural",
+      "object-oriented"
+    ],
+    "title": "What is the difference between procedural and object-oriented programming?"
+  },
+  {
+    "id": "q9",
+    "unit": "III",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.25,
+    "missing_terms": [
+      "package",
+      "commonly",
+      "packages"
+    ],
+    "title": "What is a Java package? Give two examples of commonly used packages."
+  },
+  {
+    "id": "q21",
+    "unit": "III",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.25,
+    "missing_terms": [
+      "inheritance",
+      "different",
+      "supported"
+    ],
+    "title": "Define inheritance. List the different types of inheritance supported in Java."
+  },
+  {
+    "id": "q33",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.29,
+    "missing_terms": [
+      "role",
+      "jdk",
+      "jre",
+      "executing",
+      "program"
+    ],
+    "title": "Explain the role of JDK, JRE, and JVM in executing a Java program."
+  },
+  {
+    "id": "q47",
+    "unit": "II",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.29,
+    "missing_terms": [
+      "private",
+      "protected",
+      "public",
+      "access",
+      "modifiers"
+    ],
+    "title": "Explain private, default, protected, and public access modifiers in Java."
+  },
+  {
+    "id": "q2",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L1",
+    "coverage": 0.29,
+    "missing_terms": [
+      "officially",
+      "announced",
+      "sun",
+      "microsystems",
+      "original"
+    ],
+    "title": "When was Java officially announced by Sun Microsystems, and what was its original name?"
+  },
+  {
+    "id": "q86",
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.3,
+    "missing_terms": [
+      "casting",
+      "suitable",
+      "upcasting",
+      "downcasting",
+      "demonstrate",
+      "instanceof",
+      "perform"
+    ],
+    "title": "Explain object casting in Java with suitable examples of upcasting and downcasting. Demonstrate the use of instanceof to perform safe downca"
+  },
+  {
+    "id": "q67",
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.31,
+    "missing_terms": [
+      "program",
+      "create",
+      "book",
+      "title",
+      "price",
+      "fields",
+      "different",
+      "values"
+    ],
+    "title": "Write a Java program to create a Book class with title and price fields. Create two objects with different values and display their details."
+  },
+  {
+    "id": "q32",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.33,
+    "missing_terms": [
+      "evolved",
+      "oak",
+      "mention",
+      "important"
+    ],
+    "title": "Explain how Java evolved from Oak and mention any three important features of Java."
+  },
+  {
+    "id": "q1",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L1",
+    "coverage": 0.33,
+    "missing_terms": [
+      "paradigm",
+      "paradigms",
+      "other",
+      "than"
+    ],
+    "title": "Define programming paradigm and name any two programming paradigms other than OOP."
+  },
+  {
+    "id": "q7",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.33,
+    "missing_terms": [
+      "jdk",
+      "jre"
+    ],
+    "title": "What are JDK, JRE, and JVM?"
+  },
+  {
+    "id": "q16",
+    "unit": "II",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.33,
+    "missing_terms": [
+      "chaining",
+      "keywords"
+    ],
+    "title": "What is constructor chaining? Name the two keywords used for constructor chaining."
+  },
+  {
+    "id": "q27",
+    "unit": "III",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.33,
+    "missing_terms": [
+      "upcasting",
+      "downcasting"
+    ],
+    "title": "Define upcasting and downcasting in Java."
+  },
+  {
+    "id": "q34",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.38,
+    "missing_terms": [
+      "basic",
+      "structure",
+      "program",
+      "standard",
+      "signature"
+    ],
+    "title": "Explain the basic structure of a Java program and write the standard main() method signature."
+  }
+]

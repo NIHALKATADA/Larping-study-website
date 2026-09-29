@@ -3,9 +3,21 @@ export default async function handler(req, res) {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
+    const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || '').split(',').map(s => s.trim()).filter(Boolean);
+    const origin = req.headers.origin;
+    if (ALLOWED_ORIGINS.length > 0 && !ALLOWED_ORIGINS.includes(origin)) {
+        return res.status(403).json({ error: 'Origin not allowed' });
+    }
+
     const body = req.body;
-    if (!body || !Array.isArray(body.messages)) {
+    if (!body || !Array.isArray(body.messages) || body.messages.length === 0 || body.messages.length > 20) {
         return res.status(400).json({ error: 'Missing or invalid messages array' });
+    }
+    
+    // basic limit on total size
+    const totalLength = body.messages.reduce((acc, m) => acc + (m.content ? m.content.length : 0), 0);
+    if (totalLength > 20000) {
+        return res.status(400).json({ error: 'Messages payload too large' });
     }
 
     // 1. Strictly grab the Groq API key from environment
@@ -20,7 +32,7 @@ export default async function handler(req, res) {
     }
 
     const temperature = Math.max(0, Math.min(1, Number(body.temperature) || 0.3));
-    const maxOutputTokens = Math.min(1024, Number(body.max_tokens) || 500);
+    const maxOutputTokens = Math.min(2000, Number(body.max_tokens) || 500);
 
     try {
         const controller = new AbortController();

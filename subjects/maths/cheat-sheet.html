@@ -5,6 +5,8 @@
     <title>Discrete Mathematics Cheat Sheet</title>
     <link rel="stylesheet" href="../../shared/design-system.css">
     
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 </head>
 <body>
     <div class="glow-bg"></div>
@@ -31,7 +33,7 @@
     <header class="banner">
         
         <h1>Discrete Mathematics Cheat Sheet</h1>
-        <p class="scope-note">Logic | Recurrence Relations | Graph Theory</p>
+        <p class="scope-note">Logic | Recurrence Relations | Graph Theory | Set Theory | Automata</p>
     </header>
 
     <div class="layout-wrapper" style="display: block; max-width: 1400px; margin: 0 auto; padding: 2rem;">
@@ -44,6 +46,8 @@
                 <a href="#unit1" style="color: var(--primary-teal); margin: 0 0.5rem; text-decoration: none;">Unit I</a>
                 <a href="#unit2" style="color: var(--primary-teal); margin: 0 0.5rem; text-decoration: none;">Unit II</a>
                 <a href="#unit3" style="color: var(--primary-teal); margin: 0 0.5rem; text-decoration: none;">Unit III</a>
+                <a href="#unit4" style="color: var(--primary-teal); margin: 0 0.5rem; text-decoration: none;">Unit IV</a>
+                <a href="#unit5" style="color: var(--primary-teal); margin: 0 0.5rem; text-decoration: none;">Unit V</a>
             </div>
             <div>
                 <button class="btn btn-secondary" style="visibility: hidden;">Mode: Dark</button>
@@ -68,142 +72,176 @@
         </div>
     </div>
     <div id="realContentWrapper">
-<div class="unit-section" id="unit1">
+        <div class="unit-section" id="unit1">
             <h2 style="color: var(--primary-teal); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Unit I: Propositional Logic <span class="badge unit-1">CO1</span></h2>
             <div class="cheat-grid">
                 <div class="cheat-card">
-                    <h4>Logic Operators</h4>
-                    <table>
-                        <tr><th>Name</th><th>Symbol</th><th>Meaning</th></tr>
-                        <tr><td>Conjunction</td><td>p &and; q</td><td>AND</td></tr>
-                        <tr><td>Disjunction</td><td>p &or; q</td><td>OR</td></tr>
-                        <tr><td>Negation</td><td>&not;p</td><td>NOT</td></tr>
-                        <tr><td>Implication</td><td>p &rarr; q</td><td>IF...THEN</td></tr>
-                        <tr><td>Biconditional</td><td>p &harr; q</td><td>IFF</td></tr>
-                        <tr><td>XOR</td><td>p &oplus; q</td><td>Exclusive OR</td></tr>
-                    </table>
+                    <h4>Fundamental Logic Operators</h4>
+                    <p>Connectives establish truth-functional relationships between propositions. Master implications (\(p \rightarrow q\)) and biconditionals (\(p \leftrightarrow q\)), as they form the bedrock of mathematical proofs.</p>
+                    <p><em>Example:</em> "If it rains (p), then the ground is wet (q)." \(p \rightarrow q\).</p>
                 </div>
-
                 <div class="cheat-card">
-                    <h4>Tautology & Contradiction</h4>
-                    <ul>
-                        <li><b>Tautology:</b> A proposition that is always True (e.g., <code>p &or; &not;p</code>).</li>
-                        <li><b>Contradiction:</b> A proposition that is always False (e.g., <code>p &and; &not;p</code>).</li>
-                        <li><b>Contingency:</b> A proposition that can be True or False depending on truth values.</li>
-                    </ul>
+                    <h4>Logical Equivalences</h4>
+                    <p>De Morgan's Laws (\(\neg(p \land q) \equiv \neg p \lor \neg q\)) and Implication Equivalence (\(p \rightarrow q \equiv \neg p \lor q\)) are pivotal for simplifying compound propositions without brute-force truth tables.</p>
+                    <p><em>Example:</em> "It's false that I am cold AND tired" equals "I am not cold OR I am not tired."</p>
                 </div>
-
                 <div class="cheat-card">
-                    <h4>Conditionals</h4>
-                    <p>For a conditional statement <b>p &rarr; q</b>:</p>
-                    <table>
-                        <tr><th>Type</th><th>Form</th></tr>
-                        <tr><td>Converse</td><td>q &rarr; p</td></tr>
-                        <tr><td>Inverse</td><td>&not;p &rarr; &not;q</td></tr>
-                        <tr><td>Contrapositive</td><td>&not;q &rarr; &not;p</td></tr>
-                    </table>
-                    <p><i>Note: p &rarr; q &equiv; &not;q &rarr; &not;p (Logically equivalent to contrapositive)</i></p>
+                    <h4>Predicates & Quantifiers</h4>
+                    <div class="exam-trap"><strong>Examiner Trick:</strong> Nested Quantifiers. Remember that \(\forall x \exists y\) is NOT equivalent to \(\exists y \forall x\). The order dictates dependency!</div>
+                    <p>Universal (\(\forall\)) implies all elements in the domain; Existential (\(\exists\)) asserts at least one exists. Negating them flips the quantifier.</p>
+                    <p><em>Example:</em> \(\neg(\forall x P(x)) \equiv \exists x \neg P(x)\).</p>
                 </div>
-
                 <div class="cheat-card">
-                    <h4>Key Logical Equivalences</h4>
-                    <table>
-                        <tr><td><b>De Morgan's</b></td><td>&not;(p &and; q) &equiv; &not;p &or; &not;q<br>&not;(p &or; q) &equiv; &not;p &and; &not;q</td></tr>
-                        <tr><td><b>Implication</b></td><td>p &rarr; q &equiv; &not;p &or; q</td></tr>
-                        <tr><td><b>Double Negation</b></td><td>&not;(&not;p) &equiv; p</td></tr>
-                        <tr><td><b>Biconditional</b></td><td>p &harr; q &equiv; (p &rarr; q) &and; (q &rarr; p)</td></tr>
-                    </table>
+                    <h4>Rules of Inference</h4>
+                    <p>Modus Ponens (\(p, p \rightarrow q \vdash q\)) and Modus Tollens (\(\neg q, p \rightarrow q \vdash \neg p\)) validate arguments syntactically.</p>
+                    <div class="pro-tip"><strong>Niche Topic:</strong> Fallacy of Affirming the Consequent. Given \(p \rightarrow q\) and \(q\), concluding \(p\) is invalid.</div>
+                    <p><em>Example:</em> If it rains, ground is wet. Ground is wet. Therefore, it rained (Invalid!).</p>
                 </div>
             </div>
         </div>
 
-        <div id="unit2" class="unit-section">
+        <div class="unit-section" id="unit2">
             <h2 style="color: var(--primary-teal); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Unit II: Counting Methods <span class="badge unit-2">CO2</span></h2>
             <div class="cheat-grid">
                 <div class="cheat-card">
-                    <h4>Permutations & Combinations</h4>
-                    <ul>
-                        <li><b>Permutation (Order matters):</b><br> <code><sup>n</sup>P<sub>r</sub> = n! / (n-r)!</code></li>
-                        <li><b>Combination (Order doesn't matter):</b><br> <code><sup>n</sup>C<sub>r</sub> = n! / (r!(n-r)!)</code></li>
-                        <li><b>Identity:</b> <code><sup>n</sup>C<sub>r</sub> = <sup>n</sup>C<sub>n-r</sub></code></li>
-                    </ul>
+                    <h4>Pigeonhole Principle</h4>
+                    <p>If \(N\) items are placed into \(k\) boxes, at least one box contains \(\lceil N/k \rceil\) items. Crucial for existence proofs without direct construction.</p>
+                    <p><em>Example:</em> Among 13 people, at least 2 were born in the same month.</p>
                 </div>
-
                 <div class="cheat-card">
-                    <h4>Linear Homogeneous Recurrences</h4>
-                    <p>Form: <code>a<sub>n</sub> = c<sub>1</sub>a<sub>n-1</sub> + c<sub>2</sub>a<sub>n-2</sub> + ... + c<sub>k</sub>a<sub>n-k</sub></code></p>
-                    <ul>
-                        <li><b>Degree/Order:</b> k (number of previous terms involved)</li>
-                        <li><b>Characteristic Eq:</b> <code>r<sup>k</sup> - c<sub>1</sub>r<sup>k-1</sup> - ... - c<sub>k</sub> = 0</code></li>
-                    </ul>
+                    <h4>Combinatorics: Stars and Bars</h4>
+                    <div class="pro-tip"><strong>Niche Topic:</strong> Stars & Bars (Multiset Coefficients). Finds non-negative integer solutions to \(x_1 + x_2 + ... + x_k = n\).</div>
+                    <p>Formula is \(C(n + k - 1, k - 1)\). Applies when items are indistinguishable but bins are distinct.</p>
+                    <p><em>Example:</em> Distributing 10 identical candies among 3 children: \(C(10+3-1, 3-1) = 66\).</p>
                 </div>
-
                 <div class="cheat-card">
-                    <h4>Solving Recurrences (Roots)</h4>
-                    <p>Based on roots of the Characteristic Equation:</p>
-                    <table>
-                        <tr><th>Roots</th><th>General Solution</th></tr>
-                        <tr><td>Distinct (r<sub>1</sub> &ne; r<sub>2</sub>)</td><td><code>a<sub>n</sub> = c<sub>1</sub>r<sub>1</sub><sup>n</sup> + c<sub>2</sub>r<sub>2</sub><sup>n</sup></code></td></tr>
-                        <tr><td>Repeated (r<sub>1</sub> = r<sub>2</sub>)</td><td><code>a<sub>n</sub> = (c<sub>1</sub> + c<sub>2</sub>n)r<sub>1</sub><sup>n</sup></code></td></tr>
-                        <tr><td>Multiplicity m</td><td><code>a<sub>n</sub> = (c<sub>1</sub> + c<sub>2</sub>n + ... + c<sub>m</sub>n<sup>m-1</sup>)r<sub>1</sub><sup>n</sup></code></td></tr>
-                    </table>
+                    <h4>Linear Recurrence Relations</h4>
+                    <p>Characterize sequences via previous terms. Solve \(a_n = c_1a_{n-1} + c_2a_{n-2}\) using the characteristic equation \(r^2 - c_1r - c_2 = 0\).</p>
+                    <p><em>Example:</em> Fibonacci \(a_n = a_{n-1} + a_{n-2}\) gives roots \((1 \pm \sqrt{5})/2\).</p>
                 </div>
-
                 <div class="cheat-card">
                     <h4>Generating Functions</h4>
-                    <p>For a sequence <code>a<sub>0</sub>, a<sub>1</sub>, a<sub>2</sub>...</code>, G(x) = &Sigma; a<sub>n</sub>x<sup>n</sup></p>
-                    <ul>
-                        <li><b>Sequence 1, 1, 1, ...:</b> <code>G(x) = 1 / (1 - x)</code></li>
-                        <li><b>Sequence 1, 2, 3, ...:</b> <code>G(x) = 1 / (1 - x)<sup>2</sup></code></li>
-                        <li><b>Sequence a<sup>n</sup>:</b> <code>G(x) = 1 / (1 - ax)</code></li>
-                        <li><b>Fibonacci Sequence:</b> <code>G(x) = x / (1 - x - x<sup>2</sup>)</code></li>
-                    </ul>
+                    <div class="exam-trap"><strong>Examiner Trick:</strong> Using partial fraction decomposition to extract coefficients from \(G(x) = \sum a_n x^n\).</div>
+                    <p>Translates sequence convolution into polynomial multiplication, elegantly solving non-homogeneous recurrences.</p>
+                    <p><em>Example:</em> Sequence 1, 1, 1... corresponds to \(1/(1-x)\).</p>
                 </div>
             </div>
         </div>
 
-        <div id="unit3" class="unit-section">
+        <div class="unit-section" id="unit3">
             <h2 style="color: var(--primary-teal); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Unit III: Graph Theory <span class="badge unit-3">CO3</span></h2>
             <div class="cheat-grid">
                 <div class="cheat-card">
-                    <h4>Complete & Bipartite Graphs</h4>
-                    <ul>
-                        <li><b>Complete Graph (K<sub>n</sub>):</b> Every pair of vertices is connected by a unique edge. Edges = <code>n(n-1)/2</code>.</li>
-                        <li><b>Bipartite Graph:</b> Vertices can be partitioned into V<sub>1</sub> and V<sub>2</sub> such that every edge connects V<sub>1</sub> to V<sub>2</sub>.</li>
-                        <li><b>Complete Bipartite (K<sub>m,n</sub>):</b> Every vertex in V<sub>1</sub> connects to every vertex in V<sub>2</sub>. Edges = <code>m &times; n</code>.</li>
-                    </ul>
+                    <h4>Handshaking Lemma</h4>
+                    <p>The sum of degrees of all vertices equals \(2|E|\). A foundational invariant proving odd-degree vertices must occur in pairs.</p>
+                    <p><em>Example:</em> A graph with 5 vertices of degree 3 cannot exist since \(15 \neq 2|E|\).</p>
                 </div>
-
                 <div class="cheat-card">
-                    <h4>Handshaking Theorem</h4>
-                    <p><code>&Sigma; deg(v) = 2|E|</code></p>
-                    <ul>
-                        <li>The sum of degrees of all vertices is always <b>even</b> (twice the number of edges).</li>
-                        <li>The number of vertices with an <b>odd degree</b> must be even.</li>
-                    </ul>
+                    <h4>Euler & Hamilton Paths</h4>
+                    <div class="exam-trap"><strong>Examiner Trick:</strong> Euler traverses all edges exactly once; Hamilton traverses all vertices exactly once. Do not conflate them!</div>
+                    <p>Euler circuits require all vertices to have an even degree. Hamiltonian has no simple definitive check (NP-complete).</p>
+                    <p><em>Example:</em> \(K_3\) has both paths, but \(K_{2,3}\) is not Hamiltonian.</p>
+                    <div class="compact-svg">
+                        <div class="mermaid">
+                        graph TD
+                            A((Odd)) --- B((Odd))
+                            A --- C((Even))
+                            B --- C
+                            C --- D((Even))
+                            C --- E((Even))
+                            D --- E
+                        </div>
+                    </div>
                 </div>
-
-                <div class="cheat-card">
-                    <h4>Graph Matrices</h4>
-                    <ul>
-                        <li><b>Adjacency Matrix (A):</b> Square matrix. A<sub>ij</sub> = number of edges between v<sub>i</sub> and v<sub>j</sub>.</li>
-                        <li><b>Incidence Matrix (M):</b> Rows = vertices, Columns = edges. M<sub>ij</sub> = 1 if edge e<sub>j</sub> is incident on v<sub>i</sub>.</li>
-                    </ul>
-                </div>
-
                 <div class="cheat-card">
                     <h4>Graph Isomorphism</h4>
-                    <p>Two graphs G<sub>1</sub> and G<sub>2</sub> are isomorphic if they share the same structure. They must have the same:</p>
-                    <ul>
-                        <li>Number of vertices and edges</li>
-                        <li>Degree sequence (list of vertex degrees)</li>
-                        <li>Number of cycles of same length</li>
-                    </ul>
+                    <p>Two graphs are isomorphic if a bijection preserves adjacency. Invariants: vertex count, edge count, and degree sequence.</p>
+                    <p><em>Example:</em> A square and a 4-cycle drawn as a figure-eight are isomorphic.</p>
+                </div>
+                <div class="cheat-card">
+                    <h4>Bipartite Graphs & Matching</h4>
+                    <div class="pro-tip"><strong>Niche Topic:</strong> Hall's Marriage Theorem. A bipartite graph \(G=(V_1, V_2, E)\) has a complete matching for \(V_1\) iff \(|N(S)| \ge |S|\) for all \(S \subseteq V_1\).</div>
+                    <p>A graph is bipartite if and only if it contains no odd-length cycles.</p>
+                    <p><em>Example:</em> Assigning 3 workers to 3 tasks optimally without overlap.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="unit-section" id="unit4">
+            <h2 style="color: var(--primary-teal); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Unit IV: Set Theory & Relations <span class="badge unit-4">CO4</span></h2>
+            <div class="cheat-grid">
+                <div class="cheat-card">
+                    <h4>Set Operations & Power Sets</h4>
+                    <p>Operations include union, intersection, difference, and symmetric difference (\(\oplus\)). The power set \(\mathcal{P}(S)\) contains all subsets.</p>
+                    <p><em>Example:</em> If \(S = \{1, 2\}\), \(\mathcal{P}(S) = \{\emptyset, \{1\}, \{2\}, \{1, 2\}\}\). Size is \(2^n\).</p>
+                </div>
+                <div class="cheat-card">
+                    <h4>Equivalence Relations</h4>
+                    <p>A relation must be reflexive (\(xRx\)), symmetric (\(xRy \implies yRx\)), and transitive (\(xRy \land yRz \implies xRz\)). Forms equivalence classes.</p>
+                    <p><em>Example:</em> Congruence modulo \(n\), where \(a \equiv b \pmod n\) divides \(\mathbb{Z}\) into \(n\) classes.</p>
+                </div>
+                <div class="cheat-card">
+                    <h4>Partial Orderings (Posets)</h4>
+                    <div class="exam-trap"><strong>Examiner Trick:</strong> Hasse Diagrams. Ensure you remove reflexive loops and transitive edges to depict minimal/maximal elements accurately.</div>
+                    <p>Requires reflexivity, antisymmetry (\(xRy \land yRx \implies x=y\)), and transitivity.</p>
+                    <p><em>Example:</em> The "divides" relation on integers forms a poset, visualizable via Hasse.</p>
+                    <div class="compact-svg">
+                        <div class="mermaid">
+                        graph BT
+                            1 --> 2
+                            1 --> 3
+                            2 --> 6
+                            3 --> 6
+                        </div>
+                    </div>
+                </div>
+                <div class="cheat-card">
+                    <h4>Injective, Surjective, Bijective</h4>
+                    <div class="pro-tip"><strong>Niche Topic:</strong> Cardinality mappings. If a bijection exists between two sets, they share the same cardinality (\(\aleph_0\) for countably infinite).</div>
+                    <p>Injective (1-to-1): no two \(x\) map to same \(y\). Surjective (onto): every \(y\) is mapped. Bijective: both, thus invertible.</p>
+                    <p><em>Example:</em> \(f(x) = 2x\) from \(\mathbb{R}\) to \(\mathbb{R}\) is bijective.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="unit-section" id="unit5">
+            <h2 style="color: var(--primary-teal); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Unit V: Trees & Automata <span class="badge unit-5">CO5</span></h2>
+            <div class="cheat-grid">
+                <div class="cheat-card">
+                    <h4>Tree Properties</h4>
+                    <p>A tree is a connected, undirected graph with no simple circuits. It inherently possesses \(n-1\) edges for \(n\) vertices.</p>
+                    <p><em>Example:</em> A hierarchical file system directory structure.</p>
+                </div>
+                <div class="cheat-card">
+                    <h4>Spanning Trees</h4>
+                    <div class="exam-trap"><strong>Examiner Trick:</strong> Kruskal's vs Prim's. Both find Minimum Spanning Trees, but Kruskal sorts edges globally while Prim expands locally from a node.</div>
+                    <p>A subgraph that contains all vertices and is a tree. Critical for optimizing network routing with minimal cost.</p>
+                    <p><em>Example:</em> Connecting 5 cities with the least amount of copper wire.</p>
+                </div>
+                <div class="cheat-card">
+                    <h4>Finite State Machines (FSMs)</h4>
+                    <div class="pro-tip"><strong>Niche Topic:</strong> Pumping Lemma for Regular Languages. Used exclusively to prove a language is NOT regular by demonstrating string repetition violations.</div>
+                    <p>DFAs have exactly one transition per state-symbol pair. NFAs allow multiple. They are computationally equivalent in expressive power.</p>
+                    <p><em>Example:</em> A vending machine dispensing a soda only after exactly 50 cents is inserted.</p>
+                    <div class="compact-svg">
+                        <div class="mermaid">
+                        stateDiagram-v2
+                            [*] --> q0
+                            q0 --> q1: 1
+                            q1 --> q0: 0
+                            q1 --> q2: 1
+                            q2 --> [*]
+                        </div>
+                    </div>
+                </div>
+                <div class="cheat-card">
+                    <h4>Boolean Algebra</h4>
+                    <p>A distributive lattice representing logical operations. Simplification uses consensus theorem and Karnaugh maps to minimize circuit gates.</p>
+                    <p><em>Example:</em> \(AB + AB' = A(B + B') = A\).</p>
                 </div>
             </div>
         </div>
     </div>
-        </div>
 </div>
 <script src="../../shared/app-utils.js"></script>
 ﻿    
@@ -273,7 +311,7 @@
                 } catch (e) {
                     console.error(e);
                     const msgs = document.getElementById('assistantMessages');
-                    msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
+                    msgs.innerHTML = `<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>`;
                 }
             }
         }
@@ -292,7 +330,7 @@
             if (!query) return;
             if (!assistantApp) {
                 const msgs = document.getElementById('assistantMessages');
-                msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
+                msgs.innerHTML = `<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>`;
                 return;
             }
             input.value = '';
@@ -303,5 +341,3 @@
 </body>
 
 </html>
-
-

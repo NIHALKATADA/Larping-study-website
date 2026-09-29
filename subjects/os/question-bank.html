@@ -48,11 +48,7 @@
             <div class="modal-header">
                 <h3>Search & Filters</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="controls-top">
@@ -91,11 +87,7 @@
             <div class="modal-header">
                 <h3>Quick Jump</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
             </div>
             <div class="modal-body">
                 
@@ -310,11 +302,7 @@
             <div class="modal-header" style="flex-shrink: 0;">
                 <h3>Flashcards</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
             </div>
             <div class="modal-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; overflow: hidden; padding-bottom: 2rem;">
                 
@@ -918,7 +906,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q21" data-unit="I" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q21" data-unit="I" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q21. Explain any five functions of an Operating System, giving one relevant example for each function.</h3>
                             <div class="card-meta">
@@ -926,8 +914,6 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -946,7 +932,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q22" data-unit="I" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q22" data-unit="I" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q22. Describe the different types of Operating Systems — Batch, Multiprogramming, Time-Sharing, and Real-Time — along with their key features.</h3>
                             <div class="card-meta">
@@ -954,8 +940,6 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -973,7 +957,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q23" data-unit="I" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q23" data-unit="I" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q23. Explain the five categories of System Calls with one suitable example for each category.</h3>
                             <div class="card-meta">
@@ -981,8 +965,6 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1339,7 +1321,7 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q35" data-unit="II" data-bloom="L3" data-marks="2" data-important="true">
+                    <details class="q-card" id="q35" data-unit="II" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q35. Differentiate between Preemptive and Non-Preemptive Scheduling, giving one example algorithm for each.</h3>
                             <div class="card-meta">
@@ -1347,8 +1329,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1426,7 +1406,7 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q39" data-unit="II" data-bloom="L3" data-marks="2" data-important="true">
+                    <details class="q-card" id="q39" data-unit="II" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q39. In a Priority Scheduling system, process P2 is repeatedly skipped because new higher-priority processes keep arriving. What problem is P2 facing?</h3>
                             <div class="card-meta">
@@ -1434,8 +1414,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1448,7 +1426,7 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q40" data-unit="II" data-bloom="L3" data-marks="2" data-important="true">
+                    <details class="q-card" id="q40" data-unit="II" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q40. A process has Arrival Time = 2 and Completion Time = 10, with Burst Time = 6. Calculate its Turnaround Time and Waiting Time.</h3>
                             <div class="card-meta">
@@ -1456,8 +1434,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1760,7 +1736,7 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q51" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q51" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q51. Explain the complete process life cycle, describing all five states (New, Ready, Running, Waiting, Terminated) and the transitions between them.</h3>
                             <div class="card-meta">
@@ -1768,8 +1744,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1794,7 +1768,7 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q52" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q52" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q52. Explain the four major operations performed on a process — creation, scheduling, execution, and termination — with one real-world example for each.</h3>
                             <div class="card-meta">
@@ -1802,8 +1776,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1821,7 +1793,7 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q53" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q53" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q53. Explain any five CPU scheduling algorithms (FCFS, SJF, SRTF, Round Robin, Priority Scheduling), covering the key characteristic and one limitation of each.</h3>
                             <div class="card-meta">
@@ -1829,8 +1801,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1877,7 +1847,7 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q55" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q55" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q55. Explain the objectives/criteria of CPU scheduling (CPU utilization, throughput, turnaround time, waiting time, response time, fairness), and describe why some of these criteria can conflict with one another.</h3>
                             <div class="card-meta">
@@ -1885,8 +1855,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2178,7 +2146,7 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q67" data-unit="III" data-bloom="L3" data-marks="2" data-important="true">
+                    <details class="q-card" id="q67" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q67. A shared variable counter = 5 is used by a Producer (which executes counter++) and a Consumer (which executes counter--) running concurrently. Due to instruction interleaving, the final value becomes 4 instead of 5. Which synchronization problem does this scenario illustrate?</h3>
                             <div class="card-meta">
@@ -2186,8 +2154,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2200,7 +2166,7 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q68" data-unit="III" data-bloom="L3" data-marks="2" data-important="true">
+                    <details class="q-card" id="q68" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q68. In the Dining Philosophers problem, all five philosophers pick up their left fork at the same time and then wait for the right fork, which never becomes free. What problem occurs here?</h3>
                             <div class="card-meta">
@@ -2208,8 +2174,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2251,7 +2215,7 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q69" data-unit="III" data-bloom="L3" data-marks="2" data-important="true">
+                    <details class="q-card" id="q69" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q69. While using a Test-and-Set Lock, Process P1 keeps repeatedly re-acquiring the lock, leaving Process P2 waiting indefinitely. Which requirement of the critical-section problem is being violated?</h3>
                             <div class="card-meta">
@@ -2259,8 +2223,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2482,7 +2444,7 @@ Because a file download involves moving large chunks of data rapidly, Shared Mem
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q78" data-unit="III" data-bloom="L4" data-marks="3" data-important="true">
+                    <details class="q-card" id="q78" data-unit="III" data-bloom="L4" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q78. A shared lock variable is used by Process P1 and P2 with Test-and-Set. Trace what happens step by-step when P1 arrives while lock = false, and then P2 arrives while P1 is still inside the critical section.</h3>
                             <div class="card-meta">
@@ -2490,8 +2452,6 @@ Because a file download involves moving large chunks of data rapidly, Shared Mem
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l4">CO3 | Bloom L4</span>
                                     <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2562,7 +2522,7 @@ Because a file download involves moving large chunks of data rapidly, Shared Mem
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q81" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q81" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q81. Explain the Producer–Consumer problem using Shared Memory, describing the buffer and the shared variables involved (counter, in, out) and the role of the producer and consumer.</h3>
                             <div class="card-meta">
@@ -2570,8 +2530,6 @@ Because a file download involves moving large chunks of data rapidly, Shared Mem
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2592,7 +2550,7 @@ Because a file download involves moving large chunks of data rapidly, Shared Mem
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q82" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q82" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q82. Explain Peterson's Solution in detail, including its shared variables, working, and how it satisfies the requirements of the Critical-Section Problem.</h3>
                             <div class="card-meta">
@@ -2600,8 +2558,6 @@ Because a file download involves moving large chunks of data rapidly, Shared Mem
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2626,7 +2582,7 @@ Because a file download involves moving large chunks of data rapidly, Shared Mem
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q83" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q83" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q83. Explain Semaphores in detail — their two fundamental operations (wait and signal), their types (counting and binary), and their disadvantages (busy waiting and possibility of deadlock).</h3>
                             <div class="card-meta">
@@ -2634,8 +2590,6 @@ Because a file download involves moving large chunks of data rapidly, Shared Mem
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2662,7 +2616,7 @@ Because a file download involves moving large chunks of data rapidly, Shared Mem
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q84" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q84" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q84. Explain the three requirements of a solution to the Critical-Section Problem — Mutual Exclusion, Progress, and Bounded Waiting — describing the significance of each with examples.</h3>
                             <div class="card-meta">
@@ -2670,8 +2624,6 @@ Because a file download involves moving large chunks of data rapidly, Shared Mem
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2721,7 +2673,7 @@ lock = false;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q86" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q86" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q86. Differentiate between Semaphores and Monitors in detail, and explain why Monitors are considered a higher-level and easier-to-use synchronization construct.</h3>
                             <div class="card-meta">
@@ -2729,8 +2681,6 @@ lock = false;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">

@@ -48,11 +48,7 @@
             <div class="modal-header">
                 <h3>Search & Filters</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="controls-top">
@@ -91,11 +87,7 @@
             <div class="modal-header">
                 <h3>Quick Jump</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
             </div>
             <div class="modal-body">
                 
@@ -317,11 +309,7 @@
             <div class="modal-header" style="flex-shrink: 0;">
                 <h3>Flashcards</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
             </div>
             <div class="modal-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; overflow: hidden; padding-bottom: 2rem;">
                 
@@ -439,7 +427,7 @@
             <div id="realContentWrapper">
                 <section id="cards">
                     
-                    <details class="q-card" id="q1" data-unit="I" data-bloom="L1" data-marks="2" data-important="true">
+                    <details class="q-card" id="q1" data-unit="I" data-bloom="L1" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q1. Define programming paradigm and name any two programming paradigms other than OOP.</h3>
                             <div class="card-meta">
@@ -447,8 +435,6 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l1">CO1 | Bloom L1</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -709,7 +695,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q11" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
+                    <details class="q-card" id="q11" data-unit="II" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q11. What is a class and what is an object in Java? Give one difference between them.</h3>
                             <div class="card-meta">
@@ -717,8 +703,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -833,7 +817,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q16" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
+                    <details class="q-card" id="q16" data-unit="II" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q16. What is constructor chaining? Name the two keywords used for constructor chaining.</h3>
                             <div class="card-meta">
@@ -841,8 +825,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2059,7 +2041,7 @@ System.out.println(s1.equals(s2)); // true (same content)</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q61" data-unit="I" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q61" data-unit="I" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q61. Compare procedural programming and OOP with respect to approach, data handling, security, reusability, inheritance, and polymorphism.</h3>
                             <div class="card-meta">
@@ -2067,8 +2049,6 @@ System.out.println(s1.equals(s2)); // true (same content)</code></pre>
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2091,7 +2071,7 @@ System.out.println(s1.equals(s2)); // true (same content)</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q62" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q62" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q62. Explain the six pillars of OOP—class, object, encapsulation, abstraction, inheritance, and polymorphism—with suitable examples.</h3>
                             <div class="card-meta">
@@ -2099,8 +2079,6 @@ System.out.println(s1.equals(s2)); // true (same content)</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2120,7 +2098,7 @@ System.out.println(s1.equals(s2)); // true (same content)</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q63" data-unit="I" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q63" data-unit="I" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q63. Explain Java's platform independence in detail, from source code compilation to bytecode execution through the JVM.</h3>
                             <div class="card-meta">
@@ -2128,8 +2106,6 @@ System.out.println(s1.equals(s2)); // true (same content)</code></pre>
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2361,7 +2337,7 @@ public class Library {
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q69" data-unit="I" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q69" data-unit="I" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q69. Explain Java control statements with suitable examples of if-else, switch-case, loops, break, continue, and the ternary operator.</h3>
                             <div class="card-meta">
@@ -2369,8 +2345,6 @@ public class Library {
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2425,7 +2399,7 @@ public class Library {
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q71" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q71" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q71. Explain Classes and Objects in Java in detail. Describe how objects are created using new, how multiple objects of the same class maintain independent instance variables, and illustrate with a suitable example.</h3>
                             <div class="card-meta">
@@ -2433,8 +2407,6 @@ public class Library {
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2461,7 +2433,7 @@ public class Main {
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q72" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q72" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q72. Explain instance variables and local variables in Java. Discuss their declaration, default/initialization requirements, lifetime, and memory behavior with suitable examples.</h3>
                             <div class="card-meta">
@@ -2469,8 +2441,6 @@ public class Main {
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2491,7 +2461,7 @@ public class Main {
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q73" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q73" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q73. Explain constructors in Java in detail. Discuss constructor rules, default/no-argument constructor, parameterized constructor, and the role of constructors in object initialization.</h3>
                             <div class="card-meta">
@@ -2499,8 +2469,6 @@ public class Main {
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2558,7 +2526,7 @@ class Child extends Parent {
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q75" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q75" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q75. Explain the this keyword in Java. Discuss its major uses, including resolving field parameter shadowing, invoking another method, constructor chaining using this(), passing the current object, and returning the current object.</h3>
                             <div class="card-meta">
@@ -2566,8 +2534,6 @@ class Child extends Parent {
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2587,7 +2553,7 @@ class Child extends Parent {
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q76" data-unit="V" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q76" data-unit="V" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q76. Explain Garbage Collection and finalization in Java. Discuss different situations in which an object becomes eligible for GC, the role of finalize(), why finalize() is deprecated, and modern alternatives such as try-with-resources and Cleaner.</h3>
                             <div class="card-meta">
@@ -2595,8 +2561,6 @@ class Child extends Parent {
                                     <span class="badge unit-5">Unit V</span>
                                     <span class="badge bloom-l2">CO5 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2615,7 +2579,7 @@ class Child extends Parent {
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q77" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q77" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q77. Explain all four access modifiers in Java — private, default, protected, and public. Compare their accessibility within the class, package, subclasses, and outside packages with suitable examples.</h3>
                             <div class="card-meta">
@@ -2623,8 +2587,6 @@ class Child extends Parent {
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 10.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2674,7 +2636,7 @@ class Child extends Parent {
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q79" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q79" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q79. Explain the String class in Java in detail. Discuss String immutability, String literals, the new keyword, String Constant Pool, == versus equals(), and important String methods with examples.</h3>
                             <div class="card-meta">
@@ -2682,8 +2644,6 @@ class Child extends Parent {
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2701,7 +2661,7 @@ class Child extends Parent {
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q80" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q80" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q80. Compare String, StringBuffer, and StringBuilder in Java. Discuss their mutability, thread safety, performance, and appropriate use cases. Also explain important StringBuffer methods such as append(), insert(), replace(), delete(), and reverse().</h3>
                             <div class="card-meta">
@@ -2709,8 +2669,6 @@ class Child extends Parent {
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2738,7 +2696,7 @@ class Child extends Parent {
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q81" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q81" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q81. Explain all major types of inheritance in Java—single, multilevel, hierarchical, hybrid, and multiple inheritance. Also explain how multiple inheritance is achieved using interfaces.</h3>
                             <div class="card-meta">
@@ -2746,8 +2704,6 @@ class Child extends Parent {
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2845,7 +2801,7 @@ class Child extends Parent {
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q83" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q83" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q83. Explain the Object class in detail and demonstrate the use of toString(), equals(), hashCode(), and getClass() with suitable examples.</h3>
                             <div class="card-meta">
@@ -2853,8 +2809,6 @@ class Child extends Parent {
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3085,7 +3039,7 @@ public class Main {
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q89" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q89" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q89. Explain generic programming in Java. Write examples of a generic class and a generic method, and state the advantages of type safety and code reusability.</h3>
                             <div class="card-meta">
@@ -3093,8 +3047,6 @@ public class Main {
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">

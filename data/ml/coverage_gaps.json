@@ -1,0 +1,928 @@
+[
+  {
+    "id": "num_q4",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.0,
+    "missing_terms": [
+      "observations",
+      "calculate",
+      "x_bar",
+      "y_bar",
+      "slope",
+      "intercept",
+      "estimate"
+    ],
+    "title": "Given the following observations: X: 2, 4, 6, 8, 10. Y: 4, 7, 8, 11, 14. Calculate x_bar, y_bar, the slope b1, and the intercept b0. Estimat"
+  },
+  {
+    "id": "3m_q10",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.0,
+    "missing_terms": [
+      "independent",
+      "predictor",
+      "variables",
+      "dependent",
+      "target",
+      "concrete"
+    ],
+    "title": "Differentiate between independent predictor variables and dependent target variables using a concrete example."
+  },
+  {
+    "id": "2m_q12",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.0,
+    "missing_terms": [
+      "difference",
+      "independent",
+      "variables",
+      "predictors",
+      "dependent",
+      "targets"
+    ],
+    "title": "Explain the difference between independent variables (predictors) and dependent variables (targets)."
+  },
+  {
+    "id": "num_u3_q6",
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.09,
+    "missing_terms": [
+      "calculate",
+      "euclidean",
+      "distance",
+      "manhattan",
+      "squared",
+      "metric",
+      "gives",
+      "smallest"
+    ],
+    "title": "For points P = (2,5), Q = (7,9), calculate: Euclidean distance, Manhattan distance, Squared Euclidean distance. Explain which metric gives t"
+  },
+  {
+    "id": "3m_q3",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.1,
+    "missing_terms": [
+      "detail",
+      "importance",
+      "cleaning",
+      "principles",
+      "outline",
+      "strategies",
+      "handling",
+      "missing"
+    ],
+    "title": "Detail the importance of data cleaning principles and outline two strategies for handling missing values."
+  },
+  {
+    "id": "3m_q36",
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.11,
+    "missing_terms": [
+      "complete",
+      "step-by-step",
+      "working",
+      "mechanics",
+      "k-nearest",
+      "neighbors",
+      "knn",
+      "classification"
+    ],
+    "title": "Describe the complete step-by-step working mechanics of the K-Nearest Neighbors (KNN) classification algorithm."
+  },
+  {
+    "id": "5m_q14",
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.12,
+    "missing_terms": [
+      "complete",
+      "prediction",
+      "mechanics",
+      "k-nearest",
+      "neighbors",
+      "knn",
+      "distance",
+      "metric"
+    ],
+    "title": "14. Describe the complete prediction mechanics of the K-Nearest Neighbors (KNN) algorithm. Discuss how distance metric selection and varying"
+  },
+  {
+    "id": "3m_q32",
+    "unit": "II",
+    "marks": 3,
+    "bloom": "L3",
+    "coverage": 0.14,
+    "missing_terms": [
+      "r-squared",
+      "goodness-of-fit",
+      "metric",
+      "distinguish",
+      "adjusted",
+      "multiple"
+    ],
+    "title": "Explain the R2 (R-squared) goodness-of-fit metric and distinguish it from Adjusted R2 in multiple regression."
+  },
+  {
+    "id": "2m_q39",
+    "unit": "III",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.14,
+    "missing_terms": [
+      "core",
+      "working",
+      "mechanism",
+      "k-nearest",
+      "neighbors",
+      "knn"
+    ],
+    "title": "Explain the core working mechanism of the K-Nearest Neighbors (KNN) algorithm."
+  },
+  {
+    "id": "5m_q4",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L4",
+    "coverage": 0.17,
+    "missing_terms": [
+      "engineering",
+      "selection",
+      "working",
+      "principles",
+      "min-max",
+      "scaling",
+      "standardization",
+      "z-score"
+    ],
+    "title": "4. Differentiate between Feature Engineering and Feature Selection. Explain the working principles of min-max scaling, standardization (z-sc"
+  },
+  {
+    "id": "num_q7",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.17,
+    "missing_terms": [
+      "independent",
+      "variables",
+      "solve",
+      "normal",
+      "equations",
+      "determine",
+      "coefficients",
+      "system"
+    ],
+    "title": "For a regression model with two independent variables, suppose: X^T X = [[4, 10, 6], [10, 30, 18], [6, 18, 14]], X^T y = [30, 84, 54]. Solve"
+  },
+  {
+    "id": "num_q3",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.2,
+    "missing_terms": [
+      "fitted",
+      "represents",
+      "advertising",
+      "expenditure",
+      "thousands",
+      "rupees",
+      "sales",
+      "calculate"
+    ],
+    "title": "A fitted regression model is y = 12 + 4.5x, where x represents advertising expenditure in thousands of rupees and y represents sales in thou"
+  },
+  {
+    "id": "num_q28",
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.2,
+    "missing_terms": [
+      "actual",
+      "predicted",
+      "values",
+      "y_hat",
+      "calculate",
+      "mae",
+      "mse",
+      "rmse"
+    ],
+    "title": "Actual and predicted values of a regression model are: Actual (Y): 10, 15, 20, 25, 30. Predicted (Y_hat): 12, 13, 18, 28, 27. Calculate the "
+  },
+  {
+    "id": "3m_q5",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.2,
+    "missing_terms": [
+      "role",
+      "engineering",
+      "distinguish",
+      "selection"
+    ],
+    "title": "Explain the role of Feature Engineering and distinguish it from feature selection."
+  },
+  {
+    "id": "3m_q42",
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L3",
+    "coverage": 0.2,
+    "missing_terms": [
+      "bayes",
+      "formula",
+      "term",
+      "likelihood",
+      "posterior",
+      "evidence",
+      "role",
+      "classification"
+    ],
+    "title": "State Bayes' Theorem formula, define each term (Prior, Likelihood, Posterior, Evidence), and explain its role in classification."
+  },
+  {
+    "id": "2m_q33",
+    "unit": "II",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.2,
+    "missing_terms": [
+      "r-squared",
+      "coefficient",
+      "measure",
+      "range"
+    ],
+    "title": "What does the R2 (R-squared) coefficient measure, and what is its standard range?"
+  },
+  {
+    "id": "3m_q11",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.22,
+    "missing_terms": [
+      "collection",
+      "fetching",
+      "strategies",
+      "impact",
+      "downstream",
+      "efficiency",
+      "pipeline"
+    ],
+    "title": "Explain how raw data collection and fetching strategies impact the downstream efficiency of an ML pipeline."
+  },
+  {
+    "id": "3m_q18",
+    "unit": "II",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.22,
+    "missing_terms": [
+      "ordinary",
+      "least",
+      "ols",
+      "estimation",
+      "method",
+      "objective",
+      "minimizes"
+    ],
+    "title": "Explain the Ordinary Least Squares (OLS) estimation method and state the objective function it minimizes."
+  },
+  {
+    "id": "2m_q6",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L1",
+    "coverage": 0.22,
+    "missing_terms": [
+      "mention",
+      "common",
+      "strategies",
+      "handling",
+      "missing",
+      "values",
+      "cleaning"
+    ],
+    "title": "Mention two common strategies for handling missing values during data cleaning."
+  },
+  {
+    "id": "num_q5",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.25,
+    "missing_terms": [
+      "multiple",
+      "b1x1",
+      "b2x2",
+      "design",
+      "target",
+      "vector",
+      "calculate",
+      "formulate"
+    ],
+    "title": "Consider the multiple linear regression model: y = b0 + b1x1 + b2x2. The design matrix and target vector are: X = [[1, 1, 2], [1, 2, 1], [1,"
+  },
+  {
+    "id": "3m_q12",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.25,
+    "missing_terms": [
+      "outline",
+      "historical",
+      "evolution",
+      "structural",
+      "taxonomy",
+      "paradigms"
+    ],
+    "title": "Outline the historical evolution and structural taxonomy of machine learning paradigms."
+  },
+  {
+    "id": "3m_q37",
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L3",
+    "coverage": 0.25,
+    "missing_terms": [
+      "euclidean",
+      "distance",
+      "formula",
+      "n-dimensional",
+      "purpose",
+      "knn"
+    ],
+    "title": "Write the Euclidean distance formula between two points in n-dimensional space and explain its purpose in KNN."
+  },
+  {
+    "id": "3m_q43",
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.25,
+    "missing_terms": [
+      "conditional",
+      "independence",
+      "assumption",
+      "naive",
+      "bayes",
+      "termed"
+    ],
+    "title": "Explain the conditional feature independence assumption in the Naive Bayes classifier and why it is termed 'naive'."
+  },
+  {
+    "id": "2m_q18",
+    "unit": "II",
+    "marks": 2,
+    "bloom": "L1",
+    "coverage": 0.25,
+    "missing_terms": [
+      "primary",
+      "objective",
+      "ordinary",
+      "least",
+      "ols",
+      "method"
+    ],
+    "title": "State the primary mathematical objective of the Ordinary Least Squares (OLS) method."
+  },
+  {
+    "id": "2m_q41",
+    "unit": "III",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.25,
+    "missing_terms": [
+      "happens",
+      "knn",
+      "classification",
+      "too",
+      "small",
+      "large"
+    ],
+    "title": "What happens to KNN classification performance if K is set too small or too large?"
+  },
+  {
+    "id": "2m_q46",
+    "unit": "III",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.25,
+    "missing_terms": [
+      "naive",
+      "bayes",
+      "termed"
+    ],
+    "title": "Why is the Naive Bayes classifier termed \"naive\"?"
+  },
+  {
+    "id": "5m_q5",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.27,
+    "missing_terms": [
+      "importance",
+      "collection",
+      "fetching",
+      "strategies",
+      "uncleaned",
+      "issues",
+      "missing",
+      "outliers"
+    ],
+    "title": "5. Discuss the importance of data collection and fetching strategies. Explain how uncleaned data issues like missing attributes or outliers "
+  },
+  {
+    "id": "5m_q11",
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.27,
+    "missing_terms": [
+      "detail",
+      "evaluation",
+      "mae",
+      "mse",
+      "rmse",
+      "adjusted",
+      "preferred",
+      "interpretation"
+    ],
+    "title": "11. Detail the regression evaluation metrics: MAE, MSE, RMSE, and R2 Adjusted R2. Explain why RMSE and Adjusted R2 are preferred for model i"
+  },
+  {
+    "id": "num_q16",
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.27,
+    "missing_terms": [
+      "fit",
+      "quadratic",
+      "b1x",
+      "b2x",
+      "determine",
+      "coefficients",
+      "least-squares",
+      "method"
+    ],
+    "title": "A dataset is given by: X: 0, 1, 2, 3. Y: 1, 3, 9, 19. Fit a quadratic model of the form: y = b0 + b1x + b2x^2. Determine the coefficients us"
+  },
+  {
+    "id": "num_q1",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.28,
+    "missing_terms": [
+      "contains",
+      "observations",
+      "hours",
+      "examination",
+      "marks",
+      "simple",
+      "equation",
+      "b1x"
+    ],
+    "title": "A dataset contains the following observations of study hours (X) and examination marks (Y): X: 1, 2, 3, 4, 5. Y: 35, 40, 50, 55, 65. Find th"
+  },
+  {
+    "id": "5m_q2",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L4",
+    "coverage": 0.29,
+    "missing_terms": [
+      "supervised",
+      "reinforcement",
+      "paradigms",
+      "input",
+      "requirements",
+      "feedback",
+      "loops",
+      "practical"
+    ],
+    "title": "2. Compare Supervised, Unsupervised, and Reinforcement Learning paradigms with respect to input data requirements, feedback loops, and pract"
+  },
+  {
+    "id": "3m_q16",
+    "unit": "II",
+    "marks": 3,
+    "bloom": "L3",
+    "coverage": 0.29,
+    "missing_terms": [
+      "multiple",
+      "algebraic",
+      "equation",
+      "independent",
+      "variables"
+    ],
+    "title": "Explain Multiple Linear Regression and state its algebraic equation for n independent variables."
+  },
+  {
+    "id": "2m_q9",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.29,
+    "missing_terms": [
+      "distinguish",
+      "collection",
+      "fetching",
+      "strategies",
+      "selection"
+    ],
+    "title": "Distinguish between data collection/fetching strategies and feature selection."
+  },
+  {
+    "id": "2m_q14",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.29,
+    "missing_terms": [
+      "constitutes",
+      "fundamental",
+      "workflow",
+      "step",
+      "lifecycle"
+    ],
+    "title": "What constitutes a fundamental model validation workflow in the 7-step ML lifecycle?"
+  },
+  {
+    "id": "2m_q51",
+    "unit": "III",
+    "marks": 2,
+    "bloom": "L1",
+    "coverage": 0.29,
+    "missing_terms": [
+      "popular",
+      "algorithms",
+      "covered",
+      "statistical",
+      "classification"
+    ],
+    "title": "Name three popular boosting ensemble algorithms covered in statistical classification."
+  },
+  {
+    "id": "3m_q13",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.3,
+    "missing_terms": [
+      "computing",
+      "statistical",
+      "summaries",
+      "helps",
+      "initial",
+      "understanding",
+      "eda"
+    ],
+    "title": "Explain how computing statistical summaries on raw data helps in initial data understanding during EDA."
+  },
+  {
+    "id": "3m_q30",
+    "unit": "II",
+    "marks": 3,
+    "bloom": "L3",
+    "coverage": 0.3,
+    "missing_terms": [
+      "formulas",
+      "absolute",
+      "mae",
+      "squared",
+      "mse",
+      "highlight",
+      "differences"
+    ],
+    "title": "Write the mathematical formulas for Mean Absolute Error (MAE) and Mean Squared Error (MSE) and highlight their differences."
+  },
+  {
+    "id": "5m_q3",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.31,
+    "missing_terms": [
+      "exploratory",
+      "eda",
+      "computing",
+      "summary",
+      "statistics",
+      "creating",
+      "visualizations",
+      "aid"
+    ],
+    "title": "3. Define Exploratory Data Analysis (EDA). Describe how computing summary statistics and creating data visualizations aid in understanding r"
+  },
+  {
+    "id": "num_u3_q10",
+    "unit": "III",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.33,
+    "missing_terms": [
+      "notspam",
+      "containing",
+      "words",
+      "naive",
+      "bayes",
+      "determine"
+    ],
+    "title": "Suppose a spam classifier has: P(Spam) = 0.4, P(NotSpam) = 0.6. For an email containing words W1 and W2: P(W1|Spam)=0.7, P(W2|Spam)=0.8, P(W"
+  },
+  {
+    "id": "3m_q1",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.33,
+    "missing_terms": [
+      "main",
+      "paradigms",
+      "supervised",
+      "reinforcement",
+      "key",
+      "characteristics",
+      "input",
+      "requirements"
+    ],
+    "title": "Explain the three main machine learning paradigms (Supervised, Unsupervised, and Reinforcement Learning) with their key characteristics and "
+  },
+  {
+    "id": "3m_q22",
+    "unit": "II",
+    "marks": 3,
+    "bloom": "L3",
+    "coverage": 0.33,
+    "missing_terms": [
+      "polynomial",
+      "higher-degree",
+      "terms",
+      "allow",
+      "capture",
+      "trends"
+    ],
+    "title": "Explain Polynomial Regression and state how higher-degree terms allow it to capture non-linear data trends."
+  },
+  {
+    "id": "3m_q31",
+    "unit": "II",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.33,
+    "missing_terms": [
+      "root",
+      "squared",
+      "rmse",
+      "interpretive",
+      "advantage",
+      "mse"
+    ],
+    "title": "Define Root Mean Squared Error (RMSE) and explain its interpretive advantage over Mean Squared Error (MSE)."
+  },
+  {
+    "id": "2m_q2",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L1",
+    "coverage": 0.33,
+    "missing_terms": [
+      "key",
+      "stages",
+      "step",
+      "lifecycle"
+    ],
+    "title": "List any four key stages of the 7-Step Machine Learning Lifecycle."
+  },
+  {
+    "id": "2m_q13",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.33,
+    "missing_terms": [
+      "python",
+      "widely",
+      "chosen",
+      "foundational",
+      "language",
+      "pipelines"
+    ],
+    "title": "Why is Python widely chosen as a foundational language for machine learning data pipelines?"
+  },
+  {
+    "id": "2m_q16",
+    "unit": "II",
+    "marks": 2,
+    "bloom": "L1",
+    "coverage": 0.33,
+    "missing_terms": [
+      "equation",
+      "multiple",
+      "independent",
+      "variables"
+    ],
+    "title": "State the equation for Multiple Linear Regression with n independent variables."
+  },
+  {
+    "id": "2m_q25",
+    "unit": "II",
+    "marks": 2,
+    "bloom": "L1",
+    "coverage": 0.33,
+    "missing_terms": [
+      "mention",
+      "identified"
+    ],
+    "title": "Define Underfitting and mention how it can be identified."
+  },
+  {
+    "id": "2m_q32",
+    "unit": "II",
+    "marks": 2,
+    "bloom": "L1",
+    "coverage": 0.33,
+    "missing_terms": [
+      "formula",
+      "root",
+      "squared",
+      "rmse",
+      "advantage",
+      "mse"
+    ],
+    "title": "State the formula for Root Mean Squared Error (RMSE) and explain its advantage over MSE."
+  },
+  {
+    "id": "2m_q35",
+    "unit": "III",
+    "marks": 2,
+    "bloom": "L1",
+    "coverage": 0.33,
+    "missing_terms": [
+      "activation",
+      "formula",
+      "output",
+      "range"
+    ],
+    "title": "Write the Sigmoid activation function formula and state its output range."
+  },
+  {
+    "id": "2m_q40",
+    "unit": "III",
+    "marks": 2,
+    "bloom": "L1",
+    "coverage": 0.33,
+    "missing_terms": [
+      "formula",
+      "euclidean",
+      "distance",
+      "n-dimensional"
+    ],
+    "title": "State the formula for Euclidean distance between two points in n-dimensional space."
+  },
+  {
+    "id": "2m_q50",
+    "unit": "III",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.33,
+    "missing_terms": [
+      "voting",
+      "structure",
+      "approach",
+      "forests"
+    ],
+    "title": "Describe the voting structure and ensemble approach used in Random Forests."
+  },
+  {
+    "id": "5m_q8",
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.36,
+    "missing_terms": [
+      "polynomial",
+      "higher-degree",
+      "terms",
+      "capture",
+      "patterns",
+      "while",
+      "maintaining",
+      "cost"
+    ],
+    "title": "8. Describe Polynomial Regression and explain how higher-degree terms capture non-linear data patterns while maintaining a linear cost funct"
+  },
+  {
+    "id": "5m_q1",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.38,
+    "missing_terms": [
+      "step",
+      "lifecycle",
+      "detail",
+      "highlighting",
+      "core",
+      "objectives",
+      "cleaning",
+      "preprocessing"
+    ],
+    "title": "1. Explain the 7-Step Machine Learning Lifecycle in detail, highlighting the core objectives of data cleaning, data preprocessing, and model"
+  },
+  {
+    "id": "3m_q35",
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L3",
+    "coverage": 0.38,
+    "missing_terms": [
+      "single-sample",
+      "formula",
+      "mse",
+      "unsuitable",
+      "classification"
+    ],
+    "title": "Write the single-sample log-loss (binary cross-entropy) formula and explain why MSE is unsuitable for classification."
+  },
+  {
+    "id": "3m_q38",
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L3",
+    "coverage": 0.38,
+    "missing_terms": [
+      "selecting",
+      "value",
+      "affects",
+      "knn",
+      "generalization"
+    ],
+    "title": "Discuss how selecting an optimal value of K affects KNN predictions and model generalization."
+  },
+  {
+    "id": "3m_q49",
+    "unit": "III",
+    "marks": 3,
+    "bloom": "L3",
+    "coverage": 0.38,
+    "missing_terms": [
+      "construct",
+      "confusion",
+      "formulas",
+      "accuracy",
+      "f1-score"
+    ],
+    "title": "Construct a 2 * 2 Confusion Matrix and write the formulas for Accuracy, Precision, Recall, and F1-Score."
+  },
+  {
+    "id": "2m_q3",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.38,
+    "missing_terms": [
+      "exploratory",
+      "eda",
+      "primary",
+      "objective",
+      "preprocessing"
+    ],
+    "title": "What is Exploratory Data Analysis (EDA), and what is its primary objective during data preprocessing?"
+  },
+  {
+    "id": "2m_q11",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L1",
+    "coverage": 0.38,
+    "missing_terms": [
+      "common",
+      "visualization",
+      "techniques",
+      "eda",
+      "inspect"
+    ],
+    "title": "Name two common visualization techniques used during EDA to inspect data distributions."
+  }
+]

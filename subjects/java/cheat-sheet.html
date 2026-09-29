@@ -6,6 +6,14 @@
 <title>Java Cheat Sheet</title>
 <link href="../../shared/design-system.css" rel="stylesheet"/>
 
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
+    <style>
+        .exam-trap { border-left: 4px solid #ff4d4f; background: rgba(255, 77, 79, 0.1); padding: 10px; margin: 10px 0; border-radius: 4px; }
+        .pro-tip { border-left: 4px solid #52c41a; background: rgba(82, 196, 26, 0.1); padding: 10px; margin: 10px 0; border-radius: 4px; }
+        .exam-trap strong { color: #ff4d4f; }
+        .pro-tip strong { color: #52c41a; }
+    </style>
 </head>
 <body>
     <div class="glow-bg"></div>
@@ -46,254 +54,216 @@
 </div>
 <div>
 <a class="btn btn-secondary" href="../../index.html" style="margin-right: 1rem;">← Dashboard</a>
-<button class="btn btn-secondary" id="themeToggleBtn">Mode: Dark</button>
-</div>
-</div>
 
+</div>
+</div>
 
 <div style="display: grid; width: 100%;">
-    <div id="pureSkeleton">
-        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-            <div class="skel-line" style="height: 1.8rem; width: 250px; border-radius: 6px;"></div>
-            <div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
-        </div>
-        <div class="cheat-grid" style="margin-bottom: 3rem;">
-            
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        </div>
-        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-            <div class="skel-line" style="height: 1.8rem; width: 200px; border-radius: 6px;"></div>
-            <div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
-        </div>
-        <div class="cheat-grid" style="margin-bottom: 3rem;">
-            
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        <div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-            <div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-            <div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-        </div>
-        </div>
-    </div>
     <div id="realContentWrapper">
+
+<!-- UNIT 1 -->
 <div class="unit-section" id="unit1">
 <h3>Unit I: Introduction &amp; Basics <span class="badge unit-1">CO1</span></h3>
 <div class="cheat-grid">
-<div class="cheat-card">
-<h4>Java Environment</h4>
-<ul>
-<li><strong>JDK (Java Development Kit):</strong> JRE + Dev Tools (javac, etc.)</li>
-<li><strong>JRE (Java Runtime Environment):</strong> JVM + Core Libraries</li>
-<li><strong>JVM (Java Virtual Machine):</strong> Executes Bytecode. Makes Java Platform-Independent (WORA).</li>
-</ul>
-</div><div class="cheat-card">
-<h4>Constructors &amp; Keywords</h4>
-<ul>
-<li><strong>Constructor:</strong> Special block, same name as class, no return type. Initializes objects.</li>
-<li><strong>this:</strong> Reference to current object. Used to resolve shadowing and chain constructors.</li>
-<li><strong>super:</strong> Reference to parent object. Invokes parent constructors/methods.</li>
-</ul>
-</div><div class="cheat-card">
-<h4>Multithreading</h4>
-<ul>
-<li><strong>Thread Class:</strong> <code>class MyThread extends Thread</code></li>
-<li><strong>Runnable Interface:</strong> <code>class MyRunnable implements Runnable</code></li>
-<li><strong>Lifecycle:</strong> New -&gt; Runnable -&gt; Running -&gt; Waiting/Blocked -&gt; Terminated</li>
-<li><strong>Synchronization:</strong> Prevents thread interference.</li>
-</ul>
-</div></div>
-</div>
-
-<div class="unit-section" id="unit2">
-<h3>Unit II: Core Mechanics <span class="badge unit-1">CO2</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Data Types</h4>
-<table>
-<tr><th>Type</th><th>Size</th><th>Default</th></tr>
-<tr><td>byte</td><td>1 byte</td><td>0</td></tr>
-<tr><td>short</td><td>2 bytes</td><td>0</td></tr>
-<tr><td>int</td><td>4 bytes</td><td>0</td></tr>
-<tr><td>long</td><td>8 bytes</td><td>0L</td></tr>
-<tr><td>float</td><td>4 bytes</td><td>0.0f</td></tr>
-<tr><td>double</td><td>8 bytes</td><td>0.0d</td></tr>
-<tr><td>char</td><td>2 bytes</td><td>'\u0000'</td></tr>
-<tr><td>boolean</td><td>1 bit</td><td>false</td></tr>
-</table>
-</div><div class="cheat-card">
-<h4>Polymorphism Types</h4>
-<table>
-<tr><th>Compile-time</th><th>Run-time</th></tr>
-<tr><td>Method Overloading</td><td>Method Overriding</td></tr>
-<tr><td>Same method, different parameters</td><td>Same method signature, in subclass</td></tr>
-<tr><td>Static Binding</td><td>Dynamic Binding</td></tr>
-</table>
-</div><div class="cheat-card">
-<h4>Collections Framework (List)</h4>
-<ul>
-<li><strong>ArrayList:</strong> Dynamic array, fast random access, slow insertion/deletion.</li>
-<li><strong>LinkedList:</strong> Doubly linked list, fast insertion/deletion, slow access.</li>
-<li><strong>Vector:</strong> Legacy, synchronized (thread-safe) dynamic array.</li>
-</ul>
-</div></div>
-</div>
-
-<div class="unit-section" id="unit3">
-<h3>Unit III: Advanced Concepts <span class="badge unit-1">CO3</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Memory Management</h4>
-<ul>
-<li><strong>Heap:</strong> Stores objects and instance variables. Globally accessible.</li>
-<li><strong>Stack:</strong> Stores local variables and object references. Thread-specific.</li>
-<li><strong>Garbage Collection:</strong> Automatically deletes unreferenced objects in the Heap.</li>
-</ul>
-</div><div class="cheat-card">
-<h4>Abstract Class vs Interface</h4>
-<table>
-<tr><th>Abstract Class</th><th>Interface</th></tr>
-<tr><td>Can have constructors</td><td>No constructors</td></tr>
-<tr><td>Can have instance variables</td><td>Only static final constants</td></tr>
-<tr><td>Single inheritance</td><td>Multiple inheritance</td></tr>
-<tr><td>extends keyword</td><td>implements keyword</td></tr>
-</table>
-</div><div class="cheat-card">
-<h4>Collections Framework (Set &amp; Map)</h4>
-<ul>
-<li><strong>HashSet:</strong> Unordered unique elements. Backed by HashMap.</li>
-<li><strong>TreeSet:</strong> Sorted unique elements.</li>
-<li><strong>HashMap:</strong> Key-value pairs. Keys must be unique. Unordered.</li>
-<li><strong>TreeMap:</strong> Sorted key-value pairs based on keys.</li>
-</ul>
-</div></div>
-</div>
-
-<div class="unit-section" id="unit4">
-<h3>Unit IV: Design Patterns &amp; Architectures <span class="badge unit-1">CO4</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Access Modifiers</h4>
-<table>
-<tr><th>Modifier</th><th>Class</th><th>Pkg</th><th>Subclass</th><th>World</th></tr>
-<tr><td>private</td><td>Yes</td><td>No</td><td>No</td><td>No</td></tr>
-<tr><td>default</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
-<tr><td>protected</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td></tr>
-<tr><td>public</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-</table>
-</div><div class="cheat-card">
-<h4>Strings</h4>
-<ul>
-<li><strong>Immutable:</strong> Strings cannot be changed once created. Safe for threads.</li>
-<li><strong>String Pool:</strong> Special memory area for literals to save space.</li>
-<li><strong>== vs equals():</strong> `==` compares references. `.equals()` compares content.</li>
-<li><strong>StringBuilder/Buffer:</strong> Mutable sequence of characters.</li>
-</ul>
-</div><div class="cheat-card">
-<h4>Java 8+ Features</h4>
-<ul>
-<li><strong>Lambda Expressions:</strong> <code>(a, b) -&gt; a + b;</code></li>
-<li><strong>Streams API:</strong> Functional-style operations on streams of elements.</li>
-<li><strong>Optional:</strong> Container object to prevent NullPointerException.</li>
-<li><strong>Default Methods:</strong> Interfaces can have methods with bodies.</li>
-</ul>
-</div></div>
-</div>
-
-<div class="unit-section" id="unit5">
-<h3>Unit V: Modern Ecosystem <span class="badge unit-1">CO5</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>OOP Pillars</h4>
-<ul>
-<li><strong>Encapsulation:</strong> Data hiding using private variables and public getters/setters.</li>
-<li><strong>Abstraction:</strong> Hiding implementation details (Abstract Classes / Interfaces).</li>
-<li><strong>Inheritance:</strong> Reusing code from a parent class (IS-A relationship).</li>
-<li><strong>Polymorphism:</strong> One interface, multiple methods (Overloading / Overriding).</li>
-</ul>
-</div><div class="cheat-card">
-<h4>Exception Handling</h4>
-<pre><code>try {
-    // Risky code
-} catch (ExceptionType e) {
-    // Handle error
-} finally {
-    // Always executes
-}</code></pre>
-<ul>
-<li><strong>Checked:</strong> Compile-time exceptions (e.g., IOException).</li>
-<li><strong>Unchecked:</strong> Run-time exceptions (e.g., NullPointerException).</li>
-</ul>
-</div><div class="cheat-card">
-<h4>Type Casting</h4>
-<ul>
-<li><strong>Implicit (Widening):</strong> Small to large type. <code>int a = 10; double d = a;</code></li>
-<li><strong>Explicit (Narrowing):</strong> Large to small type. <code>double d = 10.5; int a = (int)d;</code></li>
-<li><strong>Upcasting:</strong> Subclass to Superclass (Automatic).</li>
-<li><strong>Downcasting:</strong> Superclass to Subclass (Requires cast).</li>
-</ul>
-</div></div>
-</div>
-</div>
+    <div class="cheat-card">
+        <h4>JVM Ecosystem & Internals</h4>
+        <p>Java compiles to bytecode, making it platform-independent (WORA). The <strong>ClassLoader Subsystem</strong> handles dynamic class loading, linking, and initialization. The <strong>Execution Engine</strong> parses bytecode using an Interpreter and a JIT (Just-In-Time) compiler.</p>
+        <pre><code>javac App.java // Produces App.class (Bytecode)
+java App       // JVM Execution Engine runs Bytecode</code></pre>
+        <div class="exam-trap">
+            <strong>Trap: ClassNotFoundException vs NoClassDefFoundError.</strong> <code>ClassNotFoundException</code> is thrown during explicit dynamic loading (e.g., <code>Class.forName()</code>). <code>NoClassDefFoundError</code> occurs if a class was present at compile-time but is missing at runtime during implicit loading.
+        </div>
+    </div>
+    
+    <div class="cheat-card">
+        <h4>Data Types & Memory Semantics</h4>
+        <p>Primitives reside on the Thread Stack; Objects reside on the Shared Heap. Java explicitly defines sizes regardless of the OS (e.g., <code>int</code> is always 32-bit). Object references themselves are passed by value (a copy of the reference is passed).</p>
+        <pre><code>int x = 5; // Stack primitive
+Integer y = Integer.valueOf(5); // Heap object reference on stack</code></pre>
+        <div class="pro-tip">
+            <strong>Pro Tip: Autoboxing & Constant Pool.</strong> <code>Integer a = 100; Integer b = 100;</code> <code>a == b</code> is TRUE because integers between -128 and 127 are cached in the IntegerCache. Outside this range, they are distinct objects!
+        </div>
+    </div>
+    
+    <div class="cheat-card">
+        <h4>JVM Architecture Diagram</h4>
+        <div class="compact-svg">
+            <div class="mermaid">
+            flowchart TD
+                A[Java Source Code] --> B[Javac Compiler]
+                B --> C[Bytecode .class]
+                C --> D[ClassLoader Subsystem]
+                D --> E[Runtime Data Areas: Heap, Stack, Metaspace]
+                E --> F[Execution Engine: Interpreter + JIT]
+            </div>
+        </div>
     </div>
 </div>
+</div>
+
+<!-- UNIT 2 -->
+<div class="unit-section" id="unit2">
+<h3>Unit II: Core Mechanics & OOP <span class="badge unit-1">CO2</span></h3>
+<div class="cheat-grid">
+    <div class="cheat-card">
+        <h4>Polymorphism & Dynamic Dispatch</h4>
+        <p>Method overloading is compile-time polymorphism (Static Binding). Method overriding is runtime polymorphism (Dynamic Dispatch/Binding), utilizing the vtable to invoke the subclass implementation. <code>super</code> is used to invoke the overridden superclass method.</p>
+        <pre><code>Parent obj = new Child();
+obj.display(); // Calls Child's display() at runtime</code></pre>
+        <div class="exam-trap">
+            <strong>Trap: Method Hiding.</strong> You cannot override <code>static</code> methods. If a child class defines the same static method, it hides the parent's method. The call is resolved at compile-time based on the <em>reference type</em>, not the object type!
+        </div>
+    </div>
+    
+    <div class="cheat-card">
+        <h4>Interfaces vs Abstract Classes</h4>
+        <p>Interfaces define contracts (can have <code>default</code> and <code>static</code> methods since Java 8). Abstract classes can hold state (instance variables) and constructors. A class can implement multiple interfaces but extend only one class.</p>
+        <pre><code>interface Flyer { default void land() { /* body */ } }
+abstract class Bird { abstract void sing(); }</code></pre>
+        <div class="pro-tip">
+            <strong>Pro Tip: The Diamond Problem.</strong> If a class implements two interfaces with identical <code>default</code> methods, the compiler forces you to override the method and explicitly invoke the desired interface's method using <code>InterfaceName.super.method()</code>.
+        </div>
+    </div>
+    
+    <div class="cheat-card">
+        <h4>Constructors & Initialization Blocks</h4>
+        <p>Instance Initialization Blocks (IIB) run before the constructor but after the call to <code>super()</code>. Static blocks run once when the class is loaded by the ClassLoader. Constructors can be chained using <code>this()</code>.</p>
+        <pre><code>class Demo {
+    static { System.out.println("Static Init"); }
+    { System.out.println("Instance Init"); }
+    Demo() { System.out.println("Constructor"); }
+}</code></pre>
+    </div>
+</div>
+</div>
+
+<!-- UNIT 3 -->
+<div class="unit-section" id="unit3">
+<h3>Unit III: Memory, Multithreading & Concurrency <span class="badge unit-1">CO3</span></h3>
+<div class="cheat-grid">
+    <div class="cheat-card">
+        <h4>Garbage Collection & Memory Tuning</h4>
+        <p>GC reclaims unreachable objects. The Heap is divided into Young Gen (Eden, S0, S1) and Old Gen. Objects surviving multiple Minor GCs are promoted. <strong>ZGC</strong> and <strong>G1GC</strong> are modern concurrent collectors minimizing pause times.</p>
+        <pre><code>System.gc(); // Suggests GC, doesn't guarantee it.
+// TLABs (Thread-Local Allocation Buffers) speed up Eden allocation.</code></pre>
+        <div class="exam-trap">
+            <strong>Trap: Memory Leaks.</strong> Java can have memory leaks if strong references to unused objects are maintained (e.g., an ever-growing static <code>HashMap</code>). The GC will not clear them!
+        </div>
+    </div>
+    
+    <div class="cheat-card">
+        <h4>Thread Synchronization & Visibility</h4>
+        <p><code>synchronized</code> utilizes intrinsic locks (monitors) to guarantee mutual exclusion. The <code>volatile</code> keyword guarantees memory visibility across threads by reading/writing directly to Main Memory instead of CPU caches, but it does NOT guarantee atomicity.</p>
+        <pre><code>volatile boolean flag = true;
+synchronized(this) { count++; } // Prevents Race Conditions</code></pre>
+        <div class="pro-tip">
+            <strong>Pro Tip: Happens-Before Relationship.</strong> A write to a <code>volatile</code> field <em>happens-before</em> every subsequent read of that field. This prevents instruction reordering by the JIT compiler and CPU, ensuring safe publication.
+        </div>
+    </div>
+    
+    <div class="cheat-card">
+        <h4>Thread Lifecycle Diagram</h4>
+        <div class="compact-svg">
+            <div class="mermaid">
+            stateDiagram-v2
+                [*] --> NEW
+                NEW --> RUNNABLE : start()
+                RUNNABLE --> RUNNING : Thread Scheduler
+                RUNNING --> WAITING : wait(), join()
+                WAITING --> RUNNABLE : notify()
+                RUNNING --> BLOCKED : sync block
+                BLOCKED --> RUNNABLE : Lock acquired
+                RUNNING --> TERMINATED : run() completes
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- UNIT 4 -->
+<div class="unit-section" id="unit4">
+<h3>Unit IV: Collections Framework & Generics <span class="badge unit-1">CO4</span></h3>
+<div class="cheat-grid">
+    <div class="cheat-card">
+        <h4>Generics & Type Erasure</h4>
+        <p>Generics provide compile-time type safety. <strong>Type Erasure</strong> means the JVM removes generic type info during compilation to maintain backward compatibility, replacing them with upper bounds or <code>Object</code>. You cannot instantiate a generic array (<code>new T[]</code>).</p>
+        <pre><code>List&lt;String&gt; list = new ArrayList&lt;&gt;();
+// Compiles to: List list = new ArrayList();</code></pre>
+        <div class="exam-trap">
+            <strong>Trap: Covariance vs Contravariance (PECS).</strong> <code>List&lt;Object&gt;</code> is NOT a supertype of <code>List&lt;String&gt;</code>. Use wildcards: <code>? extends T</code> for Producer (read-only), <code>? super T</code> for Consumer (write-only).
+        </div>
+    </div>
+    
+    <div class="cheat-card">
+        <h4>Collections Internals (HashMap)</h4>
+        <p><code>HashMap</code> computes the hash of the key to find the bucket array index. If collisions occur, it forms a LinkedList. To prevent DoS attacks via collision degradation, Java 8 introduced the <strong>Treeification Threshold (8)</strong>, transforming lists into Red-Black Trees for O(log n) lookup.</p>
+        <pre><code>Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
+map.put("Key", 1); // Uses hashCode() and equals()</code></pre>
+        <div class="pro-tip">
+            <strong>Pro Tip: ConcurrentHashMap.</strong> Instead of locking the entire map (like <code>HashTable</code>), <code>ConcurrentHashMap</code> uses CAS (Compare-And-Swap) operations and synchronizes only the specific node (bucket) being updated, allowing high concurrency.
+        </div>
+    </div>
+    
+    <div class="cheat-card">
+        <h4>Collections Hierarchy Diagram</h4>
+        <div class="compact-svg">
+            <div class="mermaid">
+            flowchart TD
+                Iterable --> Collection
+                Collection --> List
+                Collection --> Set
+                Collection --> Queue
+                List --> ArrayList
+                List --> LinkedList
+                Set --> HashSet
+                Map --> HashMap
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- UNIT 5 -->
+<div class="unit-section" id="unit5">
+<h3>Unit V: Exceptions & Modern Java 8+ Features <span class="badge unit-1">CO5</span></h3>
+<div class="cheat-grid">
+    <div class="cheat-card">
+        <h4>Exception Handling & Hierarchy</h4>
+        <p><code>Throwable</code> is the root. <code>Error</code> (JVM crash) and <code>RuntimeException</code> (logic bugs) are <strong>Unchecked</strong>. Everything else (e.g., <code>IOException</code>) is <strong>Checked</strong> and must be handled. <code>try-with-resources</code> automatically closes objects implementing <code>AutoCloseable</code>.</p>
+        <pre><code>try (BufferedReader br = new BufferedReader(new FileReader("x.txt"))) {
+    br.readLine();
+} catch (IOException e) { /* handled */ }</code></pre>
+        <div class="exam-trap">
+            <strong>Trap: Finally Overwrite.</strong> If a <code>try</code> block returns a value (e.g., 5), but the <code>finally</code> block also has a <code>return</code> statement (e.g., 10), the <code>finally</code> block <em>silently overwrites</em> the result. The method returns 10!
+        </div>
+    </div>
+    
+    <div class="cheat-card">
+        <h4>Lambdas & Streams API</h4>
+        <p>Streams enable declarative data processing. Intermediate operations (<code>filter</code>, <code>map</code>) are <strong>lazy</strong> and do nothing until a Terminal operation (<code>collect</code>, <code>reduce</code>) is invoked. Lambdas (<code>-&gt;</code>) implement Functional Interfaces (SAM: Single Abstract Method).</p>
+        <pre><code>List&lt;Integer&gt; evens = list.stream()
+    .filter(n -&gt; n % 2 == 0) // Lazy Intermediate
+    .collect(Collectors.toList()); // Terminal Execution</code></pre>
+        <div class="pro-tip">
+            <strong>Pro Tip: invokedynamic.</strong> Lambdas are NOT anonymous inner classes. The compiler uses the <code>invokedynamic</code> bytecode instruction to generate the lambda implementation dynamically at runtime, heavily optimizing memory and class-loading overhead.
+        </div>
+    </div>
+    
+    <div class="cheat-card">
+        <h4>String Pool & Immutability</h4>
+        <p><code>String</code> objects are immutable; modifying one creates a new instance. String literals are stored in the String Constant Pool to save memory. Use <code>StringBuilder</code> for heavy concatenations to avoid generating garbage objects.</p>
+        <pre><code>String s1 = "Hi"; String s2 = new String("Hi");
+// s1 == s2 is FALSE (s2 is forced into the main Heap).
+// s1.equals(s2) is TRUE.</code></pre>
+    </div>
+</div>
+</div>
+
+    </div>
+</div>
+
 <script src="../../shared/app-utils.js"></script>
-﻿    
+    
     <!-- Standalone Ask AI FAB (Bottom Left) -->
     <button class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI" aria-label="Ask AI">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2zM12 8c2.2 0 4 1.8 4 4v5c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-5c0-2.2 1.8-4 4-4zM6 12v5h2v-5H6zm10 0v5h2v-5h-2z"/></svg>
@@ -360,7 +330,7 @@
                 } catch (e) {
                     console.error(e);
                     const msgs = document.getElementById('assistantMessages');
-                    msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
+                    msgs.innerHTML = '<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser\'s security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>';
                 }
             }
         }
@@ -379,7 +349,7 @@
             if (!query) return;
             if (!assistantApp) {
                 const msgs = document.getElementById('assistantMessages');
-                msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
+                msgs.innerHTML = '<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser\'s security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>';
                 return;
             }
             input.value = '';
@@ -390,4 +360,3 @@
 </body>
 
 </html>
-

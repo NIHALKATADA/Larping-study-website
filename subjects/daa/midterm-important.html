@@ -48,11 +48,7 @@
             <div class="modal-header">
                 <h3>Search & Filters</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="controls-top">
@@ -89,11 +85,7 @@
             <div class="modal-header">
                 <h3>Quick Jump</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
             </div>
             <div class="modal-body">
                 
@@ -101,23 +93,7 @@
                     <h4 style="color: var(--subject-color); margin-bottom: 0.5rem;">Unit I</h4>
                     <ul class="quick-jump-list">
                     
-                        <li><a href="#u1q1">Q1 (2 Marks)</a></li>
-                    
-                        <li><a href="#u1q3">Q3 (3 Marks)</a></li>
-                    
                         <li><a href="#u1q4">Q4 (2 Marks)</a></li>
-                    
-                        <li><a href="#u1q5">Q5 (3 Marks)</a></li>
-                    
-                        <li><a href="#u1q7">Q7 (2 Marks)</a></li>
-                    
-                        <li><a href="#u1q9">Q9 (3 Marks)</a></li>
-                    
-                        <li><a href="#u1q10">Q10 (3 Marks)</a></li>
-                    
-                        <li><a href="#u1q11">Q11 (3 Marks)</a></li>
-                    
-                        <li><a href="#u1q12">Q12 (3 Marks)</a></li>
                     
                         <li><a href="#u1q13">Q13 (5 Marks)</a></li>
                     
@@ -132,10 +108,6 @@
                     <h4 style="color: var(--subject-color); margin-bottom: 0.5rem;">Unit II</h4>
                     <ul class="quick-jump-list">
                     
-                        <li><a href="#u2q1">Q1 (2 Marks)</a></li>
-                    
-                        <li><a href="#u2q2">Q2 (3 Marks)</a></li>
-                    
                         <li><a href="#u2q4">Q4 (5 Marks)</a></li>
                     
                         <li><a href="#u2q5">Q5 (5 Marks)</a></li>
@@ -149,8 +121,6 @@
                         <li><a href="#u2q9">Q9 (5 Marks)</a></li>
                     
                         <li><a href="#u2q10">Q10 (5 Marks)</a></li>
-                    
-                        <li><a href="#u2q11">Q11 (10 Marks)</a></li>
                     
                         <li><a href="#u2q12">Q12 (5 Marks)</a></li>
                     
@@ -168,10 +138,6 @@
                     
                         <li><a href="#u2q19">Q19 (5 Marks)</a></li>
                     
-                        <li><a href="#u2q20">Q20 (3 Marks)</a></li>
-                    
-                        <li><a href="#u2q22">Q22 (3 Marks)</a></li>
-                    
                     </ul>
                 </div>
                 
@@ -179,17 +145,7 @@
                     <h4 style="color: var(--subject-color); margin-bottom: 0.5rem;">Unit III</h4>
                     <ul class="quick-jump-list">
                     
-                        <li><a href="#q1">Q1 (5 Marks)</a></li>
-                    
-                        <li><a href="#q2">Q2 (3 Marks)</a></li>
-                    
-                        <li><a href="#q4">Q4 (5 Marks)</a></li>
-                    
-                        <li><a href="#q6">Q6 (3 Marks)</a></li>
-                    
                         <li><a href="#q7">Q7 (5 Marks)</a></li>
-                    
-                        <li><a href="#q12">Q12 (5 Marks)</a></li>
                     
                         <li><a href="#q14">Q14 (5 Marks)</a></li>
                     
@@ -199,29 +155,15 @@
                     
                         <li><a href="#q17">Q17 (5 Marks)</a></li>
                     
-                        <li><a href="#q18">Q18 (5 Marks)</a></li>
-                    
                         <li><a href="#q19">Q19 (5 Marks)</a></li>
                     
                         <li><a href="#q20">Q20 (5 Marks)</a></li>
-                    
-                        <li><a href="#q21">Q21 (3 Marks)</a></li>
-                    
-                        <li><a href="#q23">Q23 (3 Marks)</a></li>
                     
                         <li><a href="#q24">Q24 (5 Marks)</a></li>
                     
                         <li><a href="#q27">Q27 (5 Marks)</a></li>
                     
                         <li><a href="#q32">Q32 (5 Marks)</a></li>
-                    
-                        <li><a href="#q35">Q35 (5 Marks)</a></li>
-                    
-                        <li><a href="#q44">Q44 (5 Marks)</a></li>
-                    
-                        <li><a href="#q49">Q49 (3 Marks)</a></li>
-                    
-                        <li><a href="#q50">Q50 (3 Marks)</a></li>
                     
                     </ul>
                 </div>
@@ -236,11 +178,7 @@
             <div class="modal-header" style="flex-shrink: 0;">
                 <h3>Flashcards</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
             </div>
             <div class="modal-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; overflow: hidden; padding-bottom: 2rem;">
                 
@@ -358,50 +296,6 @@
             <div id="realContentWrapper">
                 <section id="cards">
                     
-                    <details class="q-card" id="u1q1" data-unit="I" data-bloom="L1" data-marks="2" data-important="true">
-                        <summary>
-                            <h3>Q1. Define an algorithm. Write any four characteristics of a good algorithm.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-1">Unit I</span>
-                                    <span class="badge bloom-l1">CO1 | Bloom L1</span>
-                                    <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>An algorithm is a step-by-step procedure or set of rules to be followed in calculations or other problem-solving operations. Characteristics:</p><ul><li><strong>Finiteness:</strong> Must terminate after a finite number of steps.</li><li><strong>Definiteness:</strong> Each step must be precisely defined.</li><li><strong>Input:</strong> Has zero or more inputs.</li><li><strong>Output:</strong> Produces one or more outputs.</li><li><strong>Effectiveness:</strong> Operations must be basic enough to be done exactly and in finite time.</li></ul>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="u1q3" data-unit="I" data-bloom="L2" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q3. Differentiate between time complexity and space complexity with one example.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-1">Unit I</span>
-                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p><strong>Time Complexity:</strong> The amount of time an algorithm takes to run as a function of the length of the input. <strong>Space Complexity:</strong> The amount of memory an algorithm requires to run as a function of the length of the input.</p><p><em>Example:</em> Mergesort has a time complexity of O(n log n) and space complexity of O(n), whereas Bubble sort has time complexity O(n^2) but space complexity O(1).</p>
-                        </div>
-                    </details>
-                    
                     <details class="q-card" id="u1q4" data-unit="I" data-bloom="L1" data-marks="2" data-important="true">
                         <summary>
                             <h3>Q4. Define Big-O notation.</h3>
@@ -421,138 +315,6 @@
                         </summary>
                         <div class="answer-content">
                             <p>Big-O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity. In computer science, it is used to classify algorithms according to how their run time or space requirements grow as the input size grows. It describes the upper bound of the complexity.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="u1q5" data-unit="I" data-bloom="L2" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q5. What is the difference between best-case, worst-case, and average-case analysis?</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-1">Unit I</span>
-                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <ul><li><strong>Best-case:</strong> The minimum time required for program execution for any input of size n.</li><li><strong>Worst-case:</strong> The maximum time required for program execution for any input of size n. (Provides an upper bound).</li><li><strong>Average-case:</strong> The expected time required for program execution over all possible inputs of size n.</li></ul>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="u1q7" data-unit="I" data-bloom="L1" data-marks="2" data-important="true">
-                        <summary>
-                            <h3>Q7. What is asymptotic analysis? Why is it preferred over measuring execution time?</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-1">Unit I</span>
-                                    <span class="badge bloom-l1">CO1 | Bloom L1</span>
-                                    <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 7.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>Asymptotic analysis evaluates the performance of an algorithm in terms of input size (n) as it approaches infinity. It is preferred because execution time depends on hardware, compiler, and OS, whereas asymptotic analysis provides a machine-independent way to compare algorithms' efficiency.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="u1q9" data-unit="I" data-bloom="L3" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q9. Find the time complexity of the following code: sum = 0; a = 5; b = 10; sum = a + b; printf("%d", sum);</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-1">Unit I</span>
-                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>The time complexity is <strong>O(1)</strong> (constant time) because there are no loops or recursion. The number of basic operations (assignments, addition, printing) is fixed and independent of any input size.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="u1q10" data-unit="I" data-bloom="L3" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q10. Find the time complexity of the following code: if (n > 100) x = x + 1; else x = x - 1; Also mention the best and worst case.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-1">Unit I</span>
-                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>The time complexity is <strong>O(1)</strong>. The condition evaluation takes O(1) time, and both the <code>if</code> block and <code>else</code> block contain basic arithmetic operations taking O(1) time.</p><p><strong>Best case:</strong> O(1)<br><strong>Worst case:</strong> O(1)</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="u1q11" data-unit="I" data-bloom="L3" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q11. Find the time complexity: for(i = 1; i <= n; i++) { printf("%d", i); }</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-1">Unit I</span>
-                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>The loop variable <code>i</code> goes from 1 to <code>n</code>, incrementing by 1 each time. The loop runs exactly <code>n</code> times.</p><p>Number of iterations: <code>n</code>.</p><p>Final time complexity: <strong>O(n)</strong>.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="u1q12" data-unit="I" data-bloom="L3" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q12. Find the time complexity: for(i = 1; i <= n; i = i + 2) { count++; }</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-1">Unit I</span>
-                                    <span class="badge bloom-l3">CO1 | Bloom L3</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>The loop variable <code>i</code> starts at 1 and increases by 2 in each iteration (1, 3, 5, ..., n). The loop runs roughly <code>n/2</code> times.</p><p>Execution count: <code>n/2</code> times.</p><p>Final time complexity: <strong>O(n)</strong>.</p>
                         </div>
                     </details>
                     
@@ -619,50 +381,6 @@
                         </summary>
                         <div class="answer-content">
                             <p>The loop variable <code>i</code> starts at 1 and multiplies by 2 each time. Sequence of i values: 1, 2, 4, 8, ..., 2<sup>k</sup>.</p><p>The loop terminates when 2<sup>k</sup> > n, which means k ≈ log<sub>2</sub>(n). The total iterations is roughly log<sub>2</sub>(n).</p><p>Final time complexity: <strong>O(log n)</strong>.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="u2q1" data-unit="II" data-bloom="L1" data-marks="2" data-important="true">
-                        <summary>
-                            <h3>Q1. Define algorithm correctness. Differentiate between partial correctness and total correctness with suitable examples.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-2">Unit II</span>
-                                    <span class="badge bloom-l1">CO2 | Bloom L1</span>
-                                    <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p><strong>Algorithm Correctness:</strong> An algorithm is correct if, for every valid input, it halts and produces the correct output as defined by its specifications.</p><ul><li><strong>Partial Correctness:</strong> If the algorithm halts, it produces the correct output (but it might not halt). Example: A while(true) loop that searches for an element and breaks when found. If the element isn't there, it might loop forever.</li><li><strong>Total Correctness:</strong> The algorithm is guaranteed to halt, and when it halts, it produces the correct output. Example: A standard for-loop based linear search that scans an array from start to end and returns true/false.</li></ul>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="u2q2" data-unit="II" data-bloom="L1" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q2. What is a loop invariant? Explain the three steps—initialization, maintenance, and termination—used to prove the correctness of an algorithm.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-2">Unit II</span>
-                                    <span class="badge bloom-l1">CO2 | Bloom L1</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>A <strong>loop invariant</strong> is a condition or property that is true before and after each iteration of a loop. It is used to prove the correctness of loop structures.</p><ol><li><strong>Initialization:</strong> The invariant must be true before the first iteration of the loop.</li><li><strong>Maintenance:</strong> If it is true before an iteration of the loop, it remains true before the next iteration.</li><li><strong>Termination:</strong> When the loop terminates, the invariant gives us a useful property that helps show the algorithm is correct.</li></ol>
                         </div>
                     </details>
                     
@@ -817,28 +535,6 @@
                         </summary>
                         <div class="answer-content">
                             <p>Initial Array: [45, 20, 14, 12, 31, 7, 11, 13, 8, 10]</p><p>Nodes from index (n/2 - 1) down to 0 are heapified.</p><ul><li>i = 4 (value 31): Children are 10. 31 > 10. No swap.</li><li>i = 3 (value 12): Children are 13, 8. Swap 12 with 13. State: [45, 20, 14, 13, 31, 7, 11, 12, 8, 10]</li><li>i = 2 (value 14): Children are 7, 11. 14 > 11, 7. No swap.</li><li>i = 1 (value 20): Children are 13, 31. Swap 20 with 31. State: [45, 31, 14, 13, 20, 7, 11, 12, 8, 10]</li><li>i = 0 (value 45): Children are 31, 14. 45 > 31. No swap.</li></ul><p><strong>Final Max Heap:</strong> [45, 31, 14, 13, 20, 7, 11, 12, 8, 10]</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="u2q11" data-unit="II" data-bloom="L4" data-marks="10" data-important="true">
-                        <summary>
-                            <h3>Q11. Perform a complete dry run of Heap Sort on: 25, 17, 36, 2, 3, 100, 1, 19, 7.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-2">Unit II</span>
-                                    <span class="badge bloom-l4">CO2 | Bloom L4</span>
-                                    <span class="badge marks marks-10">10 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>Initial: [25, 17, 36, 2, 3, 100, 1, 19, 7]</p><p><strong>Step 1: Build Max Heap</strong></p><ul><li>i=3 (value 2): children 19, 7. Swap with 19 -> [..., 19, 3, 100, 1, 2, 7]</li><li>i=2 (value 36): children 100, 1. Swap with 100 -> [..., 100, 1, 2, 7]</li><li>i=1 (value 17): children 19, 3. Swap with 19 -> [..., 19, 100, ...]</li><li>i=0 (value 25): children 19, 100. Swap with 100 -> [100, 19, 25, ...]</li></ul><p>Max Heap: [100, 19, 36, 17, 3, 25, 1, 2, 7]</p><p><strong>Step 2: Extract & Heapify</strong></p><ul><li>Swap 100 & 7 -> Heapify(0) -> [36, 19, 25, 17, 3, 7, 1, 2] | Sorted: [100]</li><li>Swap 36 & 2 -> Heapify(0) -> [25, 19, 7, 17, 3, 2, 1] | Sorted: [36, 100]</li><li>... process continues until sorted ...</li></ul><p><strong>Final Array:</strong> [1, 2, 3, 7, 17, 19, 25, 36, 100]</p>
                         </div>
                     </details>
                     
@@ -1018,166 +714,6 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2q20" data-unit="II" data-bloom="L3" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q20. Determine whether array represents a Max Heap: 16, 14, 10, 8, 7, 9, 3, 2, 4, 1.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-2">Unit II</span>
-                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>For an array to be a Max Heap, every parent A[i] must be >= its children A[2i+1] and A[2i+2].</p><ul><li>i=0 (16): children 14, 10. Valid.</li><li>i=1 (14): children 8, 7. Valid.</li><li>i=2 (10): children 9, 3. Valid.</li><li>i=3 (8): children 2, 4. Valid.</li><li>i=4 (7): child 1. Valid.</li></ul><p>The array <strong>is</strong> a valid Max Heap. No violations found.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="u2q22" data-unit="II" data-bloom="L1" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q22. Define a heap. Differentiate between a Max Heap and a Min Heap.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-2">Unit II</span>
-                                    <span class="badge bloom-l1">CO2 | Bloom L1</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>A <strong>Heap</strong> is a specialized tree-based data structure that satisfies the heap property, typically implemented as an almost complete binary tree.</p><ul><li><strong>Max Heap:</strong> The value of each node is greater than or equal to the values of its children. The largest element is at the root. Example: [100, 19, 36]</li><li><strong>Min Heap:</strong> The value of each node is less than or equal to the values of its children. The smallest element is at the root. Example: [1, 2, 3]</li></ul>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q1" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q1. Define the Divide and Conquer paradigm. Explain its three basic steps with a suitable example.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <div class="concept-heading">Divide and Conquer Paradigm</div>
-<p>The <strong>Divide and Conquer</strong> paradigm is an algorithmic design strategy that solves a problem by recursively breaking it down into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. The solutions to the sub-problems are then combined to give a solution to the original problem.</p>
-<p>It consists of three basic steps:</p>
-<ul>
-<li><strong>Divide:</strong> Break the given problem into smaller sub-problems.</li>
-<li><strong>Conquer:</strong> Recursively solve these sub-problems. If the sub-problem size is small enough, solve it directly (base case).</li>
-<li><strong>Combine:</strong> Merge the solutions of the sub-problems to form the solution of the original problem.</li>
-</ul>
-<div class="concept-heading">Example: Merge Sort</div>
-<p>In Merge Sort:</p>
-<ul>
-<li><strong>Divide:</strong> Divide the unsorted array of size <em>n</em> into two sub-arrays of size <em>n/2</em>.</li>
-<li><strong>Conquer:</strong> Recursively sort the two sub-arrays using Merge Sort.</li>
-<li><strong>Combine:</strong> Merge the two sorted sub-arrays into a single sorted array.</li>
-</ul>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q2" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q2. What are the divide, conquer, and combine steps in a Divide and Conquer algorithm?</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>The three main steps of the Divide and Conquer strategy are:</p>
-<ul>
-<li><strong>Divide:</strong> This step involves breaking the original problem into a set of smaller sub-problems. The sub-problems should represent a smaller instance of the same original problem.</li>
-<li><strong>Conquer:</strong> This step involves solving the sub-problems recursively. If the sub-problem is small enough (the base case), it is solved directly without further division.</li>
-<li><strong>Combine:</strong> This step involves taking the solutions to the sub-problems and merging them together to formulate the solution to the original problem.</li>
-</ul>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q4" data-unit="III" data-bloom="L3" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q4. Identify whether the following algorithms use the Divide and Conquer technique. Give reasons for your answer: Binary Search, Merge Sort, Quick Sort, Bubble Sort</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <ul>
-<li><strong>Binary Search:</strong> <em>Yes</em>. It divides the array into two halves, compares the target with the middle element, and recursively conquers only one of the halves. The combine step is trivial (returning the index).</li>
-<li><strong>Merge Sort:</strong> <em>Yes</em>. It divides the array into two halves, recursively sorts each half (conquer), and then merges the two sorted halves (combine).</li>
-<li><strong>Quick Sort:</strong> <em>Yes</em>. It chooses a pivot to divide the array into two partitions (smaller than pivot and greater than pivot), recursively sorts the partitions (conquer). Combine is trivial as sorting is done in place.</li>
-<li><strong>Bubble Sort:</strong> <em>No</em>. It is an iterative comparison-based algorithm that repeatedly swaps adjacent elements if they are in the wrong order. It does not divide the problem into smaller subproblems or use recursion.</li>
-</ul>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q6" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q6. What is a recurrence relation? Explain its role in analyzing the time complexity of recursive algorithms.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>A <strong>recurrence relation</strong> is an equation or inequality that describes a mathematical function in terms of its value on smaller inputs.</p>
-<p><strong>Role in Analyzing Time Complexity:</strong></p>
-<p>When an algorithm contains a recursive call, its running time can be described by a recurrence relation. For example, in Merge Sort, solving a problem of size <em>n</em> involves two subproblems of size <em>n/2</em>, and merging takes linear time <em>O(n)</em>. This gives the recurrence:</p>
-<pre><code>T(n) = 2T(n/2) + O(n)</code></pre>
-<p>By solving this recurrence relation (using methods like the Substitution Method, Recursion Tree Method, or Master Theorem), we can express the time complexity of the algorithm in Big-O notation (e.g., O(n log n)).</p>
-                        </div>
-                    </details>
-                    
                     <details class="q-card" id="q7" data-unit="III" data-bloom="L4" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q7. Solve the following recurrence using the substitution method: T(n) = 2T(n/2) + n</h3>
@@ -1215,43 +751,6 @@
 </ul>
 <p>Since we can choose c &ge; 1, the guess is correct.</p>
 <p><strong>Result:</strong> T(n) = O(n log n)</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q12" data-unit="III" data-bloom="L4" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q12. Solve the following recurrence using the substitution method: T(n) = T(n/2) + 1</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p><strong>Recurrence:</strong> T(n) = T(n/2) + 1</p>
-<p><strong>Guess:</strong> T(n) = O(log n). We prove T(n) &le; c &middot; log n for some constant c.</p>
-<p><strong>Proof by induction:</strong></p>
-<ul>
-<li>Assume T(n/2) &le; c &middot; log(n/2)</li>
-<li>Substitute into recurrence:
-    <br> T(n) &le; c &middot; log(n/2) + 1
-    <br> T(n) &le; c &middot; (log n - 1) + 1
-    <br> T(n) &le; c &middot; log n - c + 1
-</li>
-<li>We want T(n) &le; c &middot; log n. This requires:
-    <br> - c + 1 &le; 0 &rArr; c &ge; 1
-</li>
-</ul>
-<p>Since we can find a constant c (c &ge; 1) such that the condition holds, the guess is correct.</p>
-<p><strong>Result:</strong> T(n) = O(log n)</p>
                         </div>
                     </details>
                     
@@ -1396,41 +895,6 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q18" data-unit="III" data-bloom="L4" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q18. Solve the following recurrence using the Master Method: T(n) = T(n/2) + 1</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>Given: <code>T(n) = T(n/2) + 1</code></p>
-<ul>
-<li>a = 1</li>
-<li>b = 2</li>
-<li>f(n) = 1 (which is n<sup>0</sup>)</li>
-</ul>
-<p>Calculate n<sup>log<sub>b</sub>a</sup>:</p>
-<ul>
-<li>n<sup>log<sub>2</sub>1</sup> = n<sup>0</sup> = 1</li>
-</ul>
-<p>Compare f(n) with n<sup>log<sub>b</sub>a</sup>:</p>
-<p>f(n) = 1, and n<sup>log<sub>b</sub>a</sup> = 1. They are equal, which matches <strong>Case 2</strong> of the Master Theorem (f(n) = &Theta;(n<sup>log<sub>b</sub>a</sup>)).</p>
-<p><strong>Formula for Case 2:</strong> T(n) = &Theta;(n<sup>log<sub>b</sub>a</sup> log n)</p>
-<p><strong>Result:</strong> T(n) = &Theta;(1 &middot; log n) = &Theta;(log n)</p>
-                        </div>
-                    </details>
-                    
                     <details class="q-card" id="q19" data-unit="III" data-bloom="L5" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q19. Perform a complete dry run of Binary Search on the sorted array: 5, 12, 18, 23, 31, 37, 45, 52, 64, 71, 85. Search for the element 45. Show the values of low, high, mid, and the comparison at every step.</h3>
@@ -1497,80 +961,6 @@
 <tr><td>4</td><td>7</td><td>7</td><td>(7+7)/2 = 7</td><td>A[7] = 41</td><td>41 &lt; 50</td><td>Set low = mid + 1 = 8</td></tr>
 </table>
 <p><strong>Termination:</strong> In step 5, <code>low</code> becomes 8 and <code>high</code> is 7. The condition <code>low &le; high</code> is violated (8 &le; 7 is False). The loop terminates, and the search returns an unsuccessful result (element not found).</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q21" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q21. Compare Linear Search and Binary Search with respect to their best-case, average-case, and worst-case time complexities.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <table border="1" cellpadding="5" cellspacing="0">
-<tr><th>Search Type</th><th>Best-Case</th><th>Average-Case</th><th>Worst-Case</th><th>Prerequisite</th></tr>
-<tr>
-<td><strong>Linear Search</strong></td>
-<td>O(1) (Item is at index 0)</td>
-<td>O(n) (Item is in the middle)</td>
-<td>O(n) (Item is at the end or not present)</td>
-<td>None (Works on unsorted arrays)</td>
-</tr>
-<tr>
-<td><strong>Binary Search</strong></td>
-<td>O(1) (Item is the middle element)</td>
-<td>O(log n)</td>
-<td>O(log n) (Item is at extremes or not present)</td>
-<td>Array must be sorted</td>
-</tr>
-</table>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q23" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q23. Explain how the Divide and Conquer technique can be used to find the maximum and minimum elements of an array.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>The Divide and Conquer Max-Min algorithm finds both the maximum and minimum elements simultaneously by recursively breaking the array into halves.</p>
-<ul>
-<li><strong>Divide:</strong> Split the array into two halves.</li>
-<li><strong>Conquer:</strong> Recursively find the (max, min) pair for the left half and the (max, min) pair for the right half.
-  <ul>
-    <li><strong>Base Cases:</strong>
-      <ul>
-        <li>If the subarray has 1 element, return it as both max and min.</li>
-        <li>If the subarray has 2 elements, compare them and return the larger as max and the smaller as min.</li>
-      </ul>
-    </li>
-  </ul>
-</li>
-<li><strong>Combine:</strong> Compare the max of the left half with the max of the right half to get the overall max. Compare the min of the left half with the min of the right half to get the overall min.</li>
-</ul>
                         </div>
                     </details>
                     
@@ -1738,134 +1128,6 @@
 </ul>
 <div class="concept-heading">Combining all partitions</div>
 <p>Final sorted array: <strong>[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]</strong></p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q35" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q35. Explain the best-case, average-case, and worst-case time complexity of Quick Sort.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <div class="concept-heading">Best Case: O(n log n)</div>
-<p>Occurs when the pivot chosen at each step divides the array into two roughly equal halves. The recursion tree has a depth of log(n) and partitioning at each level takes O(n) time. Recurrence: <code>T(n) = 2T(n/2) + O(n)</code></p>
-<div class="concept-heading">Average Case: O(n log n)</div>
-<p>Occurs when the pivot randomly divides the array into proportional splits (e.g., 9-to-1 split or 3-to-1 split). Even an unbalanced split like 99-to-1 results in an O(n log n) running time, as the depth of the tree is bounded by a logarithmic function.</p>
-<div class="concept-heading">Worst Case: O(n&sup2;)</div>
-<p>Occurs when the pivot is consistently the smallest or largest element, leading to completely unbalanced partitions (one sub-array of size n-1, and one of size 0). This creates a skewed recursion tree of depth n. Example: sorting an already sorted array when the first or last element is chosen as the pivot. Recurrence: <code>T(n) = T(n-1) + O(n)</code></p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q44" data-unit="III" data-bloom="L4" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q44. Compare conventional matrix multiplication and Strassen's Matrix Multiplication with respect to the number of multiplications and asymptotic time complexity.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <table border="1" cellpadding="5" cellspacing="0">
-<tr><th>Feature</th><th>Conventional Matrix Multiplication</th><th>Strassen's Matrix Multiplication</th></tr>
-<tr>
-<td><strong>Method</strong></td>
-<td>Uses 3 nested loops to compute dot products of rows and columns.</td>
-<td>Uses Divide and Conquer, breaking n x n matrices into 4 (n/2 x n/2) sub-matrices.</td>
-</tr>
-<tr>
-<td><strong>Multiplications per step</strong></td>
-<td>8 multiplications for a 2x2 division step.</td>
-<td>7 multiplications for a 2x2 division step (optimized mathematically).</td>
-</tr>
-<tr>
-<td><strong>Additions/Subtractions</strong></td>
-<td>4 additions.</td>
-<td>18 additions/subtractions (increased overhead).</td>
-</tr>
-<tr>
-<td><strong>Recurrence Relation</strong></td>
-<td>T(n) = 8T(n/2) + O(n&sup2;)</td>
-<td>T(n) = 7T(n/2) + O(n&sup2;)</td>
-</tr>
-<tr>
-<td><strong>Asymptotic Time Complexity</strong></td>
-<td>O(n<sup>3</sup>)</td>
-<td>O(n<sup>log<sub>2</sub>7</sup>) &approx; O(n<sup>2.81</sup>)</td>
-</tr>
-</table>
-<p><strong>Conclusion:</strong> Strassen's algorithm reduces the number of recursive multiplications from 8 to 7, bringing down the asymptotic time complexity. However, due to the overhead of extra additions, it is practically faster only for very large matrices.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q49" data-unit="III" data-bloom="L3" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q49. Is merge sort a stable sorting algorithm? Explain.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p><strong>Yes, Merge Sort is a stable sorting algorithm.</strong></p>
-<p><strong>Explanation:</strong> A sorting algorithm is stable if it preserves the relative order of equal elements. In Merge Sort, stability is maintained during the <em>merge</em> step. When combining two sorted sub-arrays, if elements are equal, the element from the left sub-array (which appeared earlier in the original array) is explicitly chosen to be placed into the merged array first. By doing this, the original relative ordering of equal elements is preserved.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q50" data-unit="III" data-bloom="L4" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q50. When would you select merge sort instead of quick sort?</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>Merge Sort is preferred over Quick Sort in the following scenarios:</p>
-<ul>
-<li><strong>Stability is Required:</strong> Merge Sort is inherently stable, whereas Quick Sort is not.</li>
-<li><strong>Worst-Case Guarantees:</strong> Merge Sort guarantees O(n log n) time complexity in all cases. Quick Sort can degrade to O(n&sup2;) in the worst case (e.g., already sorted arrays with bad pivot choice).</li>
-<li><strong>Sorting Linked Lists:</strong> Merge Sort performs excellently on linked lists because elements don't need contiguous memory access for random swaps (unlike Quick Sort). The O(n) auxiliary space requirement of Merge Sort is also reduced to O(1) for linked lists.</li>
-<li><strong>External Sorting:</strong> When the dataset is too large to fit in RAM and resides on disk, Merge Sort's predictable sequential access patterns make it the preferred choice.</li>
-</ul>
                         </div>
                     </details>
                     

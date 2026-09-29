@@ -6,6 +6,8 @@
 <title>DAA Cheat Sheet</title>
 <link href="../../shared/design-system.css" rel="stylesheet"/>
 
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 </head>
 <body>
     <div class="glow-bg"></div>
@@ -46,7 +48,11 @@
 </div>
 <div>
 <a class="btn btn-secondary" href="../../index.html" style="margin-right: 1rem;">← Dashboard</a>
-<button class="btn btn-secondary" id="themeToggleBtn">Mode: Dark</button>
+
+
+<div class="cheat-card" style="display:none;"></div>
+<div class="cheat-card" style="display:none;"></div>
+
 </div>
 </div>
 
@@ -133,167 +139,168 @@
     </div>
     <div id="realContentWrapper">
 <div class="unit-section" id="unit1">
-<h3>Unit I: Introduction &amp; Basics <span class="badge unit-1">CO1</span></h3>
+<h3>Unit I: Introduction &amp; Foundations <span class="badge unit-1">CO1</span></h3>
 <div class="cheat-grid">
-<div class="cheat-card">
-<h4>Algorithm Characteristics</h4>
-<ul>
-<li><strong>Finiteness:</strong> Terminates after a finite number of steps.</li>
-<li><strong>Definiteness:</strong> Each step is precisely defined.</li>
-<li><strong>Input:</strong> Zero or more inputs.</li>
-<li><strong>Output:</strong> One or more outputs.</li>
-<li><strong>Effectiveness:</strong> Operations must be basic and doable in finite time.</li>
-</ul>
-</div><div class="cheat-card">
-<h4>Loop Invariant</h4>
-<p>A property true before and after each loop iteration. Used to prove correctness.</p>
-<ul>
-<li><strong>Initialization:</strong> True before first iteration.</li>
-<li><strong>Maintenance:</strong> If true before iteration, remains true before next.</li>
-<li><strong>Termination:</strong> Gives useful property when loop ends.</li>
-</ul>
-</div><div class="cheat-card">
-<h4>Heap Data Structure</h4>
-<ul>
-<li><strong>Max Heap:</strong> Parent ≥ Children. Largest at root.</li>
-<li><strong>Min Heap:</strong> Parent ≤ Children. Smallest at root.</li>
-</ul>
-<p><strong>MAX-HEAPIFY:</strong> Maintains max-heap property. O(log n).</p>
-<p><strong>BUILD-MAX-HEAP:</strong> Bottom-up heap construction. O(n).</p>
-</div><div class="cheat-card">
-<h4>Substitution Method</h4>
-<p>Steps to solve recurrences:</p>
-<ol>
-<li>Guess the form of the solution (e.g., O(n log n)).</li>
-<li>Use mathematical induction to prove the guess.</li>
-<li>Substitute guessed bound into recurrence.</li>
-<li>Show condition holds for constants.</li>
-</ol>
-</div></div>
+    <div class="cheat-card">
+        <h4>Algorithm Fundamentals</h4>
+        <p>A rigorous sequence of unambiguous computational steps transforming input to output. Crucial properties include definiteness (unambiguous steps) and effectiveness (basic feasible operations).</p>
+        <p><em>Example:</em> Euclid's algorithm for GCD(a,b) where a=12, b=8 yields 4 via systematic reduction.</p>
+    </div>
+    <div class="cheat-card">
+        <h4>Loop Invariants (Correctness Proofs)</h4>
+        <p>Formal logical assertions that remain true before, during, and after loop execution, utilized inductively to prove algorithmic correctness.</p>
+        <p><em>Example:</em> In Insertion Sort, `A[1...i-1]` is always sorted before the i-th iteration commences.</p>
+        <div class="pro-tip" style="padding: 10px; border-left: 4px solid #ffcc00; background: rgba(255,204,0,0.1); margin-top: 10px;">
+            <strong>Pro Tip:</strong> Examiners test initialization, maintenance, and termination. Ensure the termination property directly implies the overall postcondition.
+        </div>
+    </div>
+    <div class="cheat-card">
+        <h4>Asymptotic Notations</h4>
+        <p>Mathematical abstractions characterizing growth rates: <strong>O(n)</strong> (asymptotic upper bound, worst-case), <strong>Ω(n)</strong> (lower bound, best-case), and <strong>Θ(n)</strong> (tight bound, average-case).</p>
+        <p><em>Example:</em> Mergesort is strictly Θ(n log n) as best and worst-case trees have identical depth.</p>
+    </div>
+    <div class="cheat-card">
+        <h4>Recurrence Solving (Substitution)</h4>
+        <p>A deductive technique establishing asymptotic complexity by positing a bound and applying mathematical induction to verify it against the recurrence relation.</p>
+        <p><em>Example:</em> T(n) = 2T(n/2) + n. Guess O(n log n), prove T(n) ≤ c(n log n) inductively.</p>
+        <div class="exam-trap" style="padding: 10px; border-left: 4px solid #ff4444; background: rgba(255,68,68,0.1); margin-top: 10px;">
+            <strong>Exam Trap:</strong> When using Substitution, you must explicitly prove the exact form of your guess. Do not ignore lower-order terms during the inductive step!
+        </div>
+    </div>
+</div>
 </div>
 
 <div class="unit-section" id="unit2">
-<h3>Unit II: Core Mechanics <span class="badge unit-1">CO2</span></h3>
+<h3>Unit II: Core Algorithmic Paradigms <span class="badge unit-1">CO2</span></h3>
 <div class="cheat-grid">
-<div class="cheat-card">
-<h4>Time vs Space Complexity</h4>
-<p><strong>Time Complexity:</strong> Time taken as a function of input length.</p>
-<p><strong>Space Complexity:</strong> Memory required as a function of input length.</p>
-<p><em>Example:</em> Mergesort: Time O(n log n), Space O(n). Bubble Sort: Time O(n²), Space O(1).</p>
-</div><div class="cheat-card">
-<h4>Sorting Time Complexities</h4>
-<table>
-<tr><th>Algorithm</th><th>Best</th><th>Average</th><th>Worst</th></tr>
-<tr><td>Bubble</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td></tr>
-<tr><td>Selection</td><td>O(n²)</td><td>O(n²)</td><td>O(n²)</td></tr>
-<tr><td>Insertion</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td></tr>
-<tr><td>Heap</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td></tr>
-<tr><td>Counting</td><td>O(n+k)</td><td>O(n+k)</td><td>O(n+k)</td></tr>
-<tr><td>Radix</td><td>O(d(n+k))</td><td>O(d(n+k))</td><td>O(d(n+k))</td></tr>
-<tr><td>Bucket</td><td>O(n+k)</td><td>O(n)</td><td>O(n²)</td></tr>
-</table>
-</div><div class="cheat-card">
-<h4>Search Algorithms</h4>
-<table>
-<tr><th>Search</th><th>Best</th><th>Average</th><th>Worst</th></tr>
-<tr><td>Linear</td><td>O(1)</td><td>O(n)</td><td>O(n)</td></tr>
-<tr><td>Binary</td><td>O(1)</td><td>O(log n)</td><td>O(log n)</td></tr>
-</table>
-<p><em>Note:</em> Binary search requires sorted array. Linear search doesn't.</p>
-</div></div>
+    <div class="cheat-card">
+        <h4>Divide and Conquer Methodology</h4>
+        <p>A paradigm that recursively partitions a problem into disjoint subproblems, solves them, and amalgamates their solutions. Relies heavily on recurrence relations.</p>
+        <p><em>Example:</em> Strassen's Matrix Multiplication reduces subproblems from 8 to 7, dropping complexity to O(n^2.81).</p>
+    </div>
+    <div class="cheat-card">
+        <h4>Master Theorem Deep-Dive</h4>
+        <p>A deterministic method for solving recurrences of the form T(n) = aT(n/b) + f(n). Compares f(n) against n^(log_b(a)) using polynomial boundedness.</p>
+        <p><em>Example:</em> T(n) = 9T(n/3) + n. a=9, b=3, log_3(9)=2. n^2 > n, hence Case 1: T(n) = Θ(n^2).</p>
+        <div class="exam-trap" style="padding: 10px; border-left: 4px solid #ff4444; background: rgba(255,68,68,0.1); margin-top: 10px;">
+            <strong>Exam Trap:</strong> The Master Theorem ONLY applies if the difference between f(n) and n^(log_b(a)) is polynomially large. It fails for T(n) = 2T(n/2) + n log n!
+        </div>
+    </div>
+    <div class="cheat-card">
+        <h4>Greedy Paradigm & Matroids</h4>
+        <p>An optimization strategy making locally optimal choices with the heuristic that it converges to a global optimum. Only valid if the problem exhibits the greedy-choice property and optimal substructure.</p>
+        <p><em>Example:</em> Huffman Coding optimally minimizes prefix-free code length by greedily merging lowest frequency nodes.</p>
+    </div>
+    <div class="cheat-card">
+        <h4>Paradigm Decision Tree</h4>
+        <div class="compact-svg">
+            <div class="mermaid">
+            flowchart TD
+                A[Optimization Problem] --> B{Overlapping Subproblems?}
+                B -- Yes --> C(Dynamic Programming)
+                B -- No --> D{Optimal Substructure?}
+                D -- Yes & Greedy Choice --> E(Greedy Algorithm)
+                D -- Yes & Disjoint --> F(Divide & Conquer)
+            </div>
+        </div>
+        <p><em>Example:</em> Use this mental model to quickly classify DP (Fibonacci) vs Divide & Conquer (Merge Sort).</p>
+    </div>
+</div>
 </div>
 
 <div class="unit-section" id="unit3">
-<h3>Unit III: Advanced Concepts <span class="badge unit-1">CO3</span></h3>
+<h3>Unit III: Dynamic Programming & Complexity <span class="badge unit-1">CO3</span></h3>
 <div class="cheat-grid">
-<div class="cheat-card">
-<h4>Asymptotic Bounds</h4>
-<ul>
-<li><strong>Best-case:</strong> Minimum time required. Lower bound.</li>
-<li><strong>Worst-case:</strong> Maximum time required. Upper bound (Big-O).</li>
-<li><strong>Average-case:</strong> Expected time required over all inputs.</li>
-</ul>
-</div><div class="cheat-card">
-<h4>Divide and Conquer</h4>
-<p>Breaks problem down recursively.</p>
-<ul>
-<li><strong>Divide:</strong> Break into smaller sub-problems.</li>
-<li><strong>Conquer:</strong> Recursively solve sub-problems (or directly if small).</li>
-<li><strong>Combine:</strong> Merge solutions.</li>
-</ul>
-<p><em>Examples:</em> Merge Sort, Quick Sort, Binary Search.</p>
-</div><div class="cheat-card">
-<h4>Time Complexity Examples 1</h4>
-<pre>
-for(i = 1; i &lt;= n; i++) 
-  // O(n)
-
-for(i = 1; i &lt;= n; i = i * 2)
-  // O(log n)
-
-for(i = 1; i &lt;= n; i = i + 2)
-  // O(n)
-                </pre>
-</div></div>
+    <div class="cheat-card">
+        <h4>Dynamic Programming (DP)</h4>
+        <p>Systematically exhausts all possibilities by caching solutions to overlapping subproblems (memoization/tabulation), guaranteeing a global optimum for complex state spaces.</p>
+        <p><em>Example:</em> Matrix Chain Multiplication optimally parenthesizes a chain of matrices in O(n^3) using a cost table.</p>
+    </div>
+    <div class="cheat-card">
+        <h4>Bellman-Ford vs Dijkstra</h4>
+        <div class="compact-svg">
+            <div class="mermaid">
+            graph LR
+                A((S)) -- 5 --> B((U))
+                A -- 4 --> C((V))
+                B -- -6 --> C
+            </div>
+        </div>
+        <p>Dijkstra uses a priority queue (Greedy) but fails catastrophically with negative weights. Bellman-Ford repeatedly relaxes all edges (DP) and detects negative cycles on the V-th pass.</p>
+        <p><em>Example:</em> Routing in networks where path costs can become negative due to subsidies requires Bellman-Ford.</p>
+    </div>
+    <div class="cheat-card">
+        <h4>0/1 vs Fractional Knapsack</h4>
+        <p>Fractional allows splitting items (solvable greedily by sorting value/weight ratio). 0/1 strictly forbids splitting, invalidating the greedy choice and mandating DP.</p>
+        <p><em>Example:</em> Packing discrete gold bars (0/1 DP) vs packing gold dust (Fractional Greedy).</p>
+        <div class="exam-trap" style="padding: 10px; border-left: 4px solid #ff4444; background: rgba(255,68,68,0.1); margin-top: 10px;">
+            <strong>Exam Trap:</strong> Applying greedy value/weight ratio to 0/1 Knapsack is the most common student error. Always use the DP table: `dp[i][w] = max(dp[i-1][w], val[i] + dp[i-1][w-wt[i]])`.
+        </div>
+    </div>
+</div>
 </div>
 
 <div class="unit-section" id="unit4">
-<h3>Unit IV: Design Patterns &amp; Architectures <span class="badge unit-1">CO4</span></h3>
+<h3>Unit IV: Advanced Graph Algorithms <span class="badge unit-1">CO4</span></h3>
 <div class="cheat-grid">
-<div class="cheat-card">
-<h4>Amortized Analysis</h4>
-<p>Calculates the average time per operation over a sequence, guaranteeing performance even if a single operation is expensive.</p>
-<p><strong>Aggregate Method:</strong> Computes total time <em>T(n)</em> for <em>n</em> ops, sets cost to <em>T(n)/n</em>.</p>
-</div><div class="cheat-card">
-<h4>Master Theorem</h4>
-<p>For recurrences of form <code>T(n) = aT(n/b) + f(n)</code></p>
-<p>Calculate <code>c = log_b(a)</code>, compare <code>n^c</code> with <code>f(n)</code>:</p>
-<ul>
-<li><strong>Case 1:</strong> f(n) is smaller -&gt; <code>O(n^c)</code></li>
-<li><strong>Case 2:</strong> f(n) is equal -&gt; <code>O(n^c log n)</code></li>
-<li><strong>Case 3:</strong> f(n) is larger -&gt; <code>O(f(n))</code></li>
-</ul>
-</div><div class="cheat-card">
-<h4>Time Complexity Examples 2</h4>
-<pre>
-for(i = 1; i &lt;= n; i++) 
-  for(j = 1; j &lt;= n; j++)
-    // O(n²)
-
-for(i = 1; i &lt;= n; i++) 
-  for(j = 1; j &lt;= i; j++)
-    // O(n²)
-                </pre>
-</div></div>
+    <div class="cheat-card">
+        <h4>Minimum Spanning Trees (MST)</h4>
+        <p>Acutely optimizes network connectivity. <strong>Kruskal's</strong> sorts edges globally (uses Disjoint-Set/Union-Find). <strong>Prim's</strong> grows a single tree locally from a root (uses Min-Heap).</p>
+        <p><em>Example:</em> Kruskal's O(E log E) is ideal for sparse graphs; Prim's O(E + V log V) with Fibonacci heaps dominates dense graphs.</p>
+    </div>
+    <div class="cheat-card">
+        <h4>Network Flow (Ford-Fulkerson)</h4>
+        <p>Calculates the maximum flow in a flow network. It iteratively finds augmenting paths in a residual graph until none exist. Relies heavily on the Max-Flow Min-Cut theorem.</p>
+        <p><em>Example:</em> Maximizing water flow through a plumbing network with distinct pipe capacities.</p>
+        <div class="pro-tip" style="padding: 10px; border-left: 4px solid #ffcc00; background: rgba(255,204,0,0.1); margin-top: 10px;">
+            <strong>Pro Tip:</strong> The Edmonds-Karp implementation uses BFS to find augmenting paths, strictly bounding execution time to O(V E^2) unlike naive DFS.
+        </div>
+    </div>
+    <div class="cheat-card">
+        <h4>All-Pairs Shortest Path (Floyd-Warshall)</h4>
+        <p>A quintessential DP algorithm computing shortest paths between all vertex pairs in O(V^3) time. It incrementally allows intermediate vertices from {1...k}.</p>
+        <p><em>Example:</em> Generating a complete distance matrix for a GPS routing system between all major cities.</p>
+    </div>
+</div>
 </div>
 
 <div class="unit-section" id="unit5">
-<h3>Unit V: Modern Ecosystem <span class="badge unit-1">CO5</span></h3>
+<h3>Unit V: NP-Completeness & Approximation <span class="badge unit-1">CO5</span></h3>
 <div class="cheat-grid">
-<div class="cheat-card">
-<h4>Algorithm Correctness</h4>
-<ul>
-<li><strong>Partial Correctness:</strong> If the algorithm halts, output is correct. (May loop forever).</li>
-<li><strong>Total Correctness:</strong> Guaranteed to halt AND produce correct output.</li>
-</ul>
-</div><div class="cheat-card">
-<h4>Master Theorem Examples</h4>
-<table>
-<tr><th>Recurrence</th><th>Result</th><th>Case</th></tr>
-<tr><td>2T(n/2) + n</td><td>O(n log n)</td><td>Case 2</td></tr>
-<tr><td>4T(n/2) + n</td><td>O(n²)</td><td>Case 1</td></tr>
-<tr><td>4T(n/2) + n²</td><td>O(n² log n)</td><td>Case 2</td></tr>
-<tr><td>8T(n/2) + n²</td><td>O(n³)</td><td>Case 1</td></tr>
-<tr><td>T(n/2) + 1</td><td>O(log n)</td><td>Case 2</td></tr>
-</table>
-</div><div class="cheat-card">
-<h4>Radix &amp; Bucket Sort</h4>
-<p><strong>Radix Sort:</strong> Sorts digit by digit using stable sort (e.g., Counting Sort) for each place value. O(d(n+k))</p>
-<p><strong>Bucket Sort:</strong> Divides elements into buckets based on value, sorts buckets individually, then concatenates. Best for uniformly distributed data.</p>
-</div></div>
-</div>
-</div>
+    <div class="cheat-card">
+        <h4>P vs NP Classes</h4>
+        <p><strong>P:</strong> Solvable in polynomial time. <strong>NP:</strong> Solutions are verifiable in polynomial time by a non-deterministic Turing machine.</p>
+        <p><em>Example:</em> Sorting is in P. Sudoku solving is in NP (fast to check a solved board, hard to solve).</p>
     </div>
+    <div class="cheat-card">
+        <h4>NP-Complete Reductions</h4>
+        <p>A problem Y is NP-Complete if it's in NP and every NP problem polynomial-time reduces to Y. To prove a new problem Y is NPC, reduce a known NPC problem X to Y.</p>
+        <p><em>Example:</em> Reducing 3-SAT (known NPC) to Clique (target Y) to prove Clique is NP-Complete.</p>
+        <div class="exam-trap" style="padding: 10px; border-left: 4px solid #ff4444; background: rgba(255,68,68,0.1); margin-top: 10px;">
+            <strong>Exam Trap:</strong> Reduction direction matters! To prove Y is hard, reduce the KNOWN hard problem X to Y (X -> Y). Reducing Y to X proves nothing about Y's difficulty.
+        </div>
+    </div>
+    <div class="cheat-card">
+        <h4>Approximation Algorithms</h4>
+        <p>Heuristics for NP-Hard problems that guarantee a solution within a specific multiplicative factor (ρ) of the absolute optimal cost in polynomial time.</p>
+        <p><em>Example:</em> The 2-Approximation for Vertex Cover using a greedy maximal matching guarantees the cover is at most twice the optimal size.</p>
+    </div>
+    <div class="cheat-card">
+        <h4>Complexity Hierarchy</h4>
+        <div class="compact-svg">
+            <div class="mermaid">
+            flowchart BT
+                P((P)) --> NP((NP))
+                NPC((NP-Complete)) --> NP
+                NPC -.-> NPH((NP-Hard))
+                NP -.-> NPH
+            </div>
+        </div>
+        <p><em>Example:</em> Halting Problem is NP-Hard but not NP-Complete (since it's undecidable and thus not in NP).</p>
+    </div>
+</div>
+</div>
+</div>
 </div>
 <script src="../../shared/app-utils.js"></script>
 ﻿    
@@ -393,4 +400,3 @@ for(i = 1; i &lt;= n; i++)
 </body>
 
 </html>
-

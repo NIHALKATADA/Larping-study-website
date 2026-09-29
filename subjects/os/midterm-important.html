@@ -48,11 +48,7 @@
             <div class="modal-header">
                 <h3>Search & Filters</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="controls-top">
@@ -89,11 +85,7 @@
             <div class="modal-header">
                 <h3>Quick Jump</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
             </div>
             <div class="modal-body">
                 
@@ -131,12 +123,6 @@
                     
                         <li><a href="#q20">Q20 (3 Marks)</a></li>
                     
-                        <li><a href="#q21">Q21 (5 Marks)</a></li>
-                    
-                        <li><a href="#q22">Q22 (5 Marks)</a></li>
-                    
-                        <li><a href="#q23">Q23 (5 Marks)</a></li>
-                    
                         <li><a href="#q24">Q24 (5 Marks)</a></li>
                     
                         <li><a href="#q25">Q25 (5 Marks)</a></li>
@@ -162,13 +148,7 @@
                     
                         <li><a href="#q34">Q34 (2 Marks)</a></li>
                     
-                        <li><a href="#q35">Q35 (2 Marks)</a></li>
-                    
                         <li><a href="#q38">Q38 (2 Marks)</a></li>
-                    
-                        <li><a href="#q39">Q39 (2 Marks)</a></li>
-                    
-                        <li><a href="#q40">Q40 (2 Marks)</a></li>
                     
                         <li><a href="#q41">Q41 (3 Marks)</a></li>
                     
@@ -188,15 +168,7 @@
                     
                         <li><a href="#q50">Q50 (3 Marks)</a></li>
                     
-                        <li><a href="#q51">Q51 (5 Marks)</a></li>
-                    
-                        <li><a href="#q52">Q52 (5 Marks)</a></li>
-                    
-                        <li><a href="#q53">Q53 (5 Marks)</a></li>
-                    
                         <li><a href="#q54">Q54 (5 Marks)</a></li>
-                    
-                        <li><a href="#q55">Q55 (5 Marks)</a></li>
                     
                         <li><a href="#q56">Q56 (5 Marks)</a></li>
                     
@@ -225,12 +197,6 @@
                     
                         <li><a href="#q66">Q66 (2 Marks)</a></li>
                     
-                        <li><a href="#q67">Q67 (2 Marks)</a></li>
-                    
-                        <li><a href="#q68">Q68 (2 Marks)</a></li>
-                    
-                        <li><a href="#q69">Q69 (2 Marks)</a></li>
-                    
                         <li><a href="#q70">Q70 (2 Marks)</a></li>
                     
                         <li><a href="#q71">Q71 (3 Marks)</a></li>
@@ -243,23 +209,11 @@
                     
                         <li><a href="#q76">Q76 (3 Marks)</a></li>
                     
-                        <li><a href="#q78">Q78 (3 Marks)</a></li>
-                    
                         <li><a href="#q79">Q79 (3 Marks)</a></li>
                     
                         <li><a href="#q80">Q80 (3 Marks)</a></li>
                     
-                        <li><a href="#q81">Q81 (5 Marks)</a></li>
-                    
-                        <li><a href="#q82">Q82 (5 Marks)</a></li>
-                    
-                        <li><a href="#q83">Q83 (5 Marks)</a></li>
-                    
-                        <li><a href="#q84">Q84 (5 Marks)</a></li>
-                    
                         <li><a href="#q85">Q85 (5 Marks)</a></li>
-                    
-                        <li><a href="#q86">Q86 (5 Marks)</a></li>
                     
                         <li><a href="#q87">Q87 (5 Marks)</a></li>
                     
@@ -280,11 +234,7 @@
             <div class="modal-header" style="flex-shrink: 0;">
                 <h3>Flashcards</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
             </div>
             <div class="modal-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; overflow: hidden; padding-bottom: 2rem;">
                 
@@ -783,89 +733,6 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q21" data-unit="I" data-bloom="L2" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q21. Explain any five functions of an Operating System, giving one relevant example for each function.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-1">Unit I</span>
-                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <ol>
-<li><strong>Process Management:</strong> Allocating CPU time. <em>Ex: Pausing a background download to give priority to a video call.</em></li>
-<li><strong>Memory Management:</strong> Managing RAM. <em>Ex: Moving unused application data to virtual memory (swap) so a new heavy game can load into RAM.</em></li>
-<li><strong>File Management:</strong> Organizing data. <em>Ex: Saving a document and ensuring it is written to the correct physical sector on the SSD.</em></li>
-<li><strong>Device Management:</strong> Handling I/O. <em>Ex: Using a driver to translate a mouse movement into an on-screen cursor movement.</em></li>
-<li><strong>Security & Protection:</strong> Enforcing access rules. <em>Ex: Preventing a standard user from deleting critical <code>System32</code> files.</em></li>
-</ol>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q22" data-unit="I" data-bloom="L2" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q22. Describe the different types of Operating Systems — Batch, Multiprogramming, Time-Sharing, and Real-Time — along with their key features.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-1">Unit I</span>
-                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <ul>
-<li><strong>Batch OS:</strong> Jobs with similar needs are batched and executed sequentially by an operator. <em>Feature: No user interaction during execution.</em></li>
-<li><strong>Multiprogramming OS:</strong> Keeps multiple jobs in memory. When one job waits for I/O, the CPU switches to another. <em>Feature: Maximizes CPU utilization.</em></li>
-<li><strong>Time-Sharing OS:</strong> An extension of multiprogramming. The CPU switches so rapidly (time-slicing) between tasks that multiple users feel they have dedicated machines. <em>Feature: High interactivity and fairness.</em></li>
-<li><strong>Real-Time OS:</strong> Processes data instantly within guaranteed deadlines. <em>Feature: Strict timing constraints (used in aviation, medical devices).</em></li>
-</ul>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q23" data-unit="I" data-bloom="L2" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q23. Explain the five categories of System Calls with one suitable example for each category.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-1">Unit I</span>
-                                    <span class="badge bloom-l2">CO1 | Bloom L2</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <ol>
-<li><strong>Process Control:</strong> Create, terminate, or suspend processes. <em>Ex: <code>fork()</code> to create a child process.</em></li>
-<li><strong>File Management:</strong> Create, read, write, or delete files. <em>Ex: <code>read()</code> to read bytes from a text file.</em></li>
-<li><strong>Device Management:</strong> Request/release devices and read/write to them. <em>Ex: <code>ioctl()</code> to configure a network interface.</em></li>
-<li><strong>Information Maintenance:</strong> Get or set system data. <em>Ex: <code>gettimeofday()</code> to fetch the current system time.</em></li>
-<li><strong>Communication:</strong> Create connections or send messages between processes. <em>Ex: <code>pipe()</code> to connect the output of one process to another.</em></li>
-</ol>
-                        </div>
-                    </details>
-                    
                     <details class="q-card" id="q24" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q24. Explain the Dual-Mode operation of an Operating System. How do the Mode Bit and the Timer mechanism work together to protect the system?</h3>
@@ -1153,31 +1020,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q35" data-unit="II" data-bloom="L3" data-marks="2" data-important="true">
-                        <summary>
-                            <h3>Q35. Differentiate between Preemptive and Non-Preemptive Scheduling, giving one example algorithm for each.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-2">Unit II</span>
-                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
-                                    <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <ul>
-<li><strong>Non-Preemptive:</strong> Once a process gets the CPU, it holds it until it terminates or blocks for I/O. The OS cannot force it off the CPU. <em>Example: First-Come, First-Served (FCFS).</em></li>
-<li><strong>Preemptive:</strong> The OS can forcefully interrupt a running process and give the CPU to another process (e.g., based on priority or time quantum). <em>Example: Round Robin (RR).</em></li>
-</ul>
-                        </div>
-                    </details>
-                    
                     <details class="q-card" id="q38" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
                         <summary>
                             <h3>Q38. A process is running on the CPU when a timer interrupt occurs. Name the mechanism the OS uses at this moment to switch to another process.</h3>
@@ -1197,53 +1039,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </summary>
                         <div class="answer-content">
                             <p>The mechanism is <strong>Context Switching</strong>, initiated by the <strong>Short-Term Scheduler (CPU Scheduler)</strong> and executed by the <strong>Dispatcher</strong>.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q39" data-unit="II" data-bloom="L3" data-marks="2" data-important="true">
-                        <summary>
-                            <h3>Q39. In a Priority Scheduling system, process P2 is repeatedly skipped because new higher-priority processes keep arriving. What problem is P2 facing?</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-2">Unit II</span>
-                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
-                                    <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>P2 is facing <strong>Starvation (Indefinite Blocking)</strong>. The solution to this problem is <strong>Aging</strong>, where the OS gradually increases the priority of a process the longer it waits in the ready queue.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q40" data-unit="II" data-bloom="L3" data-marks="2" data-important="true">
-                        <summary>
-                            <h3>Q40. A process has Arrival Time = 2 and Completion Time = 10, with Burst Time = 6. Calculate its Turnaround Time and Waiting Time.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-2">Unit II</span>
-                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
-                                    <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <ul>
-<li><strong>Turnaround Time (TAT)</strong> = Completion Time - Arrival Time = 10 - 2 = <strong>8</strong>.</li>
-<li><strong>Waiting Time (WT)</strong> = Turnaround Time - Burst Time = 8 - 6 = <strong>2</strong>.</li>
-</ul>
                         </div>
                     </details>
                     
@@ -1510,95 +1305,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q51" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q51. Explain the complete process life cycle, describing all five states (New, Ready, Running, Waiting, Terminated) and the transitions between them.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-2">Unit II</span>
-                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <ul>
-<li><strong>New:</strong> The process is being loaded into memory but isn't ready to execute. <em>Transition: Admitted to Ready queue.</em></li>
-<li><strong>Ready:</strong> Residing in memory, waiting for CPU time. <em>Transition: Scheduler dispatches it to Running.</em></li>
-<li><strong>Running:</strong> Instructions are actively being executed on the CPU. <em>Transitions:</em>
-  <ul>
-  <li>Interrupt (e.g., time slice expires) &rarr; Returns to Ready.</li>
-  <li>I/O Request &rarr; Moves to Waiting.</li>
-  <li>Exit &rarr; Moves to Terminated.</li>
-  </ul>
-</li>
-<li><strong>Waiting (Blocked):</strong> Waiting for an external event like user input. <em>Transition: I/O completes &rarr; Moves back to Ready.</em></li>
-<li><strong>Terminated:</strong> Execution complete, OS reclaims memory.</li>
-</ul>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q52" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q52. Explain the four major operations performed on a process — creation, scheduling, execution, and termination — with one real-world example for each.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-2">Unit II</span>
-                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <ol>
-<li><strong>Creation:</strong> The OS allocates a PCB and memory. <em>Ex: Double-clicking the Photoshop icon.</em></li>
-<li><strong>Scheduling:</strong> The OS decides which ready process gets the CPU next. <em>Ex: The OS pausing a background anti-virus scan to let you type smoothly in Word.</em></li>
-<li><strong>Execution:</strong> The CPU actively processes instructions. <em>Ex: Rendering a video frame.</em></li>
-<li><strong>Termination:</strong> The process ends and resources are freed. <em>Ex: Clicking the 'X' to close your web browser.</em></li>
-</ol>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q53" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q53. Explain any five CPU scheduling algorithms (FCFS, SJF, SRTF, Round Robin, Priority Scheduling), covering the key characteristic and one limitation of each.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-2">Unit II</span>
-                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <ol>
-<li><strong>FCFS (First-Come, First-Served):</strong> Non-preemptive. Executes processes in arrival order. <em>Limitation: Convoy effect (short processes stuck behind a massive one).</em></li>
-<li><strong>SJF (Shortest Job First):</strong> Non-preemptive. Picks the process with the shortest burst time. <em>Limitation: Impossible to know exact burst time in advance.</em></li>
-<li><strong>SRTF (Shortest Remaining Time First):</strong> Preemptive version of SJF. <em>Limitation: Can cause starvation for long processes.</em></li>
-<li><strong>Round Robin:</strong> Preemptive. Assigns a fixed time quantum to each process in turn. <em>Limitation: High context-switching overhead if quantum is too small.</em></li>
-<li><strong>Priority Scheduling:</strong> Executes highest priority process first. <em>Limitation: Starvation of low-priority processes (solved by aging).</em></li>
-</ol>
-                        </div>
-                    </details>
-                    
                     <details class="q-card" id="q54" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q54. Explain User Threads and Kernel Threads in detail, listing the advantages and disadvantages of each.</h3>
@@ -1624,35 +1330,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <tr><td><strong>Kernel Threads</strong></td><td>If one thread blocks, the OS can schedule another. Can execute simultaneously on multiple CPU cores.</td><td>Slow to create and manage because every operation requires a system call / mode switch.</td></tr>
 </tbody>
 </table>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q55" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q55. Explain the objectives/criteria of CPU scheduling (CPU utilization, throughput, turnaround time, waiting time, response time, fairness), and describe why some of these criteria can conflict with one another.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-2">Unit II</span>
-                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <ul>
-<li><strong>CPU Utilization:</strong> Keep the CPU as busy as possible (0-100%).</li>
-<li><strong>Throughput:</strong> Number of processes completed per time unit.</li>
-<li><strong>Turnaround Time:</strong> Total time from submission to completion.</li>
-<li><strong>Waiting Time:</strong> Total time spent waiting in the ready queue.</li>
-<li><strong>Response Time:</strong> Time from submission until the first response is produced.</li>
-</ul>
-<p><strong>Conflicts:</strong> Minimizing <em>Response Time</em> requires preempting processes frequently (Time-Sharing/Round Robin). However, frequent preemption causes high context-switching overhead, which severely decreases <em>Throughput</em> and <em>CPU Utilization</em>. You cannot optimize both simultaneously.</p>
                         </div>
                     </details>
                     
@@ -1901,101 +1578,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q67" data-unit="III" data-bloom="L3" data-marks="2" data-important="true">
-                        <summary>
-                            <h3>Q67. A shared variable counter = 5 is used by a Producer (which executes counter++) and a Consumer (which executes counter--) running concurrently. Due to instruction interleaving, the final value becomes 4 instead of 5. Which synchronization problem does this scenario illustrate?</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
-                                    <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>This illustrates a <strong>Race Condition</strong>. The final output depends on the unpredictable sequence and timing (interleaving) of the machine-level instructions executed by the concurrent processes.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q68" data-unit="III" data-bloom="L3" data-marks="2" data-important="true">
-                        <summary>
-                            <h3>Q68. In the Dining Philosophers problem, all five philosophers pick up their left fork at the same time and then wait for the right fork, which never becomes free. What problem occurs here?</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
-                                    <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>This is a classic <strong>Deadlock</strong>. Every philosopher is holding one resource and waiting indefinitely for another resource held by someone else, resulting in a circular wait where no one can ever make progress.</p>
-<div class="diagram-container">
-<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="150" cy="150" r="80" fill="var(--card-bg)" stroke="currentColor" stroke-width="3"/>
-  <text x="150" y="155" text-anchor="middle" fill="currentColor" font-weight="bold">Dining Table</text>
-
-  <circle cx="150" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
-  <text x="150" y="45" text-anchor="middle" fill="currentColor">P1</text>
-  
-  <circle cx="254" cy="115" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
-  <text x="254" y="120" text-anchor="middle" fill="currentColor">P2</text>
-  
-  <circle cx="214" cy="238" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
-  <text x="214" y="243" text-anchor="middle" fill="currentColor">P3</text>
-  
-  <circle cx="86" cy="238" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
-  <text x="86" y="243" text-anchor="middle" fill="currentColor">P4</text>
-  
-  <circle cx="46" cy="115" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
-  <text x="46" y="120" text-anchor="middle" fill="currentColor">P5</text>
-
-  <line x1="180" y1="70" x2="200" y2="100" stroke="var(--primary-teal)" stroke-width="4" stroke-linecap="round"/>
-  <line x1="220" y1="160" x2="200" y2="190" stroke="var(--primary-teal)" stroke-width="4" stroke-linecap="round"/>
-  <line x1="150" y1="230" x2="150" y2="200" stroke="var(--primary-teal)" stroke-width="4" stroke-linecap="round"/>
-  <line x1="80" y1="160" x2="100" y2="190" stroke="var(--primary-teal)" stroke-width="4" stroke-linecap="round"/>
-  <line x1="120" y1="70" x2="100" y2="100" stroke="var(--primary-teal)" stroke-width="4" stroke-linecap="round"/>
-</svg>
-<p class="concept-heading">5 Philosophers &amp; 5 Forks</p>
-</div>
-
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q69" data-unit="III" data-bloom="L3" data-marks="2" data-important="true">
-                        <summary>
-                            <h3>Q69. While using a Test-and-Set Lock, Process P1 keeps repeatedly re-acquiring the lock, leaving Process P2 waiting indefinitely. Which requirement of the critical-section problem is being violated?</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
-                                    <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>The <strong>Bounded Waiting</strong> requirement is being violated. There must be a strict limit on the number of times other processes can enter their critical sections after a process (P2) has made a request to enter its own.</p>
-                        </div>
-                    </details>
-                    
                     <details class="q-card" id="q70" data-unit="III" data-bloom="L2" data-marks="2" data-important="true">
                         <summary>
                             <h3>Q70. In the Bounded Buffer problem, the semaphore empty is initialized to n and full is initialized to 0. Explain what these two semaphores represent.</h3>
@@ -2158,32 +1740,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q78" data-unit="III" data-bloom="L4" data-marks="3" data-important="true">
-                        <summary>
-                            <h3>Q78. A shared lock variable is used by Process P1 and P2 with Test-and-Set. Trace what happens step by-step when P1 arrives while lock = false, and then P2 arrives while P1 is still inside the critical section.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
-                                    <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <ol>
-<li><strong>P1 arrives:</strong> It executes <code>TestAndSet(&amp;lock)</code>. The function returns the original value (<code>false</code>) and atomically sets <code>lock = true</code>. Since it returned <code>false</code>, P1 escapes the <code>while</code> loop and enters the critical section.</li>
-<li><strong>P2 arrives:</strong> P1 is still inside, so <code>lock</code> is currently <code>true</code>. P2 executes <code>TestAndSet(&amp;lock)</code>. It returns <code>true</code> (and sets it to <code>true</code>). Because it returned <code>true</code>, P2 gets stuck in the <code>while(TestAndSet(&amp;lock))</code> loop.</li>
-<li>P2 will busy-wait (spin) until P1 exits and explicitly sets <code>lock = false</code>.</li>
-</ol>
-                        </div>
-                    </details>
-                    
                     <details class="q-card" id="q79" data-unit="III" data-bloom="L3" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q79. In a library system, multiple students may read a book's catalog entry at the same time, but only one librarian should be allowed to update the entry at a time. Identify the classical synchronization problem this illustrates, and name the semaphores/variables used to solve it.</h3>
@@ -2238,132 +1794,6 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q81" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q81. Explain the Producer–Consumer problem using Shared Memory, describing the buffer and the shared variables involved (counter, in, out) and the role of the producer and consumer.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>The <strong>Producer-Consumer</strong> problem occurs when two processes share a fixed-size buffer. The Producer generates data and puts it into the buffer; the Consumer takes data out.</p>
-<p><strong>Shared Variables:</strong></p>
-<ul>
-<li><code>buffer[BUFFER_SIZE]</code>: A circular array.</li>
-<li><code>in</code>: The index where the next item will be inserted.</li>
-<li><code>out</code>: The index where the next item will be consumed.</li>
-<li><code>counter</code>: Tracks the total number of items currently in the buffer.</li>
-</ul>
-<p><strong>The Role / Rules:</strong> The Producer must not try to insert data when <code>counter == BUFFER_SIZE</code> (buffer is full). The Consumer must not try to remove data when <code>counter == 0</code> (buffer is empty). Synchronization is required to ensure <code>counter++</code> and <code>counter--</code> do not create a race condition.</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q82" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q82. Explain Peterson's Solution in detail, including its shared variables, working, and how it satisfies the requirements of the Critical-Section Problem.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p><strong>Peterson's Solution</strong> is a software-based synchronization algorithm for two processes (P0 and P1).</p>
-<p><strong>Shared Variables:</strong></p>
-<ul>
-<li><code>boolean flag[2] = {false, false};</code> (Indicates if a process <em>wants</em> to enter).</li>
-<li><code>int turn;</code> (Indicates whose turn it <em>actually</em> is).</li>
-</ul>
-<p><strong>Working (Code for P0):</strong><br>
-<code>flag[0] = true;</code><br>
-<code>turn = 1;</code> // Be polite, offer turn to P1<br>
-<code>while (flag[1] == true &amp;&amp; turn == 1);</code> // Wait if P1 wants it AND it's P1's turn<br>
-<em>...Critical Section...</em><br>
-<code>flag[0] = false;</code> // Exit</p>
-<p><strong>Requirements Satisfied:</strong> It guarantees Mutual exclusion (only one process can have <code>turn == its_id</code>), Progress (a process only waits if the other actively wants to enter), and Bounded waiting (the <code>turn</code> variable acts as a strict alternator, preventing starvation).</p>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q83" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q83. Explain Semaphores in detail — their two fundamental operations (wait and signal), their types (counting and binary), and their disadvantages (busy waiting and possibility of deadlock).</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <p>A <strong>Semaphore (S)</strong> is an integer variable accessed only through two atomic operations:</p>
-<ul>
-<li><strong>wait(S):</strong> <code>while(S &lt;= 0); S--;</code> (Waits until S > 0, then decrements it).</li>
-<li><strong>signal(S):</strong> <code>S++;</code> (Increments S).</li>
-</ul>
-<p><strong>Types:</strong></p>
-<ol>
-<li><strong>Binary (Mutex):</strong> S is 0 or 1. Used for mutual exclusion.</li>
-<li><strong>Counting:</strong> S can be any integer. Used to manage a pool of identical resources.</li>
-</ol>
-<p><strong>Disadvantages:</strong></p>
-<ul>
-<li><strong>Busy Waiting (Spinlock):</strong> Standard semaphores waste CPU cycles looping endlessly in <code>wait()</code> if the lock isn't free.</li>
-<li><strong>Deadlock:</strong> If two processes hold one semaphore each and wait for the other's, they freeze forever.</li>
-</ul>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q84" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q84. Explain the three requirements of a solution to the Critical-Section Problem — Mutual Exclusion, Progress, and Bounded Waiting — describing the significance of each with examples.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <ol>
-<li><strong>Mutual Exclusion:</strong> Absolute prevention of simultaneous access. <em>Significance:</em> If P1 is writing to a bank balance variable, P2 cannot read or write to it, preventing corrupted math.</li>
-<li><strong>Progress:</strong> If the critical section is empty, processes that wish to enter cannot be blocked forever by processes executing in their remainder sections. <em>Significance:</em> Ensures the system doesn't freeze just because nobody is currently using the shared resource.</li>
-<li><strong>Bounded Waiting:</strong> A bound must exist on the number of times other processes are allowed to enter their critical sections after a process has made a request to enter its own. <em>Significance:</em> Prevents starvation. P1 shouldn't have to wait forever while P2 rapidly enters and exits 100 times.</li>
-</ol>
-                        </div>
-                    </details>
-                    
                     <details class="q-card" id="q85" data-unit="III" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q85. Explain the working of the Test-and-Set Lock hardware synchronization mechanism, and evaluate which requirements of the Critical-Section Problem it satisfies and which it does not.</h3>
@@ -2394,36 +1824,6 @@ lock = false;</code></pre>
 <li><strong>Progress: YES.</strong> When the lock is released, a waiting process will immediately grab it.</li>
 <li><strong>Bounded Waiting: NO.</strong> There is no queue. If multiple processes are spinning, the hardware might arbitrarily keep giving the lock to P1 over and over, starving P2.</li>
 </ul>
-                        </div>
-                    </details>
-                    
-                    <details class="q-card" id="q86" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
-                        <summary>
-                            <h3>Q86. Differentiate between Semaphores and Monitors in detail, and explain why Monitors are considered a higher-level and easier-to-use synchronization construct.</h3>
-                            <div class="card-meta">
-                                <div class="badges">
-                                    <span class="badge unit-3">Unit III</span>
-                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
-                                    <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
-                                    
-                                </div>
-                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
-                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
-                                </label>
-                            </div>
-                        </summary>
-                        <div class="answer-content">
-                            <table>
-<thead><tr><th>Semaphores</th><th>Monitors</th></tr></thead>
-<tbody>
-<tr><td>Low-level OS construct (integer variable).</td><td>High-level programming language construct.</td></tr>
-<tr><td>Can be scattered anywhere in the code.</td><td>Encapsulates all shared data and methods in one block.</td></tr>
-<tr><td>Developer must manually call <code>wait()</code> and <code>signal()</code> in exact order.</td><td>The compiler automatically enforces mutual exclusion. Only one process can execute inside a monitor at a time.</td></tr>
-<tr><td>A single typo (e.g., two <code>wait()</code> calls) causes catastrophic deadlocks.</td><td>Much safer; drastically reduces synchronization bugs.</td></tr>
-</tbody>
-</table>
                         </div>
                     </details>
                     

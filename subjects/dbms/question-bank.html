@@ -48,11 +48,7 @@
             <div class="modal-header">
                 <h3>Search & Filters</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="controls-top">
@@ -91,11 +87,7 @@
             <div class="modal-header">
                 <h3>Quick Jump</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
             </div>
             <div class="modal-body">
                 
@@ -390,11 +382,7 @@
             <div class="modal-header" style="flex-shrink: 0;">
                 <h3>Flashcards</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
             </div>
             <div class="modal-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; overflow: hidden; padding-bottom: 2rem;">
                 
@@ -2417,7 +2405,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q53" data-unit="II" data-bloom="L3" data-marks="2" data-important="true">
+                    <details class="q-card" id="q53" data-unit="II" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q53. Consider the relational schema Student(sid, sname), Course(cid, cname), Enrollment(sid, cid). Write relational algebra expressions.</h3>
                             <div class="card-meta">
@@ -2425,8 +2413,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2968,7 +2954,7 @@ GROUP BY DeptID;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q68" data-unit="II" data-bloom="L4" data-marks="3" data-important="true">
+                    <details class="q-card" id="q68" data-unit="II" data-bloom="L4" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q68. How is the HAVING clause different from the WHERE clause? Justify with an example.</h3>
                             <div class="card-meta">
@@ -2976,8 +2962,6 @@ GROUP BY DeptID;</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3224,7 +3208,7 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q76" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q76" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q76. Explain generalization, specialization and aggregation in the Extended E-R model.</h3>
                             <div class="card-meta">
@@ -3232,8 +3216,6 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3296,7 +3278,7 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q77" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q77" data-unit="II" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q77. What is decomposition? Explain the concepts of lossless-join and dependency-preserving decomposition.</h3>
                             <div class="card-meta">
@@ -3304,8 +3286,6 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3875,7 +3855,7 @@ SELECT * FROM Student;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q98" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q98" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q98. Explain the five constraints NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY and CHECK, giving an example of each.</h3>
                             <div class="card-meta">
@@ -3883,8 +3863,6 @@ SELECT * FROM Student;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4037,7 +4015,7 @@ ADD CONSTRAINT chk_salary CHECK (Salary &gt; 0);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q105" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q105" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q105. Explain the numeric functions ROUND, TRUNCATE, CEIL, FLOOR, ABS, MOD, POWER and SQRT, giving an example of each.</h3>
                             <div class="card-meta">
@@ -4045,8 +4023,6 @@ ADD CONSTRAINT chk_salary CHECK (Salary &gt; 0);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4155,7 +4131,7 @@ SELECT MOD(29, 2);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q110" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q110" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q110. Explain the date functions CURDATE, DATEDIFF, DATE_ADD/DATE_SUB and DATE_FORMAT, giving an example of each.</h3>
                             <div class="card-meta">
@@ -4163,8 +4139,6 @@ SELECT MOD(29, 2);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4182,7 +4156,7 @@ SELECT MOD(29, 2);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q111" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q111" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q111. Explain the string functions CONCAT, UPPER/LOWER, LENGTH, SUBSTRING and TRIM/REPLACE, giving an example of each.</h3>
                             <div class="card-meta">
@@ -4190,8 +4164,6 @@ SELECT MOD(29, 2);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4315,7 +4287,7 @@ FROM STUDENT;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q117" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q117" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q117. Explain UNION, UNION ALL, INTERSECT and MINUS/EXCEPT with an example of each. What condition must both the SELECT statements satisfy before these operators can be applied?</h3>
                             <div class="card-meta">
@@ -4323,8 +4295,6 @@ FROM STUDENT;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4437,7 +4407,7 @@ SELECT Name FROM CLUB_MUSIC;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q122" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q122" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q122. What is a transaction? Explain the ACID properties with the help of a bank transfer example.</h3>
                             <div class="card-meta">
@@ -4445,8 +4415,6 @@ SELECT Name FROM CLUB_MUSIC;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 10.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4499,7 +4467,7 @@ SELECT Name FROM CLUB_MUSIC;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q123" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q123" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q123. Explain COMMIT, ROLLBACK and SAVEPOINT with a suitable example on the ACCOUNT table.</h3>
                             <div class="card-meta">
@@ -4507,8 +4475,6 @@ SELECT Name FROM CLUB_MUSIC;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4633,7 +4599,7 @@ FROM ACCOUNT;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q128" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q128" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q128. In one or two lines each, state the purpose of a stored procedure, a sequence (AUTO_INCREMENT in MySQL), a cursor and a trigger.</h3>
                             <div class="card-meta">
@@ -4641,8 +4607,6 @@ FROM ACCOUNT;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">

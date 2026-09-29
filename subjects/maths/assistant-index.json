@@ -7,7 +7,7 @@
     "bloom": "L2",
     "co": "CO1",
     "score": 5.5,
-    "important": true,
+    "important": false,
     "title": "Determine whether each of the following is a proposition. If it is a proposition, state whether it is True or False. (a) Every prime number greater than 2 is odd. (b) 7 + 8 = 16. (c) The Moon is a planet. (d) India is located in Asia.",
     "url": "question-bank.html?open=u1_pa_q1",
     "chunks": [
@@ -23,7 +23,7 @@
     "bloom": "L2",
     "co": "CO1",
     "score": 8.2,
-    "important": true,
+    "important": false,
     "title": "Let p: It is raining, q: I carry an umbrella. Translate the following symbolic propositions into English. (a) p \u2227 q (b) p \u2228 q",
     "url": "question-bank.html?open=u1_pa_q2",
     "chunks": [
@@ -71,7 +71,7 @@
     "bloom": "L3",
     "co": "CO1",
     "score": 6.6,
-    "important": true,
+    "important": false,
     "title": "Show the compound proposition (p \u2194 q) \u2261 (p \u2192 q) \u2227 (q \u2192 p) is logically equivalent.",
     "url": "question-bank.html?open=u1_pa_q5",
     "chunks": [
@@ -87,7 +87,7 @@
     "bloom": "L2",
     "co": "CO1",
     "score": 9.3,
-    "important": false,
+    "important": true,
     "title": "Let p: It is raining, q: I carry an umbrella, r: I wear a raincoat. Write the following statements in symbolic form. (a) It is raining and I carry an umbrella. (b) It is not raining but I wear a raincoat.",
     "url": "question-bank.html?open=u1_pa_q6",
     "chunks": [
@@ -151,7 +151,7 @@
     "bloom": "L3",
     "co": "CO1",
     "score": 7.8,
-    "important": true,
+    "important": false,
     "title": "Construct the truth table of the following: (a) (p \u2192 q) (b) (\u00acp \u2228 q).",
     "url": "question-bank.html?open=u1_pa_q10",
     "chunks": [
@@ -183,7 +183,7 @@
     "bloom": "L2",
     "co": "CO1",
     "score": 9.6,
-    "important": false,
+    "important": true,
     "title": "Let p, q, r be as above. Translate the following symbolic propositions into English (a) (p \u2227 q) \u2192 r (b) (p \u2228 q) \u2227 \u00acr",
     "url": "question-bank.html?open=u1_pb_q2",
     "chunks": [
@@ -216,7 +216,7 @@
     "bloom": "L3",
     "co": "CO1",
     "score": 8.0,
-    "important": true,
+    "important": false,
     "title": "Let p and q be the propositions \u201cThe election is decided\u201d and \u201cThe votes have been counted,\u201d respectively. Express each of these compound propositions as an English sentence. (a) \u00acq \u2192 \u00acp (b) \u00acp \u2192 \u00acq (c) \u00acq \u2228 (\u00acp \u2227 q)",
     "url": "question-bank.html?open=u1_pb_q4",
     "chunks": [
@@ -265,7 +265,7 @@
     "bloom": "L3",
     "co": "CO1",
     "score": 7.2,
-    "important": true,
+    "important": false,
     "title": "Construct a truth table for each of the following compound propositions. (a) (p \u2192 q) \u2194 (\u00acq \u2192 \u00acp) (b) (p \u2192 q) \u2192 (q \u2192 p)",
     "url": "question-bank.html?open=u1_pb_q7",
     "chunks": [
@@ -314,7 +314,7 @@
     "bloom": "L3",
     "co": "CO1",
     "score": 6.9,
-    "important": true,
+    "important": false,
     "title": "Using truth tables, prove the following (a) (p \u2227 q) \u2228 (\u00acp \u2227 q) \u2261 q (b) (p \u2228 q) \u2227 (p \u2228 \u00acq) \u2261 p",
     "url": "question-bank.html?open=u1_pb_q10",
     "chunks": [
@@ -364,7 +364,7 @@
     "bloom": "L3",
     "co": "CO1",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Construct a truth table for each of the following compound propositions. (a) (p \u2194 q) \u2295 (\u00acp \u2194 \u00acr) (b) (\u00acp \u2194 \u00acq) \u2194 (q \u2194 r)",
     "url": "question-bank.html?open=u1_pc_q3",
     "chunks": [
@@ -398,7 +398,7 @@
     "bloom": "L3",
     "co": "CO1",
     "score": 5.2,
-    "important": true,
+    "important": false,
     "title": "State the converse, contrapositive, and inverse of each of these conditional statements. (a) If it snows tonight, then I will stay at home. (b) I go to the beach whenever it is a sunny summer day.",
     "url": "question-bank.html?open=u1_pc_q5",
     "chunks": [
@@ -447,7 +447,7 @@
     "bloom": "L3",
     "co": "CO1",
     "score": 9.2,
-    "important": false,
+    "important": true,
     "title": "Determine whether each of these conditional statements is true or false. (a) If 1 + 1 = 2, then 2 + 2 = 5. (b) If 1 + 1 = 3, then 2 + 2 = 4. (c) If 1 + 1 = 3, then 2 + 2 = 5. (d) If monkeys can fly, then 1 + 1 = 3. (e) If 1 + 1 = 2, then dogs can fly",
     "url": "question-bank.html?open=u1_pc_q8",
     "chunks": [
@@ -463,7 +463,7 @@
     "bloom": "L3",
     "co": "CO1",
     "score": 8.6,
-    "important": true,
+    "important": false,
     "title": "Express these system specifications using the propositions p \u201cThe user enters a valid password,\u201d q \u201cAccess is granted,\u201d and r \u201cThe user has paid the subscription fee\u201d and logical connectives (including negations). (a) \u201cThe user has paid the subscription fee, but does not enter a valid password.\u201d (b) \u201cAccess is granted whenever the user has paid the subscription fee and enters a valid password.\u201d",
     "url": "question-bank.html?open=u1_pc_q9",
     "chunks": [
@@ -543,7 +543,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9.6,
-    "important": false,
+    "important": true,
     "title": "Find a2 and a3 terms of the following recurrence relation a_n = a_{n-1}^2 if a_1 = 2.",
     "url": "question-bank.html?open=u2_a4",
     "chunks": [
@@ -607,7 +607,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 6.7,
-    "important": true,
+    "important": false,
     "title": "Find the generating function for the sequence: 1,2,3,4, ...",
     "url": "question-bank.html?open=u2_a8",
     "chunks": [
@@ -623,7 +623,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 7.2,
-    "important": true,
+    "important": false,
     "title": "Solve the following recurrence relation: a_n = 4a_{n-1} - a_{n-2}",
     "url": "question-bank.html?open=u2_a9",
     "chunks": [
@@ -687,7 +687,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 9.2,
-    "important": false,
+    "important": true,
     "title": "Solve the following recurrence relation: a_n = 10a_{n-1} - 25a_{n-2}, a_0 = 3, a_1 = 25",
     "url": "question-bank.html?open=u2_b3",
     "chunks": [
@@ -735,7 +735,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9.2,
-    "important": false,
+    "important": true,
     "title": "How many different 4-letter words can be formed using the letters of the word MATH, when each letter can be used only once?",
     "url": "question-bank.html?open=u2_b6",
     "chunks": [
@@ -751,7 +751,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.2,
-    "important": true,
+    "important": false,
     "title": "Solve the following recurrence relation: a_n = 6a_{n-1} - 9a_{n-2}, a_0 = 1, a_1 = 9",
     "url": "question-bank.html?open=u2_b7",
     "chunks": [
@@ -767,7 +767,7 @@
     "bloom": "L4",
     "co": "CO2",
     "score": 9.2,
-    "important": true,
+    "important": false,
     "title": "Solve the following recurrence relation: a_n - 4a_{n-1} + 5a_{n-2} - 2a_{n-3} = 0 given a_0 = 1, a_1 = 3, a_2 = 8",
     "url": "question-bank.html?open=u2_b8",
     "chunks": [
@@ -799,7 +799,7 @@
     "bloom": "L4",
     "co": "CO2",
     "score": 7.4,
-    "important": true,
+    "important": false,
     "title": "Solve the following recurrence relation by using generating function: a_n = 3a_{n-1} + 2a_{n-2} given a_0 = 1, a_1 = 3",
     "url": "question-bank.html?open=u2_b10",
     "chunks": [
@@ -831,7 +831,7 @@
     "bloom": "L4",
     "co": "CO2",
     "score": 7.2,
-    "important": true,
+    "important": false,
     "title": "Solve the following recurrence relation by using generating function: a_n = 3a_{n-1} - 2a_{n-2} given a_0 = 2, a_1 = 5",
     "url": "question-bank.html?open=u2_c2",
     "chunks": [
@@ -847,7 +847,7 @@
     "bloom": "L4",
     "co": "CO2",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "Solve the following recurrence relation: a_{n+2} - 7a_{n+1} + 12a_n = 0, given a_1 = 2, a_2 = 7.",
     "url": "question-bank.html?open=u2_c3",
     "chunks": [
@@ -879,7 +879,7 @@
     "bloom": "L4",
     "co": "CO2",
     "score": 6.2,
-    "important": true,
+    "important": false,
     "title": "Solve the following recurrence relation: a_{n+3} - 5a_{n+2} + 8a_{n+1} - 4a_n = 0, given a_1 = 2, a_2 = 5, a_3 = 14",
     "url": "question-bank.html?open=u2_c5",
     "chunks": [
@@ -911,7 +911,7 @@
     "bloom": "L4",
     "co": "CO2",
     "score": 5.8,
-    "important": true,
+    "important": false,
     "title": "Solve the following recurrence relation by using generating function: a_n = 2a_{n-1} + 3a_{n-2} given a_0 = 1, a_1 = 2",
     "url": "question-bank.html?open=u2_c7",
     "chunks": [
@@ -927,7 +927,7 @@
     "bloom": "L4",
     "co": "CO2",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "Solve the following recurrence relation: a_{n+3} - 5a_{n+2} + 8a_{n+1} - 4a_n = 0 given a_1 = 1, a_2 = 4, a_3 = 11",
     "url": "question-bank.html?open=u2_c8",
     "chunks": [
@@ -943,7 +943,7 @@
     "bloom": "L4",
     "co": "CO2",
     "score": 6.1,
-    "important": true,
+    "important": false,
     "title": "Solve the following recurrence relation: a_n = 8a_{n-1} - 21a_{n-2} + 18a_{n-3}, subject to a_0 = 1, a_1 = 5, a_2 = 19.",
     "url": "question-bank.html?open=u2_c9",
     "chunks": [
@@ -959,7 +959,7 @@
     "bloom": "L4",
     "co": "CO2",
     "score": 6.7,
-    "important": true,
+    "important": false,
     "title": "Solve the following recurrence relation by using generating function: a_n = a_{n-1} + a_{n-2} given a_0 = 0, a_1 = 1",
     "url": "question-bank.html?open=u2_c10",
     "chunks": [
@@ -975,7 +975,7 @@
     "bloom": "L1",
     "co": "CO3",
     "score": 5.4,
-    "important": true,
+    "important": false,
     "title": "Define the following terms with graphs: (i) Complete Bipartite Graph (ii) Complete graph",
     "url": "question-bank.html?open=u3_a_q1",
     "chunks": [
@@ -1007,7 +1007,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 6.9,
-    "important": true,
+    "important": false,
     "title": "Find degree of the following graph.",
     "url": "question-bank.html?open=u3_a_q3",
     "chunks": [
@@ -1023,7 +1023,7 @@
     "bloom": "L1",
     "co": "CO3",
     "score": 5.5,
-    "important": true,
+    "important": false,
     "title": "State the Handshaking Theorem.",
     "url": "question-bank.html?open=u3_a_q4",
     "chunks": [
@@ -1039,7 +1039,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 8.1,
-    "important": true,
+    "important": false,
     "title": "Determine the types of following graphs.",
     "url": "question-bank.html?open=u3_a_q5",
     "chunks": [
@@ -1085,24 +1085,33 @@
     "url": "cheat-sheet.html",
     "chunks": [
       "Dashboard\n\n            Revision Hub\n\n                Save as PDF\n\n                Theme",
-      "Discrete Mathematics Cheat Sheet \n\nLogic | Recurrence Relations | Graph Theory\n\n                Quick Jump: \n                Unit I\n                Unit II\n                Unit III\n\n                Mode: Dark",
+      "Discrete Mathematics Cheat Sheet \n\nLogic | Recurrence Relations | Graph Theory | Set Theory | Automata\n\n                Quick Jump: \n                Unit I\n                Unit II\n                Unit III\n                Unit IV\n                Unit V\n\n                Mode: Dark",
       "Unit I: Propositional Logic CO1",
-      "Logic Operators \n\nNameSymbolMeaning\n\nConjunctionp \u2227 qAND\n\nDisjunctionp \u2228 qOR\n\nNegation\u00acpNOT\n\nImplicationp \u2192 qIF...THEN\n\nBiconditionalp \u2194 qIFF\n\nXORp \u2295 qExclusive OR",
-      "Tautology & Contradiction \n\nTautology: A proposition that is always True (e.g., p \u2228 \u00acp).\n\nContradiction: A proposition that is always False (e.g., p \u2227 \u00acp).\n\nContingency: A proposition that can be True or False depending on truth values.",
-      "Conditionals \n\nFor a conditional statement p \u2192 q:\n\nTypeForm\n\nConverseq \u2192 p\n\nInverse\u00acp \u2192 \u00acq\n\nContrapositive\u00acq \u2192 \u00acp\n\nNote: p \u2192 q \u2261 \u00acq \u2192 \u00acp (Logically equivalent to contrapositive)",
-      "Key Logical Equivalences \n\nDe Morgan's\u00ac(p \u2227 q) \u2261 \u00acp \u2228 \u00acq\n\u00ac(p \u2228 q) \u2261 \u00acp \u2227 \u00acq\n\nImplicationp \u2192 q \u2261 \u00acp \u2228 q\n\nDouble Negation\u00ac(\u00acp) \u2261 p\n\nBiconditionalp \u2194 q \u2261 (p \u2192 q) \u2227 (q \u2192 p)",
+      "Fundamental Logic Operators \n\nConnectives establish truth-functional relationships between propositions. Master implications (\\(p \\rightarrow q\\)) and biconditionals (\\(p \\leftrightarrow q\\)), as they form the bedrock of mathematical proofs.\n\nExample: \"If it rains (p), then the ground is wet (q).\" \\(p \\rightarrow q\\).",
+      "Logical Equivalences \n\nDe Morgan's Laws (\\(\\neg(p \\land q) \\equiv \\neg p \\lor \\neg q\\)) and Implication Equivalence (\\(p \\rightarrow q \\equiv \\neg p \\lor q\\)) are pivotal for simplifying compound propositions without brute-force truth tables.\n\nExample: \"It's false that I am cold AND tired\" equals \"I am not cold OR I am not tired.\"",
+      "Predicates & Quantifiers \n\nExaminer Trick: Nested Quantifiers. Remember that \\(\\forall x \\exists y\\) is NOT equivalent to \\(\\exists y \\forall x\\). The order dictates dependency!\n\nUniversal (\\(\\forall\\)) implies all elements in the domain; Existential (\\(\\exists\\)) asserts at least one exists. Negating them flips the quantifier.\n\nExample: \\(\\neg(\\forall x P(x)) \\equiv \\exists x \\neg P(x)\\).",
+      "Rules of Inference \n\nModus Ponens (\\(p, p \\rightarrow q \\vdash q\\)) and Modus Tollens (\\(\\neg q, p \\rightarrow q \\vdash \\neg p\\)) validate arguments syntactically.\n\nNiche Topic: Fallacy of Affirming the Consequent. Given \\(p \\rightarrow q\\) and \\(q\\), concluding \\(p\\) is invalid.\n\nExample: If it rains, ground is wet. Ground is wet. Therefore, it rained (Invalid!).",
       "Unit II: Counting Methods CO2",
-      "Permutations & Combinations \n\nPermutation (Order matters):\n nPr = n! / (n-r)!\n\nCombination (Order doesn't matter):\n nCr = n! / (r!(n-r)!)\n\nIdentity: nCr = nCn-r",
-      "Linear Homogeneous Recurrences \n\nForm: an = c1an-1 + c2an-2 + ... + ckan-k\n\nDegree/Order: k (number of previous terms involved)\n\nCharacteristic Eq: rk - c1rk-1 - ... - ck = 0",
-      "Solving Recurrences (Roots) \n\nBased on roots of the Characteristic Equation:\n\nRootsGeneral Solution\n\nDistinct (r1 \u2260 r2)an = c1r1n + c2r2n\n\nRepeated (r1 = r2)an = (c1 + c2n)r1n\n\nMultiplicity man = (c1 + c2n + ... + cmnm-1)r1n",
-      "Generating Functions \n\nFor a sequence a0, a1, a2..., G(x) = \u03a3 anxn\n\nSequence 1, 1, 1, ...: G(x) = 1 / (1 - x)\n\nSequence 1, 2, 3, ...: G(x) = 1 / (1 - x)2\n\nSequence an: G(x) = 1 / (1 - ax)\n\nFibonacci Sequence: G(x) = x / (1 - x - x2)",
+      "Pigeonhole Principle \n\nIf \\(N\\) items are placed into \\(k\\) boxes, at least one box contains \\(\\lceil N/k \\rceil\\) items. Crucial for existence proofs without direct construction.\n\nExample: Among 13 people, at least 2 were born in the same month.",
+      "Combinatorics: Stars and Bars \n\nNiche Topic: Stars & Bars (Multiset Coefficients). Finds non-negative integer solutions to \\(x_1 + x_2 + ... + x_k = n\\).\n\nFormula is \\(C(n + k - 1, k - 1)\\). Applies when items are indistinguishable but bins are distinct.\n\nExample: Distributing 10 identical candies among 3 children: \\(C(10+3-1, 3-1) = 66\\).",
+      "Linear Recurrence Relations \n\nCharacterize sequences via previous terms. Solve \\(a_n = c_1a_{n-1} + c_2a_{n-2}\\) using the characteristic equation \\(r^2 - c_1r - c_2 = 0\\).\n\nExample: Fibonacci \\(a_n = a_{n-1} + a_{n-2}\\) gives roots \\((1 \\pm \\sqrt{5})/2\\).",
+      "Generating Functions \n\nExaminer Trick: Using partial fraction decomposition to extract coefficients from \\(G(x) = \\sum a_n x^n\\).\n\nTranslates sequence convolution into polynomial multiplication, elegantly solving non-homogeneous recurrences.\n\nExample: Sequence 1, 1, 1... corresponds to \\(1/(1-x)\\).",
       "Unit III: Graph Theory CO3",
-      "Complete & Bipartite Graphs \n\nComplete Graph (Kn): Every pair of vertices is connected by a unique edge. Edges = n(n-1)/2.\n\nBipartite Graph: Vertices can be partitioned into V1 and V2 such that every edge connects V1 to V2.\n\nComplete Bipartite (Km,n): Every vertex in V1 connects to every vertex in V2. Edges = m \u00d7 n.",
-      "Handshaking Theorem \n\n\u03a3 deg(v) = 2|E|\n\nThe sum of degrees of all vertices is always even (twice the number of edges).\n\nThe number of vertices with an odd degree must be even.",
-      "Graph Matrices \n\nAdjacency Matrix (A): Square matrix. Aij = number of edges between vi and vj.\n\nIncidence Matrix (M): Rows = vertices, Columns = edges. Mij = 1 if edge ej is incident on vi.",
-      "Graph Isomorphism \n\nTwo graphs G1 and G2 are isomorphic if they share the same structure. They must have the same:\n\nNumber of vertices and edges\n\nDegree sequence (list of vertex degrees)\n\nNumber of cycles of same length\n\n\ufeff",
-      "Ask AI (Lite) Lite Smart (WebGPU) Deep (Cloud) Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next. Send let assistantApp = null; async function openAssistant() { if (document.querySelector('.ask-ai-btn') && document.querySelector('.ask-ai-btn').getAttribute('data-dragged') === 'true') return; const modal = document.getElementById('assistantModal'); if (modal.style.display === 'flex') { closeAssistant(); return; } modal.style.display = 'flex'; // Removed FAB hide so it stays visible // slight delay for transition setTimeout(() => { modal.style.opacity = '1'; modal.style.transform = 'translateY(0)'; }, 10); if (window.innerWidth > 768) { document.getElementById('assistantInput').focus(); } if (!assistantApp) { try { const { initAssistant } = await import('../../shared/assistant-ui.js'); assistantApp = await initAssistant('maths'); if (!assistantApp) throw new Error(\"App init failed\"); } catch (e) { console.error(e); const msgs = document.getElementById('assistantMessages'); msgs.innerHTML = I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).; } } } function closeAssistant() { // FAB stays independent now const modal = document.getElementById('assistantModal'); modal.style.opacity = '0'; modal.style.transform = 'translateY(20px)'; setTimeout(() => { modal.style.display = 'none'; }, 300); } function submitAssistantQuery(q) { const input = document.getElementById('assistantInput'); const query = q || input.value.trim(); if",
-      "(!query) return; if (!assistantApp) { const msgs = document.getElementById('assistantMessages'); msgs.innerHTML = I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).; return; } input.value = ''; assistantApp.handleQuery(query); }"
+      "Handshaking Lemma \n\nThe sum of degrees of all vertices equals \\(2|E|\\). A foundational invariant proving odd-degree vertices must occur in pairs.\n\nExample: A graph with 5 vertices of degree 3 cannot exist since \\(15 \\neq 2|E|\\).",
+      "Euler & Hamilton Paths \n\nExaminer Trick: Euler traverses all edges exactly once; Hamilton traverses all vertices exactly once. Do not conflate them!\n\nEuler circuits require all vertices to have an even degree. Hamiltonian has no simple definitive check (NP-complete).\n\nExample: \\(K_3\\) has both paths, but \\(K_{2,3}\\) is not Hamiltonian.\n\n                        graph TD\n                            A((Odd)) --- B((Odd))\n                            A --- C((Even))\n                            B --- C\n                            C --- D((Even))\n                            C --- E((Even))\n                            D --- E",
+      "Graph Isomorphism \n\nTwo graphs are isomorphic if a bijection preserves adjacency. Invariants: vertex count, edge count, and degree sequence.\n\nExample: A square and a 4-cycle drawn as a figure-eight are isomorphic.",
+      "Bipartite Graphs & Matching \n\nNiche Topic: Hall's Marriage Theorem. A bipartite graph \\(G=(V_1, V_2, E)\\) has a complete matching for \\(V_1\\) iff \\(|N(S)| \\ge |S|\\) for all \\(S \\subseteq V_1\\).\n\nA graph is bipartite if and only if it contains no odd-length cycles.\n\nExample: Assigning 3 workers to 3 tasks optimally without overlap.",
+      "Unit IV: Set Theory & Relations CO4",
+      "Set Operations & Power Sets \n\nOperations include union, intersection, difference, and symmetric difference (\\(\\oplus\\)). The power set \\(\\mathcal{P}(S)\\) contains all subsets.\n\nExample: If \\(S = \\{1, 2\\}\\), \\(\\mathcal{P}(S) = \\{\\emptyset, \\{1\\}, \\{2\\}, \\{1, 2\\}\\}\\). Size is \\(2^n\\).",
+      "Equivalence Relations \n\nA relation must be reflexive (\\(xRx\\)), symmetric (\\(xRy \\implies yRx\\)), and transitive (\\(xRy \\land yRz \\implies xRz\\)). Forms equivalence classes.\n\nExample: Congruence modulo \\(n\\), where \\(a \\equiv b \\pmod n\\) divides \\(\\mathbb{Z}\\) into \\(n\\) classes.",
+      "Partial Orderings (Posets) \n\nExaminer Trick: Hasse Diagrams. Ensure you remove reflexive loops and transitive edges to depict minimal/maximal elements accurately.\n\nRequires reflexivity, antisymmetry (\\(xRy \\land yRx \\implies x=y\\)), and transitivity.\n\nExample: The \"divides\" relation on integers forms a poset, visualizable via Hasse.\n\n                        graph BT\n                            1 --> 2\n                            1 --> 3\n                            2 --> 6\n                            3 --> 6",
+      "Injective, Surjective, Bijective \n\nNiche Topic: Cardinality mappings. If a bijection exists between two sets, they share the same cardinality (\\(\\aleph_0\\) for countably infinite).\n\nInjective (1-to-1): no two \\(x\\) map to same \\(y\\). Surjective (onto): every \\(y\\) is mapped. Bijective: both, thus invertible.\n\nExample: \\(f(x) = 2x\\) from \\(\\mathbb{R}\\) to \\(\\mathbb{R}\\) is bijective.",
+      "Unit V: Trees & Automata CO5",
+      "Tree Properties \n\nA tree is a connected, undirected graph with no simple circuits. It inherently possesses \\(n-1\\) edges for \\(n\\) vertices.\n\nExample: A hierarchical file system directory structure.",
+      "Spanning Trees \n\nExaminer Trick: Kruskal's vs Prim's. Both find Minimum Spanning Trees, but Kruskal sorts edges globally while Prim expands locally from a node.\n\nA subgraph that contains all vertices and is a tree. Critical for optimizing network routing with minimal cost.\n\nExample: Connecting 5 cities with the least amount of copper wire.",
+      "Finite State Machines (FSMs) \n\nNiche Topic: Pumping Lemma for Regular Languages. Used exclusively to prove a language is NOT regular by demonstrating string repetition violations.\n\nDFAs have exactly one transition per state-symbol pair. NFAs allow multiple. They are computationally equivalent in expressive power.\n\nExample: A vending machine dispensing a soda only after exactly 50 cents is inserted.\n\n                        stateDiagram-v2\n                            [*] --> q0\n                            q0 --> q1: 1\n                            q1 --> q0: 0\n                            q1 --> q2: 1\n                            q2 --> [*]",
+      "Boolean Algebra \n\nA distributive lattice representing logical operations. Simplification uses consensus theorem and Karnaugh maps to minimize circuit gates.\n\nExample: \\(AB + AB' = A(B + B') = A\\).\n\n\ufeff",
+      "Ask AI (Lite) \n\n    Lite\n    Smart (WebGPU)\n    Deep (Cloud)\n\n                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.\n\n                Send"
     ],
     "type": "cheat"
   }

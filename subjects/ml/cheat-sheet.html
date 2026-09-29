@@ -6,6 +6,8 @@
 <title>ML Cheat Sheet</title>
 <link href="../../shared/design-system.css" rel="stylesheet"/>
 
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 </head>
 <body>
     <div class="glow-bg"></div>
@@ -46,10 +48,16 @@
 </div>
 <div>
 <a class="btn btn-secondary" href="../../index.html" style="margin-right: 1rem;">← Dashboard</a>
-<button class="btn btn-secondary" id="themeToggleBtn">Mode: Dark</button>
+
+
+<div class="cheat-card" style="display: none;">
+    <!-- Keeping hidden to maintain DOM structure if scripts depend on it, but avoiding visual clutter -->
 </div>
+<div class="cheat-card" style="display: none;">
 </div>
 
+</div>
+</div>
 
 <div style="display: grid; width: 100%;">
     <div id="pureSkeleton">
@@ -131,164 +139,165 @@
         </div>
         </div>
     </div>
+
     <div id="realContentWrapper">
+
 <div class="unit-section" id="unit1">
-<h3>Unit I: Introduction &amp; Basics <span class="badge unit-1">CO1</span></h3>
+<h3>Unit I: Fundamentals &amp; Hypothesis Spaces <span class="badge unit-1">CO1</span></h3>
 <div class="cheat-grid">
-<div class="cheat-card">
-<h4>ML Paradigms</h4>
-<table>
-<tr><th>Paradigm</th><th>Data Type</th><th>Goal</th></tr>
-<tr><td>Supervised</td><td>Labeled</td><td>Predict targets</td></tr>
-<tr><td>Unsupervised</td><td>Unlabeled</td><td>Find hidden patterns</td></tr>
-<tr><td>Reinforcement</td><td>State-Action</td><td>Maximize reward</td></tr>
-</table>
-</div><div class="cheat-card">
-<h4>Regularization</h4>
-<p>Prevents overfitting by penalizing complex models.</p>
-<table>
-<tr><th>Type</th><th>Penalty Term</th><th>Effect</th></tr>
-<tr><td>Ridge (L2)</td><td><span class="math-expr">λ ∑ θ<sub>i</sub><sup>2</sup></span></td><td>Shrinks coefficients near zero</td></tr>
-<tr><td>Lasso (L1)</td><td><span class="math-expr">λ ∑ |θ<sub>i</sub>|</span></td><td>Feature selection (coeffs = 0)</td></tr>
-</table>
-</div><div class="cheat-card">
-<h4>Naive Bayes Classifier</h4>
-<p><strong>Bayes' Theorem:</strong><br/>
-<span class="math-expr">P(A|B) = [P(B|A) * P(A)] / P(B)</span></p>
-<ul>
-<li><strong>P(A|B):</strong> Posterior</li>
-<li><strong>P(B|A):</strong> Likelihood</li>
-<li><strong>P(A):</strong> Prior</li>
-<li><strong>P(B):</strong> Marginal</li>
-</ul>
-</div></div>
+    <div class="cheat-card">
+        <h4>The Bias-Variance Decomposition</h4>
+        <p>Total Error = Bias² + Variance + Irreducible Error. Bias is the simplifying assumptions (underfitting). Variance is hypersensitivity to noise (overfitting).</p>
+        <p><strong>Example:</strong> Linear regression on sine wave data has high bias; a 50-depth decision tree on noisy data has high variance.</p>
+        <div class="compact-svg">
+            <div class="mermaid">
+            flowchart LR
+                Underfitting["High Bias
+Underfitting"] --> Optimal["Sweet Spot
+Optimal Tradeoff"]
+                Optimal --> Overfitting["High Variance
+Overfitting"]
+                style Optimal fill:#27ae60,stroke:#fff
+            </div>
+        </div>
+    </div>
+
+    <div class="cheat-card">
+        <h4>Curse of Dimensionality & Manifold Hypothesis</h4>
+        <p>As dimensions $D$ increase, the volume of the space grows exponentially, making data extremely sparse. The <em>Manifold Hypothesis</em> posits that real-world high-dimensional data actually lies on low-dimensional, non-linear manifolds embedded within the high-dimensional space.</p>
+        <p><strong>Example:</strong> 1024-pixel images exist in a 1024D space, but valid human faces only span a tiny 50D manifold within it.</p>
+        <div class="exam-trap"><strong>Trick:</strong> PCA only discovers <em>linear</em> manifolds. If the examiner asks to untangle a "Swiss Roll" dataset, you MUST use non-linear methods like ISOMAP or t-SNE!</div>
+    </div>
+
+    <div class="cheat-card">
+        <h4>Inductive Bias & No Free Lunch Theorem</h4>
+        <p><em>No Free Lunch Theorem:</em> Averaged over all possible data distributions, every algorithm performs equally well. Thus, an algorithm must make assumptions (Inductive Bias) to learn effectively.</p>
+        <p><strong>Example:</strong> CNNs have an inductive bias for spatial locality (nearby pixels are related); RNNs assume sequential temporality.</p>
+    </div>
+</div>
 </div>
 
 <div class="unit-section" id="unit2">
-<h3>Unit II: Core Mechanics <span class="badge unit-1">CO2</span></h3>
+<h3>Unit II: Linear Models &amp; Optimization Convexity <span class="badge unit-1">CO2</span></h3>
 <div class="cheat-grid">
-<div class="cheat-card">
-<h4>7-Step ML Lifecycle</h4>
-<ol style="margin: 0; padding-left: 1.2rem; font-size: 0.9rem;">
-<li>Data Collection</li>
-<li>Data Preparation (Cleaning)</li>
-<li>Exploratory Data Analysis (EDA)</li>
-<li>Feature Engineering</li>
-<li>Model Training</li>
-<li>Model Evaluation (Validation)</li>
-<li>Deployment</li>
-</ol>
-</div><div class="cheat-card">
-<h4>Logistic Regression</h4>
-<p><strong>Sigmoid Function:</strong><br/>
-<span class="math-expr">σ(z) = 1 / (1 + e<sup>-z</sup>)</span></p>
-<p>Output range: [0, 1]</p>
-<p><strong>Log-Loss (Binary Cross-Entropy):</strong><br/>
-<span class="math-expr">Cost = -[y log(ŷ) + (1-y)log(1-ŷ)]</span></p>
-</div><div class="cheat-card">
-<h4>Support Vector Machines (SVM)</h4>
-<ul>
-<li><strong>Hyperplane:</strong> Linear decision boundary separating classes.</li>
-<li><strong>Support Vectors:</strong> Closest data points to hyperplane.</li>
-<li><strong>Hard vs Soft Margin:</strong> Soft margin allows misclassifications (slack) to prevent overfitting.</li>
-<li><strong>Kernel Trick:</strong> Maps data to higher dims (RBF, Poly) for non-linear separation.</li>
-</ul>
-</div></div>
+    <div class="cheat-card">
+        <h4>Logistic Regression & Cross-Entropy</h4>
+        <p>Uses the Sigmoid function $\sigma(z) = \frac{1}{1 + e^{-z}}$ to map logits to probabilities. Optimized via Log-Loss (Binary Cross-Entropy), heavily penalizing confident, wrong predictions logarithmically.</p>
+        <p><strong>Example:</strong> Predicting if an email is spam. If the model outputs 0.99 for a ham email, the log-loss penalty approaches infinity.</p>
+    </div>
+
+    <div class="cheat-card">
+        <h4>SVMs, Maximum Margin & Kernel Trick</h4>
+        <p>SVMs maximize the margin $\frac{2}{||w||}$ between support vectors. The <em>Kernel Trick</em> uses Mercer’s theorem to implicitly compute dot products in a high-dimensional feature space without explicit transformation mapping $\phi(x)$.</p>
+        <p><strong>Example:</strong> An RBF kernel classifying concentric circles by projecting them into 3D space where a flat hyperplane can cleanly slice them.</p>
+        <div class="pro-tip"><strong>Pro-Tip:</strong> The $C$ parameter in Soft-Margin SVM controls the penalty for misclassification. Low $C$ = wide margin (high bias). High $C$ = hard margin (high variance/overfitting).</div>
+    </div>
+
+    <div class="cheat-card">
+        <h4>VC Dimension & PAC Learning Bounds</h4>
+        <p><em>Probably Approximately Correct (PAC)</em> framework provides mathematical bounds on sample complexity. <em>Vapnik-Chervonenkis (VC) Dimension</em> is the maximum number of points a hypothesis class can perfectly shatter (memorize).</p>
+        <p><strong>Example:</strong> A 2D linear classifier has a VC dimension of 3, meaning it can perfectly classify any arrangement of 3 points, but fails on some arrangements of 4 points (like XOR).</p>
+    </div>
+</div>
 </div>
 
 <div class="unit-section" id="unit3">
-<h3>Unit III: Advanced Concepts <span class="badge unit-1">CO3</span></h3>
+<h3>Unit III: Ensemble Theory &amp; Information Metrics <span class="badge unit-1">CO3</span></h3>
 <div class="cheat-grid">
-<div class="cheat-card">
-<h4>Linear Regression</h4>
-<p><strong>Hypothesis:</strong> <span class="math-expr">h<sub>θ</sub>(x) = θ<sub>0</sub> + θ<sub>1</sub>x<sub>1</sub> + ... + θ<sub>n</sub>x<sub>n</sub></span></p>
-<p><strong>Cost Function (MSE):</strong><br/>
-<span class="math-expr">J(θ) = (1/2m) ∑ (h<sub>θ</sub>(x<sup>(i)</sup>) - y<sup>(i)</sup>)<sup>2</sup></span></p>
-<p><strong>Goal:</strong> Minimize sum of squared residual errors (OLS).</p>
-</div><div class="cheat-card">
-<h4>Confusion Matrix Formulas</h4>
-<table>
-<tr><th>Metric</th><th>Formula</th></tr>
-<tr><td>Accuracy</td><td><span class="math-expr">(TP+TN) / (P+N)</span></td></tr>
-<tr><td>Precision</td><td><span class="math-expr">TP / (TP+FP)</span></td></tr>
-<tr><td>Recall (TPR)</td><td><span class="math-expr">TP / (TP+FN)</span></td></tr>
-<tr><td>F1-Score</td><td><span class="math-expr">2 * (P*R)/(P+R)</span></td></tr>
-</table>
-</div><div class="cheat-card">
-<h4>Ensemble Methods</h4>
-<table>
-<tr><th>Algorithm</th><th>Mechanism</th></tr>
-<tr><td>Random Forest</td><td>Bagging (Parallel decision trees + voting/averaging)</td></tr>
-<tr><td>AdaBoost</td><td>Boosting (Sequential models fixing previous errors)</td></tr>
-<tr><td>XGBoost / GBM</td><td>Gradient Boosting (Optimizes loss sequentially)</td></tr>
-</table>
-</div></div>
+    <div class="cheat-card">
+        <h4>Ensemble Meta-Algorithms</h4>
+        <p><strong>Bagging</strong> trains parallel models on bootstrapped data (decreases variance). <strong>Boosting</strong> trains sequential weak learners focused on correcting prior residual errors (decreases bias).</p>
+        <p><strong>Example:</strong> Random Forest (Bagging) averages 100 deep trees. XGBoost (Boosting) strings together 100 shallow stumps to minimize a gradient loss function.</p>
+        <div class="compact-svg">
+            <div class="mermaid">
+            flowchart TD
+                Data -->|Bootstrap| M1[Model 1]
+                Data -->|Bootstrap| M2[Model 2]
+                M1 & M2 -->|Average| Bagging[Bagging/RF]
+                
+                Data2[Data] --> W1[Weak 1]
+                W1 -->|Weighted Errors| W2[Weak 2]
+                W2 --> Boosting[Boosting/XGB]
+            </div>
+        </div>
+    </div>
+
+    <div class="cheat-card">
+        <h4>Information Gain & Gini Impurity</h4>
+        <p>Decision trees recursively partition data. They maximize <em>Information Gain</em> (reduction in Shannon Entropy $H = -\sum p \log_2 p$) or minimize <em>Gini Impurity</em> ($1 - \sum p^2$) at each node split.</p>
+        <p><strong>Example:</strong> Predicting disease. Splitting on "Fever = True" yields child nodes that are much purer (lower entropy) than the parent node.</p>
+        <div class="exam-trap"><strong>Trick:</strong> Information Gain is inherently biased towards attributes with high cardinality (e.g., User ID). The examiner will test this: always use <em>Gain Ratio</em> to penalize high-branching attributes!</div>
+    </div>
+
+    <div class="cheat-card">
+        <h4>Precision-Recall vs ROC-AUC</h4>
+        <p>ROC curve plots True Positive Rate vs False Positive Rate. PR curve plots Precision vs Recall. ROC is misleading for heavily imbalanced datasets because TNs dominate the FPR denominator.</p>
+        <p><strong>Example:</strong> Fraud detection (0.1% fraud). An ROC-AUC of 0.90 looks great, but PR-AUC reveals the model has terrible precision and produces massive false alarms.</p>
+    </div>
+</div>
 </div>
 
 <div class="unit-section" id="unit4">
-<h3>Unit IV: Design Patterns &amp; Architectures <span class="badge unit-1">CO4</span></h3>
+<h3>Unit IV: Gradient Dynamics &amp; Deep Architectures <span class="badge unit-1">CO4</span></h3>
 <div class="cheat-grid">
-<div class="cheat-card">
-<h4>Gradient Descent</h4>
-<p>Iterative optimization algorithm.</p>
-<p><strong>Update Rule:</strong><br/>
-<span class="math-expr">θ<sub>j</sub> := θ<sub>j</sub> - α * ∂J(θ)/∂θ<sub>j</sub></span></p>
-<ul>
-<li><span class="math-expr">α</span> = Learning Rate</li>
-<li>Too high: Overshoots minimum</li>
-<li>Too low: Slow convergence</li>
-</ul>
-</div><div class="cheat-card">
-<h4>K-Nearest Neighbors (KNN)</h4>
-<p>Non-parametric, instance-based learning.</p>
-<p><strong>Euclidean Distance:</strong><br/>
-<span class="math-expr">d(p, q) = √(∑ (q<sub>i</sub> - p<sub>i</sub>)<sup>2</sup>)</span></p>
-<p><strong>Choosing K:</strong><br/>
-                Small K = Overfitting (High variance)<br/>
-                Large K = Underfitting (High bias)</p>
-</div><div class="cheat-card">
-<h4>Bias-Variance Tradeoff</h4>
-<table>
-<tr><th>Issue</th><th>Bias</th><th>Variance</th><th>Fix</th></tr>
-<tr><td>Underfitting</td><td>High</td><td>Low</td><td>Increase complexity</td></tr>
-<tr><td>Overfitting</td><td>Low</td><td>High</td><td>Regularize, more data, prune</td></tr>
-</table>
-</div></div>
+    <div class="cheat-card">
+        <h4>Backpropagation & The Chain Rule</h4>
+        <p>Neural networks update weights via gradient descent: $\theta = \theta - \alpha \nabla J(\theta)$. Backprop efficiently calculates the gradient of the loss function with respect to weights by propagating errors backward using the calculus chain rule.</p>
+        <p><strong>Example:</strong> If a network predicts 0.9 for a dog image (label 1), backprop sends the 0.1 error backwards, nudging earlier convolutional filters to activate stronger on dog ears.</p>
+    </div>
+
+    <div class="cheat-card">
+        <h4>Vanishing Gradients & Modern Activations</h4>
+        <p>Deep networks using Sigmoid/Tanh suffer from vanishing gradients because their derivatives max out at 0.25; gradients decay exponentially through layers. ReLU ($f(x) = \max(0, x)$) solves this by providing a constant derivative of 1 for positive inputs.</p>
+        <p><strong>Example:</strong> Training a 100-layer ResNet. With Sigmoid, the first layer never updates. With ReLU and Skip Connections, the gradient flows directly to early layers.</p>
+    </div>
+
+    <div class="cheat-card">
+        <h4>Regularization: L1 vs L2 (Weight Decay)</h4>
+        <p><strong>L1 (Lasso):</strong> Adds $\lambda \sum |w|$ to the loss. Encourages sparse weight vectors (exact zeros) due to diamond-shaped constraint geometry. <br/><strong>L2 (Ridge):</strong> Adds $\lambda \sum w^2$. Prevents exploding weights by decaying them proportionally.</p>
+        <p><strong>Example:</strong> Use L1 for gene expression data to eliminate 99% of irrelevant genes. Use L2 in Neural Networks (Weight Decay) to keep activations stable.</p>
+        <div class="pro-tip"><strong>Pro-Tip:</strong> Dropout is mathematically equivalent to a form of L2 regularization, acting as an ensemble of sub-networks by randomly zeroing activations during training!</div>
+    </div>
+</div>
 </div>
 
 <div class="unit-section" id="unit5">
-<h3>Unit V: Modern Ecosystem <span class="badge unit-1">CO5</span></h3>
+<h3>Unit V: Unsupervised Topology &amp; MLOps <span class="badge unit-1">CO5</span></h3>
 <div class="cheat-grid">
-<div class="cheat-card">
-<h4>Regression Metrics</h4>
-<table>
-<tr><th>Metric</th><th>Formula</th></tr>
-<tr><td>MAE</td><td><span class="math-expr">(1/n) ∑ |y<sub>i</sub> - ŷ<sub>i</sub>|</span></td></tr>
-<tr><td>MSE</td><td><span class="math-expr">(1/n) ∑ (y<sub>i</sub> - ŷ<sub>i</sub>)<sup>2</sup></span></td></tr>
-<tr><td>RMSE</td><td><span class="math-expr">√(MSE)</span></td></tr>
-<tr><td>R<sup>2</sup></td><td>1 - (SS<sub>res</sub> / SS<sub>tot</sub>)</td></tr>
-</table>
-</div><div class="cheat-card">
-<h4>Decision Trees</h4>
-<p><strong>Entropy:</strong><br/>
-<span class="math-expr">H(S) = - ∑ p<sub>i</sub> log<sub>2</sub>(p<sub>i</sub>)</span></p>
-<p><strong>Gini Impurity:</strong><br/>
-<span class="math-expr">Gini = 1 - ∑ p<sub>i</sub><sup>2</sup></span></p>
-<p><strong>Information Gain:</strong> Reduction in entropy after splitting a node.</p>
-</div><div class="cheat-card">
-<h4>Data Scaling</h4>
-<p><strong>Min-Max Normalization:</strong><br/>
-<span class="math-expr">x' = (x - x<sub>min</sub>) / (x<sub>max</sub> - x<sub>min</sub>)</span></p>
-<p><strong>Z-Score Standardization:</strong><br/>
-<span class="math-expr">z = (x - μ) / σ</span></p>
-<p>Ensures features with large ranges don't dominate distance calculations.</p>
-</div></div>
+    <div class="cheat-card">
+        <h4>K-Means & The E-M Algorithm</h4>
+        <p>K-Means is a specific instance of the <em>Expectation-Maximization (EM)</em> algorithm. E-step: Assign points to nearest centroid. M-step: Recalculate centroids. It converges to a local optimum minimizing within-cluster sum of squares (WCSS).</p>
+        <p><strong>Example:</strong> Clustering retail shoppers based on recency and frequency of purchases. K-Means finds $K$ distinct buyer personas.</p>
+    </div>
+
+    <div class="cheat-card">
+        <h4>Principal Component Analysis (PCA) Eigen-theory</h4>
+        <p>PCA projects data onto orthogonal axes of maximum variance. It computes the eigenvectors (directions) and eigenvalues (magnitude of variance) of the data's covariance matrix. It removes multicollinearity.</p>
+        <p><strong>Example:</strong> Given square footage and number of rooms (highly correlated), PCA collapses them into a single "house size" principal component axis.</p>
+        <div class="compact-svg">
+            <div class="mermaid">
+            graph LR
+                Data(Raw Data X) --> Cov(Covariance Matrix)
+                Cov --> Eigen(Eigen Decomposition)
+                Eigen --> Sort(Sort by top K Eigenvalues)
+                Sort --> Project(Project X onto K axes)
+            </div>
+        </div>
+    </div>
+
+    <div class="cheat-card">
+        <h4>Data Leakage & Time-Series Validation</h4>
+        <p>Leakage occurs when information from the validation/test set maliciously bleeds into the training set, causing deceptively high performance that fails in production.</p>
+        <p><strong>Example:</strong> Applying `StandardScaler().fit_transform(X)` on the <em>entire</em> dataset before doing `train_test_split()`. The test set's mean/variance leaked into the scaler!</p>
+        <div class="exam-trap"><strong>Trick:</strong> Standard K-Fold CV on Time-Series data causes future leakage (training on Friday to predict Thursday). You must strictly use <em>Rolling Origin / TimeSeriesSplit</em>.</div>
+    </div>
 </div>
 </div>
+
     </div>
 </div>
 <script src="../../shared/app-utils.js"></script>
-﻿    
+    
     <!-- Standalone Ask AI FAB (Bottom Left) -->
     <button class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI" aria-label="Ask AI">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2zM12 8c2.2 0 4 1.8 4 4v5c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-5c0-2.2 1.8-4 4-4zM6 12v5h2v-5H6zm10 0v5h2v-5h-2z"/></svg>
@@ -355,7 +364,7 @@
                 } catch (e) {
                     console.error(e);
                     const msgs = document.getElementById('assistantMessages');
-                    msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
+                    msgs.innerHTML = '<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser\'s security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>';
                 }
             }
         }
@@ -374,7 +383,7 @@
             if (!query) return;
             if (!assistantApp) {
                 const msgs = document.getElementById('assistantMessages');
-                msgs.innerHTML = <div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>;
+                msgs.innerHTML = '<div class="msg assistant" style="background:rgba(255,0,0,0.1); border-left:3px solid red; padding:1rem; margin-top:0.5rem; border-radius:8px;">I am blocked by your browser\'s security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).</div>';
                 return;
             }
             input.value = '';
@@ -385,4 +394,3 @@
 </body>
 
 </html>
-

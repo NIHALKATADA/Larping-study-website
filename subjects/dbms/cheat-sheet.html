@@ -6,6 +6,8 @@
     <title>DBMS Cheat Sheet</title>
     <link rel="stylesheet" href="../../shared/design-system.css">
     
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 </head>
 <body>
     <div class="glow-bg"></div>
@@ -135,374 +137,189 @@
     </div>
     <div id="realContentWrapper">
 <div class="unit-section" id="unit1">
-            <h3>Unit I: Introduction to DBMS <span class="badge unit-1">CO1</span></h3>
-            <div class="cheat-grid">
-                
-                <div class="cheat-card">
-                    <h4>DBMS vs File System <span class="badge unit-1">U1</span></h4>
-                    <table>
-                        <tr><th>Feature</th><th>DBMS</th><th>File System</th></tr>
-                        <tr><td>Redundancy</td><td>Controlled</td><td>High</td></tr>
-                        <tr><td>Integrity</td><td>Enforced</td><td>Poor</td></tr>
-                        <tr><td>Search</td><td>Fast (SQL)</td><td>Slow</td></tr>
-                        <tr><td>Concurrency</td><td>ACID support</td><td>None</td></tr>
-                    </table>
-                    <div class="exam-trap">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                        <div><strong>Exam Trap:</strong> A table can be in 3NF but fail BCNF if it contains overlapping candidate keys and a non-prime attribute determines part of a candidate key.</div>
-                    </div>
-                </div>
-
-                <div class="cheat-card">
-                    <h4>3-Level Architecture <span class="badge unit-1">U1</span></h4>
-                    <div class="compact-svg">
-                        <svg viewBox="0 0 200 130" style="width: 100%; height: auto;">
-                            <!-- External Views -->
-                            <rect x="10" y="20" width="50" height="20" rx="2" fill="var(--card-bg)" stroke="currentColor" stroke-width="1"/>
-                            <text x="35" y="34" font-size="9" text-anchor="middle" fill="currentColor">View 1</text>
-                            
-                            <rect x="75" y="20" width="50" height="20" rx="2" fill="var(--card-bg)" stroke="currentColor" stroke-width="1"/>
-                            <text x="100" y="34" font-size="9" text-anchor="middle" fill="currentColor">View 2</text>
-                            
-                            <rect x="140" y="20" width="50" height="20" rx="2" fill="var(--card-bg)" stroke="currentColor" stroke-width="1"/>
-                            <text x="165" y="34" font-size="9" text-anchor="middle" fill="currentColor">View 3</text>
-                            
-                            <!-- Label above -->
-                            <text x="100" y="12" font-size="10" font-weight="bold" text-anchor="middle" fill="currentColor">External Level</text>
-                            
-                            <!-- Conceptual Level -->
-                            <rect x="50" y="60" width="100" height="25" rx="3" fill="var(--card-bg)" stroke="currentColor" stroke-width="1.5"/>
-                            <text x="100" y="76" font-size="10" font-weight="bold" text-anchor="middle" fill="currentColor">Conceptual Level</text>
-                            
-                            <!-- Internal Level -->
-                            <rect x="50" y="105" width="100" height="25" rx="3" fill="var(--card-bg)" stroke="currentColor" stroke-width="1.5"/>
-                            <text x="100" y="121" font-size="10" font-weight="bold" text-anchor="middle" fill="currentColor">Internal Level</text>
-                            
-                            <!-- Arrows from External to Conceptual -->
-                            <path d="M 35 40 L 75 60" stroke="currentColor" stroke-dasharray="2,2"/>
-                            <path d="M 100 40 L 100 60" stroke="currentColor" stroke-dasharray="2,2"/>
-                            <path d="M 165 40 L 125 60" stroke="currentColor" stroke-dasharray="2,2"/>
-                            
-                            <!-- Arrow from Conceptual to Internal -->
-                            <path d="M 100 85 L 100 105" stroke="currentColor"/>
-                        </svg>
-                    </div>
-                    <ul style="margin-top:0.5rem">
-                        <li><strong>External:</strong> End-user views.</li>
-                        <li><strong>Conceptual:</strong> DBA level, schema & logic.</li>
-                        <li><strong>Internal:</strong> Storage, indexing, physical paths.</li>
-                    </ul>
-                    <div class="pro-tip">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        <div><strong>Pro-Tip:</strong> The primary objective of the 3-level architecture is to achieve Data Independence (Logical and Physical).</div>
-                    </div>
-                </div>
-
-                <div class="cheat-card">
-                    <h4>Keys in Relational Model <span class="badge unit-1">U1</span></h4>
-                    <dl class="def-list">
-                        <dt>Super Key</dt><dd>Any combination identifying a row.</dd>
-                        <dt>Candidate Key</dt><dd>Minimal super key (no redundant columns).</dd>
-                        <dt>Primary Key (PK)</dt><dd>Chosen candidate key. Unique, NOT NULL.</dd>
-                        <dt>Foreign Key (FK)</dt><dd>Refers to PK in another table.</dd>
-                    </dl>
-                    <div class="exam-trap">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                        <div><strong>Exam Trap:</strong> Every Primary Key is a Candidate Key, but not every Candidate Key is a Primary Key!</div>
-                    </div>
-                </div>
-
-                <div class="cheat-card">
-                    <h4>Normalization Forms <span class="badge unit-1">U1</span></h4>
-                    <table>
-                        <tr><th>Form</th><th>Rule to Satisfy</th></tr>
-                        <tr><td><strong>1NF</strong></td><td>Atomic values, no repeating groups.</td></tr>
-                        <tr><td><strong>2NF</strong></td><td>1NF + No partial dependencies (depends on whole PK).</td></tr>
-                        <tr><td><strong>3NF</strong></td><td>2NF + No transitive dependencies (non-key relies on non-key).</td></tr>
-                        <tr><td><strong>BCNF</strong></td><td>3NF + Every determinant is a candidate key.</td></tr>
-                    </table>
-                    <div class="exam-trap">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                        <div><strong>Exam Trap:</strong> A table can be in 3NF but fail BCNF if it contains overlapping candidate keys and a non-prime attribute determines part of a candidate key.</div>
-                    </div>
-                </div>
-
+    <h3>Unit I: Introduction to DBMS <span class="badge unit-1">CO1</span></h3>
+    <div class="cheat-grid">
+        <div class="cheat-card">
+            <h4>Architecture & Data Independence <span class="badge unit-1">U1</span></h4>
+            <p>The 3-schema architecture separates user views (External), logic (Conceptual), and storage (Internal). It ensures data independence, allowing changes in one schema without affecting others.</p>
+            <div class="example"><strong>Example:</strong> Changing file structure from sequential to B+ tree (Physical Independence) doesn't alter SQL queries at the Conceptual level.</div>
+            <div class="pro-tip">
+                <div><strong>Pro-Tip:</strong> Logical data independence is much harder to achieve than physical, as application logic tightly binds to the conceptual schema.</div>
             </div>
         </div>
-
-        <!-- UNIT 2 -->
-        <div class="unit-section" id="unit2">
-            <h3>Unit II: Relational Database Concepts <span class="badge unit-2">CO2</span></h3>
-            <div class="cheat-grid">
-                
-                <div class="cheat-card">
-                    <h4>Relational Algebra <span class="badge unit-2">U2</span></h4>
-                    <dl class="def-list" style="display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 1rem;">
-                        <dt>&sigma; (Select)</dt><dd>Filters rows: <code>&sigma;<sub>age>20</sub>(Student)</code></dd>
-                        <dt>&pi; (Project)</dt><dd>Filters cols: <code>&pi;<sub>name, id</sub>(Student)</code></dd>
-                        <dt>&bowtie; (Join)</dt><dd>Combines tables on condition</dd>
-                        <dt>&times; (Cartesian)</dt><dd>Cross product</dd>
-                        <dt>&cup; (Union)</dt><dd>Combines result sets (must be union-compatible)</dd>
-                    </dl>
-                    <div class="exam-trap">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                        <div><strong>Exam Trap:</strong> Every Primary Key is a Candidate Key, but not every Candidate Key is a Primary Key!</div>
-                    </div>
-                </div>
-
-                <div class="cheat-card">
-                    <h4>Types of Joins <span class="badge unit-2">U2</span></h4>
-                    <div class="compact-svg">
-                        <svg viewBox="15 10 135 120" style="width: 100%; height: auto; max-height: 280px; margin: 1rem 0;">
-                            <!-- Inner -->
-                            <circle cx="35" cy="30" r="20" fill="none" stroke="currentColor"/>
-                            <circle cx="60" cy="30" r="20" fill="none" stroke="currentColor"/>
-                            <path d="M 47.5 13 A 20 20 0 0 0 47.5 47 A 20 20 0 0 0 47.5 13 Z" fill="var(--primary-teal)"/>
-                            <text x="47.5" y="63" font-size="10" text-anchor="middle" fill="currentColor">INNER</text>
-                            
-                            <!-- Left -->
-                            <circle cx="105" cy="30" r="20" fill="var(--primary-teal)" stroke="currentColor"/>
-                            <circle cx="130" cy="30" r="20" fill="var(--card-bg)" stroke="currentColor"/>
-                            <path d="M 117.5 13 A 20 20 0 0 0 117.5 47 A 20 20 0 0 0 117.5 13 Z" fill="var(--primary-teal)"/>
-                            <text x="117.5" y="63" font-size="10" text-anchor="middle" fill="currentColor">LEFT</text>
-
-                            <!-- Right -->
-                            <circle cx="35" cy="90" r="20" fill="var(--card-bg)" stroke="currentColor"/>
-                            <circle cx="60" cy="90" r="20" fill="var(--primary-teal)" stroke="currentColor"/>
-                            <path d="M 47.5 73 A 20 20 0 0 0 47.5 107 A 20 20 0 0 0 47.5 73 Z" fill="var(--primary-teal)"/>
-                            <text x="47.5" y="123" font-size="10" text-anchor="middle" fill="currentColor">RIGHT</text>
-                            
-                            <!-- Full -->
-                            <circle cx="105" cy="90" r="20" fill="var(--primary-teal)" stroke="currentColor"/>
-                            <circle cx="130" cy="90" r="20" fill="var(--primary-teal)" stroke="currentColor"/>
-                            <text x="117.5" y="123" font-size="10" text-anchor="middle" fill="currentColor">FULL</text>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="cheat-card">
-                    <h4>Aggregates & Group By <span class="badge unit-2">U2</span></h4>
-                    <pre><code><span class="kw">SELECT</span> Dept, <span class="kw">COUNT</span>(*), <span class="kw">AVG</span>(Salary)
-<span class="kw">FROM</span> Employees
-<span class="kw">WHERE</span> Status = <span class="str">'Active'</span>
-<span class="kw">GROUP BY</span> Dept
-<span class="kw">HAVING</span> <span class="kw">COUNT</span>(*) > 5
-<span class="kw">ORDER BY</span> Dept <span class="kw">DESC</span>;</code></pre>
-                    <p><strong>Note:</strong> WHERE filters rows <em>before</em> grouping; HAVING filters <em>after</em> grouping.</p>
-                </div>
-                
-                <div class="cheat-card">
-                    <h4>Views <span class="badge unit-2">U2</span></h4>
-                    <p>Virtual tables based on queries. Do not store data directly (usually).</p>
-                    <pre><code><span class="kw">CREATE VIEW</span> HighEarners <span class="kw">AS</span>
-<span class="kw">SELECT</span> Name, Salary 
-<span class="kw">FROM</span> Employee <span class="kw">WHERE</span> Salary > 90000;</code></pre>
-                </div>
-
+        <div class="cheat-card">
+            <h4>Keys & Constraints <span class="badge unit-1">U1</span></h4>
+            <p>Super keys identify tuples uniquely. Candidate keys are minimal super keys. Primary keys are chosen candidate keys. Foreign keys enforce referential integrity between tables.</p>
+            <div class="example"><strong>Example:</strong> `{EmpID, Email}` is a Super Key. `EmpID` is a Candidate and Primary Key.</div>
+            <div class="exam-trap">
+                <div><strong>Exam Trap:</strong> A relation can have multiple candidate keys but strictly ONE primary key. Nulls are not allowed in PKs (Entity Integrity).</div>
             </div>
         </div>
-
-        <!-- UNIT 3 -->
-        <div class="unit-section" id="unit3">
-            <h3>Unit III: Structured Query Language (SQL) <span class="badge unit-3">CO3</span></h3>
-            <div class="cheat-grid">
-                
-                <div class="cheat-card">
-                    <h4>DDL (Data Definition) <span class="badge unit-3">U3</span></h4>
-                    <pre><code><span class="kw">CREATE TABLE</span> Students (
-  ID <span class="type">INT PRIMARY KEY</span>,
-  Email <span class="type">VARCHAR</span>(50) <span class="kw">UNIQUE NOT NULL</span>,
-  Age <span class="type">INT CHECK</span> (Age >= 18),
-  DeptID <span class="type">INT</span>,
-  <span class="kw">FOREIGN KEY</span> (DeptID) <span class="kw">REFERENCES</span> Dept(ID)
-);</code></pre>
-                </div>
-
-                <div class="cheat-card">
-                    <h4>DML (Data Manipulation) <span class="badge unit-3">U3</span></h4>
-                    <pre><code><span class="type">-- Insert</span>
-<span class="kw">INSERT INTO</span> Tbl (Col1, Col2) <span class="kw">VALUES</span> (1, <span class="str">'A'</span>);
-
-<span class="type">-- Update</span>
-<span class="kw">UPDATE</span> Tbl <span class="kw">SET</span> Col2 = <span class="str">'B'</span> <span class="kw">WHERE</span> Col1 = 1;
-
-<span class="type">-- Delete</span>
-<span class="kw">DELETE FROM</span> Tbl <span class="kw">WHERE</span> Col1 = 1;</code></pre>
-                </div>
-
-                <div class="cheat-card">
-                    <h4>TCL (Transaction Control) <span class="badge unit-3">U3</span></h4>
-                    <dl class="def-list">
-                        <dt>COMMIT</dt><dd>Save changes permanently.</dd>
-                        <dt>ROLLBACK</dt><dd>Undo changes to last commit.</dd>
-                        <dt>SAVEPOINT</dt><dd>Set a marker for partial rollback.</dd>
-                    </dl>
-                    <pre><code><span class="kw">SAVEPOINT</span> SP1;
-<span class="kw">ROLLBACK TO</span> SP1;</code></pre>
-                </div>
-
-                <div class="cheat-card">
-                    <h4>Triggers & Procedures <span class="badge unit-3">U3</span></h4>
-                    <dl class="def-list">
-                        <dt>Stored Procedure</dt><dd>Precompiled block of SQL to run logic via <code>CALL/EXEC</code>.</dd>
-                        <dt>Trigger</dt><dd>Auto-executes BEFORE or AFTER an <code>INSERT/UPDATE/DELETE</code> event.</dd>
-                        <dt>Cursor</dt><dd>Allows row-by-row iteration in PL/SQL logic.</dd>
-                    </dl>
-                    <div class="exam-trap">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                        <div><strong>Exam Trap:</strong> Every Primary Key is a Candidate Key, but not every Candidate Key is a Primary Key!</div>
-                    </div>
-                </div>
-
+        <div class="cheat-card">
+            <h4>Normalization: 1NF to BCNF <span class="badge unit-1">U1</span></h4>
+            <p>1NF mandates atomic domains. 2NF removes partial dependencies (non-prime depends on part of PK). 3NF eliminates transitive dependencies. BCNF strictly enforces every determinant as a candidate key.</p>
+            <div class="example"><strong>Example:</strong> If `City -> Zip` and `Zip -> State`, `City -> State` is a transitive dependency violating 3NF.</div>
+            <div class="exam-trap">
+                <div><strong>Exam Trap:</strong> BCNF decomposition may result in the loss of functional dependency preservation, unlike 3NF which guarantees both lossless join and dependency preservation.</div>
             </div>
         </div>
-
-        <!-- UNIT 4 -->
-        <div class="unit-section" id="unit4">
-            <h3>Unit IV: Transaction Processing <span class="badge marks">CO4</span></h3>
-            <div class="cheat-grid">
-                
-                <div class="cheat-card">
-                    <h4>ACID Properties <span class="badge marks">U4</span></h4>
-                    <dl class="def-list">
-                        <dt>Atomicity</dt><dd>All or nothing (Commit/Rollback).</dd>
-                        <dt>Consistency</dt><dd>Transforms DB from one valid state to another.</dd>
-                        <dt>Isolation</dt><dd>Concurrent txns do not interfere.</dd>
-                        <dt>Durability</dt><dd>Committed data is saved permanently.</dd>
-                    </dl>
-                    <div class="exam-trap">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                        <div><strong>Exam Trap:</strong> Every Primary Key is a Candidate Key, but not every Candidate Key is a Primary Key!</div>
-                    </div>
+        <div class="cheat-card" style="grid-column: span 2;">
+            <h4>Deep Dive: ER to Relational Mapping <span class="badge unit-1">U1</span></h4>
+            <div class="compact-svg">
+                <div class="mermaid">
+                erDiagram
+                    EMPLOYEE ||--o{ DEPENDENT : "has (weak)"
+                    EMPLOYEE { string EmpID PK }
+                    DEPENDENT { string DepName PK "Partial" }
                 </div>
-
-                <div class="cheat-card">
-                    <h4>Concurrency Control (Locks) <span class="badge marks">U4</span></h4>
-                    <ul>
-                        <li><strong>Shared Lock (S):</strong> Allows reading. Multiple txns can hold S locks on same item.</li>
-                        <li><strong>Exclusive Lock (X):</strong> Allows reading & writing. Only one txn can hold X lock.</li>
-                    </ul>
-                    <p><strong>Two-Phase Locking (2PL):</strong> Growing Phase (acquire locks) &rarr; Shrinking Phase (release locks). Guarantees serializability.</p>
-                </div>
-
-                <div class="cheat-card">
-                    <h4>Indexing (B & B+ Trees) <span class="badge marks">U4</span></h4>
-                    <div class="compact-svg">
-                        <svg viewBox="0 0 200 100" style="width: 100%; height: auto; max-height: 200px;">
-                            <!-- Root Node -->
-                            <rect x="75" y="10" width="50" height="20" rx="3" fill="var(--card-bg)" stroke="currentColor" stroke-width="1.5"/>
-                            <text x="100" y="24" font-size="12" font-weight="bold" text-anchor="middle" fill="currentColor">Root</text>
-                            
-                            <!-- Edges to children -->
-                            <path d="M 100 30 L 45 50" stroke="currentColor" stroke-width="1"/>
-                            <path d="M 100 30 L 100 50" stroke="currentColor" stroke-width="1"/>
-                            <path d="M 100 30 L 155 50" stroke="currentColor" stroke-width="1"/>
-
-                            <!-- Child Nodes -->
-                            <rect x="20" y="50" width="50" height="20" rx="3" fill="var(--card-bg)" stroke="currentColor" stroke-width="1"/>
-                            <text x="45" y="64" font-size="10" text-anchor="middle" fill="currentColor">Leaf</text>
-
-                            <rect x="75" y="50" width="50" height="20" rx="3" fill="var(--card-bg)" stroke="currentColor" stroke-width="1"/>
-                            <text x="100" y="64" font-size="10" text-anchor="middle" fill="currentColor">Leaf</text>
-
-                            <rect x="130" y="50" width="50" height="20" rx="3" fill="var(--card-bg)" stroke="currentColor" stroke-width="1"/>
-                            <text x="155" y="64" font-size="10" text-anchor="middle" fill="currentColor">Leaf</text>
-                            
-                            <!-- B+ Tree Linked List arrows -->
-                            <path d="M 70 60 L 75 60" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2,2"/>
-                            <path d="M 125 60 L 130 60" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2,2"/>
-                            
-                            <!-- Caption -->
-                            <text x="100" y="90" font-size="10" text-anchor="middle" fill="currentColor">B+ Tree: Leaves linked, data at bottom</text>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="cheat-card">
-                    <h4>Deadlocks & Recovery <span class="badge marks">U4</span></h4>
-                    <dl class="def-list">
-                        <dt>Wait-For Graph</dt><dd>Used to detect deadlocks (cycles = deadlock).</dd>
-                        <dt>Log-based Recovery</dt><dd>Uses Write-Ahead Logging (WAL). REDO applied for committed, UNDO applied for failed txns.</dd>
-                        <dt>Checkpoints</dt><dd>Saves state to disk to reduce recovery time.</dd>
-                    </dl>
-                    <div class="exam-trap">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                        <div><strong>Exam Trap:</strong> Every Primary Key is a Candidate Key, but not every Candidate Key is a Primary Key!</div>
-                    </div>
-                </div>
-
+            </div>
+            <p>Strong entities map directly to tables. Weak entities map to tables using a composite key: their own partial key + the strong entity's primary key. M:N relationships require a separate junction table.</p>
+            <div class="example"><strong>Example:</strong> The DEPENDENT table uses `(EmpID, DepName)` as its primary key.</div>
+            <div class="pro-tip">
+                <div><strong>Pro-Tip:</strong> In total participation, foreign key constraints often use `ON DELETE CASCADE` to maintain consistency.</div>
             </div>
         </div>
-
-        <!-- UNIT 5 -->
-        <div class="unit-section" id="unit5">
-            <h3>Unit V: Advanced DB & MongoDB <span class="badge marks">CO5</span></h3>
-            <div class="cheat-grid">
-                
-                <div class="cheat-card">
-                    <h4>RDBMS vs NoSQL <span class="badge marks">U5</span></h4>
-                    <table>
-                        <tr><th>Aspect</th><th>RDBMS</th><th>NoSQL</th></tr>
-                        <tr><td>Schema</td><td>Rigid (Tables)</td><td>Dynamic (Docs)</td></tr>
-                        <tr><td>Scaling</td><td>Vertical (CPU/RAM)</td><td>Horizontal (Nodes)</td></tr>
-                        <tr><td>Relations</td><td>Foreign Keys</td><td>Embed/Ref</td></tr>
-                        <tr><td>ACID</td><td>Strict</td><td>Eventual Consistency</td></tr>
-                    </table>
-                    <div class="exam-trap">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                        <div><strong>Exam Trap:</strong> A table can be in 3NF but fail BCNF if it contains overlapping candidate keys and a non-prime attribute determines part of a candidate key.</div>
-                    </div>
-                </div>
-
-                <div class="cheat-card">
-                    <h4>MongoDB Architecture <span class="badge marks">U5</span></h4>
-                    <ul>
-                        <li><strong>Database</strong> &rarr; Contains Collections.</li>
-                        <li><strong>Collection</strong> &rarr; Group of Documents (like Table).</li>
-                        <li><strong>Document</strong> &rarr; JSON/BSON object (like Row).</li>
-                        <li><strong>Field</strong> &rarr; Key-value pair (like Column).</li>
-                        <li><strong>_id</strong> &rarr; Unique primary key for every document.</li>
-                    </ul>
-                    <div class="pro-tip">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                        <div><strong>Pro-Tip:</strong> The primary objective of the 3-level architecture is to achieve Data Independence (Logical and Physical).</div>
-                    </div>
-                </div>
-
-                <div class="cheat-card">
-                    <h4>Mongo CRUD Syntax <span class="badge marks">U5</span></h4>
-                    <pre><code><span class="type">// Insert</span>
-db.users.insertOne({ name: <span class="str">"Alice"</span>, age: 22 })
-
-<span class="type">// Find (Select)</span>
-db.users.find({ age: { $gt: 20 } })
-
-<span class="type">// Update</span>
-db.users.updateOne(
-  { name: <span class="str">"Alice"</span> }, 
-  { $set: { age: 23 } }
-)
-
-<span class="type">// Delete</span>
-db.users.deleteOne({ name: <span class="str">"Alice"</span> })</code></pre>
-                </div>
-                
-                <div class="cheat-card">
-                    <h4>Aggregation & Replication <span class="badge marks">U5</span></h4>
-                    <dl class="def-list">
-                        <dt>Pipeline</dt><dd>Stages for processing data: <code>$match &rarr; $group &rarr; $sort</code></dd>
-                        <dt>Replica Set</dt><dd>Group of mongod instances holding same data set. 1 Primary (writes), N Secondaries (reads/failover).</dd>
-                    </dl>
-                    <div class="exam-trap">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                        <div><strong>Exam Trap:</strong> Every Primary Key is a Candidate Key, but not every Candidate Key is a Primary Key!</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
     </div>
+</div>
+
+<div class="unit-section" id="unit2">
+    <h3>Unit II: Relational Database Concepts <span class="badge unit-2">CO2</span></h3>
+    <div class="cheat-grid">
+        <div class="cheat-card">
+            <h4>Relational Algebra Core <span class="badge unit-2">U2</span></h4>
+            <p>A procedural query language defining execution steps. Core operators include Selection (σ, row filter), Projection (π, column filter), Cartesian Product (×), Set Difference (-), and Union (∪).</p>
+            <div class="example"><strong>Example:</strong> `π_name(σ_age>20(Student))` filters students older than 20, projecting only their names.</div>
+            <div class="exam-trap">
+                <div><strong>Exam Trap:</strong> Union compatibility requires relations to have identical degree (number of attributes) and compatible domains.</div>
+            </div>
+        </div>
+        <div class="cheat-card">
+            <h4>Advanced Relational Algebra <span class="badge unit-2">U2</span></h4>
+            <p>Derived operators simplify queries: Natural Join (⋈) implicitly matches common attributes, and Division (÷) identifies universal quantification scenarios (e.g., "all").</p>
+            <div class="example"><strong>Example:</strong> `Students ÷ Courses` returns students who have enrolled in EVERY available course.</div>
+            <div class="pro-tip">
+                <div><strong>Pro-Tip:</strong> The Division operator is technically derived using Projection, Set Difference, and Cartesian Product.</div>
+            </div>
+        </div>
+        <div class="cheat-card">
+            <h4>Tuple vs Domain Relational Calculus <span class="badge unit-2">U2</span></h4>
+            <p>Calculus is non-procedural (describes WHAT to fetch, not HOW). TRC evaluates on a per-tuple basis. DRC evaluates attributes using domain variables.</p>
+            <div class="example"><strong>Example (TRC):</strong> `{t | t ∈ Student ∧ t.age > 20}`.</div>
+            <div class="exam-trap">
+                <div><strong>Exam Trap:</strong> Unsafe queries (like infinite sets `{t | ¬(t ∈ Student)}`) are possible in calculus but syntactically disallowed in safe TRC systems.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="unit-section" id="unit3">
+    <h3>Unit III: Structured Query Language (SQL) <span class="badge unit-3">CO3</span></h3>
+    <div class="cheat-grid">
+        <div class="cheat-card" style="grid-column: span 2;">
+            <h4>SQL Execution Pipeline <span class="badge unit-3">U3</span></h4>
+            <div class="compact-svg">
+                <div class="mermaid">
+                flowchart LR
+                    F[FROM] --> W[WHERE] --> G[GROUP BY] --> H[HAVING] --> S[SELECT] --> O[ORDER BY]
+                </div>
+            </div>
+            <p>Understanding logical execution order prevents semantic errors. `WHERE` filters rows prior to aggregation, while `HAVING` filters aggregated buckets.</p>
+            <div class="example"><strong>Example:</strong> You cannot use a column alias defined in `SELECT` inside the `WHERE` clause, because `WHERE` executes first.</div>
+            <div class="pro-tip">
+                <div><strong>Pro-Tip:</strong> This is why `COUNT(*)` in `WHERE` throws an error; aggregation hasn't happened yet!</div>
+            </div>
+        </div>
+        <div class="cheat-card">
+            <h4>Correlated Subqueries <span class="badge unit-3">U3</span></h4>
+            <p>An inner query that references columns from the outer query. It executes row-by-row iteratively for each tuple processed by the outer query, degrading performance.</p>
+            <div class="example"><strong>Example:</strong> `SELECT * FROM Emp e1 WHERE Salary > (SELECT AVG(Salary) FROM Emp e2 WHERE e1.Dept = e2.Dept)`</div>
+            <div class="exam-trap">
+                <div><strong>Exam Trap:</strong> Contrast with non-correlated subqueries which execute exactly once. Use `EXISTS` instead of `IN` for correlated lookups to short-circuit execution.</div>
+            </div>
+        </div>
+        <div class="cheat-card">
+            <h4>Triggers & Views <span class="badge unit-3">U3</span></h4>
+            <p>Views are virtual tables providing logical independence. Triggers execute procedural code in response to DML events (INSERT/UPDATE/DELETE), typically enforcing complex business rules.</p>
+            <div class="example"><strong>Example:</strong> `CREATE TRIGGER BeforeDelete BEFORE DELETE ON Users FOR EACH ROW ...`</div>
+            <div class="pro-tip">
+                <div><strong>Pro-Tip:</strong> A "Mutating Table Error" occurs when a row-level trigger attempts to query the same table that invoked it.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="unit-section" id="unit4">
+    <h3>Unit IV: Transaction Processing <span class="badge marks">CO4</span></h3>
+    <div class="cheat-grid">
+        <div class="cheat-card">
+            <h4>ACID & Schedules <span class="badge marks">U4</span></h4>
+            <p>Transactions guarantee Atomicity, Consistency, Isolation, and Durability. Serializability ensures concurrent execution yields results identical to some serial sequence, preventing anomalies like Dirty Reads.</p>
+            <div class="example"><strong>Example:</strong> Using a Conflict Graph, if there's a cycle between transactions (e.g., T1 reads what T2 writes, and T2 reads what T1 writes), it is NOT conflict-serializable.</div>
+            <div class="exam-trap">
+                <div><strong>Exam Trap:</strong> View serializability is less strict than conflict serializability and accommodates blind writes (writing without reading).</div>
+            </div>
+        </div>
+        <div class="cheat-card" style="grid-column: span 2;">
+            <h4>Deadlock Prevention (Wait-Die vs Wound-Wait) <span class="badge marks">U4</span></h4>
+            <div class="compact-svg">
+                <div class="mermaid">
+                stateDiagram-v2
+                    state Wait-Die(Non-Preemptive) {
+                        OlderTxn --> YoungerTxn : Waits
+                        YoungerTxn --> OlderTxn : Dies (Rollback)
+                    }
+                    state Wound-Wait(Preemptive) {
+                        OlderTxn2 --> YoungerTxn2 : Wounds (Preempts)
+                        YoungerTxn2 --> OlderTxn2 : Waits
+                    }
+                </div>
+            </div>
+            <p>Using timestamps to prevent deadlocks: Wait-Die allows older transactions to wait for younger ones, while younger ones die. Wound-Wait preempts (wounds) the younger transaction holding the lock.</p>
+            <div class="example"><strong>Example:</strong> In Wound-Wait, if T1 (older) requests a lock held by T2 (younger), T2 is aborted and its locks are released to T1.</div>
+            <div class="pro-tip">
+                <div><strong>Pro-Tip:</strong> A transaction that "dies" or is "wounded" retains its original timestamp upon restart, ensuring it eventually becomes the oldest and completes without starvation.</div>
+            </div>
+        </div>
+        <div class="cheat-card">
+            <h4>ARIES Crash Recovery <span class="badge marks">U4</span></h4>
+            <p>Utilizes Write-Ahead Logging (WAL) with Steal/No-Force buffer policies. The protocol executes three phases: Analysis, REDO (repeats history to reconstruct crash state), and UNDO (rolls back uncommitted txns).</p>
+            <div class="example"><strong>Example:</strong> Log Sequence Numbers (LSNs) link chain records. The REDO phase re-applies logs starting from the RedoLSN found in the checkpoint.</div>
+            <div class="exam-trap">
+                <div><strong>Exam Trap:</strong> Compensation Log Records (CLRs) are written during the UNDO phase to ensure that if a crash occurs *during* recovery, UNDO operations are not repeated.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="unit-section" id="unit5">
+    <h3>Unit V: Advanced DB & MongoDB <span class="badge marks">CO5</span></h3>
+    <div class="cheat-grid">
+        <div class="cheat-card">
+            <h4>CAP Theorem & NoSQL <span class="badge marks">U5</span></h4>
+            <p>Distributed systems can strictly guarantee only two out of Consistency, Availability, and Partition tolerance. NoSQL systems scale horizontally and typically relax Consistency (AP) or Availability (CP).</p>
+            <div class="example"><strong>Example:</strong> MongoDB operates as a CP system by default (elects a primary, halts writes if partition causes primary loss).</div>
+            <div class="exam-trap">
+                <div><strong>Exam Trap:</strong> Network partitions (P) are unavoidable in distributed systems. Therefore, the real architectural choice is always between C and A.</div>
+            </div>
+        </div>
+        <div class="cheat-card">
+            <h4>MongoDB Documents & BSON <span class="badge marks">U5</span></h4>
+            <p>MongoDB eschews rigid relational schemas in favor of dynamic BSON (Binary JSON) documents. Data modeling shifts from normalization (joining tables) to embedding (storing related data inside a single document).</p>
+            <div class="example"><strong>Example:</strong> `{ _id: 1, name: "Alice", address: { city: "NY", zip: "10001" } }`</div>
+            <div class="pro-tip">
+                <div><strong>Pro-Tip:</strong> Embed data for 1:1 or 1:few relationships to optimize read performance. Reference data for 1:Many or N:M to avoid hitting the 16MB document size limit.</div>
+            </div>
+        </div>
+        <div class="cheat-card">
+            <h4>Aggregation Pipeline <span class="badge marks">U5</span></h4>
+            <p>A multi-stage framework for data transformation, analogous to SQL `GROUP BY` and `JOIN`. Documents pass through stages like `$match` (filter), `$group` (aggregate), and `$project` (reshape).</p>
+            <div class="example"><strong>Example:</strong> `db.sales.aggregate([{ $match: { status: "A" } }, { $group: { _id: "$item", total: { $sum: "$amount" } } }])`</div>
+            <div class="exam-trap">
+                <div><strong>Exam Trap:</strong> Stage order drastically impacts performance! Always place `$match` and `$sort` stages as early as possible to leverage indexes and reduce the dataset flowing into memory-intensive `$group` stages.</div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- INTERACTIVITY SCRIPT -->
         </div>

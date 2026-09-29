@@ -1,0 +1,388 @@
+[
+  {
+    "id": "u2_c1",
+    "unit": "II",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.0,
+    "missing_terms": [
+      "value",
+      "p_3",
+      "np_2"
+    ],
+    "title": "Find the value of n: (n + 1)P_3 = 5 x nP_2"
+  },
+  {
+    "id": "u1_pb_q8",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L3",
+    "coverage": 0.0,
+    "missing_terms": [
+      "converse",
+      "contrapositive",
+      "inverse",
+      "these",
+      "conditional",
+      "stay",
+      "late",
+      "necessary"
+    ],
+    "title": "State the converse, contrapositive, and inverse of each of these conditional statements. When I stay up late, it is necessary that I sleep u"
+  },
+  {
+    "id": "u2_b4",
+    "unit": "II",
+    "marks": 3,
+    "bloom": "L3",
+    "coverage": 0.0,
+    "missing_terms": [
+      "committee",
+      "students",
+      "selected",
+      "boys",
+      "girls",
+      "many",
+      "ways",
+      "formed"
+    ],
+    "title": "A committee of 4 students is to be selected from 6 boys and 5 girls. In how many ways can the committee be formed?"
+  },
+  {
+    "id": "u2_a6",
+    "unit": "II",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.0,
+    "missing_terms": [
+      "value"
+    ],
+    "title": "Find the value of: (i) 7P2 and (ii) 9C2"
+  },
+  {
+    "id": "u1_pc_q5",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.07,
+    "missing_terms": [
+      "converse",
+      "contrapositive",
+      "inverse",
+      "these",
+      "conditional",
+      "snows",
+      "tonight",
+      "stay"
+    ],
+    "title": "State the converse, contrapositive, and inverse of each of these conditional statements. (a) If it snows tonight, then I will stay at home. "
+  },
+  {
+    "id": "u1_pa_q2",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.12,
+    "missing_terms": [
+      "let",
+      "raining",
+      "carry",
+      "umbrella",
+      "translate",
+      "symbolic",
+      "english"
+    ],
+    "title": "Let p: It is raining, q: I carry an umbrella. Translate the following symbolic propositions into English. (a) p ∧ q (b) p ∨ q"
+  },
+  {
+    "id": "u1_pc_q4",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.15,
+    "missing_terms": [
+      "let",
+      "flu",
+      "miss",
+      "final",
+      "examination",
+      "pass",
+      "course",
+      "express"
+    ],
+    "title": "Let p, q, and r be the propositions p: You have the flu. q: You miss the final examination. r: You pass the course. Express each of these pr"
+  },
+  {
+    "id": "u1_pb_q4",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L3",
+    "coverage": 0.15,
+    "missing_terms": [
+      "let",
+      "election",
+      "decided",
+      "votes",
+      "been",
+      "counted",
+      "respectively",
+      "express"
+    ],
+    "title": "Let p and q be the propositions “The election is decided” and “The votes have been counted,” respectively. Express each of these compound pr"
+  },
+  {
+    "id": "u1_pc_q2",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L4",
+    "coverage": 0.17,
+    "missing_terms": [
+      "table",
+      "determine",
+      "tautology",
+      "contradiction",
+      "contingency"
+    ],
+    "title": "Using a truth table, determine whether each of the following is a Tautology, Contradiction, or Contingency (a) (p ∧ (q → r)) → ((p ∧ q) → r)"
+  },
+  {
+    "id": "u1_pb_q2",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.17,
+    "missing_terms": [
+      "let",
+      "above",
+      "translate",
+      "symbolic",
+      "english"
+    ],
+    "title": "Let p, q, r be as above. Translate the following symbolic propositions into English (a) (p ∧ q) → r (b) (p ∨ q) ∧ ¬r"
+  },
+  {
+    "id": "u1_pb_q6",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L3",
+    "coverage": 0.17,
+    "missing_terms": [
+      "table",
+      "determine",
+      "tautology",
+      "contradiction",
+      "contingency"
+    ],
+    "title": "Using a truth table, determine whether which of the following is a Tautology, Contradiction, or Contingency. (a) (p → q) ∨ (q → p) (b) (p → "
+  },
+  {
+    "id": "u1_pa_q7",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.17,
+    "missing_terms": [
+      "let",
+      "mentioned",
+      "translate",
+      "symbolic",
+      "english"
+    ],
+    "title": "Let p, q, r be as mentioned in Q6. Translate the following symbolic propositions into English (a) p → q (b) p ↔ q (c) p ⊕ q"
+  },
+  {
+    "id": "u2_b6",
+    "unit": "II",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.2,
+    "missing_terms": [
+      "many",
+      "different",
+      "letter",
+      "words",
+      "formed",
+      "letters",
+      "word",
+      "math"
+    ],
+    "title": "How many different 4-letter words can be formed using the letters of the word MATH, when each letter can be used only once?"
+  },
+  {
+    "id": "u1_pa_q1",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.2,
+    "missing_terms": [
+      "determine",
+      "proposition",
+      "true",
+      "prime",
+      "number",
+      "greater",
+      "than",
+      "moon"
+    ],
+    "title": "Determine whether each of the following is a proposition. If it is a proposition, state whether it is True or False. (a) Every prime number "
+  },
+  {
+    "id": "u1_pa_q3",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.2,
+    "missing_terms": [
+      "negation",
+      "today",
+      "monday",
+      "computer",
+      "internet",
+      "encrypted",
+      "classroom",
+      "empty"
+    ],
+    "title": "Write the negation of each of the following statements. (a) Today is Monday. (b) The computer is connected to the internet. (c) The file is "
+  },
+  {
+    "id": "u1_pc_q8",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.22,
+    "missing_terms": [
+      "determine",
+      "these",
+      "conditional",
+      "true",
+      "monkeys",
+      "fly",
+      "dogs"
+    ],
+    "title": "Determine whether each of these conditional statements is true or false. (a) If 1 + 1 = 2, then 2 + 2 = 5. (b) If 1 + 1 = 3, then 2 + 2 = 4."
+  },
+  {
+    "id": "u1_pa_q6",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.22,
+    "missing_terms": [
+      "let",
+      "raining",
+      "carry",
+      "umbrella",
+      "wear",
+      "raincoat",
+      "symbolic"
+    ],
+    "title": "Let p: It is raining, q: I carry an umbrella, r: I wear a raincoat. Write the following statements in symbolic form. (a) It is raining and I"
+  },
+  {
+    "id": "u1_pc_q9",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.24,
+    "missing_terms": [
+      "express",
+      "these",
+      "specifications",
+      "user",
+      "enters",
+      "valid",
+      "password",
+      "access"
+    ],
+    "title": "Express these system specifications using the propositions p “The user enters a valid password,” q “Access is granted,” and r “The user has "
+  },
+  {
+    "id": "u1_pb_q5",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L3",
+    "coverage": 0.25,
+    "missing_terms": [
+      "determine",
+      "these",
+      "biconditional",
+      "true",
+      "monkeys",
+      "fly"
+    ],
+    "title": "Determine whether these biconditional are true or false. a) 2 + 2 = 4 if and only if 1 + 1 = 2. b) 1 + 1 = 2 if and only if 2 + 3 = 4. c) 1 "
+  },
+  {
+    "id": "u3_a_q2",
+    "unit": "III",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.25,
+    "missing_terms": [
+      "draw",
+      "k_5",
+      "c_4"
+    ],
+    "title": "Draw the following graphs: (i) K_5 (ii) C_4"
+  },
+  {
+    "id": "u1_pc_q1",
+    "unit": "I",
+    "marks": 5,
+    "bloom": "L3",
+    "coverage": 0.33,
+    "missing_terms": [
+      "let",
+      "below",
+      "freezing",
+      "snowing",
+      "these",
+      "including",
+      "negations",
+      "either"
+    ],
+    "title": "Let p and q be the propositions p: It is below freezing and q: It is snowing. Write these propositions using p and q and logical connectives"
+  },
+  {
+    "id": "u1_pb_q1",
+    "unit": "I",
+    "marks": 3,
+    "bloom": "L2",
+    "coverage": 0.33,
+    "missing_terms": [
+      "let",
+      "raining",
+      "carry",
+      "umbrella",
+      "wear",
+      "raincoat",
+      "symbolic",
+      "either"
+    ],
+    "title": "Let p: It is raining, q: I carry an umbrella, r: I wear a raincoat. Write the following statements in symbolic form (a) Either I carry an um"
+  },
+  {
+    "id": "u1_pa_q9",
+    "unit": "I",
+    "marks": 2,
+    "bloom": "L1",
+    "coverage": 0.33,
+    "missing_terms": [
+      "tautology",
+      "conditional"
+    ],
+    "title": "Define the following terms with examples. (a) Tautology (b) Conditional Statement"
+  },
+  {
+    "id": "u2_a2",
+    "unit": "II",
+    "marks": 2,
+    "bloom": "L2",
+    "coverage": 0.33,
+    "missing_terms": [
+      "solution",
+      "function"
+    ],
+    "title": "Write the solution of the following Generating function: G(x) = 1 / (1 - 2x)"
+  }
+]

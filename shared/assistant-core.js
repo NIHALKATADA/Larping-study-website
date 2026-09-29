@@ -158,6 +158,8 @@ export class AssistantCore {
     
     if (t.match(/\b(revise next|next to revise|what next)\b/)) {
       intent = "nextToRevise";
+    } else if (t.match(/\b(predict|likely|outside the bank|what else)\b/)) {
+      intent = "predict";
     } else if (hasRanking && (hasQuestionCue || params.n !== null)) {
       intent = "topQuestions";
     } else if (hasProgressCue) {

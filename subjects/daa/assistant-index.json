@@ -7,7 +7,7 @@
     "bloom": "L1",
     "co": "CO1",
     "score": 8.0,
-    "important": true,
+    "important": false,
     "title": "Define an algorithm. Write any four characteristics of a good algorithm.",
     "url": "question-bank.html?open=u1q1",
     "chunks": [
@@ -39,7 +39,7 @@
     "bloom": "L2",
     "co": "CO1",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "Differentiate between time complexity and space complexity with one example.",
     "url": "question-bank.html?open=u1q3",
     "chunks": [
@@ -71,7 +71,7 @@
     "bloom": "L2",
     "co": "CO1",
     "score": 8.0,
-    "important": true,
+    "important": false,
     "title": "What is the difference between best-case, worst-case, and average-case analysis?",
     "url": "question-bank.html?open=u1q5",
     "chunks": [
@@ -87,7 +87,7 @@
     "bloom": "L1",
     "co": "CO1",
     "score": 7.5,
-    "important": true,
+    "important": false,
     "title": "What is asymptotic analysis? Why is it preferred over measuring execution time?",
     "url": "question-bank.html?open=u1q7",
     "chunks": [
@@ -119,7 +119,7 @@
     "bloom": "L3",
     "co": "CO1",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "Find the time complexity of the following code: sum = 0; a = 5; b = 10; sum = a + b; printf(\"%d\", sum);",
     "url": "question-bank.html?open=u1q9",
     "chunks": [
@@ -135,7 +135,7 @@
     "bloom": "L3",
     "co": "CO1",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "Find the time complexity of the following code: if (n > 100) x = x + 1; else x = x - 1; Also mention the best and worst case.",
     "url": "question-bank.html?open=u1q10",
     "chunks": [
@@ -151,7 +151,7 @@
     "bloom": "L3",
     "co": "CO1",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "Find the time complexity: for(i = 1; i <= n; i++) { printf(\"%d\", i); }",
     "url": "question-bank.html?open=u1q11",
     "chunks": [
@@ -167,7 +167,7 @@
     "bloom": "L3",
     "co": "CO1",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "Find the time complexity: for(i = 1; i <= n; i = i + 2) { count++; }",
     "url": "question-bank.html?open=u1q12",
     "chunks": [
@@ -231,7 +231,7 @@
     "bloom": "L1",
     "co": "CO2",
     "score": 8.0,
-    "important": true,
+    "important": false,
     "title": "Define algorithm correctness. Differentiate between partial correctness and total correctness with suitable examples.",
     "url": "question-bank.html?open=u2q1",
     "chunks": [
@@ -247,7 +247,7 @@
     "bloom": "L1",
     "co": "CO2",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "What is a loop invariant? Explain the three steps\u2014initialization, maintenance, and termination\u2014used to prove the correctness of an algorithm.",
     "url": "question-bank.html?open=u2q2",
     "chunks": [
@@ -391,7 +391,7 @@
     "bloom": "L4",
     "co": "CO2",
     "score": 9.5,
-    "important": true,
+    "important": false,
     "title": "Perform a complete dry run of Heap Sort on: 25, 17, 36, 2, 3, 100, 1, 19, 7.",
     "url": "question-bank.html?open=u2q11",
     "chunks": [
@@ -535,7 +535,7 @@
     "bloom": "L3",
     "co": "CO2",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "Determine whether array represents a Max Heap: 16, 14, 10, 8, 7, 9, 3, 2, 4, 1.",
     "url": "question-bank.html?open=u2q20",
     "chunks": [
@@ -567,7 +567,7 @@
     "bloom": "L1",
     "co": "CO2",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "Define a heap. Differentiate between a Max Heap and a Min Heap.",
     "url": "question-bank.html?open=u2q22",
     "chunks": [
@@ -583,7 +583,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.0,
-    "important": true,
+    "important": false,
     "title": "Define the Divide and Conquer paradigm. Explain its three basic steps with a suitable example.",
     "url": "question-bank.html?open=q1",
     "chunks": [
@@ -599,7 +599,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 8.0,
-    "important": true,
+    "important": false,
     "title": "What are the divide, conquer, and combine steps in a Divide and Conquer algorithm?",
     "url": "question-bank.html?open=q2",
     "chunks": [
@@ -631,7 +631,7 @@
     "bloom": "L3",
     "co": "CO3",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "Identify whether the following algorithms use the Divide and Conquer technique. Give reasons for your answer: Binary Search, Merge Sort, Quick Sort, Bubble Sort",
     "url": "question-bank.html?open=q4",
     "chunks": [
@@ -663,7 +663,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 8.0,
-    "important": true,
+    "important": false,
     "title": "What is a recurrence relation? Explain its role in analyzing the time complexity of recursive algorithms.",
     "url": "question-bank.html?open=q6",
     "chunks": [
@@ -695,7 +695,7 @@
     "bloom": "L4",
     "co": "CO3",
     "score": 8.0,
-    "important": true,
+    "important": false,
     "title": "Solve the following recurrence using the substitution method: T(n) = T(n/2) + 1",
     "url": "question-bank.html?open=q12",
     "chunks": [
@@ -775,7 +775,7 @@
     "bloom": "L4",
     "co": "CO3",
     "score": 8.0,
-    "important": true,
+    "important": false,
     "title": "Solve the following recurrence using the Master Method: T(n) = T(n/2) + 1",
     "url": "question-bank.html?open=q18",
     "chunks": [
@@ -823,7 +823,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 8.0,
-    "important": true,
+    "important": false,
     "title": "Compare Linear Search and Binary Search with respect to their best-case, average-case, and worst-case time complexities.",
     "url": "question-bank.html?open=q21",
     "chunks": [
@@ -855,7 +855,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 8.0,
-    "important": true,
+    "important": false,
     "title": "Explain how the Divide and Conquer technique can be used to find the maximum and minimum elements of an array.",
     "url": "question-bank.html?open=q23",
     "chunks": [
@@ -919,7 +919,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.0,
-    "important": true,
+    "important": false,
     "title": "Explain the best-case, average-case, and worst-case time complexity of Quick Sort.",
     "url": "question-bank.html?open=q35",
     "chunks": [
@@ -935,7 +935,7 @@
     "bloom": "L4",
     "co": "CO3",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "Compare conventional matrix multiplication and Strassen's Matrix Multiplication with respect to the number of multiplications and asymptotic time complexity.",
     "url": "question-bank.html?open=q44",
     "chunks": [
@@ -967,7 +967,7 @@
     "bloom": "L3",
     "co": "CO3",
     "score": 8.0,
-    "important": true,
+    "important": false,
     "title": "Is merge sort a stable sorting algorithm? Explain.",
     "url": "question-bank.html?open=q49",
     "chunks": [
@@ -983,7 +983,7 @@
     "bloom": "L4",
     "co": "CO3",
     "score": 8.5,
-    "important": true,
+    "important": false,
     "title": "When would you select merge sort instead of quick sort?",
     "url": "question-bank.html?open=q50",
     "chunks": [
@@ -998,30 +998,31 @@
     "chunks": [
       "Dashboard\n\n            Revision Hub\n\n                Save as PDF\n\n                Theme",
       "Design and Analysis of Algorithms",
-      "Dense Revision Cheat Sheet \n\nAll Units | Scannable Reference | High-Yield Syntax & Concepts\n\nQuick Jump:\nUnit I\nUnit II\nUnit III\nUnit IV\nUnit V\n\n\u2190 Dashboard\nMode: Dark",
-      "Unit I: Introduction & Basics CO1",
-      "Algorithm Characteristics \n\nFiniteness: Terminates after a finite number of steps.\n\nDefiniteness: Each step is precisely defined.\n\nInput: Zero or more inputs.\n\nOutput: One or more outputs.\n\nEffectiveness: Operations must be basic and doable in finite time.",
-      "Loop Invariant \n\nA property true before and after each loop iteration. Used to prove correctness.\n\nInitialization: True before first iteration.\n\nMaintenance: If true before iteration, remains true before next.\n\nTermination: Gives useful property when loop ends.",
-      "Heap Data Structure \n\nMax Heap: Parent \u2265 Children. Largest at root.\n\nMin Heap: Parent \u2264 Children. Smallest at root.\n\nMAX-HEAPIFY: Maintains max-heap property. O(log n).\n\nBUILD-MAX-HEAP: Bottom-up heap construction. O(n).",
-      "Substitution Method \n\nSteps to solve recurrences:\n\nGuess the form of the solution (e.g., O(n log n)).\n\nUse mathematical induction to prove the guess.\n\nSubstitute guessed bound into recurrence.\n\nShow condition holds for constants.",
-      "Unit II: Core Mechanics CO2",
-      "Time vs Space Complexity \n\nTime Complexity: Time taken as a function of input length.\n\nSpace Complexity: Memory required as a function of input length.\n\nExample: Mergesort: Time O(n log n), Space O(n). Bubble Sort: Time O(n\u00b2), Space O(1).",
-      "Sorting Time Complexities \n\nAlgorithmBestAverageWorst\n\nBubbleO(n)O(n\u00b2)O(n\u00b2)\n\nSelectionO(n\u00b2)O(n\u00b2)O(n\u00b2)\n\nInsertionO(n)O(n\u00b2)O(n\u00b2)\n\nHeapO(n log n)O(n log n)O(n log n)\n\nCountingO(n+k)O(n+k)O(n+k)\n\nRadixO(d(n+k))O(d(n+k))O(d(n+k))\n\nBucketO(n+k)O(n)O(n\u00b2)",
-      "Search Algorithms \n\nSearchBestAverageWorst\n\nLinearO(1)O(n)O(n)\n\nBinaryO(1)O(log n)O(log n)\n\nNote: Binary search requires sorted array. Linear search doesn't.",
-      "Unit III: Advanced Concepts CO3",
-      "Asymptotic Bounds \n\nBest-case: Minimum time required. Lower bound.\n\nWorst-case: Maximum time required. Upper bound (Big-O).\n\nAverage-case: Expected time required over all inputs.",
-      "Divide and Conquer \n\nBreaks problem down recursively.\n\nDivide: Break into smaller sub-problems.\n\nConquer: Recursively solve sub-problems (or directly if small).\n\nCombine: Merge solutions.\n\nExamples: Merge Sort, Quick Sort, Binary Search.",
-      "Time Complexity Examples 1 \n\nfor(i = 1; i <= n; i++) \n  // O(n)\n\nfor(i = 1; i <= n; i = i * 2)\n  // O(log n)\n\nfor(i = 1; i <= n; i = i + 2)\n  // O(n)",
-      "Unit IV: Design Patterns & Architectures CO4",
-      "Amortized Analysis \n\nCalculates the average time per operation over a sequence, guaranteeing performance even if a single operation is expensive.\n\nAggregate Method: Computes total time T(n) for n ops, sets cost to T(n)/n.",
-      "Master Theorem \n\nFor recurrences of form T(n) = aT(n/b) + f(n)\n\nCalculate c = log_b(a), compare n^c with f(n):\n\nCase 1: f(n) is smaller -> O(n^c)\n\nCase 2: f(n) is equal -> O(n^c log n)\n\nCase 3: f(n) is larger -> O(f(n))",
-      "Time Complexity Examples 2 \n\nfor(i = 1; i <= n; i++) \n  for(j = 1; j <= n; j++)\n    // O(n\u00b2)\n\nfor(i = 1; i <= n; i++) \n  for(j = 1; j <= i; j++)\n    // O(n\u00b2)",
-      "Unit V: Modern Ecosystem CO5",
-      "Algorithm Correctness \n\nPartial Correctness: If the algorithm halts, output is correct. (May loop forever).\n\nTotal Correctness: Guaranteed to halt AND produce correct output.",
-      "Master Theorem Examples \n\nRecurrenceResultCase\n\n2T(n/2) + nO(n log n)Case 2\n\n4T(n/2) + nO(n\u00b2)Case 1\n\n4T(n/2) + n\u00b2O(n\u00b2 log n)Case 2\n\n8T(n/2) + n\u00b2O(n\u00b3)Case 1\n\nT(n/2) + 1O(log n)Case 2",
-      "Radix & Bucket Sort \n\nRadix Sort: Sorts digit by digit using stable sort (e.g., Counting Sort) for each place value. O(d(n+k))\n\nBucket Sort: Divides elements into buckets based on value, sorts buckets individually, then concatenates. Best for uniformly distributed data.\n\n\ufeff",
-      "Ask AI (Lite) Lite Smart (WebGPU) Deep (Cloud) Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next. Send let assistantApp = null; async function openAssistant() { if (document.querySelector('.ask-ai-btn') && document.querySelector('.ask-ai-btn').getAttribute('data-dragged') === 'true') return; const modal = document.getElementById('assistantModal'); if (modal.style.display === 'flex') { closeAssistant(); return; } modal.style.display = 'flex'; // Removed FAB hide so it stays visible // slight delay for transition setTimeout(() => { modal.style.opacity = '1'; modal.style.transform = 'translateY(0)'; }, 10); if (window.innerWidth > 768) { document.getElementById('assistantInput').focus(); } if (!assistantApp) { try { const { initAssistant } = await import('../../shared/assistant-ui.js'); assistantApp = await initAssistant('daa'); if (!assistantApp) throw new Error(\"App init failed\"); } catch (e) { console.error(e); const msgs = document.getElementById('assistantMessages'); msgs.innerHTML = I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).; } } } function closeAssistant() { // FAB stays independent now const modal = document.getElementById('assistantModal'); modal.style.opacity = '0'; modal.style.transform = 'translateY(20px)'; setTimeout(() => { modal.style.display = 'none'; }, 300); } function submitAssistantQuery(q) { const input = document.getElementById('assistantInput'); const query = q || input.value.trim(); if",
-      "(!query) return; if (!assistantApp) { const msgs = document.getElementById('assistantMessages'); msgs.innerHTML = I am blocked by your browser's security settings because you opened me directly as a local file (file:///). To chat with me, you MUST use the live website or the local web server (http://localhost:8000).; return; } input.value = ''; assistantApp.handleQuery(query); }"
+      "Dense Revision Cheat Sheet \n\nAll Units | Scannable Reference | High-Yield Syntax & Concepts\n\nQuick Jump:\nUnit I\nUnit II\nUnit III\nUnit IV\nUnit V\n\n\u2190 Dashboard",
+      "Unit I: Introduction & Foundations CO1",
+      "Algorithm Fundamentals \n\nA rigorous sequence of unambiguous computational steps transforming input to output. Crucial properties include definiteness (unambiguous steps) and effectiveness (basic feasible operations).\n\nExample: Euclid's algorithm for GCD(a,b) where a=12, b=8 yields 4 via systematic reduction.",
+      "Loop Invariants (Correctness Proofs) \n\nFormal logical assertions that remain true before, during, and after loop execution, utilized inductively to prove algorithmic correctness.\n\nExample: In Insertion Sort, `A[1...i-1]` is always sorted before the i-th iteration commences.\n\n            Pro Tip: Examiners test initialization, maintenance, and termination. Ensure the termination property directly implies the overall postcondition.",
+      "Asymptotic Notations \n\nMathematical abstractions characterizing growth rates: O(n) (asymptotic upper bound, worst-case), \u03a9(n) (lower bound, best-case), and \u0398(n) (tight bound, average-case).\n\nExample: Mergesort is strictly \u0398(n log n) as best and worst-case trees have identical depth.",
+      "Recurrence Solving (Substitution) \n\nA deductive technique establishing asymptotic complexity by positing a bound and applying mathematical induction to verify it against the recurrence relation.\n\nExample: T(n) = 2T(n/2) + n. Guess O(n log n), prove T(n) \u2264 c(n log n) inductively.\n\n            Exam Trap: When using Substitution, you must explicitly prove the exact form of your guess. Do not ignore lower-order terms during the inductive step!",
+      "Unit II: Core Algorithmic Paradigms CO2",
+      "Divide and Conquer Methodology \n\nA paradigm that recursively partitions a problem into disjoint subproblems, solves them, and amalgamates their solutions. Relies heavily on recurrence relations.\n\nExample: Strassen's Matrix Multiplication reduces subproblems from 8 to 7, dropping complexity to O(n^2.81).",
+      "Master Theorem Deep-Dive \n\nA deterministic method for solving recurrences of the form T(n) = aT(n/b) + f(n). Compares f(n) against n^(log_b(a)) using polynomial boundedness.\n\nExample: T(n) = 9T(n/3) + n. a=9, b=3, log_3(9)=2. n^2 > n, hence Case 1: T(n) = \u0398(n^2).\n\n            Exam Trap: The Master Theorem ONLY applies if the difference between f(n) and n^(log_b(a)) is polynomially large. It fails for T(n) = 2T(n/2) + n log n!",
+      "Greedy Paradigm & Matroids \n\nAn optimization strategy making locally optimal choices with the heuristic that it converges to a global optimum. Only valid if the problem exhibits the greedy-choice property and optimal substructure.\n\nExample: Huffman Coding optimally minimizes prefix-free code length by greedily merging lowest frequency nodes.",
+      "Paradigm Decision Tree \n\n            flowchart TD\n                A[Optimization Problem] --> B{Overlapping Subproblems?}\n                B -- Yes --> C(Dynamic Programming)\n                B -- No --> D{Optimal Substructure?}\n                D -- Yes & Greedy Choice --> E(Greedy Algorithm)\n                D -- Yes & Disjoint --> F(Divide & Conquer)\n\nExample: Use this mental model to quickly classify DP (Fibonacci) vs Divide & Conquer (Merge Sort).",
+      "Unit III: Dynamic Programming & Complexity CO3",
+      "Dynamic Programming (DP) \n\nSystematically exhausts all possibilities by caching solutions to overlapping subproblems (memoization/tabulation), guaranteeing a global optimum for complex state spaces.\n\nExample: Matrix Chain Multiplication optimally parenthesizes a chain of matrices in O(n^3) using a cost table.",
+      "Bellman-Ford vs Dijkstra \n\n            graph LR\n                A((S)) -- 5 --> B((U))\n                A -- 4 --> C((V))\n                B -- -6 --> C\n\nDijkstra uses a priority queue (Greedy) but fails catastrophically with negative weights. Bellman-Ford repeatedly relaxes all edges (DP) and detects negative cycles on the V-th pass.\n\nExample: Routing in networks where path costs can become negative due to subsidies requires Bellman-Ford.",
+      "0/1 vs Fractional Knapsack \n\nFractional allows splitting items (solvable greedily by sorting value/weight ratio). 0/1 strictly forbids splitting, invalidating the greedy choice and mandating DP.\n\nExample: Packing discrete gold bars (0/1 DP) vs packing gold dust (Fractional Greedy).\n\n            Exam Trap: Applying greedy value/weight ratio to 0/1 Knapsack is the most common student error. Always use the DP table: `dp[i][w] = max(dp[i-1][w], val[i] + dp[i-1][w-wt[i]])`.",
+      "Unit IV: Advanced Graph Algorithms CO4",
+      "Minimum Spanning Trees (MST) \n\nAcutely optimizes network connectivity. Kruskal's sorts edges globally (uses Disjoint-Set/Union-Find). Prim's grows a single tree locally from a root (uses Min-Heap).\n\nExample: Kruskal's O(E log E) is ideal for sparse graphs; Prim's O(E + V log V) with Fibonacci heaps dominates dense graphs.",
+      "Network Flow (Ford-Fulkerson) \n\nCalculates the maximum flow in a flow network. It iteratively finds augmenting paths in a residual graph until none exist. Relies heavily on the Max-Flow Min-Cut theorem.\n\nExample: Maximizing water flow through a plumbing network with distinct pipe capacities.\n\n            Pro Tip: The Edmonds-Karp implementation uses BFS to find augmenting paths, strictly bounding execution time to O(V E^2) unlike naive DFS.",
+      "All-Pairs Shortest Path (Floyd-Warshall) \n\nA quintessential DP algorithm computing shortest paths between all vertex pairs in O(V^3) time. It incrementally allows intermediate vertices from {1...k}.\n\nExample: Generating a complete distance matrix for a GPS routing system between all major cities.",
+      "Unit V: NP-Completeness & Approximation CO5",
+      "P vs NP Classes \n\nP: Solvable in polynomial time. NP: Solutions are verifiable in polynomial time by a non-deterministic Turing machine.\n\nExample: Sorting is in P. Sudoku solving is in NP (fast to check a solved board, hard to solve).",
+      "NP-Complete Reductions \n\nA problem Y is NP-Complete if it's in NP and every NP problem polynomial-time reduces to Y. To prove a new problem Y is NPC, reduce a known NPC problem X to Y.\n\nExample: Reducing 3-SAT (known NPC) to Clique (target Y) to prove Clique is NP-Complete.\n\n            Exam Trap: Reduction direction matters! To prove Y is hard, reduce the KNOWN hard problem X to Y (X -> Y). Reducing Y to X proves nothing about Y's difficulty.",
+      "Approximation Algorithms \n\nHeuristics for NP-Hard problems that guarantee a solution within a specific multiplicative factor (\u03c1) of the absolute optimal cost in polynomial time.\n\nExample: The 2-Approximation for Vertex Cover using a greedy maximal matching guarantees the cover is at most twice the optimal size.",
+      "Complexity Hierarchy \n\n            flowchart BT\n                P((P)) --> NP((NP))\n                NPC((NP-Complete)) --> NP\n                NPC -.-> NPH((NP-Hard))\n                NP -.-> NPH\n\nExample: Halting Problem is NP-Hard but not NP-Complete (since it's undecidable and thus not in NP).\n\n\ufeff",
+      "Ask AI (Lite) \n\n    Lite\n    Smart (WebGPU)\n    Deep (Cloud)\n\n                Hi! I'm your study assistant. Ask me to find questions, summarize concepts, or recommend what to revise next.\n\n                Send"
     ],
     "type": "cheat"
   }

@@ -48,11 +48,7 @@
             <div class="modal-header">
                 <h3>Search & Filters</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('filterModal')">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="controls-top">
@@ -91,11 +87,7 @@
             <div class="modal-header">
                 <h3>Quick Jump</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('jumpModal')">&times;</button>
             </div>
             <div class="modal-body">
                 
@@ -264,11 +256,7 @@
             <div class="modal-header" style="flex-shrink: 0;">
                 <h3>Flashcards</h3>
                 
-            <button class="clear-btn" aria-label="Clear chat" onclick="if(confirm('Clear chat history?')) { document.getElementById('assistantMessages').innerHTML = ''; const pathParts = window.location.pathname.split('/'); const subjectName = pathParts[pathParts.length - 2] || 'default'; sessionStorage.removeItem('assistant_history_' + subjectName);; window.assistantLLMInstance.history = []; }" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.7; transition: all 0.2s;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-            </button><button class="pin-btn" aria-label="Pin modal" onclick="window.isAssistantPinned = !window.isAssistantPinned; this.style.opacity = window.isAssistantPinned ? '1' : '0.4'; this.style.color = window.isAssistantPinned ? 'var(--primary-teal)' : 'var(--text-muted)';" style="background: none; border: none; color: var(--text-muted); cursor: pointer; opacity: 0.4; transition: all 0.2s;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>
-            </button><button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
+            <button class="close-modal" onclick="closeModal('studyModal')">&times;</button>
             </div>
             <div class="modal-body" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; overflow: hidden; padding-bottom: 2rem;">
                 
@@ -386,7 +374,7 @@
             <div id="realContentWrapper">
                 <section id="cards">
                     
-                    <details class="q-card" id="u1_pa_q1" data-unit="I" data-bloom="L2" data-marks="2" data-important="true">
+                    <details class="q-card" id="u1_pa_q1" data-unit="I" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q1. Determine whether each of the following is a proposition. If it is a proposition, state whether it is True or False. (a) Every prime number greater than 2 is odd. (b) 7 + 8 = 16. (c) The Moon is a planet. (d) India is located in Asia.</h3>
                             <div class="card-meta">
@@ -394,8 +382,6 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 5.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -408,7 +394,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pa_q2" data-unit="I" data-bloom="L2" data-marks="2" data-important="true">
+                    <details class="q-card" id="u1_pa_q2" data-unit="I" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q2. Let p: It is raining, q: I carry an umbrella. Translate the following symbolic propositions into English. (a) p ∧ q (b) p ∨ q</h3>
                             <div class="card-meta">
@@ -416,8 +402,6 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.2</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -470,7 +454,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pa_q5" data-unit="I" data-bloom="L3" data-marks="2" data-important="true">
+                    <details class="q-card" id="u1_pa_q5" data-unit="I" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q5. Show the compound proposition (p ↔ q) ≡ (p → q) ∧ (q → p) is logically equivalent.</h3>
                             <div class="card-meta">
@@ -478,8 +462,6 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 6.6</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -492,7 +474,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pa_q6" data-unit="I" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="u1_pa_q6" data-unit="I" data-bloom="L2" data-marks="2" data-important="true">
                         <summary>
                             <h3>Q6. Let p: It is raining, q: I carry an umbrella, r: I wear a raincoat. Write the following statements in symbolic form. (a) It is raining and I carry an umbrella. (b) It is not raining but I wear a raincoat.</h3>
                             <div class="card-meta">
@@ -500,6 +482,8 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.3</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -572,7 +556,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pa_q10" data-unit="I" data-bloom="L3" data-marks="2" data-important="true">
+                    <details class="q-card" id="u1_pa_q10" data-unit="I" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q10. Construct the truth table of the following: (a) (p → q) (b) (¬p ∨ q).</h3>
                             <div class="card-meta">
@@ -580,8 +564,6 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 7.8</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -614,7 +596,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pb_q2" data-unit="I" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="u1_pb_q2" data-unit="I" data-bloom="L2" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q12. Let p, q, r be as above. Translate the following symbolic propositions into English (a) (p ∧ q) → r (b) (p ∨ q) ∧ ¬r</h3>
                             <div class="card-meta">
@@ -622,6 +604,8 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.6</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -654,7 +638,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pb_q4" data-unit="I" data-bloom="L3" data-marks="3" data-important="true">
+                    <details class="q-card" id="u1_pb_q4" data-unit="I" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q14. Let p and q be the propositions “The election is decided” and “The votes have been counted,” respectively. Express each of these compound propositions as an English sentence. (a) ¬q → ¬p (b) ¬p → ¬q (c) ¬q ∨ (¬p ∧ q)</h3>
                             <div class="card-meta">
@@ -662,8 +646,6 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -718,7 +700,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pb_q7" data-unit="I" data-bloom="L3" data-marks="3" data-important="true">
+                    <details class="q-card" id="u1_pb_q7" data-unit="I" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q17. Construct a truth table for each of the following compound propositions. (a) (p → q) ↔ (¬q → ¬p) (b) (p → q) → (q → p)</h3>
                             <div class="card-meta">
@@ -726,8 +708,6 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 7.2</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -780,7 +760,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pb_q10" data-unit="I" data-bloom="L3" data-marks="3" data-important="true">
+                    <details class="q-card" id="u1_pb_q10" data-unit="I" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q20. Using truth tables, prove the following (a) (p ∧ q) ∨ (¬p ∧ q) ≡ q (b) (p ∨ q) ∧ (p ∨ ¬q) ≡ p</h3>
                             <div class="card-meta">
@@ -788,8 +768,6 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 6.9</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -842,7 +820,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pc_q3" data-unit="I" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="u1_pc_q3" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q23. Construct a truth table for each of the following compound propositions. (a) (p ↔ q) ⊕ (¬p ↔ ¬r) (b) (¬p ↔ ¬q) ↔ (q ↔ r)</h3>
                             <div class="card-meta">
@@ -850,6 +828,8 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -882,7 +862,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pc_q5" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="u1_pc_q5" data-unit="I" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q25. State the converse, contrapositive, and inverse of each of these conditional statements. (a) If it snows tonight, then I will stay at home. (b) I go to the beach whenever it is a sunny summer day.</h3>
                             <div class="card-meta">
@@ -890,8 +870,6 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 5.2</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -944,7 +922,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pc_q8" data-unit="I" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="u1_pc_q8" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q28. Determine whether each of these conditional statements is true or false. (a) If 1 + 1 = 2, then 2 + 2 = 5. (b) If 1 + 1 = 3, then 2 + 2 = 4. (c) If 1 + 1 = 3, then 2 + 2 = 5. (d) If monkeys can fly, then 1 + 1 = 3. (e) If 1 + 1 = 2, then dogs can fly</h3>
                             <div class="card-meta">
@@ -952,6 +930,8 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.2</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -964,7 +944,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pc_q9" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="u1_pc_q9" data-unit="I" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q29. Express these system specifications using the propositions p “The user enters a valid password,” q “Access is granted,” and r “The user has paid the subscription fee” and logical connectives (including negations). (a) “The user has paid the subscription fee, but does not enter a valid password.” (b) “Access is granted whenever the user has paid the subscription fee and enters a valid password.”</h3>
                             <div class="card-meta">
@@ -972,8 +952,6 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.6</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1068,7 +1046,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_a4" data-unit="II" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="u2_a4" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
                         <summary>
                             <h3>Q4. Find a2 and a3 terms of the following recurrence relation a_n = a_{n-1}^2 if a_1 = 2.</h3>
                             <div class="card-meta">
@@ -1076,6 +1054,8 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.6</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1150,7 +1130,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_a8" data-unit="II" data-bloom="L3" data-marks="2" data-important="true">
+                    <details class="q-card" id="u2_a8" data-unit="II" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q8. Find the generating function for the sequence: 1,2,3,4, ...</h3>
                             <div class="card-meta">
@@ -1158,8 +1138,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 6.7</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1172,7 +1150,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_a9" data-unit="II" data-bloom="L3" data-marks="2" data-important="true">
+                    <details class="q-card" id="u2_a9" data-unit="II" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q9. Solve the following recurrence relation: a_n = 4a_{n-1} - a_{n-2}</h3>
                             <div class="card-meta">
@@ -1180,8 +1158,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 7.2</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1254,7 +1230,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b3" data-unit="II" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u2_b3" data-unit="II" data-bloom="L3" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q13. Solve the following recurrence relation: a_n = 10a_{n-1} - 25a_{n-2}, a_0 = 3, a_1 = 25</h3>
                             <div class="card-meta">
@@ -1262,6 +1238,8 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.2</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1314,7 +1292,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b6" data-unit="II" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="u2_b6" data-unit="II" data-bloom="L2" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q16. How many different 4-letter words can be formed using the letters of the word MATH, when each letter can be used only once?</h3>
                             <div class="card-meta">
@@ -1322,6 +1300,8 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.2</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1334,7 +1314,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b7" data-unit="II" data-bloom="L3" data-marks="3" data-important="true">
+                    <details class="q-card" id="u2_b7" data-unit="II" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q17. Solve the following recurrence relation: a_n = 6a_{n-1} - 9a_{n-2}, a_0 = 1, a_1 = 9</h3>
                             <div class="card-meta">
@@ -1342,8 +1322,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.2</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1356,7 +1334,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b8" data-unit="II" data-bloom="L4" data-marks="3" data-important="true">
+                    <details class="q-card" id="u2_b8" data-unit="II" data-bloom="L4" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q18. Solve the following recurrence relation: a_n - 4a_{n-1} + 5a_{n-2} - 2a_{n-3} = 0 given a_0 = 1, a_1 = 3, a_2 = 8</h3>
                             <div class="card-meta">
@@ -1364,8 +1342,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.2</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1398,7 +1374,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b10" data-unit="II" data-bloom="L4" data-marks="3" data-important="true">
+                    <details class="q-card" id="u2_b10" data-unit="II" data-bloom="L4" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q20. Solve the following recurrence relation by using generating function: a_n = 3a_{n-1} + 2a_{n-2} given a_0 = 1, a_1 = 3</h3>
                             <div class="card-meta">
@@ -1406,8 +1382,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-3">3 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 7.4</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1442,7 +1416,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c2" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                    <details class="q-card" id="u2_c2" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q22. Solve the following recurrence relation by using generating function: a_n = 3a_{n-1} - 2a_{n-2} given a_0 = 2, a_1 = 5</h3>
                             <div class="card-meta">
@@ -1450,8 +1424,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 7.2</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1464,7 +1436,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c3" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                    <details class="q-card" id="u2_c3" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q23. Solve the following recurrence relation: a_{n+2} - 7a_{n+1} + 12a_n = 0, given a_1 = 2, a_2 = 7.</h3>
                             <div class="card-meta">
@@ -1472,8 +1444,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1506,7 +1476,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c5" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                    <details class="q-card" id="u2_c5" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q25. Solve the following recurrence relation: a_{n+3} - 5a_{n+2} + 8a_{n+1} - 4a_n = 0, given a_1 = 2, a_2 = 5, a_3 = 14</h3>
                             <div class="card-meta">
@@ -1514,8 +1484,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 6.2</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1548,7 +1516,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c7" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                    <details class="q-card" id="u2_c7" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q27. Solve the following recurrence relation by using generating function: a_n = 2a_{n-1} + 3a_{n-2} given a_0 = 1, a_1 = 2</h3>
                             <div class="card-meta">
@@ -1556,8 +1524,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 5.8</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1570,7 +1536,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c8" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                    <details class="q-card" id="u2_c8" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q28. Solve the following recurrence relation: a_{n+3} - 5a_{n+2} + 8a_{n+1} - 4a_n = 0 given a_1 = 1, a_2 = 4, a_3 = 11</h3>
                             <div class="card-meta">
@@ -1578,8 +1544,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1592,7 +1556,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c9" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                    <details class="q-card" id="u2_c9" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q29. Solve the following recurrence relation: a_n = 8a_{n-1} - 21a_{n-2} + 18a_{n-3}, subject to a_0 = 1, a_1 = 5, a_2 = 19.</h3>
                             <div class="card-meta">
@@ -1600,8 +1564,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 6.1</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1614,7 +1576,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c10" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                    <details class="q-card" id="u2_c10" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q30. Solve the following recurrence relation by using generating function: a_n = a_{n-1} + a_{n-2} given a_0 = 0, a_1 = 1</h3>
                             <div class="card-meta">
@@ -1622,8 +1584,6 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 6.7</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1636,7 +1596,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_a_q1" data-unit="III" data-bloom="L1" data-marks="2" data-important="true">
+                    <details class="q-card" id="u3_a_q1" data-unit="III" data-bloom="L1" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q1. Define the following terms with graphs: (i) Complete Bipartite Graph (ii) Complete graph</h3>
                             <div class="card-meta">
@@ -1644,8 +1604,6 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l1">CO3 | Bloom L1</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 5.4</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1678,7 +1636,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_a_q3" data-unit="III" data-bloom="L2" data-marks="2" data-important="true">
+                    <details class="q-card" id="u3_a_q3" data-unit="III" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q3. Find degree of the following graph.</h3>
                             <div class="card-meta">
@@ -1686,8 +1644,6 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 6.9</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1700,7 +1656,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_a_q4" data-unit="III" data-bloom="L1" data-marks="2" data-important="true">
+                    <details class="q-card" id="u3_a_q4" data-unit="III" data-bloom="L1" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q4. State the Handshaking Theorem.</h3>
                             <div class="card-meta">
@@ -1708,8 +1664,6 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l1">CO3 | Bloom L1</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 5.5</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1722,7 +1676,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_a_q5" data-unit="III" data-bloom="L2" data-marks="2" data-important="true">
+                    <details class="q-card" id="u3_a_q5" data-unit="III" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q5. Determine the types of following graphs.</h3>
                             <div class="card-meta">
@@ -1730,8 +1684,6 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
-                                    
-                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 8.1</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">

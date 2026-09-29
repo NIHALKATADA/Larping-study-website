@@ -30,6 +30,36 @@ def normalize_unit(unit):
 
 def clean_html(html_str):
     if not html_str: return ""
+    html_str = re.sub(r'<script[^>]*>.*?</script>', '', html_str, flags=re.IGNORECASE | re.DOTALL)
+    html_str = re.sub(r'<style[^>]*>.*?</style>', '', html_str, flags=re.IGNORECASE | re.DOTALL)
+    # Strip .ask-ai-widget by finding its start and matching nested divs
+    start_idx = html_str.find('ask-ai-widget')
+    if start_idx != -1:
+        div_start = html_str.rfind('<div', 0, start_idx)
+        if div_start != -1:
+            depth = 0
+            end_idx = div_start
+            i = div_start
+            while i < len(html_str):
+                if html_str.startswith('<div', i):
+                    depth += 1
+                    i += 4
+                elif html_str.startswith('</div', i):
+                    depth -= 1
+                    i += 5
+                    if depth == 0:
+                        end_idx = i + 1  # includes '>'
+                        # Need to find the closing '>'
+                        closing = html_str.find('>', end_idx - 1)
+                        if closing != -1:
+                            end_idx = closing + 1
+                        break
+                else:
+                    i += 1
+            if depth == 0 and end_idx > div_start:
+                html_str = html_str[:div_start] + html_str[end_idx:]
+
+    html_str = re.sub(r'<button[^>]*class="[^"]*ask-ai-btn[^"]*"[^>]*>.*?</button>', '', html_str, flags=re.IGNORECASE | re.DOTALL)
     html_str = re.sub(r'<svg[^>]*>.*?</svg>', '', html_str, flags=re.IGNORECASE | re.DOTALL)
     # preserve code block contents
     code_blocks = []
