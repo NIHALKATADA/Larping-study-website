@@ -19,6 +19,15 @@ export async function signIn(email, password) {
     });
 }
 
+export async function signInWithGoogle() {
+    return await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+            redirectTo: window.location.origin
+        }
+    });
+}
+
 export async function signOut() {
     return await supabase.auth.signOut();
 }
