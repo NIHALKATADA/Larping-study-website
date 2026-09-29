@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Revision Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shared/design-system.css">
+    <style>
+        .profile-card {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 4rem auto;
+            color: #e5e7eb;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .form-group label {
+            font-size: 0.9rem;
+            color: #a0a0a5;
+        }
+        .avatar-preview {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #2a2a2a;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .feedback {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+        .feedback.error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            display: block;
+        }
+        .feedback.success {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            display: block;
+        }
+    </style>
+</head>
+<body style="background:#030303;">
+    <div class="glow-bg"></div>
+    <nav class="smart-topbar">
+        <div class="topbar-left">
+            <a href="index.html" class="sleek-back btn btn-secondary" style="border:none; padding:8px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </a>
+            <span class="topbar-logo">Profile</span>
+        </div>
+    </nav>
+    <div class="layout-wrapper" style="padding-top: 5rem;">
+        <div class="profile-card">
+            <div id="profileFeedback" class="feedback"></div>
+            
+            <form id="profileForm" style="display: none;">
+                <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+                    <img id="avatarPreview" src="" class="avatar-preview" alt="Avatar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\\\'http://www.w3.org/2000/svg\\\' viewBox=\\\'0 0 24 24\\\' fill=\\\'none\\\' stroke=\\\'%23a0a0a5\\\' stroke-width=\\\'2\\\'%3E%3Ccircle cx=\\\'12\\\' cy=\\\'8\\\' r=\\\'5\\\'/%3E%3Cpath d=\\\'M20 21a8 8 0 0 0-16 0\\\'/%3E%3C/svg%3E'">
+                    <div style="flex: 1;">
+                        <div class="form-group" style="margin: 0;">
+                            <label>Avatar URL</label>
+                            <input type="text" id="avatarUrl" class="search-bar" placeholder="https://...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email (Read-only)</label>
+                    <input type="email" id="userEmail" class="search-bar" disabled style="opacity: 0.7;">
+                </div>
+
+                <div class="form-group">
+                    <label>Display Name</label>
+                    <input type="text" id="displayName" class="search-bar">
+                </div>
+
+                <div id="academicFields" style="display: none;">
+                    <div class="form-group">
+                        <label>University ID</label>
+                        <input type="text" id="university" class="search-bar" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label>Program ID</label>
+                        <input type="text" id="program" class="search-bar" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label>Current Semester</label>
+                        <input type="number" id="semester" class="search-bar" disabled>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="saveBtn" style="width: 100%; margin-top: 1rem; padding: 0.75rem;">Save Changes</button>
+            </form>
+            <div id="loadingState" style="text-align: center; padding: 2rem; color: #a0a0a5;">
+                Loading profile...
+            </div>
+        </div>
+    </div>
+    
+    <script type="module">
+        import { getCurrentUser } from './shared/auth.js';
+        import { supabase } from './shared/supabase-client.js';
+
+        async function initProfile() {
+            const loadingState = document.getElementById('loadingState');
+            const profileForm = document.getElementById('profileForm');
+            const feedback = document.getElementById('profileFeedback');
+            const avatarPreview = document.getElementById('avatarPreview');
+            
+            function showFeedback(msg, type) {
+                feedback.textContent = msg;
+                feedback.className = 'feedback ' + type;
+            }
+
+            try {
+                const { user, error: authError } = await getCurrentUser();
+                
+                if (authError || !user) {
+                    window.location.href = 'index.html';
+                    return;
+                }
+
+                document.getElementById('userEmail').value = user.email;
+
+                // Load profile
+                const { data: profile, error: dbError } = await supabase
+                    .from('profiles')
+                    .select('*')
+                    .eq('id', user.id)
+                    .single();
+
+                if (dbError && dbError.code !== 'PGRST116') {
+                    throw dbError;
+                }
+
+                // If profile doesn't exist, create it
+                if (!profile) {
+                    const newProfile = {
+                        id: user.id,
+                        display_name: user.user_metadata?.display_name || user.email.split('@')[0],
+                        avatar_url: user.user_metadata?.avatar_url || null
+                    };
+                    
+                    const { error: insertError } = await supabase
+                        .from('profiles')
+                        .insert([newProfile]);
+                        
+                    if (insertError) throw insertError;
+                    
+                    populateForm(newProfile);
+                } else {
+                    populateForm(profile);
+                }
+
+                loadingState.style.display = 'none';
+                profileForm.style.display = 'block';
+
+                // Handle form submission
+                profileForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const saveBtn = document.getElementById('saveBtn');
+                    saveBtn.disabled = true;
+                    saveBtn.textContent = 'Saving...';
+                    feedback.className = 'feedback';
+                    
+                    const updates = {
+                        display_name: document.getElementById('displayName').value,
+                        avatar_url: document.getElementById('avatarUrl').value || null,
+                        updated_at: new Date().toISOString()
+                    };
+
+                    const universityEl = document.getElementById('university');
+                    if (!universityEl.disabled) updates.university_id = universityEl.value || null;
+                    
+                    const programEl = document.getElementById('program');
+                    if (!programEl.disabled) updates.program_id = programEl.value || null;
+                    
+                    const semesterEl = document.getElementById('semester');
+                    if (!semesterEl.disabled) updates.current_semester = parseInt(semesterEl.value) || null;
+
+                    try {
+                        const { error } = await supabase
+                            .from('profiles')
+                            .update(updates)
+                            .eq('id', user.id);
+                            
+                        if (error) throw error;
+                        
+                        showFeedback('Profile updated successfully!', 'success');
+                        if (updates.avatar_url) {
+                            avatarPreview.src = updates.avatar_url;
+                        } else {
+                            avatarPreview.src = '';
+                        }
+                    } catch (err) {
+                        showFeedback('Failed to update profile: ' + err.message, 'error');
+                    } finally {
+                        saveBtn.disabled = false;
+                        saveBtn.textContent = 'Save Changes';
+                    }
+                });
+
+                document.getElementById('avatarUrl').addEventListener('input', (e) => {
+                    avatarPreview.src = e.target.value || '';
+                });
+
+            } catch (err) {
+                loadingState.style.display = 'none';
+                showFeedback('Error loading profile: ' + err.message, 'error');
+            }
+
+            function populateForm(data) {
+                document.getElementById('displayName').value = data.display_name || '';
+                document.getElementById('avatarUrl').value = data.avatar_url || '';
+                if (data.avatar_url) {
+                    avatarPreview.src = data.avatar_url;
+                }
+
+                // Only allow editing academic fields if they are already populated
+                const hasAcademicData = data.university_id || data.program_id || data.current_semester;
+                if (hasAcademicData) {
+                    document.getElementById('academicFields').style.display = 'block';
+                    
+                    if (data.university_id) {
+                        const el = document.getElementById('university');
+                        el.value = data.university_id;
+                        el.disabled = false;
+                    }
+                    if (data.program_id) {
+                        const el = document.getElementById('program');
+                        el.value = data.program_id;
+                        el.disabled = false;
+                    }
+                    if (data.current_semester) {
+                        const el = document.getElementById('semester');
+                        el.value = data.current_semester;
+                        el.disabled = false;
+                    }
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', initProfile);
+    </script>
+    <script src="shared/app-utils.js"></script>
+</body>
+</html>
