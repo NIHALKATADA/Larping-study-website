@@ -551,6 +551,12 @@ const safeStorage = {
 const savedTheme = safeStorage.getItem(THEME_KEY) || 'dark';
 document.documentElement.setAttribute('data-theme', savedTheme);
 
+function toggleTheme() {
+    const nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'paper' : 'dark';
+    document.documentElement.setAttribute('data-theme', nextTheme);
+    safeStorage.setItem(THEME_KEY, nextTheme);
+}
+
 // Disable native scroll restoration — it fights with our deferred setup
 // and causes the page to jump to a stale position after layout completes.
 try { if ('scrollRestoration' in history) {
@@ -784,6 +790,12 @@ deferUntilAfterAnimation(() => {
     // Toggle all button
     const toggleAllBtn = document.getElementById('toggleAllBtn');
     if (toggleAllBtn) toggleAllBtn.addEventListener('click', toggleAll);
+
+    // Reports use this control; query all elements to stay safe with older
+    // report markup that accidentally contained a duplicate id.
+    document.querySelectorAll('#themeToggleBtn').forEach(button => {
+        button.addEventListener('click', toggleTheme);
+    });
 
     // Card toggle listeners (for collapse/reveal state)
     document.querySelectorAll('.q-card').forEach(card => {

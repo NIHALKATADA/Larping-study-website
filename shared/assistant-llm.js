@@ -46,7 +46,7 @@ export class AssistantLLM extends AssistantCore {
         const titleSpan = document.querySelector('#aiModalTitle span');
         const sel = document.getElementById('aiModeSelect');
         
-        let activeModel = this.isDeepMode ? "Qwen 2.5 27B (Cloud API)" : 
+        let activeModel = this.isDeepMode ? "Configured Groq Cloud Model" :
                          (this.isSmartMode ? (this.modelId || "Llama (Local WebGPU)") : "Offline Search (No AI)");
                          
         const msgsContainer = document.getElementById('assistantMessages');
@@ -334,11 +334,16 @@ export class AssistantLLM extends AssistantCore {
         
         if (this.isDeepMode) {
             try {
-                const res = await fetch('/api/chat', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ messages, temperature: temp, max_tokens })
-                });
+                let res;
+                for (let attempt = 0; attempt < 4; attempt++) {
+                    res = await fetch('/api/chat', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ messages, temperature: temp, max_tokens })
+                    });
+                    if (res.ok || res.status !== 503 || attempt === 3) break;
+                    await new Promise(resolve => setTimeout(resolve, 1000 * (2 ** attempt)));
+                }
                 if (!res.ok) {
                     const errTxt = await res.text();
                     console.error("Deep Mode API error details:", res.status, errTxt);
@@ -423,8 +428,8 @@ export class AssistantLLM extends AssistantCore {
         if (['topQuestions', 'progress', 'nextToRevise'].includes(intent)) {
             let resObj = null;
             if (intent === 'topQuestions') resObj = this.topQuestions(params);
-            else if (intent === 'progress') resObj = this.progress();
-            else if (intent === 'nextToRevise') resObj = this.nextToRevise();
+            else if (intent === 'progress') resObj = this.progress(params);
+            else if (intent === 'nextToRevise') resObj = this.nextToRevise(params);
             
             let introText = "";
             if (intent === 'topQuestions') introText = "Here are the most important questions you requested:";
@@ -448,15 +453,16 @@ export class AssistantLLM extends AssistantCore {
         
         let relevant = searchResults.filter(r => r.score > 2.0);
         
+        const getBaseUrlPrefix = () => window.location.pathname.includes('/subjects/') ? '../../' : '';
         if (relevant.length > 0) {
             let chunks = relevant.slice(0, 3).map(r => `[Q${r.doc.q_num} | Score: ${r.doc.score || "N/A"} | Important: ${r.doc.important ? "Yes" : "No"}]: ${r.doc.chunks.join(" ").substring(0, 400)}`);
             notesText = chunks.join("\n\n");
-            referenceHtml = `<div style="margin-top:1rem; padding:0.75rem; background:rgba(0,0,0,0.3); border-radius:8px; font-size:0.85em; color:var(--text-muted);"><strong>References:</strong> ${relevant.slice(0,3).map(r => `<a href="?open=${r.doc.id}" onclick="appUtilsOpenCard('${r.doc.id}'); return false;" style="color:var(--primary-teal);">Q${r.doc.q_num}</a>`).join(", ")}</div>`;
+            referenceHtml = `<div style="margin-top:1rem; padding:0.75rem; background:rgba(0,0,0,0.3); border-radius:8px; font-size:0.85em; color:var(--text-muted);"><strong>References:</strong> ${relevant.slice(0,3).map(r => `<a href="${r.doc.url ? getBaseUrlPrefix() + r.doc.url : '?open=' + r.doc.id}" onclick="return !appUtilsOpenCard('${r.doc.id}');" style="color:var(--primary-teal);">Q${r.doc.q_num}</a>`).join(", ")}</div>`;
         } else {
-            referenceHtml = `<div style="margin-top:1rem; padding:0.75rem; background:rgba(0,0,0,0.3); border-radius:8px; font-size:0.85em; color:var(--text-muted);"><em>General answer (not from your question bank)</em><br/>Related links: ${searchResults.slice(0,3).map(r => `<a href="?open=${r.doc.id}" onclick="appUtilsOpenCard('${r.doc.id}'); return false;" style="color:var(--primary-teal);">Q${r.doc.q_num}</a>`).join(", ")}</div>`;
+            referenceHtml = `<div style="margin-top:1rem; padding:0.75rem; background:rgba(0,0,0,0.3); border-radius:8px; font-size:0.85em; color:var(--text-muted);"><em>General answer (not from your question bank)</em><br/>Related links: ${searchResults.slice(0,3).map(r => `<a href="${r.doc.url ? getBaseUrlPrefix() + r.doc.url : '?open=' + r.doc.id}" onclick="return !appUtilsOpenCard('${r.doc.id}');" style="color:var(--primary-teal);">Q${r.doc.q_num}</a>`).join(", ")}</div>`;
         }
 
-        let activeModel = this.isDeepMode ? "Qwen 2.5 27B (Groq Cloud API)" : (this.modelId || "Llama 3.2 (Local WebGPU)");
+        let activeModel = this.isDeepMode ? "Configured Groq Cloud Model" : (this.modelId || "Llama 3.2 (Local WebGPU)");
         
         const SUBJECT = this.subjectId.toUpperCase();
         let sysPrompt = `You are the elite study assistant for ${SUBJECT} (B.Tech) inside Revision Hub. Model: ${activeModel}.
@@ -491,7 +497,7 @@ Use only the SYLLABUS, BANK_TOPICS, GAPS and CHEAT_CHUNKS supplied below.
 
         if (intent === 'predict') {
             try {
-                let gapsRes = await fetch(`data/${this.subjectId}/coverage_gaps.json`);
+                let gapsRes = await fetch(new URL(`../data/${this.subjectId}/coverage_gaps.json`, import.meta.url));
                 let gapsData = [];
                 if (gapsRes.ok) gapsData = await gapsRes.json();
                 

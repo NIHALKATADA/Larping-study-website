@@ -1,4 +1,15 @@
-import { AssistantCore } from '../shared/assistant-core.js';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const projectRoot = path.join(__dirname, '..');
+// The site deliberately keeps CommonJS package semantics for its Vercel API,
+// while browser assistant files are ESM. Loading the source as a data URL lets
+// Node test the browser module without changing production module semantics.
+const coreSource = fs.readFileSync(path.join(projectRoot, 'shared', 'assistant-core.js'), 'utf8');
+const { AssistantCore } = await import(`data:text/javascript;base64,${Buffer.from(coreSource).toString('base64')}`);
 
 global.localStorage = {
   getItem: () => null,
@@ -82,14 +93,6 @@ for (let t of tests) {
 }
 console.log(`Passed ${passed} / ${tests.length} cases.`);
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const projectRoot = path.join(__dirname, '..');
-
 console.log("\nTesting AssistantCore on all real subject data...");
 const subjects = ['daa', 'dbms', 'java', 'maths', 'ml', 'os'];
 const aliasesPath = path.join(projectRoot, 'shared', 'assistant-aliases.json');
@@ -105,9 +108,27 @@ for (const sub of subjects) {
   try {
     const indexData = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
     const core = new AssistantCore(sub, realAliases, indexData);
+    const q1Result = core.execute('show Q1').result;
+    if (Array.isArray(q1Result)) {
+      if (!q1Result.every(q => Number(q.q_num) === 1)) throw new Error('Ambiguous Q1 did not return only Q1s');
+    } else {
+      if (!q1Result || Number(q1Result.q_num) !== 1) throw new Error('Q1 did not resolve through q_num');
+    }
+    if (sub === 'daa') {
+      const u2q1 = core.execute('show Q1 unit II').result;
+      if (!u2q1 || u2q1.unit !== 'II' || Number(u2q1.q_num) !== 1) throw new Error('DAA Q1 unit disambiguation failed');
+    }
     console.log(`✅ ${sub} loaded successfully (${indexData.length} docs)`);
   } catch (e) {
     console.error(`❌ ${sub} failed to load:`, e);
     process.exit(1);
   }
 }
+
+const globalIndex = JSON.parse(fs.readFileSync(path.join(projectRoot, 'subjects', 'global', 'assistant-index.json'), 'utf8'));
+const globalCore = new AssistantCore('global', realAliases, globalIndex);
+const dbmsQ1 = globalCore.execute('show Q1 dbms').result;
+if (!dbmsQ1 || dbmsQ1.subject !== 'dbms' || Number(dbmsQ1.q_num) !== 1) {
+  throw new Error('Global subject-scoped Q1 lookup failed');
+}
+console.log('✅ Global subject-scoped Q1 lookup works');

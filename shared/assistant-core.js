@@ -166,10 +166,11 @@ export class AssistantCore {
       intent = "progress";
     } else if (t.match(/\b(quiz me|quiz|test me)\b/)) {
       intent = "quiz";
-    } else if (t.match(/\b(q\d+)\b/)) {
-      let qidMatch = t.match(/\b(q\d+)\b/);
+    } else if (t.match(/\bq\s*#?\s*(\d+)\b/)) {
+      let qidMatch = t.match(/\bq\s*#?\s*(\d+)\b/);
       intent = "getQuestion";
-      params.qId = qidMatch[1];
+      params.qId = `q${qidMatch[1]}`;
+      params.qNum = Number(qidMatch[1]);
     } else if (t.match(/\b(compare|difference|vs)\b/)) {
       intent = "search";
     } else if (hasListCue && hasQuestionCue && (params.unit || params.marks || params.unreviewedOnly || params.midterm)) {
@@ -182,11 +183,12 @@ export class AssistantCore {
   // --- Tools ---
   filteredList(params) {
     let qs = this.indexData.filter(d => d.type === 'question');
+    if (params.subject && params.subject !== 'global') qs = qs.filter(q => q.subject === params.subject);
     if (params.unit) qs = qs.filter(q => q.unit === params.unit);
     if (params.marks) qs = qs.filter(q => q.marks === params.marks);
     if (params.midterm) qs = qs.filter(q => q.important && ['I', 'II', 'III'].includes(q.unit));
     if (params.unreviewedOnly) {
-      const reviewedMap = JSON.parse(localStorage.getItem(`${this.subjectId}_reviewed`) || '{}');
+      const reviewedMap = JSON.parse(localStorage.getItem(`${params.subject !== 'global' ? params.subject : this.subjectId}_reviewed`) || '{}');
       qs = qs.filter(q => !reviewedMap[q.id]);
     }
     return qs;
@@ -194,12 +196,13 @@ export class AssistantCore {
 
   topQuestions(params) {
     let qs = this.indexData.filter(d => d.type === 'question');
+    if (params.subject && params.subject !== 'global') qs = qs.filter(q => q.subject === params.subject);
     if (params.unit) qs = qs.filter(q => q.unit === params.unit);
     if (params.marks) qs = qs.filter(q => q.marks === params.marks);
     if (params.midterm) qs = qs.filter(q => q.important && ['I', 'II', 'III'].includes(q.unit));
     
     if (params.unreviewedOnly) {
-      const reviewedMap = JSON.parse(localStorage.getItem(`${this.subjectId}_reviewed`) || '{}');
+      const reviewedMap = JSON.parse(localStorage.getItem(`${params.subject !== 'global' ? params.subject : this.subjectId}_reviewed`) || '{}');
       qs = qs.filter(q => !reviewedMap[q.id]);
     }
     
@@ -272,10 +275,27 @@ export class AssistantCore {
     });
   }
   
-  getQuestion(qId) {
-    let q = this.indexData.find(q => q.id === qId);
-    if (q) this.sessionState.lastTopic = q.title;
-    return q;
+  getQuestion(params) {
+    const scopedSubject = ['dbms', 'java', 'os', 'daa', 'ml', 'maths'].includes(params.subject) ? params.subject : null;
+    let questions = this.indexData.filter(q => q.type === 'question' && (!scopedSubject || !q.subject || q.subject === scopedSubject));
+    if (params.unit) questions = questions.filter(q => q.unit === params.unit);
+    if (params.marks) questions = questions.filter(q => q.marks === params.marks);
+
+    // Q<number> always means the displayed question number, not a storage ID.
+    // This supports descriptive IDs such as u1_pa_q1 and 2m_q1. In subjects
+    // that restart numbering for each unit, adding "unit II" selects that unit.
+    let matches = [];
+    if (Number.isFinite(params.qNum)) {
+      matches = questions.filter(q => Number(q.q_num) === params.qNum);
+    } else if (params.qId) {
+      let q = questions.find(q => q.id === params.qId);
+      if (q) matches = [q];
+    }
+    
+    if (matches.length === 1) {
+      this.sessionState.lastTopic = matches[0].title;
+    }
+    return matches;
   }
 
   search(query) {
@@ -284,18 +304,22 @@ export class AssistantCore {
     return results.slice(0, 5); // top 5
   }
 
-  progress() {
-    const reviewedMap = JSON.parse(localStorage.getItem(`${this.subjectId}_reviewed`) || '{}');
-    const qs = this.indexData.filter(d => d.type === 'question');
+  progress(params) {
+    let subj = (params && params.subject && params.subject !== 'global') ? params.subject : this.subjectId;
+    const reviewedMap = JSON.parse(localStorage.getItem(`${subj}_reviewed`) || '{}');
+    let qs = this.indexData.filter(d => d.type === 'question');
+    if (params && params.subject && params.subject !== 'global') qs = qs.filter(q => q.subject === params.subject);
     const total = qs.length;
     let done = 0;
     qs.forEach(q => { if (reviewedMap[q.id]) done++; });
     return { done, total, percent: total ? Math.round((done/total)*100) : 0 };
   }
 
-  nextToRevise() {
-    const reviewedMap = JSON.parse(localStorage.getItem(`${this.subjectId}_reviewed`) || '{}');
+  nextToRevise(params) {
+    let subj = (params && params.subject && params.subject !== 'global') ? params.subject : this.subjectId;
+    const reviewedMap = JSON.parse(localStorage.getItem(`${subj}_reviewed`) || '{}');
     let unreviewed = this.indexData.filter(d => d.type === 'question' && !reviewedMap[d.id]);
+    if (params && params.subject && params.subject !== 'global') unreviewed = unreviewed.filter(q => q.subject === params.subject);
     // sort by important
     unreviewed.sort((a, b) => {
        if (b.important !== a.important) return b.important ? 1 : -1;
@@ -309,9 +333,19 @@ export class AssistantCore {
     let result = null;
     if (intent === 'topQuestions') result = this.topQuestions(params);
     else if (intent === 'filteredList') result = this.filteredList(params);
-    else if (intent === 'getQuestion') result = this.getQuestion(params.qId);
-    else if (intent === 'progress') result = this.progress();
-    else if (intent === 'nextToRevise') result = this.nextToRevise();
+    else if (intent === 'getQuestion') {
+      let matches = this.getQuestion(params);
+      if (matches.length === 1) {
+        result = matches[0];
+      } else if (matches.length > 1) {
+        result = matches;
+        intent = 'disambiguation'; // Display as a list
+      } else {
+        result = null;
+      }
+    }
+    else if (intent === 'progress') result = this.progress(params);
+    else if (intent === 'nextToRevise') result = this.nextToRevise(params);
     else if (intent === 'quiz') result = "Ready for a quiz? Go to the interactive quiz page from the dashboard!";
     else {
       intent = 'search'; // fallback

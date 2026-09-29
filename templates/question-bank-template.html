@@ -36,7 +36,7 @@
         
         <h1>{{ subject_full_name }}</h1>
         <h2>{% if is_midterm %}Midterm Important Questions{% else %}Full Question Bank{% endif %}</h2>
-        <p class="scope-note">{% if is_midterm %}Important Only (Score 9.0+) | Units I, II, III{% else %}All Units | 2, 3, and 5 Marks{% endif %}</p>
+        <p class="scope-note">{% if is_midterm %}Important Only (Score 9.0+) | Units I, II, III{% else %}All Units | Available marks: {{ available_marks | join(', ') }}{% endif %}</p>
     
         
     </header>
@@ -61,9 +61,9 @@
                             <label><input type="checkbox" class="unit-cb" value="IV"> Unit IV</label>
                             <label><input type="checkbox" class="unit-cb" value="V"> Unit V</label>
                             <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
-                            <label><input type="checkbox" class="marks-cb" value="2"> 2 Marks</label>
-                            <label><input type="checkbox" class="marks-cb" value="3"> 3 Marks</label>
-                            <label><input type="checkbox" class="marks-cb" value="5"> 5 Marks</label>
+                            {%- for mark in available_marks %}
+                            <label><input type="checkbox" class="marks-cb" value="{{ mark }}"> {{ mark }} Marks</label>
+                            {%- endfor %}
                             <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
                             {% if not is_midterm %}
                             <label title="Filters for elite questions with a score of 9.0+ based on fundamental importance and exam probability."><input type="checkbox" class="important-cb"> Important Only</label>

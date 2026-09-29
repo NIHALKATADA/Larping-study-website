@@ -30,7 +30,7 @@ If it's code related, you can make it "code" (where the user types a snippet).
 Return a JSON array of objects with the exact following schema:
 [
   {
-    "q_id": "original_q_id",
+    "id": "original_q_id",
     "type": "mcq", // or "short" or "code"
     "question": "The newly formulated clear question.",
     "options": ["Option A", "Option B", "Option C", "Option D"], // ONLY if type is mcq, otherwise omit
@@ -38,7 +38,7 @@ Return a JSON array of objects with the exact following schema:
     "explanation": "Brief explanation of why this is correct based on the original answer."
   }
 ]
-Ensure you map the "q_id" properly.
+Ensure you map the "id" properly.
 """
 
 def generate_for_subject(json_path):
@@ -58,7 +58,7 @@ def generate_for_subject(json_path):
         clean_batch = []
         for q in batch:
             clean_batch.append({
-                "q_id": q["id"],
+                "id": q["id"],
                 "title": q["title"],
                 "answer_text": q["answer_html"][:500] # send just enough context
             })
@@ -83,6 +83,7 @@ def generate_for_subject(json_path):
     print(f"Saved {len(all_quizzes)} quiz questions to {out_path}")
 
 if __name__ == "__main__":
-    for filepath in glob.glob('subjects/*/*_questions.json'):
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    for filepath in sorted(glob.glob(os.path.join(root, 'data', '*', '*_questions.json'))):
         generate_for_subject(filepath)
     print("All subjects processed! You can now run build_site.py.")

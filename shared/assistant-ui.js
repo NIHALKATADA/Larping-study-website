@@ -5,9 +5,13 @@ export async function initAssistant(subjectId) {
     let aliases = {};
     
     try {
+        // Resolve from this module, not the current page. The assistant is used
+        // by both /index.html and pages nested under /subjects/<subject>/.
+        const indexUrl = new URL(`../subjects/${subjectId}/assistant-index.json`, import.meta.url);
+        const aliasesUrl = new URL('./assistant-aliases.json', import.meta.url);
         const [indexRes, aliasesRes] = await Promise.all([
-            fetch(`../../subjects/${subjectId}/assistant-index.json`),
-            fetch(`../../shared/assistant-aliases.json`)
+            fetch(indexUrl),
+            fetch(aliasesUrl)
         ]);
         if (indexRes.ok) indexData = await indexRes.json();
         if (aliasesRes.ok) {
@@ -38,7 +42,7 @@ export async function initAssistant(subjectId) {
             }
             this.isDeepMode = (mode === 'deep');
             
-            let activeModel = this.isDeepMode ? "Qwen 2.5 27B (Cloud API)" : "Offline Search (No AI)";
+            let activeModel = this.isDeepMode ? "Configured Groq Cloud Model" : "Offline Search (No AI)";
             const msgsContainer = document.getElementById('assistantMessages');
             if (msgsContainer) {
                 const firstMsg = msgsContainer.firstElementChild;
@@ -96,11 +100,16 @@ export async function initAssistant(subjectId) {
                 }
                 messages.push({ role: 'user', content: `${contextStr}\n\nQuestion: ${text}` });
 
-                const res = await fetch('/api/chat', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ messages, temperature: 0.5, max_tokens: 1024 })
-                });
+                let res;
+                for (let attempt = 0; attempt < 4; attempt++) {
+                    res = await fetch('/api/chat', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ messages, temperature: 0.5, max_tokens: 1024 })
+                    });
+                    if (res.ok || res.status !== 503 || attempt === 3) break;
+                    await new Promise(resolve => setTimeout(resolve, 1000 * (2 ** attempt)));
+                }
                 
                 if (!res.ok) throw new Error('API failed');
                 const data = await res.json();
@@ -108,9 +117,10 @@ export async function initAssistant(subjectId) {
                 let escaped = String(data.text).replace(/[&<>'"]/g, tag => ({
                     '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
                 }[tag]));
-                escaped = escaped.replace(/`(?:[a-z]*)\n([\s\S]*?)`/g, '<pre style="background:rgba(0,0,0,0.5); padding:1rem; border-radius:8px; overflow-x:auto;"></pre>');
-                escaped = escaped.replace(/\*\*(.*?)\*\*/g, '<strong></strong>');
-                escaped = escaped.replace(/([^]+)/g, '<code style="background:rgba(0,0,0,0.3); padding:0.1rem 0.3rem; border-radius:4px;"></code>');
+                escaped = escaped.replace(/```(?:[a-z]*)\n?([\s\S]*?)```/g, '<pre style="background:rgba(0,0,0,0.5); padding:1rem; border-radius:8px; overflow-x:auto;"><code>$1</code></pre>');
+                escaped = escaped.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                escaped = escaped.replace(/`([^`]+)`/g, '<code style="background:rgba(0,0,0,0.3); padding:0.1rem 0.3rem; border-radius:4px;">$1</code>');
+                escaped = escaped.replace(/\n/g, '<br/>');
                 
                 div.innerHTML = escaped;
             } catch (err) {
@@ -173,6 +183,7 @@ export async function initAssistant(subjectId) {
 
             let html = '';
             
+            const getBaseUrlPrefix = () => window.location.pathname.includes('/subjects/') ? '../../' : '';
             if (res.introText) {
                 html += `<p style="margin-bottom: 0.5rem;"><em>${escapeHTML(res.introText)}</em></p>`;
             }
@@ -187,7 +198,7 @@ export async function initAssistant(subjectId) {
                     <em>From your question bank:</em><br/>
                     ${res.result.chunks.slice(0,2).map(escapeHTML).join('<br/><br/>')}
                 </div>
-                <a href="${res.result.url}" onclick="return !appUtilsOpenCard('${res.result.id}');" style="display:inline-block; margin-top:0.5rem; color:var(--primary-teal);">Read full answer</a>`;
+                <a href="${res.result.url ? getBaseUrlPrefix() + res.result.url : '?open=' + res.result.id}" onclick="return !appUtilsOpenCard('${res.result.id}');" style="display:inline-block; margin-top:0.5rem; color:var(--primary-teal);">Read full answer</a>`;
             } else if (res.result && Array.isArray(res.result) && res.result.length > 0) {
                 if (res.intent === 'search') {
                     const topMatch = res.result[0];
@@ -201,7 +212,7 @@ export async function initAssistant(subjectId) {
                             <em>From your question bank:</em><br/><br/>
                             ${topMatch.doc.chunks.slice(0,2).map(escapeHTML).join('<br/><br/>')}
                         </div>
-                        <a href="${topMatch.doc.url}" onclick="return !appUtilsOpenCard('${topMatch.doc.id}');" style="display:inline-block; margin-top:0.5rem; color:var(--primary-teal); margin-bottom: 1rem;">Read full answer</a>
+                        <a href="${topMatch.doc.url ? getBaseUrlPrefix() + topMatch.doc.url : '?open=' + topMatch.doc.id}" onclick="return !appUtilsOpenCard('${topMatch.doc.id}');" style="display:inline-block; margin-top:0.5rem; color:var(--primary-teal); margin-bottom: 1rem;">Read full answer</a>
                         <p>Other related questions:</p>`;
 
                     } else {
@@ -209,6 +220,7 @@ export async function initAssistant(subjectId) {
                     }
                 } else if (res.intent === 'topQuestions') html += `<p>Here are some top questions you should look at:</p>`;
                 else if (res.intent === 'nextToRevise') html += `<p>Here is what I recommend revising next:</p>`;
+                else if (res.intent === 'disambiguation') html += `<p>There are multiple matching questions. Please select one:</p>`;
                 
                 html += `<div style="display:flex; flex-direction:column; gap:0.5rem; margin-top:0.5rem;">`;
                 res.result.forEach((qObj, index) => {
@@ -216,7 +228,7 @@ export async function initAssistant(subjectId) {
                     if (res.intent === 'search' && index === 0 && qObj.score > 2.5) return; // Skip if already shown as top match
                     html += `
                     <div style="background: rgba(0,0,0,0.3); padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
-                        <a href="${q.url}" onclick="return !appUtilsOpenCard('${q.id}');" style="color: white; text-decoration: none; font-weight: bold; display: block;">${q.type === 'question' ? 'Q'+q.q_num+'. ' : ''}${escapeHTML(q.title)}</a>
+                        <a href="${q.url ? getBaseUrlPrefix() + q.url : '?open=' + q.id}" onclick="return !appUtilsOpenCard('${q.id}');" style="color: white; text-decoration: none; font-weight: bold; display: block;">${q.type === 'question' ? 'Q'+q.q_num+'. ' : ''}${escapeHTML(q.title)}</a>
                         ${q.type === 'question' ? `<div style="font-size: 0.8em; color: var(--text-muted); margin-top:0.25rem;">Unit ${q.unit} &bull; ${q.marks} Marks ${q.reason ? `&bull; ${escapeHTML(q.reason)}` : ''}</div>` : ''}
                     </div>`;
                 });

@@ -1,1 +1,0 @@
-const fs = require('fs'); const html = fs.readFileSync('c:/Users/nihal/OneDrive/Desktop/revision-hub/subjects/daa/cheat-sheet.html', 'utf-8'); const lines = html.split('\n'); for(let i=0; i<lines.length; i++) { if (lines[i].includes('Unit V')) console.log(i, lines[i]); if (lines[i].includes('app-utils.js')) console.log(i, lines[i]); }

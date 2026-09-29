@@ -10,7 +10,7 @@ def fix_file(path):
     
     # 2. Extract deep dive cards
     deep_dives = []
-    # Find cheat cards containing "Deep Dive"
+    # Find report cards containing "Deep Dive"
     pattern = r'<div class="cheat-card">\s*<h4>Deep Dive:.*?</ul>\n</div>'
     for m in re.finditer(pattern, content, flags=re.DOTALL):
         deep_dives.append(m.group(0))
@@ -21,7 +21,7 @@ def fix_file(path):
     # Now, there's an unclosed div. The original injection did:
     # content.replace('</div>\n</div>', deep_dives + '</div>\n</div>') or something like that.
     # So removing the deep dives might leave `\n</div>\n</div>` correctly, but we need to check if there are unbalanced divs.
-    # The instructions say: "Every cheat sheet has an unclosed <div>. The inject_* scripts did a blind content.replace('</div>\n</div>', ...). The "Deep Dive" cards landed at lines ~54–76 of os/cheat-sheet.html, above the cheat-grid sections they were meant to join."
+    # Older report injections could place cards outside their intended cheat grid.
     
     # Let's fix the unbalanced div around the controls section.
     # We can just use BeautifulSoup to prettify and fix, or we can just append the deep dives to the first cheat-grid.
@@ -41,5 +41,5 @@ def fix_file(path):
     
     path.write_text(content, encoding='utf-8')
 
-for p in Path('subjects').rglob('cheat-sheet.html'):
+for p in Path('subjects').rglob('comprehensive-report.html'):
     fix_file(p)

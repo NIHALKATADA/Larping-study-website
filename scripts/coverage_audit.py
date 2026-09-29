@@ -2,14 +2,14 @@
 scripts/coverage_audit.py
 
 For every subject, checks which "important" questions are NOT backed by the
-cheat sheet, and writes data/<subject>/coverage_gaps.json.
+comprehensive report, and writes data/<subject>/coverage_gaps.json.
 
 Run from anywhere:  python scripts/coverage_audit.py
 Run it after predictive_picker.py and before build_site.py.
 
 Method (heuristic, vocabulary-based): take the distinctive terms in a question's
-title + answer, and measure what fraction appear in the cheat sheet text.
-Low coverage = the cheat sheet probably doesn't help with that question.
+title + answer, and measure what fraction appear in the report text.
+Low coverage = the report probably doesn't help with that question.
 Treat it as a to-do list to eyeball, not as ground truth (e.g. "E-R" vs "ER").
 """
 import json
@@ -35,7 +35,7 @@ def terms(text):
 
 
 def load_cheat_terms(subject):
-    html = (ROOT / "subjects" / subject / "cheat-sheet.html").read_text(encoding="utf-8")
+    html = (ROOT / "subjects" / subject / "comprehensive-report.html").read_text(encoding="utf-8")
     html = re.sub(r"<script.*?</script>|<style.*?</style>", "", html, flags=re.S | re.I)
     return set(terms(html))
 

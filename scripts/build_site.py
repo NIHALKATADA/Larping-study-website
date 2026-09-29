@@ -88,8 +88,18 @@ def extract_course_data_chunks(course_data_path):
             with open(course_data_path, 'r', encoding='utf-16') as f:
                 content = f.read()
         
-        unit_blocks = re.findall(r'unit:\s*"([^"]+)",\s*title:\s*"([^"]+)",\s*topics:\s*\[(.*?)\]', content, re.DOTALL)
-        for unit_num, title, topics_str in unit_blocks:
+        # Course files are plain JavaScript and have evolved independently.
+        # Accept `unit` and `id` fields and allow metadata (hours, CO mapping,
+        # etc.) between title and topics.
+        unit_blocks = re.findall(
+            r'\{\s*(?:unit|id):\s*"([^"]+)"[^}]*?title:\s*"([^"]+)"[^}]*?topics:\s*\[(.*?)\]',
+            content,
+            re.DOTALL,
+        )
+        for unit_value, title, topics_str in unit_blocks:
+            unit_match = re.search(r'(?:unit\s*)?([1-5]|i{1,3}|iv|v)$', unit_value, re.IGNORECASE)
+            title_match = re.search(r'\bunit\s+([1-5]|i{1,3}|iv|v)\b', title, re.IGNORECASE)
+            unit_num = normalize_unit((unit_match or title_match).group(1)) if (unit_match or title_match) else unit_value
             chunk_text = []
             if unit_num and title:
                 chunk_text.append(f"Unit {unit_num}: {title}")
@@ -104,7 +114,9 @@ def extract_course_data_chunks(course_data_path):
 
 def build_subject(subject_dir, templates_dir, data_dir):
     with open(subject_dir.parent.parent / "shared" / "app-utils.js", "r", encoding="utf-8") as f:
-        app_utils_js = f.read()
+        # Keep generated pages stable even when the shared script was edited
+        # with Windows line endings.
+        app_utils_js = f.read().replace("\r\n", "\n")
 
     subject_id = subject_dir.name
     questions_path = data_dir / subject_id / f"{subject_id}_questions.json"
@@ -129,6 +141,7 @@ def build_subject(subject_dir, templates_dir, data_dir):
     output_html = template.render(
         questions=questions, 
         is_midterm=False, 
+        available_marks=sorted({q.get('marks') for q in questions if q.get('marks') is not None}),
         subject_code=subject_code,
         subject_id=subject_id,
         subject_full_name=subject_full_name, app_utils_js=app_utils_js
@@ -142,6 +155,7 @@ def build_subject(subject_dir, templates_dir, data_dir):
     output_midterm = template.render(
         questions=midterm_questions, 
         is_midterm=True, 
+        available_marks=sorted({q.get('marks') for q in midterm_questions if q.get('marks') is not None}),
         subject_code=subject_code,
         subject_id=subject_id,
         subject_full_name=subject_full_name, app_utils_js=app_utils_js
