@@ -1472,3 +1472,28 @@ pre code {
 .cheat-card .exam-trap strong, .cheat-card .pro-tip strong {
     color: #fff;
 }
+
+/* MOBILE UI FIXES */
+@media (max-width: 768px) {
+    .fab-container {
+        bottom: 1rem !important;
+        left: 1rem !important;
+        right: auto !important;
+        align-items: flex-start !important;
+    }
+    .fab-menu {
+        left: 0 !important;
+        right: auto !important;
+        align-items: flex-start !important;
+        margin-bottom: calc(48px + 1.5rem) !important;
+    }
+    
+    /* Sticky progress widget should not overlap the FAB */
+    #stickyProgressWidget {
+        left: auto !important;
+        right: 1rem !important;
+        bottom: 1rem !important;
+        width: calc(100vw - 48px - 3rem) !important; /* Screen width minus FAB width minus margins */
+        max-width: 250px !important;
+    }
+}
