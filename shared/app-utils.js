@@ -693,3 +693,17 @@ document.addEventListener('DOMContentLoaded', () => {
         document.removeEventListener('mouseup', onMouseUp);
     }
 });
+
+// ==========================================
+// Auth UI Initialization
+// ==========================================
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        if (window.navigator && window.navigator.userAgent.includes('jsdom')) return;
+        const path = './auth-ui.js';
+        const { initAuthUI } = await import(path);
+        initAuthUI();
+    } catch (e) {
+        console.warn('Failed to load Auth UI. Running in offline/guest mode.', e);
+    }
+});
