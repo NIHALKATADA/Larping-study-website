@@ -441,7 +441,7 @@ export class AssistantLLM extends AssistantCore {
         let relevant = searchResults.filter(r => r.score > 2.0);
         
         if (relevant.length > 0) {
-            let chunks = relevant.slice(0, 3).map(r => [Q | Score:  | Important: ]: );
+            let chunks = relevant.slice(0, 3).map(r => `[Q${r.doc.q_num} | Score: ${r.doc.score || "N/A"} | Important: ${r.doc.important ? "Yes" : "No"}]: ${r.doc.chunks.join(" ").substring(0, 400)}`);
             notesText = chunks.join("\n\n");
             referenceHtml = `<div style="margin-top:1rem; padding:0.75rem; background:rgba(0,0,0,0.3); border-radius:8px; font-size:0.85em; color:var(--text-muted);"><strong>References:</strong> ${relevant.slice(0,3).map(r => `<a href="?open=${r.doc.id}" onclick="appUtilsOpenCard('${r.doc.id}'); return false;" style="color:var(--primary-teal);">Q${r.doc.q_num}</a>`).join(", ")}</div>`;
         } else {
