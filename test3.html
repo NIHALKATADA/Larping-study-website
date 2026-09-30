@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style id="fouc-shield">html { visibility: hidden !important; }</style>
+    <script>
+        fetch('shared/design-system.css')
+            .then(res => res.text())
+            .then(css => {
+                const style = document.createElement('style');
+                style.textContent = css.replace(/@import\s+url\([^)]+\);/g, '');
+                document.head.appendChild(style);
+                document.getElementById('fouc-shield').remove();
+            });
+    </script>
+
+<!-- MathJax for rendering LaTeX -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body><h1>Hello</h1></body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 1.5 - Content Import</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shared/design-system.css">
+    <style>
+        .import-card {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 4rem auto;
+            color: #e5e7eb;
+        }
+        .log-area {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            height: 300px;
+            overflow-y: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            white-space: pre-wrap;
+        }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .stat-box {
+            background: rgba(255,255,255,0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-box.success { border: 1px solid #10b981; }
+        .stat-box.error { border: 1px solid #ef4444; }
+    </style>
+
+<!-- MathJax for rendering LaTeX -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body style="background:#030303;">
+    <div class="glow-bg"></div>
+    <nav class="smart-topbar">
+        <div class="topbar-left">
+            <a href="index.html" class="sleek-back btn btn-secondary" style="border:none; padding:8px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </a>
+            <span class="topbar-logo">Phase 1.5 Content Importer</span>
+        </div>
+    </nav>
+    <div class="layout-wrapper" style="padding-top: 5rem;">
+        <div class="import-card">
+            <h2>Legacy Static Content Importer</h2>
+            <p style="color:#a0a0a5; margin-bottom: 2rem;">
+                This tool will migrate existing static subjects into your authenticated Supabase account while preserving exact records and applying idempotency.<br><br>
+                <strong>Note:</strong> Source JSON learning data is imported to Supabase. Generated HTML files (like comprehensive-report.html, interactive-quiz.html, midterm-important.html, etc.) are derived artifacts and remain in the repository unchanged until Phase 3. All imported legacy content is kept intentionally private to your account during Phase 1.5.
+            </p>
+            
+            <div class="stat-grid">
+                <div class="stat-box">
+                    <div style="font-size: 1.5rem; font-weight: 600;" id="statQuestions">0</div>
+                    <div style="font-size: 0.8rem; color: #a0a0a5;">Questions</div>
+                </div>
+                <div class="stat-box">
+                    <div style="font-size: 1.5rem; font-weight: 600;" id="statQuizzes">0</div>
+                    <div style="font-size: 0.8rem; color: #a0a0a5;">Quiz Items</div>
+                </div>
+                <div class="stat-box">
+                    <div style="font-size: 1.5rem; font-weight: 600;" id="statGaps">0</div>
+                    <div style="font-size: 0.8rem; color: #a0a0a5;">Coverage Gaps</div>
+                </div>
+            </div>
+
+            <div id="logArea" class="log-area">Ready to import...</div>
+            
+            <button id="startBtn" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;">Start Import</button>
+        </div>
+    </div>
+    
+    <script type="module">
+        import { getCurrentUser } from './shared/auth.js';
+        import { supabase } from './shared/supabase-client.js';
+
+        const subjects = ['daa', 'dbms', 'java', 'maths', 'ml', 'os'];
+        const logArea = document.getElementById('logArea');
+        const startBtn = document.getElementById('startBtn');
+        let totals = { questions: 0, quizzes: 0, gaps: 0, subjects: 0, resources: 0 };
+        let failed = { questions: 0, quizzes: 0, gaps: 0, subjects: 0, resources: 0 };
+        let sourceCounts = { questions: 0, quizzes: 0, gaps: 0, resources: 0 };
+
+        function log(msg) {
+            const time = new Date().toLocaleTimeString();
+            logArea.textContent += `[${time}] ${msg}\n`;
+            logArea.scrollTop = logArea.scrollHeight;
+        }
+
+        async function fetchJSON(path) {
+            try {
+                const res = await fetch(path);
+                if (!res.ok) return { error: `HTTP ${res.status}: File missing or inaccessible` };
+                
+                const text = await res.text();
+                if (!text.trim()) return { error: `File is empty` };
+                
+                const data = JSON.parse(text);
+                return { data };
+            } catch (err) {
+                return { error: `Invalid JSON or fetch failed: ${err.message}` };
+            }
+        }
+
+        async function runImport() {
+            startBtn.disabled = true;
+            log('Initializing import...');
+            
+            const { user, error: authError } = await getCurrentUser();
+            if (authError || !user) {
+                log('FATAL ERROR: You must be logged in to run this migration.');
+                startBtn.disabled = false;
+                return;
+            }
+            log(`Authenticated as user: ${user.id}`);
+
+            // Create migration run record
+            let runId = null;
+            try {
+                const { data, error } = await supabase.from('content_import_runs').insert([{
+                    started_by: user.id,
+                    status: 'running',
+                    source_version: 'phase1.5'
+                }]).select('id').single();
+                if (error) throw error;
+                runId = data.id;
+            } catch (err) {
+                log(`FATAL ERROR: Failed to create import run record: ${err.message}. Ensure schema is applied.`);
+                startBtn.disabled = false;
+                return;
+            }
+
+            for (const sub of subjects) {
+                log(`\n--- Processing Subject: ${sub.toUpperCase()} ---`);
+                
+                // 1. Ensure Subject exists
+                const subjectMeta = {
+                    subject_id: sub,
+                    created_by: user.id,
+                    source_type: 'legacy-static',
+                    source_path: `subjects/${sub}`
+                };
+                
+                const { error: subErr } = await supabase.from('legacy_subjects')
+                    .upsert(subjectMeta, { onConflict: 'subject_id,created_by' });
+                
+                if (subErr) {
+                    log(`ERROR: Failed to upsert subject ${sub}: ${subErr.message}`);
+                    failed.subjects++;
+                } else {
+                    totals.subjects++;
+                }
+
+                // 2. Import Questions
+                const qPath = `data/${sub}/${sub}_questions.json`;
+                const qRes = await fetchJSON(qPath);
+                if (qRes.error) {
+                    log(`ERROR loading ${qPath}: ${qRes.error}`);
+                    failed.questions++;
+                } else if (qRes.data && qRes.data.length > 0) {
+                    const questions = qRes.data;
+                    sourceCounts.questions += questions.length;
+                    log(`Found ${questions.length} questions in ${qPath}`);
+                    const qRecords = questions.map(q => {
+                        const meta = { ...q }; // Exact raw preservation
+                        return {
+                            subject_id: sub,
+                            original_id: q.id,
+                            title: q.title || null,
+                            answer_html: q.answer_html || null,
+                            legacy_importance: q.important ? 10 : (q.score || 0),
+                            legacy_difficulty: q.bloom ? (q.bloom.replace('L','') * 1) : null,
+                            created_by: user.id,
+                            source_type: 'legacy-static',
+                            source_path: qPath,
+                            metadata: meta
+                        };
+                    });
+                    
+                    const { error } = await supabase.from('legacy_questions')
+                        .upsert(qRecords, { onConflict: 'subject_id,original_id,created_by' });
+                        
+                    if (error) {
+                        log(`ERROR upserting questions: ${error.message}`);
+                        failed.questions += qRecords.length;
+                    } else {
+                        totals.questions += qRecords.length;
+                        document.getElementById('statQuestions').textContent = totals.questions;
+                    }
+                }
+
+                // 3. Import Quizzes
+                const quizPath = `data/${sub}/${sub}_quiz.json`;
+                const qzRes = await fetchJSON(quizPath);
+                if (qzRes.error) {
+                    log(`ERROR loading ${quizPath}: ${qzRes.error}`);
+                    failed.quizzes++;
+                } else if (qzRes.data && qzRes.data.length > 0) {
+                    const quizzes = qzRes.data;
+                    sourceCounts.quizzes += quizzes.length;
+                    log(`Found ${quizzes.length} quiz items in ${quizPath}`);
+                    const quizRecords = quizzes.map(q => ({
+                        subject_id: sub,
+                        original_id: q.id,
+                        question: q.question,
+                        options: q.options,
+                        correct_answer: q.correct_answer,
+                        explanation: q.explanation,
+                        created_by: user.id,
+                        source_type: 'legacy-static',
+                        source_path: quizPath,
+                        metadata: { ...q }
+                    }));
+                    
+                    const { error } = await supabase.from('legacy_quizzes')
+                        .upsert(quizRecords, { onConflict: 'subject_id,original_id,created_by' });
+                        
+                    if (error) {
+                        log(`ERROR upserting quizzes: ${error.message}`);
+                        failed.quizzes += quizRecords.length;
+                    } else {
+                        totals.quizzes += quizRecords.length;
+                        document.getElementById('statQuizzes').textContent = totals.quizzes;
+                    }
+                }
+
+                // 4. Import Coverage Gaps
+                const gapsPath = `data/${sub}/coverage_gaps.json`;
+                const gapsRes = await fetchJSON(gapsPath);
+                if (gapsRes.error) {
+                    log(`ERROR loading ${gapsPath}: ${gapsRes.error}`);
+                    failed.gaps++;
+                } else if (gapsRes.data && gapsRes.data.length > 0) {
+                    const gaps = gapsRes.data;
+                    sourceCounts.gaps += gaps.length;
+                    log(`Found ${gaps.length} coverage gaps in ${gapsPath}`);
+                    const gapRecords = gaps.map(g => ({
+                        subject_id: sub,
+                        original_id: g.id,
+                        gap_data: g,
+                        created_by: user.id,
+                        source_type: 'legacy-static',
+                        source_path: gapsPath
+                    }));
+                    
+                    const { error } = await supabase.from('legacy_coverage_gaps')
+                        .upsert(gapRecords, { onConflict: 'subject_id,original_id,created_by' });
+                        
+                    if (error) {
+                        log(`ERROR upserting gaps: ${error.message}`);
+                        failed.gaps += gapRecords.length;
+                    } else {
+                        totals.gaps += gapRecords.length;
+                        document.getElementById('statGaps').textContent = totals.gaps;
+                    }
+                }
+                
+                // 5. Import assistant-index.json (resources)
+                const aPath = `subjects/${sub}/assistant-index.json`;
+                const aRes = await fetchJSON(aPath);
+                if (aRes.error) {
+                    log(`ERROR loading ${aPath}: ${aRes.error}`);
+                    failed.resources++;
+                } else if (aRes.data) {
+                    const aIndex = aRes.data;
+                    sourceCounts.resources++;
+                    log(`Found assistant-index in ${aPath}`);
+                    const { error } = await supabase.from('legacy_resources').upsert({
+                        subject_id: sub,
+                        resource_type: 'assistant-index',
+                        content: JSON.stringify(aIndex),
+                        created_by: user.id,
+                        source_type: 'legacy-static',
+                        source_path: aPath
+                    }, { onConflict: 'subject_id,resource_type,created_by' });
+                    if (error) {
+                        log(`ERROR upserting assistant index: ${error.message}`);
+                        failed.resources++;
+                    } else {
+                        totals.resources++;
+                    }
+                }
+            }
+
+            // Also import global assistant-index
+            log(`\n--- Processing Subject: GLOBAL ---`);
+            const globalPath = `subjects/global/assistant-index.json`;
+            const gRes = await fetchJSON(globalPath);
+            if (gRes.error) {
+                log(`ERROR loading ${globalPath}: ${gRes.error}`);
+                failed.resources++;
+            } else if (gRes.data) {
+                const globalIndex = gRes.data;
+                sourceCounts.resources++;
+                log(`Found global assistant-index in ${globalPath}`);
+                const { error } = await supabase.from('legacy_resources').upsert({
+                    subject_id: 'global',
+                    resource_type: 'assistant-index',
+                    content: JSON.stringify(globalIndex),
+                    created_by: user.id,
+                    source_type: 'legacy-static',
+                    source_path: globalPath
+                }, { onConflict: 'subject_id,resource_type,created_by' });
+                if (error) {
+                    log(`ERROR upserting global assistant index: ${error.message}`);
+                    failed.resources++;
+                } else {
+                    totals.resources++;
+                }
+            }
+            
+            // VERIFICATION PHASE
+            log(`\n--- VERIFICATION PHASE ---`);
+            let dbCounts = { subjects: 0, questions: 0, quizzes: 0, gaps: 0, resources: 0 };
+            
+            const { count: sCount } = await supabase.from('legacy_subjects').select('*', { count: 'exact', head: true }).eq('created_by', user.id);
+            const { count: qCount } = await supabase.from('legacy_questions').select('*', { count: 'exact', head: true }).eq('created_by', user.id);
+            const { count: qzCount } = await supabase.from('legacy_quizzes').select('*', { count: 'exact', head: true }).eq('created_by', user.id);
+            const { count: gCount } = await supabase.from('legacy_coverage_gaps').select('*', { count: 'exact', head: true }).eq('created_by', user.id);
+            const { count: rCount } = await supabase.from('legacy_resources').select('*', { count: 'exact', head: true }).eq('created_by', user.id);
+            
+            dbCounts.subjects = sCount || 0;
+            dbCounts.questions = qCount || 0;
+            dbCounts.quizzes = qzCount || 0;
+            dbCounts.gaps = gCount || 0;
+            dbCounts.resources = rCount || 0;
+            
+            // sourceCounts for subjects isn't explicitly counted in earlier code (it is just subjects.length), let's hardcode it to subjects array length
+            const expectedSubjects = subjects.length; 
+            log(`Source Subjects: ${expectedSubjects} | DB Subjects: ${dbCounts.subjects}`);
+            log(`Source Questions: ${sourceCounts.questions} | DB Questions: ${dbCounts.questions}`);
+            log(`Source Quizzes: ${sourceCounts.quizzes} | DB Quizzes: ${dbCounts.quizzes}`);
+            log(`Source Gaps: ${sourceCounts.gaps} | DB Gaps: ${dbCounts.gaps}`);
+            log(`Source Resources: ${sourceCounts.resources} | DB Resources: ${dbCounts.resources}`);
+            
+            if (expectedSubjects !== dbCounts.subjects) log(`MISMATCH: Subjects differ!`);
+            if (sourceCounts.questions !== dbCounts.questions) log(`MISMATCH: Questions differ!`);
+            if (sourceCounts.quizzes !== dbCounts.quizzes) log(`MISMATCH: Quizzes differ!`);
+            if (sourceCounts.gaps !== dbCounts.gaps) log(`MISMATCH: Gaps differ!`);
+            if (sourceCounts.resources !== dbCounts.resources) log(`MISMATCH: Resources differ!`);
+            
+            // Mark complete
+            const totalProcessed = totals.questions + totals.quizzes + totals.gaps + totals.subjects + totals.resources;
+            const totalFailed = failed.questions + failed.quizzes + failed.gaps + failed.subjects + failed.resources;
+            
+            const finalStatus = totalFailed > 0 ? 'completed_with_errors' : 'completed';
+            
+            log(`\n--- IMPORT SUMMARY ---`);
+            log(`Subjects processed: ${totals.subjects}`);
+            log(`Questions processed: ${totals.questions}`);
+            log(`Quiz items processed: ${totals.quizzes}`);
+            log(`Coverage gaps processed: ${totals.gaps}`);
+            log(`Resources processed: ${totals.resources}`);
+            log(`Failures: ${totalFailed}`);
+
+            await supabase.from('content_import_runs').update({
+                status: finalStatus,
+                completed_at: new Date().toISOString(),
+                records_processed: totalProcessed,
+                records_failed: totalFailed
+            }).eq('id', runId);
+            
+            startBtn.textContent = 'Import Finished (See log)';
+        }
+
+        startBtn.addEventListener('click', runImport);
+    </script>
+    <script src="shared/app-utils.js"></script>
+</body>
+</html>

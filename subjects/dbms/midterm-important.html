@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="../../shared/design-system.css">
     
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<!-- MathJax for rendering LaTeX -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      displayMath: [['\\[', '\\]'], ['$$', '$$']]
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body data-subject="dbms" style="background:#030303;">
     <div class="glow-bg"></div>
@@ -338,14 +350,22 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">The Three Levels</div>
-        <ol>
-            <li><strong>External Level (View Level):</strong> The highest level, describing only the part of the database relevant to a specific user group (hiding the rest).</li>
-            <li><strong>Conceptual Level (Logical Level):</strong> Describes what data is stored in the entire database and the relationships among those data. Used by DBAs.</li>
-            <li><strong>Internal Level (Physical Level):</strong> Describes exactly how the data is physically stored on disk (data structures, file organizations).</li>
-        </ol>
-        <div class="exam-tip">
-            <strong>Exam Tip:</strong> The primary objective of this architecture is to achieve <em>Data Independence</em>.
+                            <div class="concept-heading">The Three Levels</div>
+
+        <ol>
+
+            <li><strong>External Level (View Level):</strong> The highest level, describing only the part of the database relevant to a specific user group (hiding the rest).</li>
+
+            <li><strong>Conceptual Level (Logical Level):</strong> Describes what data is stored in the entire database and the relationships among those data. Used by DBAs.</li>
+
+            <li><strong>Internal Level (Physical Level):</strong> Describes exactly how the data is physically stored on disk (data structures, file organizations).</li>
+
+        </ol>
+
+        <div class="exam-tip">
+
+            <strong>Exam Tip:</strong> The primary objective of this architecture is to achieve <em>Data Independence</em>.
+
         </div>
 <div class="diagram-container">
 <svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg">
@@ -413,28 +433,50 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Explanation</div>
-        <ul>
-            <li><strong>Super Key:</strong> Any combination of columns that uniquely identifies a row. (e.g., <code>StudentID + Name</code>)</li>
-            <li><strong>Candidate Key:</strong> A minimal super key; it uniquely identifies a row with no unnecessary columns. (e.g., <code>StudentID</code> or <code>Email</code>)</li>
-            <li><strong>Primary Key:</strong> The specific candidate key chosen to identify rows. Cannot be NULL. (e.g., <code>StudentID</code>)</li>
-            <li><strong>Foreign Key:</strong> A column that refers to the primary key of another table, enforcing referential integrity. (e.g., <code>Dept_ID</code> in a Student table referencing the Department table)</li>
-        </ul>
-        <div class="diagram-container">
-            <svg viewBox="0 0 500 220" width="100%" height="220" role="img" aria-labelledby="title_q12">
-                <title id="title_q12">Relationship Between Database Keys</title>
-                <!-- Super Key -->
-                <ellipse cx="250" cy="110" rx="200" ry="100" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
-                <text x="250" y="45" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1a237e" text-anchor="middle">Super Keys (All unique combinations)</text>
-                
-                <!-- Candidate Key -->
-                <ellipse cx="250" cy="130" rx="130" ry="60" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
-                <text x="250" y="100" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c65f00" text-anchor="middle">Candidate Keys (Minimal)</text>
-
-                <!-- Primary Key -->
-                <circle cx="250" cy="155" r="25" fill="#e0f7fa" stroke="#006064" stroke-width="2"/>
-                <text x="250" y="160" font-family="sans-serif" font-size="12" font-weight="bold" fill="#006064" text-anchor="middle">PK</text>
-            </svg>
+                            <div class="concept-heading">Explanation</div>
+
+        <ul>
+
+            <li><strong>Super Key:</strong> Any combination of columns that uniquely identifies a row. (e.g., <code>StudentID + Name</code>)</li>
+
+            <li><strong>Candidate Key:</strong> A minimal super key; it uniquely identifies a row with no unnecessary columns. (e.g., <code>StudentID</code> or <code>Email</code>)</li>
+
+            <li><strong>Primary Key:</strong> The specific candidate key chosen to identify rows. Cannot be NULL. (e.g., <code>StudentID</code>)</li>
+
+            <li><strong>Foreign Key:</strong> A column that refers to the primary key of another table, enforcing referential integrity. (e.g., <code>Dept_ID</code> in a Student table referencing the Department table)</li>
+
+        </ul>
+
+        <div class="diagram-container">
+
+            <svg viewBox="0 0 500 220" width="100%" height="220" role="img" aria-labelledby="title_q12">
+
+                <title id="title_q12">Relationship Between Database Keys</title>
+
+                <!-- Super Key -->
+
+                <ellipse cx="250" cy="110" rx="200" ry="100" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+
+                <text x="250" y="45" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1a237e" text-anchor="middle">Super Keys (All unique combinations)</text>
+
+                
+
+                <!-- Candidate Key -->
+
+                <ellipse cx="250" cy="130" rx="130" ry="60" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+
+                <text x="250" y="100" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c65f00" text-anchor="middle">Candidate Keys (Minimal)</text>
+
+
+
+                <!-- Primary Key -->
+
+                <circle cx="250" cy="155" r="25" fill="#e0f7fa" stroke="#006064" stroke-width="2"/>
+
+                <text x="250" y="160" font-family="sans-serif" font-size="12" font-weight="bold" fill="#006064" text-anchor="middle">PK</text>
+
+            </svg>
+
         </div>
                         </div>
                     </details>
@@ -457,13 +499,20 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">The Three Anomalies</div>
-        <ul>
-            <li><strong>Update Anomaly:</strong> If data is stored redundantly, changing it in one row requires changing it in all rows. Missing one causes inconsistency (e.g., changing a department's location).</li>
-            <li><strong>Insertion Anomaly:</strong> The inability to add data to the database due to absence of other data (e.g., unable to add a new Department because it has no Employees yet, and Employee_ID is the primary key).</li>
-            <li><strong>Deletion Anomaly:</strong> The unintended loss of data when deleting a row (e.g., deleting the only employee in a department also deletes the department's information).</li>
-        </ul>
-        <div class="concept-heading">How Normalization Helps</div>
+                            <div class="concept-heading">The Three Anomalies</div>
+
+        <ul>
+
+            <li><strong>Update Anomaly:</strong> If data is stored redundantly, changing it in one row requires changing it in all rows. Missing one causes inconsistency (e.g., changing a department's location).</li>
+
+            <li><strong>Insertion Anomaly:</strong> The inability to add data to the database due to absence of other data (e.g., unable to add a new Department because it has no Employees yet, and Employee_ID is the primary key).</li>
+
+            <li><strong>Deletion Anomaly:</strong> The unintended loss of data when deleting a row (e.g., deleting the only employee in a department also deletes the department's information).</li>
+
+        </ul>
+
+        <div class="concept-heading">How Normalization Helps</div>
+
         <p>Normalization resolves these by decomposing large, poorly structured tables into smaller, well-structured tables where each table represents a single logical theme or entity. By linking them with foreign keys, redundancy is eliminated, which inherently solves update, insertion, and deletion anomalies.</p>
                         </div>
                     </details>
@@ -486,14 +535,22 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-        <p>Normalization is the process of organizing data to minimize redundancy and eliminate anomalies by dividing larger tables into smaller tables and defining relationships between them using functional dependencies.</p>
-        
-        <div class="concept-heading">The Normal Forms</div>
-        <ul>
-            <li><strong>First Normal Form (1NF):</strong> All attributes must be atomic (indivisible). No repeating groups or arrays allowed in a cell.</li>
-            <li><strong>Second Normal Form (2NF):</strong> Must be in 1NF, and all non-key attributes must be <em>fully functionally dependent</em> on the entire primary key. (Eliminates partial dependencies).</li>
-            <li><strong>Third Normal Form (3NF):</strong> Must be in 2NF, and no non-key attribute can be dependent on another non-key attribute. (Eliminates transitive dependencies: X &rarr; Y and Y &rarr; Z).</li>
+                            <div class="concept-heading">Definition</div>
+
+        <p>Normalization is the process of organizing data to minimize redundancy and eliminate anomalies by dividing larger tables into smaller tables and defining relationships between them using functional dependencies.</p>
+
+        
+
+        <div class="concept-heading">The Normal Forms</div>
+
+        <ul>
+
+            <li><strong>First Normal Form (1NF):</strong> All attributes must be atomic (indivisible). No repeating groups or arrays allowed in a cell.</li>
+
+            <li><strong>Second Normal Form (2NF):</strong> Must be in 1NF, and all non-key attributes must be <em>fully functionally dependent</em> on the entire primary key. (Eliminates partial dependencies).</li>
+
+            <li><strong>Third Normal Form (3NF):</strong> Must be in 2NF, and no non-key attribute can be dependent on another non-key attribute. (Eliminates transitive dependencies: X &rarr; Y and Y &rarr; Z).</li>
+
         </ul>
                         </div>
                     </details>
@@ -789,22 +846,38 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Functional Dependencies (FDs)</div>
-        <p>Assumed FDs based on logic:</p>
-        <ol>
-            <li>FD1: <code>Rollno &rarr; Name</code> (A student has one name)</li>
-            <li>FD2: <code>Rollno, Subject &rarr; Marks</code> (A specific student's marks in a specific subject)</li>
-        </ol>
-        <p>The primary key for the unnormalized relation is <strong>(Rollno, Subject)</strong>.</p>
-
-        <div class="concept-heading">Step 1: 1NF to 2NF</div>
-        <p>In the original relation, <code>Name</code> depends ONLY on <code>Rollno</code>, which is a part of the primary key. This is a <strong>Partial Dependency</strong>. We decompose to eliminate it:</p>
-        <ul>
-            <li><strong>Student</strong>(<u>Rollno</u>, Name)</li>
-            <li><strong>Performance</strong>(<u>Rollno, Subject</u>, Marks)</li>
-        </ul>
-        
-        <div class="concept-heading">Step 2: 2NF to 3NF</div>
+                            <div class="concept-heading">Functional Dependencies (FDs)</div>
+
+        <p>Assumed FDs based on logic:</p>
+
+        <ol>
+
+            <li>FD1: <code>Rollno &rarr; Name</code> (A student has one name)</li>
+
+            <li>FD2: <code>Rollno, Subject &rarr; Marks</code> (A specific student's marks in a specific subject)</li>
+
+        </ol>
+
+        <p>The primary key for the unnormalized relation is <strong>(Rollno, Subject)</strong>.</p>
+
+
+
+        <div class="concept-heading">Step 1: 1NF to 2NF</div>
+
+        <p>In the original relation, <code>Name</code> depends ONLY on <code>Rollno</code>, which is a part of the primary key. This is a <strong>Partial Dependency</strong>. We decompose to eliminate it:</p>
+
+        <ul>
+
+            <li><strong>Student</strong>(<u>Rollno</u>, Name)</li>
+
+            <li><strong>Performance</strong>(<u>Rollno, Subject</u>, Marks)</li>
+
+        </ul>
+
+        
+
+        <div class="concept-heading">Step 2: 2NF to 3NF</div>
+
         <p>In the new tables, there are no non-key attributes depending on other non-key attributes (no transitive dependencies). Therefore, the tables are already in <strong>3NF</strong>.</p>
                         </div>
                     </details>
