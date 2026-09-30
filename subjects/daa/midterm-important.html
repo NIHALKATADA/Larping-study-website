@@ -144,6 +144,8 @@
                     <h4 style="color: var(--subject-color); margin-bottom: 0.5rem;">Unit III</h4>
                     <ul class="quick-jump-list">
                     
+                        <li><a href="#q1">Q1 (5 Marks)</a></li>
+                    
                         <li><a href="#q7">Q7 (5 Marks)</a></li>
                     
                         <li><a href="#q14">Q14 (5 Marks)</a></li>
@@ -163,6 +165,8 @@
                         <li><a href="#q27">Q27 (5 Marks)</a></li>
                     
                         <li><a href="#q32">Q32 (5 Marks)</a></li>
+                    
+                        <li><a href="#q35">Q35 (5 Marks)</a></li>
                     
                     </ul>
                 </div>
@@ -713,6 +717,42 @@
                         </div>
                     </details>
                     
+                    <details class="q-card" id="q1" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q1. Define the Divide and Conquer paradigm. Explain its three basic steps with a suitable example.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Divide and Conquer Paradigm</div>
+<p>The <strong>Divide and Conquer</strong> paradigm is an algorithmic design strategy that solves a problem by recursively breaking it down into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. The solutions to the sub-problems are then combined to give a solution to the original problem.</p>
+<p>It consists of three basic steps:</p>
+<ul>
+<li><strong>Divide:</strong> Break the given problem into smaller sub-problems.</li>
+<li><strong>Conquer:</strong> Recursively solve these sub-problems. If the sub-problem size is small enough, solve it directly (base case).</li>
+<li><strong>Combine:</strong> Merge the solutions of the sub-problems to form the solution of the original problem.</li>
+</ul>
+<div class="concept-heading">Example: Merge Sort</div>
+<p>In Merge Sort:</p>
+<ul>
+<li><strong>Divide:</strong> Divide the unsorted array of size <em>n</em> into two sub-arrays of size <em>n/2</em>.</li>
+<li><strong>Conquer:</strong> Recursively sort the two sub-arrays using Merge Sort.</li>
+<li><strong>Combine:</strong> Merge the two sorted sub-arrays into a single sorted array.</li>
+</ul>
+                        </div>
+                    </details>
+                    
                     <details class="q-card" id="q7" data-unit="III" data-bloom="L4" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q7. Solve the following recurrence using the substitution method: T(n) = 2T(n/2) + n</h3>
@@ -1127,6 +1167,33 @@
 </ul>
 <div class="concept-heading">Combining all partitions</div>
 <p>Final sorted array: <strong>[5, 11, 12, 22, 25, 34, 43, 64, 78, 90]</strong></p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q35" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q35. Explain the best-case, average-case, and worst-case time complexity of Quick Sort.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div class="concept-heading">Best Case: O(n log n)</div>
+<p>Occurs when the pivot chosen at each step divides the array into two roughly equal halves. The recursion tree has a depth of log(n) and partitioning at each level takes O(n) time. Recurrence: <code>T(n) = 2T(n/2) + O(n)</code></p>
+<div class="concept-heading">Average Case: O(n log n)</div>
+<p>Occurs when the pivot randomly divides the array into proportional splits (e.g., 9-to-1 split or 3-to-1 split). Even an unbalanced split like 99-to-1 results in an O(n log n) running time, as the depth of the tree is bounded by a logarithmic function.</p>
+<div class="concept-heading">Worst Case: O(n&sup2;)</div>
+<p>Occurs when the pivot is consistently the smallest or largest element, leading to completely unbalanced partitions (one sub-array of size n-1, and one of size 0). This creates a skewed recursion tree of depth n. Example: sorting an already sorted array when the first or last element is chosen as the pivot. Recurrence: <code>T(n) = T(n-1) + O(n)</code></p>
                         </div>
                     </details>
                     
@@ -1849,6 +1916,20 @@ document.addEventListener('DOMContentLoaded', () => {
         isDragging = false;
         document.removeEventListener('mousemove', onMouseMove);
         document.removeEventListener('mouseup', onMouseUp);
+    }
+});
+
+// ==========================================
+// Auth UI Initialization
+// ==========================================
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        if (window.navigator && window.navigator.userAgent.includes('jsdom')) return;
+        const path = './auth-ui.js';
+        const { initAuthUI } = await import(path);
+        initAuthUI();
+    } catch (e) {
+        console.warn('Failed to load Auth UI. Running in offline/guest mode.', e);
     }
 });
 

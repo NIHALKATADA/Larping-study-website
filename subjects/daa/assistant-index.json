@@ -583,7 +583,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.0,
-    "important": false,
+    "important": true,
     "title": "Define the Divide and Conquer paradigm. Explain its three basic steps with a suitable example.",
     "url": "question-bank.html?open=q1",
     "chunks": [
@@ -919,7 +919,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.0,
-    "important": false,
+    "important": true,
     "title": "Explain the best-case, average-case, and worst-case time complexity of Quick Sort.",
     "url": "question-bank.html?open=q35",
     "chunks": [

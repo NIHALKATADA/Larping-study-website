@@ -327,7 +327,7 @@
     "bloom": "L2",
     "co": "CO1",
     "score": 9.0,
-    "important": false,
+    "important": true,
     "title": "Explain any five functions of an Operating System, giving one relevant example for each function.",
     "url": "question-bank.html?open=q21",
     "chunks": [
@@ -343,7 +343,7 @@
     "bloom": "L2",
     "co": "CO1",
     "score": 9.0,
-    "important": false,
+    "important": true,
     "title": "Describe the different types of Operating Systems \u2014 Batch, Multiprogramming, Time-Sharing, and Real-Time \u2014 along with their key features.",
     "url": "question-bank.html?open=q22",
     "chunks": [
@@ -359,7 +359,7 @@
     "bloom": "L2",
     "co": "CO1",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain the five categories of System Calls with one suitable example for each category.",
     "url": "question-bank.html?open=q23",
     "chunks": [
@@ -807,7 +807,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain the complete process life cycle, describing all five states (New, Ready, Running, Waiting, Terminated) and the transitions between them.",
     "url": "question-bank.html?open=q51",
     "chunks": [
@@ -823,7 +823,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9.0,
-    "important": false,
+    "important": true,
     "title": "Explain the four major operations performed on a process \u2014 creation, scheduling, execution, and termination \u2014 with one real-world example for each.",
     "url": "question-bank.html?open=q52",
     "chunks": [
@@ -839,7 +839,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain any five CPU scheduling algorithms (FCFS, SJF, SRTF, Round Robin, Priority Scheduling), covering the key characteristic and one limitation of each.",
     "url": "question-bank.html?open=q53",
     "chunks": [
@@ -871,7 +871,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain the objectives/criteria of CPU scheduling (CPU utilization, throughput, turnaround time, waiting time, response time, fairness), and describe why some of these criteria can conflict with one another.",
     "url": "question-bank.html?open=q55",
     "chunks": [
@@ -1287,7 +1287,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain the Producer\u2013Consumer problem using Shared Memory, describing the buffer and the shared variables involved (counter, in, out) and the role of the producer and consumer.",
     "url": "question-bank.html?open=q81",
     "chunks": [
@@ -1303,7 +1303,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain Peterson's Solution in detail, including its shared variables, working, and how it satisfies the requirements of the Critical-Section Problem.",
     "url": "question-bank.html?open=q82",
     "chunks": [
@@ -1319,7 +1319,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.0,
-    "important": false,
+    "important": true,
     "title": "Explain Semaphores in detail \u2014 their two fundamental operations (wait and signal), their types (counting and binary), and their disadvantages (busy waiting and possibility of deadlock).",
     "url": "question-bank.html?open=q83",
     "chunks": [
@@ -1335,7 +1335,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain the three requirements of a solution to the Critical-Section Problem \u2014 Mutual Exclusion, Progress, and Bounded Waiting \u2014 describing the significance of each with examples.",
     "url": "question-bank.html?open=q84",
     "chunks": [
@@ -1367,7 +1367,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Differentiate between Semaphores and Monitors in detail, and explain why Monitors are considered a higher-level and easier-to-use synchronization construct.",
     "url": "question-bank.html?open=q86",
     "chunks": [

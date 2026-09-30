@@ -1207,7 +1207,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9,
-    "important": false,
+    "important": true,
     "title": "Explain generalization, specialization and aggregation in the Extended E-R model.",
     "url": "question-bank.html?open=q76",
     "chunks": [
@@ -1223,7 +1223,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "What is decomposition? Explain the concepts of lossless-join and dependency-preserving decomposition.",
     "url": "question-bank.html?open=q77",
     "chunks": [
@@ -1559,7 +1559,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain the five constraints NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY and CHECK, giving an example of each.",
     "url": "question-bank.html?open=q98",
     "chunks": [
@@ -1671,7 +1671,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain the numeric functions ROUND, TRUNCATE, CEIL, FLOOR, ABS, MOD, POWER and SQRT, giving an example of each.",
     "url": "question-bank.html?open=q105",
     "chunks": [
@@ -1751,7 +1751,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain the date functions CURDATE, DATEDIFF, DATE_ADD/DATE_SUB and DATE_FORMAT, giving an example of each.",
     "url": "question-bank.html?open=q110",
     "chunks": [
@@ -1767,7 +1767,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.0,
-    "important": false,
+    "important": true,
     "title": "Explain the string functions CONCAT, UPPER/LOWER, LENGTH, SUBSTRING and TRIM/REPLACE, giving an example of each.",
     "url": "question-bank.html?open=q111",
     "chunks": [
@@ -1863,7 +1863,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain UNION, UNION ALL, INTERSECT and MINUS/EXCEPT with an example of each. What condition must both the SELECT statements satisfy before these operators can be applied?",
     "url": "question-bank.html?open=q117",
     "chunks": [
@@ -1943,7 +1943,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 10.0,
-    "important": false,
+    "important": true,
     "title": "What is a transaction? Explain the ACID properties with the help of a bank transfer example.",
     "url": "question-bank.html?open=q122",
     "chunks": [
@@ -1959,7 +1959,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain COMMIT, ROLLBACK and SAVEPOINT with a suitable example on the ACCOUNT table.",
     "url": "question-bank.html?open=q123",
     "chunks": [
@@ -2039,7 +2039,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "In one or two lines each, state the purpose of a stored procedure, a sequence (AUTO_INCREMENT in MySQL), a cursor and a trigger.",
     "url": "question-bank.html?open=q128",
     "chunks": [

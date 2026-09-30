@@ -1123,7 +1123,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q1" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
+                    <details class="q-card" id="q1" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q1. Define the Divide and Conquer paradigm. Explain its three basic steps with a suitable example.</h3>
                             <div class="card-meta">
@@ -1131,6 +1131,8 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1877,7 +1879,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q35" data-unit="III" data-bloom="L2" data-marks="5" data-important="false">
+                    <details class="q-card" id="q35" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q35. Explain the best-case, average-case, and worst-case time complexity of Quick Sort.</h3>
                             <div class="card-meta">
@@ -1885,6 +1887,8 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2751,6 +2755,20 @@ document.addEventListener('DOMContentLoaded', () => {
         isDragging = false;
         document.removeEventListener('mousemove', onMouseMove);
         document.removeEventListener('mouseup', onMouseUp);
+    }
+});
+
+// ==========================================
+// Auth UI Initialization
+// ==========================================
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        if (window.navigator && window.navigator.userAgent.includes('jsdom')) return;
+        const path = './auth-ui.js';
+        const { initAuthUI } = await import(path);
+        initAuthUI();
+    } catch (e) {
+        console.warn('Failed to load Auth UI. Running in offline/guest mode.', e);
     }
 });
 

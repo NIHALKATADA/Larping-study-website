@@ -140,6 +140,10 @@
                     
                         <li><a href="#q66">Q66 (3 Marks)</a></li>
                     
+                        <li><a href="#q76">Q76 (5 Marks)</a></li>
+                    
+                        <li><a href="#q77">Q77 (5 Marks)</a></li>
+                    
                         <li><a href="#q78">Q78 (5 Marks)</a></li>
                     
                         <li><a href="#q84">Q84 (5 Marks)</a></li>
@@ -163,9 +167,25 @@
                     
                         <li><a href="#q97">Q97 (3 Marks)</a></li>
                     
+                        <li><a href="#q98">Q98 (5 Marks)</a></li>
+                    
                         <li><a href="#q101">Q101 (5 Marks)</a></li>
                     
                         <li><a href="#q102">Q102 (3 Marks)</a></li>
+                    
+                        <li><a href="#q105">Q105 (5 Marks)</a></li>
+                    
+                        <li><a href="#q110">Q110 (5 Marks)</a></li>
+                    
+                        <li><a href="#q111">Q111 (5 Marks)</a></li>
+                    
+                        <li><a href="#q117">Q117 (5 Marks)</a></li>
+                    
+                        <li><a href="#q122">Q122 (5 Marks)</a></li>
+                    
+                        <li><a href="#q123">Q123 (5 Marks)</a></li>
+                    
+                        <li><a href="#q128">Q128 (5 Marks)</a></li>
                     
                         <li><a href="#q129">Q129 (3 Marks)</a></li>
                     
@@ -1194,6 +1214,107 @@
                         </div>
                     </details>
                     
+                    <details class="q-card" id="q76" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q76. Explain generalization, specialization and aggregation in the Extended E-R model.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
+        <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 600px; height: auto;">
+            <style>
+                .entity-q76 { fill: var(--card-bg); stroke: currentColor; stroke-width: 2; rx: 4; }
+                .isa { fill: var(--bg-color); stroke: var(--primary-teal); stroke-width: 2; }
+                .line { stroke: currentColor; stroke-width: 2; }
+                .text { font-family: sans-serif; font-size: 14px; fill: currentColor; font-weight: bold; text-anchor: middle; dominant-baseline: middle; }
+                .small-text { font-family: sans-serif; font-size: 12px; fill: var(--primary-teal); text-anchor: middle; font-style: italic; }
+            </style>
+            
+            <!-- Lines -->
+            <line x1="300" y1="60" x2="300" y2="120" class="line"/>
+            <line x1="300" y1="160" x2="300" y2="200" class="line"/>
+            <line x1="150" y1="200" x2="450" y2="200" class="line"/>
+            <line x1="150" y1="200" x2="150" y2="240" class="line"/>
+            <line x1="450" y1="200" x2="450" y2="240" class="line"/>
+
+            <!-- Arrows to show direction (Generalization vs Specialization) -->
+            <!-- Bottom-Up Generalization -->
+            <path d="M 270,90 L 270,60 L 265,65 M 270,60 L 275,65" fill="none" stroke="var(--primary-teal)" stroke-width="2"/>
+            <text x="230" y="75" class="small-text">Generalization</text>
+
+            <!-- Top-Down Specialization -->
+            <path d="M 330,60 L 330,90 L 325,85 M 330,90 L 335,85" fill="none" stroke="var(--primary-teal)" stroke-width="2"/>
+            <text fill="currentColor" x="375" y="75" class="small-text">Specialization</text>
+
+            <!-- Vehicle (Superclass) -->
+            <rect x="240" y="20" width="120" height="40" class="entity-q76"/>
+            <text fill="currentColor" x="300" y="40" class="text">VEHICLE</text>
+
+            <!-- IS-A Triangle -->
+            <polygon points="300,120 260,160 340,160" class="isa"/>
+            <text fill="currentColor" x="300" y="145" class="text" style="font-size:12px;">IS-A</text>
+
+            <!-- Car (Subclass) -->
+            <rect x="90" y="240" width="120" height="40" class="entity-q76"/>
+            <text fill="currentColor" x="150" y="260" class="text">CAR</text>
+
+            <!-- Truck (Subclass) -->
+            <rect x="390" y="240" width="120" height="40" class="entity-q76"/>
+            <text fill="currentColor" x="450" y="260" class="text">TRUCK</text>
+        </svg>
+        </div>
+        <div class="concept-heading">Specialization (Top-Down)</div>
+        <p>The process of defining a set of subclasses from an entity type based on distinguishing characteristics. <br><em>Example:</em> An <strong>Employee</strong> can be specialized into <strong>Hourly_Emp</strong> and <strong>Salaried_Emp</strong>.</p>
+        
+        <div class="concept-heading">Generalization (Bottom-Up)</div>
+        <p>The reverse of specialization. Extracting shared characteristics from multiple entity types to create a generalized superclass. <br><em>Example:</em> <strong>Car</strong> and <strong>Truck</strong> generalized into <strong>Vehicle</strong>.</p>
+        
+        <div class="concept-heading">Aggregation</div>
+        <p>Treating a relationship between entities as a single abstract entity, allowing relationships to participate in other relationships. <br><em>Example:</em> A <strong>Project</strong> and <strong>Employee</strong> have a <em>Works_On</em> relationship. A <strong>Manager</strong> manages the entire <em>Works_On</em> relationship, treating it as one aggregated entity.</p>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q77" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q77. What is decomposition? Explain the concepts of lossless-join and dependency-preserving decomposition.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l2">CO2 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Decomposition</strong> is the process of breaking down a large, poorly-designed relation into two or more smaller relations to eliminate redundancy and anomalies.</p>
+        
+        <div class="concept-heading">Lossless-Join Decomposition</div>
+        <p>A decomposition of R into R1 and R2 is lossless if joining R1 and R2 back together using a Natural Join yields the exact original relation R, without generating spurious (fake) tuples.</p>
+        <p><em>Condition:</em> The common attributes must be a candidate key for at least one of the decomposed relations (i.e., <code>R1 &cap; R2 &rarr; R1</code> or <code>R1 &cap; R2 &rarr; R2</code>).</p>
+        
+        <div class="concept-heading">Dependency-Preserving Decomposition</div>
+        <p>A decomposition is dependency-preserving if all original functional dependencies can be checked and enforced using only the decomposed relations, without needing to join them back together.</p>
+                        </div>
+                    </details>
+                    
                     <details class="q-card" id="q78" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q78. How is decomposition related to normalization? Explain with a small example.</h3>
@@ -1424,6 +1545,32 @@ WHERE e1.marks &gt; (
                         </div>
                     </details>
                     
+                    <details class="q-card" id="q98" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q98. Explain the five constraints NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY and CHECK, giving an example of each.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>NOT NULL</strong>: Ensures a column cannot have a NULL value. <em>Ex: <code>Name VARCHAR(50) NOT NULL</code></em></p>
+<p><strong>UNIQUE</strong>: Ensures all values in a column are distinct. <em>Ex: <code>Email VARCHAR(50) UNIQUE</code></em></p>
+<p><strong>PRIMARY KEY</strong>: Uniquely identifies each record. It is NOT NULL + UNIQUE. <em>Ex: <code>ID INT PRIMARY KEY</code></em></p>
+<p><strong>FOREIGN KEY</strong>: Ensures referential integrity by linking to a primary key in another table. <em>Ex: <code>FOREIGN KEY (DeptID) REFERENCES Dept(ID)</code></em></p>
+<p><strong>CHECK</strong>: Ensures values in a column satisfy a specific condition. <em>Ex: <code>Age INT CHECK (Age &gt;= 18)</code></em></p>
+                        </div>
+                    </details>
+                    
                     <details class="q-card" id="q101" data-unit="III" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q101. Write a CREATE TABLE statement for Employee(Emp_ID, Name, Email, Dept_ID, Salary), where Emp_ID is the primary key, Name cannot be left blank and Email must be unique.</h3>
@@ -1473,6 +1620,248 @@ WHERE e1.marks &gt; (
                             <pre><code>ALTER TABLE Employee
 ADD CONSTRAINT fk_dept
 FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q105" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q105. Explain the numeric functions ROUND, TRUNCATE, CEIL, FLOOR, ABS, MOD, POWER and SQRT, giving an example of each.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>ROUND(n, d)</strong>: Rounds <em>n</em> to <em>d</em> decimal places. <em>ROUND(3.456, 2) &rarr; 3.46</em></li>
+<li><strong>TRUNCATE(n, d)</strong>: Cuts off <em>n</em> at <em>d</em> decimal places without rounding. <em>TRUNCATE(3.456, 2) &rarr; 3.45</em></li>
+<li><strong>CEIL(n)</strong>: Returns the smallest integer &ge; <em>n</em>. <em>CEIL(3.14) &rarr; 4</em></li>
+<li><strong>FLOOR(n)</strong>: Returns the largest integer &le; <em>n</em>. <em>FLOOR(3.8) &rarr; 3</em></li>
+<li><strong>ABS(n)</strong>: Returns the absolute (positive) value. <em>ABS(-5) &rarr; 5</em></li>
+<li><strong>MOD(x, y)</strong>: Returns the remainder of x/y. <em>MOD(10, 3) &rarr; 1</em></li>
+<li><strong>POWER(x, y)</strong>: Returns x raised to power y. <em>POWER(2, 3) &rarr; 8</em></li>
+<li><strong>SQRT(n)</strong>: Returns the square root. <em>SQRT(16) &rarr; 4</em></li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q110" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q110. Explain the date functions CURDATE, DATEDIFF, DATE_ADD/DATE_SUB and DATE_FORMAT, giving an example of each.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>CURDATE()</strong>: Returns the current system date. <em>Ex: <code>SELECT CURDATE();</code></em></li>
+<li><strong>DATEDIFF(date1, date2)</strong>: Returns the number of days between two dates. <em>Ex: <code>SELECT DATEDIFF('2023-10-10', '2023-10-01'); &rarr; 9</code></em></li>
+<li><strong>DATE_ADD(date, INTERVAL expr unit)</strong>: Adds a time interval to a date. <em>Ex: <code>SELECT DATE_ADD('2023-01-01', INTERVAL 5 DAY);</code></em></li>
+<li><strong>DATE_FORMAT(date, format)</strong>: Formats a date string. <em>Ex: <code>SELECT DATE_FORMAT(CURDATE(), '%Y-%m-%d');</code></em></li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q111" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q111. Explain the string functions CONCAT, UPPER/LOWER, LENGTH, SUBSTRING and TRIM/REPLACE, giving an example of each.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>CONCAT(s1, s2)</strong>: Joins two or more strings. <em>Ex: <code>CONCAT('Data', 'base') &rarr; 'Database'</code></em></li>
+<li><strong>UPPER(s) / LOWER(s)</strong>: Converts a string to all uppercase or lowercase. <em>Ex: <code>UPPER('sql') &rarr; 'SQL'</code></em></li>
+<li><strong>LENGTH(s)</strong>: Returns the number of characters in a string. <em>Ex: <code>LENGTH('DBMS') &rarr; 4</code></em></li>
+<li><strong>SUBSTRING(s, start, len)</strong>: Extracts a part of a string. <em>Ex: <code>SUBSTRING('Database', 1, 4) &rarr; 'Data'</code></em></li>
+<li><strong>TRIM(s)</strong>: Removes leading and trailing spaces. <em>Ex: <code>TRIM('  SQL  ') &rarr; 'SQL'</code></em></li>
+<li><strong>REPLACE(s, old, new)</strong>: Replaces all occurrences of a substring. <em>Ex: <code>REPLACE('DBMS', 'M', 'B') &rarr; 'DBBS'</code></em></li>
+</ul>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q117" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q117. Explain UNION, UNION ALL, INTERSECT and MINUS/EXCEPT with an example of each. What condition must both the SELECT statements satisfy before these operators can be applied?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p><strong>Set Operators:</strong></p>
+<ul>
+<li><strong>UNION</strong>: Combines results of two queries, removing duplicates.</li>
+<li><strong>UNION ALL</strong>: Combines results of two queries, keeping all duplicates.</li>
+<li><strong>INTERSECT</strong>: Returns only the rows that appear in both queries.</li>
+<li><strong>MINUS / EXCEPT</strong>: Returns rows from the first query that are not present in the second.</li>
+</ul>
+<p><strong>Condition for application (Union Compatibility):</strong></p>
+<ol>
+<li>Both SELECT statements must have the same number of columns.</li>
+<li>The corresponding columns must have compatible data types in the same order.</li>
+</ol>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q122" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q122. What is a transaction? Explain the ACID properties with the help of a bank transfer example.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 10.0</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <p>A <strong>transaction</strong> is a logical unit of work consisting of one or more SQL statements that must be executed entirely or not at all.</p>
+<p><strong>ACID Properties (Bank Transfer Example: A to B):</strong></p>
+<ul>
+<li><strong>Atomicity</strong>: "All or nothing." If money is deducted from A, it MUST be credited to B. If either fails, the entire transaction is rolled back.</li>
+<li><strong>Consistency</strong>: The database must remain in a valid state. The total sum of A + B's balances must be the same before and after the transaction.</li>
+<li><strong>Isolation</strong>: Concurrent transactions do not interfere with each other. If another transaction reads A's balance during the transfer, it will see the state either strictly before or strictly after, not midway.</li>
+<li><strong>Durability</strong>: Once the transaction is committed, the changes are permanent and will survive system crashes.</li>
+</ul>
+<div class="diagram-container">
+<svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
+    </marker>
+  </defs>
+
+  <rect x="250" y="20" width="100" height="40" rx="20" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="300" y="45" text-anchor="middle" fill="currentColor" font-weight="bold">Active</text>
+
+  <rect x="100" y="100" width="150" height="40" rx="20" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="175" y="125" text-anchor="middle" fill="currentColor" font-weight="bold">Partially Committed</text>
+
+  <rect x="360" y="100" width="100" height="40" rx="20" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="410" y="125" text-anchor="middle" fill="currentColor" font-weight="bold">Failed</text>
+
+  <rect x="125" y="180" width="100" height="40" rx="20" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="175" y="205" text-anchor="middle" fill="currentColor" font-weight="bold">Committed</text>
+
+  <rect x="360" y="180" width="100" height="40" rx="20" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/>
+  <text x="410" y="205" text-anchor="middle" fill="currentColor" font-weight="bold">Aborted</text>
+
+  <!-- Arrows -->
+  <line x1="280" y1="60" x2="220" y2="100" stroke="currentColor" stroke-width="2" marker-end="url(#arrow5)"/>
+  <line x1="320" y1="60" x2="380" y2="100" stroke="currentColor" stroke-width="2" marker-end="url(#arrow5)"/>
+  <line x1="175" y1="140" x2="175" y2="180" stroke="currentColor" stroke-width="2" marker-end="url(#arrow5)"/>
+  <line x1="250" y1="120" x2="360" y2="120" stroke="currentColor" stroke-width="2" marker-end="url(#arrow5)"/>
+  <line x1="410" y1="140" x2="410" y2="180" stroke="currentColor" stroke-width="2" marker-end="url(#arrow5)"/>
+</svg>
+<p class="concept-heading">Transaction State Diagram</p>
+</div>
+
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q123" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q123. Explain COMMIT, ROLLBACK and SAVEPOINT with a suitable example on the ACCOUNT table.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>COMMIT</strong>: Saves all changes made during the current transaction permanently.</li>
+<li><strong>ROLLBACK</strong>: Undoes all changes made during the current transaction, reverting to the last commit.</li>
+<li><strong>SAVEPOINT</strong>: Sets a marker within a transaction so you can roll back to that specific point without canceling the entire transaction.</li>
+</ul>
+<pre><code>START TRANSACTION;
+UPDATE ACCOUNT SET Balance = Balance - 500 WHERE Acc_No = 'A101';
+SAVEPOINT step1;
+UPDATE ACCOUNT SET Balance = Balance + 500 WHERE Acc_No = 'A102';
+-- If something goes wrong here:
+ROLLBACK TO step1; -- Undoes only the A102 update
+COMMIT; -- Saves the final state</code></pre>
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q128" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                        <summary>
+                            <h3>Q128. In one or two lines each, state the purpose of a stored procedure, a sequence (AUTO_INCREMENT in MySQL), a cursor and a trigger.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l2">CO3 | Bloom L2</span>
+                                    <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            <ul>
+<li><strong>Stored Procedure</strong>: A pre-compiled collection of SQL statements saved in the database that can be executed as a single callable routine.</li>
+<li><strong>Sequence (AUTO_INCREMENT)</strong>: Automatically generates unique, sequential numeric values, typically used for primary keys.</li>
+<li><strong>Cursor</strong>: A database object used to retrieve and process rows one by one from a result set inside a stored procedure.</li>
+<li><strong>Trigger</strong>: A special type of stored procedure that automatically executes (fires) in response to specific DML events (INSERT, UPDATE, DELETE) on a table.</li>
+</ul>
                         </div>
                     </details>
                     
@@ -2218,6 +2607,20 @@ document.addEventListener('DOMContentLoaded', () => {
         isDragging = false;
         document.removeEventListener('mousemove', onMouseMove);
         document.removeEventListener('mouseup', onMouseUp);
+    }
+});
+
+// ==========================================
+// Auth UI Initialization
+// ==========================================
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        if (window.navigator && window.navigator.userAgent.includes('jsdom')) return;
+        const path = './auth-ui.js';
+        const { initAuthUI } = await import(path);
+        initAuthUI();
+    } catch (e) {
+        console.warn('Failed to load Auth UI. Running in offline/guest mode.', e);
     }
 });
 

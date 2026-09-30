@@ -22,7 +22,7 @@ def is_predictable_generalized(bloom, marks):
     elif marks == 3:
         return bloom_level in ["L2", "K2", "L3", "K3"]
     elif marks == 5:
-        return bloom_level in ["L3", "K3", "L4", "K4", "L5", "K5", "L6", "K6"]
+        return bloom_level in ["L2", "K2", "L3", "K3", "L4", "K4", "L5", "K5", "L6", "K6"]
     
     return False
 

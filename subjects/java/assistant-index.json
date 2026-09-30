@@ -967,7 +967,7 @@
     "bloom": "L2",
     "co": "CO1",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Compare procedural programming and OOP with respect to approach, data handling, security, reusability, inheritance, and polymorphism.",
     "url": "question-bank.html?open=q61",
     "chunks": [
@@ -983,7 +983,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain the six pillars of OOP\u2014class, object, encapsulation, abstraction, inheritance, and polymorphism\u2014with suitable examples.",
     "url": "question-bank.html?open=q62",
     "chunks": [
@@ -999,7 +999,7 @@
     "bloom": "L2",
     "co": "CO1",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain Java's platform independence in detail, from source code compilation to bytecode execution through the JVM.",
     "url": "question-bank.html?open=q63",
     "chunks": [
@@ -1095,7 +1095,7 @@
     "bloom": "L2",
     "co": "CO1",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain Java control statements with suitable examples of if-else, switch-case, loops, break, continue, and the ternary operator.",
     "url": "question-bank.html?open=q69",
     "chunks": [
@@ -1127,7 +1127,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain Classes and Objects in Java in detail. Describe how objects are created using new, how multiple objects of the same class maintain independent instance variables, and illustrate with a suitable example.",
     "url": "question-bank.html?open=q71",
     "chunks": [
@@ -1143,7 +1143,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain instance variables and local variables in Java. Discuss their declaration, default/initialization requirements, lifetime, and memory behavior with suitable examples.",
     "url": "question-bank.html?open=q72",
     "chunks": [
@@ -1159,7 +1159,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain constructors in Java in detail. Discuss constructor rules, default/no-argument constructor, parameterized constructor, and the role of constructors in object initialization.",
     "url": "question-bank.html?open=q73",
     "chunks": [
@@ -1191,7 +1191,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9.0,
-    "important": false,
+    "important": true,
     "title": "Explain the this keyword in Java. Discuss its major uses, including resolving field parameter shadowing, invoking another method, constructor chaining using this(), passing the current object, and returning the current object.",
     "url": "question-bank.html?open=q75",
     "chunks": [
@@ -1207,7 +1207,7 @@
     "bloom": "L2",
     "co": "CO5",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain Garbage Collection and finalization in Java. Discuss different situations in which an object becomes eligible for GC, the role of finalize(), why finalize() is deprecated, and modern alternatives such as try-with-resources and Cleaner.",
     "url": "question-bank.html?open=q76",
     "chunks": [
@@ -1223,7 +1223,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 10.0,
-    "important": false,
+    "important": true,
     "title": "Explain all four access modifiers in Java \u2014 private, default, protected, and public. Compare their accessibility within the class, package, subclasses, and outside packages with suitable examples.",
     "url": "question-bank.html?open=q77",
     "chunks": [
@@ -1255,7 +1255,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain the String class in Java in detail. Discuss String immutability, String literals, the new keyword, String Constant Pool, == versus equals(), and important String methods with examples.",
     "url": "question-bank.html?open=q79",
     "chunks": [
@@ -1271,7 +1271,7 @@
     "bloom": "L2",
     "co": "CO2",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Compare String, StringBuffer, and StringBuilder in Java. Discuss their mutability, thread safety, performance, and appropriate use cases. Also explain important StringBuffer methods such as append(), insert(), replace(), delete(), and reverse().",
     "url": "question-bank.html?open=q80",
     "chunks": [
@@ -1287,7 +1287,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.0,
-    "important": false,
+    "important": true,
     "title": "Explain all major types of inheritance in Java\u2014single, multilevel, hierarchical, hybrid, and multiple inheritance. Also explain how multiple inheritance is achieved using interfaces.",
     "url": "question-bank.html?open=q81",
     "chunks": [
@@ -1319,7 +1319,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain the Object class in detail and demonstrate the use of toString(), equals(), hashCode(), and getClass() with suitable examples.",
     "url": "question-bank.html?open=q83",
     "chunks": [
@@ -1415,7 +1415,7 @@
     "bloom": "L2",
     "co": "CO3",
     "score": 9.5,
-    "important": false,
+    "important": true,
     "title": "Explain generic programming in Java. Write examples of a generic class and a generic method, and state the advantages of type safety and code reusability.",
     "url": "question-bank.html?open=q89",
     "chunks": [
