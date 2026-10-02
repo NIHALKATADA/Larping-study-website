@@ -79,7 +79,7 @@
    RESET & TYPOGRAPHY
    ========================================================================== */
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; scrollbar-gutter: stable; }
 
 body {
     scrollbar-gutter: stable;
@@ -1523,6 +1523,7 @@ img {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
