@@ -3352,11 +3352,11 @@ window.openModal = function(id) {
         if (scrollbarWidth > 0) {
             document.body.style.paddingRight = scrollbarWidth + 'px';
             const topbar = document.querySelector('.smart-topbar');
-            if (topbar) topbar.style.paddingRight = calc(var(--space-4) + px);
+            if (topbar) topbar.style.paddingRight = `calc(var(--space-4) + ${scrollbarWidth}px)`;
             const fab = document.querySelector('.fab-container');
-            if (fab && window.innerWidth > 768) fab.style.right = calc(2rem + px);
+            if (fab && window.innerWidth > 768) fab.style.right = `calc(2rem + ${scrollbarWidth}px)`;
             const prog = document.getElementById('stickyProgressWidget');
-            if (prog && window.innerWidth > 768) prog.style.right = calc(2rem + 48px + 1rem + px);
+            if (prog && window.innerWidth > 768) prog.style.right = `calc(2rem + 48px + 1rem + ${scrollbarWidth}px)`;
         }
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
