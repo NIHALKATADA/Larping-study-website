@@ -707,3 +707,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.warn('Failed to load Auth UI. Running in offline/guest mode.', e);
     }
 });
+document.addEventListener('click', (e) => {
+    const fabMenu = document.getElementById('fabMenu');
+    const fabBtn = document.getElementById('fabMainBtn');
+    if (fabMenu && fabBtn && fabMenu.classList.contains('open')) {
+        if (!fabMenu.contains(e.target) && !fabBtn.contains(e.target)) {
+            fabMenu.classList.remove('open');
+            fabBtn.classList.remove('active');
+        }
+    }
+});
