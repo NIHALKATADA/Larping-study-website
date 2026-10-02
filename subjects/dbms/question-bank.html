@@ -5464,6 +5464,7 @@ window.openModal = function(id) {
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
         if (scrollbarWidth > 0) {
             document.body.style.paddingRight = scrollbarWidth + 'px';
+            modal.style.paddingRight = scrollbarWidth + 'px';
             const topbar = document.querySelector('.smart-topbar');
             if (topbar) topbar.style.paddingRight = `calc(var(--space-4) + ${scrollbarWidth}px)`;
             const fab = document.querySelector('.fab-container');
@@ -5482,6 +5483,7 @@ window.closeModal = function(id) {
         modal.classList.remove('active');
         document.body.style.overflow = '';
         document.body.style.paddingRight = '';
+        modal.style.paddingRight = '';
         const topbar = document.querySelector('.smart-topbar');
         if (topbar) topbar.style.paddingRight = '';
         const fab = document.querySelector('.fab-container');
