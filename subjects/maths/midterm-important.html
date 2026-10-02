@@ -649,7 +649,7 @@
 
     <script src="course-data.js"></script>
     
-    <div id="stickyProgressWidget" style="position: fixed; bottom: 2rem; right: 2rem; background: var(--card-bg); padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 1px solid var(--border-color); z-index: 1000; display: flex; flex-direction: column; gap: 0.5rem; min-width: 250px;">
+    <div id="stickyProgressWidget" style="position: fixed; bottom: 2rem;  background: var(--card-bg); padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 1px solid var(--border-color); z-index: 1000; display: flex; flex-direction: column; gap: 0.5rem; min-width: 250px;">
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <span style="font-weight: bold; color: var(--heading-color); font-size: 0.95rem;">Your Progress</span>
             <span id="progressText" style="font-size: 0.85rem; font-weight: bold; color: var(--primary-teal);">0 / 0</span>
@@ -1401,7 +1401,7 @@ window.openModal = function(id) {
             const fab = document.querySelector('.fab-container');
             if (fab && window.innerWidth > 768) fab.style.right = `calc(2rem + ${scrollbarWidth}px)`;
             const prog = document.getElementById('stickyProgressWidget');
-            if (prog && window.innerWidth > 768) prog.style.right = `calc(2rem + 48px + 1rem + ${scrollbarWidth}px)`;
+            if (prog && window.innerWidth > 768) prog.style.right = `calc(2rem + ${scrollbarWidth}px)`;
         }
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';

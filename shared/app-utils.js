@@ -739,7 +739,7 @@ window.openModal = function(id) {
             const fab = document.querySelector('.fab-container');
             if (fab && window.innerWidth > 768) fab.style.right = `calc(2rem + ${scrollbarWidth}px)`;
             const prog = document.getElementById('stickyProgressWidget');
-            if (prog && window.innerWidth > 768) prog.style.right = `calc(2rem + 48px + 1rem + ${scrollbarWidth}px)`;
+            if (prog && window.innerWidth > 768) prog.style.right = `calc(2rem + ${scrollbarWidth}px)`;
         }
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
