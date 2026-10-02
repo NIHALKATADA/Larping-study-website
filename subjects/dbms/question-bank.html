@@ -528,24 +528,15 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-
-        <p>A Database Management System (DBMS) is software that interacts with end-users, applications, and the database itself to capture and analyze data. It allows users to create, read, update, and delete data in a database.</p>
-
-        <div class="concept-heading">Advantages over File-Processing</div>
-
-        <ul>
-
-            <li><strong>Data Redundancy and Inconsistency:</strong> Centralizes data, eliminating duplicate files and ensuring updates propagate everywhere.</li>
-
-            <li><strong>Data Isolation:</strong> Applications do not need to know the physical structure of the data files.</li>
-
-            <li><strong>Integrity Problems:</strong> Allows defining explicit integrity constraints (e.g., account balance > 0).</li>
-
-            <li><strong>Security Problems:</strong> Offers fine-grained access control and user authorization.</li>
-
-            <li><strong>Concurrent Access:</strong> Manages simultaneous access securely, preventing anomalies.</li>
-
+                            <div class="concept-heading">Definition</div>
+        <p>A Database Management System (DBMS) is software that interacts with end-users, applications, and the database itself to capture and analyze data. It allows users to create, read, update, and delete data in a database.</p>
+        <div class="concept-heading">Advantages over File-Processing</div>
+        <ul>
+            <li><strong>Data Redundancy and Inconsistency:</strong> Centralizes data, eliminating duplicate files and ensuring updates propagate everywhere.</li>
+            <li><strong>Data Isolation:</strong> Applications do not need to know the physical structure of the data files.</li>
+            <li><strong>Integrity Problems:</strong> Allows defining explicit integrity constraints (e.g., account balance > 0).</li>
+            <li><strong>Security Problems:</strong> Offers fine-grained access control and user authorization.</li>
+            <li><strong>Concurrent Access:</strong> Manages simultaneous access securely, preventing anomalies.</li>
         </ul>
                         </div>
                     </details>
@@ -566,18 +557,12 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definitions</div>
-
-        <ul>
-
-            <li><strong>Data Redundancy:</strong> The unnecessary duplication of data in a database. (e.g., storing a student's address in both the Library and Department files).</li>
-
-            <li><strong>Data Inconsistency:</strong> A consequence of redundancy where different copies of the same data hold different values (e.g., address updated in Library but not Department).</li>
-
-        </ul>
-
-        <div class="concept-heading">DBMS Solution</div>
-
+                            <div class="concept-heading">Definitions</div>
+        <ul>
+            <li><strong>Data Redundancy:</strong> The unnecessary duplication of data in a database. (e.g., storing a student's address in both the Library and Department files).</li>
+            <li><strong>Data Inconsistency:</strong> A consequence of redundancy where different copies of the same data hold different values (e.g., address updated in Library but not Department).</li>
+        </ul>
+        <div class="concept-heading">DBMS Solution</div>
         <p>A DBMS minimizes redundancy by storing a single, centralized copy of the data (Data Normalization). Because there is only one authoritative copy, inconsistency is inherently prevented.</p>
                         </div>
                     </details>
@@ -598,16 +583,11 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Differences</div>
-
-        <ul>
-
-            <li><strong>Structure:</strong> DB systems store data in structured formats (tables/graphs); File systems store data in plain text/binary files.</li>
-
-            <li><strong>Data Independence:</strong> DB systems separate applications from data structure; File systems tightly couple applications to file formats.</li>
-
-            <li><strong>Querying:</strong> DB systems provide robust query languages (SQL); File systems require custom application code to extract data.</li>
-
+                            <div class="concept-heading">Differences</div>
+        <ul>
+            <li><strong>Structure:</strong> DB systems store data in structured formats (tables/graphs); File systems store data in plain text/binary files.</li>
+            <li><strong>Data Independence:</strong> DB systems separate applications from data structure; File systems tightly couple applications to file formats.</li>
+            <li><strong>Querying:</strong> DB systems provide robust query languages (SQL); File systems require custom application code to extract data.</li>
         </ul>
                         </div>
                     </details>
@@ -630,22 +610,14 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">The Three Levels</div>
-
-        <ol>
-
-            <li><strong>External Level (View Level):</strong> The highest level, describing only the part of the database relevant to a specific user group (hiding the rest).</li>
-
-            <li><strong>Conceptual Level (Logical Level):</strong> Describes what data is stored in the entire database and the relationships among those data. Used by DBAs.</li>
-
-            <li><strong>Internal Level (Physical Level):</strong> Describes exactly how the data is physically stored on disk (data structures, file organizations).</li>
-
-        </ol>
-
-        <div class="exam-tip">
-
-            <strong>Exam Tip:</strong> The primary objective of this architecture is to achieve <em>Data Independence</em>.
-
+                            <div class="concept-heading">The Three Levels</div>
+        <ol>
+            <li><strong>External Level (View Level):</strong> The highest level, describing only the part of the database relevant to a specific user group (hiding the rest).</li>
+            <li><strong>Conceptual Level (Logical Level):</strong> Describes what data is stored in the entire database and the relationships among those data. Used by DBAs.</li>
+            <li><strong>Internal Level (Physical Level):</strong> Describes exactly how the data is physically stored on disk (data structures, file organizations).</li>
+        </ol>
+        <div class="exam-tip">
+            <strong>Exam Tip:</strong> The primary objective of this architecture is to achieve <em>Data Independence</em>.
         </div>
 <div class="diagram-container">
 <svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg">
@@ -711,20 +683,13 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-
-        <p>Data abstraction is the process of hiding complex internal data structures and storage details from the user, presenting only a simplified, usable view of the data.</p>
-
-        <div class="concept-heading">Three Levels</div>
-
-        <ul>
-
-            <li><strong>Physical Level:</strong> Hides the complexity of block structures, indexing, and bytes on disk.</li>
-
-            <li><strong>Logical Level:</strong> Hides physical storage but reveals entities, data types, and relationships. Developers interact here.</li>
-
-            <li><strong>View Level:</strong> Hides the entire logical schema except for specific fields the end-user is authorized to see (e.g., a teller seeing only names and balances).</li>
-
+                            <div class="concept-heading">Definition</div>
+        <p>Data abstraction is the process of hiding complex internal data structures and storage details from the user, presenting only a simplified, usable view of the data.</p>
+        <div class="concept-heading">Three Levels</div>
+        <ul>
+            <li><strong>Physical Level:</strong> Hides the complexity of block structures, indexing, and bytes on disk.</li>
+            <li><strong>Logical Level:</strong> Hides physical storage but reveals entities, data types, and relationships. Developers interact here.</li>
+            <li><strong>View Level:</strong> Hides the entire logical schema except for specific fields the end-user is authorized to see (e.g., a teller seeing only names and balances).</li>
         </ul>
                         </div>
                     </details>
@@ -745,18 +710,12 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-
-        <ul>
-
-            <li><strong>Schema:</strong> The overall logical design/blueprint of the database. It changes rarely.</li>
-
-            <li><strong>Instance:</strong> The snapshot of data residing in the database at a specific moment in time. It changes frequently.</li>
-
-        </ul>
-
-        <div class="concept-heading">Importance</div>
-
+                            <div class="concept-heading">Definition</div>
+        <ul>
+            <li><strong>Schema:</strong> The overall logical design/blueprint of the database. It changes rarely.</li>
+            <li><strong>Instance:</strong> The snapshot of data residing in the database at a specific moment in time. It changes frequently.</li>
+        </ul>
+        <div class="concept-heading">Importance</div>
         <p>This distinction is crucial for maintaining data independence—altering the schema (like adding a column) should not arbitrarily destroy the existing instances.</p>
                         </div>
                     </details>
@@ -777,18 +736,12 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-
-        <p>Data independence is the ability to modify a schema definition in one level without affecting a schema definition in the next higher level.</p>
-
-        <div class="concept-heading">Types</div>
-
-        <ul>
-
-            <li><strong>Physical Data Independence:</strong> Ability to modify the internal/physical schema without altering the conceptual schema. <em>Example:</em> Changing a file from sequential to a B+ tree index to improve performance; application code doesn't change.</li>
-
-            <li><strong>Logical Data Independence:</strong> Ability to modify the conceptual schema without altering the external schema (user views). <em>Example:</em> Splitting an Employee table into two normalized tables; the original view can be maintained using a SQL JOIN, shielding the frontend application.</li>
-
+                            <div class="concept-heading">Definition</div>
+        <p>Data independence is the ability to modify a schema definition in one level without affecting a schema definition in the next higher level.</p>
+        <div class="concept-heading">Types</div>
+        <ul>
+            <li><strong>Physical Data Independence:</strong> Ability to modify the internal/physical schema without altering the conceptual schema. <em>Example:</em> Changing a file from sequential to a B+ tree index to improve performance; application code doesn't change.</li>
+            <li><strong>Logical Data Independence:</strong> Ability to modify the conceptual schema without altering the external schema (user views). <em>Example:</em> Splitting an Employee table into two normalized tables; the original view can be maintained using a SQL JOIN, shielding the frontend application.</li>
         </ul>
                         </div>
                     </details>
@@ -809,18 +762,12 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Types of Users</div>
-
-        <ul>
-
-            <li><strong>Parametric (Naive) Users:</strong> End-users who interact via standard GUI applications without knowing SQL (e.g., Bank Tellers).</li>
-
-            <li><strong>Application Programmers:</strong> Software engineers who write the backend logic connecting to the DB.</li>
-
-            <li><strong>Sophisticated Users:</strong> Analysts who interact directly with the DB using SQL queries to generate reports.</li>
-
-            <li><strong>Database Administrators (DBA):</strong> IT professionals who manage security, schemas, and performance tuning.</li>
-
+                            <div class="concept-heading">Types of Users</div>
+        <ul>
+            <li><strong>Parametric (Naive) Users:</strong> End-users who interact via standard GUI applications without knowing SQL (e.g., Bank Tellers).</li>
+            <li><strong>Application Programmers:</strong> Software engineers who write the backend logic connecting to the DB.</li>
+            <li><strong>Sophisticated Users:</strong> Analysts who interact directly with the DB using SQL queries to generate reports.</li>
+            <li><strong>Database Administrators (DBA):</strong> IT professionals who manage security, schemas, and performance tuning.</li>
         </ul>
                         </div>
                     </details>
@@ -841,18 +788,12 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Responsibilities</div>
-
-        <ul>
-
-            <li>Schema definition and modification.</li>
-
-            <li>Defining storage structures and access methods (indexing).</li>
-
-            <li>Granting user authority and managing access security.</li>
-
-            <li>Routine maintenance, database backups, and performance monitoring.</li>
-
+                            <div class="concept-heading">Responsibilities</div>
+        <ul>
+            <li>Schema definition and modification.</li>
+            <li>Defining storage structures and access methods (indexing).</li>
+            <li>Granting user authority and managing access security.</li>
+            <li>Routine maintenance, database backups, and performance monitoring.</li>
         </ul>
                         </div>
                     </details>
@@ -873,22 +814,14 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Comparison</div>
-
-        <ul>
-
-            <li><strong>Hierarchical:</strong> Data organized in a tree structure (1:N relationships). Fast but inflexible; requires navigating rigid pointers.</li>
-
-            <li><strong>Network:</strong> Data organized in a graph (M:N relationships allowed). Highly complex and difficult to maintain.</li>
-
-            <li><strong>Relational:</strong> Data organized in 2D tables (relations). Uses declarative SQL. Extremely flexible and mathematically sound.</li>
-
-            <li><strong>Object-Oriented:</strong> Data stored as objects with methods, matching OOP languages. Best for complex data (e.g., CAD/CAM).</li>
-
-        </ul>
-
-        <div class="concept-heading">Most Widely Used</div>
-
+                            <div class="concept-heading">Comparison</div>
+        <ul>
+            <li><strong>Hierarchical:</strong> Data organized in a tree structure (1:N relationships). Fast but inflexible; requires navigating rigid pointers.</li>
+            <li><strong>Network:</strong> Data organized in a graph (M:N relationships allowed). Highly complex and difficult to maintain.</li>
+            <li><strong>Relational:</strong> Data organized in 2D tables (relations). Uses declarative SQL. Extremely flexible and mathematically sound.</li>
+            <li><strong>Object-Oriented:</strong> Data stored as objects with methods, matching OOP languages. Best for complex data (e.g., CAD/CAM).</li>
+        </ul>
+        <div class="concept-heading">Most Widely Used</div>
         <p>The <strong>Relational Model</strong> is most widely used today due to its simplicity, robust theoretical foundation (normalization), and standard interface (SQL) which provides unparalleled data independence.</p>
                         </div>
                     </details>
@@ -909,16 +842,11 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Advantages</div>
-
-        <ul>
-
-            <li><strong>Simplicity:</strong> Uses a simple tabular structure (rows and columns) that is easy to understand compared to complex graph/tree pointers.</li>
-
-            <li><strong>Flexibility:</strong> Supports ad-hoc querying using standard SQL.</li>
-
-            <li><strong>Data Independence:</strong> Strong separation between logical representation and physical storage.</li>
-
+                            <div class="concept-heading">Advantages</div>
+        <ul>
+            <li><strong>Simplicity:</strong> Uses a simple tabular structure (rows and columns) that is easy to understand compared to complex graph/tree pointers.</li>
+            <li><strong>Flexibility:</strong> Supports ad-hoc querying using standard SQL.</li>
+            <li><strong>Data Independence:</strong> Strong separation between logical representation and physical storage.</li>
         </ul>
                         </div>
                     </details>
@@ -941,50 +869,28 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Explanation</div>
-
-        <ul>
-
-            <li><strong>Super Key:</strong> Any combination of columns that uniquely identifies a row. (e.g., <code>StudentID + Name</code>)</li>
-
-            <li><strong>Candidate Key:</strong> A minimal super key; it uniquely identifies a row with no unnecessary columns. (e.g., <code>StudentID</code> or <code>Email</code>)</li>
-
-            <li><strong>Primary Key:</strong> The specific candidate key chosen to identify rows. Cannot be NULL. (e.g., <code>StudentID</code>)</li>
-
-            <li><strong>Foreign Key:</strong> A column that refers to the primary key of another table, enforcing referential integrity. (e.g., <code>Dept_ID</code> in a Student table referencing the Department table)</li>
-
-        </ul>
-
-        <div class="diagram-container">
-
-            <svg viewBox="0 0 500 220" width="100%" height="220" role="img" aria-labelledby="title_q12">
-
-                <title id="title_q12">Relationship Between Database Keys</title>
-
-                <!-- Super Key -->
-
-                <ellipse cx="250" cy="110" rx="200" ry="100" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
-
-                <text x="250" y="45" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1a237e" text-anchor="middle">Super Keys (All unique combinations)</text>
-
-                
-
-                <!-- Candidate Key -->
-
-                <ellipse cx="250" cy="130" rx="130" ry="60" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
-
-                <text x="250" y="100" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c65f00" text-anchor="middle">Candidate Keys (Minimal)</text>
-
-
-
-                <!-- Primary Key -->
-
-                <circle cx="250" cy="155" r="25" fill="#e0f7fa" stroke="#006064" stroke-width="2"/>
-
-                <text x="250" y="160" font-family="sans-serif" font-size="12" font-weight="bold" fill="#006064" text-anchor="middle">PK</text>
-
-            </svg>
-
+                            <div class="concept-heading">Explanation</div>
+        <ul>
+            <li><strong>Super Key:</strong> Any combination of columns that uniquely identifies a row. (e.g., <code>StudentID + Name</code>)</li>
+            <li><strong>Candidate Key:</strong> A minimal super key; it uniquely identifies a row with no unnecessary columns. (e.g., <code>StudentID</code> or <code>Email</code>)</li>
+            <li><strong>Primary Key:</strong> The specific candidate key chosen to identify rows. Cannot be NULL. (e.g., <code>StudentID</code>)</li>
+            <li><strong>Foreign Key:</strong> A column that refers to the primary key of another table, enforcing referential integrity. (e.g., <code>Dept_ID</code> in a Student table referencing the Department table)</li>
+        </ul>
+        <div class="diagram-container">
+            <svg viewBox="0 0 500 220" width="100%" height="220" role="img" aria-labelledby="title_q12">
+                <title id="title_q12">Relationship Between Database Keys</title>
+                <!-- Super Key -->
+                <ellipse cx="250" cy="110" rx="200" ry="100" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="250" y="45" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1a237e" text-anchor="middle">Super Keys (All unique combinations)</text>
+                
+                <!-- Candidate Key -->
+                <ellipse cx="250" cy="130" rx="130" ry="60" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text x="250" y="100" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c65f00" text-anchor="middle">Candidate Keys (Minimal)</text>
+
+                <!-- Primary Key -->
+                <circle cx="250" cy="155" r="25" fill="#e0f7fa" stroke="#006064" stroke-width="2"/>
+                <text x="250" y="160" font-family="sans-serif" font-size="12" font-weight="bold" fill="#006064" text-anchor="middle">PK</text>
+            </svg>
         </div>
                         </div>
                     </details>
@@ -1005,22 +911,14 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-
-        <p>Integrity constraints are rules applied to a database to ensure the data is accurate, consistent, and valid.</p>
-
-        <div class="concept-heading">The Four Constraints</div>
-
-        <ul>
-
-            <li><strong>Domain Constraint:</strong> Restricts the values a column can hold to a valid set (e.g., Age must be a positive integer).</li>
-
-            <li><strong>Key Constraint:</strong> Ensures that candidate/primary keys are completely unique for every row.</li>
-
-            <li><strong>Entity Integrity:</strong> States that no part of a Primary Key can be NULL, because a NULL value cannot uniquely identify a row.</li>
-
-            <li><strong>Referential Integrity:</strong> States that if a foreign key exists in a relation, its value must either match a primary key value in the referenced relation or be NULL. (e.g., You cannot enroll a student in a non-existent Course_ID).</li>
-
+                            <div class="concept-heading">Definition</div>
+        <p>Integrity constraints are rules applied to a database to ensure the data is accurate, consistent, and valid.</p>
+        <div class="concept-heading">The Four Constraints</div>
+        <ul>
+            <li><strong>Domain Constraint:</strong> Restricts the values a column can hold to a valid set (e.g., Age must be a positive integer).</li>
+            <li><strong>Key Constraint:</strong> Ensures that candidate/primary keys are completely unique for every row.</li>
+            <li><strong>Entity Integrity:</strong> States that no part of a Primary Key can be NULL, because a NULL value cannot uniquely identify a row.</li>
+            <li><strong>Referential Integrity:</strong> States that if a foreign key exists in a relation, its value must either match a primary key value in the referenced relation or be NULL. (e.g., You cannot enroll a student in a non-existent Course_ID).</li>
         </ul>
                         </div>
                     </details>
@@ -1041,22 +939,14 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-
-        <p>The Entity-Relationship (E-R) model is a high-level conceptual data model that visually represents entities (objects) and the relationships between them.</p>
-
-        <div class="concept-heading">Notations</div>
-
-        <ul>
-
-            <li><strong>Rectangle:</strong> Entity sets</li>
-
-            <li><strong>Ellipse:</strong> Attributes</li>
-
-            <li><strong>Diamond:</strong> Relationship sets</li>
-
-            <li><strong>Lines:</strong> Link attributes to entities and entities to relationships</li>
-
+                            <div class="concept-heading">Definition</div>
+        <p>The Entity-Relationship (E-R) model is a high-level conceptual data model that visually represents entities (objects) and the relationships between them.</p>
+        <div class="concept-heading">Notations</div>
+        <ul>
+            <li><strong>Rectangle:</strong> Entity sets</li>
+            <li><strong>Ellipse:</strong> Attributes</li>
+            <li><strong>Diamond:</strong> Relationship sets</li>
+            <li><strong>Lines:</strong> Link attributes to entities and entities to relationships</li>
         </ul>
                         </div>
                     </details>
@@ -1077,54 +967,30 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definitions</div>
-
-        <ul>
-
-            <li><strong>Entity:</strong> A real-world object with independent existence (e.g., a specific student).</li>
-
-            <li><strong>Entity Set:</strong> A collection of similar entities (e.g., all Students).</li>
-
-            <li><strong>Attribute:</strong> A property describing an entity (e.g., Name, Age).</li>
-
-            <li><strong>Relationship:</strong> An association among two or more entities (e.g., Student <em>Enroll</em> Course).</li>
-
-        </ul>
-
-        <div class="diagram-container">
-
-            <svg viewBox="0 0 500 150" width="100%" height="150" role="img" aria-labelledby="title_q15">
-
-                <title id="title_q15">ER Components</title>
-
-                <!-- Entity -->
-
-                <rect x="200" y="50" width="100" height="50" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
-
-                <text x="250" y="80" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Student</text>
-
-                
-
-                <!-- Attribute -->
-
-                <ellipse cx="100" cy="75" rx="50" ry="25" fill="#e0f7fa" stroke="#006064" stroke-width="2"/>
-
-                <text x="100" y="80" font-family="sans-serif" font-size="14" text-anchor="middle">Name</text>
-
-                <line x1="150" y1="75" x2="200" y2="75" stroke="#333" stroke-width="2"/>
-
-                
-
-                <!-- Relationship -->
-
-                <polygon points="400,50 450,75 400,100 350,75" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
-
-                <text fill="currentColor" x="400" y="80" font-family="sans-serif" font-size="14" text-anchor="middle">Enroll</text>
-
-                <line x1="300" y1="75" x2="350" y2="75" stroke="#333" stroke-width="2"/>
-
-            </svg>
-
+                            <div class="concept-heading">Definitions</div>
+        <ul>
+            <li><strong>Entity:</strong> A real-world object with independent existence (e.g., a specific student).</li>
+            <li><strong>Entity Set:</strong> A collection of similar entities (e.g., all Students).</li>
+            <li><strong>Attribute:</strong> A property describing an entity (e.g., Name, Age).</li>
+            <li><strong>Relationship:</strong> An association among two or more entities (e.g., Student <em>Enroll</em> Course).</li>
+        </ul>
+        <div class="diagram-container">
+            <svg viewBox="0 0 500 150" width="100%" height="150" role="img" aria-labelledby="title_q15">
+                <title id="title_q15">ER Components</title>
+                <!-- Entity -->
+                <rect x="200" y="50" width="100" height="50" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="250" y="80" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Student</text>
+                
+                <!-- Attribute -->
+                <ellipse cx="100" cy="75" rx="50" ry="25" fill="#e0f7fa" stroke="#006064" stroke-width="2"/>
+                <text x="100" y="80" font-family="sans-serif" font-size="14" text-anchor="middle">Name</text>
+                <line x1="150" y1="75" x2="200" y2="75" stroke="#333" stroke-width="2"/>
+                
+                <!-- Relationship -->
+                <polygon points="400,50 450,75 400,100 350,75" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text fill="currentColor" x="400" y="80" font-family="sans-serif" font-size="14" text-anchor="middle">Enroll</text>
+                <line x1="300" y1="75" x2="350" y2="75" stroke="#333" stroke-width="2"/>
+            </svg>
         </div>
                         </div>
                     </details>
@@ -1145,20 +1011,13 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Attribute Types</div>
-
-        <ul>
-
-            <li><strong>Simple:</strong> Indivisible atomic values (e.g., <code>Gender</code>).</li>
-
-            <li><strong>Composite:</strong> Can be broken down into sub-parts (e.g., <code>Name</code> into First Name, Last Name).</li>
-
-            <li><strong>Derived:</strong> Calculated from other attributes; not physically stored (e.g., <code>Age</code> derived from DOB).</li>
-
-            <li><strong>Multivalued:</strong> Can hold multiple values for a single entity (e.g., <code>Phone_Numbers</code>).</li>
-
-            <li><strong>Key:</strong> Uniquely identifies the entity (e.g., <code>Roll_No</code>).</li>
-
+                            <div class="concept-heading">Attribute Types</div>
+        <ul>
+            <li><strong>Simple:</strong> Indivisible atomic values (e.g., <code>Gender</code>).</li>
+            <li><strong>Composite:</strong> Can be broken down into sub-parts (e.g., <code>Name</code> into First Name, Last Name).</li>
+            <li><strong>Derived:</strong> Calculated from other attributes; not physically stored (e.g., <code>Age</code> derived from DOB).</li>
+            <li><strong>Multivalued:</strong> Can hold multiple values for a single entity (e.g., <code>Phone_Numbers</code>).</li>
+            <li><strong>Key:</strong> Uniquely identifies the entity (e.g., <code>Roll_No</code>).</li>
         </ul>
                         </div>
                     </details>
@@ -1179,54 +1038,30 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Cardinality Ratios</div>
-
-        <ul>
-
-            <li><strong>One-to-One (1:1):</strong> One entity in A is associated with at most one in B. (e.g., Department 1:1 Manager).</li>
-
-            <li><strong>One-to-Many (1:N):</strong> One entity in A is associated with many in B. (e.g., Department 1:N Employees).</li>
-
-            <li><strong>Many-to-Many (M:N):</strong> Many entities in A associated with many in B. (e.g., Student M:N Course).</li>
-
-        </ul>
-
-        <div class="diagram-container">
-
-            <svg viewBox="0 0 600 120" width="100%" height="120" role="img" aria-labelledby="title_q17">
-
-                <title id="title_q17">M:N Relationship Example</title>
-
-                <rect x="100" y="30" width="100" height="50" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
-
-                <text x="150" y="60" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Student</text>
-
-                
-
-                <polygon points="300,30 350,55 300,80 250,55" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
-
-                <text x="300" y="60" font-family="sans-serif" font-size="12" text-anchor="middle">Enrolls</text>
-
-                
-
-                <rect x="400" y="30" width="100" height="50" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
-
-                <text fill="currentColor" x="450" y="60" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Course</text>
-
-                
-
-                <line x1="200" y1="55" x2="250" y2="55" stroke="#333" stroke-width="2"/>
-
-                <text fill="currentColor" x="225" y="45" font-family="sans-serif" font-size="12">M</text>
-
-                
-
-                <line x1="350" y1="55" x2="400" y2="55" stroke="#333" stroke-width="2"/>
-
-                <text fill="currentColor" x="375" y="45" font-family="sans-serif" font-size="12">N</text>
-
-            </svg>
-
+                            <div class="concept-heading">Cardinality Ratios</div>
+        <ul>
+            <li><strong>One-to-One (1:1):</strong> One entity in A is associated with at most one in B. (e.g., Department 1:1 Manager).</li>
+            <li><strong>One-to-Many (1:N):</strong> One entity in A is associated with many in B. (e.g., Department 1:N Employees).</li>
+            <li><strong>Many-to-Many (M:N):</strong> Many entities in A associated with many in B. (e.g., Student M:N Course).</li>
+        </ul>
+        <div class="diagram-container">
+            <svg viewBox="0 0 600 120" width="100%" height="120" role="img" aria-labelledby="title_q17">
+                <title id="title_q17">M:N Relationship Example</title>
+                <rect x="100" y="30" width="100" height="50" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text x="150" y="60" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Student</text>
+                
+                <polygon points="300,30 350,55 300,80 250,55" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
+                <text x="300" y="60" font-family="sans-serif" font-size="12" text-anchor="middle">Enrolls</text>
+                
+                <rect x="400" y="30" width="100" height="50" fill="#e8eaf6" stroke="#1a237e" stroke-width="2"/>
+                <text fill="currentColor" x="450" y="60" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Course</text>
+                
+                <line x1="200" y1="55" x2="250" y2="55" stroke="#333" stroke-width="2"/>
+                <text fill="currentColor" x="225" y="45" font-family="sans-serif" font-size="12">M</text>
+                
+                <line x1="350" y1="55" x2="400" y2="55" stroke="#333" stroke-width="2"/>
+                <text fill="currentColor" x="375" y="45" font-family="sans-serif" font-size="12">N</text>
+            </svg>
         </div>
                         </div>
                     </details>
@@ -1247,12 +1082,9 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-
-        <p>A weak entity set lacks sufficient attributes to form a primary key. It depends on a strong entity (identifying owner) and uses the owner's key plus its own partial key to identify rows.</p>
-
-        <div class="concept-heading">Example</div>
-
+                            <div class="concept-heading">Definition</div>
+        <p>A weak entity set lacks sufficient attributes to form a primary key. It depends on a strong entity (identifying owner) and uses the owner's key plus its own partial key to identify rows.</p>
+        <div class="concept-heading">Example</div>
         <p>A <strong>Dependent</strong> (spouse/child) of an Employee. The dependent is identified by combining their Name (partial key) with the owner's Employee ID.</p>
                         </div>
                     </details>
@@ -1273,22 +1105,14 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Degrees of Relationships</div>
-
-        <ul>
-
-            <li><strong>Unary (Degree 1):</strong> Relationship between instances of a single entity set (e.g., Employee <em>Manages</em> Employee).</li>
-
-            <li><strong>Binary (Degree 2):</strong> Relationship between two entity sets (e.g., Student <em>Takes</em> Course).</li>
-
-            <li><strong>Ternary (Degree 3):</strong> Relationship connecting three entity sets simultaneously (e.g., Supplier <em>Supplies</em> Part <em>To</em> Project).</li>
-
-        </ul>
-
-        <div class="exam-tip">
-
-            <strong>Exam Tip:</strong> A ternary relationship is not just three binary relationships; it represents a single fact involving all three entities together.
-
+                            <div class="concept-heading">Degrees of Relationships</div>
+        <ul>
+            <li><strong>Unary (Degree 1):</strong> Relationship between instances of a single entity set (e.g., Employee <em>Manages</em> Employee).</li>
+            <li><strong>Binary (Degree 2):</strong> Relationship between two entity sets (e.g., Student <em>Takes</em> Course).</li>
+            <li><strong>Ternary (Degree 3):</strong> Relationship connecting three entity sets simultaneously (e.g., Supplier <em>Supplies</em> Part <em>To</em> Project).</li>
+        </ul>
+        <div class="exam-tip">
+            <strong>Exam Tip:</strong> A ternary relationship is not just three binary relationships; it represents a single fact involving all three entities together.
         </div>
 <div class="diagram-container">
 <svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
@@ -1369,14 +1193,10 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Differentiation</div>
-
-        <ul>
-
-            <li><strong>Total Participation (Mandatory):</strong> Every entity MUST participate in at least one relationship. Indicated by a double line. (e.g., Every Employee must belong to a Department).</li>
-
-            <li><strong>Partial Participation (Optional):</strong> Only some entities may participate. Indicated by a single line. (e.g., Only some Employees are Managers of a Department).</li>
-
+                            <div class="concept-heading">Differentiation</div>
+        <ul>
+            <li><strong>Total Participation (Mandatory):</strong> Every entity MUST participate in at least one relationship. Indicated by a double line. (e.g., Every Employee must belong to a Department).</li>
+            <li><strong>Partial Participation (Optional):</strong> Only some entities may participate. Indicated by a single line. (e.g., Only some Employees are Managers of a Department).</li>
         </ul>
                         </div>
                     </details>
@@ -1397,18 +1217,12 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Specialization (Top-Down)</div>
-
-        <p>The process of defining a set of subclasses from a single entity type (the superclass). It involves identifying characteristics that distinguish some entities in the set from others. <br>
-
-        <em>Example:</em> An <code>Employee</code> superclass can be specialized into <code>Engineer</code>, <code>Manager</code>, and <code>Technician</code> subclasses based on job role.</p>
-
-        
-
-        <div class="concept-heading">Generalization (Bottom-Up)</div>
-
-        <p>The reverse process of specialization. Multiple entity types with common attributes are synthesized into a single, generalized superclass.<br>
-
+                            <div class="concept-heading">Specialization (Top-Down)</div>
+        <p>The process of defining a set of subclasses from a single entity type (the superclass). It involves identifying characteristics that distinguish some entities in the set from others. <br>
+        <em>Example:</em> An <code>Employee</code> superclass can be specialized into <code>Engineer</code>, <code>Manager</code>, and <code>Technician</code> subclasses based on job role.</p>
+        
+        <div class="concept-heading">Generalization (Bottom-Up)</div>
+        <p>The reverse process of specialization. Multiple entity types with common attributes are synthesized into a single, generalized superclass.<br>
         <em>Example:</em> <code>Car</code> and <code>Truck</code> entities share attributes like Vehicle_ID and Price, so they can be generalized into a <code>Vehicle</code> superclass.</p>
                         </div>
                     </details>
@@ -1429,18 +1243,12 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Disjoint Specialization</div>
-
-        <p>An entity can be a member of <strong>at most one</strong> subclass of the specialization. Denoted by a 'd' in the circle.<br>
-
-        <em>Example:</em> An <code>Employee</code> can be either an <code>Hourly_Employee</code> or a <code>Salaried_Employee</code>, but never both at the same time.</p>
-
-        
-
-        <div class="concept-heading">Overlapping Specialization</div>
-
-        <p>An entity may be a member of <strong>more than one</strong> subclass of the specialization. Denoted by an 'o' in the circle.<br>
-
+                            <div class="concept-heading">Disjoint Specialization</div>
+        <p>An entity can be a member of <strong>at most one</strong> subclass of the specialization. Denoted by a 'd' in the circle.<br>
+        <em>Example:</em> An <code>Employee</code> can be either an <code>Hourly_Employee</code> or a <code>Salaried_Employee</code>, but never both at the same time.</p>
+        
+        <div class="concept-heading">Overlapping Specialization</div>
+        <p>An entity may be a member of <strong>more than one</strong> subclass of the specialization. Denoted by an 'o' in the circle.<br>
         <em>Example:</em> A <code>Person</code> can simultaneously be an <code>Alumnus</code> and an <code>Employee</code> of a university.</p>
                         </div>
                     </details>
@@ -1461,16 +1269,11 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-
-        <p>Aggregation is an abstraction where a relationship set (and its associated entities) is treated as a higher-level entity set. </p>
-
-        <div class="concept-heading">When is it required?</div>
-
-        <p>The basic E-R model cannot express relationships among relationships. Aggregation is required when a relationship between two entities needs to participate in another relationship with a third entity.</p>
-
-        <div class="concept-heading">Example</div>
-
+                            <div class="concept-heading">Definition</div>
+        <p>Aggregation is an abstraction where a relationship set (and its associated entities) is treated as a higher-level entity set. </p>
+        <div class="concept-heading">When is it required?</div>
+        <p>The basic E-R model cannot express relationships among relationships. Aggregation is required when a relationship between two entities needs to participate in another relationship with a third entity.</p>
+        <div class="concept-heading">Example</div>
         <p>Consider <code>Employee</code> working on a <code>Project</code>. This forms the relationship <em>Works_On</em>. If we want to record the <code>Manager</code> who oversees this specific (Employee-Project) assignment, we aggregate <em>Works_On</em> into a single entity, and create a new relationship <em>Manages</em> between it and <code>Manager</code>.</p>
                         </div>
                     </details>
@@ -1491,26 +1294,16 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-
-        <p>Mapping cardinality (or cardinality ratio) expresses the number of entities to which another entity can be associated via a relationship set.</p>
-
-        <div class="concept-heading">Types</div>
-
-        <ul>
-
-            <li><strong>One-to-One (1:1):</strong> An entity in A is associated with at most one entity in B, and vice versa.</li>
-
-            <li><strong>One-to-Many (1:N):</strong> An entity in A is associated with any number of entities in B. An entity in B is associated with at most one entity in A.</li>
-
-            <li><strong>Many-to-One (N:1):</strong> An entity in A is associated with at most one entity in B. An entity in B is associated with any number of entities in A.</li>
-
-            <li><strong>Many-to-Many (M:N):</strong> An entity in A is associated with any number of entities in B, and vice versa.</li>
-
-        </ul>
-
-        <div class="diagram-container">
-
+                            <div class="concept-heading">Definition</div>
+        <p>Mapping cardinality (or cardinality ratio) expresses the number of entities to which another entity can be associated via a relationship set.</p>
+        <div class="concept-heading">Types</div>
+        <ul>
+            <li><strong>One-to-One (1:1):</strong> An entity in A is associated with at most one entity in B, and vice versa.</li>
+            <li><strong>One-to-Many (1:N):</strong> An entity in A is associated with any number of entities in B. An entity in B is associated with at most one entity in A.</li>
+            <li><strong>Many-to-One (N:1):</strong> An entity in A is associated with at most one entity in B. An entity in B is associated with any number of entities in A.</li>
+            <li><strong>Many-to-Many (M:N):</strong> An entity in A is associated with any number of entities in B, and vice versa.</li>
+        </ul>
+        <div class="diagram-container">
             <svg viewBox="0 0 600 120" width="100%" height="120" role="img" aria-labelledby="title_q24">
                 <title id="title_q24">1:N Relationship</title>
                 <line x1="200" y1="55" x2="400" y2="55" stroke="#333" stroke-width="2"/>
@@ -1526,8 +1319,7 @@
                 
                 <text fill="currentColor" x="225" y="45" font-family="sans-serif" font-size="12">1</text>
                 <text fill="currentColor" x="375" y="45" font-family="sans-serif" font-size="12">N</text>
-            </svg>
-
+            </svg>
         </div>
                         </div>
                     </details>
@@ -1548,12 +1340,9 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-
-        <p>A functional dependency (FD) is a constraint between two sets of attributes in a relation. If A &rarr; B (A determines B), then for every valid instance of the relation, any two tuples that agree on the attribute A must also agree on the attribute B.</p>
-
-        <div class="concept-heading">Importance</div>
-
+                            <div class="concept-heading">Definition</div>
+        <p>A functional dependency (FD) is a constraint between two sets of attributes in a relation. If A &rarr; B (A determines B), then for every valid instance of the relation, any two tuples that agree on the attribute A must also agree on the attribute B.</p>
+        <div class="concept-heading">Importance</div>
         <p>Functional dependencies are the theoretical bedrock of <strong>Normalization</strong>. They are used to specify constraints on data, discover candidate keys, and decompose relations to eliminate redundancy and update anomalies.</p>
                         </div>
                     </details>
@@ -1576,20 +1365,13 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">The Three Anomalies</div>
-
-        <ul>
-
-            <li><strong>Update Anomaly:</strong> If data is stored redundantly, changing it in one row requires changing it in all rows. Missing one causes inconsistency (e.g., changing a department's location).</li>
-
-            <li><strong>Insertion Anomaly:</strong> The inability to add data to the database due to absence of other data (e.g., unable to add a new Department because it has no Employees yet, and Employee_ID is the primary key).</li>
-
-            <li><strong>Deletion Anomaly:</strong> The unintended loss of data when deleting a row (e.g., deleting the only employee in a department also deletes the department's information).</li>
-
-        </ul>
-
-        <div class="concept-heading">How Normalization Helps</div>
-
+                            <div class="concept-heading">The Three Anomalies</div>
+        <ul>
+            <li><strong>Update Anomaly:</strong> If data is stored redundantly, changing it in one row requires changing it in all rows. Missing one causes inconsistency (e.g., changing a department's location).</li>
+            <li><strong>Insertion Anomaly:</strong> The inability to add data to the database due to absence of other data (e.g., unable to add a new Department because it has no Employees yet, and Employee_ID is the primary key).</li>
+            <li><strong>Deletion Anomaly:</strong> The unintended loss of data when deleting a row (e.g., deleting the only employee in a department also deletes the department's information).</li>
+        </ul>
+        <div class="concept-heading">How Normalization Helps</div>
         <p>Normalization resolves these by decomposing large, poorly structured tables into smaller, well-structured tables where each table represents a single logical theme or entity. By linking them with foreign keys, redundancy is eliminated, which inherently solves update, insertion, and deletion anomalies.</p>
                         </div>
                     </details>
@@ -1612,22 +1394,14 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-
-        <p>Normalization is the process of organizing data to minimize redundancy and eliminate anomalies by dividing larger tables into smaller tables and defining relationships between them using functional dependencies.</p>
-
-        
-
-        <div class="concept-heading">The Normal Forms</div>
-
-        <ul>
-
-            <li><strong>First Normal Form (1NF):</strong> All attributes must be atomic (indivisible). No repeating groups or arrays allowed in a cell.</li>
-
-            <li><strong>Second Normal Form (2NF):</strong> Must be in 1NF, and all non-key attributes must be <em>fully functionally dependent</em> on the entire primary key. (Eliminates partial dependencies).</li>
-
-            <li><strong>Third Normal Form (3NF):</strong> Must be in 2NF, and no non-key attribute can be dependent on another non-key attribute. (Eliminates transitive dependencies: X &rarr; Y and Y &rarr; Z).</li>
-
+                            <div class="concept-heading">Definition</div>
+        <p>Normalization is the process of organizing data to minimize redundancy and eliminate anomalies by dividing larger tables into smaller tables and defining relationships between them using functional dependencies.</p>
+        
+        <div class="concept-heading">The Normal Forms</div>
+        <ul>
+            <li><strong>First Normal Form (1NF):</strong> All attributes must be atomic (indivisible). No repeating groups or arrays allowed in a cell.</li>
+            <li><strong>Second Normal Form (2NF):</strong> Must be in 1NF, and all non-key attributes must be <em>fully functionally dependent</em> on the entire primary key. (Eliminates partial dependencies).</li>
+            <li><strong>Third Normal Form (3NF):</strong> Must be in 2NF, and no non-key attribute can be dependent on another non-key attribute. (Eliminates transitive dependencies: X &rarr; Y and Y &rarr; Z).</li>
         </ul>
                         </div>
                     </details>
@@ -1648,18 +1422,12 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-
-        <p>Boyce-Codd Normal Form (BCNF) requires that for every non-trivial functional dependency X &rarr; Y, X must be a super key. It is a stronger, stricter version of 3NF.</p>
-
-        <div class="concept-heading">Difference from 3NF</div>
-
-        <p>3NF allows a dependency X &rarr; Y where X is NOT a super key, provided that Y is a prime attribute (part of a candidate key). BCNF does not allow this exception. A table can be in 3NF but fail BCNF if it has overlapping candidate keys.</p>
-
-        <div class="concept-heading">Example</div>
-
-        <p>Consider <code>Relation(Student, Course, Instructor)</code>. Keys are (Student, Course) and (Student, Instructor). FD: <code>Instructor &rarr; Course</code>. <br>
-
+                            <div class="concept-heading">Definition</div>
+        <p>Boyce-Codd Normal Form (BCNF) requires that for every non-trivial functional dependency X &rarr; Y, X must be a super key. It is a stronger, stricter version of 3NF.</p>
+        <div class="concept-heading">Difference from 3NF</div>
+        <p>3NF allows a dependency X &rarr; Y where X is NOT a super key, provided that Y is a prime attribute (part of a candidate key). BCNF does not allow this exception. A table can be in 3NF but fail BCNF if it has overlapping candidate keys.</p>
+        <div class="concept-heading">Example</div>
+        <p>Consider <code>Relation(Student, Course, Instructor)</code>. Keys are (Student, Course) and (Student, Instructor). FD: <code>Instructor &rarr; Course</code>. <br>
         It is in 3NF because <code>Course</code> is a prime attribute. However, it violates BCNF because <code>Instructor</code> is not a super key.</p>
                         </div>
                     </details>
@@ -1680,16 +1448,11 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Fourth Normal Form (4NF)</div>
-
-        <p>Deals with <strong>Multi-valued Dependencies (MVD)</strong>. A table is in 4NF if it is in BCNF and contains no non-trivial multi-valued dependencies (where one attribute determines a set of values for another, independent of a third).<br>
-
-        <em>Example:</em> An Employee has multiple Skills and multiple Dependents. Storing them in one table creates massive redundancy. We split into <code>(Emp, Skill)</code> and <code>(Emp, Dependent)</code>.</p>
-
-        
-
-        <div class="concept-heading">Fifth Normal Form (5NF)</div>
-
+                            <div class="concept-heading">Fourth Normal Form (4NF)</div>
+        <p>Deals with <strong>Multi-valued Dependencies (MVD)</strong>. A table is in 4NF if it is in BCNF and contains no non-trivial multi-valued dependencies (where one attribute determines a set of values for another, independent of a third).<br>
+        <em>Example:</em> An Employee has multiple Skills and multiple Dependents. Storing them in one table creates massive redundancy. We split into <code>(Emp, Skill)</code> and <code>(Emp, Dependent)</code>.</p>
+        
+        <div class="concept-heading">Fifth Normal Form (5NF)</div>
         <p>Deals with <strong>Join Dependencies</strong>. Also known as Project-Join Normal Form (PJNF). A table is in 5NF if it is in 4NF and cannot be decomposed into smaller tables without losing data (lossless join). It ensures that all join dependencies are implied by candidate keys.</p>
                         </div>
                     </details>
@@ -1710,16 +1473,11 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-
-        <p>Lossless-join decomposition means that if a relation R is decomposed into R1 and R2, joining them back together via a Natural Join will yield the exact original relation R, without any missing rows (loss of data) or extra spurious rows (creation of invalid data).</p>
-
-        <div class="concept-heading">Condition</div>
-
-        <p>The decomposition is lossless if the common attribute(s) between R1 and R2 form a super key for either R1 or R2. (i.e., R1 &cap; R2 &rarr; R1 OR R1 &cap; R2 &rarr; R2).</p>
-
-        <div class="concept-heading">Example</div>
-
+                            <div class="concept-heading">Definition</div>
+        <p>Lossless-join decomposition means that if a relation R is decomposed into R1 and R2, joining them back together via a Natural Join will yield the exact original relation R, without any missing rows (loss of data) or extra spurious rows (creation of invalid data).</p>
+        <div class="concept-heading">Condition</div>
+        <p>The decomposition is lossless if the common attribute(s) between R1 and R2 form a super key for either R1 or R2. (i.e., R1 &cap; R2 &rarr; R1 OR R1 &cap; R2 &rarr; R2).</p>
+        <div class="concept-heading">Example</div>
         <p>Splitting <code>Employee(ID, Name, Dept, Dept_Location)</code> into <code>Emp(ID, Name, Dept)</code> and <code>Department(Dept, Dept_Location)</code> is lossless because their intersection, <code>Dept</code>, is a primary key for the <code>Department</code> table.</p>
                         </div>
                     </details>
@@ -1740,22 +1498,14 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
-
-        <p>A decomposition is dependency-preserving if the union of the functional dependencies in the decomposed relations logically implies all the functional dependencies of the original relation. This ensures that updates can be checked for validity without joining the tables back together.</p>
-
-        <div class="concept-heading">Example</div>
-
-        <p>Original Relation: R(A, B, C)<br>
-
-        Functional Dependencies (FDs): A &rarr; B, B &rarr; C<br>
-
-        Decomposition: R1(A, B) and R2(B, C).<br>
-
-        FDs in R1: A &rarr; B.<br>
-
-        FDs in R2: B &rarr; C.<br>
-
+                            <div class="concept-heading">Definition</div>
+        <p>A decomposition is dependency-preserving if the union of the functional dependencies in the decomposed relations logically implies all the functional dependencies of the original relation. This ensures that updates can be checked for validity without joining the tables back together.</p>
+        <div class="concept-heading">Example</div>
+        <p>Original Relation: R(A, B, C)<br>
+        Functional Dependencies (FDs): A &rarr; B, B &rarr; C<br>
+        Decomposition: R1(A, B) and R2(B, C).<br>
+        FDs in R1: A &rarr; B.<br>
+        FDs in R2: B &rarr; C.<br>
         Since (A &rarr; B) &cup; (B &rarr; C) covers all original FDs, it is a <strong>dependency-preserving decomposition</strong>.</p>
                         </div>
                     </details>
@@ -2049,10 +1799,8 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">E-R Diagram (Ternary Relationship)</div>
-
-        <div class="diagram-container">
-
+                            <div class="concept-heading">E-R Diagram (Ternary Relationship)</div>
+        <div class="diagram-container">
             <svg viewBox="0 0 400 300" width="100%" height="250">
                 <title>Ternary Supply Relationship</title>
                 <!-- Lines -->
@@ -2071,12 +1819,9 @@
                 
                 <polygon points="200,120 240,150 200,180 160,150" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
                 <text fill="currentColor" x="200" y="154" font-family="sans-serif" font-size="10" text-anchor="middle">Supplies</text>
-            </svg>
-
-        </div>
-
-        <div class="concept-heading">Schema</div>
-
+            </svg>
+        </div>
+        <div class="concept-heading">Schema</div>
         <p><strong>Supplies</strong>(<u><em>Supp_ID</em>, <em>Part_ID</em>, <em>Proj_ID</em></u>, Quantity)</p>
                         </div>
                     </details>
@@ -2258,38 +2003,22 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Functional Dependencies (FDs)</div>
-
-        <p>Assumed FDs based on logic:</p>
-
-        <ol>
-
-            <li>FD1: <code>Rollno &rarr; Name</code> (A student has one name)</li>
-
-            <li>FD2: <code>Rollno, Subject &rarr; Marks</code> (A specific student's marks in a specific subject)</li>
-
-        </ol>
-
-        <p>The primary key for the unnormalized relation is <strong>(Rollno, Subject)</strong>.</p>
-
-
-
-        <div class="concept-heading">Step 1: 1NF to 2NF</div>
-
-        <p>In the original relation, <code>Name</code> depends ONLY on <code>Rollno</code>, which is a part of the primary key. This is a <strong>Partial Dependency</strong>. We decompose to eliminate it:</p>
-
-        <ul>
-
-            <li><strong>Student</strong>(<u>Rollno</u>, Name)</li>
-
-            <li><strong>Performance</strong>(<u>Rollno, Subject</u>, Marks)</li>
-
-        </ul>
-
-        
-
-        <div class="concept-heading">Step 2: 2NF to 3NF</div>
-
+                            <div class="concept-heading">Functional Dependencies (FDs)</div>
+        <p>Assumed FDs based on logic:</p>
+        <ol>
+            <li>FD1: <code>Rollno &rarr; Name</code> (A student has one name)</li>
+            <li>FD2: <code>Rollno, Subject &rarr; Marks</code> (A specific student's marks in a specific subject)</li>
+        </ol>
+        <p>The primary key for the unnormalized relation is <strong>(Rollno, Subject)</strong>.</p>
+
+        <div class="concept-heading">Step 1: 1NF to 2NF</div>
+        <p>In the original relation, <code>Name</code> depends ONLY on <code>Rollno</code>, which is a part of the primary key. This is a <strong>Partial Dependency</strong>. We decompose to eliminate it:</p>
+        <ul>
+            <li><strong>Student</strong>(<u>Rollno</u>, Name)</li>
+            <li><strong>Performance</strong>(<u>Rollno, Subject</u>, Marks)</li>
+        </ul>
+        
+        <div class="concept-heading">Step 2: 2NF to 3NF</div>
         <p>In the new tables, there are no non-key attributes depending on other non-key attributes (no transitive dependencies). Therefore, the tables are already in <strong>3NF</strong>.</p>
                         </div>
                     </details>
@@ -5707,6 +5436,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         initAuthUI();
     } catch (e) {
         console.warn('Failed to load Auth UI. Running in offline/guest mode.', e);
+    }
+});
+document.addEventListener('click', (e) => {
+    const fabMenu = document.getElementById('fabMenu');
+    const fabBtn = document.getElementById('fabMainBtn');
+    if (fabMenu && fabBtn && fabMenu.classList.contains('open')) {
+        if (!fabMenu.contains(e.target) && !fabBtn.contains(e.target)) {
+            fabMenu.classList.remove('open');
+            fabBtn.classList.remove('active');
+        }
     }
 });
 
