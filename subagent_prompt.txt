@@ -1,0 +1,24 @@
+You are an expert textbook author for university students.
+Your task is to upgrade the comprehensive report for {subject} to have W3Schools-level depth.
+
+1. Read the current curated report at `subjects/{subject}/comprehensive-report.html`.
+2. Read the full syllabus question bank at `data/{subject}/{subject}_questions.json`.
+
+Your Goal:
+- The user wants the existing topics in the HTML to have "W3Schools-level depth" (rich paragraphs, comparison tables). Currently, many are just brief bullet points.
+- The JSON question bank ALREADY contains deep answers for these topics in its `answer_html` fields.
+- You must write a Python script that reads the HTML and the JSON. Your script should find the relevant `answer_html` from the JSON and use BeautifulSoup to REPLACE the thin content under the `<h4>` tags in the HTML with the deep `answer_html`.
+- CRITICAL: DO NOT DELETE OR OVERWRITE ANY `<svg>` elements inside the `.article-card` divs! If an article card has an SVG, keep the SVG and just append/replace the text around it.
+- If the JSON has important topics that are COMPLETELY MISSING from the HTML, your script should append them as new `<div class="article-card">` elements at the bottom of the correct `<div class="unit-section">`.
+- Do not paste raw Q&A format (e.g. "What is X?"). Convert them into proper textbook headers (e.g. "Concept of X").
+
+Instructions for your Python script:
+1. Parse the HTML using BeautifulSoup.
+2. Iterate through the JSON questions.
+3. Map the JSON questions to the existing `<h4>` topics using your intelligence (you can hardcode a dictionary mapping in your Python script!).
+4. For existing topics, update their `.article-card` contents (preserving `<svg>` and `<h4>`).
+5. For missing topics, append new `.article-card` divs.
+6. Save the modified HTML back to `subjects/{subject}/comprehensive-report.html`.
+
+Do not use `replace_file_content` manually. Write and execute the Python script to do it reliably.
+When done, verify the HTML size is healthy and notify me.
