@@ -1702,7 +1702,7 @@ img {
     border-radius: 8px;
     margin-bottom: 2rem;
     cursor: pointer;
-}
+ display: none !important; }
 
 @media (max-width: 1024px) {
     .report-main {
@@ -1718,8 +1718,8 @@ img {
     }
     
     .mobile-toc-toggle {
-        display: block;
-    }
+        display: none !important;
+     display: none !important; }
 
     .report-sidebar {
         width: 100%;
@@ -1922,7 +1922,7 @@ img {
     border-radius: 8px;
     margin-bottom: 2rem;
     cursor: pointer;
-}
+ display: none !important; }
 
 @media (max-width: 1024px) {
     .report-container {
@@ -1937,8 +1937,8 @@ img {
     }
     
     .mobile-toc-toggle {
-        display: block;
-    }
+        display: none !important;
+     display: none !important; }
 
     .report-sidebar {
         width: 100%;
@@ -2093,7 +2093,7 @@ body.report-page .banner {
 @media (max-width: 768px) {
     .glow-bg { background: radial-gradient(circle at top, rgba(var(--subject-color-rgb, 15, 118, 110), 0.15) 0%, transparent 100%) !important; height: 100vh !important; width: 100% !important; top: 0 !important; left: 0 !important; transform: none !important; }
     .report-container { padding: 1rem !important; }
-    .mobile-toc-toggle { width: 100%; margin-bottom: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px; color: var(--text-main); font-weight: 600; text-align: left; }
+    .mobile-toc-toggle { width: 100%; margin-bottom: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px; color: var(--text-main); font-weight: 600; text-align: left;  display: none !important; }
 }
 
 /* =========================================
@@ -2375,6 +2375,7 @@ html, body { width: 100% !important; max-width: 100% !important; }
     .report-main {
         padding-left: 1.25rem !important;
         padding-right: 1.25rem !important;
+        padding-bottom: 150px !important;
     }
     
     /* Inner cards */
@@ -2415,5 +2416,12 @@ html, body { width: 100% !important; max-width: 100% !important; }
         bottom: 1rem !important;
         right: 1rem !important;
         left: auto !important;
+    }
+
+    /* Fix FAB menu opening direction since container is on the left */
+    .fab-menu {
+        left: 0 !important;
+        right: auto !important;
+        align-items: flex-start !important;
     }
 }
