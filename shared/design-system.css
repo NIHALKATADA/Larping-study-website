@@ -2129,14 +2129,14 @@ body.report-page .ask-ai-btn {
 /* Mobile UX Overhaul */
 @media (max-width: 768px) {
     html, body {
-        overflow-x: hidden !important;
+        /* overflow removed to allow pinch-to-zoom panning */
         width: 100vw;
         position: relative;
     }
     
     .report-main {
         max-width: 100vw !important;
-        overflow-x: hidden;
+        /* overflow removed */
     }
     
     /* Make tables strictly scroll internally, never break layout */
@@ -2306,7 +2306,7 @@ body.report-page .ask-ai-widget {
     html, body {
         width: 100vw !important;
         max-width: 100vw !important;
-        overflow-x: hidden !important;
+        /* overflow removed to allow pinch-to-zoom panning */
         position: relative;
     }
     
@@ -2315,7 +2315,7 @@ body.report-page .ask-ai-widget {
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
-        overflow-x: hidden !important;
+        /* overflow removed to allow pinch-to-zoom panning */
     }
     
     /* 4. Fix typography bleeding off the edge */
@@ -2364,7 +2364,7 @@ body.report-page .ask-ai-widget {
     html, body {
         width: 100% !important;
         max-width: 100% !important;
-        overflow-x: hidden !important;
+        /* overflow removed to allow pinch-to-zoom panning */
     }
     
     .report-wrapper, .report-container, .report-main, .article-card {
@@ -2397,7 +2397,7 @@ body.report-page .ask-ai-widget {
     html, body {
         width: 100% !important;
         max-width: 100% !important;
-        overflow-x: hidden !important;
+        /* overflow removed to allow pinch-to-zoom panning */
         margin: 0 !important;
         padding: 0 !important;
         box-sizing: border-box !important;
@@ -2414,7 +2414,7 @@ body.report-page .ask-ai-widget {
         padding-left: 0 !important;
         padding-right: 0 !important;
         box-sizing: border-box !important;
-        overflow-x: hidden !important;
+        /* overflow removed to allow pinch-to-zoom panning */
     }
     
     /* 3. Force wrap on all text nodes */
