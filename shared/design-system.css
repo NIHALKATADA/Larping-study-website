@@ -1629,17 +1629,14 @@ img {
     font-weight: 700;
 }
 
-/* Restore beautiful glass cards in single column */
+/* Clean, open sections without boxed backgrounds (W3Schools style) */
 .report-main .article-card {
     margin-bottom: 3.5rem;
-    background: var(--card-bg) !important;
-    border: 1px solid rgba(255, 255, 255, 0.05) !important;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2) !important;
-    padding: var(--space-6) !important;
-    border-radius: 12px;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
     width: 100%;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
 }
 
 .report-main .article-card h4 {
@@ -1852,17 +1849,14 @@ img {
     font-weight: 700;
 }
 
-/* Restore beautiful glass cards in single column */
+/* Clean, open sections without boxed backgrounds (W3Schools style) */
 .report-main .article-card {
     margin-bottom: 3.5rem;
-    background: var(--card-bg) !important;
-    border: 1px solid rgba(255, 255, 255, 0.05) !important;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2) !important;
-    padding: var(--space-6) !important;
-    border-radius: 12px;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
     width: 100%;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
 }
 
 .report-main .article-card h4 {
@@ -1983,4 +1977,27 @@ body.report-page .banner {
         text-align: center;
         max-width: 100%;
     }
+}
+
+/* W3Schools style tables for Comprehensive Reports */
+.report-main table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1.05rem;
+}
+.report-main th, .report-main td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+[data-theme="paper"] .report-main th, [data-theme="paper"] .report-main td {
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.report-main th {
+    background: rgba(255,255,255,0.05);
+    font-weight: 600;
+}
+[data-theme="paper"] .report-main th {
+    background: rgba(0,0,0,0.05);
 }
