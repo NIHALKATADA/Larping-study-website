@@ -1528,3 +1528,145 @@ img {
 
 
 
+
+/* Revert previous sidebar/flowchart, implement Multi-Column Masonry Layout */
+
+.report-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: var(--space-4);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* Hide the W3Schools sidebar entirely */
+.report-sidebar, .mobile-toc-toggle {
+    display: none !important;
+}
+
+.report-main {
+    width: 100%;
+    /* CSS Columns for perfect space utilization (Masonry effect) */
+    column-count: 1;
+    column-gap: 2rem;
+    padding: 0;
+    margin: 0;
+    border-left: none; /* Remove flowchart lines */
+}
+
+@media (min-width: 800px) {
+    .report-main {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1300px) {
+    .report-main {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 1800px) {
+    .report-main {
+        column-count: 4;
+    }
+}
+
+.report-main .unit-section {
+    /* Don't break a whole unit if possible, but it's large so let it break */
+    margin-bottom: var(--space-8);
+}
+
+.report-main .unit-section h3.unit-heading {
+    font-size: 2rem;
+    color: var(--subject-color, #fff);
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+    padding-bottom: var(--space-3);
+    margin-bottom: var(--space-6);
+    margin-top: 0;
+    font-weight: 700;
+    /* Span across all columns */
+    column-span: all; 
+}
+
+/* Remove flowchart nodes */
+.report-main .unit-section h3.unit-heading::before,
+.report-main .article-card h4::before {
+    display: none !important;
+}
+
+.report-main .article-card {
+    margin-bottom: 2rem;
+    /* Avoid breaking a card across columns */
+    break-inside: avoid;
+    page-break-inside: avoid;
+    
+    /* Clean, non-overwhelming styling */
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: inline-block; /* Helps with break-inside in some browsers */
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.2s;
+}
+
+.report-main .article-card:hover {
+    background: rgba(255,255,255,0.04);
+}
+
+.report-main .article-card h4 {
+    font-size: 1.3rem;
+    color: #f8fafc;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 0.5rem;
+}
+
+/* Content Typography */
+.report-main p, .report-main ul, .report-main div {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin-bottom: 0.75rem;
+}
+
+.report-main strong {
+    color: #f8fafc;
+    font-weight: 600;
+}
+
+.report-main .example {
+    margin-top: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid rgba(255,255,255,0.2);
+    font-size: 0.95rem;
+}
+
+.report-main .article-card .pro-tip,
+.report-main .article-card .exam-trap,
+.report-main .article-card .examiner-trap {
+    margin-top: 1rem;
+    padding: 0.85rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.report-main .article-card .exam-trap,
+.report-main .article-card .examiner-trap {
+    background: rgba(239, 68, 68, 0.05);
+    border-left: 3px solid #ef4444;
+    color: #fca5a5;
+}
+
+.report-main .article-card .pro-tip {
+    background: rgba(16, 185, 129, 0.05);
+    border-left: 3px solid #10b981;
+    color: #6ee7b7;
+}

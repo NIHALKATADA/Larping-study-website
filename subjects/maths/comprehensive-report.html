@@ -7,7 +7,6 @@
 <link href="../../shared/design-system.css" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
-
 <!-- MathJax for rendering LaTeX -->
 <script>
   window.MathJax = {
@@ -17,10 +16,9 @@
     }
   };
 </script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
+<body data-subject="maths">
 <div class="glow-bg"></div>
 <nav class="smart-topbar">
 <div class="topbar-left">
@@ -45,117 +43,86 @@
 <h1>Discrete Mathematics Comprehensive Report</h1>
 <p class="scope-note">Logic | Recurrence Relations | Graph Theory | Set Theory | Automata</p>
 </header>
-<div class="layout-wrapper" style="display: block; max-width: 1400px; margin: 0 auto; padding: 2rem;">
-<div class="controls" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-<div>
-</div>
-<div style="font-weight: bold; color: var(--primary-teal);">
-                Quick Jump: 
-                <a href="#unit1" style="color: var(--primary-teal); margin: 0 0.5rem; text-decoration: none;">Unit I</a>
-<a href="#unit2" style="color: var(--primary-teal); margin: 0 0.5rem; text-decoration: none;">Unit II</a>
-<a href="#unit3" style="color: var(--primary-teal); margin: 0 0.5rem; text-decoration: none;">Unit III</a>
-<a href="#unit4" style="color: var(--primary-teal); margin: 0 0.5rem; text-decoration: none;">Unit IV</a>
-<a href="#unit5" style="color: var(--primary-teal); margin: 0 0.5rem; text-decoration: none;">Unit V</a>
-</div>
-<div>
-<button class="btn btn-secondary" style="visibility: hidden;">Mode: Dark</button>
-</div>
-</div>
+<div class="layout-wrapper" style=""><div class="report-container"><button class="mobile-toc-toggle" onclick='document.querySelector(".report-sidebar").classList.toggle("show-toc")'>? Table of Contents</button><aside class="report-sidebar"><h3>Table of Contents</h3><ul><li class="unit-link"><a href="#unit1">Unit I: Propositional Logic</a></li><li class="sub-link"><a href="#sub_fundamentallogicoperators">Fundamental Logic Operators</a></li><li class="sub-link"><a href="#sub_logicalequivalences">Logical Equivalences</a></li><li class="sub-link"><a href="#sub_predicatesquantifiers">Predicates &amp; Quantifiers</a></li><li class="sub-link"><a href="#sub_rulesofinference">Rules of Inference</a></li><li class="sub-link"><a href="#sub_symbolictranslationspropositionallogicappliedconcept">Symbolic Translations (Propositional Logic) (Applied Concept)</a></li><li class="sub-link"><a href="#sub_specifictruthtablesappliedconcept">Specific Truth Tables (Applied Concept)</a></li><li class="sub-link"><a href="#sub_conditionalstatementstruthvaluesappliedconcept">Conditional Statements Truth Values (Applied Concept)</a></li><li class="sub-link"><a href="#sub_permutationsequationsappliedconcept">Permutations &amp; Equations (Applied Concept)</a></li><li class="unit-link"><a href="#unit2">Unit II: Counting Methods</a></li><li class="sub-link"><a href="#sub_pigeonholeprinciple">Pigeonhole Principle</a></li><li class="sub-link"><a href="#sub_combinatoricsstarsandbars">Combinatorics: Stars and Bars</a></li><li class="sub-link"><a href="#sub_linearrecurrencerelations">Linear Recurrence Relations</a></li><li class="sub-link"><a href="#sub_generatingfunctions">Generating Functions</a></li><li class="sub-link"><a href="#sub_solvinggeneratingfunctionsappliedconcept">Solving Generating Functions (Applied Concept)</a></li><li class="sub-link"><a href="#sub_appliedrecurrencerelationsappliedconcept">Applied Recurrence Relations (Applied Concept)</a></li><li class="unit-link"><a href="#unit3">Unit III: Graph Theory</a></li><li class="sub-link"><a href="#sub_handshakinglemma">Handshaking Lemma</a></li><li class="sub-link"><a href="#sub_eulerhamiltonpaths">Euler &amp; Hamilton Paths</a></li><li class="sub-link"><a href="#sub_graphisomorphism">Graph Isomorphism</a></li><li class="sub-link"><a href="#sub_bipartitegraphsmatching">Bipartite Graphs &amp; Matching</a></li><li class="unit-link"><a href="#unit4">Unit IV: Set Theory &amp; Relations</a></li><li class="sub-link"><a href="#sub_setoperationspowersets">Set Operations &amp; Power Sets</a></li><li class="sub-link"><a href="#sub_equivalencerelations">Equivalence Relations</a></li><li class="sub-link"><a href="#sub_partialorderingsposets">Partial Orderings (Posets)</a></li><li class="sub-link"><a href="#sub_injectivesurjectivebijective">Injective, Surjective, Bijective</a></li><li class="unit-link"><a href="#unit5">Unit V: Trees &amp; Automata</a></li><li class="sub-link"><a href="#sub_treeproperties">Tree Properties</a></li><li class="sub-link"><a href="#sub_spanningtrees">Spanning Trees</a></li><li class="sub-link"><a href="#sub_finitestatemachinesfsms">Finite State Machines (FSMs)</a></li><li class="sub-link"><a href="#sub_booleanalgebra">Boolean Algebra</a></li><li class="unit-link"><a href="#aiModalTitle">Ask AI(Lite)</a></li></ul></aside><main class="report-main">
 <div style="display: grid; width: 100%;">
-<div id="pureSkeleton">
-<div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-<div class="skel-line" style="height: 1.8rem; width: 250px; border-radius: 6px;"></div>
-<div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
-</div>
-<div class="cheat-grid" style="margin-bottom: 3rem;">
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;"><div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div></div><div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;"><div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div></div><div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;"><div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div></div><div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;"><div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div></div><div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;"><div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div></div><div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;"><div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div></div>
-</div>
-<div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-<div class="skel-line" style="height: 1.8rem; width: 200px; border-radius: 6px;"></div>
-<div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
-</div>
-<div class="cheat-grid" style="margin-bottom: 3rem;">
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;"><div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div></div><div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;"><div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div></div><div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;"><div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div><div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div></div>
-</div>
-</div>
 <div id="realContentWrapper">
 <div class="unit-section" id="unit1">
 <h2 style="color: var(--primary-teal); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Unit I: Propositional Logic <span class="badge unit-1">CO1</span></h2>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Fundamental Logic Operators</h4>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_fundamentallogicoperators">Fundamental Logic Operators</h4>
 <p>Connectives establish truth-functional relationships between propositions. Master implications (\(p \rightarrow q\)) and biconditionals (\(p \leftrightarrow q\)), as they form the bedrock of mathematical proofs.</p>
 <p><em>Example:</em> "If it rains (p), then the ground is wet (q)." \(p \rightarrow q\).</p>
 </div>
-<div class="cheat-card">
-<h4>Logical Equivalences</h4>
+<div class="article-card">
+<h4 id="sub_logicalequivalences">Logical Equivalences</h4>
 <p>De Morgan's Laws (\(\neg(p \land q) \equiv \neg p \lor \neg q\)) and Implication Equivalence (\(p \rightarrow q \equiv \neg p \lor q\)) are pivotal for simplifying compound propositions without brute-force truth tables.</p>
 <p><em>Example:</em> "It's false that I am cold AND tired" equals "I am not cold OR I am not tired."</p>
 </div>
-<div class="cheat-card">
-<h4>Predicates &amp; Quantifiers</h4>
+<div class="article-card">
+<h4 id="sub_predicatesquantifiers">Predicates &amp; Quantifiers</h4>
 <div class="exam-trap"><strong>Examiner Trick:</strong> Nested Quantifiers. Remember that \(\forall x \exists y\) is NOT equivalent to \(\exists y \forall x\). The order dictates dependency!</div>
 <p>Universal (\(\forall\)) implies all elements in the domain; Existential (\(\exists\)) asserts at least one exists. Negating them flips the quantifier.</p>
 <p><em>Example:</em> \(\neg(\forall x P(x)) \equiv \exists x \neg P(x)\).</p>
 </div>
-<div class="cheat-card">
-<h4>Rules of Inference</h4>
+<div class="article-card">
+<h4 id="sub_rulesofinference">Rules of Inference</h4>
 <p>Modus Ponens (\(p, p \rightarrow q \vdash q\)) and Modus Tollens (\(\neg q, p \rightarrow q \vdash \neg p\)) validate arguments syntactically.</p>
 <div class="pro-tip"><strong>Niche Topic:</strong> Fallacy of Affirming the Consequent. Given \(p \rightarrow q\) and \(q\), concluding \(p\) is invalid.</div>
 <p><em>Example:</em> If it rains, ground is wet. Ground is wet. Therefore, it rained (Invalid!).</p>
 </div>
-<div class="cheat-card">
-<h4>Symbolic Translations (Propositional Logic)<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
+<div class="article-card">
+<h4 id="sub_symbolictranslationspropositionallogicappliedconcept">Symbolic Translations (Propositional Logic)<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <p>Understanding how to convert English to symbolic logic and vice-versa.</p>
 <p><em>Example:</em> "It is not raining but I wear a raincoat" translates to \(\neg p \land r\). (Note: 'but' translates to logical AND).</p>
 <p><em>Example:</em> \((p \lor q) \land \neg r\): "It is raining or I carry an umbrella, and I do not wear a raincoat."</p>
-</div><div class="cheat-card">
-<h4>Specific Truth Tables<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
+</div><div class="article-card">
+<h4 id="sub_specifictruthtablesappliedconcept">Specific Truth Tables<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <p>Recognizing Tautologies directly from truth tables.</p>
 <p><em>Example:</em> \((p \rightarrow q) \lor (q \rightarrow p)\) evaluates to True in all cases (Tautology).</p>
 <p><em>Example:</em> \((p \rightarrow q) \leftrightarrow (\neg q \rightarrow \neg p)\) is also a Tautology, illustrating the contrapositive equivalence.</p>
-</div><div class="cheat-card">
-<h4>Conditional Statements Truth Values<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
+</div><div class="article-card">
+<h4 id="sub_conditionalstatementstruthvaluesappliedconcept">Conditional Statements Truth Values<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <p>A conditional statement (\(p \rightarrow q\)) is false <strong>only</strong> when \(p\) is True and \(q\) is False.</p>
 <p><em>Example:</em> "If 1 + 1 = 3, then 2 + 2 = 5" is <strong>True</strong> (False \(\rightarrow\) False).</p>
 <p><em>Example:</em> "If 1 + 1 = 2, then dogs can fly" is <strong>False</strong> (True \(\rightarrow\) False).</p>
-</div><div class="cheat-card">
-<h4>Permutations &amp; Equations<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
+</div><div class="article-card">
+<h4 id="sub_permutationsequationsappliedconcept">Permutations &amp; Equations<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <p>Applying factorial definitions to solve for unknowns.</p>
 <p><em>Example:</em> Solving \((n + 1)P_3 = 5 \times nP_2\). Expanding gives \(\frac{(n+1)!}{(n-2)!} = 5 \times \frac{n!}{(n-2)!}\). Canceling \((n-2)!\) and \(n!\) leaves \(n + 1 = 5 \implies n = 4\).</p>
 </div></div>
 </div>
 <div class="unit-section" id="unit2">
 <h2 style="color: var(--primary-teal); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Unit II: Counting Methods <span class="badge unit-2">CO2</span></h2>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Pigeonhole Principle</h4>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_pigeonholeprinciple">Pigeonhole Principle</h4>
 <p>If \(N\) items are placed into \(k\) boxes, at least one box contains \(\lceil N/k \rceil\) items. Crucial for existence proofs without direct construction.</p>
 <p><em>Example:</em> Among 13 people, at least 2 were born in the same month.</p>
 </div>
-<div class="cheat-card">
-<h4>Combinatorics: Stars and Bars</h4>
+<div class="article-card">
+<h4 id="sub_combinatoricsstarsandbars">Combinatorics: Stars and Bars</h4>
 <div class="pro-tip"><strong>Niche Topic:</strong> Stars &amp; Bars (Multiset Coefficients). Finds non-negative integer solutions to \(x_1 + x_2 + ... + x_k = n\).</div>
 <p>Formula is \(C(n + k - 1, k - 1)\). Applies when items are indistinguishable but bins are distinct.</p>
 <p><em>Example:</em> Distributing 10 identical candies among 3 children: \(C(10+3-1, 3-1) = 66\).</p>
 </div>
-<div class="cheat-card">
-<h4>Linear Recurrence Relations</h4>
+<div class="article-card">
+<h4 id="sub_linearrecurrencerelations">Linear Recurrence Relations</h4>
 <p>Characterize sequences via previous terms. Solve \(a_n = c_1a_{n-1} + c_2a_{n-2}\) using the characteristic equation \(r^2 - c_1r - c_2 = 0\).</p>
 <p><em>Example:</em> Fibonacci \(a_n = a_{n-1} + a_{n-2}\) gives roots \((1 \pm \sqrt{5})/2\).</p>
 </div>
-<div class="cheat-card">
-<h4>Generating Functions</h4>
+<div class="article-card">
+<h4 id="sub_generatingfunctions">Generating Functions</h4>
 <div class="exam-trap"><strong>Examiner Trick:</strong> Using partial fraction decomposition to extract coefficients from \(G(x) = \sum a_n x^n\).</div>
 <p>Translates sequence convolution into polynomial multiplication, elegantly solving non-homogeneous recurrences.</p>
 <p><em>Example:</em> Sequence 1, 1, 1... corresponds to \(1/(1-x)\).</p>
 </div>
-<div class="cheat-card">
-<h4>Solving Generating Functions<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
+<div class="article-card">
+<h4 id="sub_solvinggeneratingfunctionsappliedconcept">Solving Generating Functions<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <p>Mapping generating functions back to sequences.</p>
 <p><em>Example:</em> The generating function \(G(x) = \frac{1}{1 - 2x}\) takes the form \(\frac{1}{1 - rx}\), which corresponds to the sequence \(a_n = r^n\). Here, \(r = 2\), so the solution is \(a_n = 2^n\).</p>
-</div><div class="cheat-card">
-<h4>Applied Recurrence Relations<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
+</div><div class="article-card">
+<h4 id="sub_appliedrecurrencerelationsappliedconcept">Applied Recurrence Relations<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <p>Solving specific forms and initial value problems.</p>
 <p><em>Example:</em> \(a_n = 10a_{n-1} - 25a_{n-2}\). Characteristic equation: \(r^2 - 10r + 25 = 0 \implies (r - 5)^2 = 0\). Root is \(r = 5\) (repeated). Form: \(a_n = (c_1 + c_2n)5^n\).</p>
 <p><em>Example:</em> Non-linear relation \(a_n = a_{n-1}^2\). If \(a_1 = 2\), then \(a_2 = 4, a_3 = 16\).</p>
@@ -163,14 +130,14 @@
 </div>
 <div class="unit-section" id="unit3">
 <h2 style="color: var(--primary-teal); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Unit III: Graph Theory <span class="badge unit-3">CO3</span></h2>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Handshaking Lemma</h4>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_handshakinglemma">Handshaking Lemma</h4>
 <p>The sum of degrees of all vertices equals \(2|E|\). A foundational invariant proving odd-degree vertices must occur in pairs.</p>
 <p><em>Example:</em> A graph with 5 vertices of degree 3 cannot exist since \(15 \neq 2|E|\).</p>
 </div>
-<div class="cheat-card">
-<h4>Euler &amp; Hamilton Paths</h4>
+<div class="article-card">
+<h4 id="sub_eulerhamiltonpaths">Euler &amp; Hamilton Paths</h4>
 <div class="exam-trap"><strong>Examiner Trick:</strong> Euler traverses all edges exactly once; Hamilton traverses all vertices exactly once. Do not conflate them!</div>
 <p>Euler circuits require all vertices to have an even degree. Hamiltonian has no simple definitive check (NP-complete).</p>
 <p><em>Example:</em> \(K_3\) has both paths, but \(K_{2,3}\) is not Hamiltonian.</p>
@@ -186,13 +153,13 @@
                         </div>
 </div>
 </div>
-<div class="cheat-card">
-<h4>Graph Isomorphism</h4>
+<div class="article-card">
+<h4 id="sub_graphisomorphism">Graph Isomorphism</h4>
 <p>Two graphs are isomorphic if a bijection preserves adjacency. Invariants: vertex count, edge count, and degree sequence.</p>
 <p><em>Example:</em> A square and a 4-cycle drawn as a figure-eight are isomorphic.</p>
 </div>
-<div class="cheat-card">
-<h4>Bipartite Graphs &amp; Matching</h4>
+<div class="article-card">
+<h4 id="sub_bipartitegraphsmatching">Bipartite Graphs &amp; Matching</h4>
 <div class="pro-tip"><strong>Niche Topic:</strong> Hall's Marriage Theorem. A bipartite graph \(G=(V_1, V_2, E)\) has a complete matching for \(V_1\) iff \(|N(S)| \ge |S|\) for all \(S \subseteq V_1\).</div>
 <p>A graph is bipartite if and only if it contains no odd-length cycles.</p>
 <p><em>Example:</em> Assigning 3 workers to 3 tasks optimally without overlap.</p>
@@ -201,19 +168,19 @@
 </div>
 <div class="unit-section" id="unit4">
 <h2 style="color: var(--primary-teal); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Unit IV: Set Theory &amp; Relations <span class="badge unit-4">CO4</span></h2>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Set Operations &amp; Power Sets</h4>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_setoperationspowersets">Set Operations &amp; Power Sets</h4>
 <p>Operations include union, intersection, difference, and symmetric difference (\(\oplus\)). The power set \(\mathcal{P}(S)\) contains all subsets.</p>
 <p><em>Example:</em> If \(S = \{1, 2\}\), \(\mathcal{P}(S) = \{\emptyset, \{1\}, \{2\}, \{1, 2\}\}\). Size is \(2^n\).</p>
 </div>
-<div class="cheat-card">
-<h4>Equivalence Relations</h4>
+<div class="article-card">
+<h4 id="sub_equivalencerelations">Equivalence Relations</h4>
 <p>A relation must be reflexive (\(xRx\)), symmetric (\(xRy \implies yRx\)), and transitive (\(xRy \land yRz \implies xRz\)). Forms equivalence classes.</p>
 <p><em>Example:</em> Congruence modulo \(n\), where \(a \equiv b \pmod n\) divides \(\mathbb{Z}\) into \(n\) classes.</p>
 </div>
-<div class="cheat-card">
-<h4>Partial Orderings (Posets)</h4>
+<div class="article-card">
+<h4 id="sub_partialorderingsposets">Partial Orderings (Posets)</h4>
 <div class="exam-trap"><strong>Examiner Trick:</strong> Hasse Diagrams. Ensure you remove reflexive loops and transitive edges to depict minimal/maximal elements accurately.</div>
 <p>Requires reflexivity, antisymmetry (\(xRy \land yRx \implies x=y\)), and transitivity.</p>
 <p><em>Example:</em> The "divides" relation on integers forms a poset, visualizable via Hasse.</p>
@@ -227,8 +194,8 @@
                         </div>
 </div>
 </div>
-<div class="cheat-card">
-<h4>Injective, Surjective, Bijective</h4>
+<div class="article-card">
+<h4 id="sub_injectivesurjectivebijective">Injective, Surjective, Bijective</h4>
 <div class="pro-tip"><strong>Niche Topic:</strong> Cardinality mappings. If a bijection exists between two sets, they share the same cardinality (\(\aleph_0\) for countably infinite).</div>
 <p>Injective (1-to-1): no two \(x\) map to same \(y\). Surjective (onto): every \(y\) is mapped. Bijective: both, thus invertible.</p>
 <p><em>Example:</em> \(f(x) = 2x\) from \(\mathbb{R}\) to \(\mathbb{R}\) is bijective.</p>
@@ -237,20 +204,20 @@
 </div>
 <div class="unit-section" id="unit5">
 <h2 style="color: var(--primary-teal); border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Unit V: Trees &amp; Automata <span class="badge unit-5">CO5</span></h2>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Tree Properties</h4>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_treeproperties">Tree Properties</h4>
 <p>A tree is a connected, undirected graph with no simple circuits. It inherently possesses \(n-1\) edges for \(n\) vertices.</p>
 <p><em>Example:</em> A hierarchical file system directory structure.</p>
 </div>
-<div class="cheat-card">
-<h4>Spanning Trees</h4>
+<div class="article-card">
+<h4 id="sub_spanningtrees">Spanning Trees</h4>
 <div class="exam-trap"><strong>Examiner Trick:</strong> Kruskal's vs Prim's. Both find Minimum Spanning Trees, but Kruskal sorts edges globally while Prim expands locally from a node.</div>
 <p>A subgraph that contains all vertices and is a tree. Critical for optimizing network routing with minimal cost.</p>
 <p><em>Example:</em> Connecting 5 cities with the least amount of copper wire.</p>
 </div>
-<div class="cheat-card">
-<h4>Finite State Machines (FSMs)</h4>
+<div class="article-card">
+<h4 id="sub_finitestatemachinesfsms">Finite State Machines (FSMs)</h4>
 <div class="pro-tip"><strong>Niche Topic:</strong> Pumping Lemma for Regular Languages. Used exclusively to prove a language is NOT regular by demonstrating string repetition violations.</div>
 <p>DFAs have exactly one transition per state-symbol pair. NFAs allow multiple. They are computationally equivalent in expressive power.</p>
 <p><em>Example:</em> A vending machine dispensing a soda only after exactly 50 cents is inserted.</p>
@@ -265,8 +232,8 @@
                         </div>
 </div>
 </div>
-<div class="cheat-card">
-<h4>Boolean Algebra</h4>
+<div class="article-card">
+<h4 id="sub_booleanalgebra">Boolean Algebra</h4>
 <p>A distributive lattice representing logical operations. Simplification uses consensus theorem and Karnaugh maps to minimize circuit gates.</p>
 <p><em>Example:</em> \(AB + AB' = A(B + B') = A\).</p>
 </div>
@@ -388,5 +355,5 @@ async function openAssistant() {
             assistantApp.handleQuery(query);
         }
     </script>
-</div></body>
-</html> 
+</main></div></div></body>
+</html>

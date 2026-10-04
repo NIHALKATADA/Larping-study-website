@@ -7,7 +7,6 @@
 <link href="../../shared/design-system.css" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
-
 <!-- MathJax for rendering LaTeX -->
 <script>
   window.MathJax = {
@@ -17,10 +16,9 @@
     }
   };
 </script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
+<body data-subject="ml">
 <div class="glow-bg"></div>
 <nav class="smart-topbar">
 <div class="topbar-left">
@@ -46,109 +44,14 @@
 <h2>Dense Revision Comprehensive Report</h2>
 <p class="scope-note">All Units | Scannable Reference | High-Yield Syntax &amp; Concepts</p>
 </header>
-<div class="layout-wrapper" style="display: block; max-width: 1400px; margin: 0 auto; padding: 2rem;">
-<div class="controls" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-<div>
-<strong>Quick Jump:</strong>
-<a href="#unit1" style="margin-right: 1rem;">Unit I</a>
-<a href="#unit2" style="margin-right: 1rem;">Unit II</a>
-<a href="#unit3" style="margin-right: 1rem;">Unit III</a>
-<a href="#unit4" style="margin-right: 1rem;">Unit IV</a>
-<a href="#unit5">Unit V</a>
-</div>
-<div>
-<a class="btn btn-secondary" href="../../index.html" style="margin-right: 1rem;">← Dashboard</a>
-<div class="cheat-card" style="display: none;">
-<!-- Keeping hidden to maintain DOM structure if scripts depend on it, but avoiding visual clutter -->
-</div>
-<div class="cheat-card" style="display: none;">
-</div>
-</div>
-</div>
+<div class="layout-wrapper" style=""><div class="report-container"><button class="mobile-toc-toggle" onclick='document.querySelector(".report-sidebar").classList.toggle("show-toc")'>? Table of Contents</button><aside class="report-sidebar"><h3>Table of Contents</h3><ul><li class="unit-link"><a href="#unit1">Unit I: Fundamentals &amp; Hypothesis Spaces</a></li><li class="sub-link"><a href="#sub_thebiasvariancedecomposition">The Bias-Variance Decomposition</a></li><li class="sub-link"><a href="#sub_curseofdimensionalitymanifoldhypothesis">Curse of Dimensionality &amp; Manifold Hypothesis</a></li><li class="sub-link"><a href="#sub_inductivebiasnofreelunchtheorem">Inductive Bias &amp; No Free Lunch Theorem</a></li><li class="sub-link"><a href="#sub_independentvsdependentvariablesappliedconcept">Independent vs. Dependent Variables (Applied Concept)</a></li><li class="unit-link"><a href="#unit2">Unit II: Linear Models &amp; Optimization Convexity</a></li><li class="sub-link"><a href="#sub_logisticregressioncrossentropy">Logistic Regression &amp; Cross-Entropy</a></li><li class="sub-link"><a href="#sub_svmsmaximummarginkerneltrick">SVMs, Maximum Margin &amp; Kernel Trick</a></li><li class="sub-link"><a href="#sub_vcdimensionpaclearningbounds">VC Dimension &amp; PAC Learning Bounds</a></li><li class="sub-link"><a href="#sub_underfittingandoverfittingconceptsappliedconcept">Underfitting and Overfitting Concepts (Applied Concept)</a></li><li class="unit-link"><a href="#unit3">Unit III: Ensemble Theory &amp; Information Metrics</a></li><li class="sub-link"><a href="#sub_ensemblemetaalgorithms">Ensemble Meta-Algorithms</a></li><li class="sub-link"><a href="#sub_informationgainginiimpurity">Information Gain &amp; Gini Impurity</a></li><li class="sub-link"><a href="#sub_precisionrecallvsrocauc">Precision-Recall vs ROC-AUC</a></li><li class="sub-link"><a href="#sub_randomforestvotingstructureappliedconcept">Random Forest Voting Structure (Applied Concept)</a></li><li class="unit-link"><a href="#unit4">Unit IV: Gradient Dynamics &amp; Deep Architectures</a></li><li class="sub-link"><a href="#sub_backpropagationthechainrule">Backpropagation &amp; The Chain Rule</a></li><li class="sub-link"><a href="#sub_vanishinggradientsmodernactivations">Vanishing Gradients &amp; Modern Activations</a></li><li class="sub-link"><a href="#sub_regularizationl1vsl2weightdecay">Regularization: L1 vs L2 (Weight Decay)</a></li><li class="unit-link"><a href="#unit5">Unit V: Unsupervised Topology &amp; MLOps</a></li><li class="sub-link"><a href="#sub_kmeanstheemalgorithm">K-Means &amp; The E-M Algorithm</a></li><li class="sub-link"><a href="#sub_principalcomponentanalysispcaeigentheory">Principal Component Analysis (PCA) Eigen-theory</a></li><li class="sub-link"><a href="#sub_dataleakagetimeseriesvalidation">Data Leakage &amp; Time-Series Validation</a></li><li class="unit-link"><a href="#aiModalTitle">Ask AI(Lite)</a></li></ul></aside><main class="report-main">
 <div style="display: grid; width: 100%;">
-<div id="pureSkeleton">
-<div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-<div class="skel-line" style="height: 1.8rem; width: 250px; border-radius: 6px;"></div>
-<div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
-</div>
-<div class="cheat-grid" style="margin-bottom: 3rem;">
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-</div>
-<div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-<div class="skel-line" style="height: 1.8rem; width: 200px; border-radius: 6px;"></div>
-<div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
-</div>
-<div class="cheat-grid" style="margin-bottom: 3rem;">
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-</div>
-</div>
 <div id="realContentWrapper">
 <div class="unit-section" id="unit1">
-<h3>Unit I: Fundamentals &amp; Hypothesis Spaces <span class="badge unit-1">CO1</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>The Bias-Variance Decomposition</h4>
+<h3 class="unit-heading">Unit I: Fundamentals &amp; Hypothesis Spaces <span class="badge unit-1">CO1</span></h3>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_thebiasvariancedecomposition">The Bias-Variance Decomposition</h4>
 <p>Total Error = Bias² + Variance + Irreducible Error. Bias is the simplifying assumptions (underfitting). Variance is hypersensitivity to noise (overfitting).</p>
 <p><strong>Example:</strong> Linear regression on sine wave data has high bias; a 50-depth decision tree on noisy data has high variance.</p>
 <div class="compact-svg">
@@ -163,53 +66,53 @@ Overfitting"]
             </div>
 </div>
 </div>
-<div class="cheat-card">
-<h4>Curse of Dimensionality &amp; Manifold Hypothesis</h4>
+<div class="article-card">
+<h4 id="sub_curseofdimensionalitymanifoldhypothesis">Curse of Dimensionality &amp; Manifold Hypothesis</h4>
 <p>As dimensions $D$ increase, the volume of the space grows exponentially, making data extremely sparse. The <em>Manifold Hypothesis</em> posits that real-world high-dimensional data actually lies on low-dimensional, non-linear manifolds embedded within the high-dimensional space.</p>
 <p><strong>Example:</strong> 1024-pixel images exist in a 1024D space, but valid human faces only span a tiny 50D manifold within it.</p>
 <div class="exam-trap"><strong>Trick:</strong> PCA only discovers <em>linear</em> manifolds. If the examiner asks to untangle a "Swiss Roll" dataset, you MUST use non-linear methods like ISOMAP or t-SNE!</div>
 </div>
-<div class="cheat-card">
-<h4>Inductive Bias &amp; No Free Lunch Theorem</h4>
+<div class="article-card">
+<h4 id="sub_inductivebiasnofreelunchtheorem">Inductive Bias &amp; No Free Lunch Theorem</h4>
 <p><em>No Free Lunch Theorem:</em> Averaged over all possible data distributions, every algorithm performs equally well. Thus, an algorithm must make assumptions (Inductive Bias) to learn effectively.</p>
 <p><strong>Example:</strong> CNNs have an inductive bias for spatial locality (nearby pixels are related); RNNs assume sequential temporality.</p>
 </div>
-<div class="cheat-card">
-<h4>Independent vs. Dependent Variables<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
+<div class="article-card">
+<h4 id="sub_independentvsdependentvariablesappliedconcept">Independent vs. Dependent Variables<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <p><b>Independent Predictor Variables:</b> The inputs or features used to make predictions (e.g., house size, location).</p>
 <p><b>Dependent Target Variables:</b> The output or outcome being predicted by the model (e.g., house price).</p>
 </div></div>
 </div>
 <div class="unit-section" id="unit2">
-<h3>Unit II: Linear Models &amp; Optimization Convexity <span class="badge unit-1">CO2</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Logistic Regression &amp; Cross-Entropy</h4>
+<h3 class="unit-heading">Unit II: Linear Models &amp; Optimization Convexity <span class="badge unit-1">CO2</span></h3>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_logisticregressioncrossentropy">Logistic Regression &amp; Cross-Entropy</h4>
 <p>Uses the Sigmoid function $\sigma(z) = \frac{1}{1 + e^{-z}}$ to map logits to probabilities. Optimized via Log-Loss (Binary Cross-Entropy), heavily penalizing confident, wrong predictions logarithmically.</p>
 <p><strong>Example:</strong> Predicting if an email is spam. If the model outputs 0.99 for a ham email, the log-loss penalty approaches infinity.</p>
 </div>
-<div class="cheat-card">
-<h4>SVMs, Maximum Margin &amp; Kernel Trick</h4>
+<div class="article-card">
+<h4 id="sub_svmsmaximummarginkerneltrick">SVMs, Maximum Margin &amp; Kernel Trick</h4>
 <p>SVMs maximize the margin $\frac{2}{||w||}$ between support vectors. The <em>Kernel Trick</em> uses Mercer’s theorem to implicitly compute dot products in a high-dimensional feature space without explicit transformation mapping $\phi(x)$.</p>
 <p><strong>Example:</strong> An RBF kernel classifying concentric circles by projecting them into 3D space where a flat hyperplane can cleanly slice them.</p>
 <div class="pro-tip"><strong>Pro-Tip:</strong> The $C$ parameter in Soft-Margin SVM controls the penalty for misclassification. Low $C$ = wide margin (high bias). High $C$ = hard margin (high variance/overfitting).</div>
 </div>
-<div class="cheat-card">
-<h4>VC Dimension &amp; PAC Learning Bounds</h4>
+<div class="article-card">
+<h4 id="sub_vcdimensionpaclearningbounds">VC Dimension &amp; PAC Learning Bounds</h4>
 <p><em>Probably Approximately Correct (PAC)</em> framework provides mathematical bounds on sample complexity. <em>Vapnik-Chervonenkis (VC) Dimension</em> is the maximum number of points a hypothesis class can perfectly shatter (memorize).</p>
 <p><strong>Example:</strong> A 2D linear classifier has a VC dimension of 3, meaning it can perfectly classify any arrangement of 3 points, but fails on some arrangements of 4 points (like XOR).</p>
 </div>
-<div class="cheat-card">
-<h4>Underfitting and Overfitting Concepts<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
+<div class="article-card">
+<h4 id="sub_underfittingandoverfittingconceptsappliedconcept">Underfitting and Overfitting Concepts<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <p><b>Underfitting (High Bias):</b> Occurs when a model is too simple to capture the underlying data patterns. It performs poorly on both training and testing sets. Root causes include insufficient model complexity or inadequate features.</p>
 <p><b>Overfitting (High Variance):</b> Occurs when a model is excessively complex, learning the noise and fluctuations rather than the true signal. It performs exceptionally well on the training data but poorly on testing data.</p>
 </div></div>
 </div>
 <div class="unit-section" id="unit3">
-<h3>Unit III: Ensemble Theory &amp; Information Metrics <span class="badge unit-1">CO3</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Ensemble Meta-Algorithms</h4>
+<h3 class="unit-heading">Unit III: Ensemble Theory &amp; Information Metrics <span class="badge unit-1">CO3</span></h3>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_ensemblemetaalgorithms">Ensemble Meta-Algorithms</h4>
 <p><strong>Bagging</strong> trains parallel models on bootstrapped data (decreases variance). <strong>Boosting</strong> trains sequential weak learners focused on correcting prior residual errors (decreases bias).</p>
 <p><strong>Example:</strong> Random Forest (Bagging) averages 100 deep trees. XGBoost (Boosting) strings together 100 shallow stumps to minimize a gradient loss function.</p>
 <div class="compact-svg">
@@ -225,38 +128,38 @@ Overfitting"]
             </div>
 </div>
 </div>
-<div class="cheat-card">
-<h4>Information Gain &amp; Gini Impurity</h4>
+<div class="article-card">
+<h4 id="sub_informationgainginiimpurity">Information Gain &amp; Gini Impurity</h4>
 <p>Decision trees recursively partition data. They maximize <em>Information Gain</em> (reduction in Shannon Entropy $H = -\sum p \log_2 p$) or minimize <em>Gini Impurity</em> ($1 - \sum p^2$) at each node split.</p>
 <p><strong>Example:</strong> Predicting disease. Splitting on "Fever = True" yields child nodes that are much purer (lower entropy) than the parent node.</p>
 <div class="exam-trap"><strong>Trick:</strong> Information Gain is inherently biased towards attributes with high cardinality (e.g., User ID). The examiner will test this: always use <em>Gain Ratio</em> to penalize high-branching attributes!</div>
 </div>
-<div class="cheat-card">
-<h4>Precision-Recall vs ROC-AUC</h4>
+<div class="article-card">
+<h4 id="sub_precisionrecallvsrocauc">Precision-Recall vs ROC-AUC</h4>
 <p>ROC curve plots True Positive Rate vs False Positive Rate. PR curve plots Precision vs Recall. ROC is misleading for heavily imbalanced datasets because TNs dominate the FPR denominator.</p>
 <p><strong>Example:</strong> Fraud detection (0.1% fraud). An ROC-AUC of 0.90 looks great, but PR-AUC reveals the model has terrible precision and produces massive false alarms.</p>
 </div>
-<div class="cheat-card">
-<h4>Random Forest Voting Structure<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
+<div class="article-card">
+<h4 id="sub_randomforestvotingstructureappliedconcept">Random Forest Voting Structure<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <p>Random Forests build multiple decision trees independently using bootstrapped data and random feature subsets. For classification, the final output is decided by a majority vote among all the individual trees. For regression, it uses the average.</p>
 <p><b>Applied Example:</b> Three regression trees predict a house price as: Tree 1 = 50 lakh, Tree 2 = 55 lakh, Tree 3 = 52 lakh. The Random Forest prediction using averaging is (50 + 55 + 52) / 3 = <b>52.33 lakh</b>.</p>
 </div></div>
 </div>
 <div class="unit-section" id="unit4">
-<h3>Unit IV: Gradient Dynamics &amp; Deep Architectures <span class="badge unit-1">CO4</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Backpropagation &amp; The Chain Rule</h4>
+<h3 class="unit-heading">Unit IV: Gradient Dynamics &amp; Deep Architectures <span class="badge unit-1">CO4</span></h3>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_backpropagationthechainrule">Backpropagation &amp; The Chain Rule</h4>
 <p>Neural networks update weights via gradient descent: $\theta = \theta - \alpha \nabla J(\theta)$. Backprop efficiently calculates the gradient of the loss function with respect to weights by propagating errors backward using the calculus chain rule.</p>
 <p><strong>Example:</strong> If a network predicts 0.9 for a dog image (label 1), backprop sends the 0.1 error backwards, nudging earlier convolutional filters to activate stronger on dog ears.</p>
 </div>
-<div class="cheat-card">
-<h4>Vanishing Gradients &amp; Modern Activations</h4>
+<div class="article-card">
+<h4 id="sub_vanishinggradientsmodernactivations">Vanishing Gradients &amp; Modern Activations</h4>
 <p>Deep networks using Sigmoid/Tanh suffer from vanishing gradients because their derivatives max out at 0.25; gradients decay exponentially through layers. ReLU ($f(x) = \max(0, x)$) solves this by providing a constant derivative of 1 for positive inputs.</p>
 <p><strong>Example:</strong> Training a 100-layer ResNet. With Sigmoid, the first layer never updates. With ReLU and Skip Connections, the gradient flows directly to early layers.</p>
 </div>
-<div class="cheat-card">
-<h4>Regularization: L1 vs L2 (Weight Decay)</h4>
+<div class="article-card">
+<h4 id="sub_regularizationl1vsl2weightdecay">Regularization: L1 vs L2 (Weight Decay)</h4>
 <p><strong>L1 (Lasso):</strong> Adds $\lambda \sum |w|$ to the loss. Encourages sparse weight vectors (exact zeros) due to diamond-shaped constraint geometry. <br/><strong>L2 (Ridge):</strong> Adds $\lambda \sum w^2$. Prevents exploding weights by decaying them proportionally.</p>
 <p><strong>Example:</strong> Use L1 for gene expression data to eliminate 99% of irrelevant genes. Use L2 in Neural Networks (Weight Decay) to keep activations stable.</p>
 <div class="pro-tip"><strong>Pro-Tip:</strong> Dropout is mathematically equivalent to a form of L2 regularization, acting as an ensemble of sub-networks by randomly zeroing activations during training!</div>
@@ -264,15 +167,15 @@ Overfitting"]
 </div>
 </div>
 <div class="unit-section" id="unit5">
-<h3>Unit V: Unsupervised Topology &amp; MLOps <span class="badge unit-1">CO5</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>K-Means &amp; The E-M Algorithm</h4>
+<h3 class="unit-heading">Unit V: Unsupervised Topology &amp; MLOps <span class="badge unit-1">CO5</span></h3>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_kmeanstheemalgorithm">K-Means &amp; The E-M Algorithm</h4>
 <p>K-Means is a specific instance of the <em>Expectation-Maximization (EM)</em> algorithm. E-step: Assign points to nearest centroid. M-step: Recalculate centroids. It converges to a local optimum minimizing within-cluster sum of squares (WCSS).</p>
 <p><strong>Example:</strong> Clustering retail shoppers based on recency and frequency of purchases. K-Means finds $K$ distinct buyer personas.</p>
 </div>
-<div class="cheat-card">
-<h4>Principal Component Analysis (PCA) Eigen-theory</h4>
+<div class="article-card">
+<h4 id="sub_principalcomponentanalysispcaeigentheory">Principal Component Analysis (PCA) Eigen-theory</h4>
 <p>PCA projects data onto orthogonal axes of maximum variance. It computes the eigenvectors (directions) and eigenvalues (magnitude of variance) of the data's covariance matrix. It removes multicollinearity.</p>
 <p><strong>Example:</strong> Given square footage and number of rooms (highly correlated), PCA collapses them into a single "house size" principal component axis.</p>
 <div class="compact-svg">
@@ -285,8 +188,8 @@ Overfitting"]
             </div>
 </div>
 </div>
-<div class="cheat-card">
-<h4>Data Leakage &amp; Time-Series Validation</h4>
+<div class="article-card">
+<h4 id="sub_dataleakagetimeseriesvalidation">Data Leakage &amp; Time-Series Validation</h4>
 <p>Leakage occurs when information from the validation/test set maliciously bleeds into the training set, causing deceptively high performance that fails in production.</p>
 <p><strong>Example:</strong> Applying `StandardScaler().fit_transform(X)` on the <em>entire</em> dataset before doing `train_test_split()`. The test set's mean/variance leaked into the scaler!</p>
 <div class="exam-trap"><strong>Trick:</strong> Standard K-Fold CV on Time-Series data causes future leakage (training on Friday to predict Thursday). You must strictly use <em>Rolling Origin / TimeSeriesSplit</em>.</div>
@@ -408,5 +311,5 @@ async function openAssistant() {
             assistantApp.handleQuery(query);
         }
     </script>
-</div></body>
+</main></div></div></body>
 </html>

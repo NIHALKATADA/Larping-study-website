@@ -7,7 +7,6 @@
 <link href="../../shared/design-system.css" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
-
 <!-- MathJax for rendering LaTeX -->
 <script>
   window.MathJax = {
@@ -17,10 +16,9 @@
     }
   };
 </script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
+<body data-subject="daa">
 <div class="glow-bg"></div>
 <nav class="smart-topbar">
 <div class="topbar-left">
@@ -46,133 +44,40 @@
 <h2>Dense Revision Comprehensive Report</h2>
 <p class="scope-note">All Units | Scannable Reference | High-Yield Syntax &amp; Concepts</p>
 </header>
-<div class="layout-wrapper" style="display: block; max-width: 1400px; margin: 0 auto; padding: 2rem;">
-<div class="controls" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-<div>
-<strong>Quick Jump:</strong>
-<a href="#unit1" style="margin-right: 1rem;">Unit I</a>
-<a href="#unit2" style="margin-right: 1rem;">Unit II</a>
-<a href="#unit3" style="margin-right: 1rem;">Unit III</a>
-<a href="#unit4" style="margin-right: 1rem;">Unit IV</a>
-<a href="#unit5">Unit V</a>
-</div>
-<div>
-<a class="btn btn-secondary" href="../../index.html" style="margin-right: 1rem;">← Dashboard</a>
-<div class="cheat-card" style="display:none;"></div>
-<div class="cheat-card" style="display:none;"></div>
-</div>
-</div>
+<div class="layout-wrapper" style=""><div class="report-container"><button class="mobile-toc-toggle" onclick='document.querySelector(".report-sidebar").classList.toggle("show-toc")'>? Table of Contents</button><aside class="report-sidebar"><h3>Table of Contents</h3><ul><li class="unit-link"><a href="#unit1">Unit I: Introduction &amp; Foundations</a></li><li class="sub-link"><a href="#sub_algorithmfundamentals">Algorithm Fundamentals</a></li><li class="sub-link"><a href="#sub_loopinvariantscorrectnessproofs">Loop Invariants (Correctness Proofs)</a></li><li class="sub-link"><a href="#sub_asymptoticnotations">Asymptotic Notations</a></li><li class="sub-link"><a href="#sub_recurrencesolvingsubstitution">Recurrence Solving (Substitution)</a></li><li class="sub-link"><a href="#sub_howtoanalyzetimecomplexitymethod">How to Analyze Time ComplexityMethod</a></li><li class="unit-link"><a href="#unit2">Unit II: Core Algorithmic Paradigms</a></li><li class="sub-link"><a href="#sub_divideandconquermethodology">Divide and Conquer Methodology</a></li><li class="sub-link"><a href="#sub_mastertheoremdeepdive">Master Theorem Deep-Dive</a></li><li class="sub-link"><a href="#sub_greedyparadigmmatroids">Greedy Paradigm &amp; Matroids</a></li><li class="sub-link"><a href="#sub_paradigmdecisiontree">Paradigm Decision Tree</a></li><li class="sub-link"><a href="#sub_bubblesortmethod">Bubble SortMethod</a></li><li class="sub-link"><a href="#sub_selectionsortmethod">Selection SortMethod</a></li><li class="sub-link"><a href="#sub_insertionsortmethod">Insertion SortMethod</a></li><li class="sub-link"><a href="#sub_heapsortmethod">Heap SortMethod</a></li><li class="sub-link"><a href="#sub_countingsortmethod">Counting SortMethod</a></li><li class="sub-link"><a href="#sub_radixsortmethod">Radix SortMethod</a></li><li class="sub-link"><a href="#sub_bucketsortmethod">Bucket SortMethod</a></li><li class="sub-link"><a href="#sub_sortingcomplexitycomparisonmethod">Sorting Complexity ComparisonMethod</a></li><li class="unit-link"><a href="#unit3">Unit III: Dynamic Programming &amp; Complexity</a></li><li class="sub-link"><a href="#sub_dynamicprogrammingdp">Dynamic Programming (DP)</a></li><li class="sub-link"><a href="#sub_bellmanfordvsdijkstra">Bellman-Ford vs Dijkstra</a></li><li class="sub-link"><a href="#sub_01vsfractionalknapsack">0/1 vs Fractional Knapsack</a></li><li class="sub-link"><a href="#sub_mastermethodforrecurrencesmethod">Master Method for RecurrencesMethod</a></li><li class="sub-link"><a href="#sub_substitutionmethodforrecurrencesmethod">Substitution Method for RecurrencesMethod</a></li><li class="sub-link"><a href="#sub_binarysearchmethod">Binary SearchMethod</a></li><li class="sub-link"><a href="#sub_mergesortmethod">Merge SortMethod</a></li><li class="sub-link"><a href="#sub_quicksortmethod">Quick SortMethod</a></li><li class="sub-link"><a href="#sub_maxmindivideconquermethod">Max-Min (Divide &amp; Conquer)Method</a></li><li class="unit-link"><a href="#unit4">Unit IV: Advanced Graph Algorithms</a></li><li class="sub-link"><a href="#sub_minimumspanningtreesmst">Minimum Spanning Trees (MST)</a></li><li class="sub-link"><a href="#sub_networkflowfordfulkerson">Network Flow (Ford-Fulkerson)</a></li><li class="sub-link"><a href="#sub_allpairsshortestpathfloydwarshall">All-Pairs Shortest Path (Floyd-Warshall)</a></li><li class="unit-link"><a href="#unit5">Unit V: NP-Completeness &amp; Approximation</a></li><li class="sub-link"><a href="#sub_pvsnpclasses">P vs NP Classes</a></li><li class="sub-link"><a href="#sub_npcompletereductions">NP-Complete Reductions</a></li><li class="sub-link"><a href="#sub_approximationalgorithms">Approximation Algorithms</a></li><li class="sub-link"><a href="#sub_complexityhierarchy">Complexity Hierarchy</a></li><li class="unit-link"><a href="#aiModalTitle">Ask AI(Lite)</a></li></ul></aside><main class="report-main">
 <div style="display: grid; width: 100%;">
-<div id="pureSkeleton">
-<div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-<div class="skel-line" style="height: 1.8rem; width: 250px; border-radius: 6px;"></div>
-<div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
-</div>
-<div class="cheat-grid" style="margin-bottom: 3rem;">
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-</div>
-<div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-<div class="skel-line" style="height: 1.8rem; width: 200px; border-radius: 6px;"></div>
-<div class="skel-line" style="height: 1.2rem; width: 3rem; border-radius: 12px;"></div>
-</div>
-<div class="cheat-grid" style="margin-bottom: 3rem;">
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-<div style="border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.5rem; background: var(--bg-card); display: flex; flex-direction: column; gap: 1rem;">
-<div class="skel-line" style="height: 1.2rem; width: 60%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 90%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 85%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 95%; border-radius: 4px;"></div>
-<div class="skel-line" style="height: 0.8rem; width: 70%; border-radius: 4px;"></div>
-</div>
-</div>
-</div>
 <div id="realContentWrapper">
 <div class="unit-section" id="unit1">
-<h3>Unit I: Introduction &amp; Foundations <span class="badge unit-1">CO1</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Algorithm Fundamentals</h4>
+<h3 class="unit-heading">Unit I: Introduction &amp; Foundations <span class="badge unit-1">CO1</span></h3>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_algorithmfundamentals">Algorithm Fundamentals</h4>
 <p>A rigorous sequence of unambiguous computational steps transforming input to output. Crucial properties include definiteness (unambiguous steps) and effectiveness (basic feasible operations).</p>
 <p><em>Example:</em> Euclid's algorithm for GCD(a,b) where a=12, b=8 yields 4 via systematic reduction.</p>
 </div>
-<div class="cheat-card">
-<h4>Loop Invariants (Correctness Proofs)</h4>
+<div class="article-card">
+<h4 id="sub_loopinvariantscorrectnessproofs">Loop Invariants (Correctness Proofs)</h4>
 <p>Formal logical assertions that remain true before, during, and after loop execution, utilized inductively to prove algorithmic correctness.</p>
 <p><em>Example:</em> In Insertion Sort, `A[1...i-1]` is always sorted before the i-th iteration commences.</p>
 <div class="pro-tip" style="padding: 10px; border-left: 4px solid #ffcc00; background: rgba(255,204,0,0.1); margin-top: 10px;">
 <strong>Pro Tip:</strong> Examiners test initialization, maintenance, and termination. Ensure the termination property directly implies the overall postcondition.
         </div>
 </div>
-<div class="cheat-card">
-<h4>Asymptotic Notations</h4>
+<div class="article-card">
+<h4 id="sub_asymptoticnotations">Asymptotic Notations</h4>
 <p>Mathematical abstractions characterizing growth rates: <strong>O(n)</strong> (asymptotic upper bound, worst-case), <strong>Ω(n)</strong> (lower bound, best-case), and <strong>Θ(n)</strong> (tight bound, average-case).</p>
 <p><em>Example:</em> Mergesort is strictly Θ(n log n) as best and worst-case trees have identical depth.</p>
 </div>
-<div class="cheat-card">
-<h4>Recurrence Solving (Substitution)</h4>
+<div class="article-card">
+<h4 id="sub_recurrencesolvingsubstitution">Recurrence Solving (Substitution)</h4>
 <p>A deductive technique establishing asymptotic complexity by positing a bound and applying mathematical induction to verify it against the recurrence relation.</p>
 <p><em>Example:</em> T(n) = 2T(n/2) + n. Guess O(n log n), prove T(n) ≤ c(n log n) inductively.</p>
 <div class="exam-trap" style="padding: 10px; border-left: 4px solid #ff4444; background: rgba(255,68,68,0.1); margin-top: 10px;">
 <strong>Exam Trap:</strong> When using Substitution, you must explicitly prove the exact form of your guess. Do not ignore lower-order terms during the inductive step!
         </div>
 </div>
-
-<div class="cheat-card">
-<h4>How to Analyze Time Complexity <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+<div class="article-card">
+<h4 id="sub_howtoanalyzetimecomplexitymethod">How to Analyze Time Complexity <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Step 1:</strong> Identify the basic operation (comparison, assignment, arithmetic).</p>
 <p><strong>Step 2:</strong> Count how many times it executes as a function of input size <em>n</em>.</p>
 <table>
@@ -190,28 +95,28 @@
 </div>
 </div>
 <div class="unit-section" id="unit2">
-<h3>Unit II: Core Algorithmic Paradigms <span class="badge unit-1">CO2</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Divide and Conquer Methodology</h4>
+<h3 class="unit-heading">Unit II: Core Algorithmic Paradigms <span class="badge unit-1">CO2</span></h3>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_divideandconquermethodology">Divide and Conquer Methodology</h4>
 <p>A paradigm that recursively partitions a problem into disjoint subproblems, solves them, and amalgamates their solutions. Relies heavily on recurrence relations.</p>
 <p><em>Example:</em> Strassen's Matrix Multiplication reduces subproblems from 8 to 7, dropping complexity to O(n^2.81).</p>
 </div>
-<div class="cheat-card">
-<h4>Master Theorem Deep-Dive</h4>
+<div class="article-card">
+<h4 id="sub_mastertheoremdeepdive">Master Theorem Deep-Dive</h4>
 <p>A deterministic method for solving recurrences of the form T(n) = aT(n/b) + f(n). Compares f(n) against n^(log_b(a)) using polynomial boundedness.</p>
 <p><em>Example:</em> T(n) = 9T(n/3) + n. a=9, b=3, log_3(9)=2. n^2 &gt; n, hence Case 1: T(n) = Θ(n^2).</p>
 <div class="exam-trap" style="padding: 10px; border-left: 4px solid #ff4444; background: rgba(255,68,68,0.1); margin-top: 10px;">
 <strong>Exam Trap:</strong> The Master Theorem ONLY applies if the difference between f(n) and n^(log_b(a)) is polynomially large. It fails for T(n) = 2T(n/2) + n log n!
         </div>
 </div>
-<div class="cheat-card">
-<h4>Greedy Paradigm &amp; Matroids</h4>
+<div class="article-card">
+<h4 id="sub_greedyparadigmmatroids">Greedy Paradigm &amp; Matroids</h4>
 <p>An optimization strategy making locally optimal choices with the heuristic that it converges to a global optimum. Only valid if the problem exhibits the greedy-choice property and optimal substructure.</p>
 <p><em>Example:</em> Huffman Coding optimally minimizes prefix-free code length by greedily merging lowest frequency nodes.</p>
 </div>
-<div class="cheat-card">
-<h4>Paradigm Decision Tree</h4>
+<div class="article-card">
+<h4 id="sub_paradigmdecisiontree">Paradigm Decision Tree</h4>
 <div class="compact-svg">
 <div class="mermaid">
             flowchart TD
@@ -224,43 +129,43 @@
 </div>
 <p><em>Example:</em> Use this mental model to quickly classify DP (Fibonacci) vs Divide &amp; Conquer (Merge Sort).</p>
 </div>
-<div class="cheat-card">
-<h4>Bubble Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+<div class="article-card">
+<h4 id="sub_bubblesortmethod">Bubble Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Repeatedly swap adjacent elements if they are in the wrong order. After each pass, the largest unsorted element "bubbles" to its correct position at the end.</p>
 <p><strong>Steps:</strong> For each pass (i = 0 to n-2): compare arr[j] with arr[j+1] for j = 0 to n-i-2. Swap if arr[j] &gt; arr[j+1]. Stop early if no swaps in a pass (optimized).</p>
 <p><strong>Complexity:</strong> Best O(n) [already sorted, optimized], Worst/Avg O(n²). <strong>Stable:</strong> Yes. <strong>In-place:</strong> Yes.</p>
-</div><div class="cheat-card">
-<h4>Selection Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+</div><div class="article-card">
+<h4 id="sub_selectionsortmethod">Selection Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Find the minimum element from the unsorted part and place it at the beginning.</p>
 <p><strong>Steps:</strong> For i = 0 to n-2: scan arr[i+1…n-1] to find the minimum. Swap it with arr[i].</p>
 <p><strong>Complexity:</strong> Best/Worst/Avg O(n²) — always scans the full remaining array. <strong>Stable:</strong> No (swaps may break order). <strong>In-place:</strong> Yes.</p>
-</div><div class="cheat-card">
-<h4>Insertion Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+</div><div class="article-card">
+<h4 id="sub_insertionsortmethod">Insertion Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Build a sorted subarray one element at a time by inserting each new element into its correct position.</p>
 <p><strong>Steps:</strong> For i = 1 to n-1: take key = arr[i]. Shift all elements in arr[0…i-1] that are greater than key one position right. Insert key at the gap.</p>
 <p><strong>Complexity:</strong> Best O(n) [already sorted], Worst/Avg O(n²). <strong>Stable:</strong> Yes. <strong>In-place:</strong> Yes. Best for small or nearly-sorted arrays.</p>
-</div><div class="cheat-card">
-<h4>Heap Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+</div><div class="article-card">
+<h4 id="sub_heapsortmethod">Heap Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Build a Max Heap from the array, then repeatedly extract the maximum (root) and place it at the end.</p>
 <p><strong>Steps:</strong> (1) Build Max Heap using bottom-up heapify: start from last non-leaf node (index n/2 - 1) down to 0, calling heapify on each. (2) For i = n-1 down to 1: swap root (max) with arr[i], reduce heap size, heapify root.</p>
 <p><strong>Complexity:</strong> Best/Worst/Avg O(n log n). <strong>Stable:</strong> No. <strong>In-place:</strong> Yes.</p>
-</div><div class="cheat-card">
-<h4>Counting Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+</div><div class="article-card">
+<h4 id="sub_countingsortmethod">Counting Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Count occurrences of each value, then compute cumulative counts to place each element directly into its sorted position.</p>
 <p><strong>Steps:</strong> (1) Find max value k. (2) Create count array C[0…k], count occurrences. (3) Compute prefix sums: C[i] += C[i-1]. (4) Traverse input right-to-left, place each element at index C[val]-1, decrement C[val].</p>
 <p><strong>Complexity:</strong> O(n + k) where k = range of input. <strong>Stable:</strong> Yes. <strong>In-place:</strong> No (needs auxiliary arrays). Best when k = O(n).</p>
-</div><div class="cheat-card">
-<h4>Radix Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+</div><div class="article-card">
+<h4 id="sub_radixsortmethod">Radix Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Sort numbers digit by digit, starting from the least significant digit (LSD) to the most significant, using a stable sort (usually Counting Sort) at each level.</p>
 <p><strong>Steps:</strong> Find max number of digits d. For each digit position (1s, 10s, 100s…): apply Counting Sort based on that digit only.</p>
 <p><strong>Complexity:</strong> O(d × (n + b)) where d = digits, b = base (usually 10). <strong>Stable:</strong> Yes. <strong>In-place:</strong> No.</p>
-</div><div class="cheat-card">
-<h4>Bucket Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+</div><div class="article-card">
+<h4 id="sub_bucketsortmethod">Bucket Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Distribute elements into buckets based on their value range, sort each bucket individually, then concatenate.</p>
 <p><strong>Steps:</strong> (1) Create n empty buckets. (2) For each element, place it in bucket[floor(n × element)]. (3) Sort each bucket (using Insertion Sort). (4) Concatenate all buckets in order.</p>
 <p><strong>Complexity:</strong> Best/Avg O(n + k), Worst O(n²) if all elements land in one bucket. Best for uniformly distributed floating-point data in [0, 1).</p>
-</div><div class="cheat-card">
-<h4>Sorting Complexity Comparison <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+</div><div class="article-card">
+<h4 id="sub_sortingcomplexitycomparisonmethod">Sorting Complexity Comparison <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <table>
 <thead><tr><th>Algorithm</th><th>Best</th><th>Average</th><th>Worst</th><th>Stable?</th><th>In-place?</th></tr></thead>
 <tbody>
@@ -276,15 +181,15 @@
 </div></div>
 </div>
 <div class="unit-section" id="unit3">
-<h3>Unit III: Dynamic Programming &amp; Complexity <span class="badge unit-1">CO3</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Dynamic Programming (DP)</h4>
+<h3 class="unit-heading">Unit III: Dynamic Programming &amp; Complexity <span class="badge unit-1">CO3</span></h3>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_dynamicprogrammingdp">Dynamic Programming (DP)</h4>
 <p>Systematically exhausts all possibilities by caching solutions to overlapping subproblems (memoization/tabulation), guaranteeing a global optimum for complex state spaces.</p>
 <p><em>Example:</em> Matrix Chain Multiplication optimally parenthesizes a chain of matrices in O(n^3) using a cost table.</p>
 </div>
-<div class="cheat-card">
-<h4>Bellman-Ford vs Dijkstra</h4>
+<div class="article-card">
+<h4 id="sub_bellmanfordvsdijkstra">Bellman-Ford vs Dijkstra</h4>
 <div class="compact-svg">
 <div class="mermaid">
             graph LR
@@ -296,16 +201,16 @@
 <p>Dijkstra uses a priority queue (Greedy) but fails catastrophically with negative weights. Bellman-Ford repeatedly relaxes all edges (DP) and detects negative cycles on the V-th pass.</p>
 <p><em>Example:</em> Routing in networks where path costs can become negative due to subsidies requires Bellman-Ford.</p>
 </div>
-<div class="cheat-card">
-<h4>0/1 vs Fractional Knapsack</h4>
+<div class="article-card">
+<h4 id="sub_01vsfractionalknapsack">0/1 vs Fractional Knapsack</h4>
 <p>Fractional allows splitting items (solvable greedily by sorting value/weight ratio). 0/1 strictly forbids splitting, invalidating the greedy choice and mandating DP.</p>
 <p><em>Example:</em> Packing discrete gold bars (0/1 DP) vs packing gold dust (Fractional Greedy).</p>
 <div class="exam-trap" style="padding: 10px; border-left: 4px solid #ff4444; background: rgba(255,68,68,0.1); margin-top: 10px;">
 <strong>Exam Trap:</strong> Applying greedy value/weight ratio to 0/1 Knapsack is the most common student error. Always use the DP table: `dp[i][w] = max(dp[i-1][w], val[i] + dp[i-1][w-wt[i]])`.
         </div>
 </div>
-<div class="cheat-card">
-<h4>Master Method for Recurrences <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+<div class="article-card">
+<h4 id="sub_mastermethodforrecurrencesmethod">Master Method for Recurrences <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p>For recurrences of the form <strong>T(n) = aT(n/b) + Θ(n<sup>k</sup>)</strong>, compute <em>log<sub>b</sub>a</em> and compare with <em>k</em>:</p>
 <table>
 <thead><tr><th>Condition</th><th>Result</th></tr></thead>
@@ -317,80 +222,80 @@
 </table>
 <p><strong>Example:</strong> T(n) = 2T(n/2) + n → a=2, b=2, k=1. log₂2 = 1 = k → <strong>Case 2</strong> → T(n) = Θ(n log n).</p>
 <p><strong>Example:</strong> T(n) = 4T(n/2) + n → log₂4 = 2 &gt; 1 → <strong>Case 1</strong> → T(n) = Θ(n²).</p>
-</div><div class="cheat-card">
-<h4>Substitution Method for Recurrences <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+</div><div class="article-card">
+<h4 id="sub_substitutionmethodforrecurrencesmethod">Substitution Method for Recurrences <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Step 1:</strong> Guess the form of the solution (e.g., T(n) = O(n log n)).</p>
 <p><strong>Step 2:</strong> Assume it holds for smaller values: T(n/2) ≤ c(n/2)log(n/2).</p>
 <p><strong>Step 3:</strong> Substitute into the recurrence and prove T(n) ≤ cn log n by induction.</p>
 <p><strong>Step 4:</strong> Verify the base case.</p>
-</div><div class="cheat-card">
-<h4>Binary Search <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+</div><div class="article-card">
+<h4 id="sub_binarysearchmethod">Binary Search <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Prerequisite:</strong> Array must be sorted.</p>
 <p><strong>Steps:</strong> Set low=0, high=n-1. While low ≤ high: compute mid = (low+high)/2. If arr[mid] == target → found. If arr[mid] &lt; target → search right half (low = mid+1). If arr[mid] &gt; target → search left half (high = mid-1).</p>
 <p><strong>Complexity:</strong> O(log n). Recurrence: T(n) = T(n/2) + O(1).</p>
-</div><div class="cheat-card">
-<h4>Merge Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+</div><div class="article-card">
+<h4 id="sub_mergesortmethod">Merge Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Divide the array into two halves, recursively sort each half, then merge them in sorted order.</p>
 <p><strong>Steps:</strong> (1) Find mid = (low+high)/2. (2) MergeSort(low, mid) and MergeSort(mid+1, high). (3) Merge: use two pointers to compare elements from both halves, placing the smaller one into a temp array. Copy back.</p>
 <p><strong>Complexity:</strong> Best/Worst/Avg O(n log n). <strong>Stable:</strong> Yes. <strong>In-place:</strong> No (needs O(n) auxiliary). Recurrence: T(n) = 2T(n/2) + O(n).</p>
-</div><div class="cheat-card">
-<h4>Quick Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+</div><div class="article-card">
+<h4 id="sub_quicksortmethod">Quick Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Pick a pivot, partition the array so all elements ≤ pivot are on the left and &gt; pivot are on the right, then recurse on both halves.</p>
 <p><strong>Partition (Lomuto):</strong> Set pivot = arr[high], i = low-1. For j = low to high-1: if arr[j] ≤ pivot, increment i, swap arr[i] and arr[j]. Finally swap arr[i+1] with pivot.</p>
 <p><strong>Complexity:</strong> Best/Avg O(n log n), Worst O(n²) [already sorted + bad pivot]. Randomized pivot selection avoids worst case. <strong>Stable:</strong> No. <strong>In-place:</strong> Yes.</p>
-</div><div class="cheat-card">
-<h4>Max-Min (Divide &amp; Conquer) <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
+</div><div class="article-card">
+<h4 id="sub_maxmindivideconquermethod">Max-Min (Divide &amp; Conquer) <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Find both the maximum and minimum of an array using fewer comparisons than the naive 2(n-1) approach.</p>
 <p><strong>Steps:</strong> Divide array into two halves. Recursively find (min, max) of each half. Return min = min(left_min, right_min), max = max(left_max, right_max).</p>
 <p><strong>Comparisons:</strong> T(n) = 2T(n/2) + 2 → approximately 3n/2 - 2 comparisons (vs. 2n - 2 naive).</p>
 </div></div>
 </div>
 <div class="unit-section" id="unit4">
-<h3>Unit IV: Advanced Graph Algorithms <span class="badge unit-1">CO4</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>Minimum Spanning Trees (MST)</h4>
+<h3 class="unit-heading">Unit IV: Advanced Graph Algorithms <span class="badge unit-1">CO4</span></h3>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_minimumspanningtreesmst">Minimum Spanning Trees (MST)</h4>
 <p>Acutely optimizes network connectivity. <strong>Kruskal's</strong> sorts edges globally (uses Disjoint-Set/Union-Find). <strong>Prim's</strong> grows a single tree locally from a root (uses Min-Heap).</p>
 <p><em>Example:</em> Kruskal's O(E log E) is ideal for sparse graphs; Prim's O(E + V log V) with Fibonacci heaps dominates dense graphs.</p>
 </div>
-<div class="cheat-card">
-<h4>Network Flow (Ford-Fulkerson)</h4>
+<div class="article-card">
+<h4 id="sub_networkflowfordfulkerson">Network Flow (Ford-Fulkerson)</h4>
 <p>Calculates the maximum flow in a flow network. It iteratively finds augmenting paths in a residual graph until none exist. Relies heavily on the Max-Flow Min-Cut theorem.</p>
 <p><em>Example:</em> Maximizing water flow through a plumbing network with distinct pipe capacities.</p>
 <div class="pro-tip" style="padding: 10px; border-left: 4px solid #ffcc00; background: rgba(255,204,0,0.1); margin-top: 10px;">
 <strong>Pro Tip:</strong> The Edmonds-Karp implementation uses BFS to find augmenting paths, strictly bounding execution time to O(V E^2) unlike naive DFS.
         </div>
 </div>
-<div class="cheat-card">
-<h4>All-Pairs Shortest Path (Floyd-Warshall)</h4>
+<div class="article-card">
+<h4 id="sub_allpairsshortestpathfloydwarshall">All-Pairs Shortest Path (Floyd-Warshall)</h4>
 <p>A quintessential DP algorithm computing shortest paths between all vertex pairs in O(V^3) time. It incrementally allows intermediate vertices from {1...k}.</p>
 <p><em>Example:</em> Generating a complete distance matrix for a GPS routing system between all major cities.</p>
 </div>
 </div>
 </div>
 <div class="unit-section" id="unit5">
-<h3>Unit V: NP-Completeness &amp; Approximation <span class="badge unit-1">CO5</span></h3>
-<div class="cheat-grid">
-<div class="cheat-card">
-<h4>P vs NP Classes</h4>
+<h3 class="unit-heading">Unit V: NP-Completeness &amp; Approximation <span class="badge unit-1">CO5</span></h3>
+<div class="" style="">
+<div class="article-card">
+<h4 id="sub_pvsnpclasses">P vs NP Classes</h4>
 <p><strong>P:</strong> Solvable in polynomial time. <strong>NP:</strong> Solutions are verifiable in polynomial time by a non-deterministic Turing machine.</p>
 <p><em>Example:</em> Sorting is in P. Sudoku solving is in NP (fast to check a solved board, hard to solve).</p>
 </div>
-<div class="cheat-card">
-<h4>NP-Complete Reductions</h4>
+<div class="article-card">
+<h4 id="sub_npcompletereductions">NP-Complete Reductions</h4>
 <p>A problem Y is NP-Complete if it's in NP and every NP problem polynomial-time reduces to Y. To prove a new problem Y is NPC, reduce a known NPC problem X to Y.</p>
 <p><em>Example:</em> Reducing 3-SAT (known NPC) to Clique (target Y) to prove Clique is NP-Complete.</p>
 <div class="exam-trap" style="padding: 10px; border-left: 4px solid #ff4444; background: rgba(255,68,68,0.1); margin-top: 10px;">
 <strong>Exam Trap:</strong> Reduction direction matters! To prove Y is hard, reduce the KNOWN hard problem X to Y (X -&gt; Y). Reducing Y to X proves nothing about Y's difficulty.
         </div>
 </div>
-<div class="cheat-card">
-<h4>Approximation Algorithms</h4>
+<div class="article-card">
+<h4 id="sub_approximationalgorithms">Approximation Algorithms</h4>
 <p>Heuristics for NP-Hard problems that guarantee a solution within a specific multiplicative factor (ρ) of the absolute optimal cost in polynomial time.</p>
 <p><em>Example:</em> The 2-Approximation for Vertex Cover using a greedy maximal matching guarantees the cover is at most twice the optimal size.</p>
 </div>
-<div class="cheat-card">
-<h4>Complexity Hierarchy</h4>
+<div class="article-card">
+<h4 id="sub_complexityhierarchy">Complexity Hierarchy</h4>
 <div class="compact-svg">
 <div class="mermaid">
             flowchart BT
@@ -402,7 +307,6 @@
 </div>
 <p><em>Example:</em> Halting Problem is NP-Hard but not NP-Complete (since it's undecidable and thus not in NP).</p>
 </div>
-<div style="grid-column: 1 / -1; margin-top: 2rem;"><h2 style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">Applied Examples &amp; Important Concepts</h2></div>
 </div>
 </div>
 </div>
@@ -521,5 +425,5 @@ async function openAssistant() {
             assistantApp.handleQuery(query);
         }
     </script>
-</div></body>
+</main></div></div></body>
 </html>
