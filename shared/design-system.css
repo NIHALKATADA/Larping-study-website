@@ -2317,11 +2317,7 @@ table {
 }
 
 /* 3. Safe document bounds */
-html, body {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-}
+html, body { width: 100% !important; max-width: 100% !important; }
 
 .glow-bg {
     width: 100% !important;
