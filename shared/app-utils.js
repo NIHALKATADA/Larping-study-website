@@ -794,9 +794,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const clone = svg.cloneNode(true);
             
             // Remove any inline styles that might restrict the clone
-            clone.style.maxHeight = 'none';
+            clone.style.maxHeight = '80vh';
+            clone.style.maxWidth = '700px'; // Sensible limit so it doesn't stretch massively
             clone.style.width = '100%';
-            clone.style.height = '100%';
+            clone.style.height = 'auto';
             
             overlay.innerHTML = '';
             overlay.appendChild(clone);
