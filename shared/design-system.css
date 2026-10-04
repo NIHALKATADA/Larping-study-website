@@ -2037,7 +2037,7 @@ body.report-page .banner {
     max-width: 90vw !important;
     width: auto !important;
     height: auto !important;
-    background: var(--bg-dark) !important;
+    background: var(--bg-color) !important;
     box-shadow: 0 0 0 100vw rgba(0,0,0,0.85), 0 20px 40px rgba(0,0,0,0.5) !important;
     cursor: zoom-out !important;
     padding: 2rem !important;
@@ -2065,3 +2065,4 @@ body.report-page .banner {
 [data-theme="paper"] .report-sidebar li.sub-link a.active {
     background: rgba(0, 0, 0, 0.05);
 }
+
