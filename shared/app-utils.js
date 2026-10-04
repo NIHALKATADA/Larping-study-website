@@ -812,3 +812,69 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// ScrollSpy for Table of Contents
+document.addEventListener('DOMContentLoaded', () => {
+    const sidebar = document.querySelector('.report-sidebar');
+    if (!sidebar) return;
+
+    const links = Array.from(sidebar.querySelectorAll('a[href^="#"]'));
+    if (links.length === 0) return;
+
+    const sections = links.map(link => {
+        const id = link.getAttribute('href').substring(1);
+        const target = document.getElementById(id);
+        return target ? { link, target } : null;
+    }).filter(Boolean);
+
+    let lastActive = null;
+
+    function updateScrollSpy() {
+        const scrollPosition = window.scrollY + 200; // offset for topbar and breathing room
+        
+        let current = null;
+        for (let i = sections.length - 1; i >= 0; i--) {
+            if (sections[i].target.offsetTop <= scrollPosition) {
+                current = sections[i];
+                break;
+            }
+        }
+
+        if (!current && sections.length > 0) {
+            current = sections[0];
+        }
+
+        if (current && current.link !== lastActive) {
+            links.forEach(l => l.classList.remove('active'));
+            current.link.classList.add('active');
+            lastActive = current.link;
+
+            // Scroll the sidebar itself if the active item is out of view
+            const sidebarRect = sidebar.getBoundingClientRect();
+            const linkRect = current.link.getBoundingClientRect();
+            
+            // Only auto-scroll if it's out of bounds
+            if (linkRect.top < sidebarRect.top || linkRect.bottom > sidebarRect.bottom) {
+                sidebar.scrollTo({
+                    top: current.link.offsetTop - sidebar.offsetHeight / 2,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
+
+    // Use requestAnimationFrame for smooth, non-blocking scroll spy
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                updateScrollSpy();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+    
+    // Initial trigger
+    setTimeout(updateScrollSpy, 100);
+});

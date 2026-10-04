@@ -2047,3 +2047,21 @@ body.report-page .banner {
 [data-theme="paper"] .report-main svg.expanded-svg {
     background: #ffffff !important;
 }
+
+/* ScrollSpy Active State */
+.report-sidebar li.sub-link a {
+    border-left: 3px solid transparent;
+}
+.report-sidebar li.sub-link a.active {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--subject-color, var(--primary-teal));
+    border-left: 3px solid var(--subject-color, var(--primary-teal));
+    font-weight: 600;
+}
+.report-sidebar li.unit-link a.active {
+    color: var(--subject-color, var(--primary-teal));
+    border-bottom: 2px solid var(--subject-color, var(--primary-teal));
+}
+[data-theme="paper"] .report-sidebar li.sub-link a.active {
+    background: rgba(0, 0, 0, 0.05);
+}
