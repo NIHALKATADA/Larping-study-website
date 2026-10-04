@@ -1,0 +1,72 @@
+[
+  {
+    "unit": "I",
+    "unit_title": "Unit I: Introduction, ER Modeling, and Normalization",
+    "topics": [
+      {
+        "title": "Introduction to DBMS & Architecture",
+        "content_html": "<ul><li><b>DBMS vs File System:</b> DBMS reduces data redundancy, inconsistency, and provides better security, concurrent access, and crash recovery compared to file processing.</li><li><b>Data Abstraction:</b> Hides complexity. Levels: Physical (how data is stored), Logical (what data is stored), View (what users see).</li><li><b>ANSI-SPARC Architecture:</b> Internal, Conceptual, and External schemas ensuring Data Independence.</li><li><b>Schema vs Instance:</b> Schema is the structure (static), Instance is the data at a specific moment (dynamic).</li><li><b>Data Independence:</b> Ability to modify schema at one level without changing the next. <b>Logical:</b> conceptual -> external. <b>Physical:</b> internal -> conceptual.</li><li><b>Users & DBA:</b> Naive users, application programmers, sophisticated users, DBAs. DBA tasks: schema definition, access control, backup/recovery.</li><li><b>Data Models:</b> Relational is most popular due to mathematical foundation and simplicity compared to Hierarchical, Network, and Object-Oriented.</li></ul><div class=\"exam-trap\">Don't confuse Data Abstraction with Data Independence. Abstraction hides details; Independence means changing schema doesn't break applications.</div>"
+      },
+      {
+        "title": "Relational Model & Integrity Constraints",
+        "content_html": "<ul><li><b>Keys:</b> Super key (uniquely identifies row), Candidate key (minimal super key), Primary key (chosen candidate key), Foreign key (references PK in another table).</li><li><b>Integrity Constraints:</b> Domain (valid types/values), Key (uniqueness), Entity (PK not null), Referential (FK must match PK or be null).</li></ul><div class=\"example\"><strong>Example:</strong> In Employee(EmpID, DeptID), DeptID is a Foreign Key referencing Department(DeptID).</div>"
+      },
+      {
+        "title": "Entity-Relationship (E-R) Model",
+        "content_html": "<ul><li><b>Basic Notations:</b> Entity (Rectangle), Attribute (Oval), Relationship (Diamond).</li><li><b>Attributes:</b> Simple, Composite (divisible, e.g., Address), Derived (calculated, e.g., Age from DOB), Multivalued (double oval), Key (underlined).</li><li><b>Relationships:</b> Unary, Binary, Ternary based on degree. Mapping Cardinalities: 1:1, 1:N, N:1, M:N.</li><li><b>Weak Entity:</b> Doesn't have its own primary key, depends on strong entity (double rectangle).</li><li><b>Participation:</b> Total (double line, every entity participates) vs Partial.</li><li><b>Extended ER:</b> Generalization (bottom-up), Specialization (top-down, overlapping/disjoint), Aggregation (relationship treated as entity).</li></ul><div class=\"pro-tip\">Always clearly mark cardinalities (1, N) and use double lines for total participation in E-R diagram problems!</div>"
+      },
+      {
+        "title": "Normalization & Functional Dependencies",
+        "content_html": "<ul><li><b>Functional Dependency (FD):</b> X -> Y means X uniquely determines Y.</li><li><b>Anomalies:</b> Insertion, Deletion, Update anomalies occur in unnormalized tables.</li><li><b>Normal Forms:</b> <ul><li><b>1NF:</b> Atomic values only.</li><li><b>2NF:</b> 1NF + no partial dependencies (non-prime attribute depends on whole candidate key).</li><li><b>3NF:</b> 2NF + no transitive dependencies (non-prime depends only on candidate keys).</li><li><b>BCNF:</b> Stricter 3NF. For every X -> Y, X must be a super key.</li><li><b>4NF/5NF:</b> Deal with multivalued dependencies and join dependencies.</li></ul></li><li><b>Decomposition:</b> Must be <b>Lossless-Join</b> (no spurious tuples on natural join) and <b>Dependency-Preserving</b> (all FDs can be checked).</li></ul><div class=\"exam-trap\">A relation is in BCNF but not 3NF if there's a prime attribute functionally dependent on a non-prime attribute. This violates BCNF but is allowed in 3NF!</div>"
+      },
+      {
+        "title": "Problem Solving: E-R Diagrams and Normalization",
+        "content_html": "<ul><li><b>E-R Design:</b> Common scenarios like University, Online Bookstore, Hospital, Bank, Company. Identify main entities, relationships, attributes, and cardinality.</li><li><b>Normalization Exercises:</b> Find candidate keys using FD closure. Identify highest normal form. Decompose by placing violating FDs in new tables while preserving keys.</li></ul><div class=\"example\"><strong>Example:</strong> Given R(A,B,C,D,E) with {A->B, BC->D, D->E}. Closure of {A,C}+ = {A,C,B,D,E}. So {A,C} is a candidate key.</div>"
+      }
+    ]
+  },
+  {
+    "unit": "II",
+    "unit_title": "Unit II: Relational Algebra, SQL, and Query Processing",
+    "topics": [
+      {
+        "title": "Relational Algebra & Calculus",
+        "content_html": "<ul><li><b>RDBMS vs DBMS:</b> RDBMS enforces relational model (tables) and integrity constraints, DBMS is generic.</li><li><b>Relational Algebra:</b> Procedural language. Basic ops: Select, Project, Union, Set Difference, Cartesian Product, Rename.</li><li><b>Derived Ops:</b> Join, Intersection, Division (useful for \"every\" queries).</li><li><b>Relational Calculus:</b> Non-procedural (what to get, not how). Tuple Relational Calculus (TRC) & Domain Relational Calculus (DRC).</li><li><b>Degree & Cardinality:</b> Degree = number of columns, Cardinality = number of rows.</li></ul><div class=\"example\"><strong>Example:</strong> Division: Find students enrolled in ALL courses. Students / Courses.</div>"
+      },
+      {
+        "title": "SQL Basics: DDL, DML, DCL, TCL",
+        "content_html": "<ul><li><b>DDL:</b> CREATE (make table), ALTER (modify structure), DROP (delete table/data), TRUNCATE (fast delete all rows).</li><li><b>DML:</b> INSERT, UPDATE, DELETE (remove rows conditionally), SELECT (retrieve).</li><li><b>DCL:</b> GRANT (give permissions), REVOKE (remove permissions).</li><li><b>TCL:</b> COMMIT (save permanently), ROLLBACK (undo changes), SAVEPOINT (partial rollback point).</li></ul><div class=\"pro-tip\">TRUNCATE is DDL, cannot be rolled back in many DBMS, and is faster than DELETE.</div>"
+      },
+      {
+        "title": "SQL Joins & Subqueries",
+        "content_html": "<ul><li><b>Joins:</b> Inner (matches only), Left Outer (all left + matches), Right Outer, Full Outer.</li><li><b>Equi vs Natural Join:</b> Equi uses '=' on specific columns; Natural implicitly joins on ALL columns with same name and drops duplicates.</li><li><b>Self/Cross Join:</b> Self joins table to itself; Cross join is Cartesian product.</li><li><b>Subqueries:</b> Nested query inside WHERE/HAVING. Uses IN, EXISTS, ANY, ALL.</li><li><b>Correlated Subquery:</b> Inner query references outer query; executes once for each outer row.</li></ul><div class=\"exam-trap\">Correlated subqueries are slower because the inner query runs iteratively for every row of the outer query.</div>"
+      },
+      {
+        "title": "Aggregation & Views",
+        "content_html": "<ul><li><b>Aggregate Functions:</b> COUNT, SUM, AVG, MAX, MIN.</li><li><b>GROUP BY & HAVING:</b> GROUP BY groups rows; HAVING filters groups (unlike WHERE which filters rows).</li><li><b>ORDER BY:</b> Sorts result set (ASC/DESC).</li><li><b>Views:</b> Virtual tables based on queries. Simple views (one table, updatable) vs Complex/Materialized views (joins, aggregates, read-only/stored physically).</li></ul><div class=\"pro-tip\">WHERE happens BEFORE grouping, HAVING happens AFTER grouping.</div>"
+      }
+    ]
+  },
+  {
+    "unit": "III",
+    "unit_title": "Unit III: Advanced SQL, Constraints, and Transactions",
+    "topics": [
+      {
+        "title": "Advanced DDL & Constraints",
+        "content_html": "<ul><li><b>Auto-commit:</b> DDL statements auto-commit transactions in most DBMS (cannot be rolled back).</li><li><b>Constraints:</b> NOT NULL, UNIQUE (allows nulls but distinct), PRIMARY KEY (NOT NULL + UNIQUE), FOREIGN KEY, CHECK (validates condition).</li><li><b>Table vs Column level:</b> Column-level defined inline; Table-level defined at end (mandatory for composite keys).</li><li><b>Table operations:</b> CREATE TABLE ... AS SELECT (backup), ALTER TABLE add/modify/drop columns or constraints, Rename tables.</li></ul><div class=\"example\"><strong>Example:</strong> ALTER TABLE Employee ADD CONSTRAINT fk_dept FOREIGN KEY(Dept_ID) REFERENCES Department(Dept_ID);</div>"
+      },
+      {
+        "title": "SQL Built-in Functions",
+        "content_html": "<ul><li><b>Numeric:</b> ROUND(78.3456, 2)=78.35, TRUNCATE(78.3456, 2)=78.34. CEIL, FLOOR, ABS, MOD, POWER, SQRT.</li><li><b>Date:</b> CURDATE(), DATEDIFF(date1, date2), DATE_ADD/SUB, DATE_FORMAT.</li><li><b>String:</b> CONCAT(str1, str2), UPPER/LOWER, LENGTH, SUBSTRING(str, pos, len), TRIM, REPLACE.</li></ul><div class=\"exam-trap\">ROUND rounds to nearest value, TRUNCATE just chops off the digits without rounding.</div>"
+      },
+      {
+        "title": "Set Operations & Advanced Constructs",
+        "content_html": "<ul><li><b>Set Operators:</b> UNION (removes duplicates), UNION ALL (keeps duplicates), INTERSECT, MINUS/EXCEPT. <i>Rule: Queries must have same number of columns & compatible data types.</i></li><li><b>CASE & IF:</b> Used for conditional logic in SELECT.</li><li><b>COALESCE:</b> Returns first non-null value in a list. Useful for default values.</li></ul><div class=\"example\"><strong>Example:</strong> SELECT COALESCE(Nominee_Name, 'Not Registered') FROM Accounts;</div>"
+      },
+      {
+        "title": "Transactions & Programmability",
+        "content_html": "<ul><li><b>Transactions (ACID):</b> Atomicity (all or nothing), Consistency (valid state), Isolation (concurrent safe), Durability (permanent).</li><li><b>Programmability:</b> <ul><li><b>Stored Procedure:</b> Precompiled SQL code block.</li><li><b>Sequence/AUTO_INCREMENT:</b> Generates sequential numbers.</li><li><b>Cursor:</b> Iterates through query result row-by-row.</li><li><b>Trigger:</b> Code that runs automatically BEFORE/AFTER an INSERT/UPDATE/DELETE. NEW refers to incoming row, OLD refers to existing/deleted row.</li></ul></li><li><b>Exception Handling:</b> DECLARE ... HANDLER catches errors; SIGNAL raises custom errors.</li></ul><div class=\"pro-tip\">Use BEFORE triggers for data validation/modification, and AFTER triggers for auditing/logging changes.</div>"
+      }
+    ]
+  }
+]

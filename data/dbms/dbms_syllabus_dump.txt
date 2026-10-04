@@ -1,0 +1,136 @@
+=== UNIT I ===
+- What is a DBMS? Discuss its advantages over a traditional file-processing system.
+- What do you mean by data redundancy and data inconsistency? How does a DBMS take care of these problems?
+- Give the difference between a database system and a file-based system.
+- Draw and explain the three-level (ANSI-SPARC) architecture of a DBMS.
+- What is data abstraction? Discuss the three levels of data abstraction used in a DBMS.
+- Define the terms schema and instance. Why is this distinction important?
+- What is data independence? Explain logical and physical data independence with a suitable example.
+- Who are the different types of database users? Briefly describe the role of each.
+- List the responsibilities of a Database Administrator (DBA).
+- Compare the hierarchical, network, relational and object-oriented data models. Which one is most widely used today and why?
+- State the advantages of the relational model over the other data models.
+- Explain the terms super key, candidate key, primary key and foreign key with a suitable example.
+- What are integrity constraints in a relational model? Explain domain, key, entity and referential integrity.
+- What is an E-R model? List the notations used to represent an E-R diagram.
+- Define entity, entity set, attribute and relationship, and illustrate each with a small diagram.
+- Explain the different types of attributes, simple, composite, derived, multivalued and key attribute, with examples.
+- What are the different types of relationships that can exist between two entities? Explain with diagrams.
+- What is a weak entity set? Give a suitable example.
+- Explain unary, binary and ternary relationships with the help of diagrams.
+- Differentiate between total participation and partial participation constraints in an E-R diagram.
+- Explain generalization and specialization in the Extended E-R model with an example of each.
+- What is the difference between overlapping and disjoint specialization? Illustrate with an example.
+- What is aggregation in E-R modelling? When is it required? Explain with an example.
+- Explain the concept of mapping cardinality with neat diagrams.
+- What is a functional dependency? Why is it important in the process of database design?
+- What are insertion, deletion and update anomalies? How does normalization help remove them?
+- What is normalization? Explain 1NF, 2NF and 3NF with a suitable example.
+- Define BCNF. How is it different from 3NF? Support your answer with an example.
+- Write a short note on 4NF and 5NF, with an example of each.
+- What is lossless-join decomposition? Explain with an example.
+- Define dependency-preserving decomposition and give a suitable example.
+- Draw an E-R diagram for a University Exam System, showing all entities, attributes, relationships, keys and cardinalities clearly. Also write down its schema.
+- Design an E-R diagram for an Online Book Store considering Customer, Book, Author, Order and Publisher, and write the corresponding schema.
+- A Hospital wants to maintain records of Patients and Doctors, along with the tests conducted for each patient. Draw a suitable E-R diagram and write its schema.
+- Construct an E-R diagram for a Bank that offers different types of accounts and loans through several branches. Write its schema as well.
+- Draw an E-R diagram for a scenario where Suppliers supply different Parts used in various Projects. Clearly mark the cardinalities involved.
+- An Insurance Company records the Cars owned by its Customers and the Accidents involving each car. Draw the E-R diagram for this and write its schema.
+- Design an E-R diagram for a Company that maintains data about its Employees and the Projects they are assigned to.
+- A university follows a fixed procedure for admission, an application is received, checked by the registrar's office, and finally approved or rejected by the concerned department. Represent this as an E-R diagram.
+- Consider an unnormalized relation Student_Marks(Rollno, Name, Subject, Marks) where a student appears in multiple rows, one per subject. Normalize it step by step up to 3NF, clearly stating the functional dependencies you have assumed.
+- A hostel management register stores the occupants of each room as shown in the table below. Redesign this data into a table that satisfies 1NF.
+- The table below has the composite key (StudentID, SubjectID). Identify the partial dependencies present and decompose the table into 2NF.
+- The table below has EmployeeID as its primary key. Show that it violates 3NF, and decompose it into a set of tables that satisfy 3NF.
+- In the table below, each mentor teaches only one subject. Given that the candidate keys of this table are (StudentID, Subject) and (StudentID, Mentor), check whether it satisfies BCNF. If it does not, decompose it into BCNF.
+- The table below stores a student's hobbies and the languages they know together, forcing every combination to be listed. Explain why this table is not in 4NF, and decompose it into a form that satisfies 4NF.
+- Given a relation R(A, B, C, D, E) with the functional dependency set F = {A -> B, BC -> D, D -> E}, compute the closure of {A, C} and state whether {A, C} is a candidate key of R.
+- Consider the relation Student_Course(Roll_No, Course_ID, Course_Name, Instructor) with the functional dependencies {Roll_No, Course_ID} -> Instructor, and Course_ID -> Course_Name. Identify the partial dependency present, show why the relation is not in 2NF, and decompose it into 2NF.
+- Consider the relation Employee(Emp_ID, Emp_Name, Dept_ID, Dept_Name, Dept_Location) with the functional dependencies Emp_ID -> Emp_Name, Dept_ID and Dept_ID -> Dept_Name, Dept_Location. Show that this relation is in 2NF but violates 3NF, and decompose it into 3NF.
+- Consider the relation R(Student, Subject, Teacher) with the functional dependencies {Student, Subject} -> Teacher and Teacher -> Subject. Determine whether R is in BCNF. If it is not, decompose it into a set of relations that are in BCNF.
+- Given a relation R(A, B, C, D) with the functional dependency set F = {AB -> C, C -> D, D -> A}, find all the candidate keys of R and state the highest normal form it satisfies.
+
+=== UNIT II ===
+- What is an RDBMS? How does it differ from a DBMS?
+- Explain how entities and relationships of the E-R model are represented in a relational database.
+- Consider the relational schema Student(sid, sname), Course(cid, cname), Enrollment(sid, cid). Write relational algebra expressions.
+- What are the derived operations of relational algebra? Explain Join, Intersection and Division with examples.
+- Distinguish between relational algebra and relational calculus.
+- What is the degree and cardinality of a relation?
+- What is domain relational calculus? Give an example.
+- Explain DDL, DML, DCL and TCL commands with one example of each.
+- What is the use of CREATE, ALTER, DROP and TRUNCATE commands?
+- Explain the DML commands INSERT, UPDATE, DELETE and SELECT.
+- What is the purpose of GRANT and REVOKE commands in SQL?
+- Explain COMMIT, ROLLBACK and SAVEPOINT with a suitable example.
+- What is a join? Explain the different types of joins, inner, left outer, right outer and full outer, with examples.
+- Differentiate between an equi join and a natural join, with an example of each.
+- What is a self join? What is a cross join? Explain with examples.
+- Explain the aggregate functions available in SQL, COUNT, SUM, AVG, MAX and MIN, giving an example of each.
+- What is the purpose of the GROUP BY clause? Explain with a suitable query.
+- How is the HAVING clause different from the WHERE clause? Justify with an example.
+- Explain the use of the ORDER BY clause with an example.
+- What are nested queries? Why are they used? Explain with a suitable example.
+- What is a correlated subquery? How is it different from a simple subquery?
+- Explain the use of IN, EXISTS, ANY and ALL operators in a nested query.
+- What is a view? What are its advantages?
+- Differentiate between a simple view and a materialized view.
+- Can every view be updated? Explain the limitations of an updatable view with an example.
+- Explain generalization, specialization and aggregation in the Extended E-R model.
+- What is decomposition? Explain the concepts of lossless-join and dependency-preserving decomposition.
+- How is decomposition related to normalization? Explain with a small example.
+- Compare relational algebra with SQL as two different ways of expressing the same query.
+- Write a query to display the names of students who are enrolled in the course 'DBMS'.
+- Write a query to display, course-wise, how many students have enrolled in each course.
+- Write a query using HAVING to display students who are enrolled in more than 3 courses.
+- Write a query to display the student name along with the names of the courses they have opted for, using a suitable join.
+- Write a query to find students who have not enrolled in any course so far.
+- Write a nested query to find the student(s) who scored the highest marks in the course 'DBMS'.
+- Create a view that shows the student name, course name and marks for every enrollment record.
+- Write a relational algebra expression to retrieve the names of students enrolled in the course 'DBMS'.
+- Using the division operation of relational algebra, write an expression to find students who are enrolled in every course offered.
+- Write a correlated subquery to list students who have scored more than the average marks obtained in their respective course.
+
+=== UNIT III ===
+- What is the use of CREATE TABLE, ALTER TABLE and DROP TABLE commands? Why are DDL statements said to be auto-committed?
+- Write a CREATE TABLE statement for a Library_Book table having Book_ID, Title, Author, Price and Published_Date, choosing appropriate data types.
+- Write a query to add a column Email of type VARCHAR(40) to the Student table.
+- Write a query to change the data type of the Fees column in the Student table to DECIMAL(10,2).
+- Write a query to rename the Course column of the Student table as Program.
+- Write a query to rename the table Student to Student_Info.
+- Using CREATE TABLE ... AS SELECT, write a query to create a backup table Student_Backup from the Student table.
+- Give the difference between DELETE, TRUNCATE and DROP commands.
+- Explain the five constraints NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY and CHECK, giving an example of each.
+- What is the difference between a column-level and a table-level constraint? When is a table-level constraint compulsory?
+- Write a CREATE TABLE statement for Department(Dept_ID, Dept_Name), keeping Dept_ID as the primary key.
+- Write a CREATE TABLE statement for Employee(Emp_ID, Name, Email, Dept_ID, Salary), where Emp_ID is the primary key, Name cannot be left blank and Email must be unique.
+- Using ALTER TABLE, add a foreign key on Employee.Dept_ID referencing Department.Dept_ID.
+- Using ALTER TABLE, put a check constraint on the Employee table so that Salary is always greater than zero.
+- A table can have more than one UNIQUE constraint but only one PRIMARY KEY. Justify why this is so.
+- Explain the numeric functions ROUND, TRUNCATE, CEIL, FLOOR, ABS, MOD, POWER and SQRT, giving an example of each.
+- Round off 78.3456 to 2 decimal places using ROUND, and also truncate it to 2 decimal places using TRUNCATE. Why do the two results come out different?
+- Write a query on PRODUCT_MAST to display each Product_Name along with its Price rounded to the nearest whole number.
+- Find the remainder when 29 is divided by 4 using MOD, and use the same function to check whether 29 is odd or even.
+- Find the square of 12 using POWER and the square root of 144 using SQRT.
+- Explain the date functions CURDATE, DATEDIFF, DATE_ADD/DATE_SUB and DATE_FORMAT, giving an example of each.
+- Explain the string functions CONCAT, UPPER/LOWER, LENGTH, SUBSTRING and TRIM/REPLACE, giving an example of each.
+- Using DATEDIFF, find the number of days between '2023-01-01' and '2023-12-31'.
+- Using DATE_ADD, add 45 days to the date '2024-02-01'.
+- Write a query to extract only the year and month from the date '2025-03-22'.
+- Write a query on the STUDENT table that displays the full name of every student by joining First_Name and Last_Name with a space in between.
+- Find the length of the string 'Normalization', and separately extract its first six characters using SUBSTRING.
+- Explain UNION, UNION ALL, INTERSECT and MINUS/EXCEPT with an example of each. What condition must both the SELECT statements satisfy before these operators can be applied?
+- Write a query to list every student who is a member of CLUB_CODING or CLUB_MUSIC or both, with no name repeated.
+- Write a query that lists all the rows of CLUB_CODING and CLUB_MUSIC together without removing duplicate names.
+- Write a query to find students who are members of both CLUB_CODING and CLUB_MUSIC.
+- Write a query to find students who are in CLUB_CODING but not in CLUB_MUSIC. Does the order of the two tables in this query matter? Explain.
+- What is a transaction? Explain the ACID properties with the help of a bank transfer example.
+- Explain COMMIT, ROLLBACK and SAVEPOINT with a suitable example on the ACCOUNT table.
+- Write a transaction that transfers Rs. 3000 from account A102 to account A103, placing a SAVEPOINT just before the transfer, and finally commit it.
+- Using a searched CASE statement, classify each account's Balance as 'High' if it is 25000 or more, 'Medium' if it is 15000 or more, and 'Low' otherwise.
+- Write a query using IF() that marks accounts with Balance below 15000 as 'Low Balance Alert' and the rest as 'OK'.
+- Write a query using COALESCE() that displays the Nominee_Name column, showing 'Not Registered' wherever this value is missing.
+- In one or two lines each, state the purpose of a stored procedure, a sequence (AUTO_INCREMENT in MySQL), a cursor and a trigger.
+- What is the difference between a BEFORE trigger and an AFTER trigger? What do the keywords NEW and OLD refer to inside a trigger?
+- What is the purpose of exception handling in a stored procedure? Briefly explain DECLARE ... HANDLER and the SIGNAL statement.
+

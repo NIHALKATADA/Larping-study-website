@@ -1,0 +1,96 @@
+=== UNIT I ===
+- Define Operating System.
+- List any four functions of an Operating System.
+- What is the Mode Bit? What do the values 0 and 1 represent?
+- Differentiate between User Mode and Kernel Mode.
+- Why is DMA (Direct Memory Access) more efficient than Programmed I/O?
+- What is the difference between Hardware Interrupts and Software Interrupts?
+- A user program tries to directly access a printer without going through the OS. What will happen, and why?
+- While a user is typing a document in MS Word, a timer interrupt occurs in the background. Explain what happens to the CPU's mode bit at that moment.
+- A student's program gets stuck in an infinite loop. Which OS mechanism ensures the system does not freeze permanently, and how?
+- Explain, in brief, why a Monolithic OS structure is fast but hard to maintain, whereas a Microkernel structure is more reliable but comparatively slower.
+- List and briefly explain any three functions of an Operating System.
+- Define Batch Operating System and mention one limitation of this type of system.
+- What are System Calls? List any three categories of System Calls.
+- Differentiate between Multiprogramming Operating System and Time-Sharing Operating System.
+- Explain the working of Interrupt-Driven I/O and state why it is more efficient than Programmed I/O.
+- Compare Single-Processor Systems and Multiprocessor Systems on the basis of number of CPUs, coupling, and reliability.
+- A hospital requires a system where every task must be completed within a strict deadline, or the result is considered useless even if computed correctly. Identify the suitable type of Operating System for this requirement and justify your answer.
+- A company wants to build a highly available server that must keep running even if one entire machine in the setup fails completely. Which system architecture — Single-Processor, Multiprocessor, or Clustered — should they choose? Justify your choice.
+- Trace the sequence of steps that occur when a user application issues a request to read a file from the disk, starting from the System Call up to the return of control to the user program.
+- Justify why modern Operating Systems such as Linux use a Module-Based structure instead of a purely Monolithic or purely Microkernel structure. Support your answer with suitable advantages.
+- Explain any five functions of an Operating System, giving one relevant example for each function.
+- Describe the different types of Operating Systems — Batch, Multiprogramming, Time-Sharing, and Real-Time — along with their key features.
+- Explain the five categories of System Calls with one suitable example for each category.
+- Explain the Dual-Mode operation of an Operating System. How do the Mode Bit and the Timer mechanism work together to protect the system?
+- Compare and contrast Programmed I/O, Interrupt-Driven I/O, and Direct Memory Access (DMA) in terms of CPU involvement and overall system efficiency.
+- Explain the different Operating System structures — Simple, Monolithic, Layered, Microkernel, and Module-Based — highlighting one advantage and one disadvantage of each.
+- A university wants to set up a computer lab where many students run their programs at the same time, each getting a quick, fair share of CPU time so the system feels interactive to everyone. Suggest a suitable type of Operating System and justify your answer.
+- A company's server crashes frequently because a bug in a single device driver brings down the entire kernel, since the system uses a Monolithic structure. As an OS designer, propose a better structural approach to avoid this problem, and explain the trade-offs of your proposed solution.
+- Trace a complete scenario: a user clicks 'Print' on a document. Explain, step by step, the roles of the System Call, Device Controller, Interrupt Mechanism, and the switching between User Mode and Kernel Mode in completing this print operation.
+- Critically analyze the statement: "Every Operating System structure involves trade-offs; there is no single best structure." Justify this statement with reference to the Monolithic, Microkernel, and Module-Based structures, and explain why modern operating systems like Linux adopt a hybrid, module-based approach for the best balance of performance and design.
+
+=== UNIT II ===
+- Define a Process. How is a process different from a program?
+- What is a Process Control Block (PCB)?
+- Define Context Switching.
+- Differentiate between a User Thread and a Kernel Thread.
+- Differentiate between Preemptive and Non-Preemptive Scheduling, giving one example algorithm for each.
+- What is the difference between the Ready Queue and the Waiting (Blocked) Queue?
+- While you are typing in MS Word, spell check runs in the background. Identify which one is the user thread here, and explain why it cannot run directly on the CPU.
+- A process is running on the CPU when a timer interrupt occurs. Name the mechanism the OS uses at this moment to switch to another process.
+- In a Priority Scheduling system, process P2 is repeatedly skipped because new higher-priority processes keep arriving. What problem is P2 facing?
+- A process has Arrival Time = 2 and Completion Time = 10, with Burst Time = 6. Calculate its Turnaround Time and Waiting Time.
+- List and briefly explain the five states in the process life cycle.
+- Explain any three attributes stored in a Process Control Block (PCB).
+- List the three types of process schedulers and state the function of each.
+- Explain the difference between Multiprogramming and Time-Sharing as objectives of process scheduling.
+- Explain why Context Switching is necessary, listing any three situations in which it occurs.
+- Differentiate between a Single-threaded process and a Multi-threaded process, with one example of each.
+- A user opens Chrome (a new process is created), the OS later switches control between Chrome and a music player, and finally the user closes a game using Task Manager. Identify which process operation — creation, scheduling, or termination — corresponds to each of these three actions.
+- A process must first move from disk into main memory before it can begin execution, and later gets swapped out temporarily while waiting for I/O. Identify which schedulers are responsible for these two actions respectively, and briefly explain their roles.
+- A process has Arrival Time = 0 and Burst Time = 8, but its execution actually starts at time = 3. Calculate its Response Time, and give one possible reason the process had to wait before starting.
+- Explain how a 'user thread' created for spell-check in a Word application actually gets executed by the CPU, given that the CPU can run only kernel threads. Describe the linking process step by step.
+- Explain the complete process life cycle, describing all five states (New, Ready, Running, Waiting, Terminated) and the transitions between them.
+- Explain the four major operations performed on a process — creation, scheduling, execution, and termination — with one real-world example for each.
+- Explain any five CPU scheduling algorithms (FCFS, SJF, SRTF, Round Robin, Priority Scheduling), covering the key characteristic and one limitation of each.
+- Explain User Threads and Kernel Threads in detail, listing the advantages and disadvantages of each.
+- Explain the objectives/criteria of CPU scheduling (CPU utilization, throughput, turnaround time, waiting time, response time, fairness), and describe why some of these criteria can conflict with one another.
+- Differentiate between the Long-Term Scheduler, Short-Term Scheduler, and Medium-Term Scheduler on the basis of their function, frequency of execution, and the queues they operate on.
+- Consider three processes: P1 (AT=0, BT=5), P2 (AT=1, BT=3), P3 (AT=2, BT=8). Compute the Completion Time, Turnaround Time, and Waiting Time using FCFS scheduling.
+- In a multi-core system, a web browser remains responsive overall even when one tab freezes because of a heavy script running in it, while other tabs keep working normally. Using the concepts of processes, threads, and multithreading, explain why this happens and how a well-designed browser/OS achieves this behaviour.
+- A student's laptop feels slow to respond when opening a new file because too many background applications are competing for the CPU. Identify which CPU scheduling criterion is most affected in this situation, and suggest a suitable scheduling algorithm that would improve the system's responsiveness, justifying your choice.
+- Critically compare FCFS, SJF, SRTF, Round Robin, and Priority Scheduling algorithms, and justify which algorithm would be most appropriate for (a) a batch processing system with no user interaction, and (b) an interactive time-sharing system used by multiple users. Give reasons for each choice.
+
+=== UNIT III ===
+- Define Concurrency. Give one real-world example from everyday computer usage.
+- What is a Critical Section?
+- Define an atomic operation. Why is it important for synchronization?
+- Differentiate between Independent Processes and Cooperating Processes.
+- Differentiate between a Counting Semaphore and a Binary Semaphore.
+- What is the difference between the wait() and signal() operations of a semaphore?
+- A shared variable counter = 5 is used by a Producer (which executes counter++) and a Consumer (which executes counter--) running concurrently. Due to instruction interleaving, the final value becomes 4 instead of 5. Which synchronization problem does this scenario illustrate?
+- In the Dining Philosophers problem, all five philosophers pick up their left fork at the same time and then wait for the right fork, which never becomes free. What problem occurs here?
+- While using a Test-and-Set Lock, Process P1 keeps repeatedly re-acquiring the lock, leaving Process P2 waiting indefinitely. Which requirement of the critical-section problem is being violated?
+- In the Bounded Buffer problem, the semaphore empty is initialized to n and full is initialized to 0. Explain what these two semaphores represent.
+- Explain the two models of Inter-Process Communication (IPC).
+- State and briefly explain the three requirements of a solution to the Critical-Section Problem.
+- List the four sections into which the code of a process is logically divided to control access to the critical section, and briefly describe each.
+- Differentiate between the Shared Memory and Message Passing IPC models on the basis of speed, data copying, and OS involvement.
+- Explain why high-level statements like counter++ and counter-- are not safe in a concurrent environment, referring to their internal machine-level steps.
+- Compare Semaphores and Monitors.
+- A web browser is downloading a file while a file manager displays its progress, and the two need to work together. Identify the type of process relationship involved, and explain which IPC model would be suitable here and why.
+- A shared lock variable is used by Process P1 and P2 with Test-and-Set. Trace what happens step by-step when P1 arrives while lock = false, and then P2 arrives while P1 is still inside the critical section.
+- In a library system, multiple students may read a book's catalog entry at the same time, but only one librarian should be allowed to update the entry at a time. Identify the classical synchronization problem this illustrates, and name the semaphores/variables used to solve it.
+- Explain how Peterson's Solution uses the flag[] array and the turn variable together to satisfy Mutual Exclusion, Progress, and Bounded Waiting for two processes.
+- Explain the Producer–Consumer problem using Shared Memory, describing the buffer and the shared variables involved (counter, in, out) and the role of the producer and consumer.
+- Explain Peterson's Solution in detail, including its shared variables, working, and how it satisfies the requirements of the Critical-Section Problem.
+- Explain Semaphores in detail — their two fundamental operations (wait and signal), their types (counting and binary), and their disadvantages (busy waiting and possibility of deadlock).
+- Explain the three requirements of a solution to the Critical-Section Problem — Mutual Exclusion, Progress, and Bounded Waiting — describing the significance of each with examples.
+- Explain the working of the Test-and-Set Lock hardware synchronization mechanism, and evaluate which requirements of the Critical-Section Problem it satisfies and which it does not.
+- Differentiate between Semaphores and Monitors in detail, and explain why Monitors are considered a higher-level and easier-to-use synchronization construct.
+- A shared buffer of size 5 is used by a Producer and a Consumer, and currently holds 3 items. Using the semaphores mutex = 1, empty, and full as described in class, determine the current values of empty and full, and explain step-by-step (in terms of wait/signal calls) what happens when the Producer inserts one more item into the buffer.
+- A hospital's patient database is read by many doctors at the same time but updated by only one nurse at a time; while a nurse is updating a record, no doctor should be able to read stale or partial data. Model this as the Readers–Writers problem: identify the semaphores/variables required (mutex, wrt, readcount), and explain the entry-section and exit-section logic for a reader process.
+- Five philosophers sit at a round table with five forks between them; deadlock occurs when all five pick up their left fork at the same time. Explain this deadlock scenario in detail, and describe any two solutions discussed in class (limiting participants, all-or-nothing approach, asymmetric solution) to prevent it.
+- Critically analyze why Peterson's Solution and the Test-and-Set Lock, though correct in theory, are considered insufficient for modern operating systems, and explain how Semaphores and Monitors provide a more practical and scalable synchronization mechanism, referencing the classical synchronization problems (Bounded Buffer, Readers–Writers, Dining Philosophers) as supporting evidence.
+

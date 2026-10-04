@@ -1,0 +1,104 @@
+[
+  {
+    "unit": "I",
+    "unit_title": "Unit I: Introduction and OS Structures",
+    "topics": [
+      {
+        "title": "Definition & Functions of an Operating System",
+        "content_html": "<p><b>Operating System (OS)</b>: System software that acts as an intermediary between user applications and the computer hardware.</p><ul><li><b>Functions:</b> Process Management, Memory Management, Storage Management, I/O Management, Security & Protection.</li></ul><div class='example'><strong>Example:</strong> Memory Management (allocating RAM to Chrome), Process Management (CPU scheduling), I/O (handling printers).</div>"
+      },
+      {
+        "title": "Modes of Operation & Protection",
+        "content_html": "<p><b>Dual-Mode Operation:</b> OS uses a <b>Mode Bit</b> to protect itself and other system components.</p><ul><li><b>User Mode (Bit=1):</b> Executing user applications. Restricted access.</li><li><b>Kernel Mode (Bit=0):</b> Executing OS code. Full access to hardware.</li></ul><p><b>Timer Interrupts:</b> Prevents user programs from freezing the system (e.g. infinite loops). When a timer interrupt occurs, mode bit changes to 0, returning control to OS.</p><div class='exam-trap'><strong>Exam Trap:</strong> User programs cannot directly access hardware like printers; a system call must be invoked to enter kernel mode.</div>"
+      },
+      {
+        "title": "I/O & Memory Access (DMA vs Programmed I/O)",
+        "content_html": "<ul><li><b>Programmed I/O:</b> CPU waits for I/O device. High CPU involvement, low efficiency.</li><li><b>Interrupt-Driven I/O:</b> CPU does other work until I/O interrupts. More efficient.</li><li><b>Direct Memory Access (DMA):</b> Device controller transfers data directly to/from memory without CPU intervention. <i>Most efficient for bulk data.</i></li></ul>"
+      },
+      {
+        "title": "Interrupts: Hardware vs Software",
+        "content_html": "<ul><li><b>Hardware Interrupts:</b> Triggered by hardware devices (e.g., timer, keyboard).</li><li><b>Software Interrupts (Traps):</b> Triggered by software executing a system call or encountering an error (divide by zero).</li></ul>"
+      },
+      {
+        "title": "Types of Operating Systems",
+        "content_html": "<ul><li><b>Batch OS:</b> Groups similar jobs. <i>Limitation:</i> No user interaction, CPU idle during I/O.</li><li><b>Multiprogramming:</b> Keeps multiple jobs in memory to maximize CPU utilization.</li><li><b>Time-Sharing:</b> Extends multiprogramming; gives each user a small time slice (fair share, interactive).</li><li><b>Real-Time OS:</b> Strict deadlines (e.g., hospital life-support).</li></ul>"
+      },
+      {
+        "title": "System Calls",
+        "content_html": "<p><b>System Calls:</b> Interface between a running program and the OS kernel.</p><ul><li><b>Categories:</b> Process Control (fork), File Management (read/write), Device Management (ioctl), Information Maintenance (gettimeofday), Communications (pipe).</li></ul><div class='example'><strong>Trace of 'Print':</strong> User clicks Print -> User program makes System Call -> Switch to Kernel Mode -> OS device driver communicates with Device Controller -> Controller performs I/O -> Interrupt sent back -> OS handles interrupt -> Return to User Mode.</div>"
+      },
+      {
+        "title": "System Architectures",
+        "content_html": "<ul><li><b>Single-Processor:</b> One CPU.</li><li><b>Multiprocessor:</b> Multiple CPUs, tight coupling, higher reliability/throughput.</li><li><b>Clustered:</b> Multiple separate machines working together. <i>Best for high availability (survives complete machine failure).</i></li></ul>"
+      },
+      {
+        "title": "OS Structures",
+        "content_html": "<ul><li><b>Simple/Monolithic:</b> Fast (no overhead), but hard to maintain. A bug in one driver crashes the whole kernel.</li><li><b>Layered:</b> Easy to debug, but strict layers cause performance overhead.</li><li><b>Microkernel:</b> Moves non-essential services to user space. High reliability, but slower due to message passing.</li><li><b>Module-Based (Hybrid):</b> Dynamically loadable modules (e.g., Linux). Balances monolithic performance with microkernel modularity. <i>Solves monolithic crash issues.</i></li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "II",
+    "unit_title": "Unit II: Processes and Scheduling",
+    "topics": [
+      {
+        "title": "Processes, Programs & Process Control Block",
+        "content_html": "<p><b>Program:</b> Passive entity on disk. <b>Process:</b> Active entity running in memory.</p><p><b>Process Control Block (PCB):</b> Data structure maintaining process state.</p><ul><li><b>Attributes:</b> Process State, Program Counter, CPU Registers, CPU Scheduling Info.</li></ul>"
+      },
+      {
+        "title": "Context Switching",
+        "content_html": "<p><b>Context Switching:</b> Saving the state of the old process and loading the saved state for a new process. <i>Occurs on:</i> Timer interrupts, I/O requests, higher-priority arrivals.</p>"
+      },
+      {
+        "title": "Threads & Multithreading",
+        "content_html": "<ul><li><b>User Threads:</b> Managed by user-level library. Fast, but if one thread blocks, the entire process blocks (because CPU only sees kernel threads).</li><li><b>Kernel Threads:</b> Managed by OS. Slower, but supports true concurrency on multiprocessors.</li></ul><div class='example'><strong>Example:</strong> Word spell check (user thread) must be mapped/linked to a kernel thread to run on the CPU. A browser tab freezing doesn't affect others because tabs run on separate kernel threads/processes.</div>"
+      },
+      {
+        "title": "Process Life Cycle & States",
+        "content_html": "<p><b>States:</b></p><ul><li><b>New:</b> Being created.</li><li><b>Ready:</b> Waiting for CPU.</li><li><b>Running:</b> Executing instructions.</li><li><b>Waiting (Blocked):</b> Waiting for an event (e.g., I/O).</li><li><b>Terminated:</b> Finished execution.</li></ul><div class='exam-trap'><strong>Exam Trap:</strong> A process moves to Waiting when doing I/O, but to Ready when interrupted by a timer.</div>"
+      },
+      {
+        "title": "Schedulers & Queues",
+        "content_html": "<ul><li><b>Long-Term:</b> Selects from disk to memory (controls degree of multiprogramming).</li><li><b>Short-Term:</b> Selects from Ready Queue to allocate CPU. (Very frequent)</li><li><b>Medium-Term:</b> Swaps processes in/out of memory temporarily (e.g. while waiting for I/O).</li></ul><p><b>Ready Queue:</b> Processes waiting for CPU. <b>Waiting Queue:</b> Processes waiting for I/O completion.</p>"
+      },
+      {
+        "title": "CPU Scheduling Criteria",
+        "content_html": "<ul><li><b>Utilization:</b> Keep CPU as busy as possible.</li><li><b>Throughput:</b> Processes completed per time unit.</li><li><b>Turnaround Time (TAT):</b> Completion Time - Arrival Time.</li><li><b>Waiting Time (WT):</b> Turnaround Time - Burst Time.</li><li><b>Response Time (RT):</b> Time from submission to first response (First Start - Arrival Time).</li></ul>"
+      },
+      {
+        "title": "CPU Scheduling Algorithms",
+        "content_html": "<ul><li><b>Preemptive vs Non-Preemptive:</b> Preemptive (RR, SRTF) can interrupt a running process. Non-preemptive (FCFS, basic SJF) cannot.</li><li><b>FCFS:</b> Simple, but suffers from Convoy Effect. Best for Batch.</li><li><b>SJF/SRTF:</b> Optimal average waiting time, but predicting burst time is hard.</li><li><b>Round Robin (RR):</b> Time quantum-based. Excellent for interactive Time-Sharing systems.</li><li><b>Priority:</b> Highest priority runs first. <i>Limitation: Starvation (e.g. process skipped forever). Solution: Aging.</i></li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "III",
+    "unit_title": "Unit III: Concurrency and Synchronization",
+    "topics": [
+      {
+        "title": "Concurrency & Atomic Operations",
+        "content_html": "<p><b>Concurrency:</b> Multiple tasks making progress simultaneously. <i>Example:</i> Downloading a file while browsing.</p><p><b>Atomic Operation:</b> An indivisible operation that completes entirely without interruption. High-level statements like <code>counter++</code> are NOT atomic (they involve LOAD, ADD, STORE steps at machine level).</p>"
+      },
+      {
+        "title": "Process Communication (IPC)",
+        "content_html": "<ul><li><b>Independent:</b> Cannot affect others. <b>Cooperating:</b> Can affect others (e.g. Web browser and download manager).</li><li><b>Shared Memory:</b> Fast, no OS involvement after setup. Needs synchronization.</li><li><b>Message Passing:</b> Handled by OS, slower (data copying), no conflicts.</li></ul>"
+      },
+      {
+        "title": "Critical Section Problem",
+        "content_html": "<p><b>Critical Section:</b> Part of code where shared resources are accessed. Divided into Entry, Critical, Exit, and Remainder sections.</p><ul><li><b>Mutual Exclusion:</b> Only one process in critical section.</li><li><b>Progress:</b> If no one is in CS, someone can enter.</li><li><b>Bounded Waiting:</b> A process won't wait forever.</li></ul>"
+      },
+      {
+        "title": "Hardware & Software Synchronization",
+        "content_html": "<ul><li><b>Peterson's Solution:</b> Software approach using <code>flag[]</code> and <code>turn</code>. Satisfies all three requirements.</li><li><b>Test-and-Set Lock:</b> Hardware instruction. Atomic. Can cause starvation (violates Bounded Waiting) if a process repeatedly re-acquires the lock while another waits indefinitely.</li></ul>"
+      },
+      {
+        "title": "Semaphores & Monitors",
+        "content_html": "<p><b>Semaphore:</b> Integer variable accessed via atomic <code>wait()</code> and <code>signal()</code>.</p><ul><li><b>Counting:</b> Unrestricted domain (e.g., tracking <code>empty</code> slots in a buffer).</li><li><b>Binary:</b> 0 or 1 (acts as a mutex lock).</li></ul><p><i>Disadvantages:</i> Busy waiting, risk of deadlock.</p><p><b>Monitors:</b> High-level abstraction. Easier to use than semaphores, prevents timing errors.</p>"
+      },
+      {
+        "title": "Classical Problems of Synchronization",
+        "content_html": "<ul><li><b>Bounded Buffer (Producer-Consumer):</b> Uses <code>mutex</code>, <code>empty</code> (tracks empty slots), and <code>full</code> (tracks filled slots). Race condition occurs if <code>counter++</code> and <code>counter--</code> interleave.</li><li><b>Readers-Writers:</b> Hospital db scenario. Uses <code>mutex</code>, <code>wrt</code>, <code>readcount</code>. Writers have exclusive access, readers can share.</li><li><b>Dining Philosophers:</b> Deadlock happens if all pick up left fork simultaneously. <i>Solutions:</i> Limit to 4 philosophers, pick up both or none, asymmetric picking.</li></ul>"
+      }
+    ]
+  }
+]

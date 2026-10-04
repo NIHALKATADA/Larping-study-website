@@ -1,0 +1,76 @@
+[
+  {
+    "unit": "I",
+    "unit_title": "Unit I: Machine Learning Basics & Lifecycle",
+    "topics": [
+      {
+        "title": "Machine Learning Paradigms & Evolution",
+        "content_html": "<ul><li><b>Supervised Learning:</b> Trained on labeled data (input and targets) to predict future outcomes. Applications include Regression and Classification.</li><li><b>Unsupervised Learning:</b> Trained on unlabeled data to discover hidden patterns and groupings. Applications include Clustering and Dimensionality Reduction.</li><li><b>Reinforcement Learning:</b> Learns through interaction with an environment via a feedback loop of actions and rewards.</li><li><b>Historical Evolution:</b> Transitioned from hard-coded rule-based systems to data-driven automated learning systems with distinct taxonomy models.</li></ul><div class=\"exam-trap\"><strong>Exam Trap:</strong> Remember that Unsupervised Learning has NO target labels, whereas Supervised Learning always requires targets!</div>"
+      },
+      {
+        "title": "The 7-Step Machine Learning Lifecycle & Data Processing",
+        "content_html": "<ul><li><b>Data Collection/Fetching:</b> Gathering raw data. Fetching strategies impact downstream efficiency.</li><li><b>Data Cleaning:</b> Handling missing values (e.g., imputation or dropping) and outliers to avoid degrading model fitting.</li><li><b>Exploratory Data Analysis (EDA):</b> Understanding distributions using summary statistics and visualization techniques (e.g., histograms). Primary objective is discovering underlying data structures.</li><li><b>Feature Engineering:</b> Transforming data. <b>Categorical Label Encoding</b> converts categories into numbers required by ML algorithms. <b>Feature Scaling (Normalization/Standardization)</b> ensures features have a similar scale to speed up gradient descent and prevent biased fits.</li><li><b>Model Training/Fitting:</b> Optimizing weights so the model maps inputs to targets. Python is chosen for its immense ML ecosystem.</li><li><b>Model Validation:</b> Crucial to ensure the model generalizes to new data rather than memorizing training samples.</li><li><b>Prediction/Deployment:</b> Final stage for inference.</li><li><b>Feature Selection:</b> Different from engineering, this focuses on selecting the most informative subset of independent variables.</li></ul><div class=\"pro-tip\"><strong>Pro-Tip:</strong> Missing values or unscaled data are guaranteed to degrade downstream model fitting! Always preprocess raw data.</div>"
+      },
+      {
+        "title": "Variables & Linear Regression Numerical Problems",
+        "content_html": "<ul><li><b>Independent Variables (Predictors):</b> The features (X) used to make predictions.</li><li><b>Dependent Variables (Targets):</b> The outcome (Y) we want to predict.</li></ul><div class=\"example\"><strong>Example:</strong> For model y = 12 + 4.5x (x=ads in thousands, y=sales), intercept is 12 and slope is 4.5. If x=8, y = 12 + 4.5*8 = 48 thousand sales.</div>"
+      }
+    ]
+  },
+  {
+    "unit": "II",
+    "unit_title": "Unit II: Regression Models & Optimization",
+    "topics": [
+      {
+        "title": "Regression Hypotheses & Ordinary Least Squares",
+        "content_html": "<ul><li><b>Simple LR Hypothesis:</b> h_theta(x) = theta_0 + theta_1*x.</li><li><b>Multiple LR Equation:</b> y = b0 + b1x1 + ... + bnxn.</li><li><b>Residual Error (ei):</b> Difference between actual y and predicted y_hat. Geometric interpretation: vertical distance from point to line.</li><li><b>OLS Objective:</b> Minimize the sum of squared residual errors.</li></ul>"
+      },
+      {
+        "title": "Cost Functions & Gradient Descent",
+        "content_html": "<ul><li><b>MSE Cost Function J(theta):</b> 1/(2m) * sum(h_theta(x) - y)^2. Used for optimizing regression parameters.</li><li><b>Gradient Descent:</b> Iteratively updates weights to minimize the cost function. Preferred over the Normal Equation for high-dimensional data due to better scaling.</li><li><b>Learning Rate (alpha):</b> Determines step size. Too high = divergent overshoot; too low = slow convergence.</li></ul><div class=\"exam-trap\"><strong>Exam Trap:</strong> Gradient Descent requires feature scaling to ensure smooth and rapid convergence!</div>"
+      },
+      {
+        "title": "Polynomial Regression",
+        "content_html": "<ul><li><b>Definition:</b> Fits non-linear curves to data by introducing higher-degree terms (e.g., x^2).</li><li><b>Classification:</b> It remains a <b>linear model</b> because it is linear with respect to its coefficients (weights), despite fitting a non-linear relationship.</li></ul>"
+      },
+      {
+        "title": "Overfitting, Underfitting & Bias-Variance Tradeoff",
+        "content_html": "<ul><li><b>Overfitting (High Variance):</b> Model learns noise and training data too well. Causes: highly complex model, small dataset. High training accuracy, low testing accuracy.</li><li><b>Underfitting (High Bias):</b> Model is too simple to capture data patterns. Causes: overly simple model. Poor training and testing accuracy.</li><li><b>Bias-Variance Tradeoff:</b> As complexity increases, bias drops but variance rises. We aim for optimal generalization.</li></ul><div class=\"pro-tip\"><strong>Pro-Tip:</strong> Use Regularization or add more data to fix Overfitting. Increase model complexity to fix Underfitting.</div>"
+      },
+      {
+        "title": "Regularization (Ridge vs Lasso)",
+        "content_html": "<ul><li><b>Regularization:</b> Adds a penalty term to the cost function to restrict weights.</li><li><b>Ridge (L2):</b> Adds squared weights penalty. Shrinks coefficients but rarely zeros them.</li><li><b>Lasso (L1):</b> Adds absolute weights penalty. Can zero out coefficients, thus performing <b>automatic feature selection</b>.</li></ul>"
+      },
+      {
+        "title": "Regression Evaluation Metrics",
+        "content_html": "<ul><li><b>MAE:</b> Mean Absolute Error. Average absolute differences.</li><li><b>MSE:</b> Mean Squared Error. Average squared differences. Heavily penalizes outliers.</li><li><b>RMSE:</b> Root Mean Squared Error. Better interpretation as it's in the same units as the target.</li><li><b>R-Squared (R2):</b> Measures proportion of variance explained (0 to 1).</li><li><b>Adjusted R2:</b> Penalizes the addition of useless predictors, making it superior for Multiple Linear Regression.</li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "III",
+    "unit_title": "Unit III: Classification & Ensemble Methods",
+    "topics": [
+      {
+        "title": "Logistic Regression & Classification Basics",
+        "content_html": "<ul><li><b>Sigmoid Activation:</b> sigma(z) = 1 / (1 + e^-z). Output range is (0, 1), converting real values to probabilities.</li><li><b>Decision Boundary:</b> Standard threshold is 0.5.</li><li><b>Log-Loss (Binary Cross-Entropy):</b> Single sample = -[y*log(p) + (1-y)*log(1-p)]. Standard MSE is unsuitable because it is non-convex for classification.</li></ul>"
+      },
+      {
+        "title": "K-Nearest Neighbors (KNN)",
+        "content_html": "<ul><li><b>Core Mechanism:</b> Calculates distance to all points, finds K nearest, uses majority voting.</li><li><b>Distance Metrics:</b> Euclidean (sqrt(sum((xi-yi)^2))).</li><li><b>K Tuning:</b> K too small = Overfitting (jagged boundary). K too large = Underfitting (oversmoothed boundary).</li></ul>"
+      },
+      {
+        "title": "Decision Trees & Information Theory",
+        "content_html": "<ul><li><b>Entropy:</b> H = -sum(p * log2(p)). Zero means perfect purity.</li><li><b>Gini Impurity:</b> 1 - sum(p^2). Computationally faster than entropy.</li><li><b>Information Gain:</b> Entropy(Parent) - Weighted_Entropy(Children). Used to determine optimal splits.</li></ul>"
+      },
+      {
+        "title": "Naive Bayes & SVM",
+        "content_html": "<ul><li><b>Bayes' Theorem:</b> P(A|B) = [P(B|A) * P(A)] / P(B) (Posterior = Likelihood * Prior / Evidence).</li><li><b>'Naive' Assumption:</b> Assumes features are conditionally independent given the class.</li><li><b>SVM Hyperplane & Margin:</b> Hyperplane separates classes. Support vectors are the closest points. Margin is the gap between them.</li><li><b>Hard vs Soft Margin:</b> Hard strictly separates; Soft uses slack variables (Hinge Loss) to permit errors on non-separable data.</li><li><b>Kernel Trick:</b> (Linear, Polynomial, RBF) maps data into higher dimensions for linear separability.</li></ul>"
+      },
+      {
+        "title": "Ensemble Methods & Metrics",
+        "content_html": "<ul><li><b>Bagging (Random Forests):</b> Independent parallel voting/averaging to reduce variance.</li><li><b>Boosting (AdaBoost, XGBoost):</b> Sequential training to correct errors of previous weak learners.</li><li><b>Confusion Matrix:</b> TP, TN, FP, FN.</li><li><b>Metrics:</b> Accuracy = (TP+TN)/Total. Precision = TP/(TP+FP). Recall = TP/(TP+FN). F1-Score = 2(P*R)/(P+R).</li><li><b>Imbalanced Data:</b> F1-Score is more reliable than Accuracy.</li></ul><div class=\"example\"><strong>Example:</strong> For TP=80, FP=10, Precision = 80/90.</div>"
+      }
+    ]
+  }
+]

@@ -1,0 +1,158 @@
+=== UNIT I ===
+- Differentiate between supervised, unsupervised, and reinforcement learning paradigms based on input data and learning targets.
+- List any four key stages of the 7-Step Machine Learning Lifecycle.
+- What is Exploratory Data Analysis (EDA), and what is its primary objective during data preprocessing?
+- Explain the significance of feature engineering in preparing raw datasets for model training.
+- Why is categorical label encoding required before passing categorical features into a machine learning algorithm?
+- Mention two common strategies for handling missing values during data cleaning.
+- What is the role of data normalization and feature scaling in model fitting?
+- Define model fitting and state why model validation is necessary.
+- Distinguish between data collection/fetching strategies and feature selection.
+- What is the historical significance of model training in the evolution of Machine Learning?
+- Name two common visualization techniques used during EDA to inspect data distributions.
+- Explain the difference between independent variables (predictors) and dependent variables (targets).
+- Why is Python widely chosen as a foundational language for machine learning data pipelines?
+- What constitutes a fundamental model validation workflow in the 7-step ML lifecycle?
+- Explain the three main machine learning paradigms (Supervised, Unsupervised, and Reinforcement Learning) with their key characteristics and input data requirements.
+- Describe the first three sequential stages of the 7-Step Machine Learning Lifecycle in data pipeline design.
+- Detail the importance of data cleaning principles and outline two strategies for handling missing values.
+- Define Exploratory Data Analysis (EDA) and explain how data visualization techniques aid in discovering dataset distributions.
+- Explain the role of Feature Engineering and distinguish it from feature selection.
+- Why is categorical label encoding necessary in machine learning data preprocessing prior to model fitting?
+- Differentiate between feature normalization and feature scaling, stating why they are applied before model fitting.
+- Explain the concept and significance of model training within the overall machine learning lifecycle.
+- Describe fundamental validation strategies used to evaluate the performance of a trained machine learning model.
+- Differentiate between independent predictor variables and dependent target variables using a concrete example.
+- Explain how raw data collection and fetching strategies impact the downstream efficiency of an ML pipeline.
+- Outline the historical evolution and structural taxonomy of machine learning paradigms.
+- Explain how computing statistical summaries on raw data helps in initial data understanding during EDA.
+- Why can raw unstructured/uncleaned datasets not be directly fed into standard machine learning algorithms?
+- 1. Explain the 7-Step Machine Learning Lifecycle in detail, highlighting the core objectives of data cleaning, data preprocessing, and model validation.
+- 2. Compare Supervised, Unsupervised, and Reinforcement Learning paradigms with respect to input data requirements, feedback loops, and practical target applications.
+- 3. Define Exploratory Data Analysis (EDA). Describe how computing summary statistics and creating data visualizations aid in understanding raw datasets.
+- 4. Differentiate between Feature Engineering and Feature Selection. Explain the working principles of min-max scaling, standardization (z-score), and categorical label encoding.
+- 5. Discuss the importance of data collection and fetching strategies. Explain how uncleaned data issues like missing attributes or outliers degrade downstream ML model fitting.
+- A dataset contains the following observations of study hours (X) and examination marks (Y): X: 1, 2, 3, 4, 5. Y: 35, 40, 50, 55, 65. Find the simple linear regression equation y = b0 + b1x using the least-squares method. Predict the marks for a student who studies for 6 hours.
+- For the model y = b0 + b1x, the following data are given: n = 5, sum(x) = 20, sum(y) = 75, sum(x^2) = 90, sum(x*y) = 340. Calculate the values of b0 and b1, and write the final regression equation.
+- A fitted regression model is y = 12 + 4.5x, where x represents advertising expenditure in thousands of rupees and y represents sales in thousands of units. Calculate the predicted sales when advertising expenditure is 8,000 rupees. Also interpret the slope and intercept.
+- Given the following observations: X: 2, 4, 6, 8, 10. Y: 4, 7, 8, 11, 14. Calculate x_bar, y_bar, the slope b1, and the intercept b0. Estimate Y when X = 12.
+- Consider the multiple linear regression model: y = b0 + b1x1 + b2x2. The design matrix and target vector are: X = [[1, 1, 2], [1, 2, 1], [1, 3, 4], [1, 4, 1]], y = [5, 7, 12, 13]. Calculate X^T X, X^T y, and formulate the normal equations for estimating the regression coefficients.
+- A house-price model is given by: y = 20 + 3x1 + 5x2. Here, x1 is the number of rooms and x2 is the number of parking spaces. Predict the house price when the house has 4 rooms and 2 parking spaces. Assume the price is measured in lakh rupees.
+- For a regression model with two independent variables, suppose: X^T X = [[4, 10, 6], [10, 30, 18], [6, 18, 14]], X^T y = [30, 84, 54]. Solve the normal equations to determine the regression coefficients, if the system has a unique solution.
+
+=== UNIT II ===
+- Write the hypothesis function for a Simple Linear Regression model and define its components.
+- State the equation for Multiple Linear Regression with n independent variables.
+- Define residual error ei in linear regression analysis.
+- State the primary mathematical objective of the Ordinary Least Squares (OLS) method.
+- Write the Mean Squared Error (MSE) cost function Jθ used in linear regression.
+- Why is Gradient Descent preferred over the analytical Normal Equation for high-dimensional datasets?
+- What is the learning rate α in Gradient Descent, and what happens if it is set too high?
+- Define Polynomial Regression and explain how it captures non-linear data trends.
+- Is Polynomial Regression considered a linear or non-linear model? Explain briefly.
+- Define Overfitting and list two common causes.
+- Define Underfitting and mention how it can be identified.
+- Explain the Bias-Variance tradeoff in the context of model complexity.
+- State two techniques to reduce overfitting in regression models.
+- What is Regularization, and why is it added to regression cost functions?
+- Differentiate between Ridge L2 and Lasso L1 regularization penalties.
+- Why does Lasso L1 regularization perform automatic feature selection while Ridge L2 does not?
+- Write the mathematical formula for Mean Absolute Error (MAE).
+- State the formula for Root Mean Squared Error (RMSE) and explain its advantage over MSE.
+- What does the R2 (R-squared) coefficient measure, and what is its standard range?
+- Why is Adjusted R2 preferred over standard R2 in Multiple Linear Regression?
+- Write the structural mathematical formulation for a Simple Linear Regression model and explain all its terms.
+- Explain Multiple Linear Regression and state its algebraic equation for n independent variables.
+- Define residual error in linear regression and explain its geometric interpretation.
+- Explain the Ordinary Least Squares (OLS) estimation method and state the objective function it minimizes.
+- Describe the role of the Mean Squared Error (MSE) cost function J(θ) in optimizing regression parameters.
+- Explain how Gradient Descent updates parameters iteratively to find the optimal slope and intercept.
+- Define the learning rate (α) in Gradient Descent and explain the consequences of setting it too high or too low.
+- Explain Polynomial Regression and state how higher-degree terms allow it to capture non-linear data trends.
+- Discuss why Polynomial Regression is technically classified as a linear model despite fitting non-linear curves.
+- Explain Overfitting in regression models and state two practical techniques to detect and prevent it.
+- Explain Underfitting, its primary root causes, and how its error profile differs from overfitting.
+- Describe the Bias-Variance tradeoff and how model complexity influences bias and variance.
+- Explain the principle of Regularization and why penalty terms are added to the regression loss function.
+- Compare Ridge L2 and Lasso L1 regression with respect to their mathematical penalty terms and impact on weights.
+- Explain why Lasso L1 regularization performs automatic feature selection whereas Ridge L2 shrinks coefficients without zeroing them.
+- Write the mathematical formulas for Mean Absolute Error (MAE) and Mean Squared Error (MSE) and highlight their differences.
+- Define Root Mean Squared Error (RMSE) and explain its interpretive advantage over Mean Squared Error (MSE).
+- Explain the R2 (R-squared) goodness-of-fit metric and distinguish it from Adjusted R2 in multiple regression.
+- 6. Derive the Ordinary Least Squares (OLS) error minimization framework for Simple Linear Regression and state its objective function.
+- 7. Explain how the Gradient Descent optimization algorithm updates model weights iteratively. Contrast its performance against the analytical Normal Equation on high-dimensional datasets.
+- 8. Describe Polynomial Regression and explain how higher-degree terms capture non-linear data patterns while maintaining a linear cost function structure.
+- 9. Explain the concepts of Overfitting and Underfitting. Illustrate their relationship with model complexity, training vs. testing error rates, and the Bias-Variance Tradeoff.
+- 10. Compare Ridge L2 and Lasso L1 Regularization. Explain why Lasso produces sparse solutions (zeroing weights) whereas Ridge shrinks coefficients without removing them.
+- 11. Detail the regression evaluation metrics: MAE, MSE, RMSE, and R2 Adjusted R2. Explain why RMSE and Adjusted R2 are preferred for model interpretation.
+- For the model y = b0 + b1x, use the dataset: X: 1, 2. Y: 3, 5. Start with b0 = 0, b1 = 0, and learning rate = 0.1. Using the MSE cost function, calculate the gradients and update both parameters once.
+- For a single sample x = 3, y = 9, the model is y = wx, and the loss is J = 1/2(wx - y)^2. Starting with w=0 and learning rate 0.05, perform three gradient descent iterations. Report the value of w and the loss after each iteration.
+- A dataset is given by: X: 0, 1, 2, 3. Y: 1, 3, 9, 19. Fit a quadratic model of the form: y = b0 + b1x + b2x^2. Determine the coefficients using the least-squares method.
+- Actual and predicted values of a regression model are: Actual (Y): 10, 15, 20, 25, 30. Predicted (Y_hat): 12, 13, 18, 28, 27. Calculate the MAE, MSE, and RMSE.
+
+=== UNIT III ===
+- Write the Sigmoid activation function formula and state its output range.
+- What is the standard threshold value used in Logistic Regression for binary classification?
+- Write the single-sample log-loss (binary cross-entropy) cost function formula.
+- Define a decision boundary in a binary classification problem.
+- Explain the core working mechanism of the K-Nearest Neighbors (KNN) algorithm.
+- State the formula for Euclidean distance between two points in n-dimensional space.
+- What happens to KNN classification performance if K is set too small or too large?
+- Define Entropy in Information Theory and write its mathematical equation.
+- Define Information Gain and explain its role in building Decision Trees.
+- State the Gini Impurity formula used for evaluating node splits in Decision Trees.
+- State Bayes' Theorem formula and label each term ((P(A|B), P(B| A), P(A), P(B)).
+- Why is the Naive Bayes classifier termed "naive"?
+- Define a Hyperplane and Support Vectors in Support Vector Machines (SVM).
+- Differentiate between Hard Margin SVM and Soft Margin SVM.
+- Explain the purpose of Kernel functions (e.g., RBF, Polynomial) in SVM.
+- Describe the voting structure and ensemble approach used in Random Forests.
+- Name three popular boosting ensemble algorithms covered in statistical classification.
+- Write the mathematical formulas for Precision, Recall, and F1-Score.
+- Write the mathematical formula for the Sigmoid activation function and explain how it converts real values into probabilities.
+- Explain how binary decision boundaries are defined and applied in Logistic Regression using a probability threshold.
+- Write the single-sample log-loss (binary cross-entropy) formula and explain why MSE is unsuitable for classification.
+- Describe the complete step-by-step working mechanics of the K-Nearest Neighbors (KNN) classification algorithm.
+- Write the Euclidean distance formula between two points in n-dimensional space and explain its purpose in KNN.
+- Discuss how selecting an optimal value of K affects KNN predictions and model generalization.
+- Define Entropy in Information Theory, write its mathematical expression, and state what zero entropy signifies.
+- Explain Information Gain and describe how a Decision Tree algorithm uses it to select optimal node splits.
+- Define Gini Impurity, state its mathematical formula, and compare its computational efficiency against Entropy.
+- State Bayes' Theorem formula, define each term (Prior, Likelihood, Posterior, Evidence), and explain its role in classification.
+- Explain the conditional feature independence assumption in the Naive Bayes classifier and why it is termed 'naive'.
+- Define Hyperplane, Support Vectors, and Margin in Support Vector Machines (SVM).
+- Differentiate between Hard Margin SVM and Soft Margin SVM, explaining how slack variables/hinge loss handle non-separable data.
+- Explain the Kernel trick in SVM and how it allows linear separation of non-linearly separable data in higher dimensions.
+- Describe the ensemble structure, bagging mechanics, and voting system used in Random Forest models.
+- Differentiate between Bagging (e.g., Random Forest) and Boosting ensemble techniques (e.g., AdaBoost, XGBoost).
+- Construct a 2 * 2 Confusion Matrix and write the formulas for Accuracy, Precision, Recall, and F1-Score.
+- Explain why F1-Score is a more reliable metric than Accuracy when evaluating models on imbalanced datasets.
+- 12. Explain Logistic Regression for binary classification. Derive the Sigmoid activation function and state its mathematical properties.
+- 13. Write the Log-Loss (Binary Cross-Entropy) cost function for Logistic Regression. Explain why standard MSE is non-convex and unsuitable for classification tasks.
+- 14. Describe the complete prediction mechanics of the K-Nearest Neighbors (KNN) algorithm. Discuss how distance metric selection and varying choices of K impact boundary smoothness and error rates.
+- 15. Explain how Decision Trees construct splits using Entropy, Gini Impurity, and Information Gain. State the mathematical formula for each metric.
+- 16. Explain the mathematical foundation of the Naive Bayes Classifier using Bayes\' Theorem. List all key assumptions made by the model regarding feature independence.
+- 17. Describe Support Vector Machines (SVM). Explain the concepts of Hyperplanes, Support Vectors, Maximum Margin, and the difference between Hard Margin and Soft Margin (Hinge Loss).
+- 18. Explain the Kernel Trick in SVM. Describe how Linear, Polynomial, and Radial Basis Function (RBF) kernels enable the separation of non-linearly separable data.
+- 19. Differentiate between Bagging and Boosting ensemble methods. Explain the voting/aggregation structure of Random Forests compared to sequential gradient boosting algorithms like XGBoost and AdaBoost.
+- 20. Construct a standard Confusion Matrix. Write the mathematical formulas for Accuracy, Precision, Recall, and F1-Score, explaining why F1-Score is critical for class-imbalanced data.
+- A logistic regression model produces the linear score z=2.5. Calculate the probability using the sigmoid function. If the classification threshold is 0.5, determine the predicted class.
+- For a sample, the logistic regression model produces z=-1.8. Calculate the sigmoid probability and determine whether the sample belongs to class 0 or class 1 using a threshold of 0.5.
+- Consider the logistic regression model z = -3 + 0.8x1 + 1.2x2. For a data point x1=2, x2=1: Calculate z, calculate the sigmoid probability, predict the class using threshold 0.5.
+- A binary classification model predicts the following probabilities for four observations: Actual y: 1, 1, 0, 0. Predicted p: 0.9, 0.7, 0.2, 0.4. Calculate the binary cross-entropy/log-loss.
+- KNN - Consider the following training data: Point A: (1,1, C=0), B: (2,2, C=0), C: (3,2, C=1), D: (5,4, C=1), E: (6,5, C=1). For query Q=(4,3), calculate distance from every point and classify using K=3.
+- For points P = (2,5), Q = (7,9), calculate: Euclidean distance, Manhattan distance, Squared Euclidean distance. Explain which metric gives the smallest numerical value.
+- Decision tree: A dataset contains 10 samples: 6 samples belong to Class A, 4 samples belong to Class B. Calculate the entropy.
+- Information gain: Parent 10 (6+, 4-). Left child: 5 (4+, 1-). Right child: 5 (2+, 3-). Calculate: Entropy of parent, left child, right child, Weighted entropy, Information Gain.
+- A parent node has 20 observations: 12 Class A, 8 Class B. A proposed split produces: Left: 8 A, 2 B. Right: 4 A, 6 B. Calculate the weighted Gini impurity of the split.
+- Suppose a spam classifier has: P(Spam) = 0.4, P(NotSpam) = 0.6. For an email containing words W1 and W2: P(W1|Spam)=0.7, P(W2|Spam)=0.8, P(W1|NotSpam)=0.2, P(W2|NotSpam)=0.3. Using Naive Bayes, determine whether the email is Spam or Not Spam.
+- Support vector machine: An SVM hyperplane is 2x1 + 3x2 - 6 = 0. Determine the class of the following points using f(x) = w^Tx + b and the rule f(x)>0 -> Class +1, f(x)<0 -> Class -1. Points: P1 = (1,1), P2 = (2,2), P3 = (0,1).
+- Three regression trees predict the house price as: Tree 1 = 50 lakh, Tree 2 = 55 lakh, Tree 3 = 52 lakh. Calculate the Random Forest prediction using averaging.
+- Three regression trees have predictions and weights: T1: Pred=100, W=0.2; T2: Pred=120, W=0.5; T3: Pred=110, W=0.3. Calculate the weighted ensemble prediction.
+- Multiple boosting rounds: Initial prediction: F0(x) = 20. Three weak learners produce corrections: h1(x)=10, h2(x)=6, h3(x)=4 with learning rate = 0.2. Calculate F3(x).
+- A weak classifier correctly classifies 80 out of 100 training samples. Calculate its error rate and classifier weight.
+- A binary classifier produces: TP=80, TN=70, FP=10, FN=20. Calculate: Accuracy, Precision, Recall, F1-score.
+- A binary classification model gives the following probabilities: Sample 1(A=1, P=0.9), 2(0, 0.2), 3(1, 0.7), 4(0, 0.6), 5(1, 0.8), 6(0, 0.1), 7(1, 0.4), 8(0, 0.3). Using threshold 0.5: Determine predicted classes, Construct the confusion matrix, Calculate accuracy, precision, recall, F1-score, and log-loss.
+- A decision tree predicts disease status for 100 patients: 35 true positives, 45 true negatives, 10 false positives, 10 false negatives. Calculate: Entropy of the complete dataset, Gini impurity, Accuracy, Precision, Recall, F1-score.
+- Three models provide predictions for a regression problem. Calculate the MAE and MSE for each model and determine which model performs best.
+

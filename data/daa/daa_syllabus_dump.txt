@@ -1,0 +1,68 @@
+=== UNIT I ===
+- Define an algorithm. Write any four characteristics of a good algorithm.
+- What is pseudocode? Mention two advantages of representing an algorithm using pseudocode.
+- Differentiate between time complexity and space complexity with one example.
+- Define Big-O notation.
+- What is the difference between best-case, worst-case, and average-case analysis?
+- What is asymptotic analysis? Why is it preferred over measuring execution time?
+- What is amortized analysis? Explain the aggregate method in one or two sentences.
+- Find the time complexity of the following code: sum = 0; a = 5; b = 10; sum = a + b; printf("%d", sum);
+- Find the time complexity of the following code: if (n > 100) x = x + 1; else x = x - 1; Also mention the best and worst case.
+- Find the time complexity: for(i = 1; i <= n; i++) { printf("%d", i); }
+- Find the time complexity: for(i = 1; i <= n; i = i + 2) { count++; }
+- Find the time complexity: for(i = 1; i <= n; i++) { for(j = 1; j <= n; j++) { count++; } }
+- Find the time complexity: for(i = 1; i <= n; i++) { for(j = 1; j <= i; j++) { count++; } }
+- Find the time complexity: for(i = 1; i <= n; i = i * 2) { printf("%d", i); }
+
+=== UNIT II ===
+- Define algorithm correctness. Differentiate between partial correctness and total correctness with suitable examples.
+- What is a loop invariant? Explain the three steps—initialization, maintenance, and termination—used to prove the correctness of an algorithm.
+- Explain how loop invariants can be used to prove the correctness of a sorting algorithm.
+- Perform a complete dry run of Bubble Sort on the array: 64, 25, 12, 22, 11, 90, 34, 5, 78, 43.
+- Perform a complete dry run of Bubble Sort on: 90, 80, 70, 60, 50, 40, 30, 20, 10.
+- Apply Selection Sort on the array: 29, 10, 14, 37, 13, 25, 8, 42, 17.
+- Apply Selection Sort on: 64, 25, 12, 22, 11, 90, 34, 5, 78, 43.
+- Perform a complete dry run of Insertion Sort on: 45, 12, 78, 34, 23, 9, 56, 67, 18, 5.
+- Apply Insertion Sort to the array: 9, 8, 7, 6, 5, 4, 3, 2, 1.
+- Construct a Max Heap from the following array using the bottom-up heap construction method: 45, 20, 14, 12, 31, 7, 11, 13, 8, 10.
+- Perform a complete dry run of Heap Sort on: 25, 17, 36, 2, 3, 100, 1, 19, 7.
+- Apply Counting Sort on the array: 4, 2, 7, 3, 2, 1, 6, 4, 3, 5.
+- Perform a complete dry run of Counting Sort on: 3, 1, 4, 1, 2, 7, 5, 3, 6, 2.
+- Perform a complete dry run of Radix Sort on: 170, 45, 75, 90, 802, 24, 2, 66, 329, 501.
+- Apply Radix Sort on: 329, 457, 657, 839, 436, 720, 355, 12, 98.
+- Perform a complete dry run of Bucket Sort on: 0.42, 0.32, 0.73, 0.52, 0.25, 0.91, 0.63, 0.18, 0.37, 0.81.
+- Compare Bubble, Selection, Insertion, Heap, Counting, Radix, Bucket Sort complexities.
+- Compare Bubble, Selection, Insertion on 64, 34, 25, 12, 22, 11, 90, 45, 78, 33.
+- Perform a complete dry run of Heap Sort on: 20, 15, 30, 5, 10, 25, 35, 2, 8, 12.
+- Determine whether array represents a Max Heap: 16, 14, 10, 8, 7, 9, 3, 2, 4, 1.
+- Explain the difference between BUILD-MAX-HEAP and MAX-HEAPIFY.
+- Define a heap. Differentiate between a Max Heap and a Min Heap.
+
+=== UNIT III ===
+- Define the Divide and Conquer paradigm. Explain its three basic steps with a suitable example.
+- What are the divide, conquer, and combine steps in a Divide and Conquer algorithm?
+- Explain the general structure of a Divide and Conquer algorithm. How is it different from an iterative algorithm?
+- Identify whether the following algorithms use the Divide and Conquer technique. Give reasons for your answer: Binary Search, Merge Sort, Quick Sort, Bubble Sort
+- Explain the advantages and limitations of the Divide and Conquer approach.
+- What is a recurrence relation? Explain its role in analyzing the time complexity of recursive algorithms.
+- Solve the following recurrence using the substitution method: T(n) = 2T(n/2) + n
+- Solve the following recurrence using the substitution method: T(n) = T(n/2) + 1
+- Solve the following recurrence using the Master Method: T(n) = 2T(n/2) + n
+- Solve the following recurrence using the Master Method: T(n) = 4T(n/2) + n
+- Solve the following recurrence using the Master Method: T(n) = 4T(n/2) + n²
+- Solve the following recurrence using the Master Method: T(n) = 8T(n/2) + n²
+- Solve the following recurrence using the Master Method: T(n) = T(n/2) + 1
+- Perform a complete dry run of Binary Search on the sorted array: 5, 12, 18, 23, 31, 37, 45, 52, 64, 71, 85. Search for the element 45. Show the values of low, high, mid, and the comparison at every step.
+- Perform a complete dry run of Binary Search on: 3, 8, 12, 17, 21, 29, 34, 41, 56, 63, 72, 89. Search for 50 and show why the search terminates unsuccessfully.
+- Compare Linear Search and Binary Search with respect to their best-case, average-case, and worst-case time complexities.
+- Explain why Binary Search requires the input array to be sorted. What happens if Binary Search is applied to an unsorted array?
+- Explain how the Divide and Conquer technique can be used to find the maximum and minimum elements of an array.
+- Perform a complete dry run of the Max-Min algorithm on: 35, 12, 48, 7, 23, 56, 19, 4, 31, 15. Show the division, recursive comparisons, and final maximum and minimum values.
+- Perform a complete dry run of Merge Sort on: 38, 27, 43, 3, 9, 82, 10, 15, 21, 6. Show all division and merging steps.
+- Perform a complete dry run of Quick Sort on: 64, 25, 12, 22, 11, 90, 34, 5, 78, 43. Assume the first element is selected as the pivot. Show each partitioning step.
+- Explain the best-case, average-case, and worst-case time complexity of Quick Sort.
+- Compare conventional matrix multiplication and Strassen's Matrix Multiplication with respect to the number of multiplications and asymptotic time complexity.
+- Explain how the Divide and Conquer technique can be used for multiplication of large integers.
+- Is merge sort a stable sorting algorithm? Explain.
+- When would you select merge sort instead of quick sort?
+
