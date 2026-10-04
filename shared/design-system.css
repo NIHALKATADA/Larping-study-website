@@ -1752,27 +1752,29 @@ img {
 .report-container {
     display: flex;
     flex-direction: row;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: var(--space-4);
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: #f1f5f9;
     line-height: 1.7;
     position: relative;
-    gap: 4rem;
 }
 
-/* Sidebar Navigation */
+/* Fixed Sidebar Navigation on the far left */
 .report-sidebar {
-    width: 300px;
-    flex-shrink: 0;
-    position: sticky;
-    top: 80px;
-    max-height: calc(100vh - 100px);
+    width: 320px;
+    position: fixed;
+    top: 60px; /* Below the topbar */
+    left: 0;
+    height: calc(100vh - 60px);
     overflow-y: auto;
     border-right: 1px solid rgba(255, 255, 255, 0.05);
-    padding-right: var(--space-4);
+    background: var(--bg-dark, #0f172a);
+    padding: var(--space-6) var(--space-4);
     display: block !important;
+    z-index: 10;
 }
 
 .report-sidebar h3 {
@@ -1820,18 +1822,26 @@ img {
     font-size: 0.85rem;
 }
 
-/* Main Content - Centered to balance empty space */
+/* Main Content takes remaining space, with comfortable reading width inside */
 .report-main {
     flex: 1;
-    min-width: 0;
-    max-width: 900px;
+    margin-left: 320px; /* Offset for the fixed sidebar */
+    padding: var(--space-8);
     padding-bottom: 150px;
     column-count: 1 !important;
+    /* Limit the width of the actual text for readability */
+    max-width: calc(100% - 320px);
+}
+
+/* Inner wrapper for reading width */
+.report-main > div, .report-main > h2, .report-main > h3 {
+    max-width: 900px;
 }
 
 /* Clean, open sections instead of boxed cards */
 .report-main .unit-section {
     margin-bottom: 5rem;
+    max-width: 1000px;
 }
 
 .report-main .unit-section h3.unit-heading {
@@ -1925,19 +1935,20 @@ img {
 
 @media (max-width: 1024px) {
     .report-main {
-        padding-left: var(--space-4);
-        padding-right: var(--space-4);
+        padding-left: var(--space-6);
+        padding-right: var(--space-6);
     }
 }
 
 @media (max-width: 768px) {
     .report-container {
         flex-direction: column;
-        padding: var(--space-4);
     }
     
     .mobile-toc-toggle {
         display: block;
+        margin: var(--space-4);
+        width: calc(100% - 2 * var(--space-4));
     }
 
     .report-sidebar {
@@ -1950,7 +1961,7 @@ img {
         background: rgba(0,0,0,0.2);
         padding: 1rem;
         border-radius: 8px;
-        margin-bottom: 2rem;
+        margin: 0 var(--space-4) 2rem var(--space-4);
     }
     
     .report-sidebar.show-toc {
@@ -1958,7 +1969,8 @@ img {
     }
 
     .report-main {
-        padding-left: 0;
-        padding-right: 0;
+        margin-left: 0;
+        padding: var(--space-4);
+        max-width: 100%;
     }
 }
