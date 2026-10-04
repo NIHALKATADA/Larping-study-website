@@ -1422,8 +1422,8 @@ pre code {
    ========================================= */
 .ask-ai-btn {
     position: fixed;
-    bottom: 2rem;
-    left: 2rem;
+    bottom: calc(2rem + 70px + 1rem + 60px);
+    right: 2rem;
     z-index: 9999;
 }
 
@@ -1440,8 +1440,10 @@ pre code {
 
 @media (max-width: 768px) {
     .ask-ai-btn {
-        bottom: calc(1rem + 48px + 1rem); /* Stacked above 3-dots FAB */
-        left: 1rem;
+        bottom: calc(1rem + 48px + 1rem);
+        right: 1rem;
+        left: auto;
+        z-index: 9999;
     }
     .ask-ai-widget {
         bottom: calc(1rem + 60px + 1rem + 70px) !important;
@@ -2092,4 +2094,5 @@ body.report-page .banner {
 [data-theme="paper"] #svg-overlay svg {
     background: #ffffff;
 }
+
 
