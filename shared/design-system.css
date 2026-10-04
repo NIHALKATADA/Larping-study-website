@@ -1977,3 +1977,84 @@ body.report-page .banner {
         max-width: 100%;
     }
 }
+
+/* Visual Flow / Timeline Connecting Line */
+.report-main {
+    position: relative;
+    padding-left: 3.5rem !important; /* Make room for the timeline */
+}
+
+/* The vertical track line */
+.report-main::before {
+    content: '';
+    position: absolute;
+    top: 2rem; /* Start slightly below top */
+    bottom: 5rem;
+    left: 1.5rem; /* Center of the 3.5rem padding */
+    width: 2px;
+    background: linear-gradient(to bottom, var(--subject-color, #fff) 0%, var(--subject-color, #fff) 80%, transparent 100%);
+    opacity: 0.3;
+}
+
+/* Make sure headings are relative to position the dots */
+.report-main .unit-section h3.unit-heading,
+.report-main .article-card h4 {
+    position: relative;
+}
+
+/* Major Node: Unit Heading */
+.report-main .unit-section h3.unit-heading::before {
+    content: '';
+    position: absolute;
+    /* 1.5rem from left edge of report-main minus half of the dot width (7px) */
+    left: calc(-2rem - 9px); 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background: var(--bg-dark, #0f172a);
+    border: 3px solid var(--subject-color, #fff);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(255,255,255,0.2);
+    z-index: 2;
+}
+
+/* Minor Node: Subtopic */
+.report-main .article-card h4::before {
+    content: '';
+    position: absolute;
+    /* 1.5rem from left edge minus half dot width (4px) */
+    left: calc(-2rem - 3px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--subject-color, #fff);
+    border-radius: 50%;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+/* Adjust banner alignment so its text perfectly aligns with the text inside report-main */
+body.report-page .banner {
+    padding-left: calc(var(--space-8) + 3.5rem) !important;
+}
+
+/* On mobile, we can keep the timeline but adjust spacing */
+@media (max-width: 768px) {
+    .report-main {
+        padding-left: 2.5rem !important;
+    }
+    .report-main::before {
+        left: 1rem;
+    }
+    .report-main .unit-section h3.unit-heading::before {
+        left: calc(-1.5rem - 9px);
+    }
+    .report-main .article-card h4::before {
+        left: calc(-1.5rem - 3px);
+    }
+    body.report-page .banner {
+        padding-left: 0 !important;
+    }
+}
