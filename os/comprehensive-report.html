@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <title>OS Comprehensive Report</title>
-<link href="../../shared/design-system.css" rel="stylesheet"/>
+<link href="../shared/design-system.css" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 <!-- MathJax for rendering LaTeX -->
@@ -22,7 +22,7 @@
 <div class="glow-bg"></div>
 <nav class="smart-topbar">
 <div class="topbar-left">
-<a class="btn btn-secondary sleek-back" href="../../index.html">
+<a class="btn btn-secondary sleek-back" href="../index.html">
 <svg fill="none" height="16" stroke="currentColor" stroke-width="2" style="margin-right: 6px;" viewbox="0 0 24 24" width="16"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg>
 <span class="desktop-title">Dashboard</span>
 </a>
@@ -511,7 +511,7 @@ Semaphores and Monitors use <strong>Blocking Queues</strong> instead of busy wai
 In the <em>Bounded Buffer</em> problem, counting semaphores trivially manage $N$ slots of data without spin-loops. In the <em>Readers-Writers</em> problem, semaphores scale effortlessly to allow 100 readers simultaneously. Monitors take this a step further by removing manual <code>wait/signal</code> logic entirely, preventing the catastrophic deadlocks commonly seen if a developer makes a mistake coding the <em>Dining Philosophers</em> problem.</p></div></div></div>
 </div>
 </main></div></div>
-<script src="../../shared/app-utils.js"></script>
+<script src="../shared/app-utils.js"></script>
 ﻿    
     <!-- Standalone Ask AI FAB (Bottom Left) -->
 <button aria-label="Ask AI" class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI">
@@ -627,3 +627,4 @@ async function openAssistant() {
     </script>
 </body>
 </html>
+

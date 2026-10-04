@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Quiz</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../shared/design-system.css">
+    <link rel="stylesheet" href="../shared/design-system.css">
     
 
 <!-- MathJax for rendering LaTeX -->
@@ -21,12 +21,12 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
-<body data-subject="ml" style="background:#030303;">
+<body data-subject="dbms" style="background:#030303;">
     <div class="glow-bg"></div>
 
 <header class="smart-topbar">
         <div class="topbar-left">
-            <a href="../../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: var(--text-main);">
+            <a href="../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: var(--text-main);">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                 <span style="font-weight: 600; font-size: 1.1rem; letter-spacing: 0.5px;">Dashboard</span>
             </a>
@@ -68,76 +68,19 @@
 
         <div id="quiz-list">
             
-            <div class="quiz-card" data-correct="Supervised Learning" data-type="short_answer">
-                <h3>What ML term means: learning from labeled data?</h3>
-                
-                
-                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Supervised Learning refers to learning from labeled data</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="Unsupervised Learning" data-type="short_answer">
-                <h3>What ML term means: learning from unlabeled data?</h3>
-                
-                
-                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Unsupervised Learning refers to learning from unlabeled data</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="Reinforcement Learning" data-type="short_answer">
-                <h3>What ML term means: learning via rewards and punishments?</h3>
-                
-                
-                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Reinforcement Learning refers to learning via rewards and punishments</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="Linear Regression" data-type="mcq">
-                <h3>Which algorithm is best described as: predict continuous output?</h3>
+            <div class="quiz-card" data-correct="1NF" data-type="mcq">
+                <h3>Which concept is described by: atomic domains?</h3>
                 
                 
                 <div class="mcq-options">
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Linear Regression</div>
+                    <div class="mcq-option" onclick="selectOption(this)">1NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Logistic Regression</div>
+                    <div class="mcq-option" onclick="selectOption(this)">2NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Decision Tree</div>
+                    <div class="mcq-option" onclick="selectOption(this)">3NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Random Forest</div>
+                    <div class="mcq-option" onclick="selectOption(this)">BCNF</div>
                     
                 </div>
                 
@@ -149,24 +92,24 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Linear Regression is predict continuous output</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">1NF is defined by atomic domains</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Logistic Regression" data-type="mcq">
-                <h3>Which algorithm is best described as: predict probability of binary outcome?</h3>
+            <div class="quiz-card" data-correct="2NF" data-type="mcq">
+                <h3>Which concept is described by: no partial dependencies?</h3>
                 
                 
                 <div class="mcq-options">
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Linear Regression</div>
+                    <div class="mcq-option" onclick="selectOption(this)">1NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Logistic Regression</div>
+                    <div class="mcq-option" onclick="selectOption(this)">2NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Decision Tree</div>
+                    <div class="mcq-option" onclick="selectOption(this)">3NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Random Forest</div>
+                    <div class="mcq-option" onclick="selectOption(this)">BCNF</div>
                     
                 </div>
                 
@@ -178,24 +121,24 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Logistic Regression is predict probability of binary outcome</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">2NF is defined by no partial dependencies</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Decision Tree" data-type="mcq">
-                <h3>Which algorithm is best described as: tree-like model of decisions?</h3>
+            <div class="quiz-card" data-correct="3NF" data-type="mcq">
+                <h3>Which concept is described by: no transitive dependencies?</h3>
                 
                 
                 <div class="mcq-options">
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Linear Regression</div>
+                    <div class="mcq-option" onclick="selectOption(this)">1NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Logistic Regression</div>
+                    <div class="mcq-option" onclick="selectOption(this)">2NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Decision Tree</div>
+                    <div class="mcq-option" onclick="selectOption(this)">3NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Random Forest</div>
+                    <div class="mcq-option" onclick="selectOption(this)">BCNF</div>
                     
                 </div>
                 
@@ -207,24 +150,24 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Decision Tree is tree-like model of decisions</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">3NF is defined by no transitive dependencies</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Random Forest" data-type="mcq">
-                <h3>Which algorithm is best described as: ensemble of decision trees?</h3>
+            <div class="quiz-card" data-correct="BCNF" data-type="mcq">
+                <h3>Which concept is described by: every determinant is a candidate key?</h3>
                 
                 
                 <div class="mcq-options">
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Linear Regression</div>
+                    <div class="mcq-option" onclick="selectOption(this)">1NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Logistic Regression</div>
+                    <div class="mcq-option" onclick="selectOption(this)">2NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Decision Tree</div>
+                    <div class="mcq-option" onclick="selectOption(this)">3NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Random Forest</div>
+                    <div class="mcq-option" onclick="selectOption(this)">BCNF</div>
                     
                 </div>
                 
@@ -236,24 +179,24 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Random Forest is ensemble of decision trees</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">BCNF is defined by every determinant is a candidate key</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="SVM" data-type="mcq">
-                <h3>Which algorithm is best described as: finds optimal hyperplane?</h3>
+            <div class="quiz-card" data-correct="4NF" data-type="mcq">
+                <h3>Which concept is described by: no multivalued dependencies?</h3>
                 
                 
                 <div class="mcq-options">
                     
-                    <div class="mcq-option" onclick="selectOption(this)">SVM</div>
+                    <div class="mcq-option" onclick="selectOption(this)">2NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">K-Means</div>
+                    <div class="mcq-option" onclick="selectOption(this)">3NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">PCA</div>
+                    <div class="mcq-option" onclick="selectOption(this)">BCNF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Gradient Boosting</div>
+                    <div class="mcq-option" onclick="selectOption(this)">4NF</div>
                     
                 </div>
                 
@@ -265,24 +208,24 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">SVM is finds optimal hyperplane</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">4NF is defined by no multivalued dependencies</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="K-Means" data-type="mcq">
-                <h3>Which algorithm is best described as: clustering algorithm?</h3>
+            <div class="quiz-card" data-correct="5NF" data-type="mcq">
+                <h3>Which concept is described by: no join dependencies?</h3>
                 
                 
                 <div class="mcq-options">
                     
-                    <div class="mcq-option" onclick="selectOption(this)">SVM</div>
+                    <div class="mcq-option" onclick="selectOption(this)">1NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">K-Means</div>
+                    <div class="mcq-option" onclick="selectOption(this)">2NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">PCA</div>
+                    <div class="mcq-option" onclick="selectOption(this)">3NF</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Gradient Boosting</div>
+                    <div class="mcq-option" onclick="selectOption(this)">5NF</div>
                     
                 </div>
                 
@@ -294,24 +237,100 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">K-Means is clustering algorithm</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">5NF is defined by no join dependencies</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="PCA" data-type="mcq">
-                <h3>Which algorithm is best described as: dimensionality reduction technique?</h3>
+            <div class="quiz-card" data-correct="Atomicity" data-type="short_answer">
+                <h3>What term means: all or nothing execution?</h3>
+                
+                
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Atomicity is all or nothing execution</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Consistency" data-type="short_answer">
+                <h3>What term means: database remains in valid state?</h3>
+                
+                
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Consistency is database remains in valid state</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Isolation" data-type="short_answer">
+                <h3>What term means: concurrent transactions do not interfere?</h3>
+                
+                
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Isolation is concurrent transactions do not interfere</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Durability" data-type="short_answer">
+                <h3>What term means: committed data is permanent?</h3>
+                
+                
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Durability is committed data is permanent</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Shared lock" data-type="mcq">
+                <h3>Which concept is described by: allows concurrent reads?</h3>
                 
                 
                 <div class="mcq-options">
                     
-                    <div class="mcq-option" onclick="selectOption(this)">SVM</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Shared lock</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">K-Means</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Exclusive lock</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">PCA</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Two-phase locking</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Gradient Boosting</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Timestamp ordering</div>
                     
                 </div>
                 
@@ -323,13 +342,129 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">PCA is dimensionality reduction technique</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Shared lock is defined by allows concurrent reads</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Overfitting" data-type="short_answer">
-                <h3>What ML term means: model learns noise in training data?</h3>
+            <div class="quiz-card" data-correct="Exclusive lock" data-type="mcq">
+                <h3>Which concept is described by: prevents concurrent reads and writes?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Shared lock</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Exclusive lock</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Two-phase locking</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Timestamp ordering</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Exclusive lock is defined by prevents concurrent reads and writes</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Two-phase locking" data-type="mcq">
+                <h3>Which concept is described by: guarantees serializability?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Shared lock</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Exclusive lock</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Two-phase locking</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Timestamp ordering</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Two-phase locking is defined by guarantees serializability</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Timestamp ordering" data-type="mcq">
+                <h3>Which concept is described by: uses timestamps to determine transaction order?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Shared lock</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Exclusive lock</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Two-phase locking</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Timestamp ordering</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Timestamp ordering is defined by uses timestamps to determine transaction order</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Write-ahead logging" data-type="mcq">
+                <h3>Which concept is described by: logs changes before writing to disk?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Clustered index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Non-clustered index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Hash index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Write-ahead logging</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Write-ahead logging is defined by logs changes before writing to disk</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="B-tree" data-type="short_answer">
+                <h3>What term means: balanced tree for indexing?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -342,13 +477,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Overfitting refers to model learns noise in training data</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">B-tree is balanced tree for indexing</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Underfitting" data-type="short_answer">
-                <h3>What ML term means: model too simple to capture patterns?</h3>
+            <div class="quiz-card" data-correct="B+ tree" data-type="short_answer">
+                <h3>What term means: all values are at leaf level?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -361,13 +496,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Underfitting refers to model too simple to capture patterns</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">B+ tree is all values are at leaf level</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Cross-Validation" data-type="short_answer">
-                <h3>What ML term means: assessing model generalizability?</h3>
+            <div class="quiz-card" data-correct="Hash index" data-type="short_answer">
+                <h3>What term means: O(1) lookups for equality predicates?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -380,16 +515,26 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Cross-Validation refers to assessing model generalizability</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Hash index is O(1) lookups for equality predicates</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Regularization" data-type="short_answer">
-                <h3>What ML term means: adding penalty to prevent overfitting?</h3>
+            <div class="quiz-card" data-correct="Clustered index" data-type="mcq">
+                <h3>Which concept is described by: determines physical order of data?</h3>
                 
                 
-                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Clustered index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Non-clustered index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Hash index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">B-tree</div>
+                    
+                </div>
                 
                 
                 <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
@@ -399,16 +544,26 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Regularization refers to adding penalty to prevent overfitting</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Clustered index is defined by determines physical order of data</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="L1 Regularization" data-type="short_answer">
-                <h3>What ML term means: Lasso, encourages sparsity?</h3>
+            <div class="quiz-card" data-correct="Non-clustered index" data-type="mcq">
+                <h3>Which concept is described by: has a separate structure from data rows?</h3>
                 
                 
-                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Clustered index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Non-clustered index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Hash index</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">B-tree</div>
+                    
+                </div>
                 
                 
                 <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
@@ -418,108 +573,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">L1 Regularization refers to Lasso, encourages sparsity</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Non-clustered index is defined by has a separate structure from data rows</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="L2 Regularization" data-type="short_answer">
-                <h3>What ML term means: Ridge, penalizes large weights?</h3>
-                
-                
-                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">L2 Regularization refers to Ridge, penalizes large weights</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="Precision" data-type="short_answer">
-                <h3>What ML term means: true positives / predicted positives?</h3>
-                
-                
-                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Precision refers to true positives / predicted positives</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="Recall" data-type="short_answer">
-                <h3>What ML term means: true positives / actual positives?</h3>
-                
-                
-                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Recall refers to true positives / actual positives</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="F1 Score" data-type="short_answer">
-                <h3>What ML term means: harmonic mean of precision and recall?</h3>
-                
-                
-                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">F1 Score refers to harmonic mean of precision and recall</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="ROC AUC" data-type="short_answer">
-                <h3>What ML term means: area under receiver operating characteristic?</h3>
-                
-                
-                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">ROC AUC refers to area under receiver operating characteristic</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="import sklearn..." data-type="code">
-                <h3>Write Python code using scikit-learn for: import scikit-learn.</h3>
+            <div class="quiz-card" data-correct="SELECT ...;" data-type="code">
+                <h3>Write a SQL statement to query data.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -532,13 +592,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">import sklearn is used for import scikit-learn</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">SELECT is used to query data</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="fit()..." data-type="code">
-                <h3>Write Python code using scikit-learn for: train a model.</h3>
+            <div class="quiz-card" data-correct="INSERT ...;" data-type="code">
+                <h3>Write a SQL statement to add rows.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -551,13 +611,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">fit() is used for train a model</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">INSERT is used to add rows</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="predict()..." data-type="code">
-                <h3>Write Python code using scikit-learn for: make predictions.</h3>
+            <div class="quiz-card" data-correct="UPDATE ...;" data-type="code">
+                <h3>Write a SQL statement to modify rows.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -570,13 +630,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">predict() is used for make predictions</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">UPDATE is used to modify rows</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="train_test_split..." data-type="code">
-                <h3>Write Python code using scikit-learn for: split data.</h3>
+            <div class="quiz-card" data-correct="DELETE ...;" data-type="code">
+                <h3>Write a SQL statement to remove rows.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -589,13 +649,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">train_test_split is used for split data</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">DELETE is used to remove rows</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="StandardScaler..." data-type="code">
-                <h3>Write Python code using scikit-learn for: standardize features.</h3>
+            <div class="quiz-card" data-correct="CREATE ...;" data-type="code">
+                <h3>Write a SQL statement to make a new table.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -608,13 +668,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">StandardScaler is used for standardize features</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">CREATE is used to make a new table</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="MinMaxScaler..." data-type="code">
-                <h3>Write Python code using scikit-learn for: scale to range.</h3>
+            <div class="quiz-card" data-correct="DROP ...;" data-type="code">
+                <h3>Write a SQL statement to remove a table.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -627,13 +687,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">MinMaxScaler is used for scale to range</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">DROP is used to remove a table</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="GridSearchCV..." data-type="code">
-                <h3>Write Python code using scikit-learn for: hyperparameter tuning.</h3>
+            <div class="quiz-card" data-correct="ALTER ...;" data-type="code">
+                <h3>Write a SQL statement to change table schema.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -646,13 +706,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">GridSearchCV is used for hyperparameter tuning</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">ALTER is used to change table schema</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Pipeline..." data-type="code">
-                <h3>Write Python code using scikit-learn for: chain transformations and estimator.</h3>
+            <div class="quiz-card" data-correct="TRUNCATE ...;" data-type="code">
+                <h3>Write a SQL statement to empty table without logging individual row deletes.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -665,13 +725,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Pipeline is used for chain transformations and estimator</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">TRUNCATE is used to empty table without logging individual row deletes</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="KNeighborsClassifier..." data-type="code">
-                <h3>Write Python code using scikit-learn for: KNN implementation.</h3>
+            <div class="quiz-card" data-correct="GRANT ...;" data-type="code">
+                <h3>Write a SQL statement to give privileges.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -684,13 +744,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">KNeighborsClassifier is used for KNN implementation</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">GRANT is used to give privileges</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="MLPClassifier..." data-type="code">
-                <h3>Write Python code using scikit-learn for: neural network implementation.</h3>
+            <div class="quiz-card" data-correct="REVOKE ...;" data-type="code">
+                <h3>Write a SQL statement to remove privileges.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -703,7 +763,7 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">MLPClassifier is used for neural network implementation</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">REVOKE is used to remove privileges</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
@@ -721,7 +781,7 @@
     <script>
 
 </script>
-    <script src="../../shared/quiz-logic.js"></script>
+    <script src="../shared/quiz-logic.js"></script>
 ﻿    
     <!-- Standalone Ask AI FAB (Bottom Left) -->
     <button class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI" aria-label="Ask AI">
@@ -801,7 +861,7 @@ async function openAssistant() {
     if (!assistantApp) {
                 try {
                     const { initAssistant } = await import('../../shared/assistant-ui.js');
-                    assistantApp = await initAssistant('ml');
+                    assistantApp = await initAssistant('dbms');
                     if (!assistantApp) throw new Error("App init failed");
                 } catch (e) {
                     console.error('Assistant init failed:', e);

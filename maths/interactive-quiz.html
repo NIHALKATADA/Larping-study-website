@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Quiz</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../shared/design-system.css">
+    <link rel="stylesheet" href="../shared/design-system.css">
     
 
 <!-- MathJax for rendering LaTeX -->
@@ -21,12 +21,12 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
-<body data-subject="os" style="background:#030303;">
+<body data-subject="maths" style="background:#030303;">
     <div class="glow-bg"></div>
 
 <header class="smart-topbar">
         <div class="topbar-left">
-            <a href="../../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: var(--text-main);">
+            <a href="../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: var(--text-main);">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                 <span style="font-weight: 600; font-size: 1.1rem; letter-spacing: 0.5px;">Dashboard</span>
             </a>
@@ -68,8 +68,8 @@
 
         <div id="quiz-list">
             
-            <div class="quiz-card" data-correct="Process" data-type="short_answer">
-                <h3>What OS concept is program in execution?</h3>
+            <div class="quiz-card" data-correct="Matrix" data-type="short_answer">
+                <h3>What is a rectangular array of numbers?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -82,13 +82,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Process is program in execution</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Matrix is rectangular array of numbers</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Thread" data-type="short_answer">
-                <h3>What OS concept is lightweight process?</h3>
+            <div class="quiz-card" data-correct="Determinant" data-type="short_answer">
+                <h3>What is a scalar value of a square matrix?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -101,13 +101,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Thread is lightweight process</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Determinant is scalar value of a square matrix</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Context switch" data-type="short_answer">
-                <h3>What OS concept is saving and restoring process state?</h3>
+            <div class="quiz-card" data-correct="Eigenvector" data-type="short_answer">
+                <h3>What is a vector that only scales during transformation?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -120,13 +120,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Context switch is saving and restoring process state</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Eigenvector is vector that only scales during transformation</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="PCB" data-type="short_answer">
-                <h3>What OS concept is data structure storing process info?</h3>
+            <div class="quiz-card" data-correct="Eigenvalue" data-type="short_answer">
+                <h3>What is a scalar multiple for eigenvector?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -139,24 +139,24 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">PCB is data structure storing process info</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Eigenvalue is scalar multiple for eigenvector</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="FCFS" data-type="mcq">
-                <h3>Which scheduling/sync mechanism represents: first come first served scheduling?</h3>
+            <div class="quiz-card" data-correct="Derivative" data-type="mcq">
+                <h3>Which mathematical concept is: rate of change?</h3>
                 
                 
                 <div class="mcq-options">
                     
-                    <div class="mcq-option" onclick="selectOption(this)">FCFS</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Derivative</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">SJF</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Integral</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Round Robin</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Gradient</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Priority Scheduling</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Jacobian</div>
                     
                 </div>
                 
@@ -168,24 +168,24 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">FCFS is first come first served scheduling</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Derivative is rate of change</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="SJF" data-type="mcq">
-                <h3>Which scheduling/sync mechanism represents: shortest job first scheduling?</h3>
+            <div class="quiz-card" data-correct="Integral" data-type="mcq">
+                <h3>Which mathematical concept is: area under curve?</h3>
                 
                 
                 <div class="mcq-options">
                     
-                    <div class="mcq-option" onclick="selectOption(this)">FCFS</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Derivative</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">SJF</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Integral</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Round Robin</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Gradient</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Priority Scheduling</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Jacobian</div>
                     
                 </div>
                 
@@ -197,24 +197,24 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">SJF is shortest job first scheduling</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Integral is area under curve</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Round Robin" data-type="mcq">
-                <h3>Which scheduling/sync mechanism represents: time-sliced scheduling?</h3>
+            <div class="quiz-card" data-correct="Gradient" data-type="mcq">
+                <h3>Which mathematical concept is: vector of partial derivatives?</h3>
                 
                 
                 <div class="mcq-options">
                     
-                    <div class="mcq-option" onclick="selectOption(this)">FCFS</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Derivative</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">SJF</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Integral</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Round Robin</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Gradient</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Priority Scheduling</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Jacobian</div>
                     
                 </div>
                 
@@ -226,24 +226,24 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Round Robin is time-sliced scheduling</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Gradient is vector of partial derivatives</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Priority Scheduling" data-type="mcq">
-                <h3>Which scheduling/sync mechanism represents: scheduling based on priority?</h3>
+            <div class="quiz-card" data-correct="Jacobian" data-type="mcq">
+                <h3>Which mathematical concept is: matrix of first-order partial derivatives?</h3>
                 
                 
                 <div class="mcq-options">
                     
-                    <div class="mcq-option" onclick="selectOption(this)">FCFS</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Derivative</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">SJF</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Integral</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Round Robin</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Gradient</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Priority Scheduling</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Jacobian</div>
                     
                 </div>
                 
@@ -255,24 +255,24 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Priority Scheduling is scheduling based on priority</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Jacobian is matrix of first-order partial derivatives</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Multilevel Queue" data-type="mcq">
-                <h3>Which scheduling/sync mechanism represents: processes assigned to one of several queues?</h3>
+            <div class="quiz-card" data-correct="Hessian" data-type="mcq">
+                <h3>Which mathematical concept is: matrix of second-order partial derivatives?</h3>
                 
                 
                 <div class="mcq-options">
                     
-                    <div class="mcq-option" onclick="selectOption(this)">FCFS</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Derivative</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">SJF</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Integral</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Round Robin</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Gradient</div>
                     
-                    <div class="mcq-option" onclick="selectOption(this)">Multilevel Queue</div>
+                    <div class="mcq-option" onclick="selectOption(this)">Hessian</div>
                     
                 </div>
                 
@@ -284,13 +284,42 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Multilevel Queue is processes assigned to one of several queues</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Hessian is matrix of second-order partial derivatives</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Deadlock" data-type="short_answer">
-                <h3>What OS concept is circular wait for resources?</h3>
+            <div class="quiz-card" data-correct="Taylor Series" data-type="mcq">
+                <h3>Which mathematical concept is: infinite sum representation of a function?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Derivative</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Integral</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Gradient</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Taylor Series</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Taylor Series is infinite sum representation of a function</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Mean" data-type="short_answer">
+                <h3>What is a average value?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -303,129 +332,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Deadlock is circular wait for resources</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Mean is average value</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Mutex" data-type="mcq">
-                <h3>Which scheduling/sync mechanism represents: binary semaphore for mutual exclusion?</h3>
-                
-                
-                <div class="mcq-options">
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Mutex</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Semaphore</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Monitor</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Spinlock</div>
-                    
-                </div>
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Mutex is binary semaphore for mutual exclusion</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="Semaphore" data-type="mcq">
-                <h3>Which scheduling/sync mechanism represents: integer variable for synchronization?</h3>
-                
-                
-                <div class="mcq-options">
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Mutex</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Semaphore</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Monitor</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Spinlock</div>
-                    
-                </div>
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Semaphore is integer variable for synchronization</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="Monitor" data-type="mcq">
-                <h3>Which scheduling/sync mechanism represents: high-level synchronization construct?</h3>
-                
-                
-                <div class="mcq-options">
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Mutex</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Semaphore</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Monitor</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Spinlock</div>
-                    
-                </div>
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Monitor is high-level synchronization construct</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="Spinlock" data-type="mcq">
-                <h3>Which scheduling/sync mechanism represents: busy waiting lock?</h3>
-                
-                
-                <div class="mcq-options">
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Mutex</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Semaphore</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Monitor</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Spinlock</div>
-                    
-                </div>
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Spinlock is busy waiting lock</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="Paging" data-type="short_answer">
-                <h3>What OS concept is fixed size memory blocks?</h3>
+            <div class="quiz-card" data-correct="Median" data-type="short_answer">
+                <h3>What is a middle value?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -438,13 +351,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Paging is fixed size memory blocks</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Median is middle value</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Segmentation" data-type="short_answer">
-                <h3>What OS concept is variable size memory blocks?</h3>
+            <div class="quiz-card" data-correct="Variance" data-type="short_answer">
+                <h3>What is a expected squared deviation from mean?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -457,13 +370,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Segmentation is variable size memory blocks</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Variance is expected squared deviation from mean</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Virtual Memory" data-type="short_answer">
-                <h3>What OS concept is illusion of large main memory?</h3>
+            <div class="quiz-card" data-correct="Standard Deviation" data-type="short_answer">
+                <h3>What is a square root of variance?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -476,13 +389,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Virtual Memory is illusion of large main memory</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Standard Deviation is square root of variance</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="TLB" data-type="short_answer">
-                <h3>What OS concept is hardware cache for page table?</h3>
+            <div class="quiz-card" data-correct="Normal Distribution" data-type="short_answer">
+                <h3>What is a bell curve distribution?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -495,13 +408,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">TLB is hardware cache for page table</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Normal Distribution is bell curve distribution</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Page Fault" data-type="short_answer">
-                <h3>What OS concept is accessing page not in memory?</h3>
+            <div class="quiz-card" data-correct="Poisson Distribution" data-type="short_answer">
+                <h3>What is a probability of events in fixed interval?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -514,13 +427,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Page Fault is accessing page not in memory</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Poisson Distribution is probability of events in fixed interval</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Thrashing" data-type="short_answer">
-                <h3>What OS concept is excessive paging activity?</h3>
+            <div class="quiz-card" data-correct="Bayes Theorem" data-type="short_answer">
+                <h3>What is a P(A|B) = P(B|A)P(A)/P(B)?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -533,13 +446,70 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Thrashing is excessive paging activity</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Bayes Theorem is P(A|B) = P(B|A)P(A)/P(B)</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="fork();" data-type="code">
-                <h3>Write a system call to create new process.</h3>
+            <div class="quiz-card" data-correct="Set" data-type="short_answer">
+                <h3>What is a collection of distinct elements?</h3>
+                
+                
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Set is collection of distinct elements</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Graph" data-type="short_answer">
+                <h3>What is a set of vertices and edges?</h3>
+                
+                
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Graph is set of vertices and edges</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Tree" data-type="short_answer">
+                <h3>What is a connected acyclic graph?</h3>
+                
+                
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Tree is connected acyclic graph</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="np.array()" data-type="code">
+                <h3>Write python code for create numpy array.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -552,13 +522,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">fork() is used to create new process</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">np.array is used for create numpy array</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="exec();" data-type="code">
-                <h3>Write a system call to replace process image.</h3>
+            <div class="quiz-card" data-correct="np.dot()" data-type="code">
+                <h3>Write python code for dot product.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -571,13 +541,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">exec() is used to replace process image</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">np.dot is used for dot product</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="wait();" data-type="code">
-                <h3>Write a system call to wait for child process.</h3>
+            <div class="quiz-card" data-correct="np.linalg.inv()" data-type="code">
+                <h3>Write python code for matrix inverse.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -590,13 +560,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">wait() is used to wait for child process</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">np.linalg.inv is used for matrix inverse</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="pipe();" data-type="code">
-                <h3>Write a system call to inter-process communication.</h3>
+            <div class="quiz-card" data-correct="np.linalg.eig()" data-type="code">
+                <h3>Write python code for compute eigenvalues.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -609,13 +579,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">pipe() is used to inter-process communication</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">np.linalg.eig is used for compute eigenvalues</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="mmap();" data-type="code">
-                <h3>Write a system call to memory map files.</h3>
+            <div class="quiz-card" data-correct="scipy.integrate()" data-type="code">
+                <h3>Write python code for integration library.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -628,13 +598,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">mmap() is used to memory map files</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">scipy.integrate is used for integration library</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="chmod();" data-type="code">
-                <h3>Write a system call to change file permissions.</h3>
+            <div class="quiz-card" data-correct="np.mean()" data-type="code">
+                <h3>Write python code for calculate mean.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -647,13 +617,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">chmod() is used to change file permissions</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">np.mean is used for calculate mean</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="chown();" data-type="code">
-                <h3>Write a system call to change file owner.</h3>
+            <div class="quiz-card" data-correct="np.std()" data-type="code">
+                <h3>Write python code for calculate standard deviation.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -666,13 +636,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">chown() is used to change file owner</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">np.std is used for calculate standard deviation</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="kill();" data-type="code">
-                <h3>Write a system call to send signal to process.</h3>
+            <div class="quiz-card" data-correct="np.var()" data-type="code">
+                <h3>Write python code for calculate variance.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -685,13 +655,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">kill() is used to send signal to process</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">np.var is used for calculate variance</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="signal();" data-type="code">
-                <h3>Write a system call to handle process signal.</h3>
+            <div class="quiz-card" data-correct="sympy.diff()" data-type="code">
+                <h3>Write python code for symbolic differentiation.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -704,13 +674,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">signal() is used to handle process signal</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">sympy.diff is used for symbolic differentiation</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="open();" data-type="code">
-                <h3>Write a system call to open a file descriptor.</h3>
+            <div class="quiz-card" data-correct="sympy.integrate()" data-type="code">
+                <h3>Write python code for symbolic integration.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -723,7 +693,7 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">open() is used to open a file descriptor</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">sympy.integrate is used for symbolic integration</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
@@ -741,7 +711,7 @@
     <script>
 
 </script>
-    <script src="../../shared/quiz-logic.js"></script>
+    <script src="../shared/quiz-logic.js"></script>
 ﻿    
     <!-- Standalone Ask AI FAB (Bottom Left) -->
     <button class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI" aria-label="Ask AI">
@@ -821,7 +791,7 @@ async function openAssistant() {
     if (!assistantApp) {
                 try {
                     const { initAssistant } = await import('../../shared/assistant-ui.js');
-                    assistantApp = await initAssistant('os');
+                    assistantApp = await initAssistant('maths');
                     if (!assistantApp) throw new Error("App init failed");
                 } catch (e) {
                     console.error('Assistant init failed:', e);

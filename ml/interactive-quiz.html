@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Quiz</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../shared/design-system.css">
+    <link rel="stylesheet" href="../shared/design-system.css">
     
 
 <!-- MathJax for rendering LaTeX -->
@@ -21,12 +21,12 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
-<body data-subject="java" style="background:#030303;">
+<body data-subject="ml" style="background:#030303;">
     <div class="glow-bg"></div>
 
 <header class="smart-topbar">
         <div class="topbar-left">
-            <a href="../../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: var(--text-main);">
+            <a href="../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: var(--text-main);">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                 <span style="font-weight: 600; font-size: 1.1rem; letter-spacing: 0.5px;">Dashboard</span>
             </a>
@@ -68,8 +68,8 @@
 
         <div id="quiz-list">
             
-            <div class="quiz-card" data-correct="Encapsulation" data-type="short_answer">
-                <h3>What term refers to hiding internal state in Java?</h3>
+            <div class="quiz-card" data-correct="Supervised Learning" data-type="short_answer">
+                <h3>What ML term means: learning from labeled data?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -82,13 +82,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Encapsulation is hiding internal state</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Supervised Learning refers to learning from labeled data</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Polymorphism" data-type="short_answer">
-                <h3>What term refers to ability to take many forms in Java?</h3>
+            <div class="quiz-card" data-correct="Unsupervised Learning" data-type="short_answer">
+                <h3>What ML term means: learning from unlabeled data?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -101,13 +101,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Polymorphism is ability to take many forms</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Unsupervised Learning refers to learning from unlabeled data</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Inheritance" data-type="short_answer">
-                <h3>What term refers to acquiring properties of another class in Java?</h3>
+            <div class="quiz-card" data-correct="Reinforcement Learning" data-type="short_answer">
+                <h3>What ML term means: learning via rewards and punishments?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -120,13 +120,216 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Inheritance is acquiring properties of another class</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Reinforcement Learning refers to learning via rewards and punishments</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Abstraction" data-type="short_answer">
-                <h3>What term refers to hiding implementation details in Java?</h3>
+            <div class="quiz-card" data-correct="Linear Regression" data-type="mcq">
+                <h3>Which algorithm is best described as: predict continuous output?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Linear Regression</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Logistic Regression</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Decision Tree</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Random Forest</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Linear Regression is predict continuous output</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Logistic Regression" data-type="mcq">
+                <h3>Which algorithm is best described as: predict probability of binary outcome?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Linear Regression</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Logistic Regression</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Decision Tree</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Random Forest</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Logistic Regression is predict probability of binary outcome</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Decision Tree" data-type="mcq">
+                <h3>Which algorithm is best described as: tree-like model of decisions?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Linear Regression</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Logistic Regression</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Decision Tree</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Random Forest</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Decision Tree is tree-like model of decisions</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Random Forest" data-type="mcq">
+                <h3>Which algorithm is best described as: ensemble of decision trees?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Linear Regression</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Logistic Regression</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Decision Tree</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Random Forest</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Random Forest is ensemble of decision trees</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="SVM" data-type="mcq">
+                <h3>Which algorithm is best described as: finds optimal hyperplane?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">SVM</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">K-Means</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">PCA</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Gradient Boosting</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">SVM is finds optimal hyperplane</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="K-Means" data-type="mcq">
+                <h3>Which algorithm is best described as: clustering algorithm?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">SVM</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">K-Means</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">PCA</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Gradient Boosting</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">K-Means is clustering algorithm</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="PCA" data-type="mcq">
+                <h3>Which algorithm is best described as: dimensionality reduction technique?</h3>
+                
+                
+                <div class="mcq-options">
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">SVM</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">K-Means</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">PCA</div>
+                    
+                    <div class="mcq-option" onclick="selectOption(this)">Gradient Boosting</div>
+                    
+                </div>
+                
+                
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
+                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
+                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
+                </div>
+                
+                <div class="feedback-box">
+                    <strong class="feedback-title"></strong>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">PCA is dimensionality reduction technique</p>
+                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
+                </div>
+            </div>
+            
+            <div class="quiz-card" data-correct="Overfitting" data-type="short_answer">
+                <h3>What ML term means: model learns noise in training data?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -139,187 +342,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Abstraction is hiding implementation details</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Overfitting refers to model learns noise in training data</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Method overloading" data-type="mcq">
-                <h3>Which Java feature/exception relates to: same method name, different parameters?</h3>
-                
-                
-                <div class="mcq-options">
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Method overloading</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Method overriding</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">final</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">static</div>
-                    
-                </div>
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Method overloading maps to same method name, different parameters</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="Method overriding" data-type="mcq">
-                <h3>Which Java feature/exception relates to: same method signature in subclass?</h3>
-                
-                
-                <div class="mcq-options">
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Method overloading</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Method overriding</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">final</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">static</div>
-                    
-                </div>
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Method overriding maps to same method signature in subclass</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="final" data-type="mcq">
-                <h3>Which Java feature/exception relates to: prevents inheritance or modification?</h3>
-                
-                
-                <div class="mcq-options">
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Method overloading</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Method overriding</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">final</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">static</div>
-                    
-                </div>
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">final maps to prevents inheritance or modification</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="static" data-type="mcq">
-                <h3>Which Java feature/exception relates to: belongs to the class rather than instance?</h3>
-                
-                
-                <div class="mcq-options">
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Method overloading</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Method overriding</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">final</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">static</div>
-                    
-                </div>
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">static maps to belongs to the class rather than instance</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="abstract" data-type="mcq">
-                <h3>Which Java feature/exception relates to: class that cannot be instantiated?</h3>
-                
-                
-                <div class="mcq-options">
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Method overloading</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Method overriding</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">final</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">abstract</div>
-                    
-                </div>
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">abstract maps to class that cannot be instantiated</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="interface" data-type="mcq">
-                <h3>Which Java feature/exception relates to: contract for classes to implement?</h3>
-                
-                
-                <div class="mcq-options">
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Method overloading</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">Method overriding</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">final</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">interface</div>
-                    
-                </div>
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">interface maps to contract for classes to implement</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="ArrayList" data-type="short_answer">
-                <h3>What term refers to dynamic array implementation in Java?</h3>
+            <div class="quiz-card" data-correct="Underfitting" data-type="short_answer">
+                <h3>What ML term means: model too simple to capture patterns?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -332,13 +361,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">ArrayList is dynamic array implementation</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Underfitting refers to model too simple to capture patterns</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="LinkedList" data-type="short_answer">
-                <h3>What term refers to doubly-linked list implementation in Java?</h3>
+            <div class="quiz-card" data-correct="Cross-Validation" data-type="short_answer">
+                <h3>What ML term means: assessing model generalizability?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -351,13 +380,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">LinkedList is doubly-linked list implementation</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Cross-Validation refers to assessing model generalizability</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="HashMap" data-type="short_answer">
-                <h3>What term refers to key-value storage using hashing in Java?</h3>
+            <div class="quiz-card" data-correct="Regularization" data-type="short_answer">
+                <h3>What ML term means: adding penalty to prevent overfitting?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -370,13 +399,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">HashMap is key-value storage using hashing</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Regularization refers to adding penalty to prevent overfitting</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="HashSet" data-type="short_answer">
-                <h3>What term refers to collection with no duplicates in Java?</h3>
+            <div class="quiz-card" data-correct="L1 Regularization" data-type="short_answer">
+                <h3>What ML term means: Lasso, encourages sparsity?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -389,13 +418,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">HashSet is collection with no duplicates</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">L1 Regularization refers to Lasso, encourages sparsity</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="TreeMap" data-type="short_answer">
-                <h3>What term refers to sorted key-value storage in Java?</h3>
+            <div class="quiz-card" data-correct="L2 Regularization" data-type="short_answer">
+                <h3>What ML term means: Ridge, penalizes large weights?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -408,13 +437,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">TreeMap is sorted key-value storage</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">L2 Regularization refers to Ridge, penalizes large weights</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="PriorityQueue" data-type="short_answer">
-                <h3>What term refers to queue based on priority heap in Java?</h3>
+            <div class="quiz-card" data-correct="Precision" data-type="short_answer">
+                <h3>What ML term means: true positives / predicted positives?</h3>
                 
                 
                 <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
@@ -427,26 +456,16 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">PriorityQueue is queue based on priority heap</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Precision refers to true positives / predicted positives</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="NullPointerException" data-type="mcq">
-                <h3>Which Java feature/exception relates to: accessing method on null object?</h3>
+            <div class="quiz-card" data-correct="Recall" data-type="short_answer">
+                <h3>What ML term means: true positives / actual positives?</h3>
                 
                 
-                <div class="mcq-options">
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">NullPointerException</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">ArrayIndexOutOfBoundsException</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">ClassCastException</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">ArithmeticException</div>
-                    
-                </div>
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
                 
                 
                 <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
@@ -456,26 +475,16 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">NullPointerException maps to accessing method on null object</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Recall refers to true positives / actual positives</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="ArrayIndexOutOfBoundsException" data-type="mcq">
-                <h3>Which Java feature/exception relates to: accessing invalid array index?</h3>
+            <div class="quiz-card" data-correct="F1 Score" data-type="short_answer">
+                <h3>What ML term means: harmonic mean of precision and recall?</h3>
                 
                 
-                <div class="mcq-options">
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">NullPointerException</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">ArrayIndexOutOfBoundsException</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">ClassCastException</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">ArithmeticException</div>
-                    
-                </div>
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
                 
                 
                 <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
@@ -485,26 +494,16 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">ArrayIndexOutOfBoundsException maps to accessing invalid array index</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">F1 Score refers to harmonic mean of precision and recall</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="ClassCastException" data-type="mcq">
-                <h3>Which Java feature/exception relates to: invalid cast between types?</h3>
+            <div class="quiz-card" data-correct="ROC AUC" data-type="short_answer">
+                <h3>What ML term means: area under receiver operating characteristic?</h3>
                 
                 
-                <div class="mcq-options">
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">NullPointerException</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">ArrayIndexOutOfBoundsException</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">ClassCastException</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">ArithmeticException</div>
-                    
-                </div>
+                <input type="text" class="short-answer-input" placeholder="Type your one-word answer...">
                 
                 
                 <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
@@ -514,42 +513,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">ClassCastException maps to invalid cast between types</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">ROC AUC refers to area under receiver operating characteristic</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="ArithmeticException" data-type="mcq">
-                <h3>Which Java feature/exception relates to: dividing by zero?</h3>
-                
-                
-                <div class="mcq-options">
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">NullPointerException</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">ArrayIndexOutOfBoundsException</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">ClassCastException</div>
-                    
-                    <div class="mcq-option" onclick="selectOption(this)">ArithmeticException</div>
-                    
-                </div>
-                
-                
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;" class="action-buttons">
-                    <button class="btn btn-primary verify-btn" style="flex: 2; margin-top: 0;" onclick="verifyAnswer(this)">Verify Answer</button>
-                    <button class="btn btn-secondary reveal-btn" style="flex: 1; margin-top: 0;" onclick="revealAnswer(this)">Reveal Answer</button>
-                </div>
-                
-                <div class="feedback-box">
-                    <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">ArithmeticException maps to dividing by zero</p>
-                    <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
-                </div>
-            </div>
-            
-            <div class="quiz-card" data-correct="Thread example;" data-type="code">
-                <h3>Write code using Thread keyword/class.</h3>
+            <div class="quiz-card" data-correct="import sklearn..." data-type="code">
+                <h3>Write Python code using scikit-learn for: import scikit-learn.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -562,13 +532,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Uses Thread for class to create a new thread</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">import sklearn is used for import scikit-learn</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="Runnable example;" data-type="code">
-                <h3>Write code using Runnable keyword/class.</h3>
+            <div class="quiz-card" data-correct="fit()..." data-type="code">
+                <h3>Write Python code using scikit-learn for: train a model.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -581,13 +551,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Uses Runnable for interface to create a new thread</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">fit() is used for train a model</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="synchronized example;" data-type="code">
-                <h3>Write code using synchronized keyword/class.</h3>
+            <div class="quiz-card" data-correct="predict()..." data-type="code">
+                <h3>Write Python code using scikit-learn for: make predictions.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -600,13 +570,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Uses synchronized for keyword for thread safety</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">predict() is used for make predictions</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="wait() example;" data-type="code">
-                <h3>Write code using wait() keyword/class.</h3>
+            <div class="quiz-card" data-correct="train_test_split..." data-type="code">
+                <h3>Write Python code using scikit-learn for: split data.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -619,13 +589,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Uses wait() for method to pause thread execution</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">train_test_split is used for split data</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="notify() example;" data-type="code">
-                <h3>Write code using notify() keyword/class.</h3>
+            <div class="quiz-card" data-correct="StandardScaler..." data-type="code">
+                <h3>Write Python code using scikit-learn for: standardize features.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -638,13 +608,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Uses notify() for method to wake up a waiting thread</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">StandardScaler is used for standardize features</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="join() example;" data-type="code">
-                <h3>Write code using join() keyword/class.</h3>
+            <div class="quiz-card" data-correct="MinMaxScaler..." data-type="code">
+                <h3>Write Python code using scikit-learn for: scale to range.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -657,13 +627,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Uses join() for method to wait for thread termination</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">MinMaxScaler is used for scale to range</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="try example;" data-type="code">
-                <h3>Write code using try keyword/class.</h3>
+            <div class="quiz-card" data-correct="GridSearchCV..." data-type="code">
+                <h3>Write Python code using scikit-learn for: hyperparameter tuning.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -676,13 +646,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Uses try for block for code that may throw exceptions</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">GridSearchCV is used for hyperparameter tuning</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="catch example;" data-type="code">
-                <h3>Write code using catch keyword/class.</h3>
+            <div class="quiz-card" data-correct="Pipeline..." data-type="code">
+                <h3>Write Python code using scikit-learn for: chain transformations and estimator.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -695,13 +665,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Uses catch for block to handle exceptions</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Pipeline is used for chain transformations and estimator</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="finally example;" data-type="code">
-                <h3>Write code using finally keyword/class.</h3>
+            <div class="quiz-card" data-correct="KNeighborsClassifier..." data-type="code">
+                <h3>Write Python code using scikit-learn for: KNN implementation.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -714,13 +684,13 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Uses finally for block that always executes</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">KNeighborsClassifier is used for KNN implementation</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
             
-            <div class="quiz-card" data-correct="throw example;" data-type="code">
-                <h3>Write code using throw keyword/class.</h3>
+            <div class="quiz-card" data-correct="MLPClassifier..." data-type="code">
+                <h3>Write Python code using scikit-learn for: neural network implementation.</h3>
                 
                 
                 <textarea class="code-input" placeholder="Type your code here..."></textarea>
@@ -733,7 +703,7 @@
                 
                 <div class="feedback-box">
                     <strong class="feedback-title"></strong>
-                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">Uses throw for keyword to manually raise an exception</p>
+                    <p class="feedback-expl" style="margin-top: 0.5rem; opacity: 0.9;">MLPClassifier is used for neural network implementation</p>
                     <button class="btn btn-secondary override-btn" style="margin-top: 1rem; font-size: 0.8rem; padding: 0.5rem 1rem; display: none;" onclick="overrideCorrect(this)">I was actually right (Override)</button>
                 </div>
             </div>
@@ -751,7 +721,7 @@
     <script>
 
 </script>
-    <script src="../../shared/quiz-logic.js"></script>
+    <script src="../shared/quiz-logic.js"></script>
 ﻿    
     <!-- Standalone Ask AI FAB (Bottom Left) -->
     <button class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI" aria-label="Ask AI">
@@ -831,7 +801,7 @@ async function openAssistant() {
     if (!assistantApp) {
                 try {
                     const { initAssistant } = await import('../../shared/assistant-ui.js');
-                    assistantApp = await initAssistant('java');
+                    assistantApp = await initAssistant('ml');
                     if (!assistantApp) throw new Error("App init failed");
                 } catch (e) {
                     console.error('Assistant init failed:', e);

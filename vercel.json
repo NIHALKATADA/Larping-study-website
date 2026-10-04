@@ -1,11 +1,5 @@
 {
   "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/:subject/comprehensive-report",
-      "destination": "/subjects/:subject/comprehensive-report.html"
-    }
-  ],
   "redirects": [
     {
       "source": "/subjects/:subject/comprehensive-report",
