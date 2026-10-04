@@ -248,3 +248,18 @@ If you ever add new questions to the JSON question banks, you can easily regener
 python scripts/build_comprehensive_reports.py
 ```
 This script will parse all 6 subjects, generate the transitions, rebuild the dynamic sidebars, and inject the open-flow textbook content into the HTML templates without overwriting the UI layout.
+
+### 3. Automated Syllabus Weaving (AI-Powered)
+To ensure the highly-curated visual cheat sheets maintain 100% syllabus coverage without looking like a raw Q&A dump, you can run the AI weaving script. This script uses the Gemini API to intelligently cross-reference the Question Banks against the HTML reports, extracting only the missing *information* and weaving it naturally into the existing textbook paragraphs.
+
+**Prerequisites:**
+```bash
+pip install -r requirements.txt
+export GEMINI_API_KEY="your_api_key_here"
+```
+
+**Run the Weaver:**
+```bash
+python scripts/weave_missing_info.py
+```
+This process preserves the beautiful hand-crafted UI (like ER Diagram SVGs) while expanding the depth of the explanations.
