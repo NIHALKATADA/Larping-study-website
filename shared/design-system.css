@@ -2444,4 +2444,19 @@ html, body { width: 100% !important; max-width: 100% !important; }
         display: flex !important;
         z-index: 99999 !important;
     }
+
+    /* Restore FAB to the right side, stacked above AI button */
+    .fab-container {
+        bottom: 120px !important;
+        right: 1rem !important;
+        left: auto !important;
+        align-items: flex-end !important;
+    }
+    
+    .fab-menu {
+        right: 0 !important;
+        left: auto !important;
+        align-items: flex-end !important;
+        margin-bottom: 1.5rem !important;
+    }
 }
