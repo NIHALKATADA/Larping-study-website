@@ -882,3 +882,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial trigger
     setTimeout(updateScrollSpy, 100);
 });
+
+// Close TOC on mobile when clicking a link
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.report-sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+      const sidebar = document.querySelector('.report-sidebar');
+      if (sidebar && sidebar.classList.contains('show-toc')) {
+        sidebar.classList.remove('show-toc');
+      }
+    });
+  });
+});
