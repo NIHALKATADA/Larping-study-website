@@ -1420,12 +1420,7 @@ pre code {
 /* =========================================
    ASK AI WIDGET
    ========================================= */
-.ask-ai-btn {
-    position: fixed;
-    bottom: calc(2rem + 70px + 1rem + 60px);
-    right: 2rem;
-    z-index: 9999;
-}
+
 
 .ask-ai-widget {
     position: fixed;
@@ -1439,12 +1434,7 @@ pre code {
 }
 
 @media (max-width: 768px) {
-    .ask-ai-btn {
-        bottom: calc(1rem + 48px + 1rem);
-        right: 1rem;
-        left: auto;
-        z-index: 9999;
-    }
+    
     .ask-ai-widget {
         bottom: calc(1rem + 60px + 1rem + 70px) !important;
         left: 1rem !important;
@@ -2103,4 +2093,33 @@ body.report-page .banner {
     .glow-bg { background: radial-gradient(circle at top, rgba(var(--subject-color-rgb, 15, 118, 110), 0.15) 0%, transparent 100%) !important; height: 100vh !important; width: 100vw !important; top: 0 !important; left: 0 !important; transform: none !important; }
     .report-container { padding: 1rem !important; }
     .mobile-toc-toggle { width: 100%; margin-bottom: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px; color: var(--text-main); font-weight: 600; text-align: left; }
+}
+
+/* =========================================
+   ASK AI WIDGET
+   ========================================= */
+.ask-ai-btn {
+    position: fixed;
+    bottom: calc(2rem + 70px + 1rem); /* Stack above quiz progress */
+    right: 2rem;
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+body.report-page .ask-ai-btn {
+    bottom: 2rem; /* No progress widget on reports, drop to corner */
+    right: 2rem;
+}
+
+@media (max-width: 768px) {
+    .ask-ai-btn {
+        bottom: calc(1rem + 50px + 1rem);
+        right: 1rem;
+        left: auto;
+    }
+    
+    body.report-page .ask-ai-btn {
+        bottom: 1rem;
+        right: 1rem;
+    }
 }
