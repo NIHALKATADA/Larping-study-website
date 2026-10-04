@@ -2459,4 +2459,9 @@ html, body { width: 100% !important; max-width: 100% !important; }
         align-items: flex-end !important;
         margin-bottom: 1.5rem !important;
     }
+
+    /* Show close button only when TOC is open on mobile */
+    .report-sidebar.show-toc #mobileCloseTocBtn {
+        display: block !important;
+    }
 }
