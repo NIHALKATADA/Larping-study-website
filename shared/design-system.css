@@ -1629,14 +1629,17 @@ img {
     font-weight: 700;
 }
 
-/* Remove all boxed backgrounds */
+/* Restore beautiful glass cards in single column */
 .report-main .article-card {
     margin-bottom: 3.5rem;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
+    background: var(--card-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2) !important;
+    padding: var(--space-6) !important;
+    border-radius: 12px;
     width: 100%;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
 .report-main .article-card h4 {
@@ -1748,6 +1751,7 @@ img {
     }
 }
 
+
 /* Single Column Clean Layout with Sidebar */
 .report-container {
     display: flex;
@@ -1772,7 +1776,7 @@ img {
     overflow-y: auto;
     border-right: 1px solid rgba(255, 255, 255, 0.05);
     padding-right: var(--space-4);
-    background: transparent !important; /* Seamless with page background */
+    background: transparent !important;
     display: block !important;
 }
 
@@ -1830,10 +1834,10 @@ img {
 
 /* Limit the width of the actual text for readability */
 .report-main > div, .report-main > h2, .report-main > h3, .report-main .unit-section {
-    max-width: 900px;
+    max-width: 1000px; /* Slightly wider since they are in cards now */
 }
 
-/* Clean, open sections instead of boxed cards */
+/* Clean, open sections */
 .report-main .unit-section {
     margin-bottom: 5rem;
 }
@@ -1848,14 +1852,17 @@ img {
     font-weight: 700;
 }
 
-/* Remove all boxed backgrounds */
+/* Restore beautiful glass cards in single column */
 .report-main .article-card {
     margin-bottom: 3.5rem;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
+    background: var(--card-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2) !important;
+    padding: var(--space-6) !important;
+    border-radius: 12px;
     width: 100%;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
 .report-main .article-card h4 {
@@ -1963,10 +1970,10 @@ img {
 
 /* Align Banner with main content on Report Page */
 body.report-page .banner {
-    margin-left: 300px; /* Offset for sidebar */
+    margin-left: 300px;
     padding-left: var(--space-8);
     text-align: left;
-    max-width: 900px; /* Match main content width */
+    max-width: 1000px;
 }
 
 @media (max-width: 768px) {
@@ -1977,5 +1984,3 @@ body.report-page .banner {
         max-width: 100%;
     }
 }
-
-
