@@ -763,8 +763,23 @@ window.closeModal = function(id) {
 };
 
 
-// SVG Lightbox Logic
+// SVG Lightbox Logic with Smooth Overlay
 document.addEventListener('DOMContentLoaded', () => {
+    // Create overlay container
+    const overlay = document.createElement('div');
+    overlay.id = 'svg-overlay';
+    document.body.appendChild(overlay);
+
+    const closeOverlay = () => {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+            overlay.innerHTML = '';
+        }, 300); // Wait for transition
+    };
+
+    overlay.addEventListener('click', closeOverlay);
+
     const svgs = document.querySelectorAll('.report-main svg');
     svgs.forEach(svg => {
         const w = svg.getAttribute('width');
@@ -776,39 +791,27 @@ document.addEventListener('DOMContentLoaded', () => {
         
         svg.addEventListener('click', (e) => {
             e.stopPropagation();
-            const isExpanded = svg.classList.contains('expanded-svg');
+            const clone = svg.cloneNode(true);
             
-            // Close any currently expanded SVGs
-            document.querySelectorAll('.expanded-svg').forEach(el => {
-                el.classList.remove('expanded-svg');
-            });
+            // Remove any inline styles that might restrict the clone
+            clone.style.maxHeight = 'none';
+            clone.style.width = '100%';
+            clone.style.height = '100%';
             
-            if (!isExpanded) {
-                svg.classList.add('expanded-svg');
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
+            overlay.innerHTML = '';
+            overlay.appendChild(clone);
+            
+            // Trigger reflow for animation
+            void overlay.offsetWidth;
+            
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
     });
     
-    // Click outside to close
-    document.addEventListener('click', (e) => {
-        const expanded = document.querySelector('.expanded-svg');
-        if (expanded && !expanded.contains(e.target)) {
-            expanded.classList.remove('expanded-svg');
-            document.body.style.overflow = '';
-        }
-    });
-    
-    // Escape key to close
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            const expanded = document.querySelector('.expanded-svg');
-            if (expanded) {
-                expanded.classList.remove('expanded-svg');
-                document.body.style.overflow = '';
-            }
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+            closeOverlay();
         }
     });
 });
