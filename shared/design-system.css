@@ -1960,3 +1960,20 @@ img {
         display: block !important;
     }
 }
+
+/* Align Banner with main content on Report Page */
+body.report-page .banner {
+    margin-left: 300px; /* Offset for sidebar */
+    padding-left: var(--space-8);
+    text-align: left;
+    max-width: 900px; /* Match main content width */
+}
+
+@media (max-width: 768px) {
+    body.report-page .banner {
+        margin-left: 0;
+        padding-left: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+}
