@@ -838,7 +838,7 @@ header.banner {
     border: 1px solid rgba(var(--subject-color-rgb, 255,255,255), 0.4);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    color: #fff;
+    color: var(--heading-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -953,7 +953,7 @@ header.banner {
 }
 
 .close-modal:hover {
-    color: #fff;
+    color: var(--heading-color);
 }
 
 .modal-body {
@@ -1076,7 +1076,7 @@ h1, h2, h3, h4, h5, h6, .brand, .feedback-title {
     height: 100%;
     backface-visibility: hidden;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     flex-direction: column;
@@ -1478,7 +1478,7 @@ pre code {
     color: #6ee7b7;
 }
 .cheat-card .exam-trap strong, .cheat-card .pro-tip strong {
-    color: #fff;
+    color: var(--heading-color);
 }
 
 /* MOBILE UI FIXES */
@@ -1538,7 +1538,7 @@ img {
     margin: 0 auto;
     padding: var(--space-4);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #f1f5f9;
+    color: var(--text-main);
     line-height: 1.7;
     position: relative;
 }
@@ -1558,7 +1558,7 @@ img {
 
 .report-sidebar h3 {
     font-size: 1.1rem;
-    color: #94a3b8;
+    color: var(--text-light);
     margin-bottom: var(--space-4);
     font-weight: 600;
     text-transform: uppercase;
@@ -1574,7 +1574,7 @@ img {
 .report-sidebar li a {
     display: block;
     padding: var(--space-2) var(--space-3);
-    color: #94a3b8;
+    color: var(--text-light);
     text-decoration: none;
     border-radius: 6px;
     transition: all 0.2s;
@@ -1590,7 +1590,7 @@ img {
 .report-sidebar li.unit-link a {
     font-weight: 600;
     margin-top: var(--space-4);
-    color: #e2e8f0;
+    color: var(--heading-color);
     border-bottom: 1px solid rgba(255,255,255,0.05);
     border-radius: 0;
     padding-left: 0;
@@ -1641,7 +1641,7 @@ img {
 
 .report-main .article-card h4 {
     font-size: 1.5rem;
-    color: #f8fafc;
+    color: var(--heading-color);
     margin-top: 0;
     margin-bottom: 1.25rem;
     font-weight: 600;
@@ -1650,24 +1650,24 @@ img {
 /* Content Typography */
 .report-main p, .report-main ul, .report-main div {
     font-size: 1.1rem;
-    color: #cbd5e1;
+    color: var(--text-main);
     margin-bottom: 1rem;
 }
 
 .report-main strong {
-    color: #fff;
+    color: var(--heading-color);
     font-weight: 600;
 }
 
 /* High contrast examples and tips */
 .report-main .example {
     margin-top: 1.5rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--card-bg);
     padding: 1.25rem;
     border-radius: 8px;
-    border-left: 4px solid rgba(255,255,255,0.2);
+    border-left: 4px solid var(--text-light);
     font-size: 1rem;
-    color: #e2e8f0;
+    color: var(--heading-color);
 }
 
 .report-main .article-card .pro-tip,
@@ -1698,7 +1698,7 @@ img {
     display: none;
     width: 100%;
     background: rgba(255,255,255,0.05);
-    color: #f1f5f9;
+    color: var(--text-main);
     border: 1px solid rgba(255,255,255,0.1);
     padding: 1rem;
     font-weight: bold;
@@ -1757,7 +1757,7 @@ img {
     margin: 0;
     padding: var(--space-4) var(--space-8);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #f1f5f9;
+    color: var(--text-main);
     line-height: 1.7;
     gap: 4rem;
 }
@@ -1778,7 +1778,7 @@ img {
 
 .report-sidebar h3 {
     font-size: 1.1rem;
-    color: #94a3b8;
+    color: var(--text-light);
     margin-bottom: var(--space-4);
     font-weight: 600;
     text-transform: uppercase;
@@ -1794,7 +1794,7 @@ img {
 .report-sidebar li a {
     display: block;
     padding: var(--space-2) var(--space-3);
-    color: #94a3b8;
+    color: var(--text-light);
     text-decoration: none;
     border-radius: 6px;
     transition: all 0.2s;
@@ -1810,7 +1810,7 @@ img {
 .report-sidebar li.unit-link a {
     font-weight: 600;
     margin-top: var(--space-4);
-    color: #e2e8f0;
+    color: var(--heading-color);
     border-bottom: 1px solid rgba(255,255,255,0.05);
     border-radius: 0;
     padding-left: 0;
@@ -1860,7 +1860,7 @@ img {
 
 .report-main .article-card h4 {
     font-size: 1.5rem;
-    color: #f8fafc;
+    color: var(--heading-color);
     margin-top: 0;
     margin-bottom: 1.25rem;
     font-weight: 600;
@@ -1869,24 +1869,24 @@ img {
 /* Content Typography */
 .report-main p, .report-main ul, .report-main div {
     font-size: 1.1rem;
-    color: #cbd5e1;
+    color: var(--text-main);
     margin-bottom: 1rem;
 }
 
 .report-main strong {
-    color: #fff;
+    color: var(--heading-color);
     font-weight: 600;
 }
 
 /* High contrast examples and tips */
 .report-main .example {
     margin-top: 1.5rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--card-bg);
     padding: 1.25rem;
     border-radius: 8px;
-    border-left: 4px solid rgba(255,255,255,0.2);
+    border-left: 4px solid var(--text-light);
     font-size: 1rem;
-    color: #e2e8f0;
+    color: var(--heading-color);
 }
 
 .report-main .article-card .pro-tip,
@@ -1917,7 +1917,7 @@ img {
     display: none;
     width: 100%;
     background: rgba(255,255,255,0.05);
-    color: #f1f5f9;
+    color: var(--text-main);
     border: 1px solid rgba(255,255,255,0.1);
     padding: 1rem;
     font-weight: bold;
@@ -1950,7 +1950,7 @@ img {
         border-right: none;
         padding-right: 0;
         display: none !important;
-        background: rgba(0,0,0,0.2) !important;
+        background: var(--card-bg) !important;
         padding: 1rem;
         border-radius: 8px;
         margin-bottom: 2rem;
