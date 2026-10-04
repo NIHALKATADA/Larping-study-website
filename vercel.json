@@ -1,0 +1,21 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/:subject/comprehensive-report",
+      "destination": "/subjects/:subject/comprehensive-report.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/subjects/:subject/comprehensive-report",
+      "destination": "/:subject/comprehensive-report",
+      "permanent": true
+    },
+    {
+      "source": "/subjects/:subject/comprehensive-report.html",
+      "destination": "/:subject/comprehensive-report",
+      "permanent": true
+    }
+  ]
+}

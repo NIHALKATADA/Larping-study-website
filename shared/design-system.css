@@ -2096,3 +2096,11 @@ body.report-page .banner {
 }
 
 
+
+
+/* Fix Mobile Glow BG */
+@media (max-width: 768px) {
+    .glow-bg { background: radial-gradient(circle at top, rgba(var(--subject-color-rgb, 15, 118, 110), 0.15) 0%, transparent 100%) !important; height: 100vh !important; width: 100vw !important; top: 0 !important; left: 0 !important; transform: none !important; }
+    .report-container { padding: 1rem !important; }
+    .mobile-toc-toggle { width: 100%; margin-bottom: 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px; color: var(--text-main); font-weight: 600; text-align: left; }
+}
