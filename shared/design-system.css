@@ -1516,8 +1516,11 @@ pre code {
 }
 .mermaid svg {
     max-width: 100% !important;
-    max-height: 400px !important;
-    /* Do not force width/height auto, let viewBox scale it! */
+    max-height: 250px !important;
+    height: auto !important;
+    width: auto !important;
+    margin: 0 auto;
+    display: block;
 }
 img {
     max-width: 100%;
@@ -2089,3 +2092,4 @@ body.report-page .banner {
 [data-theme="paper"] #svg-overlay svg {
     background: #ffffff;
 }
+
