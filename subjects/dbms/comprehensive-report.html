@@ -59,7 +59,7 @@
 <div class="pro-tip">
 <div><strong>Pro-Tip:</strong> Logical data independence is much harder to achieve than physical, as application logic tightly binds to the conceptual schema.</div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Moving forward from <strong>Architecture &amp; Data Independence</strong>, let's break down the mechanics of <strong>Keys &amp; Constraints</strong>.</div>
 <div class="article-card">
 <h4 id="sub_keysconstraintsu1">Keys &amp; Constraints <span class="badge unit-1">U1</span></h4>
 <p>Super keys identify tuples uniquely. Candidate keys are minimal super keys. Primary keys are chosen candidate keys. Foreign keys enforce referential integrity between tables.</p>
@@ -67,7 +67,7 @@
 <div class="exam-trap">
 <div><strong>Exam Trap:</strong> A relation can have multiple candidate keys but strictly ONE primary key. Nulls are not allowed in PKs (Entity Integrity).</div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">While <strong>Keys &amp; Constraints</strong> gives us the theoretical background, <strong>Normalization: 1NF to BCNF</strong> provides the next layer of complexity.</div>
 <div class="article-card">
 <h4 id="sub_normalization1nftobcnfu1">Normalization: 1NF to BCNF <span class="badge unit-1">U1</span></h4>
 <p>1NF mandates atomic domains. 2NF removes partial dependencies (non-prime depends on part of PK). 3NF eliminates transitive dependencies. BCNF strictly enforces every determinant as a candidate key.</p>
@@ -75,7 +75,7 @@
 <div class="exam-trap">
 <div><strong>Exam Trap:</strong> BCNF decomposition may result in the loss of functional dependency preservation, unlike 3NF which guarantees both lossless join and dependency preservation.</div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Having established the core principles of <strong>Normalization: 1NF to BCNF</strong>, we now turn our attention to <strong>Deep Dive: ER to Relational Mapping</strong>.</div>
 <div class="article-card" style="grid-column: span 2;">
 <h4 id="sub_deepdiveertorelationalmappingu1">Deep Dive: ER to Relational Mapping <span class="badge unit-1">U1</span></h4>
 <div class="compact-svg">
@@ -91,7 +91,7 @@
 <div class="pro-tip">
 <div><strong>Pro-Tip:</strong> In total participation, foreign key constraints often use `ON DELETE CASCADE` to maintain consistency.</div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Moving forward from <strong>Deep Dive: ER to Relational Mapping</strong>, let's break down the mechanics of <strong>University Exam System (ER Diagram)</strong>.</div>
 <div class="article-card">
 <h4 id="sub_universityexamsystemerdiagram">University Exam System <span class="badge unit-1">ER Diagram</span></h4>
 <div class="compact-svg">
@@ -130,7 +130,7 @@
 <li><strong>Exam</strong>(<u>Exam_ID</u>, Date, Time, <em>Course_Code</em>)</li>
 <li><strong>Appears</strong>(<u><em>Roll_No</em>, <em>Exam_ID</em></u>, Marks_Obtained)</li>
 </ul>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">While <strong>University Exam System (ER Diagram)</strong> gives us the theoretical background, <strong>Online Book Store (ER Diagram)</strong> provides the next layer of complexity.</div><div class="article-card">
 <h4 id="sub_onlinebookstoreerdiagram">Online Book Store <span class="badge unit-1">ER Diagram</span></h4>
 <div class="compact-svg">
 <div class="mermaid">
@@ -185,7 +185,7 @@
 <li><strong>Order</strong>(<u>Order_ID</u>, Date, Total_Amt, <em>Cust_ID</em>)</li>
 <li><strong>Order_Details</strong>(<u><em>Order_ID</em>, <em>ISBN</em></u>, Quantity)</li>
 </ul>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Building on our understanding of <strong>Online Book Store (ER Diagram)</strong>, let's dive into <strong>Hospital System (ER Diagram)</strong>.</div><div class="article-card">
 <h4 id="sub_hospitalsystemerdiagram">Hospital System <span class="badge unit-1">ER Diagram</span></h4>
 <div class="compact-svg">
 <div class="mermaid">
@@ -226,7 +226,7 @@
 <li><strong>Test</strong>(<u>Test_Code</u>, Test_Name, Cost)</li>
 <li><strong>Consultation_Record</strong>(<u>Record_ID</u>, <em>Patient_ID</em>, <em>Doc_ID</em>, <em>Test_Code</em>, Date, Result)</li>
 </ul>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Moving forward from <strong>Hospital System (ER Diagram)</strong>, let's break down the mechanics of <strong>Bank System (ER Diagram)</strong>.</div><div class="article-card">
 <h4 id="sub_banksystemerdiagram">Bank System <span class="badge unit-1">ER Diagram</span></h4>
 <div class="compact-svg">
 <div class="mermaid">
@@ -279,7 +279,7 @@
 <li><strong>Holds_Account</strong>(<u><em>Cust_ID</em>, <em>Acc_No</em></u>)</li>
 <li><strong>Takes_Loan</strong>(<u><em>Cust_ID</em>, <em>Loan_No</em></u>)</li>
 </ul>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Having established the core principles of <strong>Bank System (ER Diagram)</strong>, we now turn our attention to <strong>Normalization Applied Example (Applied Concept)</strong>.</div><div class="article-card">
 <h4 id="sub_normalizationappliedexampleappliedconcept">Normalization Applied Example <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <p><b>Given:</b> R(Student, Subject, Teacher, Mentor) with FDs: Student → Mentor, Mentor → Subject, Subject → Teacher.</p>
 <p><b>Check 3NF:</b> Student → Mentor is fine (Student is a candidate key). But Mentor → Subject has a non-prime determinant (Mentor) that is not a superkey, violating 3NF.</p>
@@ -301,7 +301,7 @@
 <div class="exam-trap">
 <div><strong>Exam Trap:</strong> Union compatibility requires relations to have identical degree (number of attributes) and compatible domains.</div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Moving forward from <strong>Relational Algebra Core</strong>, let's break down the mechanics of <strong>Advanced Relational Algebra</strong>.</div>
 <div class="article-card">
 <h4 id="sub_advancedrelationalalgebrau2">Advanced Relational Algebra <span class="badge unit-2">U2</span></h4>
 <p>Derived operators simplify queries: Natural Join (⋈) implicitly matches common attributes, and Division (÷) identifies universal quantification scenarios (e.g., "all").</p>
@@ -309,7 +309,7 @@
 <div class="pro-tip">
 <div><strong>Pro-Tip:</strong> The Division operator is technically derived using Projection, Set Difference, and Cartesian Product.</div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Now that we have a solid grasp of <strong>Advanced Relational Algebra</strong>, the natural next step is to explore <strong>Tuple vs Domain Relational Calculus</strong>.</div>
 <div class="article-card">
 <h4 id="sub_tuplevsdomainrelationalcalculusu2">Tuple vs Domain Relational Calculus <span class="badge unit-2">U2</span></h4>
 <p>Calculus is non-procedural (describes WHAT to fetch, not HOW). TRC evaluates on a per-tuple basis. DRC evaluates attributes using domain variables.</p>
@@ -336,7 +336,7 @@
 <div class="pro-tip">
 <div><strong>Pro-Tip:</strong> This is why `COUNT(*)` in `WHERE` throws an error; aggregation hasn't happened yet!</div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Now that we have a solid grasp of <strong>SQL Execution Pipeline</strong>, the natural next step is to explore <strong>Correlated Subqueries</strong>.</div>
 <div class="article-card">
 <h4 id="sub_correlatedsubqueriesu3">Correlated Subqueries <span class="badge unit-3">U3</span></h4>
 <p>An inner query that references columns from the outer query. It executes row-by-row iteratively for each tuple processed by the outer query, degrading performance.</p>
@@ -344,7 +344,7 @@
 <div class="exam-trap">
 <div><strong>Exam Trap:</strong> Contrast with non-correlated subqueries which execute exactly once. Use `EXISTS` instead of `IN` for correlated lookups to short-circuit execution.</div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">While <strong>Correlated Subqueries</strong> gives us the theoretical background, <strong>Triggers &amp; Views</strong> provides the next layer of complexity.</div>
 <div class="article-card">
 <h4 id="sub_triggersviewsu3">Triggers &amp; Views <span class="badge unit-3">U3</span></h4>
 <p>Views are virtual tables providing logical independence. Triggers execute procedural code in response to DML events (INSERT/UPDATE/DELETE), typically enforcing complex business rules.</p>
@@ -352,7 +352,7 @@
 <div class="pro-tip">
 <div><strong>Pro-Tip:</strong> A "Mutating Table Error" occurs when a row-level trigger attempts to query the same table that invoked it.</div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Moving forward from <strong>Triggers &amp; Views</strong>, let's break down the mechanics of <strong>DDL, DML, DCL &amp; TCL Commands (Applied Concept)</strong>.</div>
 <div class="article-card">
 <h4 id="sub_ddldmldcltclcommandsappliedconcept">DDL, DML, DCL &amp; TCL Commands <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <table>
@@ -364,7 +364,7 @@
 <tr><td><b>TCL</b> (Transaction Control)</td><td>Manage transactions</td><td><code>COMMIT; / ROLLBACK; / SAVEPOINT sp1;</code></td></tr>
 </tbody>
 </table>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Building on our understanding of <strong>DDL, DML, DCL &amp; TCL Commands (Applied Concept)</strong>, let's dive into <strong>Types of Joins (Applied Concept)</strong>.</div><div class="article-card">
 <h4 id="sub_typesofjoinsappliedconcept">Types of Joins <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <table>
 <thead><tr><th>Join Type</th><th>Returns</th></tr></thead>
@@ -389,7 +389,7 @@
 <div class="exam-trap">
 <div><strong>Exam Trap:</strong> View serializability is less strict than conflict serializability and accommodates blind writes (writing without reading).</div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Now that we have a solid grasp of <strong>ACID &amp; Schedules</strong>, the natural next step is to explore <strong>Deadlock Prevention (Wait-Die vs Wound-Wait)</strong>.</div>
 <div class="article-card" style="grid-column: span 2;">
 <h4 id="sub_deadlockpreventionwaitdievswoundwaitu4">Deadlock Prevention (Wait-Die vs Wound-Wait) <span class="badge marks">U4</span></h4>
 <div class="compact-svg">
@@ -410,7 +410,7 @@
 <div class="pro-tip">
 <div><strong>Pro-Tip:</strong> A transaction that "dies" or is "wounded" retains its original timestamp upon restart, ensuring it eventually becomes the oldest and completes without starvation.</div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Moving forward from <strong>Deadlock Prevention (Wait-Die vs Wound-Wait)</strong>, let's break down the mechanics of <strong>ARIES Crash Recovery</strong>.</div>
 <div class="article-card">
 <h4 id="sub_ariescrashrecoveryu4">ARIES Crash Recovery <span class="badge marks">U4</span></h4>
 <p>Utilizes Write-Ahead Logging (WAL) with Steal/No-Force buffer policies. The protocol executes three phases: Analysis, REDO (repeats history to reconstruct crash state), and UNDO (rolls back uncommitted txns).</p>
@@ -431,7 +431,7 @@
 <div class="exam-trap">
 <div><strong>Exam Trap:</strong> Network partitions (P) are unavoidable in distributed systems. Therefore, the real architectural choice is always between C and A.</div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">To fully appreciate <strong>MongoDB Documents &amp; BSON</strong>, we must apply what we just learned about <strong>CAP Theorem &amp; NoSQL</strong>.</div>
 <div class="article-card">
 <h4 id="sub_mongodbdocumentsbsonu5">MongoDB Documents &amp; BSON <span class="badge marks">U5</span></h4>
 <p>MongoDB eschews rigid relational schemas in favor of dynamic BSON (Binary JSON) documents. Data modeling shifts from normalization (joining tables) to embedding (storing related data inside a single document).</p>
@@ -439,7 +439,7 @@
 <div class="pro-tip">
 <div><strong>Pro-Tip:</strong> Embed data for 1:1 or 1:few relationships to optimize read performance. Reference data for 1:Many or N:M to avoid hitting the 16MB document size limit.</div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Building on our understanding of <strong>MongoDB Documents &amp; BSON</strong>, let's dive into <strong>Aggregation Pipeline</strong>.</div>
 <div class="article-card">
 <h4 id="sub_aggregationpipelineu5">Aggregation Pipeline <span class="badge marks">U5</span></h4>
 <p>A multi-stage framework for data transformation, analogous to SQL `GROUP BY` and `JOIN`. Documents pass through stages like `$match` (filter), `$group` (aggregate), and `$project` (reshape).</p>

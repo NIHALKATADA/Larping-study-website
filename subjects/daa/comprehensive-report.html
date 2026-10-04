@@ -54,7 +54,7 @@
 <h4 id="sub_algorithmfundamentals">Algorithm Fundamentals</h4>
 <p>A rigorous sequence of unambiguous computational steps transforming input to output. Crucial properties include definiteness (unambiguous steps) and effectiveness (basic feasible operations).</p>
 <p><em>Example:</em> Euclid's algorithm for GCD(a,b) where a=12, b=8 yields 4 via systematic reduction.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Building on our understanding of <strong>Algorithm Fundamentals</strong>, let's dive into <strong>Loop Invariants (Correctness Proofs)</strong>.</div>
 <div class="article-card">
 <h4 id="sub_loopinvariantscorrectnessproofs">Loop Invariants (Correctness Proofs)</h4>
 <p>Formal logical assertions that remain true before, during, and after loop execution, utilized inductively to prove algorithmic correctness.</p>
@@ -62,12 +62,12 @@
 <div class="pro-tip" style="padding: 10px; border-left: 4px solid #ffcc00; background: rgba(255,204,0,0.1); margin-top: 10px;">
 <strong>Pro Tip:</strong> Examiners test initialization, maintenance, and termination. Ensure the termination property directly implies the overall postcondition.
         </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">To fully appreciate <strong>Asymptotic Notations</strong>, we must apply what we just learned about <strong>Loop Invariants (Correctness Proofs)</strong>.</div>
 <div class="article-card">
 <h4 id="sub_asymptoticnotations">Asymptotic Notations</h4>
 <p>Mathematical abstractions characterizing growth rates: <strong>O(n)</strong> (asymptotic upper bound, worst-case), <strong>Ω(n)</strong> (lower bound, best-case), and <strong>Θ(n)</strong> (tight bound, average-case).</p>
 <p><em>Example:</em> Mergesort is strictly Θ(n log n) as best and worst-case trees have identical depth.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">With <strong>Asymptotic Notations</strong> in mind, we can see why <strong>Recurrence Solving (Substitution)</strong> becomes crucial in this context.</div>
 <div class="article-card">
 <h4 id="sub_recurrencesolvingsubstitution">Recurrence Solving (Substitution)</h4>
 <p>A deductive technique establishing asymptotic complexity by positing a bound and applying mathematical induction to verify it against the recurrence relation.</p>
@@ -75,7 +75,7 @@
 <div class="exam-trap" style="padding: 10px; border-left: 4px solid #ff4444; background: rgba(255,68,68,0.1); margin-top: 10px;">
 <strong>Exam Trap:</strong> When using Substitution, you must explicitly prove the exact form of your guess. Do not ignore lower-order terms during the inductive step!
         </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Moving forward from <strong>Recurrence Solving (Substitution)</strong>, let's break down the mechanics of <strong>How to Analyze Time ComplexityMethod</strong>.</div>
 <div class="article-card">
 <h4 id="sub_howtoanalyzetimecomplexitymethod">How to Analyze Time Complexity <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Step 1:</strong> Identify the basic operation (comparison, assignment, arithmetic).</p>
@@ -101,7 +101,7 @@
 <h4 id="sub_divideandconquermethodology">Divide and Conquer Methodology</h4>
 <p>A paradigm that recursively partitions a problem into disjoint subproblems, solves them, and amalgamates their solutions. Relies heavily on recurrence relations.</p>
 <p><em>Example:</em> Strassen's Matrix Multiplication reduces subproblems from 8 to 7, dropping complexity to O(n^2.81).</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Building on our understanding of <strong>Divide and Conquer Methodology</strong>, let's dive into <strong>Master Theorem Deep-Dive</strong>.</div>
 <div class="article-card">
 <h4 id="sub_mastertheoremdeepdive">Master Theorem Deep-Dive</h4>
 <p>A deterministic method for solving recurrences of the form T(n) = aT(n/b) + f(n). Compares f(n) against n^(log_b(a)) using polynomial boundedness.</p>
@@ -109,12 +109,12 @@
 <div class="exam-trap" style="padding: 10px; border-left: 4px solid #ff4444; background: rgba(255,68,68,0.1); margin-top: 10px;">
 <strong>Exam Trap:</strong> The Master Theorem ONLY applies if the difference between f(n) and n^(log_b(a)) is polynomially large. It fails for T(n) = 2T(n/2) + n log n!
         </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Building on our understanding of <strong>Master Theorem Deep-Dive</strong>, let's dive into <strong>Greedy Paradigm &amp; Matroids</strong>.</div>
 <div class="article-card">
 <h4 id="sub_greedyparadigmmatroids">Greedy Paradigm &amp; Matroids</h4>
 <p>An optimization strategy making locally optimal choices with the heuristic that it converges to a global optimum. Only valid if the problem exhibits the greedy-choice property and optimal substructure.</p>
 <p><em>Example:</em> Huffman Coding optimally minimizes prefix-free code length by greedily merging lowest frequency nodes.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Having established the core principles of <strong>Greedy Paradigm &amp; Matroids</strong>, we now turn our attention to <strong>Paradigm Decision Tree</strong>.</div>
 <div class="article-card">
 <h4 id="sub_paradigmdecisiontree">Paradigm Decision Tree</h4>
 <div class="compact-svg">
@@ -128,43 +128,43 @@
             </div>
 </div>
 <p><em>Example:</em> Use this mental model to quickly classify DP (Fibonacci) vs Divide &amp; Conquer (Merge Sort).</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">While <strong>Paradigm Decision Tree</strong> gives us the theoretical background, <strong>Bubble SortMethod</strong> provides the next layer of complexity.</div>
 <div class="article-card">
 <h4 id="sub_bubblesortmethod">Bubble Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Repeatedly swap adjacent elements if they are in the wrong order. After each pass, the largest unsorted element "bubbles" to its correct position at the end.</p>
 <p><strong>Steps:</strong> For each pass (i = 0 to n-2): compare arr[j] with arr[j+1] for j = 0 to n-i-2. Swap if arr[j] &gt; arr[j+1]. Stop early if no swaps in a pass (optimized).</p>
 <p><strong>Complexity:</strong> Best O(n) [already sorted, optimized], Worst/Avg O(n²). <strong>Stable:</strong> Yes. <strong>In-place:</strong> Yes.</p>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Now that we have a solid grasp of <strong>Bubble SortMethod</strong>, the natural next step is to explore <strong>Selection SortMethod</strong>.</div><div class="article-card">
 <h4 id="sub_selectionsortmethod">Selection Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Find the minimum element from the unsorted part and place it at the beginning.</p>
 <p><strong>Steps:</strong> For i = 0 to n-2: scan arr[i+1…n-1] to find the minimum. Swap it with arr[i].</p>
 <p><strong>Complexity:</strong> Best/Worst/Avg O(n²) — always scans the full remaining array. <strong>Stable:</strong> No (swaps may break order). <strong>In-place:</strong> Yes.</p>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Transitioning from <strong>Selection SortMethod</strong>, we now examine <strong>Insertion SortMethod</strong>, which builds upon these foundational rules.</div><div class="article-card">
 <h4 id="sub_insertionsortmethod">Insertion Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Build a sorted subarray one element at a time by inserting each new element into its correct position.</p>
 <p><strong>Steps:</strong> For i = 1 to n-1: take key = arr[i]. Shift all elements in arr[0…i-1] that are greater than key one position right. Insert key at the gap.</p>
 <p><strong>Complexity:</strong> Best O(n) [already sorted], Worst/Avg O(n²). <strong>Stable:</strong> Yes. <strong>In-place:</strong> Yes. Best for small or nearly-sorted arrays.</p>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">To fully appreciate <strong>Heap SortMethod</strong>, we must apply what we just learned about <strong>Insertion SortMethod</strong>.</div><div class="article-card">
 <h4 id="sub_heapsortmethod">Heap Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Build a Max Heap from the array, then repeatedly extract the maximum (root) and place it at the end.</p>
 <p><strong>Steps:</strong> (1) Build Max Heap using bottom-up heapify: start from last non-leaf node (index n/2 - 1) down to 0, calling heapify on each. (2) For i = n-1 down to 1: swap root (max) with arr[i], reduce heap size, heapify root.</p>
 <p><strong>Complexity:</strong> Best/Worst/Avg O(n log n). <strong>Stable:</strong> No. <strong>In-place:</strong> Yes.</p>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">While <strong>Heap SortMethod</strong> gives us the theoretical background, <strong>Counting SortMethod</strong> provides the next layer of complexity.</div><div class="article-card">
 <h4 id="sub_countingsortmethod">Counting Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Count occurrences of each value, then compute cumulative counts to place each element directly into its sorted position.</p>
 <p><strong>Steps:</strong> (1) Find max value k. (2) Create count array C[0…k], count occurrences. (3) Compute prefix sums: C[i] += C[i-1]. (4) Traverse input right-to-left, place each element at index C[val]-1, decrement C[val].</p>
 <p><strong>Complexity:</strong> O(n + k) where k = range of input. <strong>Stable:</strong> Yes. <strong>In-place:</strong> No (needs auxiliary arrays). Best when k = O(n).</p>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Having established the core principles of <strong>Counting SortMethod</strong>, we now turn our attention to <strong>Radix SortMethod</strong>.</div><div class="article-card">
 <h4 id="sub_radixsortmethod">Radix Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Sort numbers digit by digit, starting from the least significant digit (LSD) to the most significant, using a stable sort (usually Counting Sort) at each level.</p>
 <p><strong>Steps:</strong> Find max number of digits d. For each digit position (1s, 10s, 100s…): apply Counting Sort based on that digit only.</p>
 <p><strong>Complexity:</strong> O(d × (n + b)) where d = digits, b = base (usually 10). <strong>Stable:</strong> Yes. <strong>In-place:</strong> No.</p>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">To fully appreciate <strong>Bucket SortMethod</strong>, we must apply what we just learned about <strong>Radix SortMethod</strong>.</div><div class="article-card">
 <h4 id="sub_bucketsortmethod">Bucket Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Distribute elements into buckets based on their value range, sort each bucket individually, then concatenate.</p>
 <p><strong>Steps:</strong> (1) Create n empty buckets. (2) For each element, place it in bucket[floor(n × element)]. (3) Sort each bucket (using Insertion Sort). (4) Concatenate all buckets in order.</p>
 <p><strong>Complexity:</strong> Best/Avg O(n + k), Worst O(n²) if all elements land in one bucket. Best for uniformly distributed floating-point data in [0, 1).</p>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Moving forward from <strong>Bucket SortMethod</strong>, let's break down the mechanics of <strong>Sorting Complexity ComparisonMethod</strong>.</div><div class="article-card">
 <h4 id="sub_sortingcomplexitycomparisonmethod">Sorting Complexity Comparison <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <table>
 <thead><tr><th>Algorithm</th><th>Best</th><th>Average</th><th>Worst</th><th>Stable?</th><th>In-place?</th></tr></thead>
@@ -187,7 +187,7 @@
 <h4 id="sub_dynamicprogrammingdp">Dynamic Programming (DP)</h4>
 <p>Systematically exhausts all possibilities by caching solutions to overlapping subproblems (memoization/tabulation), guaranteeing a global optimum for complex state spaces.</p>
 <p><em>Example:</em> Matrix Chain Multiplication optimally parenthesizes a chain of matrices in O(n^3) using a cost table.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Having established the core principles of <strong>Dynamic Programming (DP)</strong>, we now turn our attention to <strong>Bellman-Ford vs Dijkstra</strong>.</div>
 <div class="article-card">
 <h4 id="sub_bellmanfordvsdijkstra">Bellman-Ford vs Dijkstra</h4>
 <div class="compact-svg">
@@ -200,7 +200,7 @@
 </div>
 <p>Dijkstra uses a priority queue (Greedy) but fails catastrophically with negative weights. Bellman-Ford repeatedly relaxes all edges (DP) and detects negative cycles on the V-th pass.</p>
 <p><em>Example:</em> Routing in networks where path costs can become negative due to subsidies requires Bellman-Ford.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Now that we have a solid grasp of <strong>Bellman-Ford vs Dijkstra</strong>, the natural next step is to explore <strong>0/1 vs Fractional Knapsack</strong>.</div>
 <div class="article-card">
 <h4 id="sub_01vsfractionalknapsack">0/1 vs Fractional Knapsack</h4>
 <p>Fractional allows splitting items (solvable greedily by sorting value/weight ratio). 0/1 strictly forbids splitting, invalidating the greedy choice and mandating DP.</p>
@@ -208,7 +208,7 @@
 <div class="exam-trap" style="padding: 10px; border-left: 4px solid #ff4444; background: rgba(255,68,68,0.1); margin-top: 10px;">
 <strong>Exam Trap:</strong> Applying greedy value/weight ratio to 0/1 Knapsack is the most common student error. Always use the DP table: `dp[i][w] = max(dp[i-1][w], val[i] + dp[i-1][w-wt[i]])`.
         </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Building on our understanding of <strong>0/1 vs Fractional Knapsack</strong>, let's dive into <strong>Master Method for RecurrencesMethod</strong>.</div>
 <div class="article-card">
 <h4 id="sub_mastermethodforrecurrencesmethod">Master Method for Recurrences <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p>For recurrences of the form <strong>T(n) = aT(n/b) + Θ(n<sup>k</sup>)</strong>, compute <em>log<sub>b</sub>a</em> and compare with <em>k</em>:</p>
@@ -222,28 +222,28 @@
 </table>
 <p><strong>Example:</strong> T(n) = 2T(n/2) + n → a=2, b=2, k=1. log₂2 = 1 = k → <strong>Case 2</strong> → T(n) = Θ(n log n).</p>
 <p><strong>Example:</strong> T(n) = 4T(n/2) + n → log₂4 = 2 &gt; 1 → <strong>Case 1</strong> → T(n) = Θ(n²).</p>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">To fully appreciate <strong>Substitution Method for RecurrencesMethod</strong>, we must apply what we just learned about <strong>Master Method for RecurrencesMethod</strong>.</div><div class="article-card">
 <h4 id="sub_substitutionmethodforrecurrencesmethod">Substitution Method for Recurrences <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Step 1:</strong> Guess the form of the solution (e.g., T(n) = O(n log n)).</p>
 <p><strong>Step 2:</strong> Assume it holds for smaller values: T(n/2) ≤ c(n/2)log(n/2).</p>
 <p><strong>Step 3:</strong> Substitute into the recurrence and prove T(n) ≤ cn log n by induction.</p>
 <p><strong>Step 4:</strong> Verify the base case.</p>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Moving forward from <strong>Substitution Method for RecurrencesMethod</strong>, let's break down the mechanics of <strong>Binary SearchMethod</strong>.</div><div class="article-card">
 <h4 id="sub_binarysearchmethod">Binary Search <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Prerequisite:</strong> Array must be sorted.</p>
 <p><strong>Steps:</strong> Set low=0, high=n-1. While low ≤ high: compute mid = (low+high)/2. If arr[mid] == target → found. If arr[mid] &lt; target → search right half (low = mid+1). If arr[mid] &gt; target → search left half (high = mid-1).</p>
 <p><strong>Complexity:</strong> O(log n). Recurrence: T(n) = T(n/2) + O(1).</p>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Now that we have a solid grasp of <strong>Binary SearchMethod</strong>, the natural next step is to explore <strong>Merge SortMethod</strong>.</div><div class="article-card">
 <h4 id="sub_mergesortmethod">Merge Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Divide the array into two halves, recursively sort each half, then merge them in sorted order.</p>
 <p><strong>Steps:</strong> (1) Find mid = (low+high)/2. (2) MergeSort(low, mid) and MergeSort(mid+1, high). (3) Merge: use two pointers to compare elements from both halves, placing the smaller one into a temp array. Copy back.</p>
 <p><strong>Complexity:</strong> Best/Worst/Avg O(n log n). <strong>Stable:</strong> Yes. <strong>In-place:</strong> No (needs O(n) auxiliary). Recurrence: T(n) = 2T(n/2) + O(n).</p>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">With <strong>Merge SortMethod</strong> in mind, we can see why <strong>Quick SortMethod</strong> becomes crucial in this context.</div><div class="article-card">
 <h4 id="sub_quicksortmethod">Quick Sort <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Pick a pivot, partition the array so all elements ≤ pivot are on the left and &gt; pivot are on the right, then recurse on both halves.</p>
 <p><strong>Partition (Lomuto):</strong> Set pivot = arr[high], i = low-1. For j = low to high-1: if arr[j] ≤ pivot, increment i, swap arr[i] and arr[j]. Finally swap arr[i+1] with pivot.</p>
 <p><strong>Complexity:</strong> Best/Avg O(n log n), Worst O(n²) [already sorted + bad pivot]. Randomized pivot selection avoids worst case. <strong>Stable:</strong> No. <strong>In-place:</strong> Yes.</p>
-</div><div class="article-card">
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Now that we have a solid grasp of <strong>Quick SortMethod</strong>, the natural next step is to explore <strong>Max-Min (Divide &amp; Conquer)Method</strong>.</div><div class="article-card">
 <h4 id="sub_maxmindivideconquermethod">Max-Min (Divide &amp; Conquer) <span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Method</span></h4>
 <p><strong>Idea:</strong> Find both the maximum and minimum of an array using fewer comparisons than the naive 2(n-1) approach.</p>
 <p><strong>Steps:</strong> Divide array into two halves. Recursively find (min, max) of each half. Return min = min(left_min, right_min), max = max(left_max, right_max).</p>
@@ -257,7 +257,7 @@
 <h4 id="sub_minimumspanningtreesmst">Minimum Spanning Trees (MST)</h4>
 <p>Acutely optimizes network connectivity. <strong>Kruskal's</strong> sorts edges globally (uses Disjoint-Set/Union-Find). <strong>Prim's</strong> grows a single tree locally from a root (uses Min-Heap).</p>
 <p><em>Example:</em> Kruskal's O(E log E) is ideal for sparse graphs; Prim's O(E + V log V) with Fibonacci heaps dominates dense graphs.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Building on our understanding of <strong>Minimum Spanning Trees (MST)</strong>, let's dive into <strong>Network Flow (Ford-Fulkerson)</strong>.</div>
 <div class="article-card">
 <h4 id="sub_networkflowfordfulkerson">Network Flow (Ford-Fulkerson)</h4>
 <p>Calculates the maximum flow in a flow network. It iteratively finds augmenting paths in a residual graph until none exist. Relies heavily on the Max-Flow Min-Cut theorem.</p>
@@ -265,7 +265,7 @@
 <div class="pro-tip" style="padding: 10px; border-left: 4px solid #ffcc00; background: rgba(255,204,0,0.1); margin-top: 10px;">
 <strong>Pro Tip:</strong> The Edmonds-Karp implementation uses BFS to find augmenting paths, strictly bounding execution time to O(V E^2) unlike naive DFS.
         </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Now that we have a solid grasp of <strong>Network Flow (Ford-Fulkerson)</strong>, the natural next step is to explore <strong>All-Pairs Shortest Path (Floyd-Warshall)</strong>.</div>
 <div class="article-card">
 <h4 id="sub_allpairsshortestpathfloydwarshall">All-Pairs Shortest Path (Floyd-Warshall)</h4>
 <p>A quintessential DP algorithm computing shortest paths between all vertex pairs in O(V^3) time. It incrementally allows intermediate vertices from {1...k}.</p>
@@ -280,7 +280,7 @@
 <h4 id="sub_pvsnpclasses">P vs NP Classes</h4>
 <p><strong>P:</strong> Solvable in polynomial time. <strong>NP:</strong> Solutions are verifiable in polynomial time by a non-deterministic Turing machine.</p>
 <p><em>Example:</em> Sorting is in P. Sudoku solving is in NP (fast to check a solved board, hard to solve).</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Building on our understanding of <strong>P vs NP Classes</strong>, let's dive into <strong>NP-Complete Reductions</strong>.</div>
 <div class="article-card">
 <h4 id="sub_npcompletereductions">NP-Complete Reductions</h4>
 <p>A problem Y is NP-Complete if it's in NP and every NP problem polynomial-time reduces to Y. To prove a new problem Y is NPC, reduce a known NPC problem X to Y.</p>
@@ -288,12 +288,12 @@
 <div class="exam-trap" style="padding: 10px; border-left: 4px solid #ff4444; background: rgba(255,68,68,0.1); margin-top: 10px;">
 <strong>Exam Trap:</strong> Reduction direction matters! To prove Y is hard, reduce the KNOWN hard problem X to Y (X -&gt; Y). Reducing Y to X proves nothing about Y's difficulty.
         </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">With <strong>NP-Complete Reductions</strong> in mind, we can see why <strong>Approximation Algorithms</strong> becomes crucial in this context.</div>
 <div class="article-card">
 <h4 id="sub_approximationalgorithms">Approximation Algorithms</h4>
 <p>Heuristics for NP-Hard problems that guarantee a solution within a specific multiplicative factor (ρ) of the absolute optimal cost in polynomial time.</p>
 <p><em>Example:</em> The 2-Approximation for Vertex Cover using a greedy maximal matching guarantees the cover is at most twice the optimal size.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Having established the core principles of <strong>Approximation Algorithms</strong>, we now turn our attention to <strong>Complexity Hierarchy</strong>.</div>
 <div class="article-card">
 <h4 id="sub_complexityhierarchy">Complexity Hierarchy</h4>
 <div class="compact-svg">

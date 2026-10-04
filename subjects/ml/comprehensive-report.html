@@ -65,18 +65,18 @@ Overfitting"]
                 style Optimal fill:#27ae60,stroke:#fff
             </div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Now that we have a solid grasp of <strong>The Bias-Variance Decomposition</strong>, the natural next step is to explore <strong>Curse of Dimensionality &amp; Manifold Hypothesis</strong>.</div>
 <div class="article-card">
 <h4 id="sub_curseofdimensionalitymanifoldhypothesis">Curse of Dimensionality &amp; Manifold Hypothesis</h4>
 <p>As dimensions $D$ increase, the volume of the space grows exponentially, making data extremely sparse. The <em>Manifold Hypothesis</em> posits that real-world high-dimensional data actually lies on low-dimensional, non-linear manifolds embedded within the high-dimensional space.</p>
 <p><strong>Example:</strong> 1024-pixel images exist in a 1024D space, but valid human faces only span a tiny 50D manifold within it.</p>
 <div class="exam-trap"><strong>Trick:</strong> PCA only discovers <em>linear</em> manifolds. If the examiner asks to untangle a "Swiss Roll" dataset, you MUST use non-linear methods like ISOMAP or t-SNE!</div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Transitioning from <strong>Curse of Dimensionality &amp; Manifold Hypothesis</strong>, we now examine <strong>Inductive Bias &amp; No Free Lunch Theorem</strong>, which builds upon these foundational rules.</div>
 <div class="article-card">
 <h4 id="sub_inductivebiasnofreelunchtheorem">Inductive Bias &amp; No Free Lunch Theorem</h4>
 <p><em>No Free Lunch Theorem:</em> Averaged over all possible data distributions, every algorithm performs equally well. Thus, an algorithm must make assumptions (Inductive Bias) to learn effectively.</p>
 <p><strong>Example:</strong> CNNs have an inductive bias for spatial locality (nearby pixels are related); RNNs assume sequential temporality.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Now that we have a solid grasp of <strong>Inductive Bias &amp; No Free Lunch Theorem</strong>, the natural next step is to explore <strong>Independent vs. Dependent Variables (Applied Concept)</strong>.</div>
 <div class="article-card">
 <h4 id="sub_independentvsdependentvariablesappliedconcept">Independent vs. Dependent Variables<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <p><b>Independent Predictor Variables:</b> The inputs or features used to make predictions (e.g., house size, location).</p>
@@ -90,18 +90,18 @@ Overfitting"]
 <h4 id="sub_logisticregressioncrossentropy">Logistic Regression &amp; Cross-Entropy</h4>
 <p>Uses the Sigmoid function $\sigma(z) = \frac{1}{1 + e^{-z}}$ to map logits to probabilities. Optimized via Log-Loss (Binary Cross-Entropy), heavily penalizing confident, wrong predictions logarithmically.</p>
 <p><strong>Example:</strong> Predicting if an email is spam. If the model outputs 0.99 for a ham email, the log-loss penalty approaches infinity.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">To fully appreciate <strong>SVMs, Maximum Margin &amp; Kernel Trick</strong>, we must apply what we just learned about <strong>Logistic Regression &amp; Cross-Entropy</strong>.</div>
 <div class="article-card">
 <h4 id="sub_svmsmaximummarginkerneltrick">SVMs, Maximum Margin &amp; Kernel Trick</h4>
 <p>SVMs maximize the margin $\frac{2}{||w||}$ between support vectors. The <em>Kernel Trick</em> uses Mercer’s theorem to implicitly compute dot products in a high-dimensional feature space without explicit transformation mapping $\phi(x)$.</p>
 <p><strong>Example:</strong> An RBF kernel classifying concentric circles by projecting them into 3D space where a flat hyperplane can cleanly slice them.</p>
 <div class="pro-tip"><strong>Pro-Tip:</strong> The $C$ parameter in Soft-Margin SVM controls the penalty for misclassification. Low $C$ = wide margin (high bias). High $C$ = hard margin (high variance/overfitting).</div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Having established the core principles of <strong>SVMs, Maximum Margin &amp; Kernel Trick</strong>, we now turn our attention to <strong>VC Dimension &amp; PAC Learning Bounds</strong>.</div>
 <div class="article-card">
 <h4 id="sub_vcdimensionpaclearningbounds">VC Dimension &amp; PAC Learning Bounds</h4>
 <p><em>Probably Approximately Correct (PAC)</em> framework provides mathematical bounds on sample complexity. <em>Vapnik-Chervonenkis (VC) Dimension</em> is the maximum number of points a hypothesis class can perfectly shatter (memorize).</p>
 <p><strong>Example:</strong> A 2D linear classifier has a VC dimension of 3, meaning it can perfectly classify any arrangement of 3 points, but fails on some arrangements of 4 points (like XOR).</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">While <strong>VC Dimension &amp; PAC Learning Bounds</strong> gives us the theoretical background, <strong>Underfitting and Overfitting Concepts (Applied Concept)</strong> provides the next layer of complexity.</div>
 <div class="article-card">
 <h4 id="sub_underfittingandoverfittingconceptsappliedconcept">Underfitting and Overfitting Concepts<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <p><b>Underfitting (High Bias):</b> Occurs when a model is too simple to capture the underlying data patterns. It performs poorly on both training and testing sets. Root causes include insufficient model complexity or inadequate features.</p>
@@ -127,18 +127,18 @@ Overfitting"]
                 W2 --&gt; Boosting[Boosting/XGB]
             </div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">While <strong>Ensemble Meta-Algorithms</strong> gives us the theoretical background, <strong>Information Gain &amp; Gini Impurity</strong> provides the next layer of complexity.</div>
 <div class="article-card">
 <h4 id="sub_informationgainginiimpurity">Information Gain &amp; Gini Impurity</h4>
 <p>Decision trees recursively partition data. They maximize <em>Information Gain</em> (reduction in Shannon Entropy $H = -\sum p \log_2 p$) or minimize <em>Gini Impurity</em> ($1 - \sum p^2$) at each node split.</p>
 <p><strong>Example:</strong> Predicting disease. Splitting on "Fever = True" yields child nodes that are much purer (lower entropy) than the parent node.</p>
 <div class="exam-trap"><strong>Trick:</strong> Information Gain is inherently biased towards attributes with high cardinality (e.g., User ID). The examiner will test this: always use <em>Gain Ratio</em> to penalize high-branching attributes!</div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">While <strong>Information Gain &amp; Gini Impurity</strong> gives us the theoretical background, <strong>Precision-Recall vs ROC-AUC</strong> provides the next layer of complexity.</div>
 <div class="article-card">
 <h4 id="sub_precisionrecallvsrocauc">Precision-Recall vs ROC-AUC</h4>
 <p>ROC curve plots True Positive Rate vs False Positive Rate. PR curve plots Precision vs Recall. ROC is misleading for heavily imbalanced datasets because TNs dominate the FPR denominator.</p>
 <p><strong>Example:</strong> Fraud detection (0.1% fraud). An ROC-AUC of 0.90 looks great, but PR-AUC reveals the model has terrible precision and produces massive false alarms.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">With <strong>Precision-Recall vs ROC-AUC</strong> in mind, we can see why <strong>Random Forest Voting Structure (Applied Concept)</strong> becomes crucial in this context.</div>
 <div class="article-card">
 <h4 id="sub_randomforestvotingstructureappliedconcept">Random Forest Voting Structure<span style="background: var(--primary-teal); color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; margin-left: 10px;">Applied Concept</span></h4>
 <p>Random Forests build multiple decision trees independently using bootstrapped data and random feature subsets. For classification, the final output is decided by a majority vote among all the individual trees. For regression, it uses the average.</p>
@@ -152,12 +152,12 @@ Overfitting"]
 <h4 id="sub_backpropagationthechainrule">Backpropagation &amp; The Chain Rule</h4>
 <p>Neural networks update weights via gradient descent: $\theta = \theta - \alpha \nabla J(\theta)$. Backprop efficiently calculates the gradient of the loss function with respect to weights by propagating errors backward using the calculus chain rule.</p>
 <p><strong>Example:</strong> If a network predicts 0.9 for a dog image (label 1), backprop sends the 0.1 error backwards, nudging earlier convolutional filters to activate stronger on dog ears.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">While <strong>Backpropagation &amp; The Chain Rule</strong> gives us the theoretical background, <strong>Vanishing Gradients &amp; Modern Activations</strong> provides the next layer of complexity.</div>
 <div class="article-card">
 <h4 id="sub_vanishinggradientsmodernactivations">Vanishing Gradients &amp; Modern Activations</h4>
 <p>Deep networks using Sigmoid/Tanh suffer from vanishing gradients because their derivatives max out at 0.25; gradients decay exponentially through layers. ReLU ($f(x) = \max(0, x)$) solves this by providing a constant derivative of 1 for positive inputs.</p>
 <p><strong>Example:</strong> Training a 100-layer ResNet. With Sigmoid, the first layer never updates. With ReLU and Skip Connections, the gradient flows directly to early layers.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">With <strong>Vanishing Gradients &amp; Modern Activations</strong> in mind, we can see why <strong>Regularization: L1 vs L2 (Weight Decay)</strong> becomes crucial in this context.</div>
 <div class="article-card">
 <h4 id="sub_regularizationl1vsl2weightdecay">Regularization: L1 vs L2 (Weight Decay)</h4>
 <p><strong>L1 (Lasso):</strong> Adds $\lambda \sum |w|$ to the loss. Encourages sparse weight vectors (exact zeros) due to diamond-shaped constraint geometry. <br/><strong>L2 (Ridge):</strong> Adds $\lambda \sum w^2$. Prevents exploding weights by decaying them proportionally.</p>
@@ -173,7 +173,7 @@ Overfitting"]
 <h4 id="sub_kmeanstheemalgorithm">K-Means &amp; The E-M Algorithm</h4>
 <p>K-Means is a specific instance of the <em>Expectation-Maximization (EM)</em> algorithm. E-step: Assign points to nearest centroid. M-step: Recalculate centroids. It converges to a local optimum minimizing within-cluster sum of squares (WCSS).</p>
 <p><strong>Example:</strong> Clustering retail shoppers based on recency and frequency of purchases. K-Means finds $K$ distinct buyer personas.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Building on our understanding of <strong>K-Means &amp; The E-M Algorithm</strong>, let's dive into <strong>Principal Component Analysis (PCA) Eigen-theory</strong>.</div>
 <div class="article-card">
 <h4 id="sub_principalcomponentanalysispcaeigentheory">Principal Component Analysis (PCA) Eigen-theory</h4>
 <p>PCA projects data onto orthogonal axes of maximum variance. It computes the eigenvectors (directions) and eigenvalues (magnitude of variance) of the data's covariance matrix. It removes multicollinearity.</p>
@@ -187,7 +187,7 @@ Overfitting"]
                 Sort --&gt; Project(Project X onto K axes)
             </div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Having established the core principles of <strong>Principal Component Analysis (PCA) Eigen-theory</strong>, we now turn our attention to <strong>Data Leakage &amp; Time-Series Validation</strong>.</div>
 <div class="article-card">
 <h4 id="sub_dataleakagetimeseriesvalidation">Data Leakage &amp; Time-Series Validation</h4>
 <p>Leakage occurs when information from the validation/test set maliciously bleeds into the training set, causing deceptively high performance that fails in production.</p>

@@ -70,7 +70,7 @@
 <li><strong>Paging vs Segmentation:</strong> Paging divides memory into fixed-size blocks (pages/frames) eliminating external fragmentation. Segmentation divides memory into variable-sized logical blocks (functions, objects) avoiding internal fragmentation.</li>
 <li><strong>TLB (Translation Lookaside Buffer):</strong> A hardware cache for the page table. A TLB hit avoids the slow memory access required to look up a page frame.</li>
 </ul>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Building on our understanding of <strong>Deep Dive: Process State Transition</strong>, let's dive into <strong>Deep Dive: Concurrency &amp; Traps</strong>.</div>
 <div class="article-card">
 <h4 id="sub_deepdiveconcurrencytraps">Deep Dive: Concurrency &amp; Traps</h4>
 <ul>
@@ -79,18 +79,18 @@
 <li><strong>Priority Inversion:</strong> A low priority task holds a lock needed by a high priority task, but a medium priority task preempts the low one, blocking the high priority task forever. Fix: Priority Inheritance.</li>
 <li><strong>Thrashing:</strong> CPU utilization drops to 0% because processes spend all their time swapping pages to disk instead of executing.</li>
 </ul>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Building on our understanding of <strong>Deep Dive: Concurrency &amp; Traps</strong>, let's dive into <strong>System Calls &amp; Interrupts</strong>.</div>
 <div class="article-card">
 <h4 id="sub_systemcallsinterrupts">System Calls &amp; Interrupts</h4>
 <p>A <strong>system call</strong> transitions the CPU from user mode to kernel mode via a software interrupt (trap). It provides controlled access to protected OS services. An <strong>interrupt vector</strong> table routes execution to the correct handler routine in memory.</p>
 <p><em>Example:</em> <code>fork()</code> triggering a <code>0x80</code> instruction in x86 architectures.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">While <strong>System Calls &amp; Interrupts</strong> gives us the theoretical background, <strong>Dual-Mode Operation</strong> provides the next layer of complexity.</div>
 <div class="article-card">
 <h4 id="sub_dualmodeoperation">Dual-Mode Operation</h4>
 <p>Hardware support ensures isolation. Mode bit (0=Kernel, 1=User) prevents user code from executing privileged instructions (e.g., halting CPU, memory mapping). Timer interrupts forcibly return control to the OS.</p>
 <p><em>Example:</em> A user program trying to execute a <code>CLI</code> (clear interrupts) instruction triggers a protection fault.</p>
 <div class="exam-trap"><strong>Examiner Trap:</strong> Distinguish between a hardware interrupt (asynchronous external signal) and a trap (synchronous software-generated exception).</div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Having established the core principles of <strong>Dual-Mode Operation</strong>, we now turn our attention to <strong>OS Kernel Architectures</strong>.</div>
 <div class="article-card">
 <h4 id="sub_oskernelarchitectures">OS Kernel Architectures</h4>
 <p><strong>Monolithic:</strong> Entire OS runs in kernel space (Linux). High throughput, but bugs crash the system. <strong>Microkernel:</strong> Only bare essentials (IPC, basic scheduling) run in kernel space; rest in user space (Mach, QNX). Highly resilient but IPC overhead limits speed.</p>
@@ -117,13 +117,13 @@
                             Running --&gt; Terminated: Exit
                         </div>
 </div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Having established the core principles of <strong>Process State Transitions</strong>, we now turn our attention to <strong>CPU Scheduling Tactics</strong>.</div>
 <div class="article-card">
 <h4 id="sub_cpuschedulingtactics">CPU Scheduling Tactics</h4>
 <p><strong>SJF (Shortest Job First):</strong> Provably optimal for average waiting time, but risks starvation. <strong>Round Robin (RR):</strong> Time-slices (quanta) prevent starvation; heavily relies on quantum length tuning.</p>
 <p><em>Example:</em> A 10ms quantum in RR perfectly balances responsiveness for interactive tasks against context-switching overhead.</p>
 <div class="exam-trap"><strong>Examiner Trap:</strong> Non-preemptive SJF vs. Preemptive SRTF (Shortest Remaining Time First). SRTF recalculates burst times dynamically.</div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Building on our understanding of <strong>CPU Scheduling Tactics</strong>, let's dive into <strong>Multithreading Models</strong>.</div>
 <div class="article-card">
 <h4 id="sub_multithreadingmodels">Multithreading Models</h4>
 <p><strong>Many-to-One:</strong> Thread library maps multiple user threads to one kernel thread. Fast but blocks the entire process if one thread blocks. <strong>One-to-One:</strong> Direct mapping (Linux, Windows). High concurrency but high kernel overhead.</p>
@@ -139,12 +139,12 @@
 <p>A critical section requires <em>Mutual Exclusion, Progress, and Bounded Waiting</em>. <strong>Semaphores</strong> are integer variables accessed via atomic <code>wait(P)</code> and <code>signal(V)</code> operations to orchestrate access.</p>
 <p><em>Example:</em> Using a counting semaphore initialized to 5 to restrict maximum concurrent database connections.</p>
 <div class="exam-trap"><strong>Examiner Trap:</strong> A Mutex is NOT just a binary semaphore. Mutexes have ownership; only the locking thread can unlock. Semaphores can be signaled by any thread.</div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Having established the core principles of <strong>Critical Section &amp; Semaphores</strong>, we now turn our attention to <strong>Priority Inversion &amp; Inheritance</strong>.</div>
 <div class="article-card">
 <h4 id="sub_priorityinversioninheritance">Priority Inversion &amp; Inheritance</h4>
 <p>Occurs when a lower-priority task holds a lock needed by a higher-priority task, while a medium-priority task preempts the low one, effectively starving the high-priority task. <strong>Priority Inheritance Protocol (PIP)</strong> temporarily boosts the lower task's priority.</p>
 <p><em>Example:</em> The Mars Pathfinder rover resetting due to priority inversion on the data bus mutex.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Moving forward from <strong>Priority Inversion &amp; Inheritance</strong>, let's break down the mechanics of <strong>Deadlock Characterization</strong>.</div>
 <div class="article-card">
 <h4 id="sub_deadlockcharacterization">Deadlock Characterization</h4>
 <p>Requires four simultaneous conditions: Mutual Exclusion, Hold &amp; Wait, No Preemption, Circular Wait. <strong>Banker's Algorithm</strong> statically analyzes max resource claims to ensure the system remains in a "safe state".</p>
@@ -170,12 +170,12 @@
 <p>Memory is divided into fixed-size frames (physical) and pages (logical), eliminating external fragmentation. The <strong>TLB</strong> is a fast associative cache mapping virtual pages to physical frames, drastically reducing the latency of a two-step memory access.</p>
 <p><em>Example:</em> A TLB hit allows direct memory access; a miss requires traversing the hierarchical page table in main memory.</p>
 <div class="exam-trap"><strong>Examiner Trap:</strong> Internal fragmentation is still possible in paging if a process doesn't exactly fill its final allocated frame.</div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Now that we have a solid grasp of <strong>Paging &amp; Translation Lookaside Buffer</strong>, the natural next step is to explore <strong>Virtual Memory &amp; Demand Paging</strong>.</div>
 <div class="article-card">
 <h4 id="sub_virtualmemorydemandpaging">Virtual Memory &amp; Demand Paging</h4>
 <p>Creates an illusion of continuous memory exceeding physical RAM. Pages are lazily loaded on a <strong>Page Fault</strong>. If RAM is full, a victim page is swapped to disk.</p>
 <p><em>Example:</em> Opening a 10GB video file on a machine with 4GB RAM by mapping only the active chunks.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">While <strong>Virtual Memory &amp; Demand Paging</strong> gives us the theoretical background, <strong>Thrashing &amp; Belady's Anomaly</strong> provides the next layer of complexity.</div>
 <div class="article-card">
 <h4 id="sub_thrashingbeladysanomaly">Thrashing &amp; Belady's Anomaly</h4>
 <p><strong>Thrashing</strong> happens when the system spends more time swapping pages than executing code. Cured by adjusting the Working Set. <strong>Belady's Anomaly</strong> is a counterintuitive phenomenon where adding more frames <em>increases</em> page faults.</p>
@@ -190,7 +190,7 @@
 <h4 id="sub_diskschedulingalgorithms">Disk Scheduling Algorithms</h4>
 <p>Minimizing head movement (seek time) is critical. <strong>SSTF</strong> picks the closest request but starves distant ones. <strong>C-SCAN (Circular Elevator)</strong> moves the head continuously from inner to outer tracks, providing uniform wait times.</p>
 <p><em>Example:</em> C-SCAN servicing cylinders in the sequence: <code>10, 30, 90, 150, 199, 0, 5</code>.</p>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Now that we have a solid grasp of <strong>Disk Scheduling Algorithms</strong>, the natural next step is to explore <strong>File System Structures (Inodes)</strong>.</div>
 <div class="article-card">
 <h4 id="sub_filesystemstructuresinodes">File System Structures (Inodes)</h4>
 <p>Unix <strong>Inodes</strong> separate metadata (permissions, sizes, timestamps) from actual data blocks. They use direct, single, double, and triple indirect pointers to accommodate massive files without bloating the inode table.</p>
@@ -205,7 +205,7 @@
                         </div>
 </div>
 <div class="exam-trap"><strong>Examiner Trap:</strong> Inodes do NOT store the file name. The directory structure maps file names to inode numbers.</div>
-</div>
+</div><div class="presenter-transition" style="font-style: italic; color: #94a3b8; margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Now that we have a solid grasp of <strong>File System Structures (Inodes)</strong>, the natural next step is to explore <strong>Direct Memory Access (DMA)</strong>.</div>
 <div class="article-card">
 <h4 id="sub_directmemoryaccessdma">Direct Memory Access (DMA)</h4>
 <p>A specialized hardware controller takes over the system bus to transfer massive data blocks directly between an I/O device and RAM, bypassing the CPU to prevent cycle stealing.</p>
