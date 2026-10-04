@@ -762,3 +762,53 @@ window.closeModal = function(id) {
     }
 };
 
+
+// SVG Lightbox Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const svgs = document.querySelectorAll('.report-main svg');
+    svgs.forEach(svg => {
+        const w = svg.getAttribute('width');
+        const h = svg.getAttribute('height');
+        // Skip small UI icons
+        if (w === "16" || w === "18" || w === "20" || w === "24" || h === "16" || h === "18" || h === "20" || h === "24") {
+            return;
+        }
+        
+        svg.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isExpanded = svg.classList.contains('expanded-svg');
+            
+            // Close any currently expanded SVGs
+            document.querySelectorAll('.expanded-svg').forEach(el => {
+                el.classList.remove('expanded-svg');
+            });
+            
+            if (!isExpanded) {
+                svg.classList.add('expanded-svg');
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+    });
+    
+    // Click outside to close
+    document.addEventListener('click', (e) => {
+        const expanded = document.querySelector('.expanded-svg');
+        if (expanded && !expanded.contains(e.target)) {
+            expanded.classList.remove('expanded-svg');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Escape key to close
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const expanded = document.querySelector('.expanded-svg');
+            if (expanded) {
+                expanded.classList.remove('expanded-svg');
+                document.body.style.overflow = '';
+            }
+        }
+    });
+});
