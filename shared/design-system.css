@@ -2339,3 +2339,51 @@ body.report-page .ask-ai-widget {
 }
 
 .smart-topbar { backdrop-filter: blur(16px) !important; -webkit-backdrop-filter: blur(16px) !important; background: rgba(20, 20, 20, 0.7) !important; }
+
+@media (max-width: 768px) {
+    /* Critical padding to prevent edge-hugging and text cutoff */
+    .report-container {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Ensure text forces wrapping and ignores any rogue nowrap */
+    .report-main p, .report-main ul, .report-main li, .report-main h4 {
+        white-space: normal !important;
+        word-break: break-word !important;
+    }
+}
+
+
+/* =========================================
+   CRITICAL MOBILE WIDTH FIX
+   ========================================= */
+@media (max-width: 768px) {
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    .report-wrapper, .report-container, .report-main, .article-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .report-container {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    
+    .report-main p, .report-main ul, .report-main li, .report-main h4 {
+        white-space: normal !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
