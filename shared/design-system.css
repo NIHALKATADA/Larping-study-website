@@ -1727,7 +1727,7 @@ img {
         height: auto;
         border-right: none;
         padding-right: 0;
-        display: none !important;
+        
         background: rgba(0,0,0,0.2);
         padding: 1rem;
         border-radius: 8px;
@@ -1946,7 +1946,7 @@ img {
         height: auto;
         border-right: none;
         padding-right: 0;
-        display: none !important;
+        
         background: var(--card-bg) !important;
         padding: 1rem;
         border-radius: 8px;
