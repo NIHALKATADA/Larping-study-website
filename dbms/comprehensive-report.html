@@ -75,7 +75,8 @@
 <li><strong>Internal Level (Physical Level):</strong> Describes exactly how the data is physically stored on disk (data structures, file organizations).</li>
 </ol>
 <div class="exam-tip">
-<strong>Exam Tip:</strong> The primary objective of this architecture is to achieve <em>Data Independence</em>.
+<strong>Exam Tip:</strong> The primary objective of this architecture is to achieve <em>Data Independence</em>.
+
         </div>
 <div class="diagram-container">
 <svg viewbox="0 0 600 350" xmlns="http://www.w3.org/2000/svg">
@@ -250,7 +251,8 @@
 <li><strong>Ternary (Degree 3):</strong> Relationship connecting three entity sets simultaneously (e.g., Supplier <em>Supplies</em> Part <em>To</em> Project).</li>
 </ul>
 <div class="exam-tip">
-<strong>Exam Tip:</strong> A ternary relationship is not just three binary relationships; it represents a single fact involving all three entities together.
+<strong>Exam Tip:</strong> A ternary relationship is not just three binary relationships; it represents a single fact involving all three entities together.
+
         </div>
 <div class="diagram-container">
 <svg viewbox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
@@ -359,7 +361,8 @@
 <h5 style="margin-top: 1.5rem; color: var(--subject-color, var(--text-light)); font-size: 1rem; margin-bottom: 0.5rem;">Difference from 3NF</h5>
 <p>3NF allows a dependency X → Y where X is NOT a super key, provided that Y is a prime attribute (part of a candidate key). BCNF does not allow this exception. A table can be in 3NF but fail BCNF if it has overlapping candidate keys.</p>
 <h5 style="margin-top: 1.5rem; color: var(--subject-color, var(--text-light)); font-size: 1rem; margin-bottom: 0.5rem;">Example</h5>
-<p>Consider <code>Relation(Student, Course, Instructor)</code>. Keys are (Student, Course) and (Student, Instructor). FD: <code>Instructor → Course</code>. <br/>
+<p>Consider <code>Relation(Student, Course, Instructor)</code>. Keys are (Student, Course) and (Student, Instructor). FD: <code>Instructor → Course</code>. <br/>
+
         It is in 3NF because <code>Course</code> is a prime attribute. However, it violates BCNF because <code>Instructor</code> is not a super key.</p></div><div class="presenter-transition" style="font-style: italic; color: var(--text-light); margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Moving forward from <strong>BCNF</strong>, let's break down the mechanics of <strong>Write a short note on 4NF and 5NF,</strong>.</div><div class="article-card"><h4 id="sub_I_28">Write a short note on 4NF and 5NF,</h4><h5 style="margin-top: 1.5rem; color: var(--subject-color, var(--text-light)); font-size: 1rem; margin-bottom: 0.5rem;">Fourth Normal Form (4NF)</h5>
 <p>Deals with <strong>Multi-valued Dependencies (MVD)</strong>. A table is in 4NF if it is in BCNF and contains no non-trivial multi-valued dependencies (where one attribute determines a set of values for another, independent of a third).<br/>
 <em>Example:</em> An Employee has multiple Skills and multiple Dependents. Storing them in one table creates massive redundancy. We split into <code>(Emp, Skill)</code> and <code>(Emp, Dependent)</code>.</p>
@@ -372,11 +375,16 @@
 <p>Splitting <code>Employee(ID, Name, Dept, Dept_Location)</code> into <code>Emp(ID, Name, Dept)</code> and <code>Department(Dept, Dept_Location)</code> is lossless because their intersection, <code>Dept</code>, is a primary key for the <code>Department</code> table.</p></div><div class="presenter-transition" style="font-style: italic; color: var(--text-light); margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Moving forward from <strong>Lossless-join decomposition</strong>, let's break down the mechanics of <strong>Dependency-preserving decomposition and give a suitable example</strong>.</div><div class="article-card"><h4 id="sub_I_30">Dependency-preserving decomposition and give a suitable example</h4><h5 style="margin-top: 1.5rem; color: var(--subject-color, var(--text-light)); font-size: 1rem; margin-bottom: 0.5rem;">Definition</h5>
 <p>A decomposition is dependency-preserving if the union of the functional dependencies in the decomposed relations logically implies all the functional dependencies of the original relation. This ensures that updates can be checked for validity without joining the tables back together.</p>
 <h5 style="margin-top: 1.5rem; color: var(--subject-color, var(--text-light)); font-size: 1rem; margin-bottom: 0.5rem;">Example</h5>
-<p>Original Relation: R(A, B, C)<br/>
-        Functional Dependencies (FDs): A → B, B → C<br/>
-        Decomposition: R1(A, B) and R2(B, C).<br/>
-        FDs in R1: A → B.<br/>
-        FDs in R2: B → C.<br/>
+<p>Original Relation: R(A, B, C)<br/>
+
+        Functional Dependencies (FDs): A → B, B → C<br/>
+
+        Decomposition: R1(A, B) and R2(B, C).<br/>
+
+        FDs in R1: A → B.<br/>
+
+        FDs in R2: B → C.<br/>
+
         Since (A → B) ∪ (B → C) covers all original FDs, it is a <strong>dependency-preserving decomposition</strong>.</p></div><div class="presenter-transition" style="font-style: italic; color: var(--text-light); margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;">Building on our understanding of <strong>Dependency-preserving decomposition and give a suitable example</strong>, let's dive into <strong>Draw an E-R diagram for a University Exam System, showing all entities, attributes, relationships, keys and cardinalities clearly</strong>.</div><div class="article-card"><h4 id="sub_I_31">Draw an E-R diagram for a University Exam System, showing all entities, attributes, relationships, keys and cardinalities clearly</h4><h5 style="margin-top: 1.5rem; color: var(--subject-color, var(--text-light)); font-size: 1rem; margin-bottom: 0.5rem;">E-R Diagram</h5>
 <div class="diagram-container">
 <svg height="200" viewbox="0 0 600 200" width="100%">
@@ -1434,6 +1442,28 @@ FROM ACCOUNT;</code></pre></div><div class="presenter-transition" style="font-st
 </div>
 <script src="../shared/app-utils.js"></script>
 ﻿    
+    
+    <!-- Mobile FAB Menu for Comprehensive Report -->
+    <div class="fab-container mobile-only-fab">
+        <div class="fab-menu" id="fabMenu">
+            <button class="fab-item" onclick="document.querySelector('.report-sidebar').classList.add('show-toc'); document.getElementById('fabMenu').classList.remove('open');" title="Table of Contents">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <span>TOC</span>
+            </button>
+            <button class="fab-item" onclick="downloadPDF(); document.getElementById('fabMenu').classList.remove('open');" title="Save as PDF">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>PDF</span>
+            </button>
+            <button class="fab-item" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); document.getElementById('fabMenu').classList.remove('open');" title="Back to Top">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                <span>Top</span>
+            </button>
+        </div>
+        <button class="fab-main" id="fabMainBtn" aria-label="Quick Actions" onclick="document.getElementById('fabMenu').classList.toggle('open'); this.classList.toggle('active');">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+    </div>
+
     <!-- Standalone Ask AI FAB (Bottom Left) -->
 <button aria-label="Ask AI" class="fab-main ask-ai-btn" onclick="openAssistant();" title="Ask AI">
 <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24"><path d="M12 2a2 2 0 0 1 2 2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2zM12 8c2.2 0 4 1.8 4 4v5c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-5c0-2.2 1.8-4 4-4zM6 12v5h2v-5H6zm10 0v5h2v-5h-2z"></path></svg>

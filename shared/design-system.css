@@ -2101,7 +2101,7 @@ body.report-page .banner {
    ========================================= */
 .ask-ai-btn {
     position: fixed;
-    bottom: calc(2rem + 70px + 1rem); /* Stack above quiz progress */
+    bottom: calc(2rem + 70px + 60px + 1rem); /* Stack above quiz progress and fab */
     right: 2rem;
     z-index: 9999;
     transition: all 0.3s ease;
@@ -2148,35 +2148,9 @@ body.report-page .ask-ai-btn {
         -webkit-overflow-scrolling: touch;
     }
     
-    /* Turn TOC into a Floating Action Button on the left */
-    .mobile-toc-toggle {
-        position: fixed !important;
-        bottom: 1rem !important;
-        left: 1rem !important;
-        width: 56px !important;
-        height: 56px !important;
-        border-radius: 50% !important;
-        background: var(--primary-teal, #10b981) !important;
-        color: white !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.5) !important;
-        border: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        z-index: 10000 !important;
-    }
     
-    /* Swap text for an icon */
-    .mobile-toc-toggle {
-        font-size: 0 !important; /* Hide the text */
-    }
-    .mobile-toc-toggle::after {
-        content: "?";
-        font-size: 1.5rem !important;
-        display: block !important;
-    }
+    
+    
 
     /* Transform the sidebar into a full-screen modal when opened via the FAB */
     .report-sidebar.show-toc {
@@ -2240,5 +2214,17 @@ body.report-page .ask-ai-widget {
     
     body.report-page .ask-ai-widget {
         bottom: calc(1rem + 60px) !important;
+    }
+}
+
+
+/* Mobile-only FAB for Reports */
+.mobile-only-fab {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .mobile-only-fab {
+        display: flex !important;
     }
 }
