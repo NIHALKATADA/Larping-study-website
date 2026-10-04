@@ -11,7 +11,7 @@ with open('title_map.json', 'r', encoding='utf-8') as f:
 def clean_text_for_sidebar(text):
     text = re.sub(r'CO\d$', '', text)
     text = re.sub(r'U\d$', '', text)
-    if len(text) > 40: text = text[:37] + "..."
+    
     return text.strip()
 
 transitions = [
@@ -47,7 +47,7 @@ for json_file in glob.glob('data/*/*_questions.json'):
         title = title_map.get(original_title, original_title)
         
         # Manually fix specific long titles if map failed
-        if len(title) > 60: title = title[:57] + '...'
+        
             
         html = q.get('answer_html', '')
         html = re.sub(r'<div class="concept-heading">(.*?)</div>', r'<h5 style="margin-top: 1.5rem; color: var(--subject-color, var(--text-light)); font-size: 1rem; margin-bottom: 0.5rem;">\1</h5>', html)
@@ -129,4 +129,5 @@ for json_file in glob.glob('data/*/*_questions.json'):
     with open(html_file, 'w', encoding='utf-8') as f:
         f.write(str(soup))
     print(f"Rebuilt {subject} perfectly.")
+
 
