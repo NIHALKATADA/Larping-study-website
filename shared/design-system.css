@@ -1424,8 +1424,9 @@ pre code {
 
 .ask-ai-widget {
     position: fixed;
-    bottom: calc(2rem + 70px);
-    left: 2rem;
+    bottom: calc(2rem + 70px + 60px);
+    right: 2rem;
+    left: auto;
     z-index: 2000;
     width: 400px;
     max-width: calc(100vw - 4rem);
@@ -2212,5 +2213,32 @@ body.report-page .ask-ai-btn {
     .report-sidebar.show-toc li a {
         font-size: 1.1rem !important;
         padding: 1rem 0 !important;
+    }
+}
+
+
+/* =========================================
+   ASK AI WIDGET ALIGNMENT FIX
+   ========================================= */
+.ask-ai-widget {
+    right: 2rem !important;
+    left: auto !important;
+    bottom: calc(2rem + 70px + 60px) !important;
+}
+
+body.report-page .ask-ai-widget {
+    bottom: calc(2rem + 60px) !important;
+}
+
+@media (max-width: 768px) {
+    .ask-ai-widget {
+        right: 1rem !important;
+        left: 1rem !important;
+        width: calc(100vw - 2rem) !important;
+        bottom: calc(1rem + 50px + 60px) !important;
+    }
+    
+    body.report-page .ask-ai-widget {
+        bottom: calc(1rem + 60px) !important;
     }
 }

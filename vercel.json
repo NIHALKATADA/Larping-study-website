@@ -2,13 +2,8 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "/subjects/:subject/comprehensive-report",
-      "destination": "/:subject/comprehensive-report",
-      "permanent": true
-    },
-    {
-      "source": "/subjects/:subject/comprehensive-report.html",
-      "destination": "/:subject/comprehensive-report",
+      "source": "/subjects/(.*)",
+      "destination": "/$1",
       "permanent": true
     }
   ]
