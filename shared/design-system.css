@@ -2361,7 +2361,7 @@ html, body { width: 100% !important; max-width: 100% !important; }
    ========================================= */
 @media (max-width: 768px) {
     /* Hide desktop sidebar */
-    .report-sidebar { display: none !important; }
+    .report-sidebar:not(.show-toc) { display: none !important; }
     
     /* On mobile, remove margin/flex and force block */
     .report-container, .report-wrapper, .report-main {
@@ -2423,5 +2423,25 @@ html, body { width: 100% !important; max-width: 100% !important; }
         left: 0 !important;
         right: auto !important;
         align-items: flex-start !important;
+    }
+
+    /* Guarantee FAB Menu Visibility */
+    .fab-menu.open {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: translateY(0) scale(1) !important;
+        visibility: visible !important;
+        display: flex !important;
+        z-index: 99999 !important;
+    }
+
+    /* Guarantee FAB Menu Visibility */
+    .fab-menu.open {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: translateY(0) scale(1) !important;
+        visibility: visible !important;
+        display: flex !important;
+        z-index: 99999 !important;
     }
 }
