@@ -233,3 +233,18 @@ The project utilizes Vercel Serverless Functions (`api/chat.js`) to securely com
 - **RAG Embedding Purity:** Modified build_site.py to pre-clean and purge all chat UI widgets (.ask-ai-widget, .fab-main) via BeautifulSoup before chunking HTML.
 - **AI Backend Standardization:** All Vercel Serverless configurations and documentation successfully migrated from Gemini to Groq API (llama-3.1-70b-versatile, qwen2.5-32b).
 - **Prompt Architecture:** The AI Assistant System Prompt was rewritten to forcefully enforce Midterm scopes (Units I-III), analyze gaps, and verify cheat sheet coverage interactively.
+
+### 2. Comprehensive Reports (Automated Textbook Generation)
+The project includes a powerful Python build script that automatically converts the entire `data/*/*_questions.json` question banks into beautifully flowing, W3Schools-style textbook pages (`comprehensive-report.html`). 
+
+**Features of the Pipeline:**
+* **100% Syllabus Coverage:** Maps every single question bank entry directly into the report.
+* **Auto-Transitions:** Automatically injects randomized, presenter-style transition sentences (e.g., "Moving forward from [Topic A], let's explore [Topic B]") between topics to create a seamless reading flow.
+* **Header Cleaning:** Uses regex to automatically convert question-phrased titles ("What is a DBMS?") into professional textbook headers ("Introduction to DBMS").
+
+**How to Rebuild Reports:**
+If you ever add new questions to the JSON question banks, you can easily regenerate all 6 Comprehensive Reports by running:
+```bash
+python scripts/build_comprehensive_reports.py
+```
+This script will parse all 6 subjects, generate the transitions, rebuild the dynamic sidebars, and inject the open-flow textbook content into the HTML templates without overwriting the UI layout.
