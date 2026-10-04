@@ -2465,3 +2465,12 @@ html, body { width: 100% !important; max-width: 100% !important; }
         display: block !important;
     }
 }
+
+/* Mobile TOC overlay: solid background (overrides earlier transparent rule) */
+@media (max-width: 768px) {
+    body.report-page aside.report-sidebar.show-toc {
+        background: #0a0a0f !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+}
