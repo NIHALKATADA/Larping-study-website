@@ -2266,7 +2266,7 @@ body.report-page .ask-ai-widget {
 @media (max-width: 768px) {
     /* Mobile Default (Question Bank & Quiz): Stack above Progress Widget on the right */
     .ask-ai-btn {
-        bottom: calc(1rem + 50px + 1rem) !important; /* Progress widget is ~50px tall */
+        bottom: calc(1rem + 75px + 1rem) !important;
         right: 1rem !important;
         left: auto !important;
     }
@@ -2294,8 +2294,9 @@ body.report-page .ask-ai-widget {
 
 
 
+
 /* =========================================
-   STRICT MOBILE UI FIXES & LAYOUT RESET
+   SAFE MOBILE OPTIMIZATIONS & FIXES
    ========================================= */
 
 /* 1. Global table constraint so desktop tables don't blow up the layout */
@@ -2313,34 +2314,30 @@ table {
     height: auto !important;
 }
 
-/* 3. Global document constraint */
+/* 3. Safe document bounds to prevent panning bugs */
 html, body {
     width: 100% !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
 }
 
-/* 4. Fix Glow BG sizing */
+/* Fix Glow BG sizing */
 .glow-bg {
     width: 100% !important;
     max-width: 100% !important;
 }
 
-/* 5. Mobile specific overrides */
+/* Mobile specific overrides */
 @media (max-width: 768px) {
     /* Hide desktop sidebar */
     .report-sidebar { display: none !important; }
     
-    /* Reset containers to block and ensure they fit 100% */
-    .layout-wrapper, .report-wrapper, .report-container, .report-main {
-        display: block !important;
+    /* Ensure main report container fits 100% with padding */
+    .report-container, .report-main {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 !important;
         box-sizing: border-box !important;
+        margin: 0 !important;
     }
     
     /* Give main content safe padding so text doesn't touch edges */
@@ -2349,31 +2346,31 @@ html, body {
         padding-right: 1.25rem !important;
     }
     
-    /* Remove padding/margin from inner cards so they fit the main container */
+    /* Ensure inner cards don't break out */
     .unit-section, .article-card {
         width: 100% !important;
         max-width: 100% !important;
+        box-sizing: border-box !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
-        box-sizing: border-box !important;
     }
     
-    /* Force text to wrap unconditionally */
-    p, h1, h2, h3, h4, h5, h6, li, span, div, .article-card *, .unit-heading {
+    /* Force text to wrap ONLY inside the report to prevent breaking other UI */
+    .report-main p, .report-main h1, .report-main h2, .report-main h3, .report-main h4, .report-main h5, .report-main h6, .report-main li, .report-main span, .report-main div {
         white-space: pre-wrap !important; 
         word-break: break-word !important;
         overflow-wrap: break-word !important;
         max-width: 100% !important;
     }
     
-    /* Except tables and code which must scroll */
-    pre, .table-scroll-wrapper {
+    /* Except code blocks which must scroll */
+    .report-main pre {
         white-space: normal !important;
         max-width: 100% !important;
         overflow-x: auto !important;
         display: block !important;
     }
-    pre code {
+    .report-main pre code {
         white-space: pre !important;
         word-break: normal !important;
         overflow-wrap: normal !important;
@@ -2381,75 +2378,32 @@ html, body {
     
     /* Topbar mobile adjustments */
     .smart-topbar button[onclick="downloadPDF()"] { display: none !important; }
-    .smart-topbar { backdrop-filter: blur(16px) !important; -webkit-backdrop-filter: blur(16px) !important; background: rgba(20, 20, 20, 0.7) !important; }
     
-    /* FAB adjustments */
+    /* FAB adjustments - Ensure no overlap */
     .fab-container {
         bottom: 1rem !important;
         left: 1rem !important;
         right: auto !important;
     }
-    .ask-ai-widget {
+    
+    body:not(.report-page) .ask-ai-btn {
+        bottom: 95px !important; /* Clear progress widget */
         right: 1rem !important;
-        left: 1rem !important;
-        width: calc(100% - 2rem) !important;
-    }
-
-    /* -------------------------------------
-       SPACE OPTIMIZATION (MOBILE)
-       ------------------------------------- */
-    .report-main .unit-section {
-        margin-bottom: 2.5rem !important;
+        left: auto !important;
     }
     
-    .report-main .unit-section h3.unit-heading {
-        font-size: 1.8rem !important;
-        margin-bottom: 1.5rem !important;
-        padding-bottom: 0.75rem !important;
+    body.report-page .ask-ai-btn {
+        bottom: 1rem !important;
+        right: 1rem !important;
+        left: auto !important;
     }
     
-    .report-main .article-card {
-        margin-bottom: 2rem !important;
-    }
-    
-    .report-main .article-card h4 {
-        font-size: 1.3rem !important;
-        margin-bottom: 0.75rem !important;
-    }
-    
-    .presenter-transition {
-        margin: 1rem 0 1.5rem 0.5rem !important;
-        padding-left: 0.75rem !important;
-        font-size: 0.95rem !important;
-    }
-    
-    .report-main p, .report-main ul, .report-main div {
-        margin-bottom: 0.75rem !important;
-        font-size: 1rem !important; /* Slightly smaller for density */
-    }
-    
-    .report-main li {
-        margin-bottom: 0.5rem !important;
-    }
-    
-    .report-main table {
-        margin: 1rem 0 !important;
-        font-size: 0.9rem !important;
-    }
-    
-    .report-main th, .report-main td {
-        padding: 0.75rem !important;
-    }
-    
-    /* Ensure the FABs don't feel too floating */
-    .fab-container {
-        bottom: 0.75rem !important;
-        left: 0.75rem !important;
-    }
-    .ask-ai-widget {
-        right: 0.75rem !important;
-        left: 0.75rem !important;
-        width: calc(100% - 1.5rem) !important;
-    }
+    /* Tighter margins for mobile density */
+    .report-main .unit-section { margin-bottom: 2.5rem !important; }
+    .report-main .unit-section h3.unit-heading { font-size: 1.8rem !important; margin-bottom: 1.5rem !important; padding-bottom: 0.75rem !important; }
+    .report-main .article-card { margin-bottom: 2rem !important; }
+    .report-main .article-card h4 { font-size: 1.3rem !important; margin-bottom: 0.75rem !important; }
+    .presenter-transition { margin: 1rem 0 1.5rem 0.5rem !important; padding-left: 0.75rem !important; font-size: 0.95rem !important; }
+    .report-main p, .report-main ul, .report-main div { margin-bottom: 0.75rem !important; font-size: 1rem !important; }
+    .report-main li { margin-bottom: 0.5rem !important; }
 }
-
