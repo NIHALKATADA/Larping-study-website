@@ -2394,4 +2394,62 @@ html, body {
         left: 1rem !important;
         width: calc(100% - 2rem) !important;
     }
+
+    /* -------------------------------------
+       SPACE OPTIMIZATION (MOBILE)
+       ------------------------------------- */
+    .report-main .unit-section {
+        margin-bottom: 2.5rem !important;
+    }
+    
+    .report-main .unit-section h3.unit-heading {
+        font-size: 1.8rem !important;
+        margin-bottom: 1.5rem !important;
+        padding-bottom: 0.75rem !important;
+    }
+    
+    .report-main .article-card {
+        margin-bottom: 2rem !important;
+    }
+    
+    .report-main .article-card h4 {
+        font-size: 1.3rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .presenter-transition {
+        margin: 1rem 0 1.5rem 0.5rem !important;
+        padding-left: 0.75rem !important;
+        font-size: 0.95rem !important;
+    }
+    
+    .report-main p, .report-main ul, .report-main div {
+        margin-bottom: 0.75rem !important;
+        font-size: 1rem !important; /* Slightly smaller for density */
+    }
+    
+    .report-main li {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .report-main table {
+        margin: 1rem 0 !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .report-main th, .report-main td {
+        padding: 0.75rem !important;
+    }
+    
+    /* Ensure the FABs don't feel too floating */
+    .fab-container {
+        bottom: 0.75rem !important;
+        left: 0.75rem !important;
+    }
+    .ask-ai-widget {
+        right: 0.75rem !important;
+        left: 0.75rem !important;
+        width: calc(100% - 1.5rem) !important;
+    }
 }
+
