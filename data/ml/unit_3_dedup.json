@@ -1,0 +1,38 @@
+{
+  "unit": "III",
+  "unit_title": "Unit III: Classification & Advanced Algorithms",
+  "topics": [
+    {
+      "title": "Logistic Regression & The Sigmoid Activation Function",
+      "content_html": "<p><strong>Definition:</strong> Logistic Regression is a supervised algorithm that uses the Sigmoid function to map a linear combination of features into a probability between 0 and 1.</p>\n<ul class=\"revision-list\">\n<li><strong>Sigmoid Function:</strong> The formula is \u03c3(z) = 1 / (1 + e^(-z)). It maps any real value into a continuous S-curve bounded between 0 and 1, interpreting the output as a valid probability.</li>\n<li><strong>Decision Boundary:</strong> A threshold (typically 0.5) converts probabilities into binary classes. If p \u2265 0.5, class 1 is predicted; otherwise, class 0. This forms a linear hypersurface separating the feature space.</li>\n</ul>"
+    },
+    {
+      "title": "Binary Cross-Entropy (Log-Loss) Cost Function",
+      "content_html": "<p><strong>Definition:</strong> Binary Cross-Entropy (Log-Loss) is a convex loss function used for binary classification that heavily penalizes divergent probabilistic predictions relative to true ground truth labels.</p>\n<ul class=\"revision-list\">\n<li><strong>Log-Loss Formula:</strong> The single-sample cost is -[y * log(\u0177) + (1-y) * log(1-\u0177)], penalizing confident but incorrect predictions logarithmically.</li>\n<li><strong>Why MSE Fails:</strong> Using Mean Squared Error with a non-linear sigmoid activation creates a non-convex loss landscape with multiple local minima. Gradient Descent struggles to find the global optimum, whereas Log-Loss guarantees a convex function.</li>\n</ul>"
+    },
+    {
+      "title": "K-Nearest Neighbors (KNN) & Distance Metrics",
+      "content_html": "<p><strong>Definition:</strong> K-Nearest Neighbors (KNN) is a non-parametric, instance-based learning algorithm that classifies instances based on the majority vote of their K closest training points.</p>\n<ul class=\"revision-list\">\n<li><strong>Working Mechanism:</strong> It computes the distance from the query to all training points, sorts them, and assigns the mode class among the K nearest neighbors.</li>\n<li><strong>Distance Metrics:</strong> Euclidean distance (straight-line distance) is standard for continuous data. Manhattan is for grid-like data. Minkowski generalizes both.</li>\n<li><strong>Choosing K:</strong> Small K (e.g., 1) overfits to local noise (high variance), creating jagged boundaries. Large K underfits (high bias), creating overly smooth boundaries. Cross-validation or \u221aN is typically used to find an optimal balance.</li>\n</ul>"
+    },
+    {
+      "title": "Decision Trees & Node Impurity Metrics",
+      "content_html": "<p><strong>Definition:</strong> Decision Trees use mathematical purity criteria to evaluate and select optimal attribute partitions that maximize class homogeneity at each node.</p>\n<ul class=\"revision-list\">\n<li><strong>Entropy:</strong> Quantifies disorder using H = -\u03a3 p_i * log2(p_i). An entropy of 0 means perfect purity.</li>\n<li><strong>Information Gain:</strong> Measures the expected reduction in entropy after splitting a dataset on an attribute. The algorithm evaluates features and selects the one with the highest information gain.</li>\n<li><strong>Gini Impurity:</strong> Measures misclassification probability if a random element was randomly labeled using the class distribution: Gini = 1 - \u03a3 (p_i)\u00b2. It avoids logarithmic calculations, making it computationally faster than Entropy.</li>\n</ul>"
+    },
+    {
+      "title": "Bayes' Theorem & The Naive Bayes Classifier",
+      "content_html": "<p><strong>Definition:</strong> Naive Bayes is a probabilistic classifier based on Bayes' Theorem that strictly assumes all input features are conditionally independent given the target class.</p>\n<ul class=\"revision-list\">\n<li><strong>Bayes' Theorem:</strong> Stated mathematically as P(A|B) = [P(B|A) * P(A)] / P(B), where P(A|B) is the posterior, P(B|A) is the likelihood, P(A) is the prior, and P(B) is the evidence.</li>\n<li><strong>Naive Assumption:</strong> It is \"naive\" because it strongly assumes feature independence, which is mathematically unrealistic in complex data, yet it performs surprisingly well for tasks like text classification.</li>\n<li><strong>Laplace Smoothing:</strong> A technique used to handle unseen features in the test set that would otherwise cause zero probability during multiplication.</li>\n</ul>"
+    },
+    {
+      "title": "Support Vector Machines (SVM) & The Kernel Trick",
+      "content_html": "<p><strong>Definition:</strong> Support Vector Machines (SVM) determine the optimal geometric decision boundary (hyperplane) that maximizes the orthogonal margin between distinct classes.</p>\n<ul class=\"revision-list\">\n<li><strong>Hyperplane & Support Vectors:</strong> The hyperplane separates classes. Support vectors are critical boundary-defining data points closest to it; altering them shifts the boundary directly.</li>\n<li><strong>Hard vs. Soft Margin:</strong> Hard Margin strictly forbids misclassification. Soft Margin introduces a regularization parameter C and slack variables (hinge loss) to tolerate margin violations and improve generalization on overlapping data.</li>\n<li><strong>The Kernel Trick:</strong> Computes implicit inner products in a higher-dimensional space without explicit mapping. Linear kernel is fast; Polynomial handles curved boundaries; RBF handles infinite-dimensional complex islands using exponential distances.</li>\n</ul>"
+    },
+    {
+      "title": "Ensemble Learning: Bagging & Boosting",
+      "content_html": "<p><strong>Definition:</strong> Ensemble Learning combines predictions from multiple diverse base models to reduce model variance or bias, achieving superior predictive generalization.</p>\n<ul class=\"revision-list\">\n<li><strong>Bagging (Random Forest):</strong> Trains multiple decision trees independently on bootstrapped subsets of data and features, aggregating outputs via majority voting to reduce variance (overfitting).</li>\n<li><strong>Boosting (AdaBoost, GBM, XGBoost):</strong> Builds models sequentially. AdaBoost assigns higher weights to misclassified instances; Gradient Boosting fits new models to residual errors; XGBoost provides an optimized, scalable implementation.</li>\n<li><strong>Weighted Averaging:</strong> Combines individual model outputs by applying a linear combination of their scaled importance weights.</li>\n</ul>"
+    },
+    {
+      "title": "Classification Evaluation Metrics & Confusion Matrix",
+      "content_html": "<p><strong>Definition:</strong> The Confusion Matrix evaluates classification performance by tabulating predicted labels against true ground-truth classes to derive precision, recall, and harmonic balance.</p>\n<ul class=\"revision-list\">\n<li><strong>Confusion Matrix:</strong> Cross-classifies actual vs predicted values, resulting in True Positives (TP), True Negatives (TN), False Positives (FP/Type I error), and False Negatives (FN/Type II error).</li>\n<li><strong>Accuracy & Precision:</strong> Accuracy is (TP+TN)/Total. Precision is TP / (TP+FP), reflecting exactness of positive predictions.</li>\n<li><strong>Recall & F1-Score:</strong> Recall is TP / (TP+FN), quantifying ability to find all positive instances. F1-Score is the harmonic mean of precision and recall, serving as a robust metric for imbalanced datasets.</li>\n</ul>"
+    }
+  ]
+}

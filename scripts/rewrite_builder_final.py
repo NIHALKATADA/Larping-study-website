@@ -28,7 +28,12 @@ for subject in ["daa", "dbms", "java", "maths", "ml", "os"]:
     out_data = None
     is_perfect = False
     
-    if os.path.exists(f"data/{subject}/{subject}_perfect_report.json"):
+    if os.path.exists(f"data/{subject}/{subject}_dedup_report.json"):
+        print(f"  Using DEDUP report for {subject}")
+        with open(f"data/{subject}/{subject}_dedup_report.json", "r", encoding="utf-8") as f:
+            out_data = json.load(f)
+            is_perfect = True
+    elif os.path.exists(f"data/{subject}/{subject}_perfect_report.json"):
         print(f"  Using PERFECT report for {subject}")
         with open(f"data/{subject}/{subject}_perfect_report.json", "r", encoding="utf-8") as f:
             out_data = json.load(f)
@@ -113,4 +118,3 @@ for subject in ["daa", "dbms", "java", "maths", "ml", "os"]:
     with open(html_file, 'w', encoding='utf-8') as f:
         f.write(str(soup))
     print(f"Rebuilt {subject} successfully.")
-

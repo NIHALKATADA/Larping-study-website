@@ -1,0 +1,402 @@
+Topic 0: Write the hypothesis function for a Simple Linear Regression model and define its components
+<p><strong>Definition:</strong> The Hypothesis Function in Simple Linear Regression  is a mathematical linear equation that estimates the expected value of a continuous dependent target given a single independent predictor.</p>
+<ul class="revision-list">
+<li><strong>The Hypothesis:</strong> The hypothesis function for a Simple Linear Regression model is mathematically represented as  h(x) = θ0 + θ1*x .</li>
+<li><strong>In This:</strong> In this equation,  θ0  represents the y-intercept, which is the predicted value when the input is zero.</li>
+<li><strong>The Component:</strong> The component  θ1  is the slope or weight that determines the impact of the input feature, while  x  represents the independent input feature itself.</li>
+</ul>
+----------------------------------------
+Topic 1: Equation for Multiple Linear Regression
+<p><strong>Definition:</strong> Multiple Linear Regression  is a statistical modeling technique that models the linear relationship between two or more independent explanatory features and a single continuous target variable.</p>
+<ul class="revision-list">
+<li><strong>The Equation:</strong> The equation for Multiple Linear Regression is expressed as  y = θ0 + θ1*x1 + θ2*x2 + ...</li>
+<li><strong>+ Θn*Xn:</strong> + θn*xn .</li>
+<li><strong>In This:</strong> In this formulation,  y  is the predicted dependent variable, and  θ0  acts as the fundamental y-intercept or bias term.</li>
+<li><strong>The Terms:</strong> The terms  θ1  through  θn  represent the learned coefficients or weights, each corresponding to its respective independent input variable  x1  through  xn .</li>
+</ul>
+----------------------------------------
+Topic 2: Residual error ei in linear regression analysis
+<p><strong>Definition:</strong> Residual Error  is the numerical difference between the actual observed target value and the corresponding value predicted by a regression model for a given data instance.</p>
+<ul class="revision-list">
+<li><strong>In Linear:</strong> In linear regression analysis, the residual error, denoted as  ei , quantifies the difference between the actual observed value and the value predicted by the model.</li>
+<li><strong>It Is:</strong> It is mathematically defined as  ei = yi - ŷi , where  yi  is the true target value and  ŷi  is the estimated prediction.</li>
+<li><strong>Analyzing These:</strong> Analyzing these residuals is crucial, as they help evaluate the accuracy of the model's fit and identify any unexplained variance in the data.</li>
+</ul>
+----------------------------------------
+Topic 3: Primary mathematical objective of the Ordinary Least Squares (OLS) method
+<p><strong>Definition:</strong> Ordinary Least Squares (OLS)  is a parameter estimation technique in linear regression that computes the optimal model parameters by minimizing the sum of squared differences between observed and predicted values.</p>
+<ul class="revision-list">
+<li><strong>The Primary:</strong> The primary mathematical objective of the Ordinary Least Squares (OLS) method is to determine the optimal line of best fit for a given dataset.</li>
+<li><strong>It Achieves:</strong> It achieves this by systematically minimizing the sum of the squared residual errors between the actual observed values and the model's predicted values.</li>
+<li><strong>By Squaring:</strong> By squaring the residuals, OLS heavily penalizes larger errors, ensuring the resulting model is as mathematically precise as possible.</li>
+</ul>
+----------------------------------------
+Topic 4: Write the Mean Squared Error (MSE) cost function Jθ used in linear regression
+<p><strong>Definition:</strong> The Mean Squared Error (MSE) cost function  is a loss metric that quantifies the overall performance of a regression model by calculating the average squared deviation of predicted values from true targets.</p>
+<ul class="revision-list">
+<li><strong>The Mean:</strong> The Mean Squared Error (MSE) cost function, often denoted as  J(θ) , is defined as  J(θ) = (1/2m) Σ (hθ(xi) - yi)² .</li>
+<li><strong>In This:</strong> In this formula,  m  represents the total number of training examples in the dataset.</li>
+<li><strong>This Cost:</strong> This cost function calculates the average of the squared differences between the predicted hypotheses  hθ(xi)  and the actual target values  yi , providing a standard metric to optimize the model's weights.</li>
+</ul>
+----------------------------------------
+Topic 5: Why is Gradient Descent preferred over the analytical Normal Equation for high-dimensional datasets
+<p><strong>Definition:</strong> Gradient Descent  is an iterative first-order optimization algorithm used to find the local minimum of a differentiable objective function by updating parameters in the opposite direction of the gradient.</p>
+<ul class="revision-list">
+<li><strong>Gradient Descent:</strong> Gradient Descent is highly preferred for high-dimensional datasets because it is computationally efficient and scales well with an increasing number of features.</li>
+<li><strong>Conversely, The:</strong> Conversely, the analytical Normal Equation requires calculating the inverse of an  n x n  matrix, where  n  is the number of features.</li>
+<li><strong>This Matrix:</strong> This matrix inversion has a computational complexity of roughly  O(n³) , making the Normal Equation impractically slow and resource-intensive for large-scale modern datasets.</li>
+</ul>
+----------------------------------------
+Topic 6: Learning rate α in Gradient Descent, and what happens if it is set too high
+<p><strong>Definition:</strong> The Learning Rate (α)  is a tunable hyperparameter in gradient-based optimization algorithms that scales the magnitude of parameter updates at each optimization step.</p>
+<ul class="revision-list">
+<li><strong>The Learning:</strong> The learning rate, denoted by  α , is a crucial hyperparameter in Gradient Descent that dictates the step size the algorithm takes when moving towards the minimum of the cost function.</li>
+<li><strong>If The:</strong> If the learning rate is set too high, the algorithm may overshoot the global minimum during optimization.</li>
+<li><strong>This Overshoot:</strong> This overshoot can lead to a failure to converge, causing the cost function to oscillate wildly or diverge entirely, breaking the learning process.</li>
+</ul>
+----------------------------------------
+Topic 7: Polynomial Regression and explain how it captures non-linear data trends
+<p><strong>Definition:</strong> Polynomial Regression  is a form of regression analysis in which the relationship between an independent variable and a dependent variable is modeled as an nth-degree polynomial.</p>
+<ul class="revision-list">
+<li><strong>Polynomial Regression:</strong> Polynomial Regression is an extension of linear regression that models the relationship between independent and dependent variables as an nth-degree polynomial function.</li>
+<li><strong>By Raising:</strong> By raising the input features to higher powers and adding them to the equation, the model curve gains the flexibility to bend and twist.</li>
+<li><strong>This Mathematical:</strong> This mathematical flexibility allows the model to accurately capture and fit complex, non-linear trends that a simple straight line would completely miss.</li>
+</ul>
+----------------------------------------
+Topic 8: Is Polynomial Regression considered a linear or non-linear model
+<p><strong>Definition:</strong> Linearity in Polynomial Regression  refers to the mathematical property that the model equation is linear with respect to its unknown regression parameters, even when the features are non-linear powers.</p>
+<ul class="revision-list">
+<li><strong>Despite Its:</strong> Despite its ability to fit curves, Polynomial Regression is strictly considered a linear model within the context of statistics.</li>
+<li><strong>This Classification:</strong> This classification is because the model remains linear with respect to its learnable parameters or coefficients.</li>
+<li><strong>Even Though:</strong> Even though the input features themselves undergo non-linear transformations (such as being squared or cubed), the final equation is still a linear combination of those transformed features and their respective weights.</li>
+</ul>
+----------------------------------------
+Topic 9: Overfitting and list two common causes
+<p><strong>Definition:</strong> Overfitting  is a machine learning pathology where an overly complex model learns spurious statistical noise in the training data rather than the true underlying distribution, resulting in poor generalization.</p>
+<ul class="revision-list">
+<li><strong>Overfitting Is:</strong> Overfitting is a modeling error that occurs when a machine learning algorithm learns the training data excessively well, effectively memorizing the noise and statistical fluctuations rather than the underlying pattern.</li>
+<li><strong>As A:</strong> As a result, the model performs excellently on training data but poorly on unseen test data.</li>
+<li><strong>Two Common:</strong> Two common causes of overfitting include utilizing overly complex models with too many parameters and training the model on small, insufficient, or highly noisy datasets.</li>
+</ul>
+----------------------------------------
+Topic 10: Underfitting and mention how it can be identified
+<p><strong>Definition:</strong> Underfitting  is a modeling failure that occurs when a machine learning model lacks the statistical capacity to capture the underlying structure and relationships within the dataset.</p>
+<ul class="revision-list">
+<li><strong>Underfitting Is:</strong> Underfitting is a condition where a machine learning model is far too simple or constrained to capture the true underlying patterns and complexities of the data.</li>
+<li><strong>It Can:</strong> It can be easily identified when the model exhibits poor predictive performance and high error rates on both the training dataset and the validation dataset.</li>
+<li><strong>Ultimately, An:</strong> Ultimately, an underfitted model fails to extract meaningful insights, acting as an overly generalized approximation of the problem.</li>
+</ul>
+----------------------------------------
+Topic 11: Bias-Variance tradeoff in the context of model complexity
+<p><strong>Definition:</strong> The Bias-Variance Tradeoff  is the foundational machine learning principle stating that an algorithm's total prediction error comprises bias, variance, and irreducible noise, requiring a balance between underfitting and overfitting.</p>
+<ul class="revision-list">
+<li><strong>The Bias-Variance:</strong> The Bias-Variance tradeoff represents the delicate balance required when tuning model complexity to achieve optimal generalization.</li>
+<li><strong>As Model:</strong> As model complexity increases, bias typically decreases because the model can better fit the data, but variance increases, increasing the risk of overfitting.</li>
+<li><strong>Conversely, Lower:</strong> Conversely, lower complexity increases bias but decreases variance, leading to underfitting; the ultimate goal is to find the sweet spot that minimizes the total combined error.</li>
+</ul>
+----------------------------------------
+Topic 12: Two techniques to reduce overfitting in regression models
+<p><strong>Definition:</strong> Overfitting Reduction Techniques  are algorithmic and regularization strategies applied to prevent statistical models from memorizing training noise and to enhance generalizability on unseen data.</p>
+<ul class="revision-list">
+<li><strong>One Primary:</strong> One primary technique to reduce overfitting in regression models is introducing Regularization, such as L1 (Lasso) or L2 (Ridge), which adds penalty terms to constrain the model's weights.</li>
+<li><strong>A Second:</strong> A second effective technique is reducing the overall model complexity by performing strict feature selection, thereby removing irrelevant or redundant variables.</li>
+<li><strong>Both Methods:</strong> Both methods force the model to focus on the most significant data patterns, improving generalization on unseen datasets.</li>
+</ul>
+----------------------------------------
+Topic 13: Regularization, and why is it added to regression cost functions
+<p><strong>Definition:</strong> Regularization  is a form of regression penalization that introduces a complexity penalty to the optimization loss function to prevent overfitting and encourage generalizable coefficients.</p>
+<ul class="revision-list">
+<li><strong>Regularization Is:</strong> Regularization is a powerful mathematical technique used to constrain or shrink the coefficient estimates towards zero to discourage highly complex models.</li>
+<li><strong>It Achieves:</strong> It achieves this by adding a specific penalty term directly to the regression cost function.</li>
+<li><strong>This Penalty:</strong> This penalty prevents the model's weights from becoming excessively large, thereby reducing variance, preventing overfitting, and significantly improving the model's ability to generalize to new, unseen data.</li>
+</ul>
+----------------------------------------
+Topic 14: Ridge L2 and Lasso L1 regularization penalties
+<p><strong>Definition:</strong> Ridge (L2) and Lasso (L1) Regularization  are two shrinkage techniques that augment regression loss functions with norm penalties on model weights to control model complexity.</p>
+<ul class="revision-list">
+<li><strong>Ridge Regularization,:</strong> Ridge Regularization, or L2, adds a penalty term to the cost function that is strictly equal to the sum of the squared magnitudes of the model's coefficients.</li>
+<li><strong>In Contrast,:</strong> In contrast, Lasso Regularization, or L1, incorporates a penalty equal to the sum of the absolute values of those coefficients.</li>
+<li><strong>While Both:</strong> While both methods successfully reduce overfitting, their differing mathematical approaches lead to significantly different effects on the final weights of the model's features.</li>
+</ul>
+----------------------------------------
+Topic 15: Why does Lasso L1 regularization perform automatic feature selection while Ridge L2 does not
+<p><strong>Definition:</strong> Automatic Feature Selection in Lasso  is the algorithmic property stemming from the geometry of the L1 norm that drives non-informative feature coefficients strictly to zero during optimization.</p>
+<ul class="revision-list">
+<li><strong>Lasso (L1):</strong> Lasso (L1) regularization utilizes an absolute value penalty, which structurally encourages sparsity by forcing the coefficients of less important features exactly to zero.</li>
+<li><strong>Because These:</strong> Because these coefficients become zero, Lasso effectively performs automatic feature selection by dropping irrelevant variables from the model.</li>
+<li><strong>Ridge (L2):</strong> Ridge (L2) regularization, utilizing a squared penalty, shrinks coefficients asymptotically towards zero but rarely makes them exactly zero, meaning all features remain in the final model.</li>
+</ul>
+----------------------------------------
+Topic 16: Write the mathematical formula for Mean Absolute Error (MAE)
+<p><strong>Definition:</strong> Mean Absolute Error (MAE)  is an evaluation metric that measures the average magnitude of absolute differences between predicted values and actual observed outcomes.</p>
+<ul class="revision-list">
+<li><strong>The Mathematical:</strong> The mathematical formula for Mean Absolute Error is written as  MAE = (1/n) Σ |yi - ŷi| .</li>
+<li><strong>In This:</strong> In this equation,  yi  represents the actual observed target values, while  ŷi  represents the model's corresponding predicted values.</li>
+<li><strong>The Variable:</strong> The variable  n  denotes the total number of samples being evaluated, making MAE a measure of the average absolute distance between predictions and truth.</li>
+</ul>
+----------------------------------------
+Topic 17: Formula for Root Mean Squared Error (RMSE) and explain its advantage over MSE
+<p><strong>Definition:</strong> Root Mean Squared Error (RMSE)  is a regression evaluation metric that measures the average magnitude of prediction error by taking the square root of the mean squared differences between predicted and actual values.</p>
+<ul class="revision-list">
+<li><strong>The Formula:</strong> The formula for Root Mean Squared Error is  RMSE = √((1/n) Σ (yi - ŷi)²) .</li>
+<li><strong>Rmse Provides:</strong> RMSE provides a measure of the average magnitude of the error.</li>
+<li><strong>Its Primary:</strong> Its primary advantage over Mean Squared Error (MSE) is that taking the square root converts the error metric back into the same units as the target variable, making it much easier to interpret.</li>
+<li><strong>Furthermore, Like:</strong> Furthermore, like MSE, it heavily penalizes larger errors because the errors are squared before being averaged, which is highly beneficial when large errors are particularly undesirable.</li>
+</ul>
+----------------------------------------
+Topic 18: What does the R2 (R-squared) coefficient measure, and what is its standard range
+<p><strong>Definition:</strong> R-Squared (Coefficient of Determination)  is a statistical metric that measures the proportion of variance in a dependent variable explained by independent variables in a regression model.</p>
+<ul class="revision-list">
+<li><strong>The R-Squared:</strong> The R-squared (R²) coefficient, also known as the coefficient of determination, measures the proportion of variance in the dependent variable that is predictably explained by the independent variables in a regression model.</li>
+<li><strong>Its Standard:</strong> Its standard range lies between 0 and 1, where 0 indicates that the model explains none of the variability and 1 indicates it explains all of it.</li>
+<li><strong>A Higher:</strong> A higher R-squared value generally indicates a better fit for the model, although it should be evaluated in context with other metrics.</li>
+</ul>
+----------------------------------------
+Topic 19: Why is Adjusted R2 preferred over standard R2 in Multiple Linear Regression
+<p><strong>Definition:</strong> Adjusted R-Squared  is a modified version of the coefficient of determination that penalizes the inclusion of non-significant predictor variables to accurately reflect model goodness-of-fit.</p>
+<ul class="revision-list">
+<li><strong>Standard R-Squared:</strong> Standard R-squared artificially inflates whenever a new independent variable is added to a model, even if that variable does not meaningfully improve the predictions.</li>
+<li><strong>Adjusted R-Squared:</strong> Adjusted R-squared is preferred because it incorporates a penalty for adding non-significant predictors, thereby adjusting for the number of terms in the model.</li>
+<li><strong>This Provides:</strong> This provides a more accurate and reliable measure of goodness-of-fit for multiple linear regression models, preventing overfitting by ensuring only useful variables increase the score.</li>
+</ul>
+----------------------------------------
+Topic 20: Write the structural mathematical formulation for a Simple Linear Regression model and explain all its terms
+<p><strong>Definition:</strong> Simple Linear Regression  is a supervised parametric algorithm that models the linear relationship between a single independent explanatory variable and a continuous dependent target variable.</p>
+<ul class="revision-list">
+<li><strong>The Mathematical:</strong> The mathematical formulation for a Simple Linear Regression model is  y = β0 + β1x + ε .</li>
+<li><strong>In This:</strong> In this equation,  y  represents the dependent target variable being predicted.</li>
+<li><strong>The Term:</strong> The term  x  is the independent predictor variable.</li>
+<li><strong>The Parameter:</strong> The parameter  β0  is the Y-intercept, signifying the expected value of y when x is exactly zero.</li>
+<li><strong>The Parameter:</strong> The parameter  β1  is the slope coefficient, which indicates the expected change in y for a 1-unit change in x.</li>
+<li><strong>Finally, Ε:</strong> Finally,  ε  represents the error term, accounting for the variance in y that cannot be explained by the linear relationship with x.</li>
+</ul>
+----------------------------------------
+Topic 21: Multiple Linear Regression and state its algebraic equation for n independent variables
+<p><strong>Definition:</strong> Multiple Linear Regression  is an extension of linear regression that models the linear relationship between two or more independent explanatory features and a single continuous target variable.</p>
+<ul class="revision-list">
+<li><strong>Multiple Linear:</strong> Multiple Linear Regression is an extension of simple linear regression that models the relationship between one continuous dependent variable and two or more independent variables, allowing for a more complex and realistic representation of real-world phenomena.</li>
+<li><strong>The Algebraic:</strong> The algebraic equation for a model with n independent variables is given by:  y = β0 + β1x1 + β2x2 + ...</li>
+<li><strong>+ Βnxn:</strong> + βnxn + ε .</li>
+<li><strong>Each Β:</strong> Each  β  coefficient represents the independent effect of its corresponding feature on the target variable while holding all other features constant, and  ε  accounts for the random error.</li>
+</ul>
+----------------------------------------
+Topic 22: Residual error in linear regression and explain its geometric interpretation
+<p><strong>Definition:</strong> Residual Error  is the numerical difference between an actual observed target value and the corresponding value estimated by a regression model.</p>
+<ul class="revision-list">
+<li><strong>In Linear:</strong> In linear regression, a residual error is defined as the mathematical difference between the actual observed value and the value predicted by the regression model (formulaically:  e = y - ŷ ).</li>
+<li><strong>Geometrically, This:</strong> Geometrically, this error represents the vertical distance from a specific data point on a scatter plot to the fitted regression line.</li>
+<li><strong>Analyzing Residuals:</strong> Analyzing residuals is a crucial step in evaluating a model's performance; ideally, residuals should be randomly scattered around zero, indicating that the model's linear assumptions hold true and that it has captured the underlying trend adequately.</li>
+</ul>
+----------------------------------------
+Topic 23: Ordinary Least Squares (OLS) estimation method and state the objective function it minimizes
+<p><strong>Definition:</strong> Ordinary Least Squares (OLS)  is a closed-form parameter estimation technique in linear regression that identifies the optimal line of best fit by minimizing the sum of squared differences between observed and predicted values.</p>
+<ul class="revision-list">
+<li><strong>Ordinary Least:</strong> Ordinary Least Squares (OLS) is a widely used estimation method in linear regression that determines the optimal regression coefficients by minimizing the sum of the squared residuals.</li>
+<li><strong>By Squaring:</strong> By squaring the residuals, OLS ensures that positive and negative errors do not cancel each other out and places a heavier penalty on larger errors.</li>
+<li><strong>The Objective:</strong> The objective function minimized by OLS is mathematically represented as: Minimize  Σ(yi - ŷi)² .</li>
+<li><strong>This Process:</strong> This process effectively finds the line of best fit that passes as closely as possible to all data points.</li>
+</ul>
+----------------------------------------
+Topic 24: Role of the Mean Squared Error (MSE) cost function J(θ) in optimizing regression parameters
+<p><strong>Definition:</strong> Mean Squared Error (MSE)  is a convex loss function in regression analysis that measures the average of the squared differences between predicted values and actual ground-truth observations.</p>
+<ul class="revision-list">
+<li><strong>The Mean:</strong> The Mean Squared Error (MSE) computes the average of the squared mathematical differences between a model's predicted values and the actual observed values.</li>
+<li><strong>In The:</strong> In the context of optimizing regression parameters, the MSE serves as the primary cost function, denoted as J(θ).</li>
+<li><strong>Optimization Algorithms,:</strong> Optimization algorithms, such as Gradient Descent, use this cost function to iteratively adjust the model's weights and biases in order to minimize J(θ).</li>
+<li><strong>A Lower:</strong> A lower MSE indicates a better-fitting model, meaning the algorithm successfully found the optimal parameters.</li>
+</ul>
+----------------------------------------
+Topic 25: Gradient Descent updates parameters iteratively to find the optimal slope and intercept
+<p><strong>Definition:</strong> Gradient Descent  is a first-order iterative optimization algorithm used to locate the minimum of a differentiable objective function by updating model parameters in the direction of the negative gradient.</p>
+<ul class="revision-list">
+<li><strong>Gradient Descent:</strong> Gradient Descent is an iterative optimization algorithm used to find the optimal slope and intercept (parameters) that minimize a model's cost function.</li>
+<li><strong>It Works:</strong> It works by calculating the partial derivatives—or gradient—of the cost function with respect to each parameter, indicating the direction of steepest ascent.</li>
+<li><strong>To Minimize:</strong> To minimize the cost, the algorithm updates the parameters by taking small steps in the exact opposite direction of the gradient.</li>
+<li><strong>The Size:</strong> The size of these steps is controlled by the learning rate, and this process repeats until the algorithm reaches the global minimum cost.</li>
+</ul>
+----------------------------------------
+Topic 26: Learning rate (α) in Gradient Descent and explain the consequences of setting it too high or too low
+<p><strong>Definition:</strong> Learning Rate (α)  is a key optimization hyperparameter that determines the step size taken along the negative gradient during each iterative parameter update.</p>
+<ul class="revision-list">
+<li><strong>The Learning:</strong> The learning rate (α) in Gradient Descent is a vital hyperparameter that determines the step size taken at each iteration towards the minimum of the cost function.</li>
+<li><strong>If Α:</strong> If α is set too high, the algorithm may take steps that are too large, overshooting the minimum entirely and causing the optimization to diverge or oscillate wildly.</li>
+<li><strong>Conversely, If:</strong> Conversely, if α is set too low, the step sizes are minuscule; this leads to exceedingly slow convergence times, significantly increasing computational cost, and raises the risk of the algorithm getting permanently stuck in suboptimal local minima.</li>
+</ul>
+----------------------------------------
+Topic 27: Polynomial Regression and state how higher-degree terms allow it to capture non-linear data trends
+<p><strong>Definition:</strong> Polynomial Regression  is a form of supervised regression analysis where the relationship between an independent variable and a dependent variable is modeled as an nth-degree polynomial function.</p>
+<ul class="revision-list">
+<li><strong>Polynomial Regression:</strong> Polynomial Regression is a form of regression analysis where the relationship between the independent variable x and the dependent variable y is modeled as an nth degree polynomial, such as  y = β0 + β1x + β2x² .</li>
+<li><strong>By Introducing:</strong> By introducing higher-degree terms (like squares and cubes), the model can introduce curves into the decision boundary or fitted line.</li>
+<li><strong>This Flexibility:</strong> This flexibility enables Polynomial Regression to accurately capture and fit non-linear patterns and complex data trends that a simple straight line would completely miss, thereby reducing underfitting on complex datasets.</li>
+</ul>
+----------------------------------------
+Topic 28: Why Polynomial Regression is technically classified as a linear model despite fitting non-linear curves
+<p><strong>Definition:</strong> Linearity in Parameters  is the mathematical property asserting that a model's output is expressible as a linear combination of its coefficients, regardless of non-linear transformations on the input variables.</p>
+<ul class="revision-list">
+<li><strong>Despite Its:</strong> Despite its ability to fit non-linear curves to data, Polynomial Regression is technically and mathematically classified as a linear model.</li>
+<li><strong>This Classification:</strong> This classification is because the regression equation remains completely linear in its parameters (the coefficients β).</li>
+<li><strong>While The:</strong> While the input features themselves are transformed non-linearly (e.g., squaring or cubing x to get x², x³), the relationship between the learnable parameters and the dependent variable y is strictly additive and linear.</li>
+<li><strong>The Model:</strong> The model is simply performing multiple linear regression on engineered polynomial features.</li>
+</ul>
+----------------------------------------
+Topic 29: Overfitting in regression models and state two practical techniques to detect and prevent it
+<p><strong>Definition:</strong> Overfitting  is a machine learning modeling error where an algorithm fits training data and noise excessively well, leading to poor generalization performance on unseen test data.</p>
+<ul class="revision-list">
+<li><strong>Overfitting In:</strong> Overfitting in regression models occurs when a model becomes overly complex and learns not only the underlying patterns of the training data but also its inherent noise and random fluctuations, leading to excellent training performance but poor generalization to unseen data.</li>
+<li><strong>It Can:</strong> It can be detected when there is a large gap between high training accuracy and low validation accuracy.</li>
+<li><strong>Two Highly:</strong> Two highly practical techniques to prevent overfitting include:  1) Cross-validation  (using techniques like K-Fold to ensure robust performance evaluation), and  2) Regularization  (applying L1 or L2 penalties to constrain model weights).</li>
+</ul>
+----------------------------------------
+Topic 30: Underfitting, its primary root causes, and how its error profile differs from overfitting
+<p><strong>Definition:</strong> Underfitting  is a machine learning condition occurring when a high-bias model lacks the structural complexity to capture the underlying patterns and relationships in the data.</p>
+<ul class="revision-list">
+<li><strong>Underfitting Occurs:</strong> Underfitting occurs when a machine learning model is far too simplistic to capture the underlying structures, trends, and patterns in the dataset, leading to high bias.</li>
+<li><strong>The Primary:</strong> The primary root causes of underfitting include using a model with insufficient complexity (e.g., trying to fit a straight line to highly non-linear data), providing inadequate or poorly engineered features, or applying excessive regularization.</li>
+<li><strong>Its Error:</strong> Its error profile is distinctly characterized by both high training error and high validation error, indicating that the model failed to learn the data entirely, unlike overfitting where training error is low.</li>
+</ul>
+----------------------------------------
+Topic 31: Bias-Variance tradeoff and how model complexity influences bias and variance
+<p><strong>Definition:</strong> The Bias-Variance Tradeoff  is a fundamental concept in supervised learning describing the tension between error from erroneous model assumptions (bias) and error from sensitivity to training set fluctuations (variance).</p>
+<ul class="revision-list">
+<li><strong>The Bias-Variance:</strong> The Bias-Variance tradeoff is a fundamental concept describing the conflict between two primary sources of error in machine learning models.</li>
+<li><strong>Bias Represents:</strong> Bias  represents the error introduced by erroneous, overly simplistic assumptions (leading to underfitting), while  variance  represents the error introduced by excessive sensitivity to small fluctuations in the specific training data (leading to overfitting).</li>
+<li><strong>As Model:</strong> As model complexity increases, bias typically decreases because the model can better fit the training data, but variance increases because it begins to memorize noise.</li>
+<li><strong>The Tradeoff:</strong> The tradeoff aims to find the optimal 'sweet spot' that minimizes total error.</li>
+</ul>
+----------------------------------------
+Topic 32: Principle of Regularization and why penalty terms are added to the regression loss function
+<p><strong>Definition:</strong> Regularization  is a technique designed to prevent overfitting by introducing an additional penalty term based on model coefficient magnitudes into the objective loss function.</p>
+<ul class="revision-list">
+<li><strong>Regularization Is:</strong> Regularization is a powerful technique designed to prevent overfitting by intentionally introducing a penalty term into the model's loss function based on the magnitude of the model's coefficients (weights).</li>
+<li><strong>Without Regularization,:</strong> Without regularization, models might assign excessively large weights to certain features to perfectly fit training noise.</li>
+<li><strong>By Adding:</strong> By adding this penalty, the optimization algorithm is forced to balance minimizing the traditional error against keeping the weights small.</li>
+<li><strong>This Discourages:</strong> This discourages overly complex models, resulting in a simpler, smoother, and more generalized model that performs better on unseen data.</li>
+</ul>
+----------------------------------------
+Topic 33: Ridge L2 and Lasso L1 regression
+<p><strong>Definition:</strong> Ridge and Lasso Regression  are regularized linear regression techniques that shrink model coefficients by penalizing the L2 norm (squared magnitude) and L1 norm (absolute magnitude) of the weights, respectively.</p>
+<ul class="revision-list">
+<li><strong>Ridge (L2):</strong> Ridge (L2) and Lasso (L1) regression apply different mathematical penalty terms to combat overfitting.</li>
+<li><strong>Ridge (L2):</strong> Ridge (L2)  adds a penalty strictly proportional to the sum of the squared weights ( λΣw² ), which uniformly shrinks the coefficients towards zero but rarely forces them to be exactly zero.</li>
+<li><strong>Lasso (L1):</strong> Lasso (L1)  adds a penalty proportional to the sum of the absolute values of the weights ( λΣ|w| ).</li>
+<li><strong>This Distinct:</strong> This distinct mathematical constraint can actually force the weights of less important features to exactly zero, creating sparse models.</li>
+</ul>
+----------------------------------------
+Topic 34: Why Lasso L1 regularization performs automatic feature selection whereas Ridge L2 shrinks coefficients without zeroing them
+<p><strong>Definition:</strong> L1 Feature Selection  is the process by which Lasso regularization shrinks non-informative feature coefficients to exactly zero due to the sharp geometric corners of its L1-norm constraint.</p>
+<ul class="revision-list">
+<li><strong>Lasso (L1):</strong> Lasso (L1) regularization performs automatic feature selection because its penalty term creates a constraint region shaped like a diamond with sharp corners.</li>
+<li><strong>When The:</strong> When the optimization process seeks where the loss function's elliptical contours intersect this constraint region, the intersection frequently occurs exactly at these corners, meaning some coefficients become exactly zero.</li>
+<li><strong>This Completely:</strong> This completely eliminates those features from the model.</li>
+<li><strong>In Contrast,:</strong> In contrast, Ridge's (L2) circular constraint region lacks sharp corners, so the intersections usually occur off the axes, shrinking coefficients continuously without ever reaching exactly zero.</li>
+</ul>
+----------------------------------------
+Topic 35: Write the mathematical formulas for Mean Absolute Error (MAE) and Mean Squared Error (MSE) and highlight their differences
+<p><strong>Definition:</strong> MAE and MSE  are fundamental loss metrics in regression that measure model accuracy by evaluating the mean absolute error and mean squared error between predictions and ground-truth values.</p>
+<ul class="revision-list">
+<li><strong>The Formula:</strong> The formula for  Mean Absolute Error (MAE)  is  (1/n) Σ|yi - ŷi| , while the formula for  Mean Squared Error (MSE)  is  (1/n) Σ(yi - ŷi)² .</li>
+<li><strong>The Fundamental:</strong> The fundamental difference lies in how they treat errors of different magnitudes.</li>
+<li><strong>Because Mse:</strong> Because MSE squares the errors, it disproportionately and heavily penalizes large prediction errors (outliers), pulling the model strongly to correct them.</li>
+<li><strong>Conversely, Mae:</strong> Conversely, MAE treats all errors proportionally and linearly, making it a much more robust metric when a dataset contains significant anomalies or extreme outliers that shouldn't dictate the model's overall fit.</li>
+</ul>
+----------------------------------------
+Topic 36: Root Mean Squared Error (RMSE) and explain its interpretive advantage over Mean Squared Error (MSE)
+<p><strong>Definition:</strong> Root Mean Squared Error (RMSE)  is a standard regression metric computed as the square root of Mean Squared Error, expressing model residual dispersion in the original measurement units of the target variable.</p>
+<ul class="revision-list">
+<li><strong>Root Mean:</strong> Root Mean Squared Error (RMSE)  is defined mathematically as the square root of the MSE:  √((1/n) Σ(yi - ŷi)²) .</li>
+<li><strong>The Primary:</strong> The primary interpretive advantage of RMSE over MSE is that the square root operation transforms the error metric back into the exact same units as the original dependent target variable.</li>
+<li><strong>For Example,:</strong> For example, if predicting house prices in dollars, MSE would be in 'squared dollars' (which is unintuitive), whereas RMSE would be in straightforward 'dollars', making it much easier for stakeholders to intuitively understand the model's average error magnitude.</li>
+</ul>
+----------------------------------------
+Topic 37: R2 (R-squared) goodness-of-fit metric and distinguish it from Adjusted R2 in multiple regression
+<p><strong>Definition:</strong> R-Squared (R²)  is a statistical goodness-of-fit metric that quantifies the percentage of total variance in the dependent variable explained by the independent variables in a regression model.</p>
+<ul class="revision-list">
+<li><strong>The R²:</strong> The R² (R-squared) metric measures the proportion of the total variance in the dependent variable that is successfully explained by the regression model, yielding a value between 0 and 1.</li>
+<li><strong>However, Standard:</strong> However, standard R² has a flaw in multiple regression: it will mechanically increase or remain the same every time a new independent variable is added, even if that variable is useless.</li>
+<li><strong>Adjusted R²:</strong> Adjusted R²  resolves this by actively penalizing the addition of unnecessary independent variables, providing a much more accurate and realistic evaluation of model goodness-of-fit for complex multiple regression models.</li>
+</ul>
+----------------------------------------
+Topic 38: 6
+<p><strong>Definition:</strong> Ordinary Least Squares (OLS)  is a parameter estimation technique in linear regression that determines the best-fitting line by minimizing the sum of squared residuals between observed and predicted values.</p>
+<ul class="revision-list">
+<li><strong>Concept:</strong> To find the optimal $m$ and $c$, we take the partial derivatives of $J$ with respect to $m$ and $c$, and set them to zero.</li>
+<li><strong>Concept:</strong> $\frac{\partial J}{\partial c} = -2 \sum_{i=1}^{n} (y_i - mx_i - c) = 0 \implies \sum y_i = m\sum x_i + nc$</li>
+<li><strong>Concept:</strong> $\frac{\partial J}{\partial m} = -2 \sum_{i=1}^{n} x_i(y_i - mx_i - c) = 0 \implies \sum x_i y_i = m\sum x_i^2 + c\sum x_i$</li>
+<li><strong>Concept:</strong> Solving these two normal equations yields the optimal formulas for slope $m$ and intercept $c$, which represent the best-fit line minimizing the squared errors.</li>
+</ul>
+----------------------------------------
+Topic 39: 7
+<p><strong>Definition:</strong> Gradient Descent  is a first-order iterative optimization algorithm used to find the minimum of a differentiable cost function by updating parameters in the opposite direction of the gradient.</p>
+<ul class="revision-list">
+<li><strong>Update Rule:</strong> $\theta_j = \theta_j - \alpha \frac{\partial J(\theta)}{\partial \theta_j}$, where $\alpha$ is the learning rate.</li>
+<li><strong>Concept:</strong> It iteratively takes steps proportional to the negative gradient until it converges to a local or global minimum.</li>
+</ul>
+----------------------------------------
+Topic 40: 8
+<p><strong>Definition:</strong> Polynomial Regression  is a form of regression analysis in which the relationship between the independent variable and the dependent variable is modeled as an $n^{\text{th}}$-degree polynomial.</p>
+<ul class="revision-list">
+<li><strong>Concept:</strong> Instead of a simple straight line ($y = \theta_0 + \theta_1x$), polynomial regression introduces higher-degree terms: $y = \theta_0 + \theta_1x + \theta_2x^2 + \dots + \theta_nx^n$.</li>
+<li><strong>Concept:</strong> These polynomial terms allow the regression curve to bend and flex, perfectly capturing non-linear trajectories and complex variance in the dataset.</li>
+</ul>
+----------------------------------------
+Topic 41: 9
+<p><strong>Definition:</strong> The Bias-Variance Tradeoff  is a fundamental machine learning property wherein model bias and variance inversely influence underfitting and overfitting performance.</p>
+<ul class="revision-list">
+<li><strong>Training Error:</strong> As model complexity increases,   continuously decreases because the model fits the training points tighter.</li>
+<li><strong>Testing Error:</strong> initially decreases as the model learns useful patterns, but eventually starts to  increase  when the model becomes too complex and begins overfitting.</li>
+<li><strong>Bias-Variance Tradeoff:</strong> The goal of ML is to find the "sweet spot" of model complexity that balances bias and variance, minimizing the total error (Testing Error). Too simple = high bias, too complex = high variance.</li>
+</ul>
+----------------------------------------
+Topic 42: 10
+<p><strong>Definition:</strong> Regularization  is a technique used in machine learning to prevent overfitting by adding a penalty term proportional to coefficient magnitude to the objective loss function.</p>
+<ul class="revision-list">
+<li><strong>Concept:</strong> Cost Function: $J(\theta) = MSE + \lambda \sum_{i=1}^{n} \theta_i^2$</li>
+<li><strong>Concept:</strong> It adds the  squared magnitude  of coefficients as the penalty.</li>
+<li><strong>Shrinkage:</strong> Ridge shrinks all coefficients closer to zero but never exactly to zero. It handles multicollinearity well by distributing weights among correlated features.</li>
+</ul>
+----------------------------------------
+Topic 43: 11
+<p><strong>Definition:</strong> Regression Evaluation Metrics  are quantitative statistical measures used to assess the predictive accuracy, error magnitude, and explanatory goodness-of-fit of regression models.</p>
+<ul class="revision-list">
+<li><strong>Mean Absolute Error (MAE):</strong> $\frac{1}{n} \sum |y_i - \hat{y}_i|$. The average of absolute differences. Robust to outliers but gradient is undefined at zero.</li>
+<li><strong>Mean Squared Error (MSE):</strong> $\frac{1}{n} \sum (y_i - \hat{y}_i)^2$. Heavily penalizes large errors (outliers) due to squaring, making it useful for gradient descent. Units are squared.</li>
+<li><strong>Root Mean Squared Error (RMSE):</strong> $\sqrt{MSE}$. The square root brings the metric back to the original unit of the target variable.</li>
+<li><strong>R-Squared ($R^2$):</strong> Measures the proportion of variance in the dependent variable explained by the model. Range is 0 to 1. Higher is better.</li>
+<li><strong>Adjusted $R^2$:</strong> Modifies $R^2$ by penalizing the addition of non-useful predictive features.</li>
+</ul>
+----------------------------------------
+Topic 44: For the model y = b0 + b1x, use the dataset: X: 1, 2
+<p><strong>Definition:</strong> Gradient Descent  is an iterative optimization algorithm that minimizes an objective loss function by updating model parameters in the direction opposite to the gradient of the loss with respect to those parameters.</p>
+<ul class="revision-list">
+<li><strong>Ordinary Least Squares (OLS):</strong> The mathematical optimization technique used to find the best-fitting line.</li>
+<li><strong>Normal Equations:</strong> A closed-form solution to find the parameters, though computationally expensive for very large feature spaces.</li>
+<li><strong>Gradient Descent:</strong> An iterative optimization algorithm used when normal equations are too costly.</li>
+</ul>
+----------------------------------------
+Topic 45: For a single sample x = 3, y = 9, the model is y = wx, and the loss is J = 1/2(wx - y)^2
+<p><strong>Definition:</strong> Stochastic Gradient Descent (SGD)  is an iterative optimization algorithm that calculates loss gradients and updates model parameters using individual training observations to achieve computational efficiency.</p>
+<ul class="revision-list">
+<li><strong>Concept:</strong> w = 0</li>
+<li><strong>Concept:</strong> Error = w*x - y = 0*3 - 9 = -9</li>
+<li><strong>Concept:</strong> Loss J = 1/2 * (-9)² = 40.5</li>
+<li><strong>Concept:</strong> Gradient = -9 * 3 = -27</li>
+<li><strong>Concept:</strong> w_1 = w - α*Gradient = 0 - 0.05*(-27) = 1.35</li>
+</ul>
+----------------------------------------
+Topic 46: Dataset is given by: X: 0, 1, 2, 3
+<p><strong>Definition:</strong> Polynomial Regression  is a form of linear regression in which the relationship between the independent variable and the target is modeled as an $n$-th degree polynomial, allowing the model to fit non-linear patterns.</p>
+<ul class="revision-list">
+<li><strong>Ordinary Least Squares (OLS):</strong> The mathematical optimization technique used to find the best-fitting line.</li>
+<li><strong>Normal Equations:</strong> A closed-form solution to find the parameters, though computationally expensive for very large feature spaces.</li>
+<li><strong>Gradient Descent:</strong> An iterative optimization algorithm used when normal equations are too costly.</li>
+</ul>
+----------------------------------------
+Topic 47: Actual and predicted values of a regression model are: Actual (Y): 10, 15, 20, 25, 30
+<p><strong>Definition:</strong> Regression Evaluation Metrics  are quantitative criteria, such as Mean Absolute Error (MAE), Mean Squared Error (MSE), and Root Mean Squared Error (RMSE), used to measure the deviation between model predictions and true observed values.</p>
+<ul class="revision-list">
+<li><strong>Ordinary Least Squares (OLS):</strong> The mathematical optimization technique used to find the best-fitting line.</li>
+<li><strong>Normal Equations:</strong> A closed-form solution to find the parameters, though computationally expensive for very large feature spaces.</li>
+<li><strong>Gradient Descent:</strong> An iterative optimization algorithm used when normal equations are too costly.</li>
+</ul>
+----------------------------------------
