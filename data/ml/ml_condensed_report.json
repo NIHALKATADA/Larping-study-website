@@ -1,0 +1,88 @@
+[
+  {
+    "unit": "I",
+    "unit_title": "Unit I: Introduction to Machine Learning",
+    "topics": [
+      {
+        "title": "Machine Learning Paradigms",
+        "content_html": "An overview of the fundamental learning frameworks.<br><ul><li><b>Supervised Learning:</b> Uses labeled input data to predict specific targets.</li><li><b>Unsupervised Learning:</b> Discovers hidden patterns in unlabeled data.</li><li><b>Reinforcement Learning:</b> Learns through environmental interaction and reward maximization.</li></ul>"
+      },
+      {
+        "title": "The 7-Step ML Lifecycle",
+        "content_html": "The structured end-to-end process for developing ML models.<br><ul><li><b>Data Collection:</b> Gathering raw data from diverse sources.</li><li><b>Data Preprocessing:</b> Cleaning and formatting raw datasets.</li><li><b>Model Training:</b> Algorithms learning patterns autonomously from historical data.</li><li><b>Model Evaluation:</b> Assessing performance on unseen validation sets to prevent overfitting.</li></ul>"
+      },
+      {
+        "title": "Exploratory Data Analysis (EDA)",
+        "content_html": "Analytical investigation to summarize core dataset characteristics.<br><ul><li><b>Objective:</b> Identify structures, anomalies, and underlying patterns before modeling.</li><li><b>Techniques:</b> Computing summary statistics (mean, variance).</li><li><b>Visualization:</b> Using histograms for distributions and scatter plots for feature correlations.</li></ul>"
+      },
+      {
+        "title": "Data Preprocessing & Cleaning",
+        "content_html": "Essential techniques for preparing uncleaned, unstructured data.<br><ul><li><b>Handling Missing Values:</b> Removing rows/columns or applying statistical imputation (mean/mode).</li><li><b>Data Normalization:</b> Scaling numerical features into standardized ranges to stabilize convergence.</li><li><b>Impact:</b> Prevents algorithms from being biased by varied scales or failing due to missing entries.</li></ul>"
+      },
+      {
+        "title": "Feature Engineering & Selection",
+        "content_html": "Transforming variables to maximize an algorithm predictive capability.<br><ul><li><b>Categorical Encoding:</b> Converting string labels into numeric formats (e.g., label encoding).</li><li><b>Feature Engineering:</b> Creating meaningful mathematical representations from raw attributes.</li><li><b>Feature Selection:</b> Filtering down to the most relevant variables to reduce dimensionality and noise.</li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "II",
+    "unit_title": "Unit II: Regression Models & Optimization",
+    "topics": [
+      {
+        "title": "Linear Regression Formulation",
+        "content_html": "Mathematical models predicting continuous outcomes using linear equations.<br><ul><li><b>Simple Linear Regression:</b> Models one independent variable (h(x) = &theta;0 + &theta;1x).</li><li><b>Multiple Linear Regression:</b> Extends to n independent variables.</li><li><b>Ordinary Least Squares (OLS):</b> Analytically minimizes the sum of squared residual errors between predictions and targets.</li></ul>"
+      },
+      {
+        "title": "Cost Functions & Gradient Descent",
+        "content_html": "Optimization strategies for training robust regression models.<br><ul><li><b>Mean Squared Error (MSE):</b> Cost function heavily penalizing large errors.</li><li><b>Gradient Descent:</b> Iterative optimization algorithm preferred over Normal Equations for high-dimensional data.</li><li><b>Learning Rate (&alpha;):</b> Controls step size; if too high, optimization may overshoot the global minimum and diverge.</li></ul>"
+      },
+      {
+        "title": "Polynomial Regression",
+        "content_html": "Extensions of linear models capable of capturing complex trends.<br><ul><li><b>Non-Linearity:</b> Uses higher-degree feature transformations to fit curved patterns.</li><li><b>Model Linearity:</b> Remains technically linear with respect to its optimizable weight parameters.</li></ul>"
+      },
+      {
+        "title": "Model Complexity & Bias-Variance Tradeoff",
+        "content_html": "Balancing capacity to ensure models generalize to unseen data.<br><ul><li><b>Overfitting (High Variance):</b> Model memorizes training noise; reduced by regularization or simpler models.</li><li><b>Underfitting (High Bias):</b> Overly simplistic model fails to capture underlying data structures.</li><li><b>Tradeoff:</b> Finding the optimal complexity sweet spot that minimizes total prediction error.</li></ul>"
+      },
+      {
+        "title": "Regularization Techniques",
+        "content_html": "Methods adding complexity penalties to regression loss functions to prevent overfitting.<br><ul><li><b>Ridge (L2):</b> Adds squared magnitude penalties, shrinking coefficients toward zero.</li><li><b>Lasso (L1):</b> Adds absolute magnitude penalties, uniquely performing automatic feature selection by zeroing irrelevant weights.</li></ul>"
+      },
+      {
+        "title": "Regression Evaluation Metrics",
+        "content_html": "Statistical measures to quantify model prediction accuracy.<br><ul><li><b>MAE & MSE:</b> Evaluate average magnitude of absolute and squared errors, respectively.</li><li><b>RMSE:</b> Converts MSE back to original units for easier interpretation.</li><li><b>R-Squared:</b> Measures proportion of explained variance.</li><li><b>Adjusted R-Squared:</b> Penalizes non-significant variables, making it superior for multiple regression.</li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "III",
+    "unit_title": "Unit III: Classification & Advanced Algorithms",
+    "topics": [
+      {
+        "title": "Logistic Regression & Binary Classification",
+        "content_html": "Probabilistic modeling for categorical target outcomes.<br><ul><li><b>Sigmoid Function:</b> Non-linear activation mapping real values to probabilities between 0 and 1.</li><li><b>Decision Threshold:</b> Typically 0.5, used to assign discrete binary class labels based on probabilities.</li><li><b>Log-Loss (Cross-Entropy):</b> Cost function highly penalizing confident yet incorrect classifications.</li></ul>"
+      },
+      {
+        "title": "K-Nearest Neighbors (KNN)",
+        "content_html": "Non-parametric algorithm leveraging spatial proximity.<br><ul><li><b>Mechanism:</b> Predicts class via majority vote among the K closest training points.</li><li><b>Distance Metrics:</b> Often utilizes Euclidean distance to measure similarity.</li><li><b>K Hyperparameter:</b> A small K risks overfitting to noise, while a large K risks underfitting by over-smoothing boundaries.</li></ul>"
+      },
+      {
+        "title": "Decision Trees & Information Theory",
+        "content_html": "Tree-based algorithms built via recursive dataset partitioning.<br><ul><li><b>Entropy:</b> Quantifies uncertainty or impurity in a subset of data.</li><li><b>Information Gain:</b> Node split criterion maximizing homogeneity by selecting features that most reduce entropy.</li><li><b>Gini Impurity:</b> Faster, alternative metric computing the probability of misclassification.</li></ul>"
+      },
+      {
+        "title": "Naive Bayes Classifier",
+        "content_html": "Probabilistic classifier grounded in Bayes Theorem.<br><ul><li><b>Bayes Theorem:</b> Calculates posterior probabilities using prior, likelihood, and evidence.</li><li><b>Naive Assumption:</b> Termed naive because it assumes strict conditional independence between all input features, simplifying computations.</li></ul>"
+      },
+      {
+        "title": "Support Vector Machines (SVM)",
+        "content_html": "Robust margin-based classification finding optimal separating hyperplanes.<br><ul><li><b>Hyperplanes & Support Vectors:</b> Decision boundaries maximizing the margin between closest data points of different classes.</li><li><b>Hard vs. Soft Margin:</b> Soft margins use slack variables/hinge loss to allow misclassifications for non-separable data.</li><li><b>Kernel Trick:</b> Projects data into higher dimensions (e.g., via RBF) to linearly separate non-linear distributions.</li></ul>"
+      },
+      {
+        "title": "Ensemble Methods & Evaluation",
+        "content_html": "Combining multiple weak models and comprehensively evaluating predictions.<br><ul><li><b>Bagging vs. Boosting:</b> Random Forests build independent parallel trees (bagging) while AdaBoost/XGBoost build sequential correcting trees (boosting).</li><li><b>Confusion Matrix:</b> Tabulates True Positives, False Positives, True Negatives, and False Negatives.</li><li><b>F1-Score:</b> Harmonic mean of precision and recall, essential for assessing highly imbalanced datasets.</li></ul>"
+      }
+    ]
+  }
+]
