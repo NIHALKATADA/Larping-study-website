@@ -90,8 +90,7 @@ for subject in ["daa", "dbms", "java", "maths", "ml", "os"]:
     
     sidebar = soup.find('aside', class_='report-sidebar')
     if sidebar:
-        old_ul = sidebar.find('ul', class_='toc-list')
-        if old_ul: old_ul.decompose()
+        for old in sidebar.find_all('ul'): old.decompose()
         
         toc_ul = soup.new_tag('ul', attrs={'class': 'toc-list'})
         sidebar.append(toc_ul)
@@ -153,4 +152,6 @@ for subject in ["daa", "dbms", "java", "maths", "ml", "os"]:
     with open(html_file, 'w', encoding='utf-8') as f:
         f.write(str(soup))
     print(f"Rebuilt {subject} successfully.")
+
+
 
