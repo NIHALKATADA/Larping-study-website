@@ -1,0 +1,92 @@
+[
+  {
+    "unit": "I",
+    "unit_title": "Unit I: Introduction, ER Modeling & Normalization",
+    "topics": [
+      {
+        "title": "Database Architecture & Abstraction",
+        "content_html": "<p>Core concepts of database systems over traditional file systems.</p><ul><li><strong>DBMS Advantages:</strong> Eliminates redundancy, ensures consistency, provides security.</li><li><strong>Three-Level Architecture:</strong> External (views), Conceptual (logical structure), Internal (physical storage).</li><li><strong>Data Independence:</strong> Ability to change schema at one level without affecting the higher level.</li></ul>"
+      },
+      {
+        "title": "Data Models & Keys",
+        "content_html": "<p>Foundational principles of the relational model and data integrity.</p><ul><li><strong>Relational Model:</strong> Organizes data into 2D tables (relations) with flexibility and data independence.</li><li><strong>Keys:</strong> Super key (any unique combo), Candidate key (minimal super key), Primary key (main identifier), Foreign key (referential link).</li><li><strong>Integrity Constraints:</strong> Domain, Key, Entity (PK not null), Referential (FK must match PK).</li></ul>"
+      },
+      {
+        "title": "Entity-Relationship (ER) Basics",
+        "content_html": "<p>Visual representation of real-world objects and their associations.</p><ul><li><strong>Entities & Sets:</strong> Objects (rectangles) and collections of similar objects.</li><li><strong>Attributes:</strong> Properties (ellipses) including simple, composite, derived, multivalued, and key.</li><li><strong>Relationships:</strong> Associations between entities (diamonds) like 1:1, 1:N, M:N.</li><li><strong>Weak Entities:</strong> Lack a primary key, depend on an identifying owner.</li></ul>"
+      },
+      {
+        "title": "Advanced ER Concepts",
+        "content_html": "<p>Extended features for complex data modeling in E-R diagrams.</p><ul><li><strong>Generalization/Specialization:</strong> Bottom-up grouping vs Top-down subclassing (Disjoint or Overlapping).</li><li><strong>Aggregation:</strong> Treating a relationship as an entity for higher-level associations.</li><li><strong>Participation:</strong> Total (mandatory, double line) vs Partial (optional, single line).</li><li><strong>Degrees:</strong> Unary, Binary, and Ternary relationships.</li></ul>"
+      },
+      {
+        "title": "Functional Dependencies & Normal Forms (1NF-BCNF)",
+        "content_html": "<p>Process of organizing data to reduce redundancy and anomalies.</p><ul><li><strong>Anomalies:</strong> Resolves insertion, update, and deletion issues.</li><li><strong>1NF:</strong> Ensures atomic, indivisible values in all columns.</li><li><strong>2NF:</strong> Eliminates partial dependencies on the primary key.</li><li><strong>3NF:</strong> Eliminates transitive dependencies between non-key attributes.</li><li><strong>BCNF:</strong> Stricter 3NF where every determinant must be a super key.</li></ul>"
+      },
+      {
+        "title": "Advanced Normalization & Decomposition",
+        "content_html": "<p>Higher normal forms and rules for safely splitting tables.</p><ul><li><strong>4NF & 5NF:</strong> Eliminates multi-valued dependencies and handles join dependencies.</li><li><strong>Decomposition:</strong> Breaking a large table into smaller, manageable tables.</li><li><strong>Lossless Join:</strong> Ensures no data is lost or spuriously created when re-joining tables.</li><li><strong>Dependency Preservation:</strong> All original functional dependencies must be maintainable in decomposed tables.</li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "II",
+    "unit_title": "Unit II: Relational Algebra & SQL Basics",
+    "topics": [
+      {
+        "title": "Relational Algebra & Calculus",
+        "content_html": "<p>Theoretical query languages underlying modern relational databases.</p><ul><li><strong>Basic Operations:</strong> Select, Project, Union, Set Difference, Cartesian Product.</li><li><strong>Derived Operations:</strong> Joins, Intersection, Division.</li><li><strong>Relational Calculus:</strong> Non-procedural queries via Tuple (TRC) and Domain (DRC) calculus.</li></ul>"
+      },
+      {
+        "title": "SQL Fundamentals & Commands",
+        "content_html": "<p>Categorization of SQL statements based on their functionality.</p><ul><li><strong>DDL (Data Definition Language):</strong> CREATE, ALTER, DROP, TRUNCATE to define structures.</li><li><strong>DML (Data Manipulation Language):</strong> INSERT, UPDATE, DELETE, SELECT to manage data.</li><li><strong>DCL (Data Control Language):</strong> GRANT, REVOKE for security and permissions.</li><li><strong>TCL (Transaction Control):</strong> COMMIT, ROLLBACK, SAVEPOINT for state management.</li></ul>"
+      },
+      {
+        "title": "SQL Joins",
+        "content_html": "<p>Methods to combine rows from multiple tables based on related columns.</p><ul><li><strong>Inner Joins:</strong> Returns rows with matching values in both tables (Equi vs Natural).</li><li><strong>Outer Joins:</strong> Includes unmatched rows from Left, Right, or Full tables.</li><li><strong>Self Join:</strong> Joining a table to itself for hierarchical data.</li><li><strong>Cross Join:</strong> Returns the Cartesian product of both tables.</li></ul>"
+      },
+      {
+        "title": "Grouping & Aggregation",
+        "content_html": "<p>Techniques for summarizing and sorting dataset results.</p><ul><li><strong>Aggregate Functions:</strong> COUNT, SUM, AVG, MAX, MIN for calculations across rows.</li><li><strong>GROUP BY:</strong> Groups rows sharing a property so aggregate functions can be applied to each group.</li><li><strong>HAVING Clause:</strong> Filters groups created by GROUP BY (unlike WHERE which filters rows).</li><li><strong>ORDER BY:</strong> Sorts the final result set in ascending or descending order.</li></ul>"
+      },
+      {
+        "title": "Subqueries & Nested Queries",
+        "content_html": "<p>Embedding one query inside another for complex filtering.</p><ul><li><strong>Simple Subquery:</strong> Executes once and passes the result to the outer query.</li><li><strong>Correlated Subquery:</strong> Executes repeatedly, once for each row evaluated by the outer query.</li><li><strong>Operators:</strong> Utilizes IN, EXISTS, ANY, and ALL for set comparisons.</li></ul>"
+      },
+      {
+        "title": "SQL Views",
+        "content_html": "<p>Virtual tables derived from the result of a SQL query.</p><ul><li><strong>Simple Views:</strong> Based on a single table, easily updatable.</li><li><strong>Materialized Views:</strong> Physically stores the result set for faster retrieval of complex queries.</li><li><strong>Advantages:</strong> Enhances security, simplifies complex queries, provides data abstraction.</li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "III",
+    "unit_title": "Unit III: Advanced SQL, Constraints & Transactions",
+    "topics": [
+      {
+        "title": "Advanced DDL & Constraints",
+        "content_html": "<p>Rules to enforce data integrity and manage table structures dynamically.</p><ul><li><strong>Constraints:</strong> NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK.</li><li><strong>Levels:</strong> Defined at the column-level or table-level (required for composite keys).</li><li><strong>ALTER Operations:</strong> Adding/modifying columns, changing data types, dropping constraints.</li><li><strong>Table Management:</strong> Renaming tables, duplicating structures with CREATE TABLE AS SELECT.</li></ul>"
+      },
+      {
+        "title": "SQL Built-in Functions",
+        "content_html": "<p>Functions for manipulating numeric, string, and temporal data.</p><ul><li><strong>Numeric Functions:</strong> ROUND, TRUNCATE, CEIL, FLOOR, MOD, POWER, SQRT, ABS.</li><li><strong>String Functions:</strong> CONCAT, UPPER/LOWER, LENGTH, SUBSTRING, TRIM, REPLACE.</li><li><strong>Date Functions:</strong> CURDATE, DATEDIFF, DATE_ADD, DATE_SUB, DATE_FORMAT.</li></ul>"
+      },
+      {
+        "title": "Set Operations",
+        "content_html": "<p>Combining results from multiple SELECT statements.</p><ul><li><strong>UNION:</strong> Combines results and removes duplicates.</li><li><strong>UNION ALL:</strong> Combines results while retaining duplicates.</li><li><strong>INTERSECT:</strong> Returns only rows common to both result sets.</li><li><strong>MINUS / EXCEPT:</strong> Returns rows from the first query that are not in the second.</li><li><strong>Condition:</strong> Queries must have the same number of columns and compatible data types.</li></ul>"
+      },
+      {
+        "title": "Conditional Expressions",
+        "content_html": "<p>Adding procedural logic directly within SQL queries.</p><ul><li><strong>CASE Statement:</strong> Provides IF-THEN-ELSE logic within SELECT lists.</li><li><strong>IF Function:</strong> Shorthand for simple condition checking.</li><li><strong>COALESCE:</strong> Returns the first non-NULL value in a list (useful for default values).</li></ul>"
+      },
+      {
+        "title": "Transaction Management",
+        "content_html": "<p>Ensuring reliable processing of database operations.</p><ul><li><strong>ACID Properties:</strong> Atomicity, Consistency, Isolation, Durability for reliable transactions.</li><li><strong>COMMIT:</strong> Permanently saves all changes made during the current transaction.</li><li><strong>ROLLBACK:</strong> Undoes changes made since the last commit.</li><li><strong>SAVEPOINT:</strong> Sets a marker to rollback a portion of a transaction rather than the whole thing.</li></ul>"
+      },
+      {
+        "title": "PL/SQL Concepts",
+        "content_html": "<p>Procedural extensions and automated database logic.</p><ul><li><strong>Stored Procedures:</strong> Precompiled SQL code blocks that can be reused and accept parameters.</li><li><strong>Triggers:</strong> Code that automatically executes BEFORE or AFTER a specific DML event.</li><li><strong>Cursors:</strong> Mechanism to process multiple rows returned by a query, one by one.</li><li><strong>Exception Handling:</strong> Using DECLARE HANDLER and SIGNAL to manage errors gracefully.</li></ul>"
+      }
+    ]
+  }
+]

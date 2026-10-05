@@ -1,0 +1,98 @@
+[
+  {
+    "unit": "I",
+    "unit_title": "Unit I: Java Basics",
+    "topics": [
+      {
+        "title": "Programming Paradigms",
+        "content_html": "<p>Programming paradigms define the style of structuring and executing code.</p><ul><li><b>Procedural Programming (POP):</b> Top-down approach, divides code into functions, less secure data.</li><li><b>Object-Oriented Programming (OOP):</b> Bottom-up approach, divides code into objects, secure and encapsulated data.</li></ul>"
+      },
+      {
+        "title": "Java Fundamentals",
+        "content_html": "<p>Java evolved from Oak to become a robust, platform-independent language.</p><ul><li><b>History:</b> Announced in 1995 by Sun Microsystems; originally named Oak.</li><li><b>Key Features:</b> Platform-independent, object-oriented, robust, and secure.</li><li><b>Platform Independence:</b> The compiler generates intermediate Bytecode, which can be executed on any OS with a JVM.</li></ul>"
+      },
+      {
+        "title": "Execution Environment (JDK, JRE, JVM)",
+        "content_html": "<p>Java relies on three core components for development and execution.</p><ul><li><b>JDK (Java Development Kit):</b> Complete toolbox containing the JRE and development tools like the compiler (javac).</li><li><b>JRE (Java Runtime Environment):</b> Environment required to run programs, containing the JVM and core libraries.</li><li><b>JVM (Java Virtual Machine):</b> The engine that interprets and executes bytecode line by line.</li></ul>"
+      },
+      {
+        "title": "Variables and Data Types",
+        "content_html": "<p>Java is a strongly typed language that supports both primitive and reference data types.</p><ul><li><b>Primitive Types:</b> 8 predefined types (byte, short, int, long, float, double, char, boolean) stored in stack memory.</li><li><b>Reference Types:</b> User-defined types (Classes, Arrays, Interfaces) pointing to objects stored in heap memory.</li><li><b>Variable Scope:</b> Dictates visibility, while lifetime dictates existence in memory.</li><li><b>Instance vs Local:</b> Instance variables are declared in the class; local variables in methods/blocks and require initialization.</li></ul>"
+      },
+      {
+        "title": "Syntax, Arrays, and Control Structures",
+        "content_html": "<p>Java uses a structured syntax and provides standard control flow mechanisms.</p><ul><li><b>Naming Rules:</b> Identifiers must start with a letter, _, or $ and are case-sensitive. Follow camelCase and PascalCase conventions.</li><li><b>Arrays:</b> Supports 1D (linear list) and 2D (matrix) arrays.</li><li><b>Loops:</b> for (known iterations), while (entry-controlled), and do-while (exit-controlled, guarantees one execution).</li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "II",
+    "unit_title": "Unit II: Object-Oriented Programming",
+    "topics": [
+      {
+        "title": "OOP Core Concepts",
+        "content_html": "<p>Java is centered around objects and six fundamental OOP pillars.</p><ul><li><b>Class vs Object:</b> A class is a logical blueprint; an object is a physical instance allocating heap memory.</li><li><b>Encapsulation:</b> Wrapping data and methods into a single unit for protection.</li><li><b>Abstraction:</b> Hiding implementation details and exposing necessary functionality.</li><li><b>Inheritance & Polymorphism:</b> Promoting code reusability and allowing multiple forms of behavior.</li></ul>"
+      },
+      {
+        "title": "Memory Allocation & the 'new' Keyword",
+        "content_html": "<p>Memory in Java is divided into Heap and Stack for efficient execution.</p><ul><li><b>Heap Memory:</b> Dynamically allocates memory for objects and instance variables using the new keyword.</li><li><b>Stack Memory:</b> Stores local variables, method calls, and object reference variables.</li><li><b>Default Values:</b> Uninitialized instance variables default to 0, 0.0, false, or null depending on type.</li></ul>"
+      },
+      {
+        "title": "Constructors & Chaining",
+        "content_html": "<p>Constructors initialize the state of objects upon creation.</p><ul><li><b>Rules:</b> Name must match the class; no return type.</li><li><b>Overloading:</b> Multiple constructors differentiated by parameter number, type, or order.</li><li><b>Chaining:</b> Calling one constructor from another to avoid duplication using this() (same class) or super() (parent class).</li></ul>"
+      },
+      {
+        "title": "The 'this' Keyword",
+        "content_html": "<p>The this keyword refers to the current object instance.</p><ul><li><b>Resolve Shadowing:</b> Distinguishes instance variables from identically named local parameters.</li><li><b>Constructor Chaining:</b> Invokes another constructor in the same class via this().</li><li><b>Passing Context:</b> Can be passed as an argument to methods or returned from methods.</li></ul>"
+      },
+      {
+        "title": "Access Modifiers",
+        "content_html": "<p>Access modifiers control the visibility of classes, variables, and methods.</p><ul><li><b>Private:</b> Accessible only within the same class.</li><li><b>Default:</b> Accessible within the same package.</li><li><b>Protected:</b> Accessible within the same package and by subclasses in other packages.</li><li><b>Public:</b> Accessible from anywhere.</li></ul>"
+      },
+      {
+        "title": "Strings & Wrapper Classes",
+        "content_html": "<p>Java provides special handling for Strings and primitive wrapper classes.</p><ul><li><b>String Immutability:</b> Strings cannot be changed once created, enabling memory-saving caching in the String Constant Pool.</li><li><b>Comparison:</b> == compares memory references, while equals() compares actual content.</li><li><b>Autoboxing/Unboxing:</b> Automatic conversion between primitives and their wrapper classes (e.g., int to Integer).</li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "III",
+    "unit_title": "Unit III: Inheritance & Polymorphism",
+    "topics": [
+      {
+        "title": "Inheritance & The 'super' Keyword",
+        "content_html": "<p>Inheritance establishes an IS-A relationship to promote code reuse.</p><ul><li><b>Supported Types:</b> Single, Multilevel, and Hierarchical (Multiple inheritance is achieved via Interfaces).</li><li><b>super Keyword:</b> Refers to the immediate parent class object.</li><li><b>Uses of super:</b> Invokes parent constructors, accesses overridden parent methods, and accesses hidden parent variables.</li></ul>"
+      },
+      {
+        "title": "Polymorphism & Dynamic Binding",
+        "content_html": "<p>Polymorphism allows a single entity to exhibit different behaviors based on context.</p><ul><li><b>Compile-time (Static):</b> Achieved via Method Overloading (same name, different parameters).</li><li><b>Run-time (Dynamic):</b> Achieved via Method Overriding (same signature in subclass).</li><li><b>Dynamic Binding:</b> Method calls are resolved at run-time based on the actual object type (Late Binding).</li></ul>"
+      },
+      {
+        "title": "Object Class & Casting",
+        "content_html": "<p>The Object class is the root of the Java class hierarchy, and casting allows type conversion.</p><ul><li><b>Object Methods:</b> Provides foundational methods like toString(), equals(), hashCode(), and getClass().</li><li><b>Upcasting:</b> Implicitly casting a subclass reference to a superclass reference.</li><li><b>Downcasting:</b> Explicitly casting a superclass reference to a subclass reference, validated safely using instanceof.</li></ul>"
+      },
+      {
+        "title": "Abstraction & Interfaces",
+        "content_html": "<p>Abstract classes and interfaces define contracts and hide implementation details.</p><ul><li><b>Abstract Class:</b> Cannot be instantiated; can contain both abstract and concrete methods.</li><li><b>Interface:</b> A completely abstract blueprint that classes implement, primarily used to achieve multiple inheritance.</li></ul>"
+      },
+      {
+        "title": "Packages & Generics",
+        "content_html": "<p>Packages organize code, while generics provide compile-time type safety.</p><ul><li><b>Packages:</b> Built-in (e.g., java.util) and user-defined namespaces preventing naming conflicts; imported via the import statement.</li><li><b>Generics:</b> Parameterize types (classes/interfaces/methods) to avoid explicit casting and catch errors at compile time.</li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "V",
+    "unit_title": "Unit V: Memory Management",
+    "topics": [
+      {
+        "title": "Garbage Collection (GC)",
+        "content_html": "<p>Garbage Collection automatically manages memory by reclaiming unused objects.</p><ul><li><b>Mechanism:</b> The JVM periodically frees up heap memory by deleting objects that are no longer referenced.</li><li><b>Eligibility:</b> Objects become eligible for GC when their references are nullified, reassigned, or created anonymously.</li></ul>"
+      },
+      {
+        "title": "Finalization & Modern Alternatives",
+        "content_html": "<p>Finalization was historically used for cleanup before object destruction.</p><ul><li><b>finalize() Method:</b> Called by the GC before destroying an object, but is now deprecated due to unpredictability.</li><li><b>Modern Alternatives:</b> try-with-resources and Cleaner are the recommended, safer approaches for resource management.</li></ul>"
+      }
+    ]
+  }
+]

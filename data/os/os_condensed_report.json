@@ -1,0 +1,76 @@
+[
+  {
+    "unit": "I",
+    "unit_title": "Unit I: OS Basics and Architectures",
+    "topics": [
+      {
+        "title": "Introduction & Functions of OS",
+        "content_html": "<p>An Operating System acts as an intermediary between hardware and user applications.</p><ul><li>Manages CPU scheduling and execution</li><li>Handles memory allocation and de-allocation</li><li>Organizes file systems and directories</li><li>Coordinates I/O devices and drivers</li></ul>"
+      },
+      {
+        "title": "Types of Operating Systems",
+        "content_html": "<p>Different environments require specialized OS architectures.</p><ul><li><strong>Batch OS:</strong> Executes jobs sequentially without user interaction</li><li><strong>Multiprogramming:</strong> Maximizes CPU utilization by switching jobs during I/O</li><li><strong>Time-Sharing:</strong> Maximizes interactivity with rapid time-slicing</li><li><strong>Real-Time:</strong> Enforces strict deadlines for critical tasks</li></ul>"
+      },
+      {
+        "title": "Dual-Mode Operation & Interrupts",
+        "content_html": "<p>Hardware-level protection is achieved by dividing execution privileges.</p><ul><li><strong>Kernel Mode (0):</strong> Full access to privileged instructions and hardware</li><li><strong>User Mode (1):</strong> Restricted access for running application programs</li><li><strong>Hardware Interrupts:</strong> Asynchronous signals from devices (e.g., timers)</li><li><strong>Software Traps:</strong> Synchronous signals from exceptions or system calls</li></ul>"
+      },
+      {
+        "title": "System Calls & I/O Mechanisms",
+        "content_html": "<p>System calls bridge user space applications and kernel space services.</p><ul><li><strong>System Call Types:</strong> Process control, file management, device management, communications</li><li><strong>Programmed I/O:</strong> High CPU involvement with busy-waiting</li><li><strong>Interrupt-Driven I/O:</strong> CPU handles interrupts after data transfers</li><li><strong>DMA:</strong> Direct bulk transfers bypassing CPU to maximize efficiency</li></ul>"
+      },
+      {
+        "title": "OS Structural Designs",
+        "content_html": "<p>OS architecture balances performance with stability and maintainability.</p><ul><li><strong>Monolithic:</strong> High performance but tight coupling risks system crashes</li><li><strong>Microkernel:</strong> High reliability via isolated services but suffers IPC overhead</li><li><strong>Module-Based (Hybrid):</strong> Blends monolithic speed with dynamic loading flexibility</li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "II",
+    "unit_title": "Unit II: Process Management",
+    "topics": [
+      {
+        "title": "Process Concepts & PCB",
+        "content_html": "<p>A process is an active program in execution managed via a Process Control Block (PCB).</p><ul><li><strong>Process States:</strong> New, Ready, Running, Waiting (Blocked), Terminated</li><li><strong>PCB Data:</strong> Stores PID, state, program counter, and CPU registers</li><li><strong>Program vs Process:</strong> Passive file on disk vs active entity in memory</li></ul>"
+      },
+      {
+        "title": "Context Switching",
+        "content_html": "<p>Context switching allows multiple processes to share a single CPU seamlessly.</p><ul><li>Saves current process state into its PCB</li><li>Loads new process state from its PCB</li><li>Triggered by interrupts, time quantum expiration, or blocking system calls</li><li>Requires kernel intervention and introduces minor overhead</li></ul>"
+      },
+      {
+        "title": "CPU Schedulers",
+        "content_html": "<p>Schedulers manage process flow between queues and the CPU.</p><ul><li><strong>Long-Term (Job):</strong> Loads processes into memory; controls multiprogramming degree</li><li><strong>Short-Term (CPU):</strong> Selects ready processes for execution frequently</li><li><strong>Medium-Term:</strong> Swaps processes between disk and memory to relieve pressure</li></ul>"
+      },
+      {
+        "title": "Scheduling Algorithms",
+        "content_html": "<p>Algorithms decide CPU allocation based on preemptive or non-preemptive strategies.</p><ul><li><strong>Non-Preemptive:</strong> Process holds CPU until completion (e.g., FCFS)</li><li><strong>Preemptive:</strong> OS forcefully interrupts processes (e.g., Round Robin)</li><li><strong>Starvation:</strong> Low-priority processes wait indefinitely, solved via aging</li><li><strong>Metrics:</strong> Optimizes turnaround time, waiting time, and CPU utilization</li></ul>"
+      },
+      {
+        "title": "Threads & Execution",
+        "content_html": "<p>Threads act as lightweight processes enabling concurrent execution within an application.</p><ul><li><strong>User Threads:</strong> Fast switching, managed by libraries, invisible to kernel</li><li><strong>Kernel Threads:</strong> Slower switching, managed directly by OS, support true parallelism</li><li><strong>Benefits:</strong> Resource sharing, economy, and improved responsiveness</li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "III",
+    "unit_title": "Unit III: Concurrency and Synchronization",
+    "topics": [
+      {
+        "title": "Concurrency & Critical Sections",
+        "content_html": "<p>Concurrency requires careful management to prevent race conditions in shared resources.</p><ul><li><strong>Cooperating Processes:</strong> Affect or are affected by other executing processes</li><li><strong>Critical Section:</strong> Code segment where shared variables are modified</li><li><strong>Atomic Operations:</strong> Indivisible instructions essential for safe synchronization</li><li><strong>Requirements:</strong> Mutual exclusion, progress, and bounded waiting</li></ul>"
+      },
+      {
+        "title": "Semaphores",
+        "content_html": "<p>Semaphores are synchronization tools used to control access to shared resources.</p><ul><li><strong>Binary Semaphores (Mutex):</strong> State is 0 or 1, provides mutual exclusion</li><li><strong>Counting Semaphores:</strong> Integer values track multiple available resource instances</li><li><strong>Operations:</strong> wait() decrements, signal() increments the value</li><li><strong>Issues:</strong> Incorrect use can lead to deadlocks or priority inversion</li></ul>"
+      },
+      {
+        "title": "Monitors & Locks",
+        "content_html": "<p>High-level synchronization constructs simplify concurrent programming.</p><ul><li><strong>Mutex Locks:</strong> Simple locking mechanisms protecting critical sections</li><li><strong>Monitors:</strong> Abstract data types encapsulating shared data and synchronization</li><li><strong>Condition Variables:</strong> Allow threads to wait for specific state changes</li><li><strong>Advantage:</strong> Reduces human error compared to raw semaphores</li></ul>"
+      },
+      {
+        "title": "Deadlock Basics",
+        "content_html": "<p>Deadlocks occur when processes indefinitely wait for resources held by each other.</p><ul><li><strong>Mutual Exclusion:</strong> Resources cannot be shared</li><li><strong>Hold and Wait:</strong> Holding resources while requesting more</li><li><strong>No Preemption:</strong> Resources cannot be forcefully taken</li><li><strong>Circular Wait:</strong> A closed chain of waiting processes</li></ul>"
+      }
+    ]
+  }
+]

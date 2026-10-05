@@ -1,0 +1,76 @@
+[
+  {
+    "unit": "I",
+    "unit_title": "Unit I: Propositional Logic",
+    "topics": [
+      {
+        "title": "Propositional Logic Basics",
+        "content_html": "<p>Core concepts of propositions and logical connectives.</p><ul><li>Identifying valid propositions</li><li>Translating English statements to symbolic forms</li><li>Using logical connectives like AND, OR, XOR, and NOT</li></ul>"
+      },
+      {
+        "title": "Conditional & Biconditional Statements",
+        "content_html": "<p>Understanding if-then and if-and-only-if statements.</p><ul><li>Defining conditional and biconditional statements</li><li>Determining the truth values of conditional propositions</li><li>Finding the converse, inverse, and contrapositive</li></ul>"
+      },
+      {
+        "title": "Truth Tables & Proposition Types",
+        "content_html": "<p>Evaluating propositions using exhaustive truth assignments.</p><ul><li>Constructing truth tables for complex propositions</li><li>Identifying Tautologies (always true)</li><li>Identifying Contradictions (always false) and Contingencies</li></ul>"
+      },
+      {
+        "title": "Logical Equivalences",
+        "content_html": "<p>Proving that different logical statements mean the same thing.</p><ul><li>Proving equivalence using truth tables</li><li>Applying De Morgan's laws and distributive laws</li><li>Simplifying expressions using logical laws (without truth tables)</li></ul>"
+      },
+      {
+        "title": "Logic Applications",
+        "content_html": "<p>Applying logic to practical scenarios.</p><ul><li>Modeling system specifications</li><li>Expressing constraints using connectives and negations</li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "II",
+    "unit_title": "Unit II: Combinatorics & Recurrence Relations",
+    "topics": [
+      {
+        "title": "Permutations & Combinations",
+        "content_html": "<p>Counting the number of ways to arrange or select items.</p><ul><li>Calculating standard nPr and nCr values</li><li>Solving algebraic equations involving permutations</li><li>Forming words and selecting committees</li></ul>"
+      },
+      {
+        "title": "Recurrence Relations Basics",
+        "content_html": "<p>Defining sequences recursively.</p><ul><li>Finding the order and degree of recurrence relations</li><li>Calculating subsequent terms given initial conditions</li><li>Checking if a given sequence is a solution</li></ul>"
+      },
+      {
+        "title": "Solving Linear Homogeneous Relations",
+        "content_html": "<p>Finding closed-form solutions for recurrence relations.</p><ul><li>Writing the characteristic equation</li><li>Solving second-order relations with distinct and repeated roots</li><li>Solving third-order relations with multiple initial conditions</li></ul>"
+      },
+      {
+        "title": "Generating Functions",
+        "content_html": "<p>Using formal power series to represent sequences and solve recurrences.</p><ul><li>Finding generating functions for simple sequences</li><li>Solving recurrence relations by converting to generating functions</li><li>Applying partial fraction decomposition</li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "III",
+    "unit_title": "Unit III: Graph Theory",
+    "topics": [
+      {
+        "title": "Graph Fundamentals",
+        "content_html": "<p>Basic terminology and structure of graphs.</p><ul><li>Identifying vertices, edges, loops, and parallel edges</li><li>Calculating degrees, in-degrees, and out-degrees</li><li>Identifying isolated and pendant vertices</li><li>Classifying multigraphs and directed pseudographs</li></ul>"
+      },
+      {
+        "title": "Special Graphs & Properties",
+        "content_html": "<p>Recognizing standard graph families.</p><ul><li>Defining and drawing Complete Graphs (Kn)</li><li>Defining and drawing Complete Bipartite Graphs (Km,n)</li><li>Understanding Cycle graphs (Cn) and n-Cubes (Qn)</li><li>Checking whether a graph is bipartite</li></ul>"
+      },
+      {
+        "title": "The Handshaking Theorem",
+        "content_html": "<p>Relating vertex degrees to the number of edges.</p><ul><li>Applying the degree sum formula (Sum of degrees = 2 * Edges)</li><li>Solving for unknown degrees or vertices</li><li>Validating if a graph can exist with given degree sequences</li></ul>"
+      },
+      {
+        "title": "Matrix Representation",
+        "content_html": "<p>Representing graph connections using matrices.</p><ul><li>Constructing Adjacency matrices for directed and undirected graphs</li><li>Constructing Incidence matrices</li><li>Drawing graphs from a given matrix</li></ul>"
+      },
+      {
+        "title": "Graph Isomorphism",
+        "content_html": "<p>Determining if two graphs are structurally identical.</p><ul><li>Checking vertex counts, edge counts, and degree sequences</li><li>Mapping vertices between two potentially isomorphic graphs</li></ul>"
+      }
+    ]
+  }
+]

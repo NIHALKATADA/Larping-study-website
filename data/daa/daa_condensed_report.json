@@ -1,0 +1,72 @@
+[
+  {
+    "unit": "I",
+    "unit_title": "Unit I: Introduction",
+    "topics": [
+      {
+        "title": "Algorithm Fundamentals",
+        "content_html": "<p>Overview of basic algorithm definitions and characteristics.</p><ul><li>Definition of an algorithm and its characteristics</li><li>Pseudocode and its advantages</li></ul>"
+      },
+      {
+        "title": "Complexity Analysis",
+        "content_html": "<p>Core concepts of algorithm evaluation.</p><ul><li>Time complexity vs space complexity</li><li>Best, worst, and average-case analysis</li><li>Asymptotic analysis vs execution time</li></ul>"
+      },
+      {
+        "title": "Asymptotic Notations",
+        "content_html": "<p>Mathematical tools for complexity bounds.</p><ul><li>Definition of Big-O notation</li><li>Amortized analysis and the aggregate method</li></ul>"
+      },
+      {
+        "title": "Time Complexity Calculation",
+        "content_html": "<p>Analyzing code snippets for practical complexity.</p><ul><li>Analyzing constant time operations O(1)</li><li>Analyzing simple and nested loops O(n), O(n^2), O(log n)</li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "II",
+    "unit_title": "Unit II: Algorithm Correctness & Sorting",
+    "topics": [
+      {
+        "title": "Algorithm Correctness",
+        "content_html": "<p>Proving that algorithms work as intended.</p><ul><li>Partial vs total correctness</li><li>Loop invariants (Initialization, Maintenance, Termination)</li></ul>"
+      },
+      {
+        "title": "Comparison-Based Sorting",
+        "content_html": "<p>Basic iterative sorting techniques.</p><ul><li>Bubble Sort process and dry runs</li><li>Selection Sort process and dry runs</li><li>Insertion Sort process and dry runs</li></ul>"
+      },
+      {
+        "title": "Heap Data Structure & Sorting",
+        "content_html": "<p>Sorting efficiently using Heap trees.</p><ul><li>Max Heap vs Min Heap properties</li><li>Building a Max Heap (bottom-up)</li><li>Heap Sort algorithm and dry runs</li></ul>"
+      },
+      {
+        "title": "Non-Comparison Sorting",
+        "content_html": "<p>Linear time sorting algorithms.</p><ul><li>Counting Sort process</li><li>Radix Sort and stability</li><li>Bucket Sort process</li></ul>"
+      },
+      {
+        "title": "Sorting Complexities",
+        "content_html": "<p>Comparing sorting algorithms.</p><ul><li>Time complexities (Best, Average, Worst) of all sorts</li><li>Choosing the right sort for specific scenarios (e.g., almost-sorted arrays)</li></ul>"
+      }
+    ]
+  },
+  {
+    "unit": "III",
+    "unit_title": "Unit III: Divide & Conquer",
+    "topics": [
+      {
+        "title": "Divide and Conquer Paradigm",
+        "content_html": "<p>Fundamental concept of breaking problems down.</p><ul><li>Divide, Conquer, and Combine steps</li><li>General structure and recursion</li><li>Advantages and limitations</li></ul>"
+      },
+      {
+        "title": "Recurrence Relations & Solving",
+        "content_html": "<p>Mathematical analysis of recursive algorithms.</p><ul><li>Role of recurrence relations in time complexity</li><li>Substitution method for solving recurrences</li><li>Master Method (Cases 1, 2, and 3)</li></ul>"
+      },
+      {
+        "title": "Binary Search & Fast Sorting",
+        "content_html": "<p>Classic divide and conquer applications.</p><ul><li>Binary Search dry runs and complexity</li><li>Merge Sort dry runs, stability, and use cases</li><li>Quick Sort partitioning, dry runs, and time complexity</li></ul>"
+      },
+      {
+        "title": "Advanced Divide & Conquer",
+        "content_html": "<p>Optimization on standard mathematical algorithms.</p><ul><li>Strassen's Matrix Multiplication vs conventional</li><li>Karatsuba algorithm for large integer multiplication</li></ul>"
+      }
+    ]
+  }
+]

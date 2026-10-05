@@ -45,15 +45,18 @@ for subject in ["daa", "dbms", "java", "maths", "ml", "os"]:
         
     print(f"Building {subject}...")
     
-    # 1. Determine JSON source
+    # 1. Determine JSON source (Condensed > Exhaustive > Questions)
     out_data = None
-    if subject == "ml" and os.path.exists(f"data/ml/ml_condensed_report.json"):
-        with open(f"data/ml/ml_condensed_report.json", 'r', encoding='utf-8') as f:
+    if os.path.exists(f"data/{subject}/{subject}_condensed_report.json"):
+        print(f"  Using condensed report for {subject}")
+        with open(f"data/{subject}/{subject}_condensed_report.json", 'r', encoding='utf-8') as f:
             out_data = json.load(f)
     elif os.path.exists(f"data/{subject}/{subject}_exhaustive_report.json"):
+        print(f"  Using exhaustive report for {subject}")
         with open(f"data/{subject}/{subject}_exhaustive_report.json", 'r', encoding='utf-8') as f:
             out_data = json.load(f)
     elif os.path.exists(f"data/{subject}/{subject}_questions.json"):
+        print(f"  Using questions report for {subject}")
         with open(f"data/{subject}/{subject}_questions.json", 'r', encoding='utf-8') as f:
             q_data = json.load(f)
             units_map = {}
@@ -141,7 +144,7 @@ for subject in ["daa", "dbms", "java", "maths", "ml", "os"]:
                 curr_title = clean_text_for_sidebar(t_title)
                 trans_text = random.choice(transitions).format(prev=f"<strong>{curr_title}</strong>", next=f"<strong>{next_title}</strong>")
                 trans_div = soup.new_tag('div', attrs={'class': 'presenter-transition'})
-                trans_div['style'] = "font-style: italic; color: var(--text-light); margin: 1rem 0 2.5rem 1rem; border-left: 2px solid var(--text-light); padding-left: 1rem; font-size: 1.05rem;"
+                trans_div['style'] = "font-style: italic; color: var(--text-light); margin: 1rem 0 2.5rem 1rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1rem; font-size: 1.05rem;"
                 trans_div.append(BeautifulSoup(trans_text, 'html.parser'))
                 unit_div.append(trans_div)
                 
@@ -150,5 +153,4 @@ for subject in ["daa", "dbms", "java", "maths", "ml", "os"]:
     with open(html_file, 'w', encoding='utf-8') as f:
         f.write(str(soup))
     print(f"Rebuilt {subject} successfully.")
-
 
