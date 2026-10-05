@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta charset="utf-8"/>
 <title>Java Comprehensive Report</title>
-<link href="../shared/design-system.css?v=5.1" rel="stylesheet"/>
+<link href="../shared/design-system.css?v=5.2" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 <style>
@@ -187,6 +187,23 @@ async function openAssistant() {
             input.value = '';
             assistantApp.handleQuery(query);
         }
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const openHashDetails = () => {
+            if(window.location.hash) {
+                const targetId = window.location.hash.substring(1);
+                const el = document.getElementById(targetId);
+                if(el && el.tagName === 'DETAILS') {
+                    el.open = true;
+                    setTimeout(() => el.scrollIntoView({behavior: 'smooth', block: 'start'}), 100);
+                }
+            }
+        };
+        window.addEventListener('hashchange', openHashDetails);
+        openHashDetails();
+    });
     </script>
 <div class="unit-section"><h3 class="unit-heading" id="unit_I">Unit I: Java Basics</h3><div class="article-card" style="margin-bottom: 1rem; padding: 0; background: transparent; border: none; box-shadow: none;"><details id="sub_I_0" style="background: var(--card-bg, rgba(255,255,255,0.03)); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.5rem 1rem; transition: all 0.3s ease;"><summary style="font-size: 1.15rem; font-weight: 600; cursor: pointer; padding: 0.5rem 0; outline: none; list-style-position: inside;">Programming paradigm and name any two programming paradigms other than OOP</summary><div style="padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem;"><p>A <strong>programming paradigm</strong> is a fundamental style or approach to programming, dictating how tasks are structured and executed.</p>
 <p>Two other paradigms besides Object-Oriented Programming (OOP) are:</p>
@@ -949,24 +966,7 @@ public class ListDemo {
 <li><strong>finalize():</strong> A method in the <code>Object</code> class historically called by the GC just before destroying the object to release non-Java resources.</li>
 <li><strong>Deprecation:</strong> <code>finalize()</code> was deprecated in Java 9 because it is unpredictable, impacts performance, and can cause memory leaks if implemented poorly.</li>
 <li><strong>Modern Alternatives:</strong> Use <strong>try-with-resources</strong> (implementing <code>AutoCloseable</code>) for deterministic resource cleanup, or the <code>java.lang.ref.Cleaner</code> API.</li>
-</ul></div></details></div></div>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const openHashDetails = () => {
-            if(window.location.hash) {
-                const targetId = window.location.hash.substring(1);
-                const el = document.getElementById(targetId);
-                if(el && el.tagName === 'DETAILS') {
-                    el.open = true;
-                    setTimeout(() => el.scrollIntoView({behavior: 'smooth', block: 'start'}), 100);
-                }
-            }
-        };
-        window.addEventListener('hashchange', openHashDetails);
-        openHashDetails();
-    });
-    </script>
-</main></div></div>
+</ul></div></details></div></div></main></div></div>
 <script>
     // Close the TOC modal on mobile when a link is clicked
     document.querySelectorAll('.report-sidebar a').forEach(link => {

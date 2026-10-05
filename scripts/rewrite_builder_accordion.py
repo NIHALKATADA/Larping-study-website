@@ -36,7 +36,7 @@ for subject in ["daa", "dbms", "java", "maths", "ml", "os"]:
     
     # Use Exhaustive Report to get full depth back, or Questions as fallback
     out_data = None
-    if os.path.exists(f"data/{subject}/{subject}_exhaustive_report.json"):
+    if os.path.exists(f"data/{subject}/{subject}_perfect_report.json"):\n        print(f"  Using PERFECT report for {subject}")\n        with open(f"data/{subject}/{subject}_perfect_report.json", "r", encoding="utf-8") as f:\n            out_data = json.load(f)\n    elif os.path.exists(f"data/{subject}/{subject}_exhaustive_report.json"):
         print(f"  Using exhaustive report for {subject}")
         with open(f"data/{subject}/{subject}_exhaustive_report.json", 'r', encoding='utf-8') as f:
             out_data = json.load(f)
@@ -154,4 +154,5 @@ for subject in ["daa", "dbms", "java", "maths", "ml", "os"]:
     with open(html_file, 'w', encoding='utf-8') as f:
         f.write(str(soup))
     print(f"Rebuilt {subject} successfully with accordion.")
+
 

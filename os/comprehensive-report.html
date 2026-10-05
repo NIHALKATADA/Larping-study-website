@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta charset="utf-8"/>
 <title>OS Comprehensive Report</title>
-<link href="../shared/design-system.css?v=5.1" rel="stylesheet"/>
+<link href="../shared/design-system.css?v=5.2" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
 <!-- MathJax for rendering LaTeX -->
@@ -49,6 +49,23 @@
 <div style="display: grid; width: 100%;">
 <div id="realContentWrapper"></div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const openHashDetails = () => {
+            if(window.location.hash) {
+                const targetId = window.location.hash.substring(1);
+                const el = document.getElementById(targetId);
+                if(el && el.tagName === 'DETAILS') {
+                    el.open = true;
+                    setTimeout(() => el.scrollIntoView({behavior: 'smooth', block: 'start'}), 100);
+                }
+            }
+        };
+        window.addEventListener('hashchange', openHashDetails);
+        openHashDetails();
+    });
+    </script>
 <div class="unit-section"><h3 class="unit-heading" id="unit_I">Unit I: Intro to OS</h3><div class="article-card" style="margin-bottom: 1rem; padding: 0; background: transparent; border: none; box-shadow: none;"><details id="sub_I_0" style="background: var(--card-bg, rgba(255,255,255,0.03)); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.5rem 1rem; transition: all 0.3s ease;"><summary style="font-size: 1.15rem; font-weight: 600; cursor: pointer; padding: 0.5rem 0; outline: none; list-style-position: inside;">Operating System</summary><div style="padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem;"><p>An <strong>Operating System (OS)</strong> is system software that acts as an intermediary between computer hardware and the computer user. It manages hardware resources and provides common services for computer programs, ensuring efficient and convenient execution of user applications.</p></div></details></div><div class="article-card" style="margin-bottom: 1rem; padding: 0; background: transparent; border: none; box-shadow: none;"><details id="sub_I_1" style="background: var(--card-bg, rgba(255,255,255,0.03)); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.5rem 1rem; transition: all 0.3s ease;"><summary style="font-size: 1.15rem; font-weight: 600; cursor: pointer; padding: 0.5rem 0; outline: none; list-style-position: inside;">List any four functions of an Operating System</summary><div style="padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.5rem;"><ul>
 <li><strong>Process Management:</strong> Scheduling and execution of processes.</li>
 <li><strong>Memory Management:</strong> Allocation and de-allocation of memory space.</li>
@@ -511,24 +528,7 @@ lock = false;</code></pre>
 </ol>
 <p><strong>Why Semaphores / Monitors are better:</strong><br/>
 Semaphores and Monitors use <strong>Blocking Queues</strong> instead of busy waiting. If a process cannot enter, the OS puts it to sleep (Waiting State) and switches the CPU to useful work. <br/>
-In the <em>Bounded Buffer</em> problem, counting semaphores trivially manage $N$ slots of data without spin-loops. In the <em>Readers-Writers</em> problem, semaphores scale effortlessly to allow 100 readers simultaneously. Monitors take this a step further by removing manual <code>wait/signal</code> logic entirely, preventing the catastrophic deadlocks commonly seen if a developer makes a mistake coding the <em>Dining Philosophers</em> problem.</p></div></details></div></div>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const openHashDetails = () => {
-            if(window.location.hash) {
-                const targetId = window.location.hash.substring(1);
-                const el = document.getElementById(targetId);
-                if(el && el.tagName === 'DETAILS') {
-                    el.open = true;
-                    setTimeout(() => el.scrollIntoView({behavior: 'smooth', block: 'start'}), 100);
-                }
-            }
-        };
-        window.addEventListener('hashchange', openHashDetails);
-        openHashDetails();
-    });
-    </script>
-</main></div></div>
+In the <em>Bounded Buffer</em> problem, counting semaphores trivially manage $N$ slots of data without spin-loops. In the <em>Readers-Writers</em> problem, semaphores scale effortlessly to allow 100 readers simultaneously. Monitors take this a step further by removing manual <code>wait/signal</code> logic entirely, preventing the catastrophic deadlocks commonly seen if a developer makes a mistake coding the <em>Dining Philosophers</em> problem.</p></div></details></div></div></main></div></div>
 <script src="../shared/app-utils.js"></script>
 ﻿    
     
