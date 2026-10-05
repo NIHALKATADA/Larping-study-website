@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../shared/design-system.css?v=4.8">
+    <link rel="stylesheet" href="../../shared/design-system.css?v=4.8">
     
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
@@ -29,7 +29,7 @@
 
     <nav class="smart-topbar">
         <div class="topbar-left">
-            <a href="../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: var(--text-main);">
+            <a href="../../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px; color: var(--text-main);">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                 <span style="font-weight: 600; font-size: 1.1rem; letter-spacing: 0.5px;">Dashboard</span>
             </a>
@@ -2838,6 +2838,138 @@ window.closeModal = function(id) {
     }
 };
 
+
+// SVG Lightbox Logic with Smooth Overlay
+document.addEventListener('DOMContentLoaded', () => {
+    // Create overlay container
+    const overlay = document.createElement('div');
+    overlay.id = 'svg-overlay';
+    document.body.appendChild(overlay);
+
+    const closeOverlay = () => {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+            overlay.innerHTML = '';
+        }, 300); // Wait for transition
+    };
+
+    overlay.addEventListener('click', closeOverlay);
+
+    const svgs = document.querySelectorAll('.report-main svg');
+    svgs.forEach(svg => {
+        const w = svg.getAttribute('width');
+        const h = svg.getAttribute('height');
+        // Skip small UI icons
+        if (w === "16" || w === "18" || w === "20" || w === "24" || h === "16" || h === "18" || h === "20" || h === "24") {
+            return;
+        }
+        
+        svg.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const clone = svg.cloneNode(true);
+            
+            // Remove any inline styles that might restrict the clone
+            clone.style.maxHeight = '80vh';
+            clone.style.maxWidth = '700px'; // Sensible limit so it doesn't stretch massively
+            clone.style.width = '100%';
+            clone.style.height = 'auto';
+            
+            overlay.innerHTML = '';
+            overlay.appendChild(clone);
+            
+            // Trigger reflow for animation
+            void overlay.offsetWidth;
+            
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+            closeOverlay();
+        }
+    });
+});
+
+// ScrollSpy for Table of Contents
+document.addEventListener('DOMContentLoaded', () => {
+    const sidebar = document.querySelector('.report-sidebar');
+    if (!sidebar) return;
+
+    const links = Array.from(sidebar.querySelectorAll('a[href^="#"]'));
+    if (links.length === 0) return;
+
+    const sections = links.map(link => {
+        const id = link.getAttribute('href').substring(1);
+        const target = document.getElementById(id);
+        return target ? { link, target } : null;
+    }).filter(Boolean);
+
+    let lastActive = null;
+
+    function updateScrollSpy() {
+        const scrollPosition = window.scrollY + 200; // offset for topbar and breathing room
+        
+        let current = null;
+        for (let i = sections.length - 1; i >= 0; i--) {
+            if (sections[i].target.offsetTop <= scrollPosition) {
+                current = sections[i];
+                break;
+            }
+        }
+
+        if (!current && sections.length > 0) {
+            current = sections[0];
+        }
+
+        if (current && current.link !== lastActive) {
+            links.forEach(l => l.classList.remove('active'));
+            current.link.classList.add('active');
+            lastActive = current.link;
+
+            // Scroll the sidebar itself if the active item is out of view
+            const sidebarRect = sidebar.getBoundingClientRect();
+            const linkRect = current.link.getBoundingClientRect();
+            
+            // Only auto-scroll if it's out of bounds
+            if (linkRect.top < sidebarRect.top || linkRect.bottom > sidebarRect.bottom) {
+                sidebar.scrollTo({
+                    top: current.link.offsetTop - sidebar.offsetHeight / 2,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
+
+    // Use requestAnimationFrame for smooth, non-blocking scroll spy
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                updateScrollSpy();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+    
+    // Initial trigger
+    setTimeout(updateScrollSpy, 100);
+});
+
+// Close TOC on mobile when clicking a link
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.report-sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+      const sidebar = document.querySelector('.report-sidebar');
+      if (sidebar && sidebar.classList.contains('show-toc')) {
+        sidebar.classList.remove('show-toc');
+      }
+    });
+  });
+});
 
 </script>
 

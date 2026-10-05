@@ -113,7 +113,7 @@ def extract_course_data_chunks(course_data_path):
     return chunks
 
 def build_subject(subject_dir, templates_dir, data_dir):
-    with open(subject_dir.parent.parent / "shared" / "app-utils.js", "r", encoding="utf-8") as f:
+    with open(subject_dir.parent / "shared" / "app-utils.js", "r", encoding="utf-8") as f:
         # Keep generated pages stable even when the shared script was edited
         # with Windows line endings.
         app_utils_js = f.read().replace("\r\n", "\n")
@@ -151,7 +151,7 @@ def build_subject(subject_dir, templates_dir, data_dir):
         
     print(f"[{subject_id}] Successfully rebuilt question-bank.html with {len(questions)} questions.")
     
-    midterm_questions = [q for q in questions if q.get('important') and q.get('unit') in ['I', 'II', 'III']]
+    midterm_questions = sorted([q for q in questions if q.get('important') and q.get('unit') in ['I', 'II', 'III']], key=lambda x: float(x.get('score', 0) or 0), reverse=True)
     output_midterm = template.render(
         questions=midterm_questions, 
         is_midterm=True, 
@@ -247,7 +247,7 @@ def build_subject(subject_dir, templates_dir, data_dir):
 
 def main():
     root_dir = Path(__file__).parent.parent
-    subjects_dir = root_dir / 'subjects'
+    subjects_dir = root_dir
     data_dir = root_dir / 'data'
     templates_dir = root_dir / 'templates'
     
@@ -284,4 +284,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
 
