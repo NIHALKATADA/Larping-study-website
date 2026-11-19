@@ -4,9 +4,9 @@ const path = require('path');
 const { JSDOM } = require('jsdom');
 
 const projectRoot = path.join(__dirname, '..');
-const report = fs.readFileSync(path.join(projectRoot, 'subjects', 'dbms', 'comprehensive-report.html'), 'utf8');
+const report = fs.readFileSync(path.join(projectRoot, 'dbms', 'comprehensive-report.html'), 'utf8');
 const dom = new JSDOM(report, {
-  url: 'http://localhost:8000/subjects/dbms/comprehensive-report.html',
+  url: 'http://localhost:8000/dbms/comprehensive-report.html',
   runScripts: 'outside-only'
 });
 const { window } = dom;

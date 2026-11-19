@@ -104,7 +104,7 @@ try {
 }
 
 for (const sub of subjects) {
-  const indexPath = path.join(projectRoot, 'subjects', sub, 'assistant-index.json');
+  const indexPath = path.join(projectRoot, sub, 'assistant-index.json');
   try {
     const indexData = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
     const core = new AssistantCore(sub, realAliases, indexData);
@@ -125,7 +125,7 @@ for (const sub of subjects) {
   }
 }
 
-const globalIndex = JSON.parse(fs.readFileSync(path.join(projectRoot, 'subjects', 'global', 'assistant-index.json'), 'utf8'));
+const globalIndex = JSON.parse(fs.readFileSync(path.join(projectRoot, 'global', 'assistant-index.json'), 'utf8'));
 const globalCore = new AssistantCore('global', realAliases, globalIndex);
 const dbmsQ1 = globalCore.execute('show Q1 dbms').result;
 if (!dbmsQ1 || dbmsQ1.subject !== 'dbms' || Number(dbmsQ1.q_num) !== 1) {
