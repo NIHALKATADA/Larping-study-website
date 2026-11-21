@@ -2474,3 +2474,108 @@ html, body { width: 100% !important; max-width: 100% !important; }
         -webkit-overflow-scrolling: touch;
     }
 }
+
+
+/* Answer Mode Toggle & High-Yield Scoring Keywords */
+.answer-mode-switch {
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 3px;
+    gap: 4px;
+    margin-bottom: 1.25rem;
+}
+
+.ans-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ans-toggle-btn:hover {
+    color: var(--text-main);
+}
+
+.ans-toggle-btn.active {
+    background: var(--primary-teal);
+    color: #000;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 242, 254, 0.25);
+}
+
+[data-theme="paper"] .ans-toggle-btn.active {
+    background: #0284c7;
+    color: #fff;
+}
+
+.view-simple {
+    background: rgba(var(--subject-color-rgb, 0, 242, 254), 0.04);
+    border-left: 3px solid var(--primary-teal);
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.key-scoring-box {
+    margin-top: 1.5rem;
+    padding: 0.85rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+}
+
+.kw-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.kw-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.kw-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    background: rgba(0, 242, 254, 0.1);
+    color: var(--primary-teal);
+    border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+[data-theme="paper"] .kw-badge {
+    background: #e0f2fe;
+    color: #0369a1;
+    border-color: #bae6fd;
+}
+
+.ans-svg-diagram {
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem 0;
+}
+
+.ans-svg-diagram svg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+}

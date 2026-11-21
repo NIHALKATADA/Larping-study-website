@@ -207,7 +207,30 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            {{ q.answer_html | safe }}
+                            {% if q.simplified_html %}
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            {% endif %}
+                            <div class="view-full">
+                                {{ q.answer_html | safe }}
+                            </div>
+                            {% if q.simplified_html %}
+                            <div class="view-simple" style="display: none;">
+                                {{ q.simplified_html | safe }}
+                            </div>
+                            {% endif %}
+                            {% if q.keywords %}
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    {% for kw in q.keywords %}
+                                    <span class="kw-badge">{{ kw }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            {% endif %}
                         </div>
                     </details>
                     {% endfor %}

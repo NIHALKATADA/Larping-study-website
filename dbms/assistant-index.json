@@ -2210,6 +2210,1010 @@
     "type": "question"
   },
   {
+    "id": "q131",
+    "q_num": 131,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO4",
+    "score": 8.5,
+    "important": false,
+    "title": "Define a transaction. Mention the two ways in which a transaction can terminate.",
+    "url": "question-bank.html?open=q131",
+    "chunks": [
+      "A transaction is a logical unit of database processing that includes one or more operations (such as read, write, or update). It executes as an indivisible unit to preserve database consistency. A transaction terminates in two ways: Commit: The transaction completes successfully, making all its modifications permanent and durable on disk. Abort (Rollback): The transaction terminates abnormally; all partial changes are undone, returning the database to its pre-transaction state."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q132",
+    "q_num": 132,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.3,
+    "important": true,
+    "title": "Three transactions are running such that T1 waits for a lock held by T2, T2 waits for a lock held by T3, and T3 waits for a lock held by T1. Draw the wait-for graph and state whether a deadlock exists.",
+    "url": "question-bank.html?open=q132",
+    "chunks": [
+      "A Wait-For Graph (WFG) is a directed graph where vertices represent active transactions and directed edge $T_i \\to T_j$ indicates that $T_i$ is waiting for a lock held by $T_j$. Deadlock Status: Yes, a deadlock exists . The wait-for graph contains the directed cycle $T_1 \\to T_2 \\to T_3 \\to T_1$. In concurrency control, a directed cycle in a WFG is a necessary and sufficient condition for deadlock."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q133",
+    "q_num": 133,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO4",
+    "score": 8.6,
+    "important": false,
+    "title": "What is meant by a recoverable schedule?",
+    "url": "question-bank.html?open=q133",
+    "chunks": [
+      "A schedule $S$ is recoverable if, for every pair of transactions $T_i$ and $T_j$ where $T_j$ reads a data item previously written by $T_i$, the commit operation of $T_i$ precedes the commit operation of $T_j$ ($Commit(T_i) < Commit(T_j)$). Significance: Prevents dirty read commits. If $T_i$ aborts, $T_j$ can also be safely rolled back because it has not yet committed. Database Invariant: Commercial DBMSs mandate recoverable schedules to guarantee atomicity and durability during crashes."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q134",
+    "q_num": 134,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO4",
+    "score": 8.8,
+    "important": false,
+    "title": "Define deadlock and state any two conditions that are necessary for it to occur.",
+    "url": "question-bank.html?open=q134",
+    "chunks": [
+      "A deadlock is an execution state where two or more concurrent transactions are permanently blocked because each holds a lock on a data item that another requires, and none can proceed without releasing locks. Two necessary conditions for deadlock are: Mutual Exclusion: A resource is held in an exclusive, non-shareable mode (such as an $X$-lock). Hold and Wait: A transaction holds granted resources while requesting additional resources held by other transactions."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q135",
+    "q_num": 135,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 8.9,
+    "important": false,
+    "title": "What is a checkpoint in a DBMS? State its purpose in recovery.",
+    "url": "question-bank.html?open=q135",
+    "chunks": [
+      "A checkpoint is a synchronization record written to the log during normal operation after flushing all modified buffer blocks (dirty pages) from volatile memory to stable disk storage. Purpose in recovery: Bounds Log Scan: Limits how far back the recovery manager must scan the log during crash restart, eliminating the need to process the log from the very beginning. Reduces Redo Work: Transactions committed prior to the checkpoint already have their updates safely on disk, significantly shortening system recovery downtime."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q136",
+    "q_num": 136,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 8.9,
+    "important": false,
+    "title": "Differentiate between clustered and non-clustered indexes.",
+    "url": "question-bank.html?open=q136",
+    "chunks": [
+      "The key differences between clustered and non-clustered indexes are: Physical Ordering: A clustered index dictates the physical sorting order of actual table rows on disk (only one clustered index per table). A non-clustered index maintains an independent logical order without rearranging physical rows. Leaf Node Content: Leaf nodes of a clustered index contain the actual data records. In a non-clustered index, leaf nodes contain index keys and row pointers (RID / primary key) to data records."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q137",
+    "q_num": 137,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO4",
+    "score": 8.5,
+    "important": false,
+    "title": "What is a fact table and a dimension table in a data warehouse?",
+    "url": "question-bank.html?open=q137",
+    "chunks": [
+      "In data warehouse dimensional modeling (e.g., star schema): Fact Table: The central table containing quantitative numerical measurements (metrics) of a business process (e.g., units_sold , total_amount ) along with foreign keys referencing related dimension tables. Dimension Table: Surrounding companion tables containing descriptive contextual attributes (e.g., customer names, store locations, calendar quarters) used for filtering, grouping, and slicing analytical queries."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q138",
+    "q_num": 138,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.4,
+    "important": true,
+    "title": "Draw the state diagram of a transaction and explain each of its states.",
+    "url": "question-bank.html?open=q138",
+    "chunks": [
+      "During its lifecycle, a database transaction progresses through several distinct execution states to guarantee ACID properties and system consistency: Active: The initial execution state where the transaction begins and executes its read and write database operations. Partially Committed: Entered immediately after the final statement has executed, but updates still reside in memory buffers and have not yet been flushed to stable disk storage. Failed: Entered when normal execution cannot proceed due to hardware failures, logical errors, or concurrency violations. Aborted: The transaction is rolled back, all dirty updates are undone, and the database is restored to its pre-transaction state. The transaction can either restart or terminate. Committed: Entered when all log records and updates are permanently recorded on stable storage, guaranteeing durability."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q139",
+    "q_num": 139,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 8.8,
+    "important": false,
+    "title": "Explain consistent and inconsistent states of a database using the example of a money transfer between two bank accounts that fails midway.",
+    "url": "question-bank.html?open=q139",
+    "chunks": [
+      "A consistent state satisfies all integrity constraints and business rules, while an inconsistent state violates these rules due to partial execution or unhandled failures. Bank Transfer Scenario: Consider transferring \u20b91,000 from Account $A$ (initial balance \u20b95,000) to Account $B$ (initial balance \u20b93,000). The database consistency invariant requires that total balance $A + B = \u20b98,000$. Midway Failure: The transaction executes A = A - 1000 ($A$ becomes \u20b94,000). Before B = B + 1000 can execute, the system crashes. Inconsistent State: If left unrecovered, $A + B = \u20b94,000 + \u20b93,000 = \u20b97,000$. \u20b91,000 has vanished, creating an inconsistent state. Recovery to Consistent State: The recovery manager rolls back $A$ to \u20b95,000 via transaction undo logs, re-establishing the invariant $A + B = \u20b98,000$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q140",
+    "q_num": 140,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 8.6,
+    "important": false,
+    "title": "List the different types of failures in a database system and explain how recovery from a transaction failure is carried out.",
+    "url": "question-bank.html?open=q140",
+    "chunks": [
+      "Database systems are subject to three fundamental classes of failures: Transaction Failure: Internal logical errors (e.g., divide by zero, bad input) or system errors (e.g., deadlock abort, buffer overflow). System Crash: Hardware malfunctions or operating system crashes causing volatile main memory contents to be lost without corrupting non-volatile disk storage. Disk Failure: Head crashes or bad disk sectors destroying physical storage blocks. Recovery from Transaction Failure: When a transaction fails, the recovery manager performs an UNDO operation using the transaction log. It scans the log backwards, extracts the old values (before-images) of all modified data items, writes these original values back to the database, and appends an <abort T> log record."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q141",
+    "q_num": 141,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.2,
+    "important": true,
+    "title": "Explain the lost update and dirty read problems that arise when transactions execute concurrently, with an example of each.",
+    "url": "question-bank.html?open=q141",
+    "chunks": [
+      "Concurrency anomalies occur when transactions interleave without adequate synchronization: Lost Update (Write-Write Conflict): Occurs when two transactions read the same data item and subsequently update it based on the earlier read value. The second write overwrites and obliterates the first write without incorporating its modifications. Example: Account balance is \u20b9100. $T_1$ reads 100 and computes 150. Concurrently, $T_2$ reads 100 and computes 120. $T_1$ writes 150, then $T_2$ writes 120. $T_1$'s \u20b950 deposit is completely lost. Dirty Read (Read-Write Conflict): Occurs when transaction $T_2$ reads a data item modified by transaction $T_1$ that has not yet committed. If $T_1$ subsequently aborts, $T_2$ has acted on transient, invalid data. Example: $T_1$ updates balance from \u20b9100 to \u20b9500. $T_2$ reads \u20b9500 and approves a purchase. $T_1$ aborts and rolls back to \u20b9100. $T_2$'s read was 'dirty'."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q142",
+    "q_num": 142,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.3,
+    "important": true,
+    "title": "Distinguish between conflict serializability and view serializability with an example.",
+    "url": "question-bank.html?open=q142",
+    "chunks": [
+      "Serializability guarantees that concurrent schedules produce results identical to some serial execution: Conflict Serializability: A schedule is conflict serializable if it can be transformed into a serial schedule by swapping non-conflicting concurrent operations. This holds if and only if its precedence (conflict) graph is acyclic. Tested efficiently in polynomial time $O(V + E)$. View Serializability: A weaker, broader condition requiring identical initial reads, dependent reads, and final writes as some serial schedule. Testing view serializability is NP-complete. Example: Consider schedule $S: R_1(A), W_2(A), W_1(A), W_3(A)$. Here, operations conflict in both directions ($T_1 \\to T_2$ and $T_2 \\to T_1$), producing a cycle in the precedence graph; thus $S$ is not conflict serializable . However, due to blind writes ($W_3(A)$ overwriting $A$), $S$ produces the exact same view as serial schedule $T_1 \\to T_2 \\to T_3$, making it view serializable ."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q143",
+    "q_num": 143,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 8.7,
+    "important": false,
+    "title": "Explain the role of the concurrency control manager and the lock manager, and describe how the lock table is used to grant or queue lock requests.",
+    "url": "question-bank.html?open=q143",
+    "chunks": [
+      "The concurrency control manager ensures serializability, isolation, and consistency across interleaved transactions. It delegates resource locking to the lock manager . The lock manager maintains an in-memory hash table called the lock table , indexed by data item ID: Granted List: Holds records of transactions currently granted a lock on the item, along with lock mode (Shared $S$ or Exclusive $X$). Wait Queue: When a transaction requests an incompatible lock (e.g., $X$-lock while an $S$-lock is held), the request cannot be granted. The lock manager suspends the transaction and appends it to the item's FIFO wait queue. Release & Grant: When a lock holder unlocks the item, the lock manager inspects the wait queue, awakens compatible waiting transactions, and updates the granted list."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q144",
+    "q_num": 144,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 8.5,
+    "important": false,
+    "title": "Explain the role of TCL commands in controlling transactions.",
+    "url": "question-bank.html?open=q144",
+    "chunks": [
+      "Transaction Control Language (TCL) commands manage database transactions to ensure data integrity and ACID properties: COMMIT: Permanently saves all changes made by the transaction to disk. Locks are released, and modifications become visible to other concurrent users. ROLLBACK: Reverts all modifications made by an uncommitted transaction, returning the database to the state prior to transaction initiation or to a specified savepoint. SAVEPOINT: Establishes intermediate checkpoints within a transaction. Allows partial rollback (e.g., ROLLBACK TO sp1 ) without undoing the entire transaction. SET TRANSACTION: Configures isolation levels (e.g., READ COMMITTED , SERIALIZABLE ) and access modes ( READ ONLY vs READ WRITE ) before operations begin."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q145",
+    "q_num": 145,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.6,
+    "important": true,
+    "title": "With an example, explain the ACID properties of a transaction.",
+    "url": "question-bank.html?open=q145",
+    "chunks": [
+      "ACID properties guarantee reliable database transactions. Consider transferring \u20b91,000 from account $A$ to account $B$: Atomicity: All operations succeed or none do. Either both debiting $A$ and crediting $B$ succeed, or the transaction aborts and leaves both balances unchanged. Consistency: The transaction transforms the database from one valid state to another, preserving integrity invariants (e.g., total funds $A + B$ remains constant before and after). Isolation: Intermediate states are hidden from concurrent transactions. Another transaction reading $A$ and $B$ cannot see $A$ deducted before $B$ is credited. Durability: Once committed, updates persist permanently on non-volatile storage, even if a power failure or system crash occurs immediately afterward."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q146",
+    "q_num": 146,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.5,
+    "important": true,
+    "title": "Consider the schedule S: R1(A), W1(A), R2(A), W2(A), R1(B), W1(B), R2(B), W2(B), where Ri and Wi denote the read and write operations of transaction Ti. Draw the precedence graph of S, determine whether S is conflict serializable and, if so, give an equivalent serial schedule.",
+    "url": "question-bank.html?open=q146",
+    "chunks": [
+      "To analyze schedule $S$, we identify all pairs of conflicting operations (operations by different transactions on the same data item where at least one is a write): Conflicts on Data Item A: $R_1(A) < W_2(A)$, $W_1(A) < R_2(A)$, and $W_1(A) < W_2(A)$ all establish precedence edge $T_1 \\to T_2$. Conflicts on Data Item B: $R_1(B) < W_2(B)$, $W_1(B) < R_2(B)$, and $W_1(B) < W_2(B)$ also establish edge $T_1 \\to T_2$. Graph Analysis: In a precedence graph, a directed edge $T_i \\to T_j$ indicates that $T_i$ executes a conflicting operation before $T_j$. Here, all conflicting pairs direct from $T_1$ to $T_2$ with zero reverse edges. Serializability: Because the precedence graph contains no directed cycles (strictly acyclic), schedule $S$ is conflict serializable . Equivalent Serial Schedule: Topological ordering gives $\\langle T_1, T_2 \\rangle$ ($T_1$ followed by $T_2$)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q147",
+    "q_num": 147,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.1,
+    "important": true,
+    "title": "Explain log-based recovery with the deferred database modification and immediate database modification techniques.",
+    "url": "question-bank.html?open=q147",
+    "chunks": [
+      "Log-based recovery uses a write-ahead log (WAL) on stable storage to restore database consistency after crashes: Deferred Database Modification: All write operations update only the log buffer in memory; the actual database on disk is modified only after the transaction commits. Recovery Policy: Since uncommitted updates are never written to disk, an UNDO is never required (NO-UNDO/REDO algorithm). During crash recovery, the DBMS only REDOes transactions whose log contains both <T start> and <T commit> . Immediate Database Modification: Database updates can be written to disk while the transaction is still active, before committing (following WAL rules). Recovery Policy: Requires both UNDO and REDO (UNDO/REDO algorithm). Uncommitted transactions that modified disk blocks must be UNDONE, while committed transactions must be REDONE to guarantee durability."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q148",
+    "q_num": 148,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 8.8,
+    "important": false,
+    "title": "Explain dense and sparse indexes with an example. Which of the two requires less storage space and why?",
+    "url": "question-bank.html?open=q148",
+    "chunks": [
+      "Indexes accelerate search key lookups by mapping keys to disk block locations: Dense Index: An index record appears for every search-key value in the data file. For duplicate keys, it points to the first record or a list of records. Fast lookups, but large index footprint. Example: An employee table with 10,000 records has 10,000 entries in its dense index. Sparse Index: An index record appears for only some search-key values (typically one anchor key per disk block). Requires data records to be physically sorted by search key. Example: 10,000 records stored across 100 blocks require only 100 entries in a sparse index. Storage Comparison: A sparse index requires significantly less storage space because it contains far fewer entries, allowing it to remain memory-resident and reducing I/O operations."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q149",
+    "q_num": 149,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.0,
+    "important": true,
+    "title": "Explain the unrepeatable read and phantom read problems of concurrent transactions with an example for each.",
+    "url": "question-bank.html?open=q149",
+    "chunks": [
+      "These two read anomalies occur under relaxed SQL isolation levels: Unrepeatable (Fuzzy) Read: Transaction $T_1$ reads a specific row. Concurrently, transaction $T_2$ modifies or deletes that row and commits. When $T_1$ re-reads the exact same row, it discovers that the values have changed or the row disappeared. Example: $T_1$ reads employee John's salary as \u20b950,000. $T_2$ updates John's salary to \u20b960,000 and commits. $T_1$ re-reads John's record and finds \u20b960,000, violating read repeatability. Phantom Read: Transaction $T_1$ reads a set of rows satisfying a search predicate. Concurrently, transaction $T_2$ inserts a new row matching that predicate and commits. When $T_1$ re-executes the query, a new 'phantom' row appears. Example: $T_1$ runs SELECT count(*) WHERE dept='IT' (gets 5). $T_2$ inserts a new IT employee and commits. $T_1$ re-runs the count and gets 6."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q150",
+    "q_num": 150,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.3,
+    "important": true,
+    "title": "Distinguish between serial and non-serial schedules. Define conflict serializability and explain why a DBMS needs serializable schedules.",
+    "url": "question-bank.html?open=q150",
+    "chunks": [
+      "A schedule defines the chronological execution sequence of operations across concurrent transactions. 1. Serial vs. Non-Serial Schedules: Feature Serial Schedule Non-Serial (Interleaved) Schedule Execution Order Operations of each transaction execute consecutively without interleaving. Operations of multiple transactions interleave concurrently. Throughput & CPU Poor CPU and I/O resource utilization; waiting transactions block everything. High throughput and optimal resource utilization during I/O stalls. Consistency Always preserves consistency automatically without concurrency control. Can lead to anomalies (lost updates, dirty reads) unless serialized. Response Time High turnaround time for long transactions. Significantly reduced latency for short transactions. 2. Conflict Serializability: A non-serial schedule $S$ is conflict serializable if it can be transformed into an equivalent serial schedule by a sequence of swaps of non-conflicting adjacent operations. Two operations conflict if they are issued by different transactions, operate on the same data item, and at least one is a write operation ($R_i(X)-W_j(X)$, $W_i(X)-R_j(X)$, or $W_i(X)-W_j(X)$). A schedule is conflict serializable if and only if its precedence graph (conflict graph) contains no directed cycles. 3. Why a DBMS Needs Serializable Schedules: Guaranteed Correctness: Since any serial execution preserves database consistency, a serializable concurrent schedule guarantees that the final state is mathematically correct. Concurrency without Inconsistency: Allows the DBMS to maximize hardware parallelism, multi-core CPU throughput, and disk I/O overlap while completely eliminating race conditions and isolation anomalies. ACID Isolation Invariant: Commercial database engines mandate serializability to fulfill the SQL standard Isolation requirement without forcing transactions to run strictly one at a time."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q151",
+    "q_num": 151,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.4,
+    "important": true,
+    "title": "Explain recoverable, non-recoverable and cascadeless schedules and cascading rollback, giving a short example schedule for each.",
+    "url": "question-bank.html?open=q151",
+    "chunks": [
+      "Transaction recovery properties define how concurrent schedules behave when uncommitted dependencies encounter unexpected failures or aborts: 1. Non-Recoverable Schedule: Occurs when transaction $T_2$ reads a data item modified by uncommitted transaction $T_1$, and $T_2$ commits before $T_1$. If $T_1$ subsequently aborts, $T_2$ has committed dirty data that cannot be rolled back without violating the Durability property of ACID. Example: $S_1: W_1(A), R_2(A), Commit(T_2), Abort(T_1)$. Once $T_2$ commits, its results are permanently written to disk, leaving the database in an unrecoverable corrupted state. 2. Recoverable Schedule: A schedule is recoverable if, whenever transaction $T_2$ reads a data item written by transaction $T_1$, the commit operation of $T_1$ precedes the commit operation of $T_2$ ($Commit(T_1) < Commit(T_2)$). Example: $S_2: W_1(A), R_2(A), Commit(T_1), Commit(T_2)$. If $T_1$ aborts instead, $T_2$ has not yet committed and can be safely aborted too. 3. Cascading Rollback: A phenomenon where the failure and rollback of a single transaction triggers a chain reaction of aborts across multiple dependent, uncommitted transactions that read its dirty uncommitted updates. Example: $S_3: W_1(A), R_2(A), W_2(B), R_3(B), Abort(T_1)$. Because $T_1$ aborts, $T_2$ must abort, which in turn forces $T_3$ to abort, squandering significant CPU and disk I/O work. 4. Cascadeless Schedule: A schedule is",
+      "cascadeless (avoids cascading aborts) if every transaction reads only values written by already committed transactions ($Read_j(X)$ is delayed until after $Commit(T_i)$). Example: $S_4: W_1(A), Commit(T_1), R_2(A), Commit(T_2)$. Since $T_2$ only reads after $T_1$ commits, an abort of $T_1$ can never affect $T_2$. Every cascadeless schedule is strictly recoverable. Containment Hierarchy: The classes of schedules satisfy the strict inclusion relation: $\\text{Strict Schedules} \\subset \\text{Cascadeless Schedules} \\subset \\text{Recoverable Schedules} \\subset \\text{All Possible Schedules}$. Commercial database engines enforce cascadelessness or strictness to maintain continuous system throughput."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q152",
+    "q_num": 152,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.5,
+    "important": true,
+    "title": "Explain how deadlocks are detected using a wait-for graph, and explain the deadlock recovery schemes: victim selection, rollback and the avoidance of starvation.",
+    "url": "question-bank.html?open=q152",
+    "chunks": [
+      "A deadlock occurs in lock-based concurrency control when transactions enter circular wait states for held locks. 1. Deadlock Detection via Wait-For Graph (WFG): A Wait-For Graph is a directed graph $G = (V, E)$ maintained dynamically by the lock manager where vertices $V$ represent active transactions and directed edge $T_i \\to T_j$ indicates that $T_i$ is suspended waiting for a lock currently held by $T_j$. When a lock request cannot be granted, an edge is added; when a lock is released, corresponding edges are deleted. The lock manager invokes cycle-detection algorithms (e.g., Depth-First Search or Tarjan's strongly connected components algorithm) at scheduled intervals. A deadlock exists if and only if the WFG contains a directed cycle. 2. Deadlock Recovery Schemes: Victim Selection: When a cycle is detected, the DBMS chooses one transaction in the cycle to abort. The selection minimizes overall rollback overhead based on criteria such as elapsed execution time, remaining queries, number of modified rows, and number of cascading rollbacks prevented. Rollback Policy: Total Rollback: Abort the victim completely and restart it from the very beginning. Partial Rollback: Roll back the victim only to an intermediate savepoint sufficient to release the contested lock and break the graph cycle,",
+      "saving prior computational work. Avoidance of Starvation: If victim selection always chooses the youngest transaction or the one with the fewest updates, that transaction could repeatedly be aborted and starved from ever finishing. To prevent starvation, the DBMS associates an abort count with each transaction; each abort increments its priority so an older transaction is never starved indefinitely."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q153",
+    "q_num": 153,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.6,
+    "important": true,
+    "title": "Explain shared (S) and exclusive (X) locks along with the lock compatibility matrix, and describe the basic two-phase locking protocol, including its growing phase, shrinking phase and lock point.",
+    "url": "question-bank.html?open=q153",
+    "chunks": [
+      "Lock-based concurrency control protocols restrict concurrent data access using complementary lock modes and acquisition phases: 1. Shared (S) and Exclusive (X) Locks: Shared Lock ($S$): Read-only lock mode. If a transaction holds a shared lock on data item $Q$, other concurrent transactions can also acquire shared locks on $Q$ ($S-S$ is compatible). No writes are permitted. Exclusive Lock ($X$): Read-write lock mode. Only one transaction can hold an exclusive lock on $Q$ at any given moment ($X-S$ and $X-X$ are strictly incompatible). Lock Compatibility Matrix: Requested \\ Held Shared ($S$) Exclusive ($X$) Shared ($S$) Compatible (True) Incompatible (False) Exclusive ($X$) Incompatible (False) Incompatible (False) 2. Two-Phase Locking (2PL) Protocol: The basic 2PL protocol guarantees conflict serializability by requiring every transaction to separate its lock operations into two distinct, non-overlapping phases: Phase 1: Growing (Expanding) Phase: The transaction acquires new locks as needed and may upgrade locks ($S \\to X$). It cannot release any lock under any circumstances. Lock Point: The exact instant when the transaction acquires its final lock (reaches peak lock count). The chronological order of lock points across transactions dictates their exact conflict serialization order. Phase 2: Shrinking (Contracting) Phase: The transaction releases held locks and may downgrade locks ($X \\to S$). It cannot acquire any new locks once this phase begins. Serializability Guarantee: Because transactions never acquire new locks after releasing an earlier lock, no circular data item dependencies can be created, proving that 2PL guarantees conflict serializability."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q154",
+    "q_num": 154,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.2,
+    "important": true,
+    "title": "Compare strict and rigorous two-phase locking with the help of an example, and state the benefits of each.",
+    "url": "question-bank.html?open=q154",
+    "chunks": [
+      "Strict 2PL and Rigorous 2PL are specialized variants of the Two-Phase Locking protocol that enforce stronger guarantees than basic 2PL. 1. Strict Two-Phase Locking (Strict 2PL): Rule: In addition to basic 2PL rules, a transaction must hold all its exclusive ($X$) locks until it terminates (commits or aborts). Shared ($S$) locks can be released during the shrinking phase before commit. Benefits: Guarantees recoverable and cascadeless schedules (prevents dirty reads), simplifying transaction rollback without cascading aborts. Allows concurrent reads to proceed earlier when shared locks are released. 2. Rigorous Two-Phase Locking (Rigorous 2PL): Rule: A transaction must hold all locks (both Shared $S$ and Exclusive $X$) until it terminates (commits or aborts). The shrinking phase collapses to the commit/abort point. Benefits: Guarantees strict serializability. Transactions can be serialized in the exact order in which they commit, making schedule analysis and replication coordination straightforward. 3. Comparative Example Schedule: Consider transaction $T_1$ needing to read $A$ and update $B$, and transaction $T_2$ needing to read $A$: Under Strict 2PL: $T_1$ acquires $S(A)$ and $X(B)$. After reading $A$, $T_1$ can release $S(A)$ early. $T_2$ can immediately acquire $S(A)$ and read $A$ before $T_1$ commits. However, $T_1$ retains $X(B)$ until commit. Under Rigorous 2PL: $T_1$",
+      "acquires $S(A)$ and $X(B)$. $T_1$ cannot release $S(A)$ until it commits. $T_2$ must wait if it needs an exclusive lock, ensuring strict chronological locking isolation. Dimension Strict 2PL Rigorous 2PL X-locks held until Commit / Abort Commit / Abort S-locks held until Can release in shrinking phase Commit / Abort Concurrency Level Higher (early S-lock release) Lower (locks held longer) Commit Ordering May differ from lock point Identical to commit order"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q155",
+    "q_num": 155,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.1,
+    "important": true,
+    "title": "Explain the architecture of a data warehouse (data sources, staging area, warehouse and presentation layer), describe the ETL process and state the role of data marts.",
+    "url": "question-bank.html?open=q155",
+    "chunks": [
+      "A Data Warehouse (DW) is a subject-oriented, integrated, time-variant, and non-volatile collection of corporate data structured for management decision-support analysis. 1. Architectural Layers: Data Sources: Operational transactional databases (OLTP), enterprise ERP and CRM systems, flat log files, web clickstreams, and third-party APIs. Staging Area: An intermediate holding and processing area where incoming data is extracted, sanitized, validated, and normalized before warehouse insertion, isolating production OLTP systems from query load. Warehouse (Enterprise Storage): The central repository storing integrated historical and atomic granular data organized according to enterprise-wide relational or dimensional data models. Presentation Layer: Front-end client applications providing reporting dashboards, OLAP multidimensional cubes, data visualization, and predictive data mining tools. Metadata Repository: Maintains administrative schemas, ETL business rules, transformation lineage, and indexing definitions, serving as the system directory across all warehouse components. 2. The ETL (Extract, Transform, Load) Process: Extract: Captures changed data (CDC) from heterogeneous relational databases, legacy systems, and unstructured files without interrupting live transaction processing. Transform: Performs critical data cleansing (handling null values and duplicates), standardizing disparate formats (e.g., converting dates to ISO standard, harmonizing currency codes), joining reference data, and generating artificial surrogate primary keys. Load: Executes bulk insertions of curated records into the target warehouse fact",
+      "and dimension tables during scheduled batch loading windows. 3. Role of Data Marts: A data mart is a departmental, highly focused subset of the warehouse customized for specific business units (such as Marketing, Finance, or Logistics). By structuring data into dedicated star or snowflake schemas, data marts deliver accelerated query performance, tighter security isolation, and tailored analytics without traversing the massive enterprise warehouse."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q156",
+    "q_num": 156,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.3,
+    "important": true,
+    "title": "Why is two-phase locking (mostly strict 2PL) used in commercial DBMSs? Show with an example schedule that it can still cause deadlock, and write its other drawbacks.",
+    "url": "question-bank.html?open=q156",
+    "chunks": [
+      "Commercial database engines (such as Oracle, PostgreSQL, and SQL Server) overwhelmingly implement Strict Two-Phase Locking (Strict 2PL) as their primary concurrency control protocol. 1. Why Commercial DBMSs Adopt Strict 2PL: Guarantees Serializability: Like basic 2PL, it mathematically guarantees that all concurrent interleaved schedules are conflict serializable. Eliminates Cascading Aborts: By holding exclusive ($X$) locks until commit, transactions never write data that others read uncommitted; schedules are strictly cascadeless and recoverable. Simple Crash Recovery: Transaction rollback requires only undoing before-images without inspecting or aborting other transactions. 2. Deadlock Schedule Example under Strict 2PL: Strict 2PL does not prevent deadlocks. Consider two transactions $T_1$ and $T_2$ accessing data items $A$ and $B$: $T_1$ acquires $X(A)$ and writes to $A$. $T_2$ acquires $X(B)$ and writes to $B$. $T_1$ requests $X(B)$: since $T_2$ holds $X(B)$ until commit, $T_1$ must wait for $T_2$. $T_2$ requests $X(A)$: since $T_1$ holds $X(A)$ until commit, $T_2$ must wait for $T_1$. Both transactions hold resources while waiting for each other ($T_1 \\to T_2 \\to T_1$), creating a mutual deadlock that requires DBMS intervention. 3. Drawbacks of Two-Phase Locking: Deadlock Overhead: Systems must dedicate CPU cycles to maintain wait-for graphs, run cycle-detection routines, and abort/restart victims. Reduced Concurrency & Lock",
+      "Convoying: Long-running write transactions holding exclusive locks stall all subsequent readers and writers, degrading multi-user throughput. Lock Maintenance Cost: Allocating, updating, and hashing lock table entries adds memory consumption and lock manager processing latency. Phantom Anomalies: Tuple-level 2PL cannot stop phantom inserts into range queries unless expensive predicate/index-range locking is used."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q157",
+    "q_num": 157,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.4,
+    "important": true,
+    "title": "Explain the deadlock prevention schemes Wait-Die and Wound-Wait with examples.",
+    "url": "question-bank.html?open=q157",
+    "chunks": [
+      "Deadlock prevention protocols use transaction timestamps to decide whether a requesting transaction should wait or abort when a resource conflict occurs. Monotonic timestamp $TS(T_i)$ is assigned when transaction $T_i$ begins (smaller timestamp implies older transaction). Suppose transaction $T_i$ requests a lock held by transaction $T_j$: 1. Wait-Die Scheme (Non-Preemptive): Older requests from Younger ($TS(T_i) < TS(T_j)$): $T_i$ is allowed to wait . Younger requests from Older ($TS(T_i) > TS(T_j)$): $T_i$ dies (aborts) and restarts with its original timestamp. Rule Summary: 'Old waits, young dies.' Locks are never preemptively stolen. Example: Let $TS(T_1)=10$ (older) and $TS(T_2)=20$ (younger). If $T_1$ requests a lock held by $T_2$, $T_1$ waits. If $T_2$ requests a lock held by $T_1$, $T_2$ dies and restarts. 2. Wound-Wait Scheme (Preemptive): Older requests from Younger ($TS(T_i) < TS(T_j)$): $T_i$ wounds $T_j$; $T_j$ is preempted, aborted, and rolls back, releasing its lock to $T_i$. $T_j$ restarts with its original timestamp. Younger requests from Older ($TS(T_i) > TS(T_j)$): $T_i$ is allowed to wait . Rule Summary: 'Old wounds, young waits.' Younger transactions are preempted by older ones. Example: With $TS(T_1)=10$ and $TS(T_2)=20$, if $T_1$ requests a lock held by $T_2$, $T_1$ preempts ($T_2$ is aborted). If $T_2$ requests a lock held",
+      "by $T_1$, $T_2$ waits. 3. Key Comparison: Metric Wait-Die Wound-Wait Preemption Non-preemptive Preemptive Number of Aborts High (young transactions die repeatedly) Fewer aborts; locks granted quickly to old Starvation Avoided (retains original timestamp) Avoided (retains original timestamp) Starvation Freedom Guarantee: In both schemes, when an aborted transaction restarts, it keeps its original starting timestamp. Thus, as time passes, the transaction becomes progressively older relative to new transactions, guaranteeing that it eventually becomes the oldest active transaction and runs to completion without ever dying again."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q158",
+    "q_num": 158,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.8,
+    "important": true,
+    "title": "Construct a B+ tree in which every node can hold at most 3 keys (a maximum of 4 child pointers) by inserting the keys 10, 20, 30, 40, 50, 60 and 70 in the given order. Show the tree after every node split and state two advantages of a B+ tree over a B-tree.",
+    "url": "question-bank.html?open=q158",
+    "chunks": [
+      "Node Specification: Max keys $M = 3$, maximum child pointers $P = 4$. A node splits when the number of keys reaches 4. Step-by-Step Construction: Insert 10, 20, 30: All fit in the single root leaf node: [10, 20, 30] . Insert 40 (Split 1): Node overflows to [10, 20, 30, 40] . In a B+ tree leaf split, the middle key (index $\\lceil 4/2 \\rceil = 2$, key 30) is copied up to the parent. Left leaf keeps [10, 20] , right leaf keeps [30, 40] with a leaf sibling pointer. New root becomes [30] . Insert 50: Placed into right leaf: [30, 40, 50] . Tree valid. Insert 60 (Split 2): Right leaf overflows to [30, 40, 50, 60] . Leaf splits: left leaf retains [30, 40] , right leaf gets [50, 60] , and key 50 is copied up to root. Root now contains keys [30, 50] . Insert 70: Placed into rightmost leaf: [50, 60, 70] . Node is full but does not exceed 3 keys. Two Distinct Advantages of a B+ Tree over a Standard B-Tree: Extremely Fast Sequential Range Queries: In a B+ tree, all leaf nodes are linked into a continuous linked list.",
+      "Range queries execute by jumping to the start key via root search and simply scanning linearly across leaf sibling pointers, completely avoiding expensive in-order tree traversals required by B-trees. Higher Fanout and Lower Tree Height: Internal nodes in a B+ tree store only search keys and child pointers without actual data records. Consequently, each fixed-size disk page fits significantly more branch pointers (higher fanout), making the tree shallower and drastically reducing the number of disk I/O operations required for lookups."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q159",
+    "q_num": 159,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.5,
+    "important": true,
+    "title": "A static hash file uses the hash function h(k) = k mod 5. Each bucket holds at most 2 records and overflow is handled by chaining. Insert the keys 5, 12, 21, 9, 17, 14, 8, 33, 22 and 7 in the given order and show the final contents of each bucket. Also explain how extendible hashing avoids long overflow chains. 5 Sr. No. Question Marks 120 A retail chain wants to analyse its sales by store, product and month. (i) Design a star schema with one fact table and suitable dimension tables. (ii) Explain the OLAP operations roll -up, drill-down and slice with an example from this schema. (iii) Analyse how the OLAP workload on this warehouse differs from the OLTP workload of the stores' billing systems.",
+    "url": "question-bank.html?open=q159",
+    "chunks": [
+      "Part 1: Static Hashing ($h(k) = k \\bmod 5$, Bucket Capacity = 2, Chaining): $k=5: 5 \\bmod 5 = 0 \\to$ Bucket 0: [5] $k=12: 12 \\bmod 5 = 2 \\to$ Bucket 2: [12] $k=21: 21 \\bmod 5 = 1 \\to$ Bucket 1: [21] $k=9: 9 \\bmod 5 = 4 \\to$ Bucket 4: [9] $k=17: 17 \\bmod 5 = 2 \\to$ Bucket 2: [12, 17] (Full) $k=14: 14 \\bmod 5 = 4 \\to$ Bucket 4: [9, 14] (Full) $k=8: 8 \\bmod 5 = 3 \\to$ Bucket 3: [8] $k=33: 33 \\bmod 5 = 3 \\to$ Bucket 3: [8, 33] (Full) $k=22: 22 \\bmod 5 = 2 \\to$ Bucket 2 overflows $\\to$ Chained Overflow Block: [22] $k=7: 7 \\bmod 5 = 2 \\to$ Bucket 2 overflow chain: [22, 7] Final Bucket Contents: Bucket 0: [5] ; Bucket 1: [21] ; Bucket 2: Primary [12, 17] $\\to$ Chained Overflow [22, 7] ; Bucket 3: [8, 33] ; Bucket 4: [9, 14] . How Extendible Hashing Avoids Long Chains: Extendible hashing uses a dynamic directory with global and local depth. When a bucket overflows, only that specific bucket splits, doubling its local depth. If local depth exceeds global depth, the directory doubles. Records",
+      "are redistributed using additional hash bits, preventing sequential linear overflow search degradation. Part 2: Retail Star Schema & OLAP Workload: Star Schema Design: Central fact table Sales_Fact with measures ( quantity_sold , total_revenue ) and foreign keys ( store_id , product_id , time_id ), surrounded by dimension tables Store_Dim (location, city), Product_Dim (category, brand), and Time_Dim (day, month, quarter, year). OLAP Operations: Roll-up: Aggregates sales from Month to Year level. Drill-down: De-aggregates sales from Product Category down to individual Item. Slice: Filters sales for a single store (e.g., store_id = 'Store_101' ). OLAP vs. OLTP Workload: Store billing (OLTP) executes frequent, short, write-intensive ACID transactions with normalized schemas. The warehouse (OLAP) executes long-running, read-mostly, complex multi-table analytical aggregations over millions of denormalized historical records."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q160",
+    "q_num": 160,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 8.7,
+    "important": false,
+    "title": "Differentiate between fragmentation and replication in a distributed database.",
+    "url": "question-bank.html?open=q160",
+    "chunks": [
+      "The core differences between fragmentation and replication in distributed databases are: Fragmentation: Divides a logical relation into non-overlapping sub-relations (horizontal rows, vertical columns, or hybrid) distributed across different sites without data duplication. Replication: Stores redundant full copies of a relation or fragment at two or more geographically distributed network sites to enhance availability and read locality."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q161",
+    "q_num": 161,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 8.6,
+    "important": false,
+    "title": "State any two advantages and one drawback of data replication in a distributed database.",
+    "url": "question-bank.html?open=q161",
+    "chunks": [
+      "Data replication in distributed databases offers significant benefits and distinct trade-offs: Advantage 1 (High Availability): If a node holding data crashes, queries are transparently serviced by surviving replicas without downtime. Advantage 2 (Fast Read Performance): Read operations execute locally at the nearest replica site, eliminating wide-area network latency. Drawback (Update Overhead): Every write must be synchronized across all replicas, requiring distributed consensus protocols that increase write latency."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q162",
+    "q_num": 162,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO5",
+    "score": 8.8,
+    "important": false,
+    "title": "Define an index in MongoDB and state why it is used.",
+    "url": "question-bank.html?open=q162",
+    "chunks": [
+      "An index in MongoDB is a specialized auxiliary data structure (implemented as a B-tree) that stores a small portion of a collection's document fields in an easily traversable, sorted order. Why it is used: Query Acceleration: Avoids expensive full collection scans ( COLLSCAN ) by allowing the query engine to rapidly locate documents ( IXSCAN ). Efficient Sorting: Fulfills sorted queries directly from the index order without memory-intensive sort operations."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q163",
+    "q_num": 163,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO5",
+    "score": 8.5,
+    "important": false,
+    "title": "What is the purpose of the _id field in a MongoDB document?",
+    "url": "question-bank.html?open=q163",
+    "chunks": [
+      "The _id field serves as the mandatory primary key for every document in a MongoDB collection, uniquely identifying it within that collection. Default Generation: If omitted during insertion, MongoDB automatically populates _id with a unique 12-byte ObjectId (composed of timestamp, machine identifier, process ID, and incrementing counter). Unique Index: MongoDB automatically builds and maintains a unique index on _id , ensuring fast document lookups and preventing duplicate keys."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q164",
+    "q_num": 164,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO5",
+    "score": 9.6,
+    "important": true,
+    "title": "State the CAP theorem and name its three properties.",
+    "url": "question-bank.html?open=q164",
+    "chunks": [
+      "Brewer's CAP Theorem states that any distributed data store can simultaneously guarantee at most two out of three properties in the presence of network partitions. Its three core properties are: Consistency (C): Every read receives the most recent write or an error. Availability (A): Every non-failing node returns a non-error response for every request (without guaranteeing latest data). Partition Tolerance (P): The system continues to operate despite arbitrary network message losses or node network isolations."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q165",
+    "q_num": 165,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO5",
+    "score": 9.3,
+    "important": true,
+    "title": "What is a replica set in MongoDB?",
+    "url": "question-bank.html?open=q165",
+    "chunks": [
+      "A replica set in MongoDB is a cluster of mongod processes that maintain identical data copies to provide high availability and automatic failover. Primary Node: Exactly one primary receives all write operations, recording modifications in its replication operation log ( oplog ). Secondary Nodes: Multiple secondaries continuously replicate the primary's oplog and apply operations asynchronously. If the primary fails, secondaries elect a new primary via consensus."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q166",
+    "q_num": 166,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO5",
+    "score": 9.1,
+    "important": true,
+    "title": "Define sharding and state why it is used in MongoDB.",
+    "url": "question-bank.html?open=q166",
+    "chunks": [
+      "Sharding is a method for distributing data horizontally across multiple machines or clusters using a designated partition field known as a shard key . Why it is used in MongoDB: Horizontal Scalability (Scale-Out): Overcomes the hardware limits (RAM, CPU, disk I/O) of a single server by adding affordable commodity servers. Throughput Distribution: Partitions massive data sets and splits high-volume read/write query loads across independent shard servers."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q167",
+    "q_num": 167,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.1,
+    "important": true,
+    "title": "Explain the main types of NoSQL databases and give one example product for each type.",
+    "url": "question-bank.html?open=q167",
+    "chunks": [
+      "NoSQL databases diverge from relational models by adopting non-tabular, flexible storage architectures: Key-Value Store: Stores data as associative arrays of unique keys paired with arbitrary binary values. Highly optimized for simple $O(1)$ lookups and session caches. Example: Redis , Amazon DynamoDB. Document-Oriented Database: Stores semi-structured data as self-describing BSON/JSON documents with nested objects and arrays, eliminating fixed relational schemas. Example: MongoDB , Couchbase. Column-Family (Wide-Column) Store: Organizes data into columns grouped into column families rather than rows, enabling high compression and massive analytical read throughput. Example: Apache Cassandra , Apache HBase. Graph Database: Represents data as nodes (entities) and edges (explicit relationships) with key-value properties, designed for complex network traversals without recursive relational joins. Example: Neo4j , Amazon Neptune."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q168",
+    "q_num": 168,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 8.8,
+    "important": false,
+    "title": "Describe how data is organised in MongoDB into databases, collections and documents, with an example.",
+    "url": "question-bank.html?open=q168",
+    "chunks": [
+      "MongoDB organizes data hierarchically into three structural levels: Database: The outermost container that manages a physical set of files on disk. A single MongoDB instance can host multiple independent databases (e.g., universityDB ). Collection: A group of related documents housed inside a database, analogous to a relational table. However, collections are schema-free : documents in a collection do not need identical fields. Document: The fundamental atomic unit of data, serialized and stored in Binary JSON (BSON). Each document contains field-value pairs supporting nested objects, arrays, and an immutable _id primary key. Hierarchical Example: // Inside database: universityDB, collection: students { \"_id\": ObjectId(\"64a1b2c3d4e5f67890123456\"), \"rollNo\": 101, \"name\": \"Alice\", \"dept\": \"CSE\", \"address\": { \"city\": \"Bengaluru\", \"pincode\": 560001 }, \"courses\": [\"DBMS\", \"OS\", \"Networks\"] }"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q169",
+    "q_num": 169,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 8.7,
+    "important": false,
+    "title": "Define a distributed database. Give two advantages and two challenges of such systems.",
+    "url": "question-bank.html?open=q169",
+    "chunks": [
+      "A distributed database is a collection of multiple logically interrelated databases distributed across different physical locations connected via a computer network, managed by a centralized Distributed DBMS (DDBMS). Two Advantages: Local Autonomy & Improved Performance: Sites maintain control over local data, allowing frequently accessed local queries to execute with zero network delay. High Availability and Reliability: Data replication ensures that if one server or geographical site suffers a failure, surviving nodes continue processing requests without system outages. Two Challenges: Complexity of Distributed Transactions: Maintaining ACID properties requires complex multi-phase commit protocols (e.g., 2PC) that increase latency and deadlock vulnerabilities. Network Overhead and Security: Latency across wide-area communication links impacts throughput, while distributed network endpoints expand the surface area for security threats."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q170",
+    "q_num": 170,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 8.6,
+    "important": false,
+    "title": "Define a cloud database. Discuss its advantages and limitations compared with an on -premise database.",
+    "url": "question-bank.html?open=q170",
+    "chunks": [
+      "A cloud database is a database service deployed, configured, and accessed through a cloud platform (e.g., AWS RDS, Google Cloud Spanner, MongoDB Atlas), typically delivered as Database-as-a-Service (DBaaS). Advantages over On-Premise Databases: Elastic Scalability: Compute and storage resources can be scaled up or out dynamically with a single click or API call to match workload spikes. Automated Administration: Routine maintenance (patching, automated backups, hardware provisioning, failover) is managed transparently by the cloud vendor. Cost Efficiency: Eliminates upfront capital expenditure for enterprise server hardware, utilizing an operational pay-as-you-go model. Limitations: Vendor Lock-in: Migrating proprietary configurations and stored procedures between different cloud providers is technically challenging and expensive. Data Sovereignty & Network Dependency: Sensitive corporate data must comply with geographic compliance regulations (GDPR/HIPAA), and database availability is bound to external internet connection stability."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q171",
+    "q_num": 171,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.2,
+    "important": true,
+    "title": "A MongoDB collection employees contains documents of the form {empid, nam e, dept, salary}. Write queries to (i) find the employees working in 'IT' or 'HR' using the $in operator and (ii) find the employees earning more than 50000, sorted by salary in descending order.",
+    "url": "question-bank.html?open=q171",
+    "chunks": [
+      "Given the employees collection schema {empid, name, dept, salary} , the required MongoDB queries are: (i) Employees working in 'IT' or 'HR' using the $in operator: db.employees.find({ dept: { $in: [\"IT\", \"HR\"] } }); Explanation: The $in comparison operator performs an equality match against an array of specified literal values, selecting any document where dept is either 'IT' or 'HR'. (ii) Employees earning more than 50,000, sorted by salary descending: db.employees.find({ salary: { $gt: 50000 } }).sort({ salary: -1 }); Explanation: The $gt operator filters records having salary strictly greater than 50,000. Chaining .sort({ salary: -1 }) orders output in descending order (-1 denotes descending, 1 denotes ascending)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q172",
+    "q_num": 172,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.3,
+    "important": true,
+    "title": "A MongoDB collection students contains documents of the form {rollNo, name, dept, age, marks}. Write queries to (i) find the students aged between 18 and 22 (inclusive) using $gte and $lte, (ii) display only the name and marks of students who scored above 75, and (iii) count the students of the 'CSE' department.",
+    "url": "question-bank.html?open=q172",
+    "chunks": [
+      "Given collection students with schema {rollNo, name, dept, age, marks} : (i) Students aged between 18 and 22 inclusive: db.students.find({ age: { $gte: 18, $lte: 22 } }); Explanation: Combines $gte (greater than or equal) and $lte (less than or equal) inside the age field object. (ii) Display only name and marks of students scoring above 75: db.students.find( { marks: { $gt: 75 } }, { name: 1, marks: 1, _id: 0 } ); Explanation: The second argument defines a projection document: 1 includes fields, while _id: 0 explicitly suppresses the default primary key. (iii) Count students in the 'CSE' department: db.students.countDocuments({ dept: \"CSE\" }); Explanation: countDocuments() returns the accurate scalar integer count of matching documents."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q173",
+    "q_num": 173,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L4",
+    "co": "CO5",
+    "score": 9.4,
+    "important": true,
+    "title": "Choose the most suitable type of NoSQL database (key-value, document, column-family or graph) for each case and justify your choice: (i) caching of user login sessions, (ii) a product catalogue with varying attributes, and (iii) friend recommendations on a social network.",
+    "url": "question-bank.html?open=q173",
+    "chunks": [
+      "Selection and justification of NoSQL database types for each use case: (i) Caching of User Login Sessions: Key-Value Database (e.g., Redis). Justification: A session token acts as a unique primary key pointing to user state. In-memory key-value stores deliver sub-millisecond $O(1)$ read/write latency with native TTL key expiration for automatic session timeouts. (ii) Product Catalogue with Varying Attributes: Document Database (e.g., MongoDB). Justification: Products have radically diverse attributes (laptops have CPU/RAM, shoes have size/color). A document model supports polymorphic JSON schemas where documents define custom attributes without sparse, null-filled relational columns. (iii) Friend Recommendations on a Social Network: Graph Database (e.g., Neo4j). Justification: Social platforms rely on interconnected networks. Graph databases represent users as nodes and friendships as direct edges, executing multi-hop traversals in milliseconds without recursive SQL joins."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q174",
+    "q_num": 174,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.2,
+    "important": true,
+    "title": "Explain the BASE properties of NoSQL databases and contrast them briefly with ACID.",
+    "url": "question-bank.html?open=q174",
+    "chunks": [
+      "The BASE model governs distributed NoSQL systems, prioritizing horizontal availability over strict relational consistency: Basically Available: The database system remains operational and accessible to clients at all times, even in the event of partial node or network partition failures. Soft State: System state may fluctuate or drift over time even without client interaction, due to asynchronous replica propagation models. Eventual Consistency: The system does not guarantee immediate consistency on every read, but guarantees that all replicas will eventually converge to identical states if no further updates occur. Contrast with ACID: Pessimistic vs. Optimistic: ACID enforces strict, immediate consistency and serializable isolation via pessimistic locking, causing operations to stall or fail during partitions. Availability Priority: BASE embraces optimistic, relaxed consistency to guarantee uninterrupted availability ($A$) and partition tolerance ($P$) across large distributed clusters."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q175",
+    "q_num": 175,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 8.8,
+    "important": false,
+    "title": "Differentiate between structured, semi-structured and unstructured data with one example of each.",
+    "url": "question-bank.html?open=q175",
+    "chunks": [
+      "Data in modern information architectures is categorized into three structural paradigms: Structured Data: Conforms to a strict, predefined tabular schema with fixed columns, specific data types, and explicit relational keys. Easily queried and manipulated using standard SQL. Example: An RDBMS relational table (e.g., Employee(EmpID, Name, Salary, HireDate) ) or CSV spreadsheets. Semi-Structured Data: Does not conform to a rigid relational schema, but contains internal organizational markers, tags, or hierarchies that separate individual data elements. Example: JSON documents, XML files, or BSON records (e.g., {\"name\": \"Alice\", \"skills\": [\"DBMS\", \"Java\"]} ). Unstructured Data: Data that has no predefined conceptual schema, model, or internal organizational structure. Requires specialized AI/ML algorithms or full-text parsing to extract meaning. Example: Video files, MP3 audio recordings, satellite imagery, and free-form scanned medical PDF reports."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q176",
+    "q_num": 176,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.4,
+    "important": true,
+    "title": "A MongoDB collection orders contains documents of the form {orderId, custId, status, amount}. Write an aggregation pipeline to find the total amount of 'Delivered' orders for each customer, sorted in descending order of the total. Explain the role of each stage used.",
+    "url": "question-bank.html?open=q176",
+    "chunks": [
+      "The MongoDB aggregation pipeline processes documents through a multi-stage data transformation sequence: db.orders.aggregate([ { $match: { status: \"Delivered\" } }, { $group: { _id: \"$custId\", totalAmount: { $sum: \"$amount\" } } }, { $sort: { totalAmount: -1 } } ]); Explanation of Pipeline Stages: Stage 1 ( $match ): Acts as an initial filter stage (analogous to SQL WHERE ). Passes only documents where status === \"Delivered\" to downstream stages, dramatically minimizing subsequent memory overhead. Stage 2 ( $group ): Groups the filtered stream by the customer identifier ( _id: \"$custId\" ) (analogous to SQL GROUP BY ). It computes the aggregated metric totalAmount using the accumulator operator $sum: \"$amount\" . Stage 3 ( $sort ): Reorders the grouped output documents in descending order of totalAmount (-1 indicates descending sort order, analogous to SQL ORDER BY totalAmount DESC )."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q177",
+    "q_num": 177,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.0,
+    "important": true,
+    "title": "Differentiate between insertOne and insertMany, updateOne and updateMany, and deleteOne and deleteMany in MongoDB, giving a one-line command for each.",
+    "url": "question-bank.html?open=q177",
+    "chunks": [
+      "MongoDB distinguishes between single-document and multi-document CRUD methods: insertOne vs. insertMany: insertOne inserts a single document into the collection. db.users.insertOne({ name: \"Alice\", age: 21 }); insertMany inserts an array of multiple documents in a single atomic batch call. db.users.insertMany([{ name: \"Bob\" }, { name: \"Carol\" }]); updateOne vs. updateMany: updateOne updates only the first matching document encountered in the collection. db.users.updateOne({ name: \"Alice\" }, { $set: { age: 22 } }); updateMany updates all documents in the collection that satisfy the query filter. db.users.updateMany({ dept: \"HR\" }, { $inc: { salary: 2000 } }); deleteOne vs. deleteMany: deleteOne removes at most one document matching the specified criteria. db.users.deleteOne({ name: \"Bob\" }); deleteMany deletes every document satisfying the filter condition. db.users.deleteMany({ status: \"inactive\" });"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q178",
+    "q_num": 178,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.2,
+    "important": true,
+    "title": "Explain how an index improves query performance in MongoDB. Write commands to (i) create an ascending index on the field name of the collection students, (ii) create a compound index on dept (ascending) and cgpa (descending), and (iii) create a unique index on rollno.",
+    "url": "question-bank.html?open=q178",
+    "chunks": [
+      "An index creates an ordered auxiliary B-tree structure mapping indexed field values to their physical document locations (RecordID) on disk. Without an index, MongoDB executes a full collection scan ( COLLSCAN ), examining every document in memory. With an index, it performs an index scan ( IXSCAN ), jumping directly to matching keys in $O(\\log N)$ time. Index Creation Commands: (i) Ascending index on field name : db.students.createIndex({ name: 1 }); Explanation: 1 specifies an ascending index order. (ii) Compound index on dept (ascending) and cgpa (descending): db.students.createIndex({ dept: 1, cgpa: -1 }); Explanation: Indexes multiple fields together, accelerating queries that filter on dept and sort by cgpa . (iii) Unique index on field rollno : db.students.createIndex({ rollno: 1 }, { unique: true }); Explanation: The { unique: true } constraint causes MongoDB to reject any insert or update with duplicate rollno values."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q179",
+    "q_num": 179,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.3,
+    "important": true,
+    "title": "In a MongoDB collection students whose documents look like {rollno, n ame, dept, cgpa, skills: [...]}, write commands to (i) list the name and cgpa of 'CSE' students whose cgpa is above 8, (ii) add 0.2 to the cgpa of the student with rollno 12, and (iii) remove every student whose cgpa is below 5.",
+    "url": "question-bank.html?open=q179",
+    "chunks": [
+      "Given the MongoDB collection students with schema {rollno, name, dept, cgpa, skills: [...]} , the required CRUD operations and execution semantics are structured as follows: (i) List the name and cgpa of 'CSE' students whose cgpa is above 8: db.students.find( { dept: \"CSE\", cgpa: { $gt: 8 } }, { name: 1, cgpa: 1, _id: 0 } ); Explanation: The query filter applies an implicit logical AND across both conditions: dept: \"CSE\" and the comparison operator cgpa: { $gt: 8 } . The second argument defines the projection specification, where name: 1 and cgpa: 1 include those fields in the output, while _id: 0 explicitly suppresses the default primary key field. (ii) Add 0.2 to the cgpa of the student with rollno 12: db.students.updateOne( { rollno: 12 }, { $inc: { cgpa: 0.2 } } ); Explanation: updateOne() targets the first document matching { rollno: 12 } . The $inc field update operator atomically increments the numeric value of cgpa by 0.2. In MongoDB, single-document updates are strictly atomic, eliminating race conditions without requiring an explicit transaction block. (iii) Remove every student whose cgpa is below 5: db.students.deleteMany({ cgpa: { $lt: 5 } }); Explanation: deleteMany() removes all documents in",
+      "the collection that satisfy the filter condition { cgpa: { $lt: 5 } } , using the less-than operator $lt . It returns an acknowledged write result object displaying the exact count of deleted documents. Indexing Optimization Note: To ensure high performance at scale, creating a compound index with db.students.createIndex({ dept: 1, cgpa: -1 }) enables the query engine to execute query (i) as an index scan ( IXSCAN ) instead of scanning every document in memory ( COLLSCAN )."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q180",
+    "q_num": 180,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.2,
+    "important": true,
+    "title": "A MongoDB collection employees stores documents of the form {empid, name, dept, salary}. Write queries to (i) fetch the employees of the 'HR' department, (ii) fetch the employees earning more than 40000 using the $gt operator, and (iii) show only the name and salary of all em ployees in ascending order of salary.",
+    "url": "question-bank.html?open=q180",
+    "chunks": [
+      "Given the collection employees storing documents of the structure {empid, name, dept, salary} , the required query operations and execution mechanics are formulated as follows: (i) Fetch the employees of the 'HR' department: db.employees.find({ dept: \"HR\" }); Explanation: Performs an exact equality match against the dept field, retrieving all documents where the department string equals 'HR'. If no projection document is supplied as the second parameter, MongoDB returns all document fields including _id , empid , name , and salary . (ii) Fetch the employees earning more than 40,000 using the $gt operator: db.employees.find({ salary: { $gt: 40000 } }); Explanation: Utilizes the comparison operator $gt (greater than) within the criteria to filter and return documents where the numeric salary attribute strictly exceeds 40,000. (iii) Show only the name and salary of all employees in ascending order of salary: db.employees.find( {}, { name: 1, salary: 1, _id: 0 } ).sort({ salary: 1 }); Explanation: An empty query document {} matches all records in the collection. The projection document { name: 1, salary: 1, _id: 0 } restricts output exclusively to name and salary , while suppressing the default _id field. Chaining the cursor modifier .sort({ salary: 1 }) sorts the",
+      "output in ascending order of salary (where 1 denotes ascending and -1 denotes descending). Memory & Index Considerations: In MongoDB, in-memory sort operations are capped at 32 MB of RAM. Creating an index on { salary: 1 } allows MongoDB to retrieve sorted documents directly from the index tree without loading the entire collection into memory or exceeding sort RAM limits."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q181",
+    "q_num": 181,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO5",
+    "score": 9.6,
+    "important": true,
+    "title": "A start-up e-commerce company must handle (i) customer orders and payments, (ii) a product catalogue in which products have widely differing attributes, and (iii) millions of daily click -stream events and product recommendations. For each requirement, analyse whether an RDBMS or a NoSQL store such as MongoDB is more suitable, considering schema flexibility, consistency, scalability and joins. 5 Sr. No. Question Marks 143 In a MongoDB collection products with documents of the form {productId, productName, category, price}, write queries to (i) find the products in the 'Electronics' or 'Furniture' category using the $or operator, (ii) find the products priced between 1000 and 5000 using $gte and $lte, and (iii) display only the productName of the five costliest products.",
+    "url": "question-bank.html?open=q181",
+    "chunks": [
+      "Part 1: E-Commerce Architectural Analysis: (i) Customer Orders & Payments: RDBMS (e.g., PostgreSQL). Justification: Financial ledgers require strict ACID guarantees, multi-table foreign key constraints, and serializable isolation to prevent double payments or lost inventory. Financial records require immediate consistency and complex relational joins across tables (Customers, Orders, Payments, Invoices) that RDBMS handles natively. (ii) Product Catalogue with Diverse Attributes: NoSQL Document Store (MongoDB). Justification: Products possess widely variable attributes (e.g., laptops have RAM/storage, shirts have size/fabric). Relational databases require hundreds of sparse, null-filled columns or complex Entity-Attribute-Value (EAV) tables that ruin join performance. MongoDB's dynamic BSON schema allows polymorphic documents to coexist naturally in a single collection. (iii) Clickstream Events & Recommendations: Distributed NoSQL / Column Store (e.g., Cassandra / Redis). Justification: High-velocity clickstream ingest produces massive write volumes (millions of clicks/sec) that exceed RDBMS vertical scale limits. Distributed NoSQL stores provide horizontal sharding, high write throughput, and linear scalability under relaxed BASE consistency. Requirement Chosen Engine Schema Consistency Scalability Orders & Payments RDBMS Rigid Tabular Immediate (ACID) Vertical (Scale-up) Product Catalog MongoDB Flexible BSON Document Atomic Horizontal (Sharding) Clickstreams NoSQL (Cassandra/Redis) Key-Value/Column Eventual (BASE) Linear Scale-out Part 2: MongoDB Queries on Collection products : (i) Products in 'Electronics' or",
+      "'Furniture' using $or : db.products.find({ $or: [ { category: \"Electronics\" }, { category: \"Furniture\" } ] }); (ii) Products priced between 1,000 and 5,000 inclusive: db.products.find({ price: { $gte: 1000, $lte: 5000 } }); (iii) Display only productName of the five costliest products: db.products.find( {}, { productName: 1, _id: 0 } ).sort({ price: -1 }).limit(5);"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q182",
+    "q_num": 182,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO5",
+    "score": 9.5,
+    "important": true,
+    "title": "A social media platform produces about 5 TB of posts, images, videos and 'like' events every day. Analyse this scenario in terms of volume, velocity, variety and veracity, explain why a traditional RDBMS struggles with it, and recommend suitable Big Data/NoSQL databases, giving one reason for each.",
+    "url": "question-bank.html?open=q182",
+    "chunks": [
+      "1. Analysis of the Scenario via Big Data 4Vs: Volume: Generating 5 TB of raw data daily equates to ~150 TB/month and petabytes over years, far exceeding single-node server storage capacities. Velocity: Millions of concurrent user actions (likes, comments, video streams) arrive every second, demanding sub-millisecond ingest write speeds and real-time feed updates. Variety: Data encompasses structured user account profiles, semi-structured JSON post threads, and massive unstructured binary media (MP4 videos, JPEG images). Veracity: High proportion of noisy, duplicated, or unverified interactions (spam bots, rapid double-clicks, corrupted network packets) that require filtering. 2. Why a Traditional RDBMS Struggles: Vertical Scaling Bottlenecks: Traditional RDBMSs scale vertically (bigger CPU/RAM on one machine). A single server cannot process 5 TB daily write IOPS. Rigid Relational Schemas: RDBMS cannot dynamically ingest polymorphic post formats or evolving video metadata without costly schema migrations and table locks. Lock Contention & Joins: Strict ACID row-level locking causes severe lock contention on hot records (celebrity posts), and recursive multi-table SQL joins across petabytes of rows crush query latency. 3. Recommended Big Data / NoSQL Architecture: In-Memory Key-Value Store (Redis): For real-time 'like' counters, trending hashtags, and user session tokens with sub-millisecond in-memory caching and atomic increments. Wide-Column Distributed",
+      "Store (Apache Cassandra): For activity timeline feeds and interaction audit logs; provides masterless distributed writes across clusters with linear horizontal scaling and zero single point of failure. Distributed Object Store (Amazon S3 / Ceph) + CDN: For massive unstructured video and image media files, while keeping lightweight metadata and CDN URLs in MongoDB. Architectural Paradigm: Modern social architectures utilize a Lambda Architecture , separating high-velocity ingestion (speed layer via Kafka/Cassandra) from long-term analytical batch processing (Hadoop/Spark) under eventual consistency."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q183",
+    "q_num": 183,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.3,
+    "important": true,
+    "title": "A university stores student attendance, examination results, course registrations and feedback in a MongoDB collection students with documents of the form {rollno, name, attendance, marks, feedback: [...]}. Explain how MongoDB's flexible schema and document model suit such records better than fixed relational tables, and write queries to (i) find the students with attendance below 75, (ii) find the students with marks above 80, and (iii) find the students who satisfy both conditions.",
+    "url": "question-bank.html?open=q183",
+    "chunks": [
+      "1. Architectural Suitability of MongoDB's Document Model: Elimination of Relational Joins: In an RDBMS, this scenario requires four normalized tables ( Students , Attendance , ExamMarks , Feedback ) connected via foreign keys, requiring expensive multi-table SQL joins. MongoDB nests attendance, marks, and an array of feedback subdocuments into a single document, retrieving complete student records in a single disk read. Polymorphic Schema Flexibility: Different academic departments have varying feedback templates, optional elective fields, and grading criteria. MongoDB's dynamic schema allows documents to store custom department fields without requiring schema alterations or creating sparse tables with null columns. Natural 1-to-Many Representation: The feedback: [...] array natively encapsulates embedded subdocuments (with instructor name, rating, comments), preserving document locality on disk. Document Schema Validation: MongoDB supports JSON Schema validation to enforce data integrity (e.g., verifying cgpa >= 0 and attendance <= 100 ) while retaining complete field flexibility. 2. MongoDB Queries: (i) Students with attendance below 75: db.students.find({ attendance: { $lt: 75 } }); Explanation: The $lt operator matches all student records whose attendance percentage is strictly under 75. (ii) Students with marks above 80: db.students.find({ marks: { $gt: 80 } }); Explanation: The $gt operator filters records where academic marks exceed",
+      "80. (iii) Students who satisfy both conditions (attendance < 75 AND marks > 80): db.students.find({ attendance: { $lt: 75 }, marks: { $gt: 80 } }); Explanation: Specifying comma-separated field criteria in a single query document enforces an implicit boolean AND condition, returning students with poor attendance who nevertheless achieved high marks."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q184",
+    "q_num": 184,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO5",
+    "score": 9.5,
+    "important": true,
+    "title": "A healthcare organisation collects patient records, medical reports, diagnostic images and real -time data from wearable devices. Analyse the challenges that such diverse, continuously generated data creates for a traditional relational database. Explain how MongoDB's flexible schema, sharding and replication help meet these challenges, and describe how the large diagnostic images can be stored (for example with GridFS or an object store with metadata kept in MongoDB), justifying your choice.",
+    "url": "question-bank.html?open=q184",
+    "chunks": [
+      "1. Challenges for a Traditional Relational Database: Schema Rigidity: Medical reports and clinical lab tests vary wildly across specializations (cardiology, oncology). Enforcing rigid relational tables causes extensive schema bloat, dozens of null columns, and costly ALTER TABLE lockups. High-Velocity Time-Series Streaming: Continuous wearable telemetry (heart rate, SpO2) produces millions of timestamped write events per minute, overwhelming RDBMS single-server disk I/O and transaction logging. Large Binary Data Overhead: High-resolution medical imaging (MRI, CT scans in DICOM format, often 50 MB to 1 GB) stored as database BLOBs exhausts memory buffers, degrades backup speeds, and hampers query performance. 2. How MongoDB Addresses These Challenges: Flexible Schema: JSON/BSON document model naturally accommodates heterogeneous patient profiles, varying lab diagnostics, and dynamic doctor prescriptions. Sharding: Horizontally distributes streaming IoT wearable vitals across multiple shard nodes using a compound shard key (e.g., { patientId: 1, timestamp: 1 } ), balancing write throughput. Replication: Multi-node replica sets ensure 99.999% clinical availability, disaster recovery, and zero data loss during hardware failures. 3. Storing Diagnostic Images (Architecture & Justification): GridFS: MongoDB's specification for storing files exceeding the 16 MB document limit by automatically splitting binaries into 255 KB chunks across fs.files and fs.chunks collections. Recommended Approach (Hybrid Object Store",
+      "+ MongoDB): Store high-resolution binary DICOM image files in a dedicated cloud object store (e.g., Amazon S3, Google Cloud Storage) and store rich clinical metadata (Patient ID, scan date, modality, S3 presigned URL, AI diagnosis tags) inside MongoDB. Justification: Cloud object stores offer lower per-gigabyte storage costs, native CDN integration for hospital workstations, and keep MongoDB working-set RAM lean and dedicated to high-speed clinical metadata indexing."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q185",
+    "q_num": 185,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO5",
+    "score": 9.3,
+    "important": true,
+    "title": "Analyse the suitability of MongoDB for (i) storing IoT sensor readings and (ii) a content management system of a news website. For each, justify your decision by discussing schema flexibility, scalability and consistency/transaction needs, and mention one more real-world application where MongoDB fits well.",
+    "url": "question-bank.html?open=q185",
+    "chunks": [
+      "MongoDB's document-oriented architecture provides compelling advantages across specific industry workloads: (i) IoT Sensor Readings: Schema Flexibility: Diverse sensors (temperature, vibration, pressure, GPS) produce disparate payload structures. MongoDB easily ingests varying JSON metrics without requiring rigid column definitions. Scalability: High-frequency telemetry streams are partitioned across clusters via horizontal sharding . Native time-series collections (specifying timeField and metaField ) optimize storage footprint through automated bucket compression and columnar disk layouts. Consistency & Transactions: IoT streams tolerate eventual consistency. Configurable write concerns (e.g., { w: 1 } ) maximize write throughput over strict multi-document serializability. Verdict: Highly Suitable for massive, append-only sensor telemetry. (ii) Content Management System (CMS) of a News Website: Schema Flexibility: News stories feature rich, evolving structures: varied multimedia embeds, editorial revision histories, author arrays, and tagging hierarchies. The document model represents an entire article and its comments natively in a single BSON document. Scalability: Breaking news generates massive read spikes. MongoDB handles high read volume via replica sets , directing queries to secondary nodes using nearest or secondaryPreferred read preferences. Consistency & Transactions: Publishing an article is an atomic, single-document write; MongoDB provides native single-document ACID transactions, satisfying editorial publishing requirements. Verdict: Extremely Well-Suited for high-read, semi-structured editorial content.",
+      "Additional Real-World Application: E-Commerce Product Catalog. E-commerce catalogs feature millions of products with wildly heterogeneous attributes (e.g., electronics, apparel, groceries). MongoDB stores polymorphic products within a single collection, supports fast multi-attribute compound indexing, and enables rapid catalog search without expensive SQL joins. Additionally, multikey indexes on embedded arrays enable instant filtering on multi-valued product tags (such as available sizes, colors, and technical specifications) without maintaining separate relational junction tables."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q186",
+    "q_num": 186,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.6,
+    "important": true,
+    "title": "Explain replication in MongoDB with reference to the primary and secondary members of a replica set, the election of a new primary when the current primary fails, and write concern. State the benefits of replication.",
+    "url": "question-bank.html?open=q186",
+    "chunks": [
+      "Replication in MongoDB provides redundancy, high availability, and automated failover across distributed nodes. 1. Replica Set Architecture: Primary Member: Exactly one primary accepts all write operations, recording changes in a capped collection called the oplog (operations log) . Secondary Members: Secondaries continuously read the primary's oplog and apply operations asynchronously to replicate data state. They can serve read queries if configured. Arbiter (Optional): A lightweight voting-only member that holds no data, used solely to break election ties in clusters with even node counts. 2. Election of a New Primary: Members send heartbeat pings every 2 seconds. If secondaries receive no response from the primary within 10 seconds, an election is triggered. Secondaries nominate eligible members based on member priority and oplog recency; the node holding the most up-to-date oplog that wins a strict majority of votes becomes the new Primary. 3. Write Concern: Write concern specifies the level of acknowledgement requested from MongoDB for write operations: { w: 1 } : Acknowledged by Primary only (fast, but data could be lost if primary fails before replication). { w: \"majority\" } : Acknowledged only after the write is committed to a majority of replica set nodes, preventing rollback during failover. {",
+      "j: true } : Ensures the operation is written to on-disk journal before returning acknowledgement. 4. Benefits of Replication: Guarantees continuous 24/7 high availability, eliminates single points of failure, allows zero-downtime rolling maintenance/upgrades, and offloads heavy analytical read traffic from the primary node. Strong write concerns (such as w: 'majority' ) protect mission-critical applications against data rollbacks if a primary node suddenly experiences ungraceful hardware failure before replication completes."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q187",
+    "q_num": 187,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.4,
+    "important": true,
+    "title": "A MongoDB collection students contains documents of the form {rollno, name, dept, cgpa, skills: [...]}. Write aggregation pipelines to (i) display the number of students in each department, (ii) display the departments whose average cgpa is greater than 7.5 along with that average, and (iii) display the number of students having each skill using $unwind.",
+    "url": "question-bank.html?open=q187",
+    "chunks": [
+      "The MongoDB Aggregation Framework transforms document streams through multi-stage pipelines to perform complex analytical data transformations: (i) Display the number of students in each department: db.students.aggregate([ { $group: { _id: \"$dept\", studentCount: { $sum: 1 } } } ]); Explanation: The $group stage groups documents by the dept field ( _id: \"$dept\" ). The accumulator expression { $sum: 1 } increments a counter by 1 for each document in the group, outputting the department name and total headcount. (ii) Display departments whose average cgpa is greater than 7.5 along with the average: db.students.aggregate([ { $group: { _id: \"$dept\", avgCgpa: { $avg: \"$cgpa\" } } }, { $match: { avgCgpa: { $gt: 7.5 } } } ]); Explanation: Stage 1 computes the average CGPA per department using { $avg: \"$cgpa\" } . Stage 2 applies a $match filter on the aggregated metric, acting like SQL HAVING avgCgpa > 7.5 to retain only qualifying departments. (iii) Display the number of students having each skill using $unwind : db.students.aggregate([ { $unwind: \"$skills\" }, { $group: { _id: \"$skills\", count: { $sum: 1 } } }, { $sort: { count: -1 } } ]); Explanation: $unwind deconstructs the skills array field, generating a separate",
+      "clone document for each array element. The subsequent $group stage groups by individual skill name and counts occurrences with { $sum: 1 } . Finally, $sort arranges skills in descending order of student popularity. Pipeline Performance Note: Each aggregation stage has a 100 MB RAM limit. For large collections, enabling { allowDiskUse: true } ensures that memory-intensive grouping and sorting stages can spill intermediate data to disk temporary files."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q188",
+    "q_num": 188,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO5",
+    "score": 9.7,
+    "important": true,
+    "title": "Analyse the trade-offs of the CAP theorem for a distributed database during a network partition. Using this analysis, justify whether a CP or an AP design is more suitable for (i) an online banking ledger and (ii) a social-media news feed, and explain how sharding and replication help a NoSQL system to scale.",
+    "url": "question-bank.html?open=q188",
+    "chunks": [
+      "1. CAP Theorem Trade-Off Analysis during Network Partition: The CAP theorem states that a distributed system cannot simultaneously guarantee Consistency ($C$), Availability ($A$), and Partition Tolerance ($P$). Because physical network partitions ($P$) (cable cuts, packet loss, hardware switch failures) are unavoidable in distributed architectures, systems must choose between Consistency or Availability when a partition occurs: CP (Consistency + Partition Tolerance): Rejects the read/write request on the isolated partition to prevent stale or conflicting data, returning an error or timeout. Sacrifices Availability to preserve absolute mathematical correctness. AP (Availability + Partition Tolerance): Returns the locally available value (even if stale) and accepts writes locally. Sacrifices immediate Consistency to guarantee 100% Availability. 2. Application Justifications: (i) Online Banking Ledger: CP Design (e.g., Google Spanner, MongoDB with majority write concern). Justification: Financial ledgers require zero tolerance for dirty reads, phantom withdrawals, or double-spending. If a network partition prevents verifying account balances across branches, the system must abort the transaction rather than serve incorrect monetary balances. (ii) Social-Media News Feed: AP Design (e.g., Apache Cassandra, Amazon DynamoDB). Justification: User experience demands seamless, uninterrupted availability. If a user sees a friend's post or like count 5 seconds late due to a network partition, the business",
+      "impact is negligible compared to showing a broken error screen. 3. How Sharding and Replication Enable NoSQL Scaling: Sharding (Horizontal Scale-Out): Splits massive collections into disjoint ranges based on a shard key, distributing storage and write throughput across dozens of commodity servers. Replication (High Availability & Read Scaling): Maintains identical copies across nodes, eliminating single points of failure and distributing read query loads geographically."
+    ],
+    "type": "question"
+  },
+  {
     "id": "comprehensive-report",
     "title": "DBMS Cheat Sheet",
     "url": "comprehensive-report.html",

@@ -353,7 +353,9 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>A <strong>transaction</strong> is a logical unit of work consisting of one or more SQL statements that must be executed entirely or not at all.</p>
+                            
+                            <div class="view-full">
+                                <p>A <strong>transaction</strong> is a logical unit of work consisting of one or more SQL statements that must be executed entirely or not at all.</p>
 <p><strong>ACID Properties (Bank Transfer Example: A to B):</strong></p>
 <ul>
 <li><strong>Atomicity</strong>: "All or nothing." If money is deducted from A, it MUST be credited to B. If either fails, the entire transaction is rolled back.</li>
@@ -394,6 +396,9 @@
 <p class="concept-heading">Transaction State Diagram</p>
 </div>
 
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -418,7 +423,9 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Definition</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">Definition</div>
         <p>Normalization is the process of organizing data to minimize redundancy and eliminate anomalies by dividing larger tables into smaller tables and defining relationships between them using functional dependencies.</p>
         
         <div class="concept-heading">The Normal Forms</div>
@@ -427,6 +434,9 @@
             <li><strong>Second Normal Form (2NF):</strong> Must be in 1NF, and all non-key attributes must be <em>fully functionally dependent</em> on the entire primary key. (Eliminates partial dependencies).</li>
             <li><strong>Third Normal Form (3NF):</strong> Must be in 2NF, and no non-key attribute can be dependent on another non-key attribute. (Eliminates transitive dependencies: X &rarr; Y and Y &rarr; Z).</li>
         </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -451,7 +461,9 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">E-R Diagram</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">E-R Diagram</div>
         <div class="diagram-container">
             <svg viewBox="0 0 600 200" width="100%" height="200">
                 <title>University Exam System ER</title>
@@ -494,6 +506,9 @@
             <li><strong>Exam</strong>(<u>Exam_ID</u>, Date, Time, <em>Course_Code</em>)</li>
             <li><strong>Appears</strong>(<u><em>Roll_No</em>, <em>Exam_ID</em></u>, Marks_Obtained)</li>
         </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -518,7 +533,9 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">E-R Diagram</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">E-R Diagram</div>
         <div class="diagram-container">
             <svg viewBox="0 0 600 300" width="100%" height="300">
                 <title>Online Book Store ER</title>
@@ -584,6 +601,9 @@
             <li><strong>Order</strong>(<u>Order_ID</u>, Date, Total_Amt, <em>Cust_ID</em>)</li>
             <li><strong>Order_Details</strong>(<u><em>Order_ID</em>, <em>ISBN</em></u>, Quantity)</li>
         </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -608,7 +628,9 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Functional Dependencies (FDs)</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">Functional Dependencies (FDs)</div>
         <p>Assumed FDs based on logic:</p>
         <ol>
             <li>FD1: <code>Rollno &rarr; Name</code> (A student has one name)</li>
@@ -625,6 +647,9 @@
         
         <div class="concept-heading">Step 2: 2NF to 3NF</div>
         <p>In the new tables, there are no non-key attributes depending on other non-key attributes (no transitive dependencies). Therefore, the tables are already in <strong>3NF</strong>.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -649,7 +674,9 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Checking BCNF</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">Checking BCNF</div>
         <p>Relation: <code>R(StudentID, Subject, Mentor)</code><br>
         FDs: <code>{StudentID, Subject} &rarr; Mentor</code>, and <code>Mentor &rarr; Subject</code> (each mentor teaches one subject).<br>
         Because <code>Mentor &rarr; Subject</code> exists, but <code>Mentor</code> is <strong>not a super key</strong>, the table violates BCNF (even though it is in 3NF since Subject is a prime attribute).</p>
@@ -661,6 +688,9 @@
             <li><strong>Student_Mentor</strong>(<u>StudentID, Mentor</u>)</li>
         </ol>
         <p>Now all determinants are candidate keys.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -685,7 +715,9 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Candidate Keys</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">Candidate Keys</div>
         <ul>
             <li><code>{A, B}<sup>+</sup></code> = {A, B, C, D}</li>
             <li><code>{B, C}<sup>+</sup></code> = {A, B, C, D} (since C &rarr; D and D &rarr; A)</li>
@@ -696,6 +728,9 @@
         <div class="concept-heading">Highest Normal Form</div>
         <p>Because there are no non-prime attributes, the relation is automatically in <strong>3NF</strong>.<br>
         However, check BCNF: The FD <code>C &rarr; D</code> has determinant C, which is not a super key. Thus, it violates BCNF. The highest normal form is <strong>3NF</strong>.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -720,7 +755,9 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
+                            
+                            <div class="view-full">
+                                <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
         <svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 800px; height: auto;">
             <defs>
                 <!-- Clip paths for intersections -->
@@ -794,6 +831,9 @@
             <li><strong>Right Outer:</strong> Returns <em>all</em> rows from the right table, and matched rows from the left.</li>
             <li><strong>Full Outer:</strong> Returns all rows when there is a match in <em>either</em> table.</li>
         </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -818,7 +858,9 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Decomposition</strong> is the process of breaking down a large, poorly-designed relation into two or more smaller relations to eliminate redundancy and anomalies.</p>
+                            
+                            <div class="view-full">
+                                <p><strong>Decomposition</strong> is the process of breaking down a large, poorly-designed relation into two or more smaller relations to eliminate redundancy and anomalies.</p>
         
         <div class="concept-heading">Lossless-Join Decomposition</div>
         <p>A decomposition of R into R1 and R2 is lossless if joining R1 and R2 back together using a Natural Join yields the exact original relation R, without generating spurious (fake) tuples.</p>
@@ -826,6 +868,9 @@
         
         <div class="concept-heading">Dependency-Preserving Decomposition</div>
         <p>A decomposition is dependency-preserving if all original functional dependencies can be checked and enforced using only the decomposed relations, without needing to join them back together.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -850,7 +895,9 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>Assuming <code>Enrollment(sid, cid, marks)</code>.</p>
+                            
+                            <div class="view-full">
+                                <p>Assuming <code>Enrollment(sid, cid, marks)</code>.</p>
         <pre><code>SELECT s.sname, e.marks
 FROM Student s
 JOIN Enrollment e ON s.sid = e.sid
@@ -862,6 +909,9 @@ WHERE c.cname = 'DBMS'
       JOIN Course c2 ON e2.cid = c2.cid
       WHERE c2.cname = 'DBMS'
   );</code></pre>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -886,11 +936,16 @@ WHERE c.cname = 'DBMS'
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>The division operator (<code>&divide;</code>) is used specifically for queries involving "every" or "all".</p>
+                            
+                            <div class="view-full">
+                                <p>The division operator (<code>&divide;</code>) is used specifically for queries involving "every" or "all".</p>
         <p><strong>Expression:</strong></p>
         <p><code>&pi;<sub>sid</sub>(Enrollment) &divide; &pi;<sub>cid</sub>(Course)</code></p>
         <p>To get the student names, we natural join this result with the Student table:</p>
         <p><code>&pi;<sub>sname</sub> ( Student &#x2A1D; (&pi;<sub>sid, cid</sub>(Enrollment) &divide; &pi;<sub>cid</sub>(Course)) )</code></p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -915,7 +970,9 @@ WHERE c.cname = 'DBMS'
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <pre><code>SELECT s.sname, e1.cid, e1.marks
+                            
+                            <div class="view-full">
+                                <pre><code>SELECT s.sname, e1.cid, e1.marks
 FROM Student s
 JOIN Enrollment e1 ON s.sid = e1.sid
 WHERE e1.marks &gt; (
@@ -924,6 +981,9 @@ WHERE e1.marks &gt; (
     WHERE e1.cid = e2.cid
 );</code></pre>
         <p>The inner query recalculates the average marks dynamically for every row of the outer query, matching the <code>cid</code>.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -948,11 +1008,16 @@ WHERE e1.marks &gt; (
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>DELETE</strong> is a DML command used to remove specific rows based on a WHERE clause. It can be rolled back.</li>
 <li><strong>TRUNCATE</strong> is a DDL command that removes all rows from a table quickly by deallocating the pages. It cannot be rolled back and resets identity columns.</li>
 <li><strong>DROP</strong> is a DDL command that completely deletes the table structure and its data from the database.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -977,11 +1042,16 @@ WHERE e1.marks &gt; (
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>NOT NULL</strong>: Ensures a column cannot have a NULL value. <em>Ex: <code>Name VARCHAR(50) NOT NULL</code></em></p>
+                            
+                            <div class="view-full">
+                                <p><strong>NOT NULL</strong>: Ensures a column cannot have a NULL value. <em>Ex: <code>Name VARCHAR(50) NOT NULL</code></em></p>
 <p><strong>UNIQUE</strong>: Ensures all values in a column are distinct. <em>Ex: <code>Email VARCHAR(50) UNIQUE</code></em></p>
 <p><strong>PRIMARY KEY</strong>: Uniquely identifies each record. It is NOT NULL + UNIQUE. <em>Ex: <code>ID INT PRIMARY KEY</code></em></p>
 <p><strong>FOREIGN KEY</strong>: Ensures referential integrity by linking to a primary key in another table. <em>Ex: <code>FOREIGN KEY (DeptID) REFERENCES Dept(ID)</code></em></p>
 <p><strong>CHECK</strong>: Ensures values in a column satisfy a specific condition. <em>Ex: <code>Age INT CHECK (Age &gt;= 18)</code></em></p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1006,7 +1076,9 @@ WHERE e1.marks &gt; (
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>ROUND(n, d)</strong>: Rounds <em>n</em> to <em>d</em> decimal places. <em>ROUND(3.456, 2) &rarr; 3.46</em></li>
 <li><strong>TRUNCATE(n, d)</strong>: Cuts off <em>n</em> at <em>d</em> decimal places without rounding. <em>TRUNCATE(3.456, 2) &rarr; 3.45</em></li>
 <li><strong>CEIL(n)</strong>: Returns the smallest integer &ge; <em>n</em>. <em>CEIL(3.14) &rarr; 4</em></li>
@@ -1016,6 +1088,9 @@ WHERE e1.marks &gt; (
 <li><strong>POWER(x, y)</strong>: Returns x raised to power y. <em>POWER(2, 3) &rarr; 8</em></li>
 <li><strong>SQRT(n)</strong>: Returns the square root. <em>SQRT(16) &rarr; 4</em></li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1040,12 +1115,17 @@ WHERE e1.marks &gt; (
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>CURDATE()</strong>: Returns the current system date. <em>Ex: <code>SELECT CURDATE();</code></em></li>
 <li><strong>DATEDIFF(date1, date2)</strong>: Returns the number of days between two dates. <em>Ex: <code>SELECT DATEDIFF('2023-10-10', '2023-10-01'); &rarr; 9</code></em></li>
 <li><strong>DATE_ADD(date, INTERVAL expr unit)</strong>: Adds a time interval to a date. <em>Ex: <code>SELECT DATE_ADD('2023-01-01', INTERVAL 5 DAY);</code></em></li>
 <li><strong>DATE_FORMAT(date, format)</strong>: Formats a date string. <em>Ex: <code>SELECT DATE_FORMAT(CURDATE(), '%Y-%m-%d');</code></em></li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1070,7 +1150,9 @@ WHERE e1.marks &gt; (
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Set Operators:</strong></p>
+                            
+                            <div class="view-full">
+                                <p><strong>Set Operators:</strong></p>
 <ul>
 <li><strong>UNION</strong>: Combines results of two queries, removing duplicates.</li>
 <li><strong>UNION ALL</strong>: Combines results of two queries, keeping all duplicates.</li>
@@ -1082,6 +1164,9 @@ WHERE e1.marks &gt; (
 <li>Both SELECT statements must have the same number of columns.</li>
 <li>The corresponding columns must have compatible data types in the same order.</li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1106,7 +1191,9 @@ WHERE e1.marks &gt; (
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>COMMIT</strong>: Saves all changes made during the current transaction permanently.</li>
 <li><strong>ROLLBACK</strong>: Undoes all changes made during the current transaction, reverting to the last commit.</li>
 <li><strong>SAVEPOINT</strong>: Sets a marker within a transaction so you can roll back to that specific point without canceling the entire transaction.</li>
@@ -1118,6 +1205,9 @@ UPDATE ACCOUNT SET Balance = Balance + 500 WHERE Acc_No = 'A102';
 -- If something goes wrong here:
 ROLLBACK TO step1; -- Undoes only the A102 update
 COMMIT; -- Saves the final state</code></pre>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1142,12 +1232,17 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>Stored Procedure</strong>: A pre-compiled collection of SQL statements saved in the database that can be executed as a single callable routine.</li>
 <li><strong>Sequence (AUTO_INCREMENT)</strong>: Automatically generates unique, sequential numeric values, typically used for primary keys.</li>
 <li><strong>Cursor</strong>: A database object used to retrieve and process rows one by one from a result set inside a stored procedure.</li>
 <li><strong>Trigger</strong>: A special type of stored procedure that automatically executes (fires) in response to specific DML events (INSERT, UPDATE, DELETE) on a table.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1172,7 +1267,9 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">The Three Levels</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">The Three Levels</div>
         <ol>
             <li><strong>External Level (View Level):</strong> The highest level, describing only the part of the database relevant to a specific user group (hiding the rest).</li>
             <li><strong>Conceptual Level (Logical Level):</strong> Describes what data is stored in the entire database and the relationships among those data. Used by DBAs.</li>
@@ -1226,6 +1323,9 @@ COMMIT; -- Saves the final state</code></pre>
 </svg>
 </div>
 
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1250,7 +1350,9 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Explanation</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">Explanation</div>
         <ul>
             <li><strong>Super Key:</strong> Any combination of columns that uniquely identifies a row. (e.g., <code>StudentID + Name</code>)</li>
             <li><strong>Candidate Key:</strong> A minimal super key; it uniquely identifies a row with no unnecessary columns. (e.g., <code>StudentID</code> or <code>Email</code>)</li>
@@ -1273,6 +1375,9 @@ COMMIT; -- Saves the final state</code></pre>
                 <text x="250" y="160" font-family="sans-serif" font-size="12" font-weight="bold" fill="#006064" text-anchor="middle">PK</text>
             </svg>
         </div>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1297,7 +1402,9 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">The Three Anomalies</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">The Three Anomalies</div>
         <ul>
             <li><strong>Update Anomaly:</strong> If data is stored redundantly, changing it in one row requires changing it in all rows. Missing one causes inconsistency (e.g., changing a department's location).</li>
             <li><strong>Insertion Anomaly:</strong> The inability to add data to the database due to absence of other data (e.g., unable to add a new Department because it has no Employees yet, and Employee_ID is the primary key).</li>
@@ -1305,6 +1412,9 @@ COMMIT; -- Saves the final state</code></pre>
         </ul>
         <div class="concept-heading">How Normalization Helps</div>
         <p>Normalization resolves these by decomposing large, poorly structured tables into smaller, well-structured tables where each table represents a single logical theme or entity. By linking them with foreign keys, redundancy is eliminated, which inherently solves update, insertion, and deletion anomalies.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1329,7 +1439,9 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">E-R Diagram</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">E-R Diagram</div>
         <div class="diagram-container">
             <svg viewBox="0 0 500 250" width="100%" height="250">
                 <title>Hospital ER</title>
@@ -1361,6 +1473,9 @@ COMMIT; -- Saves the final state</code></pre>
             <li><strong>Test</strong>(<u>Test_Code</u>, Test_Name, Cost)</li>
             <li><strong>Consultation_Record</strong>(<u>Record_ID</u>, <em>Patient_ID</em>, <em>Doc_ID</em>, <em>Test_Code</em>, Date, Result)</li>
         </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1385,7 +1500,9 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">E-R Diagram</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">E-R Diagram</div>
         <div class="diagram-container">
             <svg viewBox="0 0 600 200" width="100%" height="200">
                 <title>Bank ER</title>
@@ -1433,6 +1550,9 @@ COMMIT; -- Saves the final state</code></pre>
             <li><strong>Holds_Account</strong>(<u><em>Cust_ID</em>, <em>Acc_No</em></u>)</li>
             <li><strong>Takes_Loan</strong>(<u><em>Cust_ID</em>, <em>Loan_No</em></u>)</li>
         </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1457,7 +1577,9 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Identifying Partial Dependencies</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">Identifying Partial Dependencies</div>
         <p>Suppose the relation is <code>R(StudentID, SubjectID, StudentName, Grade)</code>. The primary key is <strong>(StudentID, SubjectID)</strong>.</p>
         <ul>
             <li><code>StudentID &rarr; StudentName</code> (StudentName depends only on part of the key) <strong>&mdash; Partial Dependency</strong></li>
@@ -1470,6 +1592,9 @@ COMMIT; -- Saves the final state</code></pre>
             <li><strong>Enrollment</strong>(<u>StudentID, SubjectID</u>, Grade)</li>
         </ol>
         <p>Both tables are now in 2NF as all non-prime attributes fully depend on their respective primary keys.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1494,7 +1619,9 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Violation of 3NF</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">Violation of 3NF</div>
         <p>Consider <code>Employee(EmpID, Name, DeptID, DeptName)</code> where <code>EmpID</code> is the primary key.</p>
         <p>Functional Dependencies:<br>
         1. <code>EmpID &rarr; DeptID</code><br>
@@ -1507,6 +1634,9 @@ COMMIT; -- Saves the final state</code></pre>
             <li><strong>Employee</strong>(<u>EmpID</u>, Name, <em>DeptID</em>)</li>
             <li><strong>Department</strong>(<u>DeptID</u>, DeptName)</li>
         </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1531,7 +1661,9 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Computing {A, C}<sup>+</sup></div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">Computing {A, C}<sup>+</sup></div>
         <ol>
             <li>Start with the base set: <code>{A, C}</code></li>
             <li>Using <code>A &rarr; B</code>, add B. The set becomes <code>{A, B, C}</code></li>
@@ -1540,6 +1672,9 @@ COMMIT; -- Saves the final state</code></pre>
         </ol>
         <div class="concept-heading">Conclusion</div>
         <p>Since the closure of {A, C} contains all the attributes of the relation R, <strong>{A, C} is a super key</strong>. Assuming no proper subset of {A, C} can determine all attributes, <strong>{A, C} is a Candidate Key</strong>.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1564,7 +1699,9 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Analysis</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">Analysis</div>
         <p>Primary Key: <strong>(Roll_No, Course_ID)</strong><br>
         The FD <code>Course_ID &rarr; Course_Name</code> is a <strong>Partial Dependency</strong> because <code>Course_Name</code> depends only on a part of the primary key (Course_ID), violating 2NF.</p>
         
@@ -1574,6 +1711,9 @@ COMMIT; -- Saves the final state</code></pre>
             <li><strong>Student_Course</strong>(<u>Roll_No, Course_ID</u>, Instructor)</li>
         </ol>
         <p>Now, both relations are in 2NF.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1598,7 +1738,9 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Analysis</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">Analysis</div>
         <p>Primary Key: <strong>Emp_ID</strong>. Since the key is a single attribute, there are no partial dependencies, so it is in <strong>2NF</strong>.<br>
         However, the FD <code>Dept_ID &rarr; Dept_Name, Dept_Location</code> creates a <strong>Transitive Dependency</strong> (Emp_ID &rarr; Dept_ID &rarr; Dept_Name). This violates 3NF.</p>
         
@@ -1607,6 +1749,9 @@ COMMIT; -- Saves the final state</code></pre>
             <li><strong>Employee</strong>(<u>Emp_ID</u>, Emp_Name, <em>Dept_ID</em>)</li>
             <li><strong>Department</strong>(<u>Dept_ID</u>, Dept_Name, Dept_Location)</li>
         </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1631,7 +1776,9 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Analysis</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">Analysis</div>
         <p>Candidate Keys: <strong>(Student, Subject)</strong> and <strong>(Student, Teacher)</strong>.<br>
         For the FD <code>Teacher &rarr; Subject</code>, <code>Teacher</code> is a determinant but <strong>not a super key</strong>. Therefore, R violates BCNF.</p>
         
@@ -1641,6 +1788,9 @@ COMMIT; -- Saves the final state</code></pre>
             <li><strong>Stud_Teach</strong>(<u>Student, Teacher</u>)</li>
         </ol>
         <p>Both tables are now strictly in BCNF.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1665,12 +1815,17 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
             <li><strong>DDL:</strong> Defines structure (e.g., <code>CREATE TABLE</code>).</li>
             <li><strong>DML:</strong> Manages data (e.g., <code>INSERT INTO</code>).</li>
             <li><strong>DCL:</strong> Manages security (e.g., <code>GRANT</code>).</li>
             <li><strong>TCL:</strong> Manages transactions (e.g., <code>COMMIT</code>).</li>
         </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1695,13 +1850,18 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>Aggregate functions perform a calculation on a set of values and return a single summarizing value.</p>
+                            
+                            <div class="view-full">
+                                <p>Aggregate functions perform a calculation on a set of values and return a single summarizing value.</p>
         <ul>
             <li><strong>COUNT():</strong> Returns the number of rows. <code>SELECT COUNT(*) FROM Employees;</code></li>
             <li><strong>SUM():</strong> Returns the total sum of a column. <code>SELECT SUM(Salary) FROM Employees;</code></li>
             <li><strong>AVG():</strong> Returns the average value. <code>SELECT AVG(Salary) FROM Employees;</code></li>
             <li><strong>MAX() / MIN():</strong> Returns the largest / smallest value. <code>SELECT MAX(Salary) FROM Employees;</code></li>
         </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1726,7 +1886,9 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
+                            
+                            <div class="view-full">
+                                <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
         <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 600px; height: auto;">
             <style>
                 .entity-q76 { fill: var(--card-bg); stroke: currentColor; stroke-width: 2; rx: 4; }
@@ -1777,6 +1939,9 @@ COMMIT; -- Saves the final state</code></pre>
         
         <div class="concept-heading">Aggregation</div>
         <p>Treating a relationship between entities as a single abstract entity, allowing relationships to participate in other relationships. <br><em>Example:</em> A <strong>Project</strong> and <strong>Employee</strong> have a <em>Works_On</em> relationship. A <strong>Manager</strong> manages the entire <em>Works_On</em> relationship, treating it as one aggregated entity.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1801,7 +1966,9 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Normalization</strong> uses <strong>Decomposition</strong> as its primary mechanism. When a relation violates a normal form, we decompose it into smaller relations that satisfy the normal form.</p>
+                            
+                            <div class="view-full">
+                                <p><strong>Normalization</strong> uses <strong>Decomposition</strong> as its primary mechanism. When a relation violates a normal form, we decompose it into smaller relations that satisfy the normal form.</p>
         
         <div class="concept-heading">Example</div>
         <p>Suppose a relation <code>R(EmpID, EmpName, DeptID, DeptName)</code> where <code>EmpID &rarr; EmpName, DeptID</code> and <code>DeptID &rarr; DeptName</code>.</p>
@@ -1813,6 +1980,9 @@ COMMIT; -- Saves the final state</code></pre>
             </li>
         </ul>
         <p>This decomposition is both lossless-join (because DeptID is a primary key in Department) and dependency-preserving.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1837,7 +2007,9 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <div class="concept-heading">Using LEFT JOIN</div>
+                            
+                            <div class="view-full">
+                                <div class="concept-heading">Using LEFT JOIN</div>
         <pre><code>SELECT s.sname 
 FROM Student s
 LEFT JOIN Enrollment e ON s.sid = e.sid
@@ -1847,6 +2019,9 @@ WHERE e.cid IS NULL;</code></pre>
 WHERE NOT EXISTS (
     SELECT 1 FROM Enrollment e WHERE e.sid = s.sid
 );</code></pre>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1871,7 +2046,9 @@ WHERE NOT EXISTS (
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Relational Algebra:</strong></p>
+                            
+                            <div class="view-full">
+                                <p><strong>Relational Algebra:</strong></p>
         <p><code>&pi;<sub>sname</sub> ( Student &#x2A1D; Enrollment &#x2A1D; &sigma;<sub>cname='DBMS'</sub>(Course) )</code></p>
         <p><em>Breakdown:</em></p>
         <ol>
@@ -1879,6 +2056,9 @@ WHERE NOT EXISTS (
             <li>Natural Join (&#x2A1D;) the result with Enrollment and Student.</li>
             <li>Project (&pi;) only the student name (sname).</li>
         </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1903,7 +2083,12 @@ WHERE NOT EXISTS (
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>CREATE TABLE</strong> is used to create a new table in the database.</p><p><strong>ALTER TABLE</strong> is used to add, delete, or modify columns in an existing table.</p><p><strong>DROP TABLE</strong> is used to delete an existing table completely (including its structure and data).</p><p>DDL statements are <strong>auto-committed</strong> because they alter the database schema directly and cannot be rolled back in most RDBMS like MySQL and Oracle.</p>
+                            
+                            <div class="view-full">
+                                <p><strong>CREATE TABLE</strong> is used to create a new table in the database.</p><p><strong>ALTER TABLE</strong> is used to add, delete, or modify columns in an existing table.</p><p><strong>DROP TABLE</strong> is used to delete an existing table completely (including its structure and data).</p><p>DDL statements are <strong>auto-committed</strong> because they alter the database schema directly and cannot be rolled back in most RDBMS like MySQL and Oracle.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1928,13 +2113,18 @@ WHERE NOT EXISTS (
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <pre><code>CREATE TABLE Employee (
+                            
+                            <div class="view-full">
+                                <pre><code>CREATE TABLE Employee (
     Emp_ID INT PRIMARY KEY,
     Name VARCHAR(50) NOT NULL,
     Email VARCHAR(50) UNIQUE,
     Dept_ID INT,
     Salary DECIMAL(10,2)
 );</code></pre>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1959,9 +2149,14 @@ WHERE NOT EXISTS (
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <pre><code>ALTER TABLE Employee
+                            
+                            <div class="view-full">
+                                <pre><code>ALTER TABLE Employee
 ADD CONSTRAINT fk_dept
 FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);</code></pre>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1986,7 +2181,9 @@ FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>CONCAT(s1, s2)</strong>: Joins two or more strings. <em>Ex: <code>CONCAT('Data', 'base') &rarr; 'Database'</code></em></li>
 <li><strong>UPPER(s) / LOWER(s)</strong>: Converts a string to all uppercase or lowercase. <em>Ex: <code>UPPER('sql') &rarr; 'SQL'</code></em></li>
 <li><strong>LENGTH(s)</strong>: Returns the number of characters in a string. <em>Ex: <code>LENGTH('DBMS') &rarr; 4</code></em></li>
@@ -1994,6 +2191,9 @@ FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);</code></pre>
 <li><strong>TRIM(s)</strong>: Removes leading and trailing spaces. <em>Ex: <code>TRIM('  SQL  ') &rarr; 'SQL'</code></em></li>
 <li><strong>REPLACE(s, old, new)</strong>: Replaces all occurrences of a substring. <em>Ex: <code>REPLACE('DBMS', 'M', 'B') &rarr; 'DBBS'</code></em></li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2018,8 +2218,13 @@ FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>BEFORE Trigger</strong> executes before the triggering DML operation is applied (useful for validation/modification of incoming data). <strong>AFTER Trigger</strong> executes after the operation (useful for auditing or cascading changes to other tables).</p>
+                            
+                            <div class="view-full">
+                                <p><strong>BEFORE Trigger</strong> executes before the triggering DML operation is applied (useful for validation/modification of incoming data). <strong>AFTER Trigger</strong> executes after the operation (useful for auditing or cascading changes to other tables).</p>
 <p><strong>NEW</strong> refers to the incoming data (being inserted or updated). <strong>OLD</strong> refers to the existing data in the table before the operation (being updated or deleted).</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2948,6 +3153,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+// Toggle between standard exam answer and simplified revision view
+window.toggleAnswerView = function(btn, mode) {
+    const parent = btn.closest('.answer-content');
+    if (!parent) return;
+    
+    parent.querySelectorAll('.ans-toggle-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    const fullView = parent.querySelector('.view-full');
+    const simpleView = parent.querySelector('.view-simple');
+    
+    if (mode === 'simple') {
+        if (fullView) fullView.style.display = 'none';
+        if (simpleView) simpleView.style.display = 'block';
+    } else {
+        if (fullView) fullView.style.display = 'block';
+        if (simpleView) simpleView.style.display = 'none';
+    }
+};
 
 </script>
 

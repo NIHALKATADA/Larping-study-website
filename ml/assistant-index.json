@@ -2690,6 +2690,692 @@
     "type": "question"
   },
   {
+    "id": "q153",
+    "q_num": 153,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.2,
+    "important": true,
+    "title": "Differentiate between supervised and unsupervised learning.",
+    "url": "question-bank.html?open=q153",
+    "chunks": [
+      "Supervised and Unsupervised Learning represent two foundational paradigms differing in training signal and objective: Feature Supervised Learning Unsupervised Learning Training Data Requires labeled pairs $(x_i, y_i)$ with ground-truth targets. Operates on unlabeled observations $\\{x_i\\}$ with no target outputs. Learning Objective Learns an explicit mapping function $f: X \\to Y$ to predict $y$. Discovers latent structures, geometric clusters, or probability densities. Feedback Signal Direct error minimization via loss function $L(y, \\hat{y})$. No external feedback; optimizes internal heuristics (e.g., WCSS, density). Typical Tasks Classification (SVM, Decision Trees), Regression (Linear, Ridge). Clustering (K-Means, DBSCAN), Dimensionality Reduction (PCA, SOM)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q154",
+    "q_num": 154,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO4",
+    "score": 9.4,
+    "important": true,
+    "title": "State the role of the Epsilon and Minimum Points parameters in DBSCAN.",
+    "url": "question-bank.html?open=q154",
+    "chunks": [
+      "In DBSCAN (Density-Based Spatial Clustering of Applications with Noise), $\\varepsilon$ and $\\text{MinPts}$ define local density thresholds: Epsilon ($\\varepsilon$): The radius of the hyperspherical neighborhood centered at any point $p$, defining $N_\\varepsilon(p) = \\{q \\in D \\mid \\text{dist}(p, q) \\le \\varepsilon\\}$. Minimum Points ($\\text{MinPts}$): The minimum threshold count of data points required within $N_\\varepsilon(p)$ (including $p$ itself) for $p$ to be classified as a Core Point ($|N_\\varepsilon(p)| \\ge \\text{MinPts}$). Operational Role: Together, they establish density connectivity: points with insufficient neighbors within $\\varepsilon$ that lie adjacent to core points become Border Points , while isolated points become Noise ."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q155",
+    "q_num": 155,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 8.8,
+    "important": false,
+    "title": "What is a Dendrogram in Agglomerative Hierarchical Clustering, and how is it interpreted?",
+    "url": "question-bank.html?open=q155",
+    "chunks": [
+      "A Dendrogram is a tree-structured diagram that records the sequential hierarchical merging of clusters in Agglomerative Hierarchical Clustering. Axes Interpretation: The horizontal axis lists individual data points (leaves) or clusters, while the vertical axis indicates the cophenetic dissimilarity/distance threshold at which clusters merge. Cluster Extraction: By drawing a horizontal cut line across the dendrogram at a chosen distance threshold, the vertical lines intersected determine the exact number of disjoint clusters ($K$) formed at that granularity. Proximity Rule: Sub-branches that merge at lower vertical heights indicate tight, highly similar data points, while merges at high vertical levels indicate distant cluster consolidation."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q156",
+    "q_num": 156,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 8.6,
+    "important": false,
+    "title": "What is a Self-Organizing Map (SOM), and how does it achieve dimensionality reduction?",
+    "url": "question-bank.html?open=q156",
+    "chunks": [
+      "A Self-Organizing Map (SOM) (Kohonen Network) is an unsupervised artificial neural network that maps high-dimensional input vectors onto a low-dimensional (typically 2D) discrete regular grid of neurons through competitive learning. Mechanism: Neurons compete to match the input vector; the neuron with the smallest Euclidean distance to input $x$ is crowned the Best Matching Unit (BMU) . Dimensionality Reduction: Dimensionality reduction is achieved by updating the BMU and its topological neighbors on the 2D grid via a decaying Gaussian neighborhood function $h_{cj}(t)$, pulling nearby neurons closer to $x$. This preserves the non-linear manifold topology of the high-dimensional data in 2D space."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q157",
+    "q_num": 157,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 8.9,
+    "important": false,
+    "title": "Explain the principles of unsupervised learning and describe two practical clustering applications.",
+    "url": "question-bank.html?open=q157",
+    "chunks": [
+      "Principles of Unsupervised Learning: Absence of Supervisory Targets: Algorithms process feature matrices $X \\in \\mathbb{R}^{N \\times D}$ without target annotations $Y$, aiming to infer the underlying probability density $P(X)$ or latent geometry. Similarity and Compactness Optimization: Partitions data by minimizing intra-cluster dispersion (e.g., Euclidean distance, Mahalanobis metric) while maximizing inter-cluster separation. Latent Manifold Discovery: Identifies intrinsic lower-dimensional manifolds embedded within high-dimensional ambient feature spaces. Two Practical Applications: Customer Segmentation in E-Commerce: Clustering consumer transaction histories, browsing duration, and recency/frequency/monetary (RFM) metrics via K-Means to identify distinct buyer personas (e.g., bargain hunters vs. luxury consumers) for targeted personalized marketing. Medical Image Segmentation (Tumor Detection): Applying DBSCAN or Mean-Shift on MRI/CT voxel intensity and spatial coordinates to delineate abnormal tissue lesions and tumors without requiring labor-intensive manual voxel labeling."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q158",
+    "q_num": 158,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.3,
+    "important": true,
+    "title": "Compare Single, Complete, and Average Linkage methods in Agglomerative Clustering.",
+    "url": "question-bank.html?open=q158",
+    "chunks": [
+      "In Agglomerative Hierarchical Clustering , linkage criteria define the distance between two clusters $A$ and $B$: Linkage Criterion Mathematical Definition Cluster Geometry Preference Outlier / Noise Sensitivity Single Linkage (MIN) $$D(A, B) = \\min_{a \\in A, b \\in B} d(a, b)$$ Detects non-elliptical, elongated, chain-like clusters. Highly sensitive; suffers from the chaining effect (noise bridges distinct clusters). Complete Linkage (MAX) $$D(A, B) = \\max_{a \\in A, b \\in B} d(a, b)$$ Enforces compact, spherical clusters with approximately equal diameters. Avoids chaining, but vulnerable to extreme outliers that distort maximum boundary distances. Average Linkage (UPGMA) $$D(A, B) = \\frac{1}{|A||B|} \\sum_{a \\in A} \\sum_{b \\in B} d(a, b)$$ Balanced compromise; handles clusters of moderately varying variance. Significantly more robust to outliers and noise than single or complete linkage."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q159",
+    "q_num": 159,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.2,
+    "important": true,
+    "title": "Describe the assignment and centroid update steps in the K-Means clustering algorithm.",
+    "url": "question-bank.html?open=q159",
+    "chunks": [
+      "K-Means operates via an iterative Expectation-Maximization (EM) optimization framework minimizing Within-Cluster Sum of Squares (WCSS): Assignment Step (Expectation Step): Given fixed centroid locations $\\{\\mu_1, \\mu_2, \\dots, \\mu_K\\}$, each data point $x_i \\in D$ is assigned to its nearest centroid according to minimum Euclidean distance: $$c_i = \\arg\\min_{k \\in \\{1, \\dots, K\\}} \\|x_i - \\mu_k\\|^2$$ This partitions the feature space into $K$ convex Voronoi regions $S_k = \\{x_i \\mid c_i = k\\}$. Centroid Update Step (Maximization Step): Given the fixed cluster assignments $S_k$, each centroid $\\mu_k$ is recalculated as the arithmetic mean of all data points currently belonging to cluster $S_k$: $$\\mu_k = \\frac{1}{|S_k|} \\sum_{x_i \\in S_k} x_i$$ Termination: The algorithm alternates between Assignment and Update until convergence criteria are met (centroids shift by $< \\epsilon$, assignments freeze, or maximum iterations reached)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q160",
+    "q_num": 160,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.4,
+    "important": true,
+    "title": "Compare K-Means, DBSCAN, and Hierarchical Clustering based on cluster shape capabilities and complexity.",
+    "url": "question-bank.html?open=q160",
+    "chunks": [
+      "Comprehensive algorithmic comparison across cluster morphology and computational complexity: Clustering Algorithm Cluster Shape Capability Time Complexity Space Complexity Handling of Outliers / Noise K-Means Strictly spherical/globular convex clusters (Voronoi tessellation); fails on non-linear manifolds. $O(I \\cdot K \\cdot N \\cdot d)$ where $I = \\text{iters}, d = \\text{dim}$. Highly scalable. $O(N \\cdot d + K \\cdot d)$ Highly sensitive; outliers distort arithmetic mean centroids. DBSCAN Arbitrary, non-convex geometries (concentric rings, spirals, interlocking crescents). $O(N \\log N)$ with spatial index (k-d tree); $O(N^2)$ worst-case. $O(N)$ Extremely robust; explicitly labels isolated anomalies as noise (label $-1$). Hierarchical (Agglomerative) Flexible; depends on linkage (Single finds arbitrary/chaining; Complete finds spherical). $O(N^2 \\log N)$ to $O(N^3)$; unsuited for large-scale datasets. $O(N^2)$ (stores pairwise proximity matrix). Sensitive to moderate; outliers appear as isolated singleton branches in dendrogram."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q161",
+    "q_num": 161,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.5,
+    "important": true,
+    "title": "Explain how Within-Cluster Sum of Squares (WCSS) is used in the Elbow Method to determine optimal K.",
+    "url": "question-bank.html?open=q161",
+    "chunks": [
+      "Within-Cluster Sum of Squares (WCSS) (also known as inertia) quantifies internal cluster compactness: $$\\text{WCSS}(K) = \\sum_{k=1}^K \\sum_{x_i \\in S_k} \\|x_i - \\mu_k\\|^2$$ Elbow Method Protocol: K-Means is fitted across a sequence of candidate cluster counts, typically $K \\in \\{1, 2, \\dots, 10\\}$, computing $\\text{WCSS}(K)$ for each. As $K$ increases, WCSS monotonically decreases because smaller cluster partitions inherently reduce distances between points and centroids (reaching $\\text{WCSS}=0$ when $K=N$). When plotted as WCSS versus $K$, the curve initially exhibits a steep downward slope reflecting significant variance reduction as genuine natural clusters are resolved. Beyond the true underlying cluster count, adding extra centroids yields diminishing returns, creating a sharp change in curvature\u2014an Elbow Point . The value of $K$ at this inflection point represents the optimal trade-off between clustering compactness and model complexity."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q162",
+    "q_num": 162,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L4",
+    "co": "CO4",
+    "score": 9.3,
+    "important": true,
+    "title": "Analyze why K-Means is sensitive to the initial placement of centroids and to outliers, and explain how K-Means++ initialization reduces this sensitivity.",
+    "url": "question-bank.html?open=q162",
+    "chunks": [
+      "Sensitivity Analysis of Standard K-Means: Initial Centroid Sensitivity: The K-Means objective function (WCSS) is non-convex with numerous local minima. Random initialization (Forgy method) often places multiple initial centroids within the same natural cluster, resulting in sub-optimal convergence where distinct true clusters are erroneously merged while others are artificially split. Outlier Sensitivity: Centroid locations are updated via the arithmetic mean: $\\mu_k = \\frac{1}{|S_k|} \\sum x_i$. Because the Euclidean distance is squared in WCSS, extreme anomalous data points exert massive leverage, dragging the centroid far away from the true dense cluster core. How K-Means++ Resolves Initialization: Selects the first centroid $\\mu_1$ uniformly at random from the dataset $X$. For each remaining point $x$, computes $D(x)$, the Euclidean distance to the nearest already-selected centroid. Selects the next centroid $\\mu_{k}$ with probability proportional to the squared distance: $$P(x) = \\frac{D(x)^2}{\\sum_{x' \\in X} D(x')^2}$$ Repeats steps 2\u20133 until $K$ centroids are chosen. This probabilistic dispersion forces centroids to be geographically spread across the data space, mathematically guaranteeing an expected upper bound of $O(\\log K)$ times the optimal clustering error."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q163",
+    "q_num": 163,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.1,
+    "important": true,
+    "title": "Describe the density-based clustering mechanics of DBSCAN and explain how it handles noise/outliers.",
+    "url": "question-bank.html?open=q163",
+    "chunks": [
+      "DBSCAN Mechanics: DBSCAN models clusters as contiguous regions of high point density separated by contiguous regions of low density, parameterized by radius $\\varepsilon$ and minimum points $\\text{MinPts}$: Point Categorization: Core Point ($p$): Contains at least $\\text{MinPts}$ within its $\\varepsilon$-neighborhood: $|N_\\varepsilon(p)| \\ge \\text{MinPts}$. Border Point ($q$): Contains fewer than $\\text{MinPts}$ neighbors ($|N_\\varepsilon(q)| < \\text{MinPts}$), but falls within the $\\varepsilon$-neighborhood of an existing Core Point. Noise Point ($n$): Neither a core point nor density-reachable from any core point. Cluster Expansion via Density Connectivity: A cluster is initiated at an arbitrary unvisited Core Point and expanded by iteratively computing the transitive closure of all density-reachable points through an expansion queue. Handling Noise/Outliers: Points that cannot be reached from any core point remain unclustered and are explicitly assigned the noise label ($-1$). Unlike K-Means, which forces every anomaly into the nearest cluster, DBSCAN isolates noise, preserving the purity and geometric boundaries of genuine clusters."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q164",
+    "q_num": 164,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L4",
+    "co": "CO4",
+    "score": 9.0,
+    "important": true,
+    "title": "Analyze the effect of choosing a very small versus a very large value of Epsilon (\u03b5) in DBSCAN on the clusters and noise points that are formed.",
+    "url": "question-bank.html?open=q164",
+    "chunks": [
+      "The choice of neighborhood radius $\\varepsilon$ critically dictates DBSCAN clustering topology: Effect of a Very Small $\\varepsilon$ ($\\varepsilon \\to 0$): Under-Clustering & Fragmentation: The $\\varepsilon$-neighborhood hypersphere is excessively restrictive. Very few points satisfy the density condition $|N_\\varepsilon(p)| \\ge \\text{MinPts}$. Noise Over-Estimation: Genuine clusters fail to establish density-connectivity and get fragmented into numerous micro-clusters. A vast proportion of legitimate data instances are falsely classified as noise/outliers. Effect of a Very Large $\\varepsilon$ ($\\varepsilon \\to \\infty$): Over-Clustering & Super-Clusters: The $\\varepsilon$-neighborhood covers wide regions of the feature space. The density reachability condition bridges across low-density valleys. Noise Under-Estimation: Distinct natural clusters merge into a single, massive monolithic cluster. Genuine outliers and noise anomalies are erroneously absorbed as border or core points. Remedy: Determine $\\varepsilon$ systematically by plotting sorted $k$-nearest neighbor distances ($k = \\text{MinPts}-1$) and identifying the sharp \"knee\" or inflection point."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q165",
+    "q_num": 165,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO4",
+    "score": 9.6,
+    "important": true,
+    "title": "Explain the complete K-Means clustering algorithm. Derive its objective function (WCSS), outline convergence criteria, and discuss its sensitivity to initial centroid placement.",
+    "url": "question-bank.html?open=q165",
+    "chunks": [
+      "1. Algorithmic Framework: K-Means is a centroid-based partitioning algorithm that divides a dataset $X = \\{x_1, \\dots, x_N\\} \\subset \\mathbb{R}^d$ into $K$ disjoint clusters $S = \\{S_1, \\dots, S_K\\}$. Initialization: Select $K$ initial centroid vectors $\\{\\mu_1^{(0)}, \\dots, \\mu_K^{(0)}\\}$ (via K-Means++). Assignment Step: Assign each observation $x_i$ to its closest centroid: $$S_k^{(t)} = \\left\\{ x_i : \\|x_i - \\mu_k^{(t)}\\|^2 \\le \\|x_i - \\mu_j^{(t)}\\|^2, \\; \\forall j \\in \\{1, \\dots, K\\} \\right\\}$$ Update Step: Recompute each centroid as the barycenter of its assigned set: $$\\mu_k^{(t+1)} = \\frac{1}{|S_k^{(t)}|} \\sum_{x_i \\in S_k^{(t)}} x_i$$ Iteration: Repeat until convergence criteria are satisfied. 2. Derivation of the Objective Function (WCSS): The objective function is the Within-Cluster Sum of Squares (Inertia): $$J(\\mu_1, \\dots, \\mu_K) = \\sum_{k=1}^K \\sum_{x_i \\in S_k} \\|x_i - \\mu_k\\|^2$$ To find the optimal centroid $\\mu_k$ that minimizes $J$ for a fixed partition $S_k$, compute the partial gradient with respect to $\\mu_k$ and set it to zero: $$\\frac{\\partial J}{\\partial \\mu_k} = \\frac{\\partial}{\\partial \\mu_k} \\sum_{x_i \\in S_k} (x_i - \\mu_k)^T (x_i - \\mu_k) = -2 \\sum_{x_i \\in S_k} (x_i - \\mu_k) = 0$$ $$\\sum_{x_i \\in S_k} x_i - \\sum_{x_i \\in S_k} \\mu_k = 0 \\implies \\sum_{x_i \\in S_k} x_i = |S_k| \\mu_k$$ $$\\mathbf{\\mu_k = \\frac{1}{|S_k|} \\sum_{x_i \\in",
+      "S_k} x_i}$$ This derives the arithmetic mean as the mathematically exact global minimizer of squared Euclidean error for any cluster partition. 3. Convergence Criteria: Centroid Shift Threshold: $\\max_k \\|\\mu_k^{(t+1)} - \\mu_k^{(t)}\\| < \\epsilon$. Assignment Stability: No data points change cluster labels between iterations ($S_k^{(t+1)} = S_k^{(t)}$). Objective Plateau: Relative reduction $|J^{(t+1)} - J^{(t)}| / J^{(t)} < \\delta$. 4. Sensitivity to Initial Centroid Placement: Because $J$ is non-convex, standard random seeding causes convergence to sub-optimal local minima. For example, two centroids initialized in the same true cluster will split it while leaving other true clusters merged. K-Means++ eliminates this by selecting seeds sequentially with probability proportional to squared distance $D(x)^2$, guaranteeing an $O(\\log K)$ approximation ratio."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q166",
+    "q_num": 166,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO4",
+    "score": 9.3,
+    "important": true,
+    "title": "Analyze how the choice of Epsilon (\u03b5) and MinPts affects the clusters produced by DBSCAN. Explain how a k-distance graph can be used to select a suitable \u03b5.",
+    "url": "question-bank.html?open=q166",
+    "chunks": [
+      "1. Impact of Parameter Choices in DBSCAN: Parameter Setting Impact on Core Points Clustering Behavior Noise Sensitivity $\\varepsilon$ too small Very few qualify as Core. Under-clustering: true clusters break into tiny fragments. Over-classification of valid data as noise. $\\varepsilon$ too large Almost all points qualify as Core. Over-clustering: distinct clusters merge into one super-cluster. True outliers swallowed into clusters. $\\text{MinPts}$ too small (e.g., $\\le 2$) Trivial density thresholds. DBSCAN degrades to Single Linkage Hierarchical clustering. Suffers from chaining effect through noisy bridges. $\\text{MinPts}$ too large Extremely stringent density. Only ultra-dense regions form clusters; loose clusters lost. Excessive data discarded as noise. Dimensionality Heuristic: Typically choose $\\text{MinPts} \\ge D + 1$, with $\\text{MinPts} = 2 \\times D$ recommended for noisy data (where $D$ is feature dimensionality). 2. Systematic Parameter Selection via k-Distance Graph: Fix $k = \\text{MinPts} - 1$ (e.g., $k = 4$ for 2D data). For every point $p_i$ in dataset $X$, compute the Euclidean distance to its $k$-th nearest neighbor ($d_k(p_i)$). Sort all calculated $k$-distances in descending order. Plot the sorted $k$-distances against point indices on the X-axis. Knee / Elbow Rule: The resulting curve displays a sharp change in slope (the \"knee\"). Points with distances above the knee represent sparse noise, while points below the knee reside in dense clusters. The $y$-value at this sharp knee corresponds to the optimal $\\varepsilon^*$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q167",
+    "q_num": 167,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO4",
+    "score": 9.8,
+    "important": true,
+    "title": "Describe DBSCAN in detail. Define core, border, and noise points using epsilon and MinPts, and explain step-by-step how clusters are expanded.",
+    "url": "question-bank.html?open=q167",
+    "chunks": [
+      "1. Formal Density Definitions: Given radius $\\varepsilon > 0$ and threshold $\\text{MinPts} \\in \\mathbb{N}^+$: $\\varepsilon$-Neighborhood: $N_\\varepsilon(p) = \\{q \\in D \\mid \\text{dist}(p, q) \\le \\varepsilon\\}$. Core Point: A point $p$ such that $|N_\\varepsilon(p)| \\ge \\text{MinPts}$. Directly Density-Reachable: Point $q$ is directly density-reachable from $p$ if $q \\in N_\\varepsilon(p)$ and $p$ is a Core Point. Density-Reachable: Point $q$ is density-reachable from $p$ if there exists a chain $p_1, p_2, \\dots, p_n$ with $p_1 = p, p_n = q$ such that $p_{i+1}$ is directly density-reachable from $p_i$. Density-Connected: Points $p$ and $q$ are density-connected if there exists a core point $o$ such that both $p$ and $q$ are density-reachable from $o$. Border Point: A non-core point that is directly density-reachable from a core point. Noise Point: Any point that is not density-reachable from any core point. 2. Step-by-Step Cluster Expansion Algorithm: Initialize all points as UNVISITED . Set cluster identifier $C = 0$. For each point $p \\in D$: If $p$ is VISITED , continue to next point. Mark $p$ as VISITED . Find neighbors $N_\\varepsilon(p)$. If $|N_\\varepsilon(p)| < \\text{MinPts}$, mark $p$ as NOISE (may later be reclassified as border). Else, increment $C$, assign $p$ to cluster $C$, and initialize seed queue",
+      "$S = N_\\varepsilon(p) \\setminus \\{p\\}$. Expand Cluster: While $S$ is not empty: Pop point $q$ from $S$. If $q$ is marked NOISE , reassign $q$ to cluster $C$ (it is a border point). If $q$ is UNVISITED : Mark $q$ as VISITED . Compute $N_\\varepsilon(q)$. If $|N_\\varepsilon(q)| \\ge \\text{MinPts}$, append all points in $N_\\varepsilon(q)$ to $S$. If $q$ is not a member of any cluster, assign $q$ to cluster $C$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q168",
+    "q_num": 168,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO4",
+    "score": 9.4,
+    "important": true,
+    "title": "Explain Agglomerative Hierarchical Clustering. Describe how a dendrogram is constructed, how linkage metrics (single, complete, average) affect cluster merging, and how to select optimal cuts.",
+    "url": "question-bank.html?open=q168",
+    "chunks": [
+      "1. Agglomerative (Bottom-Up) Clustering Architecture: Initialization: Treat each of the $N$ data instances as an individual singleton cluster: $C_i = \\{x_i\\}$. Compute the symmetric $N \\times N$ pairwise proximity matrix $\\mathbf{D}$. Iterative Merge: Find the two clusters $C_A, C_B$ with minimal linkage distance $D(C_A, C_B) = \\min_{i, j} D(C_i, C_j)$. Matrix Update: Merge $C_A$ and $C_B$ into a single cluster $C_{\\text{new}} = C_A \\cup C_B$. Update the proximity matrix using the Lance-Williams recurrence relation. Termination: Repeat steps 2\u20133 for $N-1$ iterations until all points coalesce into a single root cluster. 2. Dendrogram Construction and Cutting: A dendrogram visually plots the merge sequence: the X-axis enumerates data instances, while the Y-axis represents the dissimilarity height at which merges occur. 3. Linkage Metrics Comparison: Single Linkage ($d_{\\min}$): $D(A, B) = \\min_{a \\in A, b \\in B} d(a, b)$. Forms elongated chains; sensitive to noise bridges. Complete Linkage ($d_{\\max}$): $D(A, B) = \\max_{a \\in A, b \\in B} d(a, b)$. Forms compact spherical clusters of equal diameter; avoids chaining. Average Linkage ($d_{\\text{avg}}$): $D(A, B) = \\frac{1}{|A||B|} \\sum_{a, b} d(a, b)$. Unbiased, robust to noise. Ward's Method: Minimizes total within-cluster variance increase: $\\Delta \\text{ESS} = \\frac{|A||B|}{|A|+|B|} \\|\\mu_A - \\mu_B\\|^2$. Produces high-quality spherical clusters. 4. Selecting Optimal Cuts: Search for the longest vertical gap in the dendrogram unbroken by any horizontal merge lines. Placing a horizontal threshold cut line through this vertical interval yields the most naturally distinct, well-separated cluster count ($K$)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q169",
+    "q_num": 169,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO4",
+    "score": 9.1,
+    "important": true,
+    "title": "Detail Self-Organizing Maps (SOM). Explain how competitive learning, topology preservation, and neighborhood functions reduce data dimensionality.",
+    "url": "question-bank.html?open=q169",
+    "chunks": [
+      "1. Architectural Foundations: A Self-Organizing Map (SOM) is an unsupervised neural network mapping continuous high-dimensional input vectors $x \\in \\mathbb{R}^D$ onto a discrete 1D or 2D lattice of neurons $j = 1, \\dots, M$. Each neuron $j$ maintains a prototype weight vector $w_j = [w_{j1}, \\dots, w_{jD}]^T \\in \\mathbb{R}^D$. 2. Three Foundational Processes of SOM: Competitive Process (Winner-Take-All): For an input sample $x$, all neurons compute their Euclidean distance to $x$. The neuron whose weight vector is closest is designated the Best Matching Unit (BMU) , denoted $c$: $$c = \\arg\\min_{j} \\|x - w_j\\|$$ Cooperative Process (Neighborhood Function): The BMU excites not only itself but also spatial neighbors on the 2D grid. The topological influence is governed by a symmetric Gaussian neighborhood function centered at grid position $r_c$: $$h_{cj}(t) = \\exp\\left( -\\frac{\\|r_c - r_j\\|^2}{2 \\sigma^2(t)} \\right)$$ where the neighborhood width decays over training iterations $t$: $\\sigma(t) = \\sigma_0 \\exp(-t / \\tau_1)$. Adaptive Process (Weight Update Rule): Weight vectors of the BMU and its neighbors are updated to move closer to input $x$: $$w_j(t+1) = w_j(t) + \\alpha(t) h_{cj}(t) [x - w_j(t)]$$ where learning rate $\\alpha(t) = \\alpha_0 \\exp(-t / \\tau_2)$ decays monotonically. 3. Topology Preservation & Dimensionality Reduction: Because neighboring neurons on the 2D lattice are pulled toward similar input regions, the network stretches and folds like an elastic net to mirror the non-linear manifold of the high-dimensional data, preserving topological adjacency relationships in 2D space."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q170",
+    "q_num": 170,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO4",
+    "score": 9.3,
+    "important": true,
+    "title": "Compare the Elbow Method and the Silhouette Score for determining the optimal number of clusters in K-Means. Analyze the limitations of each method.",
+    "url": "question-bank.html?open=q170",
+    "chunks": [
+      "The Elbow Method and Silhouette Analysis are the two primary evaluation techniques for finding optimal $K$: Evaluation Dimension The Elbow Method (WCSS) Silhouette Score Analysis Metric Formula $$\\text{WCSS} = \\sum_{k=1}^K \\sum_{x_i \\in S_k} \\|x_i - \\mu_k\\|^2$$ $$s(i) = \\frac{b(i) - a(i)}{\\max(a(i), b(i))}, \\quad S_K = \\frac{1}{N} \\sum s(i)$$ Mathematical Range $[0, \\infty)$; monotonically decreases toward 0 as $K \\to N$. $[-1, +1]$; $+1$ = highly dense and well-separated, $0$ = overlapping, $-1$ = misclustered. Decision Criterion Visual heuristic; identify inflection/elbow where marginal slope flattens. Quantitative maximization; pick $K$ that achieves global maximum mean $S_K$. Computational Complexity $O(I \\cdot K \\cdot N \\cdot d)$ (Extremely fast, linear in $N$). $O(N^2 \\cdot d)$ (Requires all pairwise point distances, expensive for large $N$). Sensitivity to Density Penalizes larger cluster spreads even when naturally valid. Explicitly compares intra-cluster cohesion $a(i)$ with nearest-cluster separation $b(i)$. Limitations Analysis: Limitations of the Elbow Method: Subjective Ambiguity: In smooth real-world datasets, the curve often bends continuously with no distinct, identifiable sharp elbow. Monotonic Bias: Always decreases as $K$ increases, providing no inherent penalty for over-parameterization. Limitations of Silhouette Score: High Computational Overhead: Computing all pairwise distances incurs $O(N^2)$ time, making it intractable for millions of samples without subsampling. Convexity Bias: Like K-Means, assumes spherical/convex clusters; produces misleadingly low scores for complex non-convex clusters (e.g., concentric circles)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q171",
+    "q_num": 171,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.7,
+    "important": true,
+    "title": "Apply one iteration of K-Means (K = 2) on the points P1(1, 1), P2(2, 1), P3(4, 3) and P4(5, 4) with initial centroids C1 = (1, 1) and C2 = (5, 4). Show the cluster assignments using Euclidean distance and compute the updated centroids.",
+    "url": "question-bank.html?open=q171",
+    "chunks": [
+      "Given Data Points: $P_1(1, 1), P_2(2, 1), P_3(4, 3), P_4(5, 4)$. Initial Centroids: $C_1 = (1, 1), C_2 = (5, 4)$. Step 1: Compute Euclidean Distances to Initial Centroids: Formula: $d(P, C) = \\sqrt{(x_p - x_c)^2 + (y_p - y_c)^2}$ For $P_1(1, 1)$: $d(P_1, C_1) = \\sqrt{(1-1)^2 + (1-1)^2} = \\mathbf{0}$ $d(P_1, C_2) = \\sqrt{(1-5)^2 + (1-4)^2} = \\sqrt{(-4)^2 + (-3)^2} = \\sqrt{16 + 9} = \\sqrt{25} = \\mathbf{5}$ Assignment: $0 < 5 \\implies \\mathbf{P_1 \\in \\text{Cluster 1}}$ For $P_2(2, 1)$: $d(P_2, C_1) = \\sqrt{(2-1)^2 + (1-1)^2} = \\sqrt{1^2 + 0^2} = \\mathbf{1}$ $d(P_2, C_2) = \\sqrt{(2-5)^2 + (1-4)^2} = \\sqrt{(-3)^2 + (-3)^2} = \\sqrt{9 + 9} = \\sqrt{18} \\approx \\mathbf{4.243}$ Assignment: $1 < 4.243 \\implies \\mathbf{P_2 \\in \\text{Cluster 1}}$ For $P_3(4, 3)$: $d(P_3, C_1) = \\sqrt{(4-1)^2 + (3-1)^2} = \\sqrt{3^2 + 2^2} = \\sqrt{9 + 4} = \\sqrt{13} \\approx \\mathbf{3.606}$ $d(P_3, C_2) = \\sqrt{(4-5)^2 + (3-4)^2} = \\sqrt{(-1)^2 + (-1)^2} = \\sqrt{1 + 1} = \\sqrt{2} \\approx \\mathbf{1.414}$ Assignment: $1.414 < 3.606 \\implies \\mathbf{P_3 \\in \\text{Cluster 2}}$ For $P_4(5, 4)$: $d(P_4, C_1) = \\sqrt{(5-1)^2 + (4-1)^2} = \\sqrt{4^2 + 3^2} = \\sqrt{16 + 9} = \\sqrt{25} = \\mathbf{5}$ $d(P_4, C_2) = \\sqrt{(5-5)^2 + (4-4)^2} = \\mathbf{0}$ Assignment: $0 <",
+      "5 \\implies \\mathbf{P_4 \\in \\text{Cluster 2}}$ Cluster Assignments after Iteration 1: Cluster 1 ($S_1$): $\\{P_1, P_2\\}$ Cluster 2 ($S_2$): $\\{P_3, P_4\\}$ Step 2: Compute Updated Centroids ($C_1', C_2'$): Updated centroid is the arithmetic mean of all assigned members: $$C_1' = \\left( \\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2} \\right) = \\left( \\frac{1 + 2}{2}, \\frac{1 + 1}{2} \\right) = \\mathbf{(1.5, 1.0)}$$ $$C_2' = \\left( \\frac{x_3 + x_4}{2}, \\frac{y_3 + y_4}{2} \\right) = \\left( \\frac{4 + 5}{2}, \\frac{3 + 4}{2} \\right) = \\mathbf{(4.5, 3.5)}$$ Summary: Cluster 1 contains $\\{P_1, P_2\\}$ with updated centroid $(1.5, 1.0)$; Cluster 2 contains $\\{P_3, P_4\\}$ with updated centroid $(4.5, 3.5)$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q172",
+    "q_num": 172,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO4",
+    "score": 9.5,
+    "important": true,
+    "title": "Analyze the major limitations of K-Means (choice of K, initial centroids, outliers, non-spherical clusters) and discuss how DBSCAN and Hierarchical Clustering overcome them.",
+    "url": "question-bank.html?open=q172",
+    "chunks": [
+      "Analysis of Four Major K-Means Limitations & Alternative Solutions: K-Means Limitation Failure Mechanism in K-Means How DBSCAN Overcomes It How Hierarchical Clustering Overcomes It 1. A Priori Choice of $K$ Requires user to pre-specify $K$ without ground truth; trial-and-error heuristics (Elbow) are subjective. Auto-discovers $K$: Infers cluster count automatically based on local density parameters $(\\varepsilon, \\text{MinPts})$. Multi-scale Dendrogram: Produces a complete hierarchical tree; $K$ can be chosen retrospectively by cutting at any scale. 2. Initial Centroid Sensitivity Prone to bad local minima; poor initial seeds lead to split or merged clusters and non-deterministic results. Deterministic Seeding: Density connectivity is mathematically deterministic (except for ambiguous border points). Fully Deterministic: Merges proceed purely based on pairwise proximity matrix; zero stochastic variation. 3. Vulnerability to Outliers Centroids compute arithmetic means; squared Euclidean error heavily penalizes outliers, shifting centroids away from true cores. Explicit Noise Filtering: Unreachable points are assigned noise label ($-1$), isolating anomalies completely from cluster geometry. Isolation in Leaves: Outliers remain isolated as singleton leaf branches at the top of the dendrogram, easily pruned. 4. Non-Spherical / Manifold Clusters Minimizes Euclidean distance, inherently partitioning feature space into convex Voronoi polyhedra; completely fails on rings, moons, spirals. Arbitrary Geometries: Expands along density-connected paths, seamlessly uncovering arbitrary non-convex manifolds and concentric rings. Linkage Flexibility: Single linkage traces continuous non-linear chains and arbitrary manifolds effectively."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q173",
+    "q_num": 173,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO5",
+    "score": 9.6,
+    "important": true,
+    "title": "Write the Q-learning update rule formula and label its components.",
+    "url": "question-bank.html?open=q173",
+    "chunks": [
+      "The Q-Learning Update Rule: $$Q(S_t, A_t) \\leftarrow Q(S_t, A_t) + \\alpha \\left[ R_{t+1} + \\gamma \\max_{a \\in \\mathcal{A}} Q(S_{t+1}, a) - Q(S_t, A_t) \\right]$$ Labeled Components: $Q(S_t, A_t)$: Current expected value of taking action $A_t$ in state $S_t$. $\\alpha \\in (0, 1]$: Learning rate governing the update weight of new sample experiences. $R_{t+1}$: Immediate scalar reward received from the environment. $\\gamma \\in [0, 1)$: Discount factor weighting the present value of future rewards. $\\max_{a} Q(S_{t+1}, a)$: The maximum estimated action-value achievable in the next state $S_{t+1}$ (greedy target policy). $\\left[ R_{t+1} + \\gamma \\max_a Q(S_{t+1}, a) - Q(S_t, A_t) \\right]$: The Temporal Difference (TD) Error $\\delta_t$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q174",
+    "q_num": 174,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.3,
+    "important": true,
+    "title": "Explain the working mechanism of reinforcement learning in details.",
+    "url": "question-bank.html?open=q174",
+    "chunks": [
+      "Reinforcement Learning (RL) is a computational framework where an autonomous Agent learns optimal decision policies through closed-loop, trial-and-error interaction with a dynamic Environment : Sensing and Action: At each discrete time step $t$, the agent senses the current environment state $S_t \\in \\mathcal{S}$, selects an action $A_t \\in \\mathcal{A}$ using policy $\\pi(a|s)$, and executes it. Environmental Response: The environment transitions to a new state $S_{t+1} \\sim \\mathcal{P}(\\cdot \\mid S_t, A_t)$ and emits a scalar feedback signal, reward $R_{t+1} \\in \\mathbb{R}$. Optimization Objective: The agent updates its policy or value function to maximize the expected cumulative discounted return $G_t = \\sum_{k=0}^\\infty \\gamma^k R_{t+k+1}$, learning to favor long-term strategic benefits over immediate gratification."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q175",
+    "q_num": 175,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO5",
+    "score": 9.2,
+    "important": true,
+    "title": "State the role of the discount factor \u03b3 (gamma) in reinforcement learning.",
+    "url": "question-bank.html?open=q175",
+    "chunks": [
+      "The Discount Factor ($\\gamma \\in [0, 1)$) regulates the importance of future rewards relative to immediate rewards in the return formulation $G_t = \\sum_{k=0}^\\infty \\gamma^k R_{t+k+1}$: Mathematical Convergence: In continuing/infinite-horizon tasks with non-zero rewards, $\\gamma < 1$ prevents the cumulative sum from diverging to infinity by enforcing a geometric series upper bound: $G_t \\le \\frac{R_{\\max}}{1 - \\gamma}$. Behavioral Modulation: Myopic Agent ($\\gamma \\to 0$): Focuses strictly on maximizing immediate instant reward $R_{t+1}$, completely ignoring long-term future consequences. Farsighted Agent ($\\gamma \\to 1$): Values distant future outcomes almost equally with immediate payoffs, facilitating strategic multi-step planning. Uncertainty Compensation: Reflects temporal risk that future events are less predictable than immediate feedback."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q176",
+    "q_num": 176,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.4,
+    "important": true,
+    "title": "Distinguish between State-Value function V(s) and Action-Value function Q(s, a).",
+    "url": "question-bank.html?open=q176",
+    "chunks": [
+      "Value Functions evaluate expected cumulative returns under policy $\\pi$: Dimension State-Value Function $V^\\pi(s)$ Action-Value Function $Q^\\pi(s, a)$ Definition $$V^\\pi(s) = \\mathbb{E}_\\pi [G_t \\mid S_t = s]$$ $$Q^\\pi(s, a) = \\mathbb{E}_\\pi [G_t \\mid S_t = s, A_t = a]$$ Evaluation Scope Evaluates the expected return of being in state $s$ and following policy $\\pi$ thereafter. Evaluates the expected return of executing specific action $a$ in state $s$, then following policy $\\pi$. Mathematical Relation Marginalized across actions: $$V^\\pi(s) = \\sum_{a} \\pi(a|s) Q^\\pi(s, a)$$ Expands into next states: $$Q^\\pi(s, a) = \\mathcal{R}_s^a + \\gamma \\sum_{s'} \\mathcal{P}_{ss'}^a V^\\pi(s')$$ Policy Extraction in Model-Free RL Cannot extract optimal actions without knowing environment transition dynamics $\\mathcal{P}(s'|s, a)$. Directly extracts optimal actions without dynamics model: $a^* = \\arg\\max_a Q^*(s, a)$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q177",
+    "q_num": 177,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L1",
+    "co": "CO5",
+    "score": 9.5,
+    "important": true,
+    "title": "Define the core elements of a Markov Decision Process (MDP): States, Actions, Transitions, and Rewards.",
+    "url": "question-bank.html?open=q177",
+    "chunks": [
+      "A Markov Decision Process (MDP) is formally defined by the tuple $(\\mathcal{S}, \\mathcal{A}, \\mathcal{P}, \\mathcal{R}, \\gamma)$: State Space ($\\mathcal{S}$): The set of all valid environmental configurations. Each state $s \\in \\mathcal{S}$ must satisfy the Markov Property : $$\\mathbb{P}(S_{t+1}=s' \\mid S_t=s, A_t=a, \\dots, S_0, A_0) = \\mathbb{P}(S_{t+1}=s' \\mid S_t=s, A_t=a)$$ The current state encapsulates all relevant historical information. Action Space ($\\mathcal{A}$): The set of all permissible decisions or physical controls available to the agent (or $\\mathcal{A}(s)$ valid in state $s$). Transition Probability Function ($\\mathcal{P}$): $$\\mathcal{P}(s' \\mid s, a) = \\mathbb{P}(S_{t+1} = s' \\mid S_t = s, A_t = a)$$ Specifies the conditional probability distribution over subsequent states given current state $s$ and chosen action $a$, satisfying $\\sum_{s' \\in \\mathcal{S}} \\mathcal{P}(s' \\mid s, a) = 1$. Reward Function ($\\mathcal{R}$): $$\\mathcal{R}(s, a, s') = \\mathbb{E}[R_{t+1} \\mid S_t = s, A_t = a, S_{t+1} = s']$$ A real-valued scalar feedback signal quantifying the immediate desirability of transition $(s, a, s')$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q178",
+    "q_num": 178,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.3,
+    "important": true,
+    "title": "Describe the epsilon - greedy strategy in details.",
+    "url": "question-bank.html?open=q178",
+    "chunks": [
+      "The $\\varepsilon$-Greedy Action Selection Strategy resolves the fundamental Exploration vs. Exploitation Trade-off in reinforcement learning: Decision Rule: With probability $1 - \\varepsilon$, the agent exploits its current knowledge by selecting the greedy action with the highest estimated action-value: $$a^* = \\arg\\max_{a \\in \\mathcal{A}} Q(s, a)$$ With probability $\\varepsilon$, the agent explores by selecting an action uniformly at random from all $|\\mathcal{A}|$ candidate actions: $$a \\sim \\text{Uniform}(\\mathcal{A})$$ Formal Probability Distribution: $$\\pi(a \\mid s) = \\begin{cases} 1 - \\varepsilon + \\frac{\\varepsilon}{|\\mathcal{A}|}, & \\text{if } a = \\arg\\max_{a'} Q(s, a') \\\\ \\frac{\\varepsilon}{|\\mathcal{A}|}, & \\text{if } a \\ne \\arg\\max_{a'} Q(s, a') \\end{cases}$$ $\\varepsilon$-Decay Scheduling: In practical training regimes, $\\varepsilon$ is initialized high (e.g., $\\varepsilon_0 = 1.0$) to thoroughly map unexplored state-action spaces, and annealed monotonically over training episodes ($e$): $$\\varepsilon_e = \\max(\\varepsilon_{\\min}, \\varepsilon_0 \\times d^e) \\quad \\text{where } d \\in (0.99, 0.9995)$$ ensuring asymptotic convergence to the optimal greedy policy."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q179",
+    "q_num": 179,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L1",
+    "co": "CO5",
+    "score": 9.1,
+    "important": true,
+    "title": "List the key components of a Reinforcement Learning system (Agent, Environment, State, Action, Reward, Policy) and define each briefly.",
+    "url": "question-bank.html?open=q179",
+    "chunks": [
+      "A complete Reinforcement Learning System consists of six foundational elements: Agent: The computational learner and autonomous decision-maker that observes the environment, executes actions, and adapts its policy to maximize return. Environment: The external physical or simulated world surrounding the agent, which receives actions, updates internal dynamics, and emits state transitions and rewards. State ($S_t \\in \\mathcal{S}$): A complete numerical representation of the environment's configuration at timestep $t$, containing all necessary information for optimal decision-making. Action ($A_t \\in \\mathcal{A}$): The set of decisions or control inputs available to the agent that alter the environment's state. Reward ($R_{t+1} \\in \\mathbb{R}$): A scalar feedback signal from the environment quantifying the immediate local performance or utility of taking action $A_t$ in state $S_t$. Policy ($\\pi$): The agent's core behavioral strategy; a mathematical mapping from observed states to action probabilities: $\\pi(a|s) = \\mathbb{P}(A_t = a \\mid S_t = s)$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q180",
+    "q_num": 180,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L4",
+    "co": "CO5",
+    "score": 9.2,
+    "important": true,
+    "title": "Explain feedback-driven learning in RL and contrast it with Supervised Learning.",
+    "url": "question-bank.html?open=q180",
+    "chunks": [
+      "Feedback-Driven Learning in RL: In reinforcement learning, learning is driven by evaluative feedback rather than instructive guidance. The environment never tells the agent what the correct action should have been; it only returns a scalar reward evaluating how good or bad the outcome was. Characteristic Reinforcement Learning (RL) Supervised Learning (SL) Nature of Feedback Evaluative: Scalar reward indicates quality of action; correct answer is never disclosed. Instructive: Ground-truth target label $y$ explicitly specifies the correct answer. Data Distribution Active & Non-i.i.d.: Data is gathered sequentially; agent's actions dictate future states and observations. Passive & i.i.d.: Static, pre-collected training instances sampled independently from fixed distribution. Temporal Credit Assignment Delayed Feedback: An action executed at $t=0$ may only produce a reward at $t=100$ (e.g., winning chess). Instantaneous: Every training instance provides immediate, direct error loss gradients. Optimization Objective Maximizes long-term cumulative discounted reward $G_t$. Minimizes empirical prediction error loss $L(y, \\hat{y})$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q181",
+    "q_num": 181,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.0,
+    "important": true,
+    "title": "Define value function in Reinforcement Learning and explain the significance of it.",
+    "url": "question-bank.html?open=q181",
+    "chunks": [
+      "Definition: A Value Function in RL is a mathematical expectation quantifying the long-term cumulative discounted return an agent can expect to accumulate starting from a given state (State-Value $V^\\pi(s)$) or from taking a specific action in a state (Action-Value $Q^\\pi(s, a)$) while adhering to policy $\\pi$: $$V^\\pi(s) = \\mathbb{E}_\\pi \\left[ \\sum_{k=0}^\\infty \\gamma^k R_{t+k+1} \\;\\middle|\\; S_t = s \\right]$$ Critical Significance in RL: Resolves Immediate Reward Deception: Immediate rewards can be misleading (e.g., greedily grabbing a pawn in chess can lead to instant checkmate). Value functions look beyond instantaneous gains to quantify total strategic sustainability. Enables Policy Improvement: In Generalized Policy Iteration (GPI), value functions serve as the benchmark to evaluate policy quality and guide greedy policy improvements: $\\pi'(s) = \\arg\\max_a Q^\\pi(s, a)$. Solves the Credit Assignment Dilemma: By bootstrapping through the Bellman equation ($V(s) = R + \\gamma V(s')$), value functions assign credit to early decisions that set up future success."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q182",
+    "q_num": 182,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.4,
+    "important": true,
+    "title": "Explain the mechanism of Q-Learning as an off-policy Temporal Difference algorithm.",
+    "url": "question-bank.html?open=q182",
+    "chunks": [
+      "Q-Learning combines two foundational computational paradigms: Temporal Difference (TD) Bootstrapping: Unlike Monte Carlo methods that must wait for full episode termination to calculate return $G_t$, Q-learning updates its estimate after a single timestep using bootstrapping: updating an estimate from another estimate: $$\\text{Target} = R_{t+1} + \\gamma \\max_a Q(S_{t+1}, a)$$ Off-Policy Decoupling: Q-learning decouples the Behavior Policy from the Target Policy : Behavior Policy (Exploratory): Dictates how the agent interacts with the environment to generate transitions $(S_t, A_t, R_{t+1}, S_{t+1})$. Typically an exploratory policy like $\\varepsilon$-greedy or softmax. Target Policy (Greedy / Optimal): Dictates how the update target is calculated. It independently evaluates the strictly greedy policy by using the maximum operator $\\max_a Q(S_{t+1}, a)$ regardless of what action the behavior policy actually takes next. Implication: The agent can explore randomly or learn from historical experience replay buffers, and is still mathematically guaranteed to converge to the optimal action-value function $Q^*$ provided all state-action pairs continue to be visited."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q183",
+    "q_num": 183,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L1",
+    "co": "CO5",
+    "score": 9.3,
+    "important": true,
+    "title": "Define Policy, State-Value function V(s) and Action-Value function Q(s, a) in Reinforcement Learning.",
+    "url": "question-bank.html?open=q183",
+    "chunks": [
+      "Mathematical definitions and formulations of the core RL trilogy: Policy ($\\pi$): The operational behavioral strategy of the agent, defining a probability distribution over actions given a state: $$\\pi(a \\mid s) = \\mathbb{P}(A_t = a \\mid S_t = s) \\quad \\text{such that } \\sum_{a \\in \\mathcal{A}} \\pi(a \\mid s) = 1$$ (or deterministic mapping $a = \\pi(s)$). State-Value Function ($V^\\pi(s)$): The expected cumulative discounted future return when starting in state $s$ and strictly following policy $\\pi$ thereafter: $$V^\\pi(s) = \\mathbb{E}_\\pi \\left[ \\sum_{k=0}^\\infty \\gamma^k R_{t+k+1} \\;\\middle|\\; S_t = s \\right]$$ Action-Value Function ($Q^\\pi(s, a)$): The expected cumulative discounted future return when starting in state $s$, executing an arbitrary action $a$, and strictly following policy $\\pi$ thereafter: $$Q^\\pi(s, a) = \\mathbb{E}_\\pi \\left[ \\sum_{k=0}^\\infty \\gamma^k R_{t+k+1} \\;\\middle|\\; S_t = s, A_t = a \\right]$$ Connecting Identity: $V^\\pi(s) = \\sum_{a \\in \\mathcal{A}} \\pi(a \\mid s) Q^\\pi(s, a)$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q184",
+    "q_num": 184,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 8.9,
+    "important": false,
+    "title": "Explain how to configure discrete observation and action spaces when designing an RL agent in Gymnasium.",
+    "url": "question-bank.html?open=q184",
+    "chunks": [
+      "In Farama Gymnasium , discrete spaces are configured using gymnasium.spaces.Discrete inside custom environment subclasses: Space Specification: spaces.Discrete(n) defines a finite discrete domain consisting of integers $\\{0, 1, \\dots, n-1\\}$. Action Space: Represents distinct directional controls. For 4 cardinal actions (0:Up, 1:Down, 2:Left, 3:Right): self.action_space = spaces.Discrete(4) Observation Space: Represents discrete environmental locations. For a $5 \\times 5$ grid (25 cells): self.observation_space = spaces.Discrete(25) Python Gymnasium Implementation: import gymnasium as gym from gymnasium import spaces class CustomGridEnv(gym.Env): def __init__(self): super().__init__() self.action_space = spaces.Discrete(4) # 4 actions self.observation_space = spaces.Discrete(25) # 25 grid cells self.agent_pos = 0 def reset(self, seed=None, options=None): super().reset(seed=seed) self.agent_pos = 0 return self.agent_pos, {} # Returns observation, info"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q185",
+    "q_num": 185,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.5,
+    "important": true,
+    "title": "List the key components of the Gymnasium library (Env, observation_space, action_space, reset(), step()) and state the purpose of each in building a Reinforcement Learning agent.",
+    "url": "question-bank.html?open=q185",
+    "chunks": [
+      "Gymnasium (Farama Foundation) defines the standardized Python interface for reinforcement learning environments. Its five foundational architectural components are: gym.Env (Base Environment Class): The abstract base class encapsulating the entire simulation lifecycle, state transitions, physics models, and rendering pipelines. Subclassing gym.Env guarantees compatibility with standard RL libraries (Stable-Baselines3, CleanRL). observation_space : A spaces.Space attribute specifying the format, bounds, and data type of valid observations emitted by the environment (e.g., Discrete(16) for grid worlds or Box(low=-np.inf, high=np.inf, shape=(4,)) for continuous CartPole telemetry). Informs the agent of its sensory input dimensions. action_space : A spaces.Space attribute defining the set of valid commands the agent can execute (e.g., Discrete(2) for binary cart forces). Enables action validation and automatic random sampling via env.action_space.sample() for exploration. reset(seed=None, options=None) : Initializes or restarts the environment at the beginning of an episode. Resets internal physics and returns a standardized 2-tuple: (observation, info) . Incorporating seed ensures deterministic reproducibility across experiments. step(action) : Advances the simulation by exactly one discrete timestep by executing the supplied action. Returns the standardized 5-tuple : observation : The new state of the environment ($S_{t+1}$). reward (float): Immediate scalar reward feedback ($R_{t+1}$). terminated (bool): Indicates whether a natural episode completion was reached (e.g., goal reached, agent died). truncated (bool): Indicates whether an artificial episode termination condition was hit (e.g., max timestep limit exceeded). info (dict): Auxiliary diagnostic dictionary containing debugging or profiling metadata."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q186",
+    "q_num": 186,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO5",
+    "score": 9.4,
+    "important": true,
+    "title": "Compare Model-Free vs. Model-Based RL and On-Policy vs. Off- Policy learning. Discuss real-world application pipelines in recommendation engines and intelligent decision systems.",
+    "url": "question-bank.html?open=q186",
+    "chunks": [
+      "1. Model-Free vs. Model-Based RL: Dimension Model-Free RL (e.g., Q-Learning, PPO) Model-Based RL (e.g., Dyna-Q, AlphaZero MCTS) Environment Dynamics Does not learn or use transition $\\mathcal{P}(s'|s, a)$ or reward $\\mathcal{R}$ models. Explicitly learns or is given internal models of $\\mathcal{P}$ and $\\mathcal{R}$. Sample Efficiency Low; requires millions of real trial-and-error interactions. High; simulates hypothetical trajectories internally via planning. Computational Complexity Low per-step compute; updates value/policy directly from experience. High per-step compute; involves trajectory tree search and simulation. Model Bias Zero model bias (learns directly from ground truth environment). Prone to model inaccuracies that degrade policy performance. 2. On-Policy vs. Off-Policy RL: Dimension On-Policy Learning (e.g., SARSA, PPO) Off-Policy Learning (e.g., Q-Learning, SAC, DQN) Policy Relation Behavior policy (data collection) is identical to target policy. Behavior policy (exploration) is decoupled from target policy. Replay Buffer Usage Cannot use replay buffers; old transitions violate current policy. Fully leverages experience replay buffers and offline historical logs. Sample Stability More stable, monotonic policy improvements. Higher sample efficiency, but prone to deadly triad divergence. 3. Real-World Application Pipelines: E-Commerce & Media Recommendation Engines (Off-Policy Model-Free): Netflix and YouTube deploy Off-Policy RL (Slate-Q / Conservative Q-Learning) trained directly on massive historical click/watch logs (replay buffers) without exposing live users to random exploratory actions, optimizing long-term user retention metrics. Intelligent Industrial Decision Systems (Model-Based RL): Semiconductor fabrication facilities and chemical refineries use digital twin simulators (Model-Based RL) to simulate million-step thermal dynamics safely before deploying control policies to physical plant actuators."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q187",
+    "q_num": 187,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.3,
+    "important": true,
+    "title": "Describe various components of Markov Decision Process in details.",
+    "url": "question-bank.html?open=q187",
+    "chunks": [
+      "A Markov Decision Process (MDP) provides the formal mathematical model for sequential stochastic decision problems, specified by the 5-tuple $(\\mathcal{S}, \\mathcal{A}, \\mathcal{P}, \\mathcal{R}, \\gamma)$: State Space ($\\mathcal{S}$): The set of all valid environment states. The core invariant is the Markov Property : $$\\mathbb{P}(S_{t+1}=s_{t+1}, R_{t+1}=r_{t+1} \\mid S_t=s_t, A_t=a_t, \\dots, S_0=s_0, A_0=a_0) = \\mathbb{P}(S_{t+1}=s_{t+1}, R_{t+1}=r_{t+1} \\mid S_t=s_t, A_t=a_t)$$ The current state is a sufficient statistic for the entire history of interactions. Action Space ($\\mathcal{A}$): The set of all available agent actions. Can be discrete (finite buttons) or continuous (multidimensional control torques $\\mathbb{R}^d$). Transition Probability Function ($\\mathcal{P}$): $$\\mathcal{P}(s' \\mid s, a) = \\mathbb{P}(S_{t+1} = s' \\mid S_t = s, A_t = a) \\quad \\text{where } \\sum_{s' \\in \\mathcal{S}} \\mathcal{P}(s' \\mid s, a) = 1$$ Encapsulates environment stochasticity, specifying the probability distribution over all possible successor states. Reward Function ($\\mathcal{R}$): $$\\mathcal{R}(s, a, s') = \\mathbb{E}[R_{t+1} \\mid S_t = s, A_t = a, S_{t+1} = s']$$ Assigns a numerical scalar to transitions, defining the task goal according to the Reward Hypothesis: all goals can be formalized as the maximization of expected cumulative reward. Discount Factor ($\\gamma \\in [0, 1)$): Discounts future rewards exponentially: $G_t = \\sum_{k=0}^\\infty \\gamma^k R_{t+k+1}$, guaranteeing convergence of infinite series and modeling economic/temporal preference. Policy ($\\pi$): The agent's decision function: $\\pi(a \\mid s) = \\mathbb{P}(A_t = a \\mid S_t = s)$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q188",
+    "q_num": 188,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.6,
+    "important": true,
+    "title": "Describe how to implement a goal-oriented agent in Gymnasium. Detail how state representation, reward structures, step functions, and action space definitions lead to successful policy learning.",
+    "url": "question-bank.html?open=q188",
+    "chunks": [
+      "1. Architectural Design Principles for Goal-Oriented RL: State Representation: Encode the environment into a concise, Markovian observation. In a 2D grid world, coordinate tuples $(x, y)$ mapped to integers $s = y \\times W + x$ preserve geometric uniqueness with minimal memory footprint. Action Space: Configure discrete movement choices: spaces.Discrete(4) representing cardinal directions (0:Up, 1:Down, 2:Left, 3:Right). Reward Engineering (Reward Shaping): Goal Arrival: High positive terminal reward ($+10.0$) reinforcing target attainment. Step Penalty (Living Cost): Small negative reward ($-0.1$) per timestep to penalize meandering and compel the shortest path trajectory. Obstacle / Boundary Penalty: Negative penalty ($-1.0$) for colliding with walls. Step Function Logic: Applies action deltas, enforces boundary clamping, checks goal collision for terminated = True , and formats the standardized 5-tuple output. 2. Complete Python Implementation: import gymnasium as gym from gymnasium import spaces import numpy as np class GoalGridEnv(gym.Env): def __init__(self, size=5): super().__init__() self.size = size self.action_space = spaces.Discrete(4) # 0:Up, 1:Down, 2:Left, 3:Right self.observation_space = spaces.Discrete(size * size) self.goal = np.array([size - 1, size - 1]) self.agent_pos = np.array([0, 0]) def reset(self, seed=None, options=None): super().reset(seed=seed) self.agent_pos = np.array([0, 0]) return self._get_obs(), {} def _get_obs(self): return self.agent_pos[1] * self.size + self.agent_pos[0] def step(self, action): moves = {0: [0, -1], 1: [0, 1], 2: [-1, 0], 3: [1, 0]} self.agent_pos = np.clip(self.agent_pos + moves[action], 0, self.size - 1) terminated = np.array_equal(self.agent_pos, self.goal) reward = 10.0 if terminated else -0.1 # Step penalty encourages shortest path truncated = False return self._get_obs(), reward, terminated, truncated, {}"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q189",
+    "q_num": 189,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.7,
+    "important": true,
+    "title": "Define Reinforcement Learning. Describe the agent\u2013environment interaction loop and define the terms State, Action, Reward, Policy and Episode with a suitable example.",
+    "url": "question-bank.html?open=q189",
+    "chunks": [
+      "1. Formal Definition: Reinforcement Learning (RL) is a subfield of machine learning where an autonomous decision-making Agent learns through trial-and-error to map situations to actions in an interactive Environment so as to maximize a numerical scalar reward signal over time. 2. The Agent-Environment Interaction Loop: At each discrete time step $t = 0, 1, 2, \\dots$: The agent observes the environment's current state representation $S_t \\in \\mathcal{S}$. The agent evaluates its behavioral policy $\\pi(A_t \\mid S_t)$ and selects an action $A_t \\in \\mathcal{A}$. The environment receives $A_t$, updates its internal physics/dynamics to transition to next state $S_{t+1} \\sim \\mathcal{P}(\\cdot \\mid S_t, A_t)$, and generates scalar reward $R_{t+1} \\sim \\mathcal{R}(S_t, A_t, S_{t+1})$. The agent receives $(S_{t+1}, R_{t+1})$ and updates its internal policy/value function. 3. Detailed Terminology Definitions with Autonomous Driving Example: Agent: The self-driving car's AI control software system. Environment: The physical highway, roadway geometry, traffic signals, and surrounding dynamic vehicles. State ($S_t$): Comprehensive sensor telemetry vector containing current vehicle speed ($60 \\text{ km/h}$), GPS coordinates, LiDAR obstacle distances, and lane offsets. Action ($A_t$): Continuous control actuators executed by the car: steering wheel angle, accelerator throttle, and braking force. Reward ($R_{t+1}$): Scalar feedback: $+1$ per meter traveled safely within lane boundaries; $-100$ for collisions; $-10$ for sudden jerky braking. Policy ($\\pi$): The neural network mapping camera/LiDAR sensor states directly into steering and acceleration commands. Episode: A complete driving journey starting from departure point and terminating either when the destination is successfully reached or upon a collision accident."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q190",
+    "q_num": 190,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO5",
+    "score": 9.8,
+    "important": true,
+    "title": "Formulate a Markov Decision Process (MDP). Define State-Value V(s) and Action-Value Q(s, a) functions and derive the Bellman Expectation Equation.",
+    "url": "question-bank.html?open=q190",
+    "chunks": [
+      "1. Mathematical Formulation of an MDP: Defined by 5-tuple $(\\mathcal{S}, \\mathcal{A}, \\mathcal{P}, \\mathcal{R}, \\gamma)$ where discounted cumulative return is $G_t = \\sum_{k=0}^\\infty \\gamma^k R_{t+k+1} = R_{t+1} + \\gamma G_{t+1}$. 2. Core Value Function Definitions: State-Value Function: $V^\\pi(s) = \\mathbb{E}_\\pi [G_t \\mid S_t = s]$ Action-Value Function: $Q^\\pi(s, a) = \\mathbb{E}_\\pi [G_t \\mid S_t = s, A_t = a]$ 3. Derivation of the Bellman Expectation Equation for $V^\\pi(s)$: Start from the definition of $V^\\pi(s)$ and substitute the recursive return $G_t = R_{t+1} + \\gamma G_{t+1}$: $$V^\\pi(s) = \\mathbb{E}_\\pi [R_{t+1} + \\gamma G_{t+1} \\mid S_t = s]$$ Using the Law of Total Expectation, expand across all possible actions $a \\sim \\pi(a \\mid s)$: $$V^\\pi(s) = \\sum_{a \\in \\mathcal{A}} \\pi(a \\mid s) \\mathbb{E}_\\pi [R_{t+1} + \\gamma G_{t+1} \\mid S_t = s, A_t = a]$$ Expand the inner expectation over all possible next states $s' \\sim \\mathcal{P}(s' \\mid s, a)$ and rewards: $$\\mathbb{E}_\\pi [R_{t+1} + \\gamma G_{t+1} \\mid S_t = s, A_t = a] = \\sum_{s' \\in \\mathcal{S}} \\mathcal{P}(s' \\mid s, a) \\left[ \\mathcal{R}(s, a, s') + \\gamma \\mathbb{E}_\\pi [G_{t+1} \\mid S_{t+1} = s'] \\right]$$ Recognizing that $\\mathbb{E}_\\pi [G_{t+1} \\mid S_{t+1} = s'] = V^\\pi(s')$, substitute this back: $$\\mathbf{V^\\pi(s) = \\sum_{a \\in \\mathcal{A}} \\pi(a",
+      "\\mid s) \\sum_{s' \\in \\mathcal{S}} \\mathcal{P}(s' \\mid s, a) \\left[ \\mathcal{R}(s, a, s') + \\gamma V^\\pi(s') \\right]}$$ 4. Derivation for $Q^\\pi(s, a)$: Similarly, expressing $Q^\\pi(s, a)$ in terms of successor action-values: $$\\mathbf{Q^\\pi(s, a) = \\sum_{s' \\in \\mathcal{S}} \\mathcal{P}(s' \\mid s, a) \\left[ \\mathcal{R}(s, a, s') + \\gamma \\sum_{a' \\in \\mathcal{A}} \\pi(a' \\mid s') Q^\\pi(s', a') \\right]}$$ Conclusion: The Bellman Expectation Equation expresses the value of a state recursively as the immediate expected reward plus the discounted expected value of the succeeding state."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q191",
+    "q_num": 191,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.4,
+    "important": true,
+    "title": "State the Markov Property. List and define the five elements (S, A, P, R, \u03b3) of a Markov Decision Process with a suitable example.",
+    "url": "question-bank.html?open=q191",
+    "chunks": [
+      "1. The Markov Property: A stochastic process possesses the Markov property if the conditional probability distribution of future states and rewards depends strictly upon the current state and action, and is conditionally independent of all preceding past states and actions: $$\\mathbb{P}(S_{t+1} = s_{t+1}, R_{t+1} = r_{t+1} \\mid S_t, A_t, S_{t-1}, A_{t-1}, \\dots, S_0, A_0) = \\mathbb{P}(S_{t+1} = s_{t+1}, R_{t+1} = r_{t+1} \\mid S_t, A_t)$$ In concise terms: \"The future is independent of the past given the present.\" 2. The Five Elements of an MDP: State Space ($\\mathcal{S}$): The set of all possible environmental situations. Action Space ($\\mathcal{A}$): The set of all permissible actions available to the agent. Transition Probability Matrix ($\\mathcal{P}$): $\\mathcal{P}(s' \\mid s, a) = \\mathbb{P}(S_{t+1} = s' \\mid S_t = s, A_t = a)$. Reward Function ($\\mathcal{R}$): $\\mathcal{R}(s, a, s') = \\mathbb{E}[R_{t+1} \\mid S_t = s, A_t = a, S_{t+1} = s']$. Discount Factor ($\\gamma \\in [0, 1)$): Balances present vs. future reward importance. 3. Concrete Example: Automated Warehouse Delivery Drone: States ($\\mathcal{S}$): Battery levels: $\\{\\text{High, Medium, Low, Depleted}\\}$. Actions ($\\mathcal{A}$): Operational decisions: $\\{\\text{Deliver Package, Wait Idle, Recharge}\\}$. Transitions ($\\mathcal{P}$): If state = High and action = Deliver : transitions to Medium with $p=0.8$, stays High with $p=0.2$.",
+      "If state = Low and action = Deliver : transitions to Depleted with $p=0.3$, transitions to Low with $p=0.7$. Rewards ($\\mathcal{R}$): Delivering package yields $+10$; waiting yields $0$; battery running out to Depleted incurs $-50$ penalty. Discount Factor ($\\gamma = 0.95$): Compels the drone to prioritize long-term battery replenishment over reckless short-term deliveries."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q192",
+    "q_num": 192,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L4",
+    "co": "CO5",
+    "score": 9.8,
+    "important": true,
+    "title": "Explain the Q-Learning algorithm in detail. Write the Q-value update rule, outline the step-by-step training loop, and explain how learning rate alpha and discount factor gamma control convergence.",
+    "url": "question-bank.html?open=q192",
+    "chunks": [
+      "1. Algorithm Overview: Q-Learning is a model-free, off-policy Temporal Difference (TD) control algorithm designed to find the optimal action-value function $Q^*(s, a)$ directly from environmental transitions without requiring an explicit model of transition dynamics. 2. Mathematical Q-Value Update Rule: $$Q(S_t, A_t) \\leftarrow Q(S_t, A_t) + \\alpha \\left[ \\underbrace{R_{t+1} + \\gamma \\max_{a \\in \\mathcal{A}} Q(S_{t+1}, a)}_{\\text{TD Target}} - Q(S_t, A_t) \\right]$$ where the Temporal Difference Error is $\\delta_t = R_{t+1} + \\gamma \\max_a Q(S_{t+1}, a) - Q(S_t, A_t)$. 3. Step-by-Step Complete Training Loop: Initialization: Initialize table $Q(s, a)$ arbitrarily (e.g., zeros) for all $s \\in \\mathcal{S}, a \\in \\mathcal{A}$. Set $Q(\\text{terminal}, \\cdot) = 0$. Episode Loop: For each episode $e = 1, \\dots, E$: Initialize environment and observe initial state $S$. Step Loop: For each timestep $t$ until $S$ is terminal: Select action $A$ from state $S$ using an exploratory policy derived from $Q$ (e.g., $\\varepsilon$-greedy). Execute action $A$, observe scalar reward $R$ and successor state $S'$. Compute target $Y = R + \\gamma \\max_a Q(S', a)$ (if $S'$ is terminal, $Y = R$). Update cell: $Q(S, A) \\leftarrow Q(S, A) + \\alpha [Y - Q(S, A)]$. Transition state: $S \\leftarrow S'$. Decay exploration rate: $\\varepsilon \\leftarrow \\max(\\varepsilon_{\\min}, \\varepsilon \\times \\lambda)$.",
+      "4. How Hyperparameters Control Convergence: Learning Rate ($\\alpha \\in (0, 1]$): Determines the step size toward TD targets. For guaranteed convergence to $Q^*$, the Robbins-Monro stochastic conditions must hold: $\\sum_{t=1}^\\infty \\alpha_t = \\infty$ and $\\sum_{t=1}^\\infty \\alpha_t^2 < \\infty$. If $\\alpha = 1.0$, the agent overwrites past knowledge instantly; if $\\alpha$ is too small, learning is excessively slow. A typical schedule is $\\alpha \\in [0.01, 0.1]$. Discount Factor ($\\gamma \\in [0, 1)$): Controls the effective temporal planning horizon $H \\approx \\frac{1}{1 - \\gamma}$. If $\\gamma = 0$, the update only considers immediate reward $R$. As $\\gamma \\to 1$ (e.g., $0.99$), Bellman backup propagates values across long credit assignment chains, stabilizing long-horizon convergence."
+    ],
+    "type": "question"
+  },
+  {
     "id": "comprehensive-report",
     "title": "ML Cheat Sheet",
     "url": "comprehensive-report.html",

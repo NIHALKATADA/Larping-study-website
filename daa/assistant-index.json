@@ -1054,6 +1054,312 @@
     "type": "question"
   },
   {
+    "id": "q63",
+    "q_num": 63,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.4,
+    "important": true,
+    "title": "Define dynamic programming.",
+    "url": "question-bank.html?open=q63",
+    "chunks": [
+      "Dynamic Programming (DP) is an algorithm design paradigm for solving optimization problems by decomposing them into simpler, overlapping subproblems. It solves each subproblem exactly once and caches the result in a table (memoization or tabulation) to prevent redundant computations. Key Properties Required: Optimal Substructure: An optimal solution to the overall problem incorporates optimal solutions to its subproblems. Overlapping Subproblems: Recursive subproblems recur repeatedly rather than generating new instances."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q64",
+    "q_num": 64,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.3,
+    "important": true,
+    "title": "Define backtracking.",
+    "url": "question-bank.html?open=q64",
+    "chunks": [
+      "Backtracking is a systematic algorithmic paradigm for solving constraint satisfaction problems by incrementally constructing candidate solutions within a state-space tree. It traverses candidate states using Depth-First Search (DFS) and applies bounding functions. Pruning Principle: The moment a partial solution violates any problem constraint, the algorithm abandons (prunes) that entire search branch and immediately backtracks to the parent decision node to evaluate alternative choices."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q65",
+    "q_num": 65,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.1,
+    "important": true,
+    "title": "Explain N-Queens problem.",
+    "url": "question-bank.html?open=q65",
+    "chunks": [
+      "The $N$-Queens problem is a classic combinatorial constraint satisfaction problem that requires placing $N$ non-attacking chess queens on an $N \\times N$ chessboard. Under standard chess rules, a queen attacks any piece along the same row, column, or diagonal. Problem Formulation & Constraints: Representation: A 1D array $X[1 \\dots N]$ where $X[i] = j$ signifies that Queen $i$ occupies row $i$ and column $j$. This representation inherently satisfies the row constraint of exactly one queen per row. Column Constraint: No two queens share a column: $X[i] \\neq X[k]$ for all distinct $i, k$. Diagonal Constraint: No two queens share a major or minor diagonal: $|X[i] - X[k]| \\neq |i - k|$ for all $i \\neq k$. Solutions exist for all $N \\ge 4$ (no solutions exist for $N=2$ and $N=3$, while $N=1$ is trivial)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q66",
+    "q_num": 66,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.4,
+    "important": true,
+    "title": "Explain backtracking in the N-Queens problem.",
+    "url": "question-bank.html?open=q66",
+    "chunks": [
+      "Backtracking solves the $N$-Queens problem by positioning queens row by row from row $1$ to $N$. For each row $k$, candidate columns $col \\in \\{1 \\dots N\\}$ are systematically tested against previously placed queens using a bounding function Place(k, col) . Safety Bounding Condition: A candidate placement is valid if and only if no earlier queen $i < k$ shares the same column ($X[i] == col$) or the same diagonal ($|X[i] - col| == |k - i|$). If safe, the algorithm sets $X[k] = col$ and recursively explores row $k+1$. If every column in row $k$ causes a conflict, the current state is identified as a dead end; the algorithm abandons the subtree and backtracks to row $k-1$ to advance the previous queen to alternative remaining columns. bool Place(int k, int col) { for (int i = 1; i < k; i++) if (X[i] == col || abs(X[i] - col) == abs(i - k)) return false; return true; } By executing Depth-First Search with bounding, backtracking dynamically prunes fruitless paths, reducing the search space from $O(N^N)$ down to a small fraction of $O(N!)$. The search completes when all $N$ queens are safely placed."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q67",
+    "q_num": 67,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.6,
+    "important": true,
+    "title": "Solve the 0/1 Knapsack problem for weights (2,3,4,5), profits (7,11,15,20) and capacity 5. Identify the  maximum profit.",
+    "url": "question-bank.html?open=q67",
+    "chunks": [
+      "Given 4 items with weights $w = (2, 3, 4, 5)$, profits $p = (7, 11, 15, 20)$, and knapsack capacity $W = 5$. We apply the 0/1 Knapsack dynamic programming recurrence: $$V[i, w] = \\max(V[i-1, w], V[i-1, w - w_i] + p_i) \\quad (\\text{for } w_i \\le w)$$ Item ($w_i, p_i$) $w=0$ $w=1$ $w=2$ $w=3$ $w=4$ $w=5$ $i=1$ (2, 7) 0 0 7 7 7 7 $i=2$ (3, 11) 0 0 7 11 11 18 $i=3$ (4, 15) 0 0 7 11 15 18 $i=4$ (5, 20) 0 0 7 11 15 20 Traceback: At $V[4, 5] = 20 \\neq V[3, 5] = 18$, Item 4 is selected. The remaining capacity becomes $5 - 5 = 0$. The optimal item set is $\\{\\text{Item 4}\\}$ with total weight $5$ and Maximum Profit = 20 ."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q68",
+    "q_num": 68,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.6,
+    "important": true,
+    "title": "Explain the backtracking approach to the 4-Queens problem and show one valid arrangement of queens.",
+    "url": "question-bank.html?open=q68",
+    "chunks": [
+      "The 4-Queens problem positions 4 queens on a $4 \\times 4$ chessboard such that no two attack each other. Backtracking systematically explores placements row by row, pruning branches when column or diagonal conflicts occur. Backtracking Execution Steps: Row 1: Place $Q_1$ at column 1. In Row 2, column 3 is safe. In Row 3, all columns $(1,2,3,4)$ are attacked. Backtrack! Row 1: Move $Q_1$ to column 2 ($X[1] = 2$). Row 2: Testing columns yields column 4 safe ($X[2] = 4$). Row 3: Column 1 is safe from both earlier queens ($X[3] = 1$). Row 4: Testing columns reveals column 3 is safe ($X[4] = 3$). Valid Arrangement: The resulting solution vector is $X = [2, 4, 1, 3]$ (placing queens at $(1,2), (2,4), (3,1), (4,3)$), where all column and diagonal constraints are completely satisfied."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q69",
+    "q_num": 69,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 8.8,
+    "important": false,
+    "title": "Define overlapping subproblems.",
+    "url": "question-bank.html?open=q69",
+    "chunks": [
+      "Overlapping subproblems is a fundamental property of problems where recursive decomposition solves the identical smaller subproblems repeatedly rather than creating unique ones. Unlike Divide and Conquer (which divides problems into independent, disjoint subproblems like Merge Sort), Dynamic Programming caches the results of overlapping subproblems in memory tables (memoization or tabulation). This avoids exponential recalculation, reducing runtime to polynomial order (e.g., computing Fibonacci numbers or LCS)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q70",
+    "q_num": 70,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 8.6,
+    "important": false,
+    "title": "Using denominations 3,2,1, find the coins selected by dynamic programming for amount 6.",
+    "url": "question-bank.html?open=q70",
+    "chunks": [
+      "For amount $A = 6$ and coin denominations $D = \\{3, 2, 1\\}$, the DP recurrence minimizes total coins: $$dp[v] = 1 + \\min_{c \\in D, c \\le v} dp[v - c], \\quad dp[0] = 0$$ Table Progression: $dp[1]=1$, $dp[2]=1$, $dp[3]=1$, $dp[4]=2$, $dp[5]=2$, and $dp[6]=1+dp[3]=2$. Selected Coins: Backtracking from amount 6 picks coin 3 (remaining 3), then picks another coin 3. Thus, the optimal selection is two coins: $\\{3, 3\\}$ ."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q71",
+    "q_num": 71,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.1,
+    "important": true,
+    "title": "For activities with start times (2,4,1,5,7,8) and finish times (3,5,6,7,9,11) select a maximum compatible set using the greedy strategy.",
+    "url": "question-bank.html?open=q71",
+    "chunks": [
+      "The greedy strategy sorts activities by ascending finish times and chooses non-overlapping activities whose start time is $\\ge$ previous finish time. Given sorted intervals $A_1(2,3), A_2(4,5), A_3(1,6), A_4(5,7), A_5(7,9), A_6(8,11)$: Pick $A_1(2,3)$ (finish 3). Pick $A_2(4,5)$ ($4 \\ge 3$, finish 5). Reject $A_3$ ($1 < 5$). Pick $A_4(5,7)$ ($5 \\ge 5$, finish 7). Pick $A_5(7,9)$ ($7 \\ge 7$, finish 9). Reject $A_6$ ($8 < 9$). Selected Set: $\\{A_1, A_2, A_4, A_5\\}$ ( 4 activities )."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q72",
+    "q_num": 72,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 8.9,
+    "important": false,
+    "title": "Find an LCS of X={ABCBDABDCBBDABC} and Y={BDC} Show the dynamic-programming approach and state the LCS length.",
+    "url": "question-bank.html?open=q72",
+    "chunks": [
+      "We find the LCS of $X = \\text{\"ABCBDABDCBBDABC\"}$ and $Y = \\text{\"BDC\"}$ using DP recurrence $c[i,j] = c[i-1,j-1] + 1$ on character matches. Sequential Match: Character $Y[1]=\\text{'B'}$ matches at $X[2]$, $Y[2]=\\text{'D'}$ matches at $X[5]$, and $Y[3]=\\text{'C'}$ matches at $X[9]$ ($2 < 5 < 9$). Because all characters of $Y$ appear in sequential order inside $X$, string $Y$ forms a valid common subsequence. Thus, $\\text{LCS} = \\text{\"BDC\"}$ with LCS Length = 3 ."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q73",
+    "q_num": 73,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 8.7,
+    "important": false,
+    "title": "What is a promising node in backtracking?",
+    "url": "question-bank.html?open=q73",
+    "chunks": [
+      "In backtracking algorithms, a node in the state-space tree is termed promising if it satisfies all problem constraints established so far and has the potential to lead to at least one valid, feasible solution. Conversely, a node is non-promising if it violates any constraint. Backtracking evaluates nodes via bounding functions, immediately pruning non-promising subtrees and retreating to the parent node, thereby eliminating fruitless combinatorial searches."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q74",
+    "q_num": 74,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 8.5,
+    "important": false,
+    "title": "Find an LCS of X=ABCBCABCAAB and Y=AC",
+    "url": "question-bank.html?open=q74",
+    "chunks": [
+      "To find an LCS of $X = \\text{\"ABCBCABCAAB\"}$ (length 11) and $Y = \\text{\"AC\"}$ (length 2), we use the Dynamic Programming table formulation $c[i,j]$. Subsequence Analysis: Character $Y[1]=\\text{'A'}$ occurs at index $X[1]$. Subsequent character $Y[2]=\\text{'C'}$ occurs at index $X[3]$ ($1 < 3$). Both characters of $Y$ appear in forward sequential order inside $X$. Since $|Y| = 2$ is the upper bound on common subsequence length, the entire string $Y$ is an optimal subsequence. Thus, $\\text{LCS} = \\text{\"AC\"}$ with Length = 2 ."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q75",
+    "q_num": 75,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.2,
+    "important": true,
+    "title": "Given Huffman frequencies 4,7,8,10 identify the first two combinations.",
+    "url": "question-bank.html?open=q75",
+    "chunks": [
+      "Huffman coding greedily merges the two lowest frequency nodes from a min-heap. Given initial frequencies: $\\{4, 7, 8, 10\\}$. First Combination: Extract smallest $4$ and $7$. Merge into internal node of weight $4 + 7 = \\mathbf{11}$. Set: $\\{8, 10, 11\\}$. Second Combination: Extract next smallest $8$ and $10$. Merge into internal node of weight $8 + 10 = \\mathbf{18}$. Set: $\\{11, 18\\}$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q76",
+    "q_num": 76,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L4",
+    "co": "CO4",
+    "score": 9.5,
+    "important": true,
+    "title": "Compare greedy algorithms and dynamic programming with respect to strategy, subproblem handling and optimality.",
+    "url": "question-bank.html?open=q76",
+    "chunks": [
+      "Criterion Greedy Algorithm Dynamic Programming Strategy Makes locally optimal choice at each step; never reconsiders. Explores all subproblem choices and combines their solutions. Subproblem Handling Solves subproblems top-down sequentially without overlapping storage. Solves overlapping subproblems bottom-up, memoizing table entries. Optimality Does not guarantee global optimum for all problems (e.g., 0/1 knapsack). Always guarantees global optimum if optimal substructure holds."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q77",
+    "q_num": 77,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.2,
+    "important": true,
+    "title": "Define a longest common subsequence.",
+    "url": "question-bank.html?open=q77",
+    "chunks": [
+      "A subsequence of a sequence $X$ is obtained by deleting zero or more elements without changing the order of remaining elements. A Longest Common Subsequence (LCS) of sequences $X$ and $Y$ is a common subsequence of maximum length. Unlike substrings, elements need not be contiguous. The DP recurrence is: $$c[i,j] = \\begin{cases} c[i-1,j-1] + 1 & \\text{if } x_i = y_j \\\\ \\max(c[i-1,j], c[i,j-1]) & \\text{if } x_i \\neq y_j \\end{cases}$$"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q78",
+    "q_num": 78,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.3,
+    "important": true,
+    "title": "What is a state-space tree in the N-Queens problem?",
+    "url": "question-bank.html?open=q78",
+    "chunks": [
+      "A state-space tree in the $N$-Queens problem is an ordered tree representing all partial and candidate queen configurations explored during backtracking search. Tree Structure: The root represents an empty chessboard. Level $k$ corresponds to placing the $k$-th queen in row $k$, branching across $N$ possible columns. Pruning: Nodes violating column or diagonal safety are dead ends (non-promising) and are pruned immediately, while complete valid leaves at level $N$ constitute solutions."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q79",
+    "q_num": 79,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.7,
+    "important": true,
+    "title": "Consider m=2,p=4,s=5,i=7\nGenerate Huffman Tree\nCalculate number of bits using frequency of characters and number of bits required to represent those characters.",
+    "url": "question-bank.html?open=q79",
+    "chunks": [
+      "Given character frequencies: $m: 2, p: 4, s: 5, i: 7$ (total 18). We construct the optimal Huffman Tree using greedy min-heap merges: Merge 1: Combine $m(2)$ and $p(4)$ into node $(6)$ with edge bits $0, 1$. Merge 2: Combine $s(5)$ and node $(6)$ into node $(11)$ with edge bits $0, 1$. Merge 3: Combine $i(7)$ and node $(11)$ into root $(18)$. Character Frequency ($f$) Code Bits ($l$) Total ($f \\times l$) $i$ 7 0 1 7 $s$ 5 10 2 10 $m$ 2 110 3 6 $p$ 4 111 3 12 Total Bits: $\\sum (f_i \\times l_i) = 7 + 10 + 6 + 12 = \\mathbf{35\\text{ bits}}$ (versus fixed 2-bit encoding requiring $18 \\times 2 = 36$ bits)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "q80",
+    "q_num": 80,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.6,
+    "important": true,
+    "title": "Explain how dynamic programming can solve the LCS problem. Illustrate the construction of the table using two short strings.",
+    "url": "question-bank.html?open=q80",
+    "chunks": [
+      "The Longest Common Subsequence (LCS) problem finds the maximum-length subsequence present in two sequences $X$ and $Y$. Dynamic Programming solves it by defining $L[i,j]$ as the LCS length of prefixes $X[1\\dots i]$ and $Y[1\\dots j]$ using the recurrence: $$L[i,j] = \\begin{cases} 0 & \\text{if } i=0 \\text{ or } j=0 \\\\ L[i-1,j-1] + 1 & \\text{if } X[i] = Y[j] \\\\ \\max(L[i-1,j], L[i,j-1]) & \\text{if } X[i] \\neq Y[j] \\end{cases}$$ Illustration with $X = \\text{\"ABA\"}$ and $Y = \\text{\"BA\"}$: Initialize row $0$ and column $0$ to 0. For $X[1]=\\text{'A'}$: $L[1,1]=0$, $L[1,2]=L[0,1]+1=1$. For $X[2]=\\text{'B'}$: $L[2,1]=L[1,0]+1=1$, $L[2,2]=\\max(L[1,2], L[2,1])=1$. For $X[3]=\\text{'A'}$: $L[3,1]=\\max(1,0)=1$, $L[3,2]=L[2,1]+1=2$. Traceback: From cell $(3,2)$ with value 2, diagonal jumps identify characters $\\text{'A'}$ at $(3,2)$ and $\\text{'B'}$ at $(2,1)$, yielding the common subsequence $\\text{LCS} = \\text{\"BA\"}$ with length 2 in $O(m \\cdot n)$ time."
+    ],
+    "type": "question"
+  },
+  {
     "id": "comprehensive-report",
     "title": "DAA Cheat Sheet",
     "url": "comprehensive-report.html",

@@ -897,3 +897,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+// Toggle between standard exam answer and simplified revision view
+window.toggleAnswerView = function(btn, mode) {
+    const parent = btn.closest('.answer-content');
+    if (!parent) return;
+    
+    parent.querySelectorAll('.ans-toggle-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    const fullView = parent.querySelector('.view-full');
+    const simpleView = parent.querySelector('.view-simple');
+    
+    if (mode === 'simple') {
+        if (fullView) fullView.style.display = 'none';
+        if (simpleView) simpleView.style.display = 'block';
+    } else {
+        if (fullView) fullView.style.display = 'block';
+        if (simpleView) simpleView.style.display = 'none';
+    }
+};

@@ -151,7 +151,7 @@ def build_subject(subject_dir, templates_dir, data_dir):
         
     print(f"[{subject_id}] Successfully rebuilt question-bank.html with {len(questions)} questions.")
     
-    midterm_questions = sorted([q for q in questions if q.get('important') and (q.get('exam') == 'midterm' or (q.get('unit') in ['I', 'II', 'III'] and q.get('exam') != 'endterm'))], key=lambda x: float(x.get('score', 0) or 0), reverse=True)
+    midterm_questions = sorted([q for q in questions if q.get('important') and q.get('unit') in ['I', 'II', 'III'] and q.get('exam') != 'endterm'], key=lambda x: float(x.get('score', 0) or 0), reverse=True)
     output_midterm = template.render(
         questions=midterm_questions, 
         is_midterm=True, 

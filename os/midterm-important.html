@@ -409,7 +409,12 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>An <strong>Operating System (OS)</strong> is system software that acts as an intermediary between computer hardware and the computer user. It manages hardware resources and provides common services for computer programs, ensuring efficient and convenient execution of user applications.</p>
+                            
+                            <div class="view-full">
+                                <p>An <strong>Operating System (OS)</strong> is system software that acts as an intermediary between computer hardware and the computer user. It manages hardware resources and provides common services for computer programs, ensuring efficient and convenient execution of user applications.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -434,11 +439,16 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>The <strong>Mode Bit</strong> is a hardware flag used by the OS to differentiate between user-level and system-level execution to protect system integrity.</p>
+                            
+                            <div class="view-full">
+                                <p>The <strong>Mode Bit</strong> is a hardware flag used by the OS to differentiate between user-level and system-level execution to protect system integrity.</p>
 <ul>
 <li><strong>0:</strong> Kernel Mode (System/Supervisor mode) - full access to hardware.</li>
 <li><strong>1:</strong> User Mode - restricted access.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -463,7 +473,12 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>The <strong>Timer (Hardware Timer)</strong> mechanism prevents permanent freezing. The OS sets a timer to interrupt the CPU after a specific time slice (quantum). When the timer expires, it generates an interrupt that forces the CPU back into Kernel Mode, allowing the OS to regain control and forcefully terminate or preempt the looping program.</p>
+                            
+                            <div class="view-full">
+                                <p>The <strong>Timer (Hardware Timer)</strong> mechanism prevents permanent freezing. The OS sets a timer to interrupt the CPU after a specific time slice (quantum). When the timer expires, it generates an interrupt that forces the CPU back into Kernel Mode, allowing the OS to regain control and forcefully terminate or preempt the looping program.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -488,13 +503,18 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>System Calls</strong> provide the programming interface between a user application and the operating system services. They act as a bridge allowing user programs to request privileged operations (like reading a file) from the OS kernel.</p>
+                            
+                            <div class="view-full">
+                                <p><strong>System Calls</strong> provide the programming interface between a user application and the operating system services. They act as a bridge allowing user programs to request privileged operations (like reading a file) from the OS kernel.</p>
 <p><strong>Categories:</strong></p>
 <ol>
 <li><strong>Process Control:</strong> <code>fork()</code>, <code>exit()</code></li>
 <li><strong>File Management:</strong> <code>open()</code>, <code>read()</code>, <code>write()</code></li>
 <li><strong>Device Management:</strong> <code>ioctl()</code>, <code>read()</code> from device</li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -519,7 +539,9 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <table>
+                            
+                            <div class="view-full">
+                                <table>
 <thead><tr><th>Feature</th><th>Single-Processor</th><th>Multiprocessor</th></tr></thead>
 <tbody>
 <tr><td><strong>Number of CPUs</strong></td><td>Only one main CPU.</td><td>Two or more CPUs sharing memory.</td></tr>
@@ -527,6 +549,9 @@
 <tr><td><strong>Reliability</strong></td><td>Low (If CPU fails, system halts).</td><td>High (Graceful degradation; if one fails, others take over).</td></tr>
 </tbody>
 </table>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -551,7 +576,9 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ol>
+                            
+                            <div class="view-full">
+                                <ol>
 <li>The user application makes a <code>read()</code> <strong>System Call</strong>.</li>
 <li>The CPU switches to <strong>Kernel Mode</strong> via a software trap.</li>
 <li>The OS asks the <strong>Device Controller</strong> (disk) to fetch the file.</li>
@@ -560,6 +587,9 @@
 <li>The OS copies the data into the user program's memory.</li>
 <li>The OS switches back to <strong>User Mode</strong> and returns control to the application.</li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -584,13 +614,18 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ol>
+                            
+                            <div class="view-full">
+                                <ol>
 <li><strong>Process Control:</strong> Create, terminate, or suspend processes. <em>Ex: <code>fork()</code> to create a child process.</em></li>
 <li><strong>File Management:</strong> Create, read, write, or delete files. <em>Ex: <code>read()</code> to read bytes from a text file.</em></li>
 <li><strong>Device Management:</strong> Request/release devices and read/write to them. <em>Ex: <code>ioctl()</code> to configure a network interface.</em></li>
 <li><strong>Information Maintenance:</strong> Get or set system data. <em>Ex: <code>gettimeofday()</code> to fetch the current system time.</em></li>
 <li><strong>Communication:</strong> Create connections or send messages between processes. <em>Ex: <code>pipe()</code> to connect the output of one process to another.</em></li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -615,9 +650,14 @@
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Dual-Mode Operation</strong> provides hardware-level protection by dividing execution into User Mode (Bit=1) and Kernel Mode (Bit=0). Privileged instructions (like halting the CPU or direct hardware I/O) can only execute in Kernel Mode.</p>
+                            
+                            <div class="view-full">
+                                <p><strong>Dual-Mode Operation</strong> provides hardware-level protection by dividing execution into User Mode (Bit=1) and Kernel Mode (Bit=0). Privileged instructions (like halting the CPU or direct hardware I/O) can only execute in Kernel Mode.</p>
 <p><strong>How they work together:</strong><br>
 If a malicious user program runs in User Mode, it cannot directly crash the hardware because it lacks privileges. However, it could write an infinite loop to hog the CPU forever. This is where the <strong>Timer</strong> steps in. The OS configures the hardware timer before switching to User Mode. When the timer hits zero, it triggers an interrupt. The hardware forces the mode bit to 0 (Kernel Mode) and hands control back to the OS, which can then safely kill the malicious looping program.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -642,8 +682,13 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>The suitable OS is a <strong>Time-Sharing Operating System</strong>.</p>
+                            
+                            <div class="view-full">
+                                <p>The suitable OS is a <strong>Time-Sharing Operating System</strong>.</p>
 <p><strong>Justification:</strong> Time-Sharing is designed specifically for interactivity among multiple users. It uses CPU scheduling and multiprogramming to provide each user with a small portion of a time-shared computer. The CPU switches from one student's program to the next extremely rapidly (e.g., every 100 milliseconds). Because the switching is so fast, every student gets immediate response times and feels as though they have their own dedicated computer, satisfying the "interactive" and "fair share" requirements.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -668,7 +713,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ol>
+                            
+                            <div class="view-full">
+                                <ol>
 <li>The Word processor (in <strong>User Mode</strong>) issues a <code>write()</code> <strong>System Call</strong> to send data to the printer.</li>
 <li>A trap occurs, changing the mode bit to 0, switching execution to <strong>Kernel Mode</strong>.</li>
 <li>The OS kernel verifies permissions and sends the print command to the Printer's <strong>Device Controller</strong>.</li>
@@ -677,6 +724,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <li>The CPU switches back to <strong>Kernel Mode</strong>, processes the interrupt, and marks the Word processor as ready to resume.</li>
 <li>The OS switches back to <strong>User Mode</strong> and control returns to Word, notifying the user it finished.</li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -701,8 +751,13 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>A <strong>Process</strong> is a program in execution. It is an active entity.</p>
+                            
+                            <div class="view-full">
+                                <p>A <strong>Process</strong> is a program in execution. It is an active entity.</p>
 <p><strong>Difference:</strong> A program is a passive entity (a file containing code stored on disk). A process is active; it has a program counter specifying the next instruction to execute, and associated resources (memory, registers).</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -727,7 +782,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Context Switching</strong> is the mechanism where the OS saves the state (context) of the currently running process into its PCB and loads the saved state of another process from its PCB, allowing the CPU to switch execution from one process to another seamlessly.</p>
+                            
+                            <div class="view-full">
+                                <p><strong>Context Switching</strong> is the mechanism where the OS saves the state (context) of the currently running process into its PCB and loads the saved state of another process from its PCB, allowing the CPU to switch execution from one process to another seamlessly.</p>
 
 
 <div class="diagram-container">
@@ -766,6 +823,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 </svg>
 </div>
 
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -790,7 +850,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ol>
+                            
+                            <div class="view-full">
+                                <ol>
 <li><strong>New:</strong> The process is being created.</li>
 <li><strong>Ready:</strong> The process is waiting to be assigned to a processor.</li>
 <li><strong>Running:</strong> Instructions are being executed on the CPU.</li>
@@ -822,6 +884,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
   <line x1="225" y1="150" x2="190" y2="120" stroke="currentColor" stroke-width="2" marker-end="url(#arrow6)"/>
 </svg>
 </div>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -846,11 +911,16 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>Long-Term Scheduler (Job Scheduler):</strong> Selects processes from the disk and loads them into memory for execution, controlling the Degree of Multiprogramming.</li>
 <li><strong>Short-Term Scheduler (CPU Scheduler):</strong> Selects a process from the Ready Queue and allocates the CPU to it. Runs very frequently.</li>
 <li><strong>Medium-Term Scheduler:</strong> Swaps processes out of memory to disk and later swaps them back in to relieve memory pressure and improve the process mix.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -875,13 +945,18 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Context Switching</strong> is necessary because a single CPU core can only execute one process at a time. To provide the illusion of multitasking, the OS must rapidly swap processes in and out, saving their state so they can resume exactly where they left off.</p>
+                            
+                            <div class="view-full">
+                                <p><strong>Context Switching</strong> is necessary because a single CPU core can only execute one process at a time. To provide the illusion of multitasking, the OS must rapidly swap processes in and out, saving their state so they can resume exactly where they left off.</p>
 <p><strong>Situations:</strong></p>
 <ol>
 <li>A hardware interrupt occurs (e.g., a key is pressed).</li>
 <li>A process's time quantum expires in a Time-Sharing system.</li>
 <li>A process makes a blocking System Call (e.g., requesting to read a file).</li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -906,10 +981,15 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>Long-Term Scheduler:</strong> Responsible for moving the process from the disk (job pool) into main memory to begin execution. It dictates the degree of multiprogramming.</li>
 <li><strong>Medium-Term Scheduler:</strong> Responsible for swapping the process out temporarily to the disk when waiting for I/O, freeing up RAM for other processes, and swapping it back in later.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -934,13 +1014,18 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>The CPU hardware only knows about <strong>Kernel Threads</strong>. A <strong>User Thread</strong> (like spell-check) is created purely in user space by a thread library. To execute it, the library must map it to a Kernel Thread.</p>
+                            
+                            <div class="view-full">
+                                <p>The CPU hardware only knows about <strong>Kernel Threads</strong>. A <strong>User Thread</strong> (like spell-check) is created purely in user space by a thread library. To execute it, the library must map it to a Kernel Thread.</p>
 <ol>
 <li>The user library creates the spell-check thread.</li>
 <li>The library maps this thread to an available Kernel Thread using a multi-threading model (e.g., Many-to-One or Many-to-Many).</li>
 <li>The OS scheduler schedules that specific Kernel Thread onto a physical CPU core.</li>
 <li>When the Kernel Thread runs, it executes the code of the user thread mapped to it.</li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -965,7 +1050,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>New:</strong> The process is being loaded into memory but isn't ready to execute. <em>Transition: Admitted to Ready queue.</em></li>
 <li><strong>Ready:</strong> Residing in memory, waiting for CPU time. <em>Transition: Scheduler dispatches it to Running.</em></li>
 <li><strong>Running:</strong> Instructions are actively being executed on the CPU. <em>Transitions:</em>
@@ -978,6 +1065,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <li><strong>Waiting (Blocked):</strong> Waiting for an external event like user input. <em>Transition: I/O completes &rarr; Moves back to Ready.</em></li>
 <li><strong>Terminated:</strong> Execution complete, OS reclaims memory.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1002,13 +1092,18 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ol>
+                            
+                            <div class="view-full">
+                                <ol>
 <li><strong>FCFS (First-Come, First-Served):</strong> Non-preemptive. Executes processes in arrival order. <em>Limitation: Convoy effect (short processes stuck behind a massive one).</em></li>
 <li><strong>SJF (Shortest Job First):</strong> Non-preemptive. Picks the process with the shortest burst time. <em>Limitation: Impossible to know exact burst time in advance.</em></li>
 <li><strong>SRTF (Shortest Remaining Time First):</strong> Preemptive version of SJF. <em>Limitation: Can cause starvation for long processes.</em></li>
 <li><strong>Round Robin:</strong> Preemptive. Assigns a fixed time quantum to each process in turn. <em>Limitation: High context-switching overhead if quantum is too small.</em></li>
 <li><strong>Priority Scheduling:</strong> Executes highest priority process first. <em>Limitation: Starvation of low-priority processes (solved by aging).</em></li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1033,7 +1128,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>CPU Utilization:</strong> Keep the CPU as busy as possible (0-100%).</li>
 <li><strong>Throughput:</strong> Number of processes completed per time unit.</li>
 <li><strong>Turnaround Time:</strong> Total time from submission to completion.</li>
@@ -1041,6 +1138,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <li><strong>Response Time:</strong> Time from submission until the first response is produced.</li>
 </ul>
 <p><strong>Conflicts:</strong> Minimizing <em>Response Time</em> requires preempting processes frequently (Time-Sharing/Round Robin). However, frequent preemption causes high context-switching overhead, which severely decreases <em>Throughput</em> and <em>CPU Utilization</em>. You cannot optimize both simultaneously.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1065,13 +1165,18 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>Using <strong>First Come First Serve (FCFS)</strong>:</p>
+                            
+                            <div class="view-full">
+                                <p>Using <strong>First Come First Serve (FCFS)</strong>:</p>
 <ul>
 <li><strong>P1</strong> arrives at 0. Executes 0 to 5. <strong>CT = 5</strong>. TAT = 5 - 0 = 5. WT = 5 - 5 = 0.</li>
 <li><strong>P2</strong> arrives at 1. Waits till 5. Executes 5 to 8. <strong>CT = 8</strong>. TAT = 8 - 1 = 7. WT = 7 - 3 = 4.</li>
 <li><strong>P3</strong> arrives at 2. Waits till 8. Executes 8 to 16. <strong>CT = 16</strong>. TAT = 16 - 2 = 14. WT = 14 - 8 = 6.</li>
 </ul>
 <p><strong>Average Waiting Time:</strong> (0 + 4 + 6) / 3 = <strong>3.33</strong></p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1096,9 +1201,14 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>The criterion most affected is <strong>Response Time</strong>.</p>
+                            
+                            <div class="view-full">
+                                <p>The criterion most affected is <strong>Response Time</strong>.</p>
 <p><strong>Suggested Algorithm: Round Robin (RR)</strong>.</p>
 <p><strong>Justification:</strong> If the laptop is using an algorithm like FCFS or non-preemptive priority, background tasks might hog the CPU for long continuous bursts, causing the UI to freeze. Round Robin preemptively slices CPU time (e.g., every 10ms) and distributes it evenly across all processes. This guarantees that the UI thread gets frequent access to the CPU, drastically improving interactive responsiveness, even if the total completion time (throughput) decreases slightly.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1123,8 +1233,13 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>(a) Batch Processing System:</strong> <strong>SJF (Shortest Job First)</strong> is most appropriate. Without user interaction, we don't care about fast response times. SJF mathematically guarantees the minimum average waiting time for a given set of processes, maximizing overall throughput and efficiency for heavy background workloads.</p>
+                            
+                            <div class="view-full">
+                                <p><strong>(a) Batch Processing System:</strong> <strong>SJF (Shortest Job First)</strong> is most appropriate. Without user interaction, we don't care about fast response times. SJF mathematically guarantees the minimum average waiting time for a given set of processes, maximizing overall throughput and efficiency for heavy background workloads.</p>
 <p><strong>(b) Interactive Time-Sharing System:</strong> <strong>Round Robin (RR)</strong> is most appropriate. Multiple users require the system to feel "alive" and responsive. RR guarantees that every user's process receives a CPU time slice frequently, ensuring low Response Time and high fairness, preventing any single heavy user from monopolizing the system.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1149,8 +1264,13 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Concurrency</strong> is the execution of multiple instruction sequences at the same time. It happens when multiple threads or processes make progress overlapping in time, either through rapid context switching (single-core) or true parallel execution (multi-core).</p>
+                            
+                            <div class="view-full">
+                                <p><strong>Concurrency</strong> is the execution of multiple instruction sequences at the same time. It happens when multiple threads or processes make progress overlapping in time, either through rapid context switching (single-core) or true parallel execution (multi-core).</p>
 <p><strong>Example:</strong> Downloading a file in a web browser while simultaneously scrolling through a webpage.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1175,8 +1295,13 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>An <strong>Atomic Operation</strong> is an operation that executes entirely as a single, indivisible step. Once it starts, it cannot be interrupted or preempted halfway through.</p>
+                            
+                            <div class="view-full">
+                                <p>An <strong>Atomic Operation</strong> is an operation that executes entirely as a single, indivisible step. Once it starts, it cannot be interrupted or preempted halfway through.</p>
 <p><strong>Importance:</strong> It guarantees that shared variables (like locks or counters) are updated safely without race conditions caused by a mid-instruction context switch.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1201,10 +1326,15 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>wait() (or P/down):</strong> Decrements the semaphore value. If the value becomes negative (or reaches 0 in a binary semaphore), the calling process is blocked and placed in a waiting queue.</li>
 <li><strong>signal() (or V/up):</strong> Increments the semaphore value. If there are processes blocked in the waiting queue, one is woken up and moved to the ready queue.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1229,10 +1359,15 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ol>
+                            
+                            <div class="view-full">
+                                <ol>
 <li><strong>Shared Memory:</strong> Two processes establish a region of shared RAM. They communicate by reading and writing to this shared region directly. Fast, but requires explicit synchronization (e.g., semaphores) by the programmer.</li>
 <li><strong>Message Passing:</strong> Processes communicate by sending and receiving messages through the OS kernel. Slower (due to system calls), but safer and easier to use in distributed systems.</li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1257,11 +1392,16 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ol>
+                            
+                            <div class="view-full">
+                                <ol>
 <li><strong>Mutual Exclusion:</strong> If process P1 is executing in its critical section, no other process can enter theirs.</li>
 <li><strong>Progress:</strong> If no process is in the critical section and some processes want to enter, the selection of the next process cannot be postponed indefinitely.</li>
 <li><strong>Bounded Waiting:</strong> There must be a limit on how many times other processes can enter the critical section after a process has requested entry.</li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1286,13 +1426,18 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>A high-level statement like <code>counter++</code> is not an <strong>atomic operation</strong>. At the machine level, it breaks down into three distinct instructions:</p>
+                            
+                            <div class="view-full">
+                                <p>A high-level statement like <code>counter++</code> is not an <strong>atomic operation</strong>. At the machine level, it breaks down into three distinct instructions:</p>
 <ol>
 <li>Load <code>counter</code> from memory into a CPU register.</li>
 <li>Increment the register.</li>
 <li>Store the register back to memory.</li>
 </ol>
 <p>If a context switch occurs right after step 1 or 2, another process might load the old, stale value of <code>counter</code>. When both processes eventually complete step 3, one will overwrite the other's update, causing a <strong>Race Condition</strong>.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1317,11 +1462,16 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>Mutual Exclusion:</strong> P0 sets <code>flag[0]=true</code> and <code>turn=1</code>. It only enters if <code>flag[1]==false</code> OR <code>turn==0</code>. If P1 is inside, <code>flag[1]</code> is true and <code>turn</code> would be 1, so P0 is blocked. They cannot both enter.</li>
 <li><strong>Progress:</strong> If P1 doesn't want to enter, <code>flag[1]</code> is false, so P0 can enter immediately without being indefinitely postponed.</li>
 <li><strong>Bounded Waiting:</strong> When P0 exits, it sets <code>flag[0]=false</code>. This immediately allows P1 (who might be waiting) to enter. P0 cannot re-enter and starve P1 because P0 will set <code>turn=1</code> upon re-requesting, forcing itself to wait for P1.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1346,7 +1496,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>The <strong>Producer-Consumer</strong> problem occurs when two processes share a fixed-size buffer. The Producer generates data and puts it into the buffer; the Consumer takes data out.</p>
+                            
+                            <div class="view-full">
+                                <p>The <strong>Producer-Consumer</strong> problem occurs when two processes share a fixed-size buffer. The Producer generates data and puts it into the buffer; the Consumer takes data out.</p>
 <p><strong>Shared Variables:</strong></p>
 <ul>
 <li><code>buffer[BUFFER_SIZE]</code>: A circular array.</li>
@@ -1355,6 +1507,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <li><code>counter</code>: Tracks the total number of items currently in the buffer.</li>
 </ul>
 <p><strong>The Role / Rules:</strong> The Producer must not try to insert data when <code>counter == BUFFER_SIZE</code> (buffer is full). The Consumer must not try to remove data when <code>counter == 0</code> (buffer is empty). Synchronization is required to ensure <code>counter++</code> and <code>counter--</code> do not create a race condition.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1379,7 +1534,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Peterson's Solution</strong> is a software-based synchronization algorithm for two processes (P0 and P1).</p>
+                            
+                            <div class="view-full">
+                                <p><strong>Peterson's Solution</strong> is a software-based synchronization algorithm for two processes (P0 and P1).</p>
 <p><strong>Shared Variables:</strong></p>
 <ul>
 <li><code>boolean flag[2] = {false, false};</code> (Indicates if a process <em>wants</em> to enter).</li>
@@ -1392,6 +1549,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <em>...Critical Section...</em><br>
 <code>flag[0] = false;</code> // Exit</p>
 <p><strong>Requirements Satisfied:</strong> It guarantees Mutual exclusion (only one process can have <code>turn == its_id</code>), Progress (a process only waits if the other actively wants to enter), and Bounded waiting (the <code>turn</code> variable acts as a strict alternator, preventing starvation).</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1416,11 +1576,16 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ol>
+                            
+                            <div class="view-full">
+                                <ol>
 <li><strong>Mutual Exclusion:</strong> Absolute prevention of simultaneous access. <em>Significance:</em> If P1 is writing to a bank balance variable, P2 cannot read or write to it, preventing corrupted math.</li>
 <li><strong>Progress:</strong> If the critical section is empty, processes that wish to enter cannot be blocked forever by processes executing in their remainder sections. <em>Significance:</em> Ensures the system doesn't freeze just because nobody is currently using the shared resource.</li>
 <li><strong>Bounded Waiting:</strong> A bound must exist on the number of times other processes are allowed to enter their critical sections after a process has made a request to enter its own. <em>Significance:</em> Prevents starvation. P1 shouldn't have to wait forever while P2 rapidly enters and exits 100 times.</li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1445,7 +1610,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <table>
+                            
+                            <div class="view-full">
+                                <table>
 <thead><tr><th>Semaphores</th><th>Monitors</th></tr></thead>
 <tbody>
 <tr><td>Low-level OS construct (integer variable).</td><td>High-level programming language construct.</td></tr>
@@ -1454,6 +1621,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <tr><td>A single typo (e.g., two <code>wait()</code> calls) causes catastrophic deadlocks.</td><td>Much safer; drastically reduces synchronization bugs.</td></tr>
 </tbody>
 </table>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1478,7 +1648,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>Since buffer size = 5 and it holds 3 items: <strong>full = 3</strong>, and <strong>empty = 2</strong>.</p>
+                            
+                            <div class="view-full">
+                                <p>Since buffer size = 5 and it holds 3 items: <strong>full = 3</strong>, and <strong>empty = 2</strong>.</p>
 <p><strong>Step-by-Step Insertion:</strong></p>
 <ol>
 <li>Producer executes <code>wait(empty)</code>. <code>empty</code> decrements from 2 to 1. (Checks if there is space).</li>
@@ -1487,6 +1659,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <li>Producer executes <code>signal(mutex)</code>. <code>mutex</code> becomes 1. (Unlocks the buffer).</li>
 <li>Producer executes <code>signal(full)</code>. <code>full</code> increments from 3 to 4. (Notifies the Consumer that a new item is available).</li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1511,7 +1686,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Variables Required:</strong></p>
+                            
+                            <div class="view-full">
+                                <p><strong>Variables Required:</strong></p>
 <ul>
 <li><code>mutex</code> (initialized to 1): Protects the <code>readcount</code> variable.</li>
 <li><code>wrt</code> (initialized to 1): The main lock for the database, preventing Writers from entering if anyone is inside.</li>
@@ -1522,6 +1699,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <li><strong>Entry Section:</strong> The doctor executes <code>wait(mutex)</code> to safely increment <code>readcount</code>. If this doctor is the <em>very first</em> reader (<code>readcount == 1</code>), they execute <code>wait(wrt)</code> to lock out all nurses (writers). They then <code>signal(mutex)</code> to let other doctors in.</li>
 <li><strong>Exit Section:</strong> The doctor executes <code>wait(mutex)</code> to safely decrement <code>readcount</code>. If they are the <em>very last</em> reader leaving (<code>readcount == 0</code>), they execute <code>signal(wrt)</code>, finally unlocking the database so a waiting nurse can update it.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1546,12 +1726,17 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>Process Management:</strong> Scheduling and execution of processes.</li>
 <li><strong>Memory Management:</strong> Allocation and de-allocation of memory space.</li>
 <li><strong>File Management:</strong> Organizing and tracking files and directories.</li>
 <li><strong>Device/I/O Management:</strong> Managing device drivers and hardware communication.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1576,7 +1761,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <table>
+                            
+                            <div class="view-full">
+                                <table>
 <thead><tr><th>User Mode (Mode bit = 1)</th><th>Kernel Mode (Mode bit = 0)</th></tr></thead>
 <tbody>
 <tr><td>Restricted access to memory and hardware.</td><td>Direct access to all memory and hardware.</td></tr>
@@ -1584,6 +1771,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <tr><td>Application programs run here.</td><td>Core OS components run here.</td></tr>
 </tbody>
 </table>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1608,7 +1798,12 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Hardware Interrupts</strong> are asynchronous signals generated by external hardware devices (e.g., keyboard press, disk I/O completion) to get the CPU's attention. <strong>Software Interrupts (Traps)</strong> are synchronous signals generated by executing instructions within a program (e.g., system calls, division by zero errors).</p>
+                            
+                            <div class="view-full">
+                                <p><strong>Hardware Interrupts</strong> are asynchronous signals generated by external hardware devices (e.g., keyboard press, disk I/O completion) to get the CPU's attention. <strong>Software Interrupts (Traps)</strong> are synchronous signals generated by executing instructions within a program (e.g., system calls, division by zero errors).</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1633,7 +1828,12 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>A <strong>Monolithic OS</strong> bundles all services (file system, drivers, memory) into a single large kernel, making execution fast (no message passing overhead) but hard to maintain due to tight coupling. A <strong>Microkernel</strong> keeps only essential services in the kernel and runs the rest in user space; this is reliable (a failed driver won't crash the OS) but slower due to the overhead of inter-process communication (IPC) and frequent mode switching.</p>
+                            
+                            <div class="view-full">
+                                <p>A <strong>Monolithic OS</strong> bundles all services (file system, drivers, memory) into a single large kernel, making execution fast (no message passing overhead) but hard to maintain due to tight coupling. A <strong>Microkernel</strong> keeps only essential services in the kernel and runs the rest in user space; this is reliable (a failed driver won't crash the OS) but slower due to the overhead of inter-process communication (IPC) and frequent mode switching.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1658,8 +1858,13 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>A <strong>Batch Operating System</strong> groups similar jobs into "batches" and executes them sequentially without manual intervention. Users submit jobs to an operator, who batches them and feeds them to the computer.</p>
+                            
+                            <div class="view-full">
+                                <p>A <strong>Batch Operating System</strong> groups similar jobs into "batches" and executes them sequentially without manual intervention. Users submit jobs to an operator, who batches them and feeds them to the computer.</p>
 <p><strong>Limitation:</strong> Lack of user interaction. Once a job is submitted, the user must wait for it to finish; if it enters an infinite loop or requires input, the CPU may idle, and debugging is extremely difficult.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1684,7 +1889,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <table>
+                            
+                            <div class="view-full">
+                                <table>
 <thead><tr><th>Multiprogramming OS</th><th>Time-Sharing OS</th></tr></thead>
 <tbody>
 <tr><td><strong>Goal:</strong> Maximize CPU utilization by keeping the CPU busy.</td><td><strong>Goal:</strong> Maximize user responsiveness and interactivity.</td></tr>
@@ -1692,6 +1899,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <tr><td>Users cannot interact with programs during execution.</td><td>Multiple users can interact with the system simultaneously.</td></tr>
 </tbody>
 </table>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1716,8 +1926,13 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>In <strong>Interrupt-Driven I/O</strong>, the CPU issues an I/O command to a device controller and immediately resumes executing other tasks. When the device controller finishes reading/writing the data, it sends a hardware interrupt to the CPU. The CPU briefly pauses its current work, processes the data, and resumes.</p>
+                            
+                            <div class="view-full">
+                                <p>In <strong>Interrupt-Driven I/O</strong>, the CPU issues an I/O command to a device controller and immediately resumes executing other tasks. When the device controller finishes reading/writing the data, it sends a hardware interrupt to the CPU. The CPU briefly pauses its current work, processes the data, and resumes.</p>
 <p><strong>Efficiency:</strong> It eliminates "busy waiting" (polling). The CPU does not waste cycles constantly checking if the device is ready, allowing for true concurrent execution.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1742,8 +1957,13 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>A <strong>Hard Real-Time Operating System</strong> is required.</p>
+                            
+                            <div class="view-full">
+                                <p>A <strong>Hard Real-Time Operating System</strong> is required.</p>
 <p><strong>Justification:</strong> Hard real-time systems guarantee that critical tasks complete on time. In a hospital (e.g., a pacemaker or life-support system), missing a deadline can result in death. Other OS types like Time-Sharing prioritize fairness over strict deadlines, which would be fatal here.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1768,11 +1988,16 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>Modern systems use a <strong>Hybrid / Loadable Kernel Module (LKM)</strong> structure to get the best of both worlds:</p>
+                            
+                            <div class="view-full">
+                                <p>Modern systems use a <strong>Hybrid / Loadable Kernel Module (LKM)</strong> structure to get the best of both worlds:</p>
 <ul>
 <li><strong>Performance (Like Monolithic):</strong> Modules are loaded directly into the kernel space, meaning there is no slow message-passing overhead like in Microkernels.</li>
 <li><strong>Flexibility (Like Microkernel):</strong> The core kernel remains small. Device drivers and file systems can be loaded dynamically at runtime without rebooting the system or recompiling the entire monolithic kernel.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1797,13 +2022,18 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ol>
+                            
+                            <div class="view-full">
+                                <ol>
 <li><strong>Process Management:</strong> Allocating CPU time. <em>Ex: Pausing a background download to give priority to a video call.</em></li>
 <li><strong>Memory Management:</strong> Managing RAM. <em>Ex: Moving unused application data to virtual memory (swap) so a new heavy game can load into RAM.</em></li>
 <li><strong>File Management:</strong> Organizing data. <em>Ex: Saving a document and ensuring it is written to the correct physical sector on the SSD.</em></li>
 <li><strong>Device Management:</strong> Handling I/O. <em>Ex: Using a driver to translate a mouse movement into an on-screen cursor movement.</em></li>
 <li><strong>Security & Protection:</strong> Enforcing access rules. <em>Ex: Preventing a standard user from deleting critical <code>System32</code> files.</em></li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1828,12 +2058,17 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>Batch OS:</strong> Jobs with similar needs are batched and executed sequentially by an operator. <em>Feature: No user interaction during execution.</em></li>
 <li><strong>Multiprogramming OS:</strong> Keeps multiple jobs in memory. When one job waits for I/O, the CPU switches to another. <em>Feature: Maximizes CPU utilization.</em></li>
 <li><strong>Time-Sharing OS:</strong> An extension of multiprogramming. The CPU switches so rapidly (time-slicing) between tasks that multiple users feel they have dedicated machines. <em>Feature: High interactivity and fairness.</em></li>
 <li><strong>Real-Time OS:</strong> Processes data instantly within guaranteed deadlines. <em>Feature: Strict timing constraints (used in aviation, medical devices).</em></li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1858,7 +2093,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <table>
+                            
+                            <div class="view-full">
+                                <table>
 <thead><tr><th>Method</th><th>CPU Involvement</th><th>System Efficiency</th></tr></thead>
 <tbody>
 <tr><td><strong>Programmed I/O</strong></td><td><strong>Extremely High.</strong> CPU must manually check device status (polling) and transfer every byte.</td><td><strong>Very Low.</strong> CPU wastes cycles busy-waiting instead of running logic.</td></tr>
@@ -1866,6 +2103,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <tr><td><strong>DMA</strong></td><td><strong>Very Low.</strong> CPU only issues the start command. DMA controller moves entire blocks of data. CPU interrupted only once at the end.</td><td><strong>Highest.</strong> CPU is fully freed to execute heavy processes concurrently with I/O.</td></tr>
 </tbody>
 </table>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1890,9 +2130,14 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Proposed Solution:</strong> A <strong>Microkernel Architecture</strong>.</p>
+                            
+                            <div class="view-full">
+                                <p><strong>Proposed Solution:</strong> A <strong>Microkernel Architecture</strong>.</p>
 <p>By moving the device drivers out of the privileged kernel space and running them as standard user-level processes, a bug or crash in the device driver will only kill that specific process. The Microkernel itself remains isolated and untouched, meaning the server will not crash.</p>
 <p><strong>Trade-offs:</strong> The primary disadvantage is <strong>Performance Overhead</strong>. Because the driver is now in user space, communicating with it requires Inter-Process Communication (IPC) and constant context switching between User Mode and Kernel Mode, which slows the system down compared to the direct function calls of a Monolithic kernel.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1917,7 +2162,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>A <strong>Process Control Block (PCB)</strong> is a data structure in the OS kernel containing all the information needed to manage a specific process. It acts as the repository for any information that may vary from process to process (e.g., process state, program counter, CPU registers, memory limits).</p>
+                            
+                            <div class="view-full">
+                                <p>A <strong>Process Control Block (PCB)</strong> is a data structure in the OS kernel containing all the information needed to manage a specific process. It acts as the repository for any information that may vary from process to process (e.g., process state, program counter, CPU registers, memory limits).</p>
 <div class="diagram-container">
 <svg viewBox="0 0 300 250" xmlns="http://www.w3.org/2000/svg">
   <rect x="50" y="20" width="200" height="210" fill="var(--card-bg)" stroke="currentColor" stroke-width="2" rx="5"/>
@@ -1941,6 +2188,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 </svg>
 </div>
 
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1965,7 +2215,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <table>
+                            
+                            <div class="view-full">
+                                <table>
 <thead><tr><th>User Thread</th><th>Kernel Thread</th></tr></thead>
 <tbody>
 <tr><td>Managed by a user-level thread library.</td><td>Managed directly by the OS kernel.</td></tr>
@@ -1973,6 +2225,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <tr><td>Fast context switching (no OS intervention).</td><td>Slower context switching (requires Kernel Mode).</td></tr>
 </tbody>
 </table>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -1997,7 +2252,12 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>The mechanism is <strong>Context Switching</strong>, initiated by the <strong>Short-Term Scheduler (CPU Scheduler)</strong> and executed by the <strong>Dispatcher</strong>.</p>
+                            
+                            <div class="view-full">
+                                <p>The mechanism is <strong>Context Switching</strong>, initiated by the <strong>Short-Term Scheduler (CPU Scheduler)</strong> and executed by the <strong>Dispatcher</strong>.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2022,11 +2282,16 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>Process State:</strong> The current status of the process (New, Ready, Running, Waiting).</li>
 <li><strong>Program Counter:</strong> The memory address of the very next instruction the CPU must execute for this process.</li>
 <li><strong>CPU Registers:</strong> Saves the contents of accumulators, index registers, and general-purpose registers so execution can resume seamlessly after an interrupt.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2051,10 +2316,15 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>Multiprogramming Objective:</strong> To maximize CPU utilization. The scheduler ensures the CPU is never idle by switching to a new process only when the current one blocks for I/O.</li>
 <li><strong>Time-Sharing Objective:</strong> To maximize interactivity and response time. The scheduler uses a time quantum to rapidly preempt processes, allowing multiple users to interact with the system simultaneously without noticeable lag.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2079,7 +2349,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <table>
+                            
+                            <div class="view-full">
+                                <table>
 <thead><tr><th>Single-Threaded</th><th>Multi-Threaded</th></tr></thead>
 <tbody>
 <tr><td>Has only one path of execution.</td><td>Has multiple concurrent paths of execution.</td></tr>
@@ -2087,6 +2359,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <tr><td><em>Ex: A basic Notepad application.</em></td><td><em>Ex: A Web Browser (one thread downloads, another renders UI).</em></td></tr>
 </tbody>
 </table>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2111,8 +2386,13 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Response Time:</strong> Time of first CPU access - Arrival Time = 3 - 0 = <strong>3</strong>.</p>
+                            
+                            <div class="view-full">
+                                <p><strong>Response Time:</strong> Time of first CPU access - Arrival Time = 3 - 0 = <strong>3</strong>.</p>
 <p><strong>Reason for waiting:</strong> The CPU was currently occupied by another process that either arrived earlier (FCFS) or had a higher priority/shorter burst time, so this process had to wait in the Ready Queue until the CPU became available.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2137,12 +2417,17 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ol>
+                            
+                            <div class="view-full">
+                                <ol>
 <li><strong>Creation:</strong> The OS allocates a PCB and memory. <em>Ex: Double-clicking the Photoshop icon.</em></li>
 <li><strong>Scheduling:</strong> The OS decides which ready process gets the CPU next. <em>Ex: The OS pausing a background anti-virus scan to let you type smoothly in Word.</em></li>
 <li><strong>Execution:</strong> The CPU actively processes instructions. <em>Ex: Rendering a video frame.</em></li>
 <li><strong>Termination:</strong> The process ends and resources are freed. <em>Ex: Clicking the 'X' to close your web browser.</em></li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2167,13 +2452,18 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <table>
+                            
+                            <div class="view-full">
+                                <table>
 <thead><tr><th>Type</th><th>Advantages</th><th>Disadvantages</th></tr></thead>
 <tbody>
 <tr><td><strong>User Threads</strong></td><td>Very fast to create and switch (no OS trap required). Highly portable across different OSs.</td><td>If one thread makes a blocking system call, the OS blocks the entire process (all threads halt). Cannot utilize multiprocessors.</td></tr>
 <tr><td><strong>Kernel Threads</strong></td><td>If one thread blocks, the OS can schedule another. Can execute simultaneously on multiple CPU cores.</td><td>Slow to create and manage because every operation requires a system call / mode switch.</td></tr>
 </tbody>
 </table>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2198,7 +2488,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <table>
+                            
+                            <div class="view-full">
+                                <table>
 <thead><tr><th>Scheduler</th><th>Function</th><th>Frequency</th><th>Queues Operated On</th></tr></thead>
 <tbody>
 <tr><td><strong>Long-Term</strong></td><td>Selects processes from disk and loads them into memory. Controls degree of multiprogramming.</td><td>Low (runs infrequently, minutes/seconds).</td><td>Job Queue &rarr; Ready Queue</td></tr>
@@ -2206,6 +2498,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <tr><td><strong>Medium-Term</strong></td><td>Swaps partially executed processes out to disk and back to free up RAM.</td><td>Medium.</td><td>Memory &harr; Swap Space (Disk)</td></tr>
 </tbody>
 </table>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2230,8 +2525,13 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>A modern browser uses a <strong>Multithreaded / Multiprocess architecture</strong>. Instead of running the entire browser as a single-threaded process, it assigns a separate thread (or entire process) to each tab.</p>
+                            
+                            <div class="view-full">
+                                <p>A modern browser uses a <strong>Multithreaded / Multiprocess architecture</strong>. Instead of running the entire browser as a single-threaded process, it assigns a separate thread (or entire process) to each tab.</p>
 <p>Because these are <strong>Kernel Threads</strong> (or separate processes), the OS CPU Scheduler manages them independently. If Tab A gets stuck in an infinite script loop, its specific thread maxes out one CPU core. However, the OS continues scheduling Tab B's thread onto a different core (or preempts Tab A to give Tab B time). Thus, the frozen tab does not block the UI or the other tabs.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2256,7 +2556,12 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>A <strong>Critical Section</strong> is a specific segment of code in a process where shared resources (like shared memory, variables, or files) are accessed and modified. To prevent data corruption, no two processes can be executing their critical sections simultaneously.</p>
+                            
+                            <div class="view-full">
+                                <p>A <strong>Critical Section</strong> is a specific segment of code in a process where shared resources (like shared memory, variables, or files) are accessed and modified. To prevent data corruption, no two processes can be executing their critical sections simultaneously.</p>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2281,10 +2586,15 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>Binary Semaphore (Mutex):</strong> Can only take values 0 or 1. Used strictly to enforce mutual exclusion for a single critical section.</li>
 <li><strong>Counting Semaphore:</strong> Can take any non-negative integer value. Used to control access to a resource pool with multiple identical instances (e.g., managing 5 available printers).</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2309,10 +2619,15 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <ul>
+                            
+                            <div class="view-full">
+                                <ul>
 <li><strong>empty = n:</strong> Represents the number of empty slots available in the buffer for the Producer to fill.</li>
 <li><strong>full = 0:</strong> Represents the number of filled slots available in the buffer for the Consumer to read.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2337,7 +2652,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <table>
+                            
+                            <div class="view-full">
+                                <table>
 <thead><tr><th>Feature</th><th>Shared Memory</th><th>Message Passing</th></tr></thead>
 <tbody>
 <tr><td><strong>OS Involvement</strong></td><td>Only during initial setup.</td><td>Kernel involved in every send/receive operation.</td></tr>
@@ -2345,6 +2662,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <tr><td><strong>Speed</strong></td><td>Very Fast.</td><td>Slower (due to constant system calls).</td></tr>
 </tbody>
 </table>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2369,7 +2689,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <table>
+                            
+                            <div class="view-full">
+                                <table>
 <thead><tr><th>Semaphores</th><th>Monitors</th></tr></thead>
 <tbody>
 <tr><td>Low-level integer variables with <code>wait()</code> and <code>signal()</code> operations.</td><td>High-level abstraction provided by the programming language (e.g., <code>synchronized</code> in Java).</td></tr>
@@ -2377,6 +2699,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <tr><td>Can be distributed across multiple functions/files.</td><td>Encapsulates shared variables and methods within a single construct.</td></tr>
 </tbody>
 </table>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2401,13 +2726,18 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>This illustrates the <strong>Readers-Writers Problem</strong>. (Students = Readers, Librarian = Writer).</p>
+                            
+                            <div class="view-full">
+                                <p>This illustrates the <strong>Readers-Writers Problem</strong>. (Students = Readers, Librarian = Writer).</p>
 <p><strong>Semaphores/Variables used:</strong></p>
 <ul>
 <li><code>mutex</code> (Binary Semaphore): Protects the <code>readcount</code> variable.</li>
 <li><code>wrt</code> (Binary Semaphore): Ensures mutual exclusion for Writers. It is also used to block Writers when Readers are reading.</li>
 <li><code>readcount</code> (Integer): Tracks exactly how many readers are currently reading.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2432,7 +2762,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p>A <strong>Semaphore (S)</strong> is an integer variable accessed only through two atomic operations:</p>
+                            
+                            <div class="view-full">
+                                <p>A <strong>Semaphore (S)</strong> is an integer variable accessed only through two atomic operations:</p>
 <ul>
 <li><strong>wait(S):</strong> <code>while(S &lt;= 0); S--;</code> (Waits until S > 0, then decrements it).</li>
 <li><strong>signal(S):</strong> <code>S++;</code> (Increments S).</li>
@@ -2447,6 +2779,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <li><strong>Busy Waiting (Spinlock):</strong> Standard semaphores waste CPU cycles looping endlessly in <code>wait()</code> if the lock isn't free.</li>
 <li><strong>Deadlock:</strong> If two processes hold one semaphore each and wait for the other's, they freeze forever.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2471,7 +2806,9 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Test-and-Set</strong> is an atomic hardware instruction. It reads the current value of a boolean variable (lock) and instantly sets it to true, entirely without interruption.</p>
+                            
+                            <div class="view-full">
+                                <p><strong>Test-and-Set</strong> is an atomic hardware instruction. It reads the current value of a boolean variable (lock) and instantly sets it to true, entirely without interruption.</p>
 <pre><code>while (TestAndSet(&amp;lock)) { 
     // do nothing (spin wait) 
 }
@@ -2483,6 +2820,9 @@ lock = false;</code></pre>
 <li><strong>Progress: YES.</strong> When the lock is released, a waiting process will immediately grab it.</li>
 <li><strong>Bounded Waiting: NO.</strong> There is no queue. If multiple processes are spinning, the hardware might arbitrarily keep giving the lock to P1 over and over, starving P2.</li>
 </ul>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -2507,12 +2847,17 @@ lock = false;</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
-                            <p><strong>Deadlock Scenario:</strong> If all 5 philosophers execute <code>wait(left_fork)</code> simultaneously, they all grab one fork. When they execute <code>wait(right_fork)</code>, they find it's already held by their neighbour. They all wait infinitely for a right fork that will never be released (Circular Wait).</p>
+                            
+                            <div class="view-full">
+                                <p><strong>Deadlock Scenario:</strong> If all 5 philosophers execute <code>wait(left_fork)</code> simultaneously, they all grab one fork. When they execute <code>wait(right_fork)</code>, they find it's already held by their neighbour. They all wait infinitely for a right fork that will never be released (Circular Wait).</p>
 <p><strong>Solutions:</strong></p>
 <ol>
 <li><strong>Limiting Participants:</strong> Allow at most 4 philosophers to sit at the 5-seat table. This guarantees at least one philosopher will have access to two forks, break the cycle, finish eating, and release their forks.</li>
 <li><strong>Asymmetric Solution:</strong> Number the philosophers. Even-numbered philosophers must pick up their left fork first, while odd-numbered philosophers must pick up their right fork first. This breaks the circular wait condition.</li>
 </ol>
+                            </div>
+                            
+                            
                         </div>
                     </details>
                     
@@ -3441,6 +3786,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+// Toggle between standard exam answer and simplified revision view
+window.toggleAnswerView = function(btn, mode) {
+    const parent = btn.closest('.answer-content');
+    if (!parent) return;
+    
+    parent.querySelectorAll('.ans-toggle-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    const fullView = parent.querySelector('.view-full');
+    const simpleView = parent.querySelector('.view-simple');
+    
+    if (mode === 'simple') {
+        if (fullView) fullView.style.display = 'none';
+        if (simpleView) simpleView.style.display = 'block';
+    } else {
+        if (fullView) fullView.style.display = 'block';
+        if (simpleView) simpleView.style.display = 'none';
+    }
+};
 
 </script>
 
