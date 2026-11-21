@@ -67,11 +67,16 @@
                     <div class="filter-section">
                         <input type="search" id="search-box" class="search-bar" placeholder="Search questions by keyword...">
                         <div class="filter-toggles">
+                            
                             <label><input type="checkbox" class="unit-cb" value="I"> Unit I</label>
                             <label><input type="checkbox" class="unit-cb" value="II"> Unit II</label>
                             <label><input type="checkbox" class="unit-cb" value="III"> Unit III</label>
                             <label><input type="checkbox" class="unit-cb" value="IV"> Unit IV</label>
                             <label><input type="checkbox" class="unit-cb" value="V"> Unit V</label>
+                            <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
+                            <label><input type="checkbox" class="exam-cb" value="midterm"> Midterm</label>
+                            <label><input type="checkbox" class="exam-cb" value="endterm"> End Term</label>
+                            
                             <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
                             <label><input type="checkbox" class="marks-cb" value="2"> 2 Marks</label>
                             <label><input type="checkbox" class="marks-cb" value="3"> 3 Marks</label>
@@ -512,7 +517,7 @@
             <div id="realContentWrapper">
                 <section id="cards">
                     
-                    <details class="q-card" id="q1" data-unit="I" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="q1" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q1. What is a DBMS? Discuss its advantages over a traditional file-processing system.</h3>
                             <div class="card-meta">
@@ -520,6 +525,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -541,7 +549,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q2" data-unit="I" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="q2" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q2. What do you mean by data redundancy and data inconsistency? How does a DBMS take care of these problems?</h3>
                             <div class="card-meta">
@@ -549,6 +557,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -567,7 +578,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q3" data-unit="I" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="q3" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q3. Give the difference between a database system and a file-based system.</h3>
                             <div class="card-meta">
@@ -575,6 +586,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -592,7 +606,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q4" data-unit="I" data-bloom="L2" data-marks="2" data-important="true">
+                    <details class="q-card" id="q4" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="true">
                         <summary>
                             <h3>Q4. Draw and explain the three-level (ANSI-SPARC) architecture of a DBMS.</h3>
                             <div class="card-meta">
@@ -600,6 +614,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -667,7 +684,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q5" data-unit="I" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="q5" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q5. What is data abstraction? Discuss the three levels of data abstraction used in a DBMS.</h3>
                             <div class="card-meta">
@@ -675,6 +692,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -694,7 +714,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q6" data-unit="I" data-bloom="L1" data-marks="2" data-important="false">
+                    <details class="q-card" id="q6" data-unit="I" data-exam="midterm" data-bloom="L1" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q6. Define the terms schema and instance. Why is this distinction important?</h3>
                             <div class="card-meta">
@@ -702,6 +722,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l1">CO1 | Bloom L1</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -720,7 +743,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q7" data-unit="I" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="q7" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q7. What is data independence? Explain logical and physical data independence with a suitable example.</h3>
                             <div class="card-meta">
@@ -728,6 +751,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -746,7 +772,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q8" data-unit="I" data-bloom="L1" data-marks="2" data-important="false">
+                    <details class="q-card" id="q8" data-unit="I" data-exam="midterm" data-bloom="L1" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q8. Who are the different types of database users? Briefly describe the role of each.</h3>
                             <div class="card-meta">
@@ -754,6 +780,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l1">CO1 | Bloom L1</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -772,7 +801,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q9" data-unit="I" data-bloom="L1" data-marks="2" data-important="false">
+                    <details class="q-card" id="q9" data-unit="I" data-exam="midterm" data-bloom="L1" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q9. List the responsibilities of a Database Administrator (DBA).</h3>
                             <div class="card-meta">
@@ -780,6 +809,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l1">CO1 | Bloom L1</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -798,7 +830,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q10" data-unit="I" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q10" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q10. Compare the hierarchical, network, relational and object-oriented data models. Which one is most widely used today and why?</h3>
                             <div class="card-meta">
@@ -806,6 +838,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -826,7 +861,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q11" data-unit="I" data-bloom="L1" data-marks="2" data-important="false">
+                    <details class="q-card" id="q11" data-unit="I" data-exam="midterm" data-bloom="L1" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q11. State the advantages of the relational model over the other data models.</h3>
                             <div class="card-meta">
@@ -834,6 +869,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l1">CO1 | Bloom L1</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -851,7 +889,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q12" data-unit="I" data-bloom="L2" data-marks="2" data-important="true">
+                    <details class="q-card" id="q12" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="true">
                         <summary>
                             <h3>Q12. Explain the terms super key, candidate key, primary key and foreign key with a suitable example.</h3>
                             <div class="card-meta">
@@ -859,6 +897,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -895,7 +936,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q13" data-unit="I" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="q13" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q13. What are integrity constraints in a relational model? Explain domain, key, entity and referential integrity.</h3>
                             <div class="card-meta">
@@ -903,6 +944,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -923,7 +967,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q14" data-unit="I" data-bloom="L1" data-marks="2" data-important="false">
+                    <details class="q-card" id="q14" data-unit="I" data-exam="midterm" data-bloom="L1" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q14. What is an E-R model? List the notations used to represent an E-R diagram.</h3>
                             <div class="card-meta">
@@ -931,6 +975,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l1">CO1 | Bloom L1</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -951,7 +998,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q15" data-unit="I" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="q15" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q15. Define entity, entity set, attribute and relationship, and illustrate each with a small diagram.</h3>
                             <div class="card-meta">
@@ -959,6 +1006,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -995,7 +1045,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q16" data-unit="I" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q16" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q16. Explain the different types of attributes, simple, composite, derived, multivalued and key attribute, with examples.</h3>
                             <div class="card-meta">
@@ -1003,6 +1053,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1022,7 +1075,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q17" data-unit="I" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q17" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q17. What are the different types of relationships that can exist between two entities? Explain with diagrams.</h3>
                             <div class="card-meta">
@@ -1030,6 +1083,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1066,7 +1122,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q18" data-unit="I" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q18" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q18. What is a weak entity set? Give a suitable example.</h3>
                             <div class="card-meta">
@@ -1074,6 +1130,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1089,7 +1148,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q19" data-unit="I" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q19" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q19. Explain unary, binary and ternary relationships with the help of diagrams.</h3>
                             <div class="card-meta">
@@ -1097,6 +1156,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1177,7 +1239,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q20" data-unit="I" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q20" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q20. Differentiate between total participation and partial participation constraints in an E-R diagram.</h3>
                             <div class="card-meta">
@@ -1185,6 +1247,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1201,7 +1266,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q21" data-unit="I" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q21" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q21. Explain generalization and specialization in the Extended E-R model with an example of each.</h3>
                             <div class="card-meta">
@@ -1209,6 +1274,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1227,7 +1295,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q22" data-unit="I" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q22" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q22. What is the difference between overlapping and disjoint specialization? Illustrate with an example.</h3>
                             <div class="card-meta">
@@ -1235,6 +1303,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1253,7 +1324,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q23" data-unit="I" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q23" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q23. What is aggregation in E-R modelling? When is it required? Explain with an example.</h3>
                             <div class="card-meta">
@@ -1261,6 +1332,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1278,7 +1352,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q24" data-unit="I" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q24" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q24. Explain the concept of mapping cardinality with neat diagrams.</h3>
                             <div class="card-meta">
@@ -1286,6 +1360,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1324,7 +1401,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q25" data-unit="I" data-bloom="L1" data-marks="3" data-important="false">
+                    <details class="q-card" id="q25" data-unit="I" data-exam="midterm" data-bloom="L1" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q25. What is a functional dependency? Why is it important in the process of database design?</h3>
                             <div class="card-meta">
@@ -1332,6 +1409,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l1">CO1 | Bloom L1</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1347,7 +1427,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q26" data-unit="I" data-bloom="L2" data-marks="3" data-important="true">
+                    <details class="q-card" id="q26" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q26. What are insertion, deletion and update anomalies? How does normalization help remove them?</h3>
                             <div class="card-meta">
@@ -1355,6 +1435,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -1376,7 +1459,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q27" data-unit="I" data-bloom="L2" data-marks="3" data-important="true">
+                    <details class="q-card" id="q27" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q27. What is normalization? Explain 1NF, 2NF and 3NF with a suitable example.</h3>
                             <div class="card-meta">
@@ -1384,6 +1467,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -1406,7 +1492,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q28" data-unit="I" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q28" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q28. Define BCNF. How is it different from 3NF? Support your answer with an example.</h3>
                             <div class="card-meta">
@@ -1414,6 +1500,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1432,7 +1521,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q29" data-unit="I" data-bloom="L2" data-marks="5" data-important="false">
+                    <details class="q-card" id="q29" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q29. Write a short note on 4NF and 5NF, with an example of each.</h3>
                             <div class="card-meta">
@@ -1440,6 +1529,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1457,7 +1549,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q30" data-unit="I" data-bloom="L2" data-marks="5" data-important="false">
+                    <details class="q-card" id="q30" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q30. What is lossless-join decomposition? Explain with an example.</h3>
                             <div class="card-meta">
@@ -1465,6 +1557,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1482,7 +1577,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q31" data-unit="I" data-bloom="L2" data-marks="5" data-important="false">
+                    <details class="q-card" id="q31" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q31. Define dependency-preserving decomposition and give a suitable example.</h3>
                             <div class="card-meta">
@@ -1490,6 +1585,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1510,7 +1608,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q32" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q32" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q32. Draw an E-R diagram for a University Exam System, showing all entities, attributes, relationships, keys and cardinalities clearly. Also write down its schema.</h3>
                             <div class="card-meta">
@@ -1518,6 +1616,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -1574,7 +1675,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q33" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q33" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q33. Design an E-R diagram for an Online Book Store considering Customer, Book, Author, Order and Publisher, and write the corresponding schema.</h3>
                             <div class="card-meta">
@@ -1582,6 +1683,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -1661,7 +1765,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q34" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q34" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q34. A Hospital wants to maintain records of Patients and Doctors, along with the tests conducted for each patient. Draw a suitable E-R diagram and write its schema.</h3>
                             <div class="card-meta">
@@ -1669,6 +1773,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -1714,7 +1821,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q35" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q35" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q35. Construct an E-R diagram for a Bank that offers different types of accounts and loans through several branches. Write its schema as well.</h3>
                             <div class="card-meta">
@@ -1722,6 +1829,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -1783,7 +1893,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q36" data-unit="I" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="q36" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q36. Draw an E-R diagram for a scenario where Suppliers supply different Parts used in various Projects. Clearly mark the cardinalities involved.</h3>
                             <div class="card-meta">
@@ -1791,6 +1901,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1826,7 +1939,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q37" data-unit="I" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="q37" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q37. An Insurance Company records the Cars owned by its Customers and the Accidents involving each car. Draw the E-R diagram for this and write its schema.</h3>
                             <div class="card-meta">
@@ -1834,6 +1947,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1882,7 +1998,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q38" data-unit="I" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="q38" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q38. Design an E-R diagram for a Company that maintains data about its Employees and the Projects they are assigned to.</h3>
                             <div class="card-meta">
@@ -1890,6 +2006,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1928,7 +2047,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q39" data-unit="I" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="q39" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q39. A university follows a fixed procedure for admission, an application is received, checked by the registrar's office, and finally approved or rejected by the concerned department. Represent this as an E-R diagram.</h3>
                             <div class="card-meta">
@@ -1936,6 +2055,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1985,7 +2107,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q40" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q40" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q40. Consider an unnormalized relation Student_Marks(Rollno, Name, Subject, Marks) where a student appears in multiple rows, one per subject. Normalize it step by step up to 3NF, clearly stating the functional dependencies you have assumed.</h3>
                             <div class="card-meta">
@@ -1993,6 +2115,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -2023,7 +2148,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q41" data-unit="I" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="q41" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q41. A hostel management register stores the occupants of each room as shown in the table below. Redesign this data into a table that satisfies 1NF.</h3>
                             <div class="card-meta">
@@ -2031,6 +2156,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2065,7 +2193,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q42" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q42" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q42. The table below has the composite key (StudentID, SubjectID). Identify the partial dependencies present and decompose the table into 2NF.</h3>
                             <div class="card-meta">
@@ -2073,6 +2201,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -2099,7 +2230,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q43" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q43" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q43. The table below has EmployeeID as its primary key. Show that it violates 3NF, and decompose it into a set of tables that satisfy 3NF.</h3>
                             <div class="card-meta">
@@ -2107,6 +2238,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -2133,7 +2267,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q44" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q44" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q44. In the table below, each mentor teaches only one subject. Given that the candidate keys of this table are (StudentID, Subject) and (StudentID, Mentor), check whether it satisfies BCNF. If it does not, decompose it into BCNF.</h3>
                             <div class="card-meta">
@@ -2141,6 +2275,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -2166,7 +2303,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q45" data-unit="I" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="q45" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q45. The table below stores a student's hobbies and the languages they know together, forcing every combination to be listed. Explain why this table is not in 4NF, and decompose it into a form that satisfies 4NF.</h3>
                             <div class="card-meta">
@@ -2174,6 +2311,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2197,7 +2337,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q46" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q46" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q46. Given a relation R(A, B, C, D, E) with the functional dependency set F = {A -> B, BC -> D, D -> E}, compute the closure of {A, C} and state whether {A, C} is a candidate key of R.</h3>
                             <div class="card-meta">
@@ -2205,6 +2345,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -2227,7 +2370,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q47" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q47" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q47. Consider the relation Student_Course(Roll_No, Course_ID, Course_Name, Instructor) with the functional dependencies {Roll_No, Course_ID} -> Instructor, and Course_ID -> Course_Name. Identify the partial dependency present, show why the relation is not in 2NF, and decompose it into 2NF.</h3>
                             <div class="card-meta">
@@ -2235,6 +2378,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -2258,7 +2404,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q48" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q48" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q48. Consider the relation Employee(Emp_ID, Emp_Name, Dept_ID, Dept_Name, Dept_Location) with the functional dependencies Emp_ID -> Emp_Name, Dept_ID and Dept_ID -> Dept_Name, Dept_Location. Show that this relation is in 2NF but violates 3NF, and decompose it into 3NF.</h3>
                             <div class="card-meta">
@@ -2266,6 +2412,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -2288,7 +2437,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q49" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q49" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q49. Consider the relation R(Student, Subject, Teacher) with the functional dependencies {Student, Subject} -> Teacher and Teacher -> Subject. Determine whether R is in BCNF. If it is not, decompose it into a set of relations that are in BCNF.</h3>
                             <div class="card-meta">
@@ -2296,6 +2445,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -2319,7 +2471,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q50" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q50" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q50. Given a relation R(A, B, C, D) with the functional dependency set F = {AB -> C, C -> D, D -> A}, find all the candidate keys of R and state the highest normal form it satisfies.</h3>
                             <div class="card-meta">
@@ -2327,6 +2479,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -2351,7 +2506,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q51" data-unit="II" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="q51" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q51. What is an RDBMS? How does it differ from a DBMS?</h3>
                             <div class="card-meta">
@@ -2359,6 +2514,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2393,7 +2551,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q52" data-unit="II" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="q52" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q52. Explain how entities and relationships of the E-R model are represented in a relational database.</h3>
                             <div class="card-meta">
@@ -2401,6 +2559,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2417,7 +2578,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q53" data-unit="II" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q53" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q53. Consider the relational schema Student(sid, sname), Course(cid, cname), Enrollment(sid, cid). Write relational algebra expressions.</h3>
                             <div class="card-meta">
@@ -2425,6 +2586,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2481,7 +2645,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q54" data-unit="II" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="q54" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q54. What are the derived operations of relational algebra? Explain Join, Intersection and Division with examples.</h3>
                             <div class="card-meta">
@@ -2489,6 +2653,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2531,7 +2698,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q55" data-unit="II" data-bloom="L4" data-marks="2" data-important="false">
+                    <details class="q-card" id="q55" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q55. Distinguish between relational algebra and relational calculus.</h3>
                             <div class="card-meta">
@@ -2539,6 +2706,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2570,7 +2740,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q56" data-unit="II" data-bloom="L1" data-marks="2" data-important="false">
+                    <details class="q-card" id="q56" data-unit="II" data-exam="midterm" data-bloom="L1" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q56. What is the degree and cardinality of a relation?</h3>
                             <div class="card-meta">
@@ -2578,6 +2748,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l1">CO2 | Bloom L1</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2593,7 +2766,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q57" data-unit="II" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="q57" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q57. What is domain relational calculus? Give an example.</h3>
                             <div class="card-meta">
@@ -2601,6 +2774,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2615,7 +2791,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q58" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
+                    <details class="q-card" id="q58" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="true">
                         <summary>
                             <h3>Q58. Explain DDL, DML, DCL and TCL commands with one example of each.</h3>
                             <div class="card-meta">
@@ -2623,6 +2799,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -2642,7 +2821,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q59" data-unit="II" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="q59" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q59. What is the use of CREATE, ALTER, DROP and TRUNCATE commands?</h3>
                             <div class="card-meta">
@@ -2650,6 +2829,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2667,7 +2849,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q60" data-unit="II" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="q60" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q60. Explain the DML commands INSERT, UPDATE, DELETE and SELECT.</h3>
                             <div class="card-meta">
@@ -2675,6 +2857,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2692,7 +2877,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q61" data-unit="II" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q61" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q61. What is the purpose of GRANT and REVOKE commands in SQL?</h3>
                             <div class="card-meta">
@@ -2700,6 +2885,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2718,7 +2906,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q62" data-unit="II" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q62" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q62. Explain COMMIT, ROLLBACK and SAVEPOINT with a suitable example.</h3>
                             <div class="card-meta">
@@ -2726,6 +2914,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2749,7 +2940,7 @@ COMMIT; -- Permanently saves the first update</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q63" data-unit="II" data-bloom="L2" data-marks="3" data-important="true">
+                    <details class="q-card" id="q63" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q63. What is a join? Explain the different types of joins, inner, left outer, right outer and full outer, with examples.</h3>
                             <div class="card-meta">
@@ -2757,6 +2948,9 @@ COMMIT; -- Permanently saves the first update</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -2844,7 +3038,7 @@ COMMIT; -- Permanently saves the first update</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q64" data-unit="II" data-bloom="L4" data-marks="3" data-important="false">
+                    <details class="q-card" id="q64" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q64. Differentiate between an equi join and a natural join, with an example of each.</h3>
                             <div class="card-meta">
@@ -2852,6 +3046,9 @@ COMMIT; -- Permanently saves the first update</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2887,7 +3084,7 @@ COMMIT; -- Permanently saves the first update</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q65" data-unit="II" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q65" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q65. What is a self join? What is a cross join? Explain with examples.</h3>
                             <div class="card-meta">
@@ -2895,6 +3092,9 @@ COMMIT; -- Permanently saves the first update</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2914,7 +3114,7 @@ JOIN Employee M ON E.ManagerID = M.EmpID;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q66" data-unit="II" data-bloom="L2" data-marks="3" data-important="true">
+                    <details class="q-card" id="q66" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q66. Explain the aggregate functions available in SQL, COUNT, SUM, AVG, MAX and MIN, giving an example of each.</h3>
                             <div class="card-meta">
@@ -2922,6 +3122,9 @@ JOIN Employee M ON E.ManagerID = M.EmpID;</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -2942,7 +3145,7 @@ JOIN Employee M ON E.ManagerID = M.EmpID;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q67" data-unit="II" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q67" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q67. What is the purpose of the GROUP BY clause? Explain with a suitable query.</h3>
                             <div class="card-meta">
@@ -2950,6 +3153,9 @@ JOIN Employee M ON E.ManagerID = M.EmpID;</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2966,7 +3172,7 @@ GROUP BY DeptID;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q68" data-unit="II" data-bloom="L4" data-marks="3" data-important="false">
+                    <details class="q-card" id="q68" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q68. How is the HAVING clause different from the WHERE clause? Justify with an example.</h3>
                             <div class="card-meta">
@@ -2974,6 +3180,9 @@ GROUP BY DeptID;</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3010,7 +3219,7 @@ HAVING AVG(Salary) &gt; 50000;    -- Filters groups</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q69" data-unit="II" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q69" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q69. Explain the use of the ORDER BY clause with an example.</h3>
                             <div class="card-meta">
@@ -3018,6 +3227,9 @@ HAVING AVG(Salary) &gt; 50000;    -- Filters groups</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3031,7 +3243,7 @@ HAVING AVG(Salary) &gt; 50000;    -- Filters groups</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q70" data-unit="II" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q70" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q70. What are nested queries? Why are they used? Explain with a suitable example.</h3>
                             <div class="card-meta">
@@ -3039,6 +3251,9 @@ HAVING AVG(Salary) &gt; 50000;    -- Filters groups</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3055,7 +3270,7 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q71" data-unit="II" data-bloom="L4" data-marks="3" data-important="false">
+                    <details class="q-card" id="q71" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q71. What is a correlated subquery? How is it different from a simple subquery?</h3>
                             <div class="card-meta">
@@ -3063,6 +3278,9 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee);</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3097,7 +3315,7 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q72" data-unit="II" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q72" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q72. Explain the use of IN, EXISTS, ANY and ALL operators in a nested query.</h3>
                             <div class="card-meta">
@@ -3105,6 +3323,9 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3122,7 +3343,7 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q73" data-unit="II" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q73" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q73. What is a view? What are its advantages?</h3>
                             <div class="card-meta">
@@ -3130,6 +3351,9 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3148,7 +3372,7 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q74" data-unit="II" data-bloom="L4" data-marks="3" data-important="false">
+                    <details class="q-card" id="q74" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q74. Differentiate between a simple view and a materialized view.</h3>
                             <div class="card-meta">
@@ -3156,6 +3380,9 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3191,7 +3418,7 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q75" data-unit="II" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="q75" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q75. Can every view be updated? Explain the limitations of an updatable view with an example.</h3>
                             <div class="card-meta">
@@ -3199,6 +3426,9 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3220,7 +3450,7 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q76" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q76" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q76. Explain generalization, specialization and aggregation in the Extended E-R model.</h3>
                             <div class="card-meta">
@@ -3228,6 +3458,9 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -3292,7 +3525,7 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q77" data-unit="II" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q77" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q77. What is decomposition? Explain the concepts of lossless-join and dependency-preserving decomposition.</h3>
                             <div class="card-meta">
@@ -3300,6 +3533,9 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -3321,7 +3557,7 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q78" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                    <details class="q-card" id="q78" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q78. How is decomposition related to normalization? Explain with a small example.</h3>
                             <div class="card-meta">
@@ -3329,6 +3565,9 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -3354,7 +3593,7 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q79" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="q79" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q79. Compare relational algebra with SQL as two different ways of expressing the same query.</h3>
                             <div class="card-meta">
@@ -3362,6 +3601,9 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3411,7 +3653,7 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q80" data-unit="II" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="q80" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q80. Write a query to display the names of students who are enrolled in the course 'DBMS'.</h3>
                             <div class="card-meta">
@@ -3419,6 +3661,9 @@ WHERE Salary &gt; (SELECT AVG(Salary) FROM Employee E2 WHERE E1.DeptID = E2.Dept
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3444,7 +3689,7 @@ WHERE sid IN (
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q81" data-unit="II" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="q81" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q81. Write a query to display, course-wise, how many students have enrolled in each course.</h3>
                             <div class="card-meta">
@@ -3452,6 +3697,9 @@ WHERE sid IN (
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3468,7 +3716,7 @@ GROUP BY c.cid, c.cname;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q82" data-unit="II" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="q82" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q82. Write a query using HAVING to display students who are enrolled in more than 3 courses.</h3>
                             <div class="card-meta">
@@ -3476,6 +3724,9 @@ GROUP BY c.cid, c.cname;</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3492,7 +3743,7 @@ HAVING COUNT(e.cid) &gt; 3;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q83" data-unit="II" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="q83" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q83. Write a query to display the student name along with the names of the courses they have opted for, using a suitable join.</h3>
                             <div class="card-meta">
@@ -3500,6 +3751,9 @@ HAVING COUNT(e.cid) &gt; 3;</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3516,7 +3770,7 @@ JOIN Course c ON e.cid = c.cid;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q84" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q84" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q84. Write a query to find students who have not enrolled in any course so far.</h3>
                             <div class="card-meta">
@@ -3524,6 +3778,9 @@ JOIN Course c ON e.cid = c.cid;</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -3547,7 +3804,7 @@ WHERE NOT EXISTS (
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q85" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                    <details class="q-card" id="q85" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q85. Write a nested query to find the student(s) who scored the highest marks in the course 'DBMS'.</h3>
                             <div class="card-meta">
@@ -3555,6 +3812,9 @@ WHERE NOT EXISTS (
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -3580,7 +3840,7 @@ WHERE c.cname = 'DBMS'
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q86" data-unit="II" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="q86" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q86. Create a view that shows the student name, course name and marks for every enrollment record.</h3>
                             <div class="card-meta">
@@ -3588,6 +3848,9 @@ WHERE c.cname = 'DBMS'
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3605,7 +3868,7 @@ JOIN Course c ON e.cid = c.cid;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q87" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q87" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q87. Write a relational algebra expression to retrieve the names of students enrolled in the course 'DBMS'.</h3>
                             <div class="card-meta">
@@ -3613,6 +3876,9 @@ JOIN Course c ON e.cid = c.cid;</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9</span>
                                     
@@ -3634,7 +3900,7 @@ JOIN Course c ON e.cid = c.cid;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q88" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                    <details class="q-card" id="q88" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q88. Using the division operation of relational algebra, write an expression to find students who are enrolled in every course offered.</h3>
                             <div class="card-meta">
@@ -3642,6 +3908,9 @@ JOIN Course c ON e.cid = c.cid;</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -3660,7 +3929,7 @@ JOIN Course c ON e.cid = c.cid;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q89" data-unit="II" data-bloom="L4" data-marks="5" data-important="true">
+                    <details class="q-card" id="q89" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q89. Write a correlated subquery to list students who have scored more than the average marks obtained in their respective course.</h3>
                             <div class="card-meta">
@@ -3668,6 +3937,9 @@ JOIN Course c ON e.cid = c.cid;</code></pre>
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -3690,7 +3962,7 @@ WHERE e1.marks &gt; (
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q90" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                    <details class="q-card" id="q90" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q90. What is the use of CREATE TABLE, ALTER TABLE and DROP TABLE commands? Why are DDL statements said to be auto-committed?</h3>
                             <div class="card-meta">
@@ -3698,6 +3970,9 @@ WHERE e1.marks &gt; (
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
@@ -3712,7 +3987,7 @@ WHERE e1.marks &gt; (
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q91" data-unit="III" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="q91" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q91. Write a CREATE TABLE statement for a Library_Book table having Book_ID, Title, Author, Price and Published_Date, choosing appropriate data types.</h3>
                             <div class="card-meta">
@@ -3720,6 +3995,9 @@ WHERE e1.marks &gt; (
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3738,7 +4016,7 @@ WHERE e1.marks &gt; (
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q92" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q92" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q92. Write a query to add a column Email of type VARCHAR(40) to the Student table.</h3>
                             <div class="card-meta">
@@ -3746,6 +4024,9 @@ WHERE e1.marks &gt; (
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3759,7 +4040,7 @@ ADD Email VARCHAR(40);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q93" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q93" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q93. Write a query to change the data type of the Fees column in the Student table to DECIMAL(10,2).</h3>
                             <div class="card-meta">
@@ -3767,6 +4048,9 @@ ADD Email VARCHAR(40);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3780,7 +4064,7 @@ MODIFY Fees DECIMAL(10,2);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q94" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q94" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q94. Write a query to rename the Course column of the Student table as Program.</h3>
                             <div class="card-meta">
@@ -3788,6 +4072,9 @@ MODIFY Fees DECIMAL(10,2);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3802,7 +4089,7 @@ RENAME COLUMN Course TO Program;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q95" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q95" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q95. Write a query to rename the table Student to Student_Info.</h3>
                             <div class="card-meta">
@@ -3810,6 +4097,9 @@ RENAME COLUMN Course TO Program;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3824,7 +4114,7 @@ RENAME TO Student_Info;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q96" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="q96" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q96. Using CREATE TABLE ... AS SELECT, write a query to create a backup table Student_Backup from the Student table.</h3>
                             <div class="card-meta">
@@ -3832,6 +4122,9 @@ RENAME TO Student_Info;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3845,7 +4138,7 @@ SELECT * FROM Student;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q97" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                    <details class="q-card" id="q97" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q97. Give the difference between DELETE, TRUNCATE and DROP commands.</h3>
                             <div class="card-meta">
@@ -3853,6 +4146,9 @@ SELECT * FROM Student;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -3871,7 +4167,7 @@ SELECT * FROM Student;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q98" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q98" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q98. Explain the five constraints NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY and CHECK, giving an example of each.</h3>
                             <div class="card-meta">
@@ -3879,6 +4175,9 @@ SELECT * FROM Student;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -3897,7 +4196,7 @@ SELECT * FROM Student;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q99" data-unit="III" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q99" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q99. What is the difference between a column-level and a table-level constraint? When is a table-level constraint compulsory?</h3>
                             <div class="card-meta">
@@ -3905,6 +4204,9 @@ SELECT * FROM Student;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3917,7 +4219,7 @@ SELECT * FROM Student;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q100" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q100" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q100. Write a CREATE TABLE statement for Department(Dept_ID, Dept_Name), keeping Dept_ID as the primary key.</h3>
                             <div class="card-meta">
@@ -3925,6 +4227,9 @@ SELECT * FROM Student;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -3940,7 +4245,7 @@ SELECT * FROM Student;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q101" data-unit="III" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="q101" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q101. Write a CREATE TABLE statement for Employee(Emp_ID, Name, Email, Dept_ID, Salary), where Emp_ID is the primary key, Name cannot be left blank and Email must be unique.</h3>
                             <div class="card-meta">
@@ -3948,6 +4253,9 @@ SELECT * FROM Student;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
@@ -3968,7 +4276,7 @@ SELECT * FROM Student;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q102" data-unit="III" data-bloom="L3" data-marks="3" data-important="true">
+                    <details class="q-card" id="q102" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q102. Using ALTER TABLE, add a foreign key on Employee.Dept_ID referencing Department.Dept_ID.</h3>
                             <div class="card-meta">
@@ -3976,6 +4284,9 @@ SELECT * FROM Student;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
@@ -3992,7 +4303,7 @@ FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q103" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q103" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q103. Using ALTER TABLE, put a check constraint on the Employee table so that Salary is always greater than zero.</h3>
                             <div class="card-meta">
@@ -4000,6 +4311,9 @@ FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4013,7 +4327,7 @@ ADD CONSTRAINT chk_salary CHECK (Salary &gt; 0);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q104" data-unit="III" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="q104" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q104. A table can have more than one UNIQUE constraint but only one PRIMARY KEY. Justify why this is so.</h3>
                             <div class="card-meta">
@@ -4021,6 +4335,9 @@ ADD CONSTRAINT chk_salary CHECK (Salary &gt; 0);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4033,7 +4350,7 @@ ADD CONSTRAINT chk_salary CHECK (Salary &gt; 0);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q105" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q105" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q105. Explain the numeric functions ROUND, TRUNCATE, CEIL, FLOOR, ABS, MOD, POWER and SQRT, giving an example of each.</h3>
                             <div class="card-meta">
@@ -4041,6 +4358,9 @@ ADD CONSTRAINT chk_salary CHECK (Salary &gt; 0);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -4064,7 +4384,7 @@ ADD CONSTRAINT chk_salary CHECK (Salary &gt; 0);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q106" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="q106" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q106. Round off 78.3456 to 2 decimal places using ROUND, and also truncate it to 2 decimal places using TRUNCATE. Why do the two results come out different?</h3>
                             <div class="card-meta">
@@ -4072,6 +4392,9 @@ ADD CONSTRAINT chk_salary CHECK (Salary &gt; 0);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4086,7 +4409,7 @@ SELECT TRUNCATE(78.3456, 2); -- Result: 78.34</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q107" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="q107" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q107. Write a query on PRODUCT_MAST to display each Product_Name along with its Price rounded to the nearest whole number.</h3>
                             <div class="card-meta">
@@ -4094,6 +4417,9 @@ SELECT TRUNCATE(78.3456, 2); -- Result: 78.34</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4107,7 +4433,7 @@ FROM PRODUCT_MAST;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q108" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="q108" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q108. Find the remainder when 29 is divided by 4 using MOD, and use the same function to check whether 29 is odd or even.</h3>
                             <div class="card-meta">
@@ -4115,6 +4441,9 @@ FROM PRODUCT_MAST;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4131,7 +4460,7 @@ SELECT MOD(29, 2);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q109" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q109" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q109. Find the square of 12 using POWER and the square root of 144 using SQRT.</h3>
                             <div class="card-meta">
@@ -4139,6 +4468,9 @@ SELECT MOD(29, 2);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4151,7 +4483,7 @@ SELECT MOD(29, 2);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q110" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q110" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q110. Explain the date functions CURDATE, DATEDIFF, DATE_ADD/DATE_SUB and DATE_FORMAT, giving an example of each.</h3>
                             <div class="card-meta">
@@ -4159,6 +4491,9 @@ SELECT MOD(29, 2);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -4178,7 +4513,7 @@ SELECT MOD(29, 2);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q111" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q111" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q111. Explain the string functions CONCAT, UPPER/LOWER, LENGTH, SUBSTRING and TRIM/REPLACE, giving an example of each.</h3>
                             <div class="card-meta">
@@ -4186,6 +4521,9 @@ SELECT MOD(29, 2);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
@@ -4207,7 +4545,7 @@ SELECT MOD(29, 2);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q112" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q112" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q112. Using DATEDIFF, find the number of days between '2023-01-01' and '2023-12-31'.</h3>
                             <div class="card-meta">
@@ -4215,6 +4553,9 @@ SELECT MOD(29, 2);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4228,7 +4569,7 @@ SELECT MOD(29, 2);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q113" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q113" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q113. Using DATE_ADD, add 45 days to the date '2024-02-01'.</h3>
                             <div class="card-meta">
@@ -4236,6 +4577,9 @@ SELECT MOD(29, 2);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4248,7 +4592,7 @@ SELECT MOD(29, 2);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q114" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q114" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q114. Write a query to extract only the year and month from the date '2025-03-22'.</h3>
                             <div class="card-meta">
@@ -4256,6 +4600,9 @@ SELECT MOD(29, 2);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4269,7 +4616,7 @@ SELECT MOD(29, 2);</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q115" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="q115" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q115. Write a query on the STUDENT table that displays the full name of every student by joining First_Name and Last_Name with a space in between.</h3>
                             <div class="card-meta">
@@ -4277,6 +4624,9 @@ SELECT MOD(29, 2);</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4290,7 +4640,7 @@ FROM STUDENT;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q116" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="q116" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q116. Find the length of the string 'Normalization', and separately extract its first six characters using SUBSTRING.</h3>
                             <div class="card-meta">
@@ -4298,6 +4648,9 @@ FROM STUDENT;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4311,7 +4664,7 @@ FROM STUDENT;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q117" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q117" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q117. Explain UNION, UNION ALL, INTERSECT and MINUS/EXCEPT with an example of each. What condition must both the SELECT statements satisfy before these operators can be applied?</h3>
                             <div class="card-meta">
@@ -4319,6 +4672,9 @@ FROM STUDENT;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -4344,7 +4700,7 @@ FROM STUDENT;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q118" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="q118" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q118. Write a query to list every student who is a member of CLUB_CODING or CLUB_MUSIC or both, with no name repeated.</h3>
                             <div class="card-meta">
@@ -4352,6 +4708,9 @@ FROM STUDENT;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4366,7 +4725,7 @@ SELECT Name FROM CLUB_MUSIC;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q119" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q119" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q119. Write a query that lists all the rows of CLUB_CODING and CLUB_MUSIC together without removing duplicate names.</h3>
                             <div class="card-meta">
@@ -4374,6 +4733,9 @@ SELECT Name FROM CLUB_MUSIC;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4388,7 +4750,7 @@ SELECT Name FROM CLUB_MUSIC;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q120" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="q120" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q120. Write a query to find students who are members of both CLUB_CODING and CLUB_MUSIC.</h3>
                             <div class="card-meta">
@@ -4396,6 +4758,9 @@ SELECT Name FROM CLUB_MUSIC;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4410,7 +4775,7 @@ SELECT Name FROM CLUB_MUSIC;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q121" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="q121" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q121. Write a query to find students who are in CLUB_CODING but not in CLUB_MUSIC. Does the order of the two tables in this query matter? Explain.</h3>
                             <div class="card-meta">
@@ -4418,6 +4783,9 @@ SELECT Name FROM CLUB_MUSIC;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4433,7 +4801,7 @@ SELECT Name FROM CLUB_MUSIC;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q122" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q122" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q122. What is a transaction? Explain the ACID properties with the help of a bank transfer example.</h3>
                             <div class="card-meta">
@@ -4441,6 +4809,9 @@ SELECT Name FROM CLUB_MUSIC;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 10.0</span>
                                     
@@ -4495,7 +4866,7 @@ SELECT Name FROM CLUB_MUSIC;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q123" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q123" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q123. Explain COMMIT, ROLLBACK and SAVEPOINT with a suitable example on the ACCOUNT table.</h3>
                             <div class="card-meta">
@@ -4503,6 +4874,9 @@ SELECT Name FROM CLUB_MUSIC;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -4528,7 +4902,7 @@ COMMIT; -- Saves the final state</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q124" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="q124" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q124. Write a transaction that transfers Rs. 3000 from account A102 to account A103, placing a SAVEPOINT just before the transfer, and finally commit it.</h3>
                             <div class="card-meta">
@@ -4536,6 +4910,9 @@ COMMIT; -- Saves the final state</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4559,7 +4936,7 @@ COMMIT;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q125" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="q125" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q125. Using a searched CASE statement, classify each account's Balance as 'High' if it is 25000 or more, 'Medium' if it is 15000 or more, and 'Low' otherwise.</h3>
                             <div class="card-meta">
@@ -4567,6 +4944,9 @@ COMMIT;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4585,7 +4965,7 @@ FROM ACCOUNT;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q126" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q126" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q126. Write a query using IF() that marks accounts with Balance below 15000 as 'Low Balance Alert' and the rest as 'OK'.</h3>
                             <div class="card-meta">
@@ -4593,6 +4973,9 @@ FROM ACCOUNT;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4607,7 +4990,7 @@ FROM ACCOUNT;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q127" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="q127" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q127. Write a query using COALESCE() that displays the Nominee_Name column, showing 'Not Registered' wherever this value is missing.</h3>
                             <div class="card-meta">
@@ -4615,6 +4998,9 @@ FROM ACCOUNT;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4629,7 +5015,7 @@ FROM ACCOUNT;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q128" data-unit="III" data-bloom="L2" data-marks="5" data-important="true">
+                    <details class="q-card" id="q128" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q128. In one or two lines each, state the purpose of a stored procedure, a sequence (AUTO_INCREMENT in MySQL), a cursor and a trigger.</h3>
                             <div class="card-meta">
@@ -4637,6 +5023,9 @@ FROM ACCOUNT;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -4656,7 +5045,7 @@ FROM ACCOUNT;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q129" data-unit="III" data-bloom="L2" data-marks="3" data-important="true">
+                    <details class="q-card" id="q129" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q129. What is the difference between a BEFORE trigger and an AFTER trigger? What do the keywords NEW and OLD refer to inside a trigger?</h3>
                             <div class="card-meta">
@@ -4664,6 +5053,9 @@ FROM ACCOUNT;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
@@ -4679,7 +5071,7 @@ FROM ACCOUNT;</code></pre>
                         </div>
                     </details>
                     
-                    <details class="q-card" id="q130" data-unit="III" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="q130" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q130. What is the purpose of exception handling in a stored procedure? Briefly explain DECLARE ... HANDLER and the SIGNAL statement.</h3>
                             <div class="card-meta">
@@ -4687,6 +5079,9 @@ FROM ACCOUNT;</code></pre>
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -4884,6 +5279,7 @@ function applyFilters() {
     const activeUnits = Array.from(document.querySelectorAll('.unit-cb:checked')).map(cb => cb.value);
     const activeBlooms = Array.from(document.querySelectorAll('.bloom-cb:checked')).map(cb => cb.value);
     const activeMarks = Array.from(document.querySelectorAll('.marks-cb:checked')).map(cb => cb.value);
+    const activeExams = Array.from(document.querySelectorAll('.exam-cb:checked')).map(cb => cb.value);
     const importantOnlyCb = document.querySelector('.important-cb');
     const isImportantOnly = importantOnlyCb ? importantOnlyCb.checked : false;
     const reviewedOnlyCb = document.querySelector('.reviewed-filter-cb');
@@ -4905,7 +5301,9 @@ function applyFilters() {
         const matchesImportant = !isImportantOnly || cardImportant;
         const cb = card.querySelector('.review-cb');
         const matchesReviewed = !isReviewedOnly || (cb && cb.checked);
-        const isVisible = matchesSearch && matchesUnit && matchesBloom && matchesMarks && matchesImportant && matchesReviewed;
+        const cardExam = card.getAttribute('data-exam');
+        const matchesExam = activeExams.length === 0 || (cardExam && activeExams.includes(cardExam));
+        const isVisible = matchesSearch && matchesUnit && matchesBloom && matchesMarks && matchesImportant && matchesReviewed && matchesExam;
 
         if (isVisible) { card.style.display = ''; visibleCount++; }
         else { card.style.display = 'none'; }

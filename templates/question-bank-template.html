@@ -67,11 +67,20 @@
                     <div class="filter-section">
                         <input type="search" id="search-box" class="search-bar" placeholder="Search questions by keyword...">
                         <div class="filter-toggles">
+                            {% if is_midterm %}
+                            <label><input type="checkbox" class="unit-cb" value="I"> Unit I</label>
+                            <label><input type="checkbox" class="unit-cb" value="II"> Unit II</label>
+                            <label><input type="checkbox" class="unit-cb" value="III"> Unit III</label>
+                            {% else %}
                             <label><input type="checkbox" class="unit-cb" value="I"> Unit I</label>
                             <label><input type="checkbox" class="unit-cb" value="II"> Unit II</label>
                             <label><input type="checkbox" class="unit-cb" value="III"> Unit III</label>
                             <label><input type="checkbox" class="unit-cb" value="IV"> Unit IV</label>
                             <label><input type="checkbox" class="unit-cb" value="V"> Unit V</label>
+                            <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
+                            <label><input type="checkbox" class="exam-cb" value="midterm"> Midterm</label>
+                            <label><input type="checkbox" class="exam-cb" value="endterm"> End Term</label>
+                            {% endif %}
                             <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
                             {%- for mark in available_marks %}
                             <label><input type="checkbox" class="marks-cb" value="{{ mark }}"> {{ mark }} Marks</label>
@@ -177,7 +186,7 @@
             <div id="realContentWrapper">
                 <section id="cards">
                     {% for q in questions %}
-                    <details class="q-card" id="{{ q.id }}" data-unit="{{ q.unit }}" data-bloom="{{ q.bloom }}" data-marks="{{ q.marks }}" data-important="{{ q.important | lower }}">
+                    <details class="q-card" id="{{ q.id }}" data-unit="{{ q.unit }}" data-exam="{{ q.exam or ('midterm' if q.unit in ['I', 'II', 'III'] else 'endterm') }}" data-bloom="{{ q.bloom }}" data-marks="{{ q.marks }}" data-important="{{ q.important | lower }}">
                         <summary>
                             <h3>Q{{ q.q_num }}. {{ q.title }}</h3>
                             <div class="card-meta">
@@ -185,6 +194,9 @@
                                     <span class="badge unit-{{ {'I':'1', 'II':'2', 'III':'3', 'IV':'4', 'V':'5'}.get(q.unit, q.unit) }}">Unit {{ q.unit }}</span>
                                     <span class="badge bloom-{{ q.bloom | lower }}">{{ q.co }} | Bloom {{ q.bloom }}</span>
                                     <span class="badge marks marks-{{ q.marks }}">{{ q.marks }} Marks</span>
+                                    {% if q.exam %}
+                                    <span class="badge exam-badge exam-{{ q.exam }}">{{ 'Midterm' if q.exam == 'midterm' else 'End Term' }}</span>
+                                    {% endif %}
                                     {% if q.important %}
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: {{ q.score }}</span>
                                     {% endif %}

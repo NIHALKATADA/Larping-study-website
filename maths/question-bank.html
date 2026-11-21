@@ -67,11 +67,16 @@
                     <div class="filter-section">
                         <input type="search" id="search-box" class="search-bar" placeholder="Search questions by keyword...">
                         <div class="filter-toggles">
+                            
                             <label><input type="checkbox" class="unit-cb" value="I"> Unit I</label>
                             <label><input type="checkbox" class="unit-cb" value="II"> Unit II</label>
                             <label><input type="checkbox" class="unit-cb" value="III"> Unit III</label>
                             <label><input type="checkbox" class="unit-cb" value="IV"> Unit IV</label>
                             <label><input type="checkbox" class="unit-cb" value="V"> Unit V</label>
+                            <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
+                            <label><input type="checkbox" class="exam-cb" value="midterm"> Midterm</label>
+                            <label><input type="checkbox" class="exam-cb" value="endterm"> End Term</label>
+                            
                             <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
                             <label><input type="checkbox" class="marks-cb" value="2"> 2 Marks</label>
                             <label><input type="checkbox" class="marks-cb" value="3"> 3 Marks</label>
@@ -432,7 +437,7 @@
             <div id="realContentWrapper">
                 <section id="cards">
                     
-                    <details class="q-card" id="u1_pa_q1" data-unit="I" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="u1_pa_q1" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q1. Determine whether each of the following is a proposition. If it is a proposition, state whether it is True or False. (a) Every prime number greater than 2 is odd. (b) 7 + 8 = 16. (c) The Moon is a planet. (d) India is located in Asia.</h3>
                             <div class="card-meta">
@@ -440,6 +445,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -452,7 +460,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pa_q2" data-unit="I" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="u1_pa_q2" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q2. Let p: It is raining, q: I carry an umbrella. Translate the following symbolic propositions into English. (a) p ∧ q (b) p ∨ q</h3>
                             <div class="card-meta">
@@ -460,6 +468,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -472,7 +483,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pa_q3" data-unit="I" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="u1_pa_q3" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q3. Write the negation of each of the following statements. (a) Today is Monday. (b) The computer is connected to the internet. (c) The file is encrypted. (d) The classroom is empty.</h3>
                             <div class="card-meta">
@@ -480,6 +491,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -492,7 +506,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pa_q4" data-unit="I" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="u1_pa_q4" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q4. If a number is divisible by 4, then it is even. Write its (a) converse and (b) inverse</h3>
                             <div class="card-meta">
@@ -500,6 +514,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -512,7 +529,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pa_q5" data-unit="I" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="u1_pa_q5" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q5. Show the compound proposition (p ↔ q) ≡ (p → q) ∧ (q → p) is logically equivalent.</h3>
                             <div class="card-meta">
@@ -520,6 +537,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -532,7 +552,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pa_q6" data-unit="I" data-bloom="L2" data-marks="2" data-important="true">
+                    <details class="q-card" id="u1_pa_q6" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="true">
                         <summary>
                             <h3>Q6. Let p: It is raining, q: I carry an umbrella, r: I wear a raincoat. Write the following statements in symbolic form. (a) It is raining and I carry an umbrella. (b) It is not raining but I wear a raincoat.</h3>
                             <div class="card-meta">
@@ -540,6 +560,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.3</span>
                                     
@@ -554,7 +577,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pa_q7" data-unit="I" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="u1_pa_q7" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q7. Let p, q, r be as mentioned in Q6. Translate the following symbolic propositions into English (a) p → q (b) p ↔ q (c) p ⊕ q</h3>
                             <div class="card-meta">
@@ -562,6 +585,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -574,7 +600,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pa_q8" data-unit="I" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="u1_pa_q8" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q8. Using a truth table, determine whether p ∨ ¬p is a Tautology, Contradiction, or Contingency.</h3>
                             <div class="card-meta">
@@ -582,6 +608,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -594,7 +623,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pa_q9" data-unit="I" data-bloom="L1" data-marks="2" data-important="false">
+                    <details class="q-card" id="u1_pa_q9" data-unit="I" data-exam="midterm" data-bloom="L1" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q9. Define the following terms with examples. (a) Tautology (b) Conditional Statement</h3>
                             <div class="card-meta">
@@ -602,6 +631,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l1">CO1 | Bloom L1</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -614,7 +646,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pa_q10" data-unit="I" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="u1_pa_q10" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q10. Construct the truth table of the following: (a) (p → q) (b) (¬p ∨ q).</h3>
                             <div class="card-meta">
@@ -622,6 +654,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -634,7 +669,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pb_q1" data-unit="I" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="u1_pb_q1" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q11. Let p: It is raining, q: I carry an umbrella, r: I wear a raincoat. Write the following statements in symbolic form (a) Either I carry an umbrella or wear a raincoat, but not both. (b) I carry an umbrella if and only if it is raining.</h3>
                             <div class="card-meta">
@@ -642,6 +677,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -654,7 +692,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pb_q2" data-unit="I" data-bloom="L2" data-marks="3" data-important="true">
+                    <details class="q-card" id="u1_pb_q2" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q12. Let p, q, r be as above. Translate the following symbolic propositions into English (a) (p ∧ q) → r (b) (p ∨ q) ∧ ¬r</h3>
                             <div class="card-meta">
@@ -662,6 +700,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.6</span>
                                     
@@ -676,7 +717,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pb_q3" data-unit="I" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u1_pb_q3" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q13. Construct the complete truth table for each of the following (a) (p ∧ q) → p (b) (p → q) ∧ (q → p)</h3>
                             <div class="card-meta">
@@ -684,6 +725,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -696,7 +740,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pb_q4" data-unit="I" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u1_pb_q4" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q14. Let p and q be the propositions “The election is decided” and “The votes have been counted,” respectively. Express each of these compound propositions as an English sentence. (a) ¬q → ¬p (b) ¬p → ¬q (c) ¬q ∨ (¬p ∧ q)</h3>
                             <div class="card-meta">
@@ -704,6 +748,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -716,7 +763,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pb_q5" data-unit="I" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u1_pb_q5" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q15. Determine whether these biconditional are true or false. a) 2 + 2 = 4 if and only if 1 + 1 = 2. b) 1 + 1 = 2 if and only if 2 + 3 = 4. c) 1 + 1 = 3 if and only if monkeys can fly</h3>
                             <div class="card-meta">
@@ -724,6 +771,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -736,7 +786,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pb_q6" data-unit="I" data-bloom="L3" data-marks="3" data-important="true">
+                    <details class="q-card" id="u1_pb_q6" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q16. Using a truth table, determine whether which of the following is a Tautology, Contradiction, or Contingency. (a) (p → q) ∨ (q → p) (b) (p → q) ↔ (¬q → ¬p)</h3>
                             <div class="card-meta">
@@ -744,6 +794,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
@@ -758,7 +811,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pb_q7" data-unit="I" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u1_pb_q7" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q17. Construct a truth table for each of the following compound propositions. (a) (p → q) ↔ (¬q → ¬p) (b) (p → q) → (q → p)</h3>
                             <div class="card-meta">
@@ -766,6 +819,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -778,7 +834,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pb_q8" data-unit="I" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u1_pb_q8" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q18. State the converse, contrapositive, and inverse of each of these conditional statements. When I stay up late, it is necessary that I sleep until noon</h3>
                             <div class="card-meta">
@@ -786,6 +842,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -798,7 +857,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pb_q9" data-unit="I" data-bloom="L4" data-marks="3" data-important="false">
+                    <details class="q-card" id="u1_pb_q9" data-unit="I" data-exam="midterm" data-bloom="L4" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q19. Using logical laws (without truth tables), prove the following (a) (p → q) ≡ (¬q → ¬p) (b) ¬(p → q) ≡ p ∧ ¬q</h3>
                             <div class="card-meta">
@@ -806,6 +865,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l4">CO1 | Bloom L4</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -818,7 +880,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pb_q10" data-unit="I" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u1_pb_q10" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q20. Using truth tables, prove the following (a) (p ∧ q) ∨ (¬p ∧ q) ≡ q (b) (p ∨ q) ∧ (p ∨ ¬q) ≡ p</h3>
                             <div class="card-meta">
@@ -826,6 +888,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -838,7 +903,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pc_q1" data-unit="I" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="u1_pc_q1" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q21. Let p and q be the propositions p: It is below freezing and q: It is snowing. Write these propositions using p and q and logical connectives (including negations). (a) It is below freezing but not snowing. (b) It is not below freezing and it is not snowing. (c) It is either snowing or below freezing (or both). (d) Either it is below freezing or it is snowing, but it is not snowing if it is below freezing. (e) That it is below freezing is necessary and sufficient for it to be snowing.</h3>
                             <div class="card-meta">
@@ -846,6 +911,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -858,7 +926,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pc_q2" data-unit="I" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u1_pc_q2" data-unit="I" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q22. Using a truth table, determine whether each of the following is a Tautology, Contradiction, or Contingency (a) (p ∧ (q → r)) → ((p ∧ q) → r) (b) ((p → q) ∧ (p → r)) ∧ p</h3>
                             <div class="card-meta">
@@ -866,6 +934,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l4">CO1 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -878,7 +949,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pc_q3" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="u1_pc_q3" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q23. Construct a truth table for each of the following compound propositions. (a) (p ↔ q) ⊕ (¬p ↔ ¬r) (b) (¬p ↔ ¬q) ↔ (q ↔ r)</h3>
                             <div class="card-meta">
@@ -886,6 +957,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -900,7 +974,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pc_q4" data-unit="I" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="u1_pc_q4" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q24. Let p, q, and r be the propositions p: You have the flu. q: You miss the final examination. r: You pass the course. Express each of these propositions as an English sentence. (a) q → ¬r (b) ¬q ↔ r (c) p ∨ q ∨ r (d) (p → ¬r) ∨ (q → ¬r) (e) (p ∧ q) ∨ (¬q ∧ r)</h3>
                             <div class="card-meta">
@@ -908,6 +982,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -920,7 +997,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pc_q5" data-unit="I" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="u1_pc_q5" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q25. State the converse, contrapositive, and inverse of each of these conditional statements. (a) If it snows tonight, then I will stay at home. (b) I go to the beach whenever it is a sunny summer day.</h3>
                             <div class="card-meta">
@@ -928,6 +1005,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -940,7 +1020,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pc_q6" data-unit="I" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u1_pc_q6" data-unit="I" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q26. Show that ¬(p ∨ (¬p ∧ q)) and ¬p ∧ ¬q are logically equivalent by developing a series of logical equivalences.</h3>
                             <div class="card-meta">
@@ -948,6 +1028,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l4">CO1 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -960,7 +1043,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pc_q7" data-unit="I" data-bloom="L2" data-marks="5" data-important="false">
+                    <details class="q-card" id="u1_pc_q7" data-unit="I" data-exam="midterm" data-bloom="L2" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q27. Define the following terms with suitable truth table: (a) Tautology (b) Biconditional Statement (c) Contingency (d) Contrapositive (e) Exclusive OR</h3>
                             <div class="card-meta">
@@ -968,6 +1051,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l2">CO1 | Bloom L2</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -980,7 +1066,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pc_q8" data-unit="I" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="u1_pc_q8" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q28. Determine whether each of these conditional statements is true or false. (a) If 1 + 1 = 2, then 2 + 2 = 5. (b) If 1 + 1 = 3, then 2 + 2 = 4. (c) If 1 + 1 = 3, then 2 + 2 = 5. (d) If monkeys can fly, then 1 + 1 = 3. (e) If 1 + 1 = 2, then dogs can fly</h3>
                             <div class="card-meta">
@@ -988,6 +1074,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.2</span>
                                     
@@ -1002,7 +1091,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pc_q9" data-unit="I" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="u1_pc_q9" data-unit="I" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q29. Express these system specifications using the propositions p “The user enters a valid password,” q “Access is granted,” and r “The user has paid the subscription fee” and logical connectives (including negations). (a) “The user has paid the subscription fee, but does not enter a valid password.” (b) “Access is granted whenever the user has paid the subscription fee and enters a valid password.”</h3>
                             <div class="card-meta">
@@ -1010,6 +1099,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l3">CO1 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1022,7 +1114,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u1_pc_q10" data-unit="I" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u1_pc_q10" data-unit="I" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q30. Using truth tables, prove the following pair of equivalences (a) ((p → q) ∧ (p → r)) ≡ (p → (q ∧ r)) (b) (p → (q ∧ r)) ≡ (p → q) ∧ (p → r)</h3>
                             <div class="card-meta">
@@ -1030,6 +1122,9 @@
                                     <span class="badge unit-1">Unit I</span>
                                     <span class="badge bloom-l4">CO1 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1042,7 +1137,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_a1" data-unit="II" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="u2_a1" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q1. Write the characteristic equation corresponding to: a_n - 5a_{n-1} + 6a_{n-2} = 0 and find its complete solution.</h3>
                             <div class="card-meta">
@@ -1050,6 +1145,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1062,7 +1160,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_a2" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
+                    <details class="q-card" id="u2_a2" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="true">
                         <summary>
                             <h3>Q2. Write the solution of the following Generating function: G(x) = 1 / (1 - 2x)</h3>
                             <div class="card-meta">
@@ -1070,6 +1168,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.4</span>
                                     
@@ -1084,7 +1185,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_a3" data-unit="II" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="u2_a3" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q3. Find the number of ways of arranging 3 different books on a shelf from total 5 books?</h3>
                             <div class="card-meta">
@@ -1092,6 +1193,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1104,7 +1208,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_a4" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
+                    <details class="q-card" id="u2_a4" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="true">
                         <summary>
                             <h3>Q4. Find a2 and a3 terms of the following recurrence relation a_n = a_{n-1}^2 if a_1 = 2.</h3>
                             <div class="card-meta">
@@ -1112,6 +1216,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.6</span>
                                     
@@ -1126,7 +1233,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_a5" data-unit="II" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="u2_a5" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q5. Identify which of the following recurrence relations are linear homogeneous recurrence relations with constant coefficients. Also, find their degrees.</h3>
                             <div class="card-meta">
@@ -1134,6 +1241,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1146,7 +1256,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_a6" data-unit="II" data-bloom="L2" data-marks="2" data-important="true">
+                    <details class="q-card" id="u2_a6" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="true">
                         <summary>
                             <h3>Q6. Find the value of: (i) 7P2 and (ii) 9C2</h3>
                             <div class="card-meta">
@@ -1154,6 +1264,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.5</span>
                                     
@@ -1168,7 +1281,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_a7" data-unit="II" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="u2_a7" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q7. Find the number of ways to select 3 students from a group of 8 students.</h3>
                             <div class="card-meta">
@@ -1176,6 +1289,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1188,7 +1304,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_a8" data-unit="II" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="u2_a8" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q8. Find the generating function for the sequence: 1,2,3,4, ...</h3>
                             <div class="card-meta">
@@ -1196,6 +1312,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1208,7 +1327,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_a9" data-unit="II" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="u2_a9" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q9. Solve the following recurrence relation: a_n = 4a_{n-1} - a_{n-2}</h3>
                             <div class="card-meta">
@@ -1216,6 +1335,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1228,7 +1350,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_a10" data-unit="II" data-bloom="L4" data-marks="2" data-important="false">
+                    <details class="q-card" id="u2_a10" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q10. Check the following terms are the solution of given recurrence relation or not:</h3>
                             <div class="card-meta">
@@ -1236,6 +1358,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1248,7 +1373,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b1" data-unit="II" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="u2_b1" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q11. Find the order and degree of the following recurrence relations:</h3>
                             <div class="card-meta">
@@ -1256,6 +1381,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1268,7 +1396,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b2" data-unit="II" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u2_b2" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q12. Find next three terms of the following recurrence relations:</h3>
                             <div class="card-meta">
@@ -1276,6 +1404,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1288,7 +1419,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b3" data-unit="II" data-bloom="L3" data-marks="3" data-important="true">
+                    <details class="q-card" id="u2_b3" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q13. Solve the following recurrence relation: a_n = 10a_{n-1} - 25a_{n-2}, a_0 = 3, a_1 = 25</h3>
                             <div class="card-meta">
@@ -1296,6 +1427,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.2</span>
                                     
@@ -1310,7 +1444,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b4" data-unit="II" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u2_b4" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q14. A committee of 4 students is to be selected from 6 boys and 5 girls. In how many ways can the committee be formed?</h3>
                             <div class="card-meta">
@@ -1318,6 +1452,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1330,7 +1467,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b5" data-unit="II" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u2_b5" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q15. Solve the following recurrence relation by using generating function: a_n = 7a_{n-1}, a_0 = -2</h3>
                             <div class="card-meta">
@@ -1338,6 +1475,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1350,7 +1490,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b6" data-unit="II" data-bloom="L2" data-marks="3" data-important="true">
+                    <details class="q-card" id="u2_b6" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q16. How many different 4-letter words can be formed using the letters of the word MATH, when each letter can be used only once?</h3>
                             <div class="card-meta">
@@ -1358,6 +1498,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l2">CO2 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.2</span>
                                     
@@ -1372,7 +1515,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b7" data-unit="II" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u2_b7" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q17. Solve the following recurrence relation: a_n = 6a_{n-1} - 9a_{n-2}, a_0 = 1, a_1 = 9</h3>
                             <div class="card-meta">
@@ -1380,6 +1523,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1392,7 +1538,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b8" data-unit="II" data-bloom="L4" data-marks="3" data-important="false">
+                    <details class="q-card" id="u2_b8" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q18. Solve the following recurrence relation: a_n - 4a_{n-1} + 5a_{n-2} - 2a_{n-3} = 0 given a_0 = 1, a_1 = 3, a_2 = 8</h3>
                             <div class="card-meta">
@@ -1400,6 +1546,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1412,7 +1561,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b9" data-unit="II" data-bloom="L4" data-marks="3" data-important="false">
+                    <details class="q-card" id="u2_b9" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q19. Solve the following recurrence relation: a_n - 6a_{n-1} + 11a_{n-2} - 6a_{n-3} = 0, given a_0 = 1, a_1 = 6, a_2 = 20</h3>
                             <div class="card-meta">
@@ -1420,6 +1569,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1432,7 +1584,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_b10" data-unit="II" data-bloom="L4" data-marks="3" data-important="false">
+                    <details class="q-card" id="u2_b10" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q20. Solve the following recurrence relation by using generating function: a_n = 3a_{n-1} + 2a_{n-2} given a_0 = 1, a_1 = 3</h3>
                             <div class="card-meta">
@@ -1440,6 +1592,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1452,7 +1607,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c1" data-unit="II" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="u2_c1" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q21. Find the value of n: (n + 1)P_3 = 5 x nP_2</h3>
                             <div class="card-meta">
@@ -1460,6 +1615,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l3">CO2 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.3</span>
                                     
@@ -1474,7 +1632,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c2" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u2_c2" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q22. Solve the following recurrence relation by using generating function: a_n = 3a_{n-1} - 2a_{n-2} given a_0 = 2, a_1 = 5</h3>
                             <div class="card-meta">
@@ -1482,6 +1640,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1494,7 +1655,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c3" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u2_c3" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q23. Solve the following recurrence relation: a_{n+2} - 7a_{n+1} + 12a_n = 0, given a_1 = 2, a_2 = 7.</h3>
                             <div class="card-meta">
@@ -1502,6 +1663,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1514,7 +1678,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c4" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u2_c4" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q24. Solve the following recurrence relation: a_n - 5a_{n-1} + 7a_{n-2} - 3a_{n-3} = 0; a_0 = 2, a_1 = 5, a_2 = 12</h3>
                             <div class="card-meta">
@@ -1522,6 +1686,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1534,7 +1701,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c5" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u2_c5" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q25. Solve the following recurrence relation: a_{n+3} - 5a_{n+2} + 8a_{n+1} - 4a_n = 0, given a_1 = 2, a_2 = 5, a_3 = 14</h3>
                             <div class="card-meta">
@@ -1542,6 +1709,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1554,7 +1724,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c6" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u2_c6" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q26. Solve the following recurrence relation: a_n = 11a_{n-1} - 38a_{n-2} + 40a_{n-3}, subject to a_0 = 3, a_1 = 9, a_2 = 27.</h3>
                             <div class="card-meta">
@@ -1562,6 +1732,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1574,7 +1747,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c7" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u2_c7" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q27. Solve the following recurrence relation by using generating function: a_n = 2a_{n-1} + 3a_{n-2} given a_0 = 1, a_1 = 2</h3>
                             <div class="card-meta">
@@ -1582,6 +1755,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1594,7 +1770,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c8" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u2_c8" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q28. Solve the following recurrence relation: a_{n+3} - 5a_{n+2} + 8a_{n+1} - 4a_n = 0 given a_1 = 1, a_2 = 4, a_3 = 11</h3>
                             <div class="card-meta">
@@ -1602,6 +1778,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1614,7 +1793,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c9" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u2_c9" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q29. Solve the following recurrence relation: a_n = 8a_{n-1} - 21a_{n-2} + 18a_{n-3}, subject to a_0 = 1, a_1 = 5, a_2 = 19.</h3>
                             <div class="card-meta">
@@ -1622,6 +1801,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1634,7 +1816,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u2_c10" data-unit="II" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u2_c10" data-unit="II" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q30. Solve the following recurrence relation by using generating function: a_n = a_{n-1} + a_{n-2} given a_0 = 0, a_1 = 1</h3>
                             <div class="card-meta">
@@ -1642,6 +1824,9 @@
                                     <span class="badge unit-2">Unit II</span>
                                     <span class="badge bloom-l4">CO2 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1654,7 +1839,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_a_q1" data-unit="III" data-bloom="L1" data-marks="2" data-important="false">
+                    <details class="q-card" id="u3_a_q1" data-unit="III" data-exam="midterm" data-bloom="L1" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q1. Define the following terms with graphs: (i) Complete Bipartite Graph (ii) Complete graph</h3>
                             <div class="card-meta">
@@ -1662,6 +1847,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l1">CO3 | Bloom L1</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1674,7 +1862,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_a_q2" data-unit="III" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="u3_a_q2" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q2. Draw the following graphs: (i) K_5 (ii) C_4</h3>
                             <div class="card-meta">
@@ -1682,6 +1870,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1694,7 +1885,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_a_q3" data-unit="III" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="u3_a_q3" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q3. Find degree of the following graph</h3>
                             <div class="card-meta">
@@ -1702,6 +1893,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1714,7 +1908,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_a_q4" data-unit="III" data-bloom="L1" data-marks="2" data-important="false">
+                    <details class="q-card" id="u3_a_q4" data-unit="III" data-exam="midterm" data-bloom="L1" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q4. State the Handshaking Theorem.</h3>
                             <div class="card-meta">
@@ -1722,6 +1916,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l1">CO3 | Bloom L1</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1734,7 +1931,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_a_q5" data-unit="III" data-bloom="L2" data-marks="2" data-important="false">
+                    <details class="q-card" id="u3_a_q5" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q5. Determine the types of following graphs.</h3>
                             <div class="card-meta">
@@ -1742,6 +1939,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1754,7 +1954,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_a_q6" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="u3_a_q6" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q6. Draw undirected graph of the following matrix.</h3>
                             <div class="card-meta">
@@ -1762,6 +1962,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1774,7 +1977,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_a_q7" data-unit="III" data-bloom="L1" data-marks="2" data-important="true">
+                    <details class="q-card" id="u3_a_q7" data-unit="III" data-exam="midterm" data-bloom="L1" data-marks="2" data-important="true">
                         <summary>
                             <h3>Q7. Define the following terms with graphs: (i) n-Cube (ii) Pseudograph</h3>
                             <div class="card-meta">
@@ -1782,6 +1985,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l1">CO3 | Bloom L1</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.3</span>
                                     
@@ -1796,7 +2002,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_a_q8" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="u3_a_q8" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q8. Find Adjacency matrix of the following graph.</h3>
                             <div class="card-meta">
@@ -1804,6 +2010,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1816,7 +2025,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_a_q9" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="u3_a_q9" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q9. Draw an incidence matrix of the following graph</h3>
                             <div class="card-meta">
@@ -1824,6 +2033,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1836,7 +2048,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_a_q10" data-unit="III" data-bloom="L3" data-marks="2" data-important="false">
+                    <details class="q-card" id="u3_a_q10" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
                         <summary>
                             <h3>Q10. Check the following graph is isomorphic or not.</h3>
                             <div class="card-meta">
@@ -1844,6 +2056,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1856,7 +2071,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_b_q1" data-unit="III" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="u3_b_q1" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q11. Find Degree of the following graph. (i) K_1,3 (ii)</h3>
                             <div class="card-meta">
@@ -1864,6 +2079,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1876,7 +2094,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_b_q2" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u3_b_q2" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q12. Check the following graphs are Bipartite or not.</h3>
                             <div class="card-meta">
@@ -1884,6 +2102,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1896,7 +2117,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_b_q3" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u3_b_q3" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q13. Find Adjacency matrix of the following graph.</h3>
                             <div class="card-meta">
@@ -1904,6 +2125,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1916,7 +2140,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_b_q4" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u3_b_q4" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q14. Check the following graphs are isomorphic or not.</h3>
                             <div class="card-meta">
@@ -1924,6 +2148,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1936,7 +2163,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_b_q5" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u3_b_q5" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q15. A graph has 6 vertices with degrees 3, 3, 4, 2, 2, 2. Verify whether such a graph can exist, and if it does, find the total number of edges.</h3>
                             <div class="card-meta">
@@ -1944,6 +2171,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1956,7 +2186,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_b_q6" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u3_b_q6" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q16. Draw the graph of the following incidence matrix.</h3>
                             <div class="card-meta">
@@ -1964,6 +2194,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1976,7 +2209,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_b_q7" data-unit="III" data-bloom="L2" data-marks="3" data-important="false">
+                    <details class="q-card" id="u3_b_q7" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q17. Draw the following graphs. Find vertices and number of edges. (i) C_6 (ii) K_{2,3} (iii) Q_3</h3>
                             <div class="card-meta">
@@ -1984,6 +2217,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l2">CO3 | Bloom L2</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -1996,7 +2232,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_b_q8" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u3_b_q8" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q18. Represent each of these graphs with an adjacency matrix. (i) K_3 (ii) Q_3 (iii) W_4</h3>
                             <div class="card-meta">
@@ -2004,6 +2240,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2016,7 +2255,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_b_q9" data-unit="III" data-bloom="L3" data-marks="3" data-important="true">
+                    <details class="q-card" id="u3_b_q9" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q19. Determine the number of vertices and edges and find the in-degree and out-degree of each vertex for the given directed multigraph.</h3>
                             <div class="card-meta">
@@ -2024,6 +2263,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
@@ -2038,7 +2280,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_b_q10" data-unit="III" data-bloom="L3" data-marks="3" data-important="false">
+                    <details class="q-card" id="u3_b_q10" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="3" data-important="false">
                         <summary>
                             <h3>Q20. Draw an undirected graph of the following matrix</h3>
                             <div class="card-meta">
@@ -2046,6 +2288,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2058,7 +2303,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_c_q1" data-unit="III" data-bloom="L4" data-marks="5" data-important="true">
+                    <details class="q-card" id="u3_c_q1" data-unit="III" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q21. Check the following graphs are isomorphic or not.</h3>
                             <div class="card-meta">
@@ -2066,6 +2311,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l4">CO3 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.0</span>
                                     
@@ -2080,7 +2328,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_c_q2" data-unit="III" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u3_c_q2" data-unit="III" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q22. (a) A graph has 15 edges. It has one vertex of degree 6, two vertices of degree 5 each, and three vertices of degree 4 each. All remaining vertices have degree 1. Find the total number of vertices in the graph. (b) A graph has 6 vertices with degrees 2,3,4,2,5,x. If the graph has 10 edges, find x.</h3>
                             <div class="card-meta">
@@ -2088,6 +2336,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l4">CO3 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2100,7 +2351,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_c_q3" data-unit="III" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="u3_c_q3" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q23. Find the number of vertices, the number of edges, and the degree of each vertex in the given undirected graph. Identify all isolated and pendant vertices.</h3>
                             <div class="card-meta">
@@ -2108,6 +2359,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2120,7 +2374,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_c_q4" data-unit="III" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u3_c_q4" data-unit="III" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q24. Check the following graphs are isomorphic or not.</h3>
                             <div class="card-meta">
@@ -2128,6 +2382,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l4">CO3 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2140,7 +2397,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_c_q5" data-unit="III" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="u3_c_q5" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q25. Draw an undirected graph of the following matrix</h3>
                             <div class="card-meta">
@@ -2148,6 +2405,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.6</span>
                                     
@@ -2162,7 +2422,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_c_q6" data-unit="III" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="u3_c_q6" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q26. Determine the number of vertices and edges and find the in-degree and out-degree of each vertex for the given directed multigraph.</h3>
                             <div class="card-meta">
@@ -2170,6 +2430,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2182,7 +2445,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_c_q7" data-unit="III" data-bloom="L4" data-marks="5" data-important="false">
+                    <details class="q-card" id="u3_c_q7" data-unit="III" data-exam="midterm" data-bloom="L4" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q27. Check the following graphs are isomorphic or not.</h3>
                             <div class="card-meta">
@@ -2190,6 +2453,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l4">CO3 | Bloom L4</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2202,7 +2468,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_c_q8" data-unit="III" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="u3_c_q8" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q28. Find the number of vertices, the number of edges, and the degree of each vertex in the given undirected graph. Identify all isolated and pendant vertices.</h3>
                             <div class="card-meta">
@@ -2210,6 +2476,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2222,7 +2491,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_c_q9" data-unit="III" data-bloom="L3" data-marks="5" data-important="true">
+                    <details class="q-card" id="u3_c_q9" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="true">
                         <summary>
                             <h3>Q29. Find the adjacency matrix of the given directed multigraph with respect to the vertices listed in alphabetic order.</h3>
                             <div class="card-meta">
@@ -2230,6 +2499,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                     <span class="badge important-badge" title="Score indicates exam probability / fundamental importance out of 10.">Score: 9.1</span>
                                     
@@ -2244,7 +2516,7 @@
                         </div>
                     </details>
                     
-                    <details class="q-card" id="u3_c_q10" data-unit="III" data-bloom="L3" data-marks="5" data-important="false">
+                    <details class="q-card" id="u3_c_q10" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="5" data-important="false">
                         <summary>
                             <h3>Q30. Check the following graphs are Bipartite or not.</h3>
                             <div class="card-meta">
@@ -2252,6 +2524,9 @@
                                     <span class="badge unit-3">Unit III</span>
                                     <span class="badge bloom-l3">CO3 | Bloom L3</span>
                                     <span class="badge marks marks-5">5 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
                                     
                                 </div>
                                 <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
@@ -2445,6 +2720,7 @@ function applyFilters() {
     const activeUnits = Array.from(document.querySelectorAll('.unit-cb:checked')).map(cb => cb.value);
     const activeBlooms = Array.from(document.querySelectorAll('.bloom-cb:checked')).map(cb => cb.value);
     const activeMarks = Array.from(document.querySelectorAll('.marks-cb:checked')).map(cb => cb.value);
+    const activeExams = Array.from(document.querySelectorAll('.exam-cb:checked')).map(cb => cb.value);
     const importantOnlyCb = document.querySelector('.important-cb');
     const isImportantOnly = importantOnlyCb ? importantOnlyCb.checked : false;
     const reviewedOnlyCb = document.querySelector('.reviewed-filter-cb');
@@ -2466,7 +2742,9 @@ function applyFilters() {
         const matchesImportant = !isImportantOnly || cardImportant;
         const cb = card.querySelector('.review-cb');
         const matchesReviewed = !isReviewedOnly || (cb && cb.checked);
-        const isVisible = matchesSearch && matchesUnit && matchesBloom && matchesMarks && matchesImportant && matchesReviewed;
+        const cardExam = card.getAttribute('data-exam');
+        const matchesExam = activeExams.length === 0 || (cardExam && activeExams.includes(cardExam));
+        const isVisible = matchesSearch && matchesUnit && matchesBloom && matchesMarks && matchesImportant && matchesReviewed && matchesExam;
 
         if (isVisible) { card.style.display = ''; visibleCount++; }
         else { card.style.display = 'none'; }

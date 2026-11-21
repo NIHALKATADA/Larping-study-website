@@ -153,6 +153,7 @@ function applyFilters() {
     const activeUnits = Array.from(document.querySelectorAll('.unit-cb:checked')).map(cb => cb.value);
     const activeBlooms = Array.from(document.querySelectorAll('.bloom-cb:checked')).map(cb => cb.value);
     const activeMarks = Array.from(document.querySelectorAll('.marks-cb:checked')).map(cb => cb.value);
+    const activeExams = Array.from(document.querySelectorAll('.exam-cb:checked')).map(cb => cb.value);
     const importantOnlyCb = document.querySelector('.important-cb');
     const isImportantOnly = importantOnlyCb ? importantOnlyCb.checked : false;
     const reviewedOnlyCb = document.querySelector('.reviewed-filter-cb');
@@ -174,7 +175,9 @@ function applyFilters() {
         const matchesImportant = !isImportantOnly || cardImportant;
         const cb = card.querySelector('.review-cb');
         const matchesReviewed = !isReviewedOnly || (cb && cb.checked);
-        const isVisible = matchesSearch && matchesUnit && matchesBloom && matchesMarks && matchesImportant && matchesReviewed;
+        const cardExam = card.getAttribute('data-exam');
+        const matchesExam = activeExams.length === 0 || (cardExam && activeExams.includes(cardExam));
+        const isVisible = matchesSearch && matchesUnit && matchesBloom && matchesMarks && matchesImportant && matchesReviewed && matchesExam;
 
         if (isVisible) { card.style.display = ''; visibleCount++; }
         else { card.style.display = 'none'; }
