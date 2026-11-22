@@ -2668,8 +2668,9 @@ html, body { width: 100% !important; max-width: 100% !important; }
 }
 
 .exam-tab-btn.active .tab-count {
-    background: rgba(0, 242, 254, 0.2);
-    color: var(--primary-teal);
+    background: rgba(0, 242, 254, 0.22);
+    color: #00f2fe;
+    border: 1px solid rgba(0, 242, 254, 0.4);
 }
 
 [data-theme="paper"] .exam-tab-btn.active .tab-count {
