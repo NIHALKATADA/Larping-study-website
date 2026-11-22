@@ -4,7 +4,7 @@
     <meta name="view-transition" content="same-origin">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ subject_code }} - {% if is_midterm %}Midterm Important{% else %}Full Question Bank{% endif %}</title>
+    <title>{{ subject_code }} - {% if is_important %}Important Questions{% elif is_midterm %}Midterm Important{% else %}Full Question Bank{% endif %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -43,14 +43,9 @@
     </nav>
 
 <header class="banner">
-        
-        
-        
         <h1>{{ subject_full_name }}</h1>
-        <h2>{% if is_midterm %}Midterm Important Questions{% else %}Full Question Bank{% endif %}</h2>
-        <p class="scope-note">{% if is_midterm %}Important Only (Score 9.0+) | Units I, II, III{% else %}All Units | Available marks: {{ available_marks | join(', ') }}{% endif %}</p>
-    
-        
+        <h2>{% if is_important %}Important Questions{% elif is_midterm %}Midterm Important Questions{% else %}Full Question Bank{% endif %}</h2>
+        <p class="scope-note">{% if is_important %}High-Yield Exam Questions (Score 9.0+) | MTE & ESE{% elif is_midterm %}Important Only (Score 9.0+) | Units I, II, III{% else %}All Units | Available marks: {{ available_marks | join(', ') }}{% endif %}</p>
     </header>
 
     <div class="layout-wrapper">
@@ -67,28 +62,20 @@
                     <div class="filter-section">
                         <input type="search" id="search-box" class="search-bar" placeholder="Search questions by keyword...">
                         <div class="filter-toggles">
-                            {% if is_midterm %}
-                            <label><input type="checkbox" class="unit-cb" value="I"> Unit I</label>
-                            <label><input type="checkbox" class="unit-cb" value="II"> Unit II</label>
-                            <label><input type="checkbox" class="unit-cb" value="III"> Unit III</label>
-                            {% else %}
                             <label><input type="checkbox" class="unit-cb" value="I"> Unit I</label>
                             <label><input type="checkbox" class="unit-cb" value="II"> Unit II</label>
                             <label><input type="checkbox" class="unit-cb" value="III"> Unit III</label>
                             <label><input type="checkbox" class="unit-cb" value="IV"> Unit IV</label>
                             <label><input type="checkbox" class="unit-cb" value="V"> Unit V</label>
                             <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
-                            <label><input type="checkbox" class="exam-cb" value="midterm"> Midterm</label>
                             <label><input type="checkbox" class="exam-cb" value="endterm"> End Term</label>
-                            {% endif %}
+                            <label><input type="checkbox" class="exam-cb" value="midterm"> Midterm</label>
                             <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
                             {%- for mark in available_marks %}
                             <label><input type="checkbox" class="marks-cb" value="{{ mark }}"> {{ mark }} Marks</label>
                             {%- endfor %}
                             <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
-                            {% if not is_midterm %}
-                            <label title="Filters for elite questions with a score of 9.0+ based on fundamental importance and exam probability."><input type="checkbox" class="important-cb"> Important Only</label>
-                            {% endif %}
+                            <label title="Filters for elite questions with a score of 9.0+ based on fundamental importance and exam probability."><input type="checkbox" class="important-cb" {% if is_important %}checked{% endif %}> Important Only</label>
                             <label><input type="checkbox" class="reviewed-filter-cb"> Reviewed Only</label>
                         </div>
                     </div>
@@ -162,6 +149,26 @@
 
     <main class="content-area">
         
+        <div class="exam-stage-segmented-bar">
+            <div class="exam-stage-toggle" role="tablist" aria-label="Exam stage selection">
+                <button type="button" class="exam-tab-btn active" data-exam="endterm" onclick="setExamMode('endterm')">
+                    <span class="tab-icon">🎓</span>
+                    <span class="tab-text">{% if is_important %}End Term Important{% else %}End Term (ESE){% endif %}</span>
+                    <span class="tab-count" id="badge-endterm">0</span>
+                </button>
+                <button type="button" class="exam-tab-btn" data-exam="midterm" onclick="setExamMode('midterm')">
+                    <span class="tab-icon">📝</span>
+                    <span class="tab-text">{% if is_important %}Midterm Important{% else %}Midterm (MTE){% endif %}</span>
+                    <span class="tab-count" id="badge-midterm">0</span>
+                </button>
+                <button type="button" class="exam-tab-btn" data-exam="all" onclick="setExamMode('all')">
+                    <span class="tab-icon">📚</span>
+                    <span class="tab-text">{% if is_important %}All Important{% else %}All Questions{% endif %}</span>
+                    <span class="tab-count" id="badge-all">0</span>
+                </button>
+            </div>
+        </div>
+
         <div style="margin-bottom: 2rem;">
             <p id="showing-text" style="color: var(--text-muted); font-size: 0.95rem;">Showing questions.</p>
         </div>

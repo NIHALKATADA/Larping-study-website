@@ -80,11 +80,20 @@ function deferUntilAfterAnimation(fn) {
 // Progress Bar Update Logic
 // ==========================================
 function updateProgressBar() {
-    const allCheckboxes = document.querySelectorAll('.review-cb');
-    if (allCheckboxes.length === 0) return;
-    const total = allCheckboxes.length;
-    const checked = document.querySelectorAll('.review-cb:checked').length;
-    const percentage = (checked / total) * 100;
+    const allCards = Array.from(document.querySelectorAll('.q-card'));
+    if (allCards.length === 0) return;
+    const activeExamMode = window.currentExamMode || 'all';
+    const targetCards = allCards.filter(card => {
+        if (activeExamMode === 'endterm') return card.getAttribute('data-exam') === 'endterm';
+        if (activeExamMode === 'midterm') return card.getAttribute('data-exam') === 'midterm';
+        return true;
+    });
+    const total = targetCards.length || allCards.length;
+    const checked = targetCards.filter(card => {
+        const cb = card.querySelector('.review-cb');
+        return cb && cb.checked;
+    }).length;
+    const percentage = total > 0 ? (checked / total) * 100 : 0;
     const progressBar = document.getElementById('progressBar');
     const progressText = document.getElementById('progressText');
     if (progressBar) {
@@ -176,7 +185,9 @@ function applyFilters() {
         const cb = card.querySelector('.review-cb');
         const matchesReviewed = !isReviewedOnly || (cb && cb.checked);
         const cardExam = card.getAttribute('data-exam');
-        const matchesExam = activeExams.length === 0 || (cardExam && activeExams.includes(cardExam));
+        const activeExamMode = window.currentExamMode || 'all';
+        const matchesExamMode = (activeExamMode === 'all') || (cardExam && cardExam === activeExamMode);
+        const matchesExam = matchesExamMode && (activeExams.length === 0 || (cardExam && activeExams.includes(cardExam)));
         const isVisible = matchesSearch && matchesUnit && matchesBloom && matchesMarks && matchesImportant && matchesReviewed && matchesExam;
 
         if (isVisible) { card.style.display = ''; visibleCount++; }
@@ -204,7 +215,30 @@ function applyFilters() {
         header.style.display = hasVisibleCards ? '' : 'none';
     });
 
-    if (filterFeedbackText) filterFeedbackText.textContent = `Showing ${visibleCount} of ${totalCount} questions.`;
+    // Compute active exam statistics for badges
+    let countEndterm = 0, countMidterm = 0;
+    cards.forEach(card => {
+        const e = card.getAttribute('data-exam');
+        if (e === 'endterm') countEndterm++;
+        else if (e === 'midterm') countMidterm++;
+    });
+    const badgeEndterm = document.getElementById('badge-endterm');
+    const badgeMidterm = document.getElementById('badge-midterm');
+    const badgeAll = document.getElementById('badge-all');
+    if (badgeEndterm) badgeEndterm.textContent = countEndterm;
+    if (badgeMidterm) badgeMidterm.textContent = countMidterm;
+    if (badgeAll) badgeAll.textContent = totalCount;
+
+    if (filterFeedbackText) {
+        const currentMode = window.currentExamMode || 'all';
+        if (currentMode === 'endterm') {
+            filterFeedbackText.textContent = `Showing ${visibleCount} of ${countEndterm} End Term (ESE) questions.`;
+        } else if (currentMode === 'midterm') {
+            filterFeedbackText.textContent = `Showing ${visibleCount} of ${countMidterm} Midterm (MTE) questions.`;
+        } else {
+            filterFeedbackText.textContent = `Showing ${visibleCount} of ${totalCount} total questions.`;
+        }
+    }
     if (noResultsMsg) {
         if (visibleCount === 0 && totalCount > 0) {
             noResultsMsg.style.display = 'block';
@@ -918,3 +952,53 @@ window.toggleAnswerView = function(btn, mode) {
         if (simpleView) simpleView.style.display = 'none';
     }
 };
+
+// ==========================================
+// Exam Stage Segmented Toggle Controller
+// ==========================================
+window.currentExamMode = 'endterm';
+
+window.setExamMode = function(mode, updateUrl = true) {
+    window.currentExamMode = mode;
+    document.querySelectorAll('.exam-tab-btn').forEach(btn => {
+        if (btn.getAttribute('data-exam') === mode) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    if (updateUrl) {
+        try {
+            const url = new URL(window.location);
+            if (mode === 'all') {
+                url.searchParams.delete('exam');
+            } else {
+                url.searchParams.set('exam', mode);
+            }
+            window.history.replaceState({}, '', url);
+        } catch (e) {
+            console.warn('History replaceState error:', e);
+        }
+    }
+
+    applyFilters();
+    updateProgressBar();
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const examParam = urlParams.get('exam');
+    const path = window.location.pathname.toLowerCase();
+
+    let initialMode = 'endterm';
+    if (examParam === 'midterm' || examParam === 'endterm' || examParam === 'all') {
+        initialMode = examParam;
+    } else if (path.includes('midterm-important')) {
+        initialMode = 'midterm';
+    }
+
+    if (typeof window.setExamMode === 'function') {
+        window.setExamMode(initialMode, false);
+    }
+});

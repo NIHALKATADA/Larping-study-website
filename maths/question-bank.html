@@ -43,14 +43,9 @@
     </nav>
 
 <header class="banner">
-        
-        
-        
         <h1>Discrete Mathematics</h1>
         <h2>Full Question Bank</h2>
         <p class="scope-note">All Units | Available marks: 2, 3, 5</p>
-    
-        
     </header>
 
     <div class="layout-wrapper">
@@ -67,24 +62,20 @@
                     <div class="filter-section">
                         <input type="search" id="search-box" class="search-bar" placeholder="Search questions by keyword...">
                         <div class="filter-toggles">
-                            
                             <label><input type="checkbox" class="unit-cb" value="I"> Unit I</label>
                             <label><input type="checkbox" class="unit-cb" value="II"> Unit II</label>
                             <label><input type="checkbox" class="unit-cb" value="III"> Unit III</label>
                             <label><input type="checkbox" class="unit-cb" value="IV"> Unit IV</label>
                             <label><input type="checkbox" class="unit-cb" value="V"> Unit V</label>
                             <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
-                            <label><input type="checkbox" class="exam-cb" value="midterm"> Midterm</label>
                             <label><input type="checkbox" class="exam-cb" value="endterm"> End Term</label>
-                            
+                            <label><input type="checkbox" class="exam-cb" value="midterm"> Midterm</label>
                             <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
                             <label><input type="checkbox" class="marks-cb" value="2"> 2 Marks</label>
                             <label><input type="checkbox" class="marks-cb" value="3"> 3 Marks</label>
                             <label><input type="checkbox" class="marks-cb" value="5"> 5 Marks</label>
                             <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
-                            
-                            <label title="Filters for elite questions with a score of 9.0+ based on fundamental importance and exam probability."><input type="checkbox" class="important-cb"> Important Only</label>
-                            
+                            <label title="Filters for elite questions with a score of 9.0+ based on fundamental importance and exam probability."><input type="checkbox" class="important-cb" > Important Only</label>
                             <label><input type="checkbox" class="reviewed-filter-cb"> Reviewed Only</label>
                         </div>
                     </div>
@@ -476,6 +467,26 @@
 
     <main class="content-area">
         
+        <div class="exam-stage-segmented-bar">
+            <div class="exam-stage-toggle" role="tablist" aria-label="Exam stage selection">
+                <button type="button" class="exam-tab-btn active" data-exam="endterm" onclick="setExamMode('endterm')">
+                    <span class="tab-icon">🎓</span>
+                    <span class="tab-text">End Term (ESE)</span>
+                    <span class="tab-count" id="badge-endterm">0</span>
+                </button>
+                <button type="button" class="exam-tab-btn" data-exam="midterm" onclick="setExamMode('midterm')">
+                    <span class="tab-icon">📝</span>
+                    <span class="tab-text">Midterm (MTE)</span>
+                    <span class="tab-count" id="badge-midterm">0</span>
+                </button>
+                <button type="button" class="exam-tab-btn" data-exam="all" onclick="setExamMode('all')">
+                    <span class="tab-icon">📚</span>
+                    <span class="tab-text">All Questions</span>
+                    <span class="tab-count" id="badge-all">0</span>
+                </button>
+            </div>
+        </div>
+
         <div style="margin-bottom: 2rem;">
             <p id="showing-text" style="color: var(--text-muted); font-size: 0.95rem;">Showing questions.</p>
         </div>
@@ -6401,11 +6412,20 @@ function deferUntilAfterAnimation(fn) {
 // Progress Bar Update Logic
 // ==========================================
 function updateProgressBar() {
-    const allCheckboxes = document.querySelectorAll('.review-cb');
-    if (allCheckboxes.length === 0) return;
-    const total = allCheckboxes.length;
-    const checked = document.querySelectorAll('.review-cb:checked').length;
-    const percentage = (checked / total) * 100;
+    const allCards = Array.from(document.querySelectorAll('.q-card'));
+    if (allCards.length === 0) return;
+    const activeExamMode = window.currentExamMode || 'all';
+    const targetCards = allCards.filter(card => {
+        if (activeExamMode === 'endterm') return card.getAttribute('data-exam') === 'endterm';
+        if (activeExamMode === 'midterm') return card.getAttribute('data-exam') === 'midterm';
+        return true;
+    });
+    const total = targetCards.length || allCards.length;
+    const checked = targetCards.filter(card => {
+        const cb = card.querySelector('.review-cb');
+        return cb && cb.checked;
+    }).length;
+    const percentage = total > 0 ? (checked / total) * 100 : 0;
     const progressBar = document.getElementById('progressBar');
     const progressText = document.getElementById('progressText');
     if (progressBar) {
@@ -6497,7 +6517,9 @@ function applyFilters() {
         const cb = card.querySelector('.review-cb');
         const matchesReviewed = !isReviewedOnly || (cb && cb.checked);
         const cardExam = card.getAttribute('data-exam');
-        const matchesExam = activeExams.length === 0 || (cardExam && activeExams.includes(cardExam));
+        const activeExamMode = window.currentExamMode || 'all';
+        const matchesExamMode = (activeExamMode === 'all') || (cardExam && cardExam === activeExamMode);
+        const matchesExam = matchesExamMode && (activeExams.length === 0 || (cardExam && activeExams.includes(cardExam)));
         const isVisible = matchesSearch && matchesUnit && matchesBloom && matchesMarks && matchesImportant && matchesReviewed && matchesExam;
 
         if (isVisible) { card.style.display = ''; visibleCount++; }
@@ -6525,7 +6547,30 @@ function applyFilters() {
         header.style.display = hasVisibleCards ? '' : 'none';
     });
 
-    if (filterFeedbackText) filterFeedbackText.textContent = `Showing ${visibleCount} of ${totalCount} questions.`;
+    // Compute active exam statistics for badges
+    let countEndterm = 0, countMidterm = 0;
+    cards.forEach(card => {
+        const e = card.getAttribute('data-exam');
+        if (e === 'endterm') countEndterm++;
+        else if (e === 'midterm') countMidterm++;
+    });
+    const badgeEndterm = document.getElementById('badge-endterm');
+    const badgeMidterm = document.getElementById('badge-midterm');
+    const badgeAll = document.getElementById('badge-all');
+    if (badgeEndterm) badgeEndterm.textContent = countEndterm;
+    if (badgeMidterm) badgeMidterm.textContent = countMidterm;
+    if (badgeAll) badgeAll.textContent = totalCount;
+
+    if (filterFeedbackText) {
+        const currentMode = window.currentExamMode || 'all';
+        if (currentMode === 'endterm') {
+            filterFeedbackText.textContent = `Showing ${visibleCount} of ${countEndterm} End Term (ESE) questions.`;
+        } else if (currentMode === 'midterm') {
+            filterFeedbackText.textContent = `Showing ${visibleCount} of ${countMidterm} Midterm (MTE) questions.`;
+        } else {
+            filterFeedbackText.textContent = `Showing ${visibleCount} of ${totalCount} total questions.`;
+        }
+    }
     if (noResultsMsg) {
         if (visibleCount === 0 && totalCount > 0) {
             noResultsMsg.style.display = 'block';
@@ -7239,6 +7284,56 @@ window.toggleAnswerView = function(btn, mode) {
         if (simpleView) simpleView.style.display = 'none';
     }
 };
+
+// ==========================================
+// Exam Stage Segmented Toggle Controller
+// ==========================================
+window.currentExamMode = 'endterm';
+
+window.setExamMode = function(mode, updateUrl = true) {
+    window.currentExamMode = mode;
+    document.querySelectorAll('.exam-tab-btn').forEach(btn => {
+        if (btn.getAttribute('data-exam') === mode) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    if (updateUrl) {
+        try {
+            const url = new URL(window.location);
+            if (mode === 'all') {
+                url.searchParams.delete('exam');
+            } else {
+                url.searchParams.set('exam', mode);
+            }
+            window.history.replaceState({}, '', url);
+        } catch (e) {
+            console.warn('History replaceState error:', e);
+        }
+    }
+
+    applyFilters();
+    updateProgressBar();
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const examParam = urlParams.get('exam');
+    const path = window.location.pathname.toLowerCase();
+
+    let initialMode = 'endterm';
+    if (examParam === 'midterm' || examParam === 'endterm' || examParam === 'all') {
+        initialMode = examParam;
+    } else if (path.includes('midterm-important')) {
+        initialMode = 'midterm';
+    }
+
+    if (typeof window.setExamMode === 'function') {
+        window.setExamMode(initialMode, false);
+    }
+});
 
 </script>
 

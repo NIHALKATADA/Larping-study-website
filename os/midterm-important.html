@@ -4,7 +4,7 @@
     <meta name="view-transition" content="same-origin">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OS - Midterm Important</title>
+    <title>OS - Important Questions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -43,14 +43,9 @@
     </nav>
 
 <header class="banner">
-        
-        
-        
         <h1>Operating Systems</h1>
-        <h2>Midterm Important Questions</h2>
-        <p class="scope-note">Important Only (Score 9.0+) | Units I, II, III</p>
-    
-        
+        <h2>Important Questions</h2>
+        <p class="scope-note">High-Yield Exam Questions (Score 9.0+) | MTE & ESE</p>
     </header>
 
     <div class="layout-wrapper">
@@ -67,17 +62,20 @@
                     <div class="filter-section">
                         <input type="search" id="search-box" class="search-bar" placeholder="Search questions by keyword...">
                         <div class="filter-toggles">
-                            
                             <label><input type="checkbox" class="unit-cb" value="I"> Unit I</label>
                             <label><input type="checkbox" class="unit-cb" value="II"> Unit II</label>
                             <label><input type="checkbox" class="unit-cb" value="III"> Unit III</label>
-                            
+                            <label><input type="checkbox" class="unit-cb" value="IV"> Unit IV</label>
+                            <label><input type="checkbox" class="unit-cb" value="V"> Unit V</label>
+                            <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
+                            <label><input type="checkbox" class="exam-cb" value="endterm"> End Term</label>
+                            <label><input type="checkbox" class="exam-cb" value="midterm"> Midterm</label>
                             <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
                             <label><input type="checkbox" class="marks-cb" value="2"> 2 Marks</label>
                             <label><input type="checkbox" class="marks-cb" value="3"> 3 Marks</label>
                             <label><input type="checkbox" class="marks-cb" value="5"> 5 Marks</label>
                             <span style="border-left: 1px solid var(--border-color); margin: 0 5px;"></span>
-                            
+                            <label title="Filters for elite questions with a score of 9.0+ based on fundamental importance and exam probability."><input type="checkbox" class="important-cb" checked> Important Only</label>
                             <label><input type="checkbox" class="reviewed-filter-cb"> Reviewed Only</label>
                         </div>
                     </div>
@@ -162,6 +160,10 @@
                     
                         <li><a href="#q33">Q33 (2 Marks)</a></li>
                     
+                        <li><a href="#q35">Q35 (2 Marks)</a></li>
+                    
+                        <li><a href="#q39">Q39 (2 Marks)</a></li>
+                    
                         <li><a href="#q41">Q41 (3 Marks)</a></li>
                     
                         <li><a href="#q43">Q43 (3 Marks)</a></li>
@@ -189,6 +191,8 @@
                         <li><a href="#q34">Q34 (2 Marks)</a></li>
                     
                         <li><a href="#q38">Q38 (2 Marks)</a></li>
+                    
+                        <li><a href="#q40">Q40 (2 Marks)</a></li>
                     
                         <li><a href="#q42">Q42 (3 Marks)</a></li>
                     
@@ -219,11 +223,17 @@
                     
                         <li><a href="#q66">Q66 (2 Marks)</a></li>
                     
+                        <li><a href="#q67">Q67 (2 Marks)</a></li>
+                    
+                        <li><a href="#q68">Q68 (2 Marks)</a></li>
+                    
                         <li><a href="#q71">Q71 (3 Marks)</a></li>
                     
                         <li><a href="#q72">Q72 (3 Marks)</a></li>
                     
                         <li><a href="#q75">Q75 (3 Marks)</a></li>
+                    
+                        <li><a href="#q78">Q78 (3 Marks)</a></li>
                     
                         <li><a href="#q80">Q80 (3 Marks)</a></li>
                     
@@ -242,6 +252,8 @@
                         <li><a href="#q62">Q62 (2 Marks)</a></li>
                     
                         <li><a href="#q65">Q65 (2 Marks)</a></li>
+                    
+                        <li><a href="#q69">Q69 (2 Marks)</a></li>
                     
                         <li><a href="#q70">Q70 (2 Marks)</a></li>
                     
@@ -301,6 +313,26 @@
 
     <main class="content-area">
         
+        <div class="exam-stage-segmented-bar">
+            <div class="exam-stage-toggle" role="tablist" aria-label="Exam stage selection">
+                <button type="button" class="exam-tab-btn active" data-exam="endterm" onclick="setExamMode('endterm')">
+                    <span class="tab-icon">🎓</span>
+                    <span class="tab-text">End Term Important</span>
+                    <span class="tab-count" id="badge-endterm">0</span>
+                </button>
+                <button type="button" class="exam-tab-btn" data-exam="midterm" onclick="setExamMode('midterm')">
+                    <span class="tab-icon">📝</span>
+                    <span class="tab-text">Midterm Important</span>
+                    <span class="tab-count" id="badge-midterm">0</span>
+                </button>
+                <button type="button" class="exam-tab-btn" data-exam="all" onclick="setExamMode('all')">
+                    <span class="tab-icon">📚</span>
+                    <span class="tab-text">All Important</span>
+                    <span class="tab-count" id="badge-all">0</span>
+                </button>
+            </div>
+        </div>
+
         <div style="margin-bottom: 2rem;">
             <p id="showing-text" style="color: var(--text-muted); font-size: 0.95rem;">Showing questions.</p>
         </div>
@@ -829,6 +861,65 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
+                    <details class="q-card" id="q35" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
+                        <summary>
+                            <h3>Q35. Differentiate between Preemptive and Non-Preemptive Scheduling, giving one example algorithm for each.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            
+                            <div class="view-full">
+                                <ul>
+<li><strong>Non-Preemptive:</strong> Once a process gets the CPU, it holds it until it terminates or blocks for I/O. The OS cannot force it off the CPU. <em>Example: First-Come, First-Served (FCFS).</em></li>
+<li><strong>Preemptive:</strong> The OS can forcefully interrupt a running process and give the CPU to another process (e.g., based on priority or time quantum). <em>Example: Round Robin (RR).</em></li>
+</ul>
+                            </div>
+                            
+                            
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q39" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
+                        <summary>
+                            <h3>Q39. In a Priority Scheduling system, process P2 is repeatedly skipped because new higher-priority processes keep arriving. What problem is P2 facing?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            
+                            <div class="view-full">
+                                <p>P2 is facing <strong>Starvation (Indefinite Blocking)</strong>. The solution to this problem is <strong>Aging</strong>, where the OS gradually increases the priority of a process the longer it waits in the ready queue.</p>
+                            </div>
+                            
+                            
+                        </div>
+                    </details>
+                    
                     <details class="q-card" id="q41" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q41. List and briefly explain the five states in the process life cycle.</h3>
@@ -1338,6 +1429,91 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
+                    <details class="q-card" id="q67" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
+                        <summary>
+                            <h3>Q67. A shared variable counter = 5 is used by a Producer (which executes counter++) and a Consumer (which executes counter--) running concurrently. Due to instruction interleaving, the final value becomes 4 instead of 5. Which synchronization problem does this scenario illustrate?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            
+                            <div class="view-full">
+                                <p>This illustrates a <strong>Race Condition</strong>. The final output depends on the unpredictable sequence and timing (interleaving) of the machine-level instructions executed by the concurrent processes.</p>
+                            </div>
+                            
+                            
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q68" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
+                        <summary>
+                            <h3>Q68. In the Dining Philosophers problem, all five philosophers pick up their left fork at the same time and then wait for the right fork, which never becomes free. What problem occurs here?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            
+                            <div class="view-full">
+                                <p>This is a classic <strong>Deadlock</strong>. Every philosopher is holding one resource and waiting indefinitely for another resource held by someone else, resulting in a circular wait where no one can ever make progress.</p>
+<div class="diagram-container">
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="150" cy="150" r="80" fill="var(--card-bg)" stroke="currentColor" stroke-width="3"/>
+  <text x="150" y="155" text-anchor="middle" fill="currentColor" font-weight="bold">Dining Table</text>
+
+  <circle cx="150" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="150" y="45" text-anchor="middle" fill="currentColor">P1</text>
+  
+  <circle cx="254" cy="115" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="254" y="120" text-anchor="middle" fill="currentColor">P2</text>
+  
+  <circle cx="214" cy="238" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="214" y="243" text-anchor="middle" fill="currentColor">P3</text>
+  
+  <circle cx="86" cy="238" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="86" y="243" text-anchor="middle" fill="currentColor">P4</text>
+  
+  <circle cx="46" cy="115" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
+  <text x="46" y="120" text-anchor="middle" fill="currentColor">P5</text>
+
+  <line x1="180" y1="70" x2="200" y2="100" stroke="var(--primary-teal)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="220" y1="160" x2="200" y2="190" stroke="var(--primary-teal)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="150" y1="230" x2="150" y2="200" stroke="var(--primary-teal)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="80" y1="160" x2="100" y2="190" stroke="var(--primary-teal)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="120" y1="70" x2="100" y2="100" stroke="var(--primary-teal)" stroke-width="4" stroke-linecap="round"/>
+</svg>
+<p class="concept-heading">5 Philosophers &amp; 5 Forks</p>
+</div>
+
+                            </div>
+                            
+                            
+                        </div>
+                    </details>
+                    
                     <details class="q-card" id="q71" data-unit="III" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q71. Explain the two models of Inter-Process Communication (IPC).</h3>
@@ -1435,6 +1611,38 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <li>Store the register back to memory.</li>
 </ol>
 <p>If a context switch occurs right after step 1 or 2, another process might load the old, stale value of <code>counter</code>. When both processes eventually complete step 3, one will overwrite the other's update, causing a <strong>Race Condition</strong>.</p>
+                            </div>
+                            
+                            
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q78" data-unit="III" data-exam="midterm" data-bloom="L4" data-marks="3" data-important="false">
+                        <summary>
+                            <h3>Q78. A shared lock variable is used by Process P1 and P2 with Test-and-Set. Trace what happens step by-step when P1 arrives while lock = false, and then P2 arrives while P1 is still inside the critical section.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l4">CO3 | Bloom L4</span>
+                                    <span class="badge marks marks-3">3 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            
+                            <div class="view-full">
+                                <ol>
+<li><strong>P1 arrives:</strong> It executes <code>TestAndSet(&amp;lock)</code>. The function returns the original value (<code>false</code>) and atomically sets <code>lock = true</code>. Since it returned <code>false</code>, P1 escapes the <code>while</code> loop and enters the critical section.</li>
+<li><strong>P2 arrives:</strong> P1 is still inside, so <code>lock</code> is currently <code>true</code>. P2 executes <code>TestAndSet(&amp;lock)</code>. It returns <code>true</code> (and sets it to <code>true</code>). Because it returned <code>true</code>, P2 gets stuck in the <code>while(TestAndSet(&amp;lock))</code> loop.</li>
+<li>P2 will busy-wait (spin) until P1 exits and explicitly sets <code>lock = false</code>.</li>
+</ol>
                             </div>
                             
                             
@@ -2261,6 +2469,37 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
                         </div>
                     </details>
                     
+                    <details class="q-card" id="q40" data-unit="II" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
+                        <summary>
+                            <h3>Q40. A process has Arrival Time = 2 and Completion Time = 10, with Burst Time = 6. Calculate its Turnaround Time and Waiting Time.</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-2">Unit II</span>
+                                    <span class="badge bloom-l3">CO2 | Bloom L3</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            
+                            <div class="view-full">
+                                <ul>
+<li><strong>Turnaround Time (TAT)</strong> = Completion Time - Arrival Time = 10 - 2 = <strong>8</strong>.</li>
+<li><strong>Waiting Time (WT)</strong> = Turnaround Time - Burst Time = 8 - 6 = <strong>2</strong>.</li>
+</ul>
+                            </div>
+                            
+                            
+                        </div>
+                    </details>
+                    
                     <details class="q-card" id="q42" data-unit="II" data-exam="midterm" data-bloom="L2" data-marks="3" data-important="true">
                         <summary>
                             <h3>Q42. Explain any three attributes stored in a Process Control Block (PCB).</h3>
@@ -2592,6 +2831,34 @@ If a malicious user program runs in User Mode, it cannot directly crash the hard
 <li><strong>Binary Semaphore (Mutex):</strong> Can only take values 0 or 1. Used strictly to enforce mutual exclusion for a single critical section.</li>
 <li><strong>Counting Semaphore:</strong> Can take any non-negative integer value. Used to control access to a resource pool with multiple identical instances (e.g., managing 5 available printers).</li>
 </ul>
+                            </div>
+                            
+                            
+                        </div>
+                    </details>
+                    
+                    <details class="q-card" id="q69" data-unit="III" data-exam="midterm" data-bloom="L3" data-marks="2" data-important="false">
+                        <summary>
+                            <h3>Q69. While using a Test-and-Set Lock, Process P1 keeps repeatedly re-acquiring the lock, leaving Process P2 waiting indefinitely. Which requirement of the critical-section problem is being violated?</h3>
+                            <div class="card-meta">
+                                <div class="badges">
+                                    <span class="badge unit-3">Unit III</span>
+                                    <span class="badge bloom-l3">CO3 | Bloom L3</span>
+                                    <span class="badge marks marks-2">2 Marks</span>
+                                    
+                                    <span class="badge exam-badge exam-midterm">Midterm</span>
+                                    
+                                    
+                                </div>
+                                <label class="reviewed-checkbox-wrapper" onclick="event.stopPropagation()">
+                                    <input type="checkbox" class="review-cb"> Mark as Reviewed
+                                </label>
+                            </div>
+                        </summary>
+                        <div class="answer-content">
+                            
+                            <div class="view-full">
+                                <p>The <strong>Bounded Waiting</strong> requirement is being violated. There must be a strict limit on the number of times other processes can enter their critical sections after a process (P2) has made a request to enter its own.</p>
                             </div>
                             
                             
@@ -2969,11 +3236,20 @@ function deferUntilAfterAnimation(fn) {
 // Progress Bar Update Logic
 // ==========================================
 function updateProgressBar() {
-    const allCheckboxes = document.querySelectorAll('.review-cb');
-    if (allCheckboxes.length === 0) return;
-    const total = allCheckboxes.length;
-    const checked = document.querySelectorAll('.review-cb:checked').length;
-    const percentage = (checked / total) * 100;
+    const allCards = Array.from(document.querySelectorAll('.q-card'));
+    if (allCards.length === 0) return;
+    const activeExamMode = window.currentExamMode || 'all';
+    const targetCards = allCards.filter(card => {
+        if (activeExamMode === 'endterm') return card.getAttribute('data-exam') === 'endterm';
+        if (activeExamMode === 'midterm') return card.getAttribute('data-exam') === 'midterm';
+        return true;
+    });
+    const total = targetCards.length || allCards.length;
+    const checked = targetCards.filter(card => {
+        const cb = card.querySelector('.review-cb');
+        return cb && cb.checked;
+    }).length;
+    const percentage = total > 0 ? (checked / total) * 100 : 0;
     const progressBar = document.getElementById('progressBar');
     const progressText = document.getElementById('progressText');
     if (progressBar) {
@@ -3065,7 +3341,9 @@ function applyFilters() {
         const cb = card.querySelector('.review-cb');
         const matchesReviewed = !isReviewedOnly || (cb && cb.checked);
         const cardExam = card.getAttribute('data-exam');
-        const matchesExam = activeExams.length === 0 || (cardExam && activeExams.includes(cardExam));
+        const activeExamMode = window.currentExamMode || 'all';
+        const matchesExamMode = (activeExamMode === 'all') || (cardExam && cardExam === activeExamMode);
+        const matchesExam = matchesExamMode && (activeExams.length === 0 || (cardExam && activeExams.includes(cardExam)));
         const isVisible = matchesSearch && matchesUnit && matchesBloom && matchesMarks && matchesImportant && matchesReviewed && matchesExam;
 
         if (isVisible) { card.style.display = ''; visibleCount++; }
@@ -3093,7 +3371,30 @@ function applyFilters() {
         header.style.display = hasVisibleCards ? '' : 'none';
     });
 
-    if (filterFeedbackText) filterFeedbackText.textContent = `Showing ${visibleCount} of ${totalCount} questions.`;
+    // Compute active exam statistics for badges
+    let countEndterm = 0, countMidterm = 0;
+    cards.forEach(card => {
+        const e = card.getAttribute('data-exam');
+        if (e === 'endterm') countEndterm++;
+        else if (e === 'midterm') countMidterm++;
+    });
+    const badgeEndterm = document.getElementById('badge-endterm');
+    const badgeMidterm = document.getElementById('badge-midterm');
+    const badgeAll = document.getElementById('badge-all');
+    if (badgeEndterm) badgeEndterm.textContent = countEndterm;
+    if (badgeMidterm) badgeMidterm.textContent = countMidterm;
+    if (badgeAll) badgeAll.textContent = totalCount;
+
+    if (filterFeedbackText) {
+        const currentMode = window.currentExamMode || 'all';
+        if (currentMode === 'endterm') {
+            filterFeedbackText.textContent = `Showing ${visibleCount} of ${countEndterm} End Term (ESE) questions.`;
+        } else if (currentMode === 'midterm') {
+            filterFeedbackText.textContent = `Showing ${visibleCount} of ${countMidterm} Midterm (MTE) questions.`;
+        } else {
+            filterFeedbackText.textContent = `Showing ${visibleCount} of ${totalCount} total questions.`;
+        }
+    }
     if (noResultsMsg) {
         if (visibleCount === 0 && totalCount > 0) {
             noResultsMsg.style.display = 'block';
@@ -3807,6 +4108,56 @@ window.toggleAnswerView = function(btn, mode) {
         if (simpleView) simpleView.style.display = 'none';
     }
 };
+
+// ==========================================
+// Exam Stage Segmented Toggle Controller
+// ==========================================
+window.currentExamMode = 'endterm';
+
+window.setExamMode = function(mode, updateUrl = true) {
+    window.currentExamMode = mode;
+    document.querySelectorAll('.exam-tab-btn').forEach(btn => {
+        if (btn.getAttribute('data-exam') === mode) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    if (updateUrl) {
+        try {
+            const url = new URL(window.location);
+            if (mode === 'all') {
+                url.searchParams.delete('exam');
+            } else {
+                url.searchParams.set('exam', mode);
+            }
+            window.history.replaceState({}, '', url);
+        } catch (e) {
+            console.warn('History replaceState error:', e);
+        }
+    }
+
+    applyFilters();
+    updateProgressBar();
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const examParam = urlParams.get('exam');
+    const path = window.location.pathname.toLowerCase();
+
+    let initialMode = 'endterm';
+    if (examParam === 'midterm' || examParam === 'endterm' || examParam === 'all') {
+        initialMode = examParam;
+    } else if (path.includes('midterm-important')) {
+        initialMode = 'midterm';
+    }
+
+    if (typeof window.setExamMode === 'function') {
+        window.setExamMode(initialMode, false);
+    }
+});
 
 </script>
 

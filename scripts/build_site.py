@@ -138,8 +138,10 @@ def build_subject(subject_dir, templates_dir, data_dir):
     subject_code = subject_id.upper()
     subject_full_name = SUBJECT_META.get(subject_id, subject_code)
 
+    # 1. Full Question Bank (with Exam Stage toggle)
     output_html = template.render(
         questions=questions, 
+        is_important=False,
         is_midterm=False, 
         available_marks=sorted({q.get('marks') for q in questions if q.get('marks') is not None}),
         subject_code=subject_code,
@@ -151,9 +153,34 @@ def build_subject(subject_dir, templates_dir, data_dir):
         
     print(f"[{subject_id}] Successfully rebuilt question-bank.html with {len(questions)} questions.")
     
-    midterm_questions = sorted([q for q in questions if q.get('important') and q.get('unit') in ['I', 'II', 'III'] and q.get('exam') != 'endterm'], key=lambda x: float(x.get('score', 0) or 0), reverse=True)
+    # 2. Important Questions Portal (Both Midterm & End Term with Exam Stage toggle)
+    important_questions = sorted(
+        [q for q in questions if q.get('important') or float(q.get('score', 0) or 0) >= 9.0],
+        key=lambda x: float(x.get('score', 0) or 0),
+        reverse=True
+    )
+    output_important = template.render(
+        questions=important_questions,
+        is_important=True,
+        is_midterm=False,
+        available_marks=sorted({q.get('marks') for q in important_questions if q.get('marks') is not None}),
+        subject_code=subject_code,
+        subject_id=subject_id,
+        subject_full_name=subject_full_name, app_utils_js=app_utils_js
+    )
+    with open(subject_dir / 'important.html', 'w', encoding='utf-8') as f:
+        f.write(output_important)
+    print(f"[{subject_id}] Successfully built important.html with {len(important_questions)} questions.")
+
+    # 3. Backwards Compatibility: midterm-important.html (Pre-filtered to Midterm)
+    midterm_questions = sorted(
+        [q for q in important_questions if q.get('exam') == 'midterm' or (q.get('unit') in ['I', 'II', 'III'] and q.get('exam') != 'endterm')],
+        key=lambda x: float(x.get('score', 0) or 0),
+        reverse=True
+    )
     output_midterm = template.render(
         questions=midterm_questions, 
+        is_important=True,
         is_midterm=True, 
         available_marks=sorted({q.get('marks') for q in midterm_questions if q.get('marks') is not None}),
         subject_code=subject_code,
