@@ -10,3 +10,13 @@
 - **Deployment & Cloud Stack**:
   - Hosting & serverless AI (`api/chat.js`, `api/config.js`): **Vercel** (`vercel.json` redirects `/subjects/* -> /*`). Prefer Git-linked or Vercel CLI deployment (`vercel --prod`) over manual ZIP drag-and-drop.
   - Auth & Profile DB (`profile.html`, `reset-password.html`, `schema*.sql`): **Supabase** (check Supabase project status before testing auth flows).
+
+## Git Hygiene & Deliberate Engineering ("Think Before Pushing")
+
+- **Think Before Committing & Pushing**: Never rush to commit or ask the user to push. Pause and verify:
+  1. Academic/domain intent: Did we segregate Midterm and End Term strictly as required?
+  2. Source alignment: Does the count and data match official university documents 1-to-1?
+  3. User experience: Did we verify toggles, badges, filters, and mark-weighted answer lengths?
+- **Slow & Atomic Commits (No Monolithic Dumps)**: Never commit dozens of files and 50,000+ lines in a single giant commit. Split work into logical, reviewable atomic commits:
+  - Separate data/content changes (`feat(data/<subject>): ...`) from shared UI/scripts (`feat(ui): ...`) and generated build artifacts (`build: ...`).
+  - Inspect `git diff --stat` and verify changes before staging each chunk.
