@@ -1538,8 +1538,8 @@
     "type": "question"
   },
   {
-    "id": "q91",
-    "q_num": 91,
+    "id": "ese_q1",
+    "q_num": 1,
     "unit": "IV",
     "exam": "endterm",
     "marks": 2,
@@ -1548,15 +1548,15 @@
     "score": 9.2,
     "important": true,
     "title": "Differentiate between a trail and a path. Is every path a trail? Is every trail a path? Justify with an example.",
-    "url": "question-bank.html?open=q91",
+    "url": "question-bank.html?open=ese_q1",
     "chunks": [
       "A trail is an open walk in which all edges are distinct, though vertices may repeat. A path is an open walk where both edges and vertices are strictly distinct. 1. Is every path a trail? Yes. If all vertices are distinct, no edge can ever be traversed more than once. 2. Is every trail a path? No. For example, the vertex sequence $v_1 - v_2 - v_3 - v_1 - v_4$ traverses distinct edges but repeats vertex $v_1$, making it a trail but not a path."
     ],
     "type": "question"
   },
   {
-    "id": "q92",
-    "q_num": 92,
+    "id": "ese_q2",
+    "q_num": 2,
     "unit": "IV",
     "exam": "endterm",
     "marks": 2,
@@ -1565,15 +1565,15 @@
     "score": 8.8,
     "important": false,
     "title": "A walk in a graph is given by the vertex sequence 1 , 2, 3, 2, 4, 1. Find its length. Is it an open or a closed walk? Is it a circuit? Justify.",
-    "url": "question-bank.html?open=q92",
+    "url": "question-bank.html?open=ese_q2",
     "chunks": [
       "For the vertex sequence $1, 2, 3, 2, 4, 1$: Length: The walk traverses $5$ edges: $(1,2), (2,3), (3,2), (2,4), (4,1)$. Hence, length $= 5$. Open or Closed: It is a closed walk because its initial vertex and terminal vertex are identical ($v_{\\text{start}} = v_{\\text{end}} = 1$). Is it a circuit? No. A circuit must be a closed trail with no repeated edges. Here, the undirected edge $\\{2, 3\\}$ is traversed twice, so it is not a circuit."
     ],
     "type": "question"
   },
   {
-    "id": "q93",
-    "q_num": 93,
+    "id": "ese_q3",
+    "q_num": 3,
     "unit": "IV",
     "exam": "endterm",
     "marks": 2,
@@ -1582,15 +1582,15 @@
     "score": 8.0,
     "important": false,
     "title": "De\ufb01ne a subgraph of a graph G = (V, E). Is G a subgraph of itself? Is a single vertex of G (with no edges) a subgraph of G?",
-    "url": "question-bank.html?open=q93",
+    "url": "question-bank.html?open=ese_q3",
     "chunks": [
       "A graph $H = (V', E')$ is a subgraph of $G = (V, E)$ if $V' \\subseteq V$, $E' \\subseteq E$, and every edge in $E'$ has both endpoints in $V'$. 1. Is $G$ a subgraph of itself? Yes, because every set is a subset of itself ($V \\subseteq V$ and $E \\subseteq E$). 2. Is a single isolated vertex a subgraph? Yes. If $V' = \\{v\\}$ for any $v \\in V$ and $E' = \\emptyset$, then $V' \\subseteq V$ and $E' \\subseteq E$, satisfying all subgraph axioms."
     ],
     "type": "question"
   },
   {
-    "id": "q94",
-    "q_num": 94,
+    "id": "ese_q4",
+    "q_num": 4,
     "unit": "IV",
     "exam": "endterm",
     "marks": 2,
@@ -1599,15 +1599,15 @@
     "score": 8.5,
     "important": false,
     "title": "Find the number of connected components of the graph with vertex set {a, b, c, d, e, f , g} and edge set {{a, b}, {b, c}, {c, a}, {d, e}, {e, f }}, and list them.",
-    "url": "question-bank.html?open=q94",
+    "url": "question-bank.html?open=ese_q4",
     "chunks": [
       "Given vertex set $V = \\{a, b, c, d, e, f, g\\}$ and edge set $E = \\{\\{a, b\\}, \\{b, c\\}, \\{c, a\\}, \\{d, e\\}, \\{e, f\\}\\}$: The maximal connected subgraphs are: $C_1$: Triangle with vertices $\\{a, b, c\\}$ and edges $\\{\\{a, b\\}, \\{b, c\\}, \\{c, a\\}\\}$. $C_2$: Path with vertices $\\{d, e, f\\}$ and edges $\\{\\{d, e\\}, \\{e, f\\}\\}$. $C_3$: Isolated vertex $\\{g\\}$ with no incident edges. Therefore, the graph has exactly 3 connected components ."
     ],
     "type": "question"
   },
   {
-    "id": "q95",
-    "q_num": 95,
+    "id": "ese_q5",
+    "q_num": 5,
     "unit": "IV",
     "exam": "endterm",
     "marks": 2,
@@ -1616,15 +1616,15 @@
     "score": 9.4,
     "important": true,
     "title": "State the necessary and suf\ufb01cient condition for a connected multigraph (with at least two vertices) to have (i) an Euler circuit, (ii) an Euler path but no Euler circuit.",
-    "url": "question-bank.html?open=q95",
+    "url": "question-bank.html?open=ese_q5",
     "chunks": [
       "By Euler's Theorem , for a connected multigraph $G$: Euler Circuit: A connected multigraph has an Euler circuit if and only if every vertex has an even degree ($\\\\deg(v)$ is even for all $v \\in V$). Euler Path (no circuit): A connected multigraph has an Euler path but no Euler circuit if and only if exactly two vertices have odd degree and all other vertices have even degree."
     ],
     "type": "question"
   },
   {
-    "id": "q96",
-    "q_num": 96,
+    "id": "ese_q6",
+    "q_num": 6,
     "unit": "IV",
     "exam": "endterm",
     "marks": 2,
@@ -1633,15 +1633,15 @@
     "score": 8.7,
     "important": false,
     "title": "Which of the complete graphs K5 and K4 has an Euler circuit? Give a reason.",
-    "url": "question-bank.html?open=q96",
+    "url": "question-bank.html?open=ese_q6",
     "chunks": [
       "In a complete graph $K_n$, every vertex is adjacent to all other $n - 1$ vertices, so $\\\\deg(v) = n - 1$ for all $v$. For $K_5$: $n = 5$, so $\\\\deg(v) = 5 - 1 = 4$ (even) for all 5 vertices. Since $K_5$ is connected and all vertices have even degrees, $K_5$ has an Euler circuit . For $K_4$: $n = 4$, so $\\\\deg(v) = 4 - 1 = 3$ (odd) for all vertices. Since vertices have odd degrees, $K_4$ cannot have an Euler circuit."
     ],
     "type": "question"
   },
   {
-    "id": "q97",
-    "q_num": 97,
+    "id": "ese_q7",
+    "q_num": 7,
     "unit": "IV",
     "exam": "endterm",
     "marks": 2,
@@ -1650,15 +1650,15 @@
     "score": 9.1,
     "important": true,
     "title": "De\ufb01ne a Hamilton path and a Hamilton circuit. Does Kn (n \u2265 3) always have a Hamilton circuit? Justify.",
-    "url": "question-bank.html?open=q97",
+    "url": "question-bank.html?open=ese_q7",
     "chunks": [
       "A Hamilton path is a simple path that visits every vertex of a graph exactly once. A Hamilton circuit is a closed cycle that visits every vertex exactly once and returns to the start. Does $K_n$ ($n \\ge 3$) always have a Hamilton circuit? Yes. In $K_n$, an edge exists between every pair of distinct vertices. Any circular ordering of the vertices, such as $v_1 - v_2 - v_3 - \\dots - v_n - v_1$, forms a valid Hamilton circuit."
     ],
     "type": "question"
   },
   {
-    "id": "q98",
-    "q_num": 98,
+    "id": "ese_q8",
+    "q_num": 8,
     "unit": "IV",
     "exam": "endterm",
     "marks": 2,
@@ -1667,15 +1667,15 @@
     "score": 9.3,
     "important": true,
     "title": "A connected planar simple graph has 8 vertices and 12 edges. Using Euler\u2019s formula, \ufb01nd the number of regions in a planar representation of the graph.",
-    "url": "question-bank.html?open=q98",
+    "url": "question-bank.html?open=ese_q8",
     "chunks": [
       "According to Euler's Formula for any connected planar graph: $$\\\\nu - e + r = 2$$ where $v$ is the number of vertices, $e$ is the number of edges, and $r$ is the number of regions (faces). Given: $v = 8$ and $e = 12$. Substituting into Euler's formula: $$8 - 12 + r = 2 \\implies -4 + r = 2 \\implies r = 6$$ Thus, the planar representation divides the plane into 6 regions (5 bounded interior regions and 1 unbounded exterior region)."
     ],
     "type": "question"
   },
   {
-    "id": "q99",
-    "q_num": 99,
+    "id": "ese_q9",
+    "q_num": 9,
     "unit": "IV",
     "exam": "endterm",
     "marks": 2,
@@ -1684,15 +1684,15 @@
     "score": 8.9,
     "important": false,
     "title": "Find the chromatic number of (i) K6 (ii) K3,4.",
-    "url": "question-bank.html?open=q99",
+    "url": "question-bank.html?open=ese_q9",
     "chunks": [
       "The chromatic number $\\\\chi(G)$ is the minimal number of colors required to color the vertices such that no two adjacent vertices share the same color. For $K_6$: Every pair of vertices is adjacent, so all 6 vertices must receive distinct colors. Hence, $\\\\chi(K_6) = 6$. In general, $\\\\chi(K_n) = n$. For $K_{3,4}$: A bipartite graph has no edges within its vertex partition sets $V_1$ ($|V_1|=3$) and $V_2$ ($|V_2|=4$). Assigning color 1 to $V_1$ and color 2 to $V_2$ gives a valid coloring. Hence, $\\\\chi(K_{3,4}) = 2$."
     ],
     "type": "question"
   },
   {
-    "id": "q100",
-    "q_num": 100,
+    "id": "ese_q10",
+    "q_num": 10,
     "unit": "IV",
     "exam": "endterm",
     "marks": 2,
@@ -1701,15 +1701,15 @@
     "score": 9.5,
     "important": true,
     "title": "State the Four Color Theorem. Using it, explain why K5 is not planar.",
-    "url": "question-bank.html?open=q100",
+    "url": "question-bank.html?open=ese_q10",
     "chunks": [
       "Four Color Theorem: Every planar graph can be properly colored using at most 4 colors ($\\\\chi(G) \\le 4$). Why $K_5$ is not planar: In the complete graph $K_5$, all 5 vertices are mutually adjacent. Therefore, each vertex must receive a distinct color, which gives $\\\\chi(K_5) = 5$. If $K_5$ were planar, by the Four Color Theorem, its chromatic number would be at most 4. Since $\\\\chi(K_5) = 5 > 4$, by contraposition, $K_5$ cannot be planar ."
     ],
     "type": "question"
   },
   {
-    "id": "q101",
-    "q_num": 101,
+    "id": "ese_q11",
+    "q_num": 11,
     "unit": "IV",
     "exam": "endterm",
     "marks": 3,
@@ -1718,15 +1718,15 @@
     "score": 9.0,
     "important": true,
     "title": "Consider the graph G shown below. For each list of vertices, state whether it is a walk, a trail, a path, a circuit or a cycle (write the most speci\ufb01c description) and \ufb01nd its length. (a) a, b, c, d, e (b) a, b, d, c, b, a (c) b, c, d, b, a, e, d (d) b, c, d, e, a, b a b cd e 1",
-    "url": "question-bank.html?open=q101",
+    "url": "question-bank.html?open=ese_q11",
     "chunks": [
       "Consider the pentagon graph $G$ with vertices $\\{a, b, c, d, e\\}$, cycle edges $(a,b), (b,c), (c,d), (d,e), (e,a)$ and chord $(b,d)$: (a) $a, b, c, d, e$: It has distinct vertices and distinct edges without closure. Most specific description: Path . Length $= 4$ edges. (b) $a, b, d, c, b, a$: Closed sequence starting and ending at $a$. Edge $\\{a, b\\}$ is traversed twice ($a \\to b$ and $b \\to a$). Because an edge is repeated, it cannot be a circuit. Most specific description: Closed Walk . Length $= 5$ edges. (c) $b, c, d, b, a, e, d$: Traverses edges $\\{b,c\\}, \\{c,d\\}, \\{d,b\\}, \\{b,a\\}, \\{a,e\\}, \\{e,d\\}$. All 6 edges are distinct, but vertices $b$ and $d$ are revisited. Most specific description: Trail . Length $= 6$ edges. (d) $b, c, d, e, a, b$: Closed walk with distinct intermediate vertices and distinct edges returning to $b$. Most specific description: Cycle (simple circuit). Length $= 5$ edges."
     ],
     "type": "question"
   },
   {
-    "id": "q102",
-    "q_num": 102,
+    "id": "ese_q12",
+    "q_num": 12,
     "unit": "IV",
     "exam": "endterm",
     "marks": 3,
@@ -1735,15 +1735,15 @@
     "score": 9.2,
     "important": true,
     "title": "Find all cut edges (bridges) and all cut vertices of the graph shown below. Justify your answer. 1 2 3 4 5 6 7",
-    "url": "question-bank.html?open=q102",
+    "url": "question-bank.html?open=ese_q12",
     "chunks": [
       "The graph consists of triangle $\\{1, 2, 3\\}$, connecting edge $\\{3, 4\\}$, triangle $\\{4, 5, 6\\}$, and pendant edge $\\{6, 7\\}$: 1. Cut Edges (Bridges): $\\{3, 4\\}$ and $\\{6, 7\\}$. Justification: Removing edge $\\{3, 4\\}$ disconnects component $\\{1, 2, 3\\}$ from $\\{4, 5, 6, 7\\}$, increasing the number of components from 1 to 2. Similarly, removing $\\{6, 7\\}$ isolates vertex 7. Any other edge lies on cycle $1-2-3-1$ or $4-5-6-4$, so its removal keeps the graph connected. 2. Cut Vertices: Vertices $3, 4,$ and $6$. Justification: Deleting vertex 3 disconnects vertices $\\{1, 2\\}$ from the rest of the graph. Deleting vertex 4 disconnects $\\{1, 2, 3\\}$ from $\\{5, 6, 7\\}$. Deleting vertex 6 isolates leaf vertex 7."
     ],
     "type": "question"
   },
   {
-    "id": "q103",
-    "q_num": 103,
+    "id": "ese_q13",
+    "q_num": 13,
     "unit": "IV",
     "exam": "endterm",
     "marks": 3,
@@ -1752,15 +1752,15 @@
     "score": 9.1,
     "important": true,
     "title": "De\ufb01ne a cut set of a connected graph. For the graph shown below, (i) \ufb01nd a cut edge; (ii) write two different cut sets, each containing two edges; (iii) is {{a, b}, {a, d}} a cut set? Justify. a b cd e",
-    "url": "question-bank.html?open=q103",
+    "url": "question-bank.html?open=ese_q13",
     "chunks": [
       "Definition: A cut set of a connected graph $G$ is a minimal set of edges whose removal from $G$ increases the number of connected components (disconnects $G$). Minimality means no proper subset of the cut set is itself a disconnecting set. (i) Cut edge: The pendant edge $\\{\\{c, e\\}\\}$ is the unique cut edge. Removing it isolates vertex $e$. (ii) Two different cut sets of 2 edges: $S_1 = \\{\\{a, b\\}, \\{b, c\\}\\}$: Removing these two incident edges isolates vertex $b$. $S_2 = \\{\\{a, d\\}, \\{c, d\\}\\}$: Removing these two incident edges isolates vertex $d$. (iii) Is $\\{\\{a, b\\}, \\{a, d\\}\\}$ a cut set? No. Removing edges $\\{a, b\\}$ and $\\{a, d\\}$ leaves vertex $a$ still connected to vertex $c$ via diagonal edge $\\{a, c\\}$. The graph remains completely connected, so it is not even a disconnecting set."
     ],
     "type": "question"
   },
   {
-    "id": "q104",
-    "q_num": 104,
+    "id": "ese_q14",
+    "q_num": 14,
     "unit": "IV",
     "exam": "endterm",
     "marks": 3,
@@ -1769,15 +1769,15 @@
     "score": 9.3,
     "important": true,
     "title": "Which of the following undirected graphs have an Euler circuit? Of those that do not, which have an Euler path? Write the circuit or path wherever it exists. u1 u2 u3 u4 u5 G1 v1 v2 v3v4 v5 G2",
-    "url": "question-bank.html?open=q104",
+    "url": "question-bank.html?open=ese_q14",
     "chunks": [
       "Eulerian properties depend on vertex degrees: 1. Graph $G_1$ (Bowtie): Degrees: $\\\\deg(u_1) = 2, \\\\deg(u_2) = 2, \\\\deg(u_3) = 4, \\\\deg(u_4) = 2, \\\\deg(u_5) = 2$. All vertices have even degrees and $G_1$ is connected. By Euler's theorem, $G_1$ has an Euler circuit . Euler circuit: $u_3 \\to u_1 \\to u_2 \\to u_3 \\to u_4 \\to u_5 \\to u_3$. 2. Graph $G_2$ (House): Degrees: $\\\\deg(v_5) = 2, \\\\deg(v_4) = 2, \\\\deg(v_3) = 2, \\\\deg(v_1) = 3, \\\\deg(v_2) = 3$. Since vertices $v_1$ and $v_2$ have odd degree, $G_2$ has no Euler circuit. However, having exactly two odd vertices guarantees an Euler path from $v_1$ to $v_2$. Euler path: $v_1 \\to v_5 \\to v_2 \\to v_1 \\to v_4 \\to v_3 \\to v_2$."
     ],
     "type": "question"
   },
   {
-    "id": "q105",
-    "q_num": 105,
+    "id": "ese_q15",
+    "q_num": 15,
     "unit": "IV",
     "exam": "endterm",
     "marks": 3,
@@ -1786,15 +1786,15 @@
     "score": 9.2,
     "important": true,
     "title": "Which of the following directed graphs have an Euler circuit? Of those that do not, which have an Euler path? Write the circuit or path wherever it exists. a b cd D1 1 2 3 4 D2 2",
-    "url": "question-bank.html?open=q105",
+    "url": "question-bank.html?open=ese_q15",
     "chunks": [
       "In a directed graph, an Euler circuit exists if the underlying graph is connected and $\\\\text{in-deg}(v) = \\\\text{out-deg}(v)$ for every vertex. An Euler path exists if at most one vertex has $\\\\text{out} - \\\\text{in} = 1$ (start), one has $\\\\text{in} - \\\\text{out} = 1$ (end), and all others have equal in/out degrees. 1. Digraph $D_1$: Degrees: $a$ (in 2, out 2), $b$ (in 1, out 1), $c$ (in 2, out 2), $d$ (in 1, out 1). Every vertex has $\\\\text{in-deg}(v) = \\\\text{out-deg}(v)$, and $D_1$ is strongly connected. Hence, $D_1$ has an Euler circuit . Euler circuit: $a \\to b \\to c \\to a \\to c \\to d \\to a$. 2. Digraph $D_2$: Degrees: vertex 1 (in 1, out 1), vertex 2 (in 1, out 1), vertex 3 (in 1, out 2), vertex 4 (in 1, out 0). Since $\\\\text{out}(3) - \\\\text{in}(3) = 1$ and $\\\\text{in}(4) - \\\\text{out}(4) = 1$, $D_2$ has no Euler circuit, but has an Euler path starting at 3 and ending at 4. Euler path: $3 \\to 1 \\to 2 \\to 3 \\to 4$."
     ],
     "type": "question"
   },
   {
-    "id": "q106",
-    "q_num": 106,
+    "id": "ese_q16",
+    "q_num": 16,
     "unit": "IV",
     "exam": "endterm",
     "marks": 3,
@@ -1803,15 +1803,15 @@
     "score": 8.9,
     "important": false,
     "title": "Which of the following simple graphs have a Hamilton circuit or, if not, a Hamilton path? Justify. 1 2 34 5 G1 o x y z G2 x y z w G3",
-    "url": "question-bank.html?open=q106",
+    "url": "question-bank.html?open=ese_q16",
     "chunks": [
       "A Hamilton circuit visits all vertices in a cycle; a Hamilton path visits all vertices along a simple path. Graph $G_1$: Contains the cycle $1 - 2 - 3 - 4 - 5 - 1$, which visits every vertex exactly once. Thus, $G_1$ has a Hamilton circuit . Graph $G_2$ (Star $K_{1,3}$): The center vertex $o$ is connected to 3 leaves ($x, y, z$). Any path can enter and leave $o$ only once, visiting at most 2 leaves. Hence, $G_2$ has neither a Hamilton circuit nor a Hamilton path . Graph $G_3$: Vertex $w$ has degree 1, so it cannot be part of any cycle, ruling out a Hamilton circuit. However, $G_3$ has a Hamilton path starting at leaf $w$: $w \\to z \\to x \\to y$."
     ],
     "type": "question"
   },
   {
-    "id": "q107",
-    "q_num": 107,
+    "id": "ese_q17",
+    "q_num": 17,
     "unit": "IV",
     "exam": "endterm",
     "marks": 3,
@@ -1820,15 +1820,15 @@
     "score": 9.0,
     "important": true,
     "title": "A connected planar simple graph has 15 edges and divides the plane into 8 regions. Find the number of vertices. Also verify that the inequality e \u2264 3v \u2212 6 is satis\ufb01ed.",
-    "url": "question-bank.html?open=q107",
+    "url": "question-bank.html?open=ese_q17",
     "chunks": [
       "1. Finding the number of vertices using Euler's Formula: For any connected planar graph, Euler's formula states: $$\\\\nu - e + r = 2$$ Given $e = 15$ and $r = 8$: $$\\\\nu - 15 + 8 = 2 \\implies v - 7 = 2 \\implies v = 9$$ Thus, the graph has $v = 9$ vertices . 2. Verifying the planar inequality $e \\le 3v - 6$: For every connected simple planar graph with $v \\ge 3$, each region is bounded by at least 3 edges, yielding the necessary condition $e \\le 3v - 6$. Substituting $v = 9$: $$3v - 6 = 3(9) - 6 = 27 - 6 = 21$$ Since $e = 15$ and $15 \\le 21$, the inequality $15 \\le 21$ is satisfied ."
     ],
     "type": "question"
   },
   {
-    "id": "q108",
-    "q_num": 108,
+    "id": "ese_q18",
+    "q_num": 18,
     "unit": "IV",
     "exam": "endterm",
     "marks": 3,
@@ -1837,15 +1837,15 @@
     "score": 9.4,
     "important": true,
     "title": "Find the chromatic numbers of the graphs G1 and G2 shown below. Give a proper coloring of each graph to support your answer. h r1 r2 r3r4 r5 G1 (wheel with 5 rim vertices) u1 u2 u3 w1 w2 w3 G2 (triangular prism)",
-    "url": "question-bank.html?open=q108",
+    "url": "question-bank.html?open=ese_q18",
     "chunks": [
       "We find the chromatic number $\\\\chi(G)$ by identifying subgraphs and establishing a proper vertex coloring with the minimal number of colors. Graph $G_1$ (Wheel $W_5$): $\\\\chi(W_5) = 4$ The outer rim is an odd cycle $C_5$, requiring $\\\\chi(C_5) = 3$ colors. The hub $h$ is adjacent to every rim vertex, requiring an additional unique 4th color. Hence, $\\\\chi(W_5) = 3 + 1 = 4$. Proper 4-coloring: Hub $h: 1$; Rim $r_1: 2, r_2: 3, r_3: 2, r_4: 3, r_5: 4$. Graph $G_2$ (Triangular Prism): $\\\\chi(G_2) = 3$ $G_2$ contains triangle cliques ($K_3$), so $\\\\chi(G_2) \\ge 3$. We can 3-color $G_2$ by cyclic permutation between the outer and inner triangles. Proper 3-coloring: Outer triangle $u_1: 1, u_2: 2, u_3: 3$; Inner triangle $w_1: 2, w_2: 3, w_3: 1$. Since $u_i$ and $w_i$ have different colors for all $i \\in \\{1, 2, 3\\}$, all edges are validly colored."
     ],
     "type": "question"
   },
   {
-    "id": "q109",
-    "q_num": 109,
+    "id": "ese_q19",
+    "q_num": 19,
     "unit": "IV",
     "exam": "endterm",
     "marks": 5,
@@ -1854,7 +1854,7 @@
     "score": 9.5,
     "important": true,
     "title": "Consider the graph G shown below. (i) Write a path of length 4 from A to F. (ii) Write a cycle of length 3. (iii) Write a circuit of length 6 that is not a cycle. (iv) Write a closed walk that is not a circuit. (v) Find all cut edges and all cut vertices of G. A B C D E F",
-    "url": "question-bank.html?open=q109",
+    "url": "question-bank.html?open=ese_q19",
     "chunks": [
       "Consider the graph $G$ with vertices $\\{A, B, C, D, E, F\\}$, two triangles sharing vertex $C$, and a pendant edge attached to $E$: (i) Path of length 4 from $A$ to $F$: A path requires all visited vertices and edges to be distinct. A valid path of 4 edges is: $$A \\to B \\to C \\to E \\to F$$Edges traversed: $\\{A, B\\}, \\{B, C\\}, \\{C, E\\}, \\{E, F\\}$. (Alternatively, $A \\to C \\to D \\to E \\to F$ is also valid). (ii) Cycle of length 3: A cycle is a closed simple path with no repeated vertices except start and end. Valid cycles of length 3 are: $$A \\to B \\to C \\to A \\quad \\text{or} \\quad C \\to D \\to E \\to C$$Traversing edges $\\{A, B\\}, \\{B, C\\}, \\{C, A\\}$ with length 3. (iii) Circuit of length 6 that is not a cycle: A circuit is a closed trail (all edges distinct), but it is not a cycle if an intermediate vertex is visited more than once. We can traverse both triangles touching at vertex $C$: $$A \\to B \\to C \\to D \\to E \\to C \\to A$$This circuit traverses 6 distinct edges ($\\{A,B\\}, \\{B,C\\}, \\{C,D\\}, \\{D,E\\},",
       "\\{E,C\\}, \\{C,A\\}$) and visits vertex $C$ twice. (iv) Closed walk that is not a circuit: A closed walk that repeats an edge cannot be a circuit: $$A \\to B \\to C \\to B \\to A$$Edge $\\{B, C\\}$ is traversed forward and backward, and edge $\\{A, B\\}$ is traversed twice. Hence it is a closed walk of length 4 that is not a circuit. (v) All cut edges and cut vertices of $G$: Cut Edges (Bridges): $\\{\\{E, F\\}\\}$. Removing edge $\\{E, F\\}$ isolates vertex $F$, disconnecting the graph into 2 components. All other edges lie on cycles. Cut Vertices: Vertices $C$ and $E$. Removing vertex $C$ separates the graph into $\\{A, B\\}$ and $\\{D, E, F\\}$. Removing vertex $E$ isolates vertex $F$."
@@ -1862,8 +1862,8 @@
     "type": "question"
   },
   {
-    "id": "q110",
-    "q_num": 110,
+    "id": "ese_q20",
+    "q_num": 20,
     "unit": "IV",
     "exam": "endterm",
     "marks": 5,
@@ -1872,7 +1872,7 @@
     "score": 9.6,
     "important": true,
     "title": "A town has four land masses A, B,C, D connected by seven bridges: two bridges between A and B, two between A and C, and one each between A and D, B and D, C and D. (i) Model the situation as a multigraph and draw it. (ii) Find the degree of each vertex. (iii) Does the multigraph have an Euler circuit or an Euler path? Justify. (iv) If one of the bridges between A and B is closed, show that an Euler path exists and write it. 3",
-    "url": "question-bank.html?open=q110",
+    "url": "question-bank.html?open=ese_q20",
     "chunks": [
       "This problem is a classic variant of the K\u00f6nigsberg Bridge Problem modeled using graph theory. (i) Multigraph Model: Vertices represent the four land masses $V = \\{A, B, C, D\\}$, and edges represent the 7 bridges: parallel edges $e_1, e_2$ between $A$ and $B$; parallel edges $e_3, e_4$ between $A$ and $C$; single edges $e_5 = (A, D), e_6 = (B, D), e_7 = (C, D)$. (ii) Degree of each vertex: $\\\\deg(A) = 2 (\\text{to } B) + 2 (\\text{to } C) + 1 (\\text{to } D) = 5$ $\\\\deg(B) = 2 (\\text{to } A) + 1 (\\text{to } D) = 3$ $\\\\deg(C) = 2 (\\text{to } A) + 1 (\\text{to } D) = 3$ $\\\\deg(D) = 1 (\\text{to } A) + 1 (\\text{to } B) + 1 (\\text{to } C) = 3$ Sum of degrees $= 5 + 3 + 3 + 3 = 14 = 2 \\times 7$ edges (verifying Handshaking Lemma). (iii) Does the multigraph have an Euler circuit or an Euler path? By Euler's Theorem, a connected multigraph has an Euler circuit if all vertices have even degree, and an Euler path if exactly 0 or 2 vertices have odd degree. Here, all four vertices ($A,",
       "B, C, D$) have odd degrees . Since the number of odd-degree vertices is 4 (exceeding 2), the multigraph has neither an Euler circuit nor an Euler path . (iv) If one bridge between $A$ and $B$ is closed: Closing one bridge between $A$ and $B$ removes one edge between $A$ and $B$. The new vertex degrees are: $\\\\deg'(A) = 5 - 1 = 4$ (even) $\\\\deg'(B) = 3 - 1 = 2$ (even) $\\\\deg'(C) = 3$ (odd) $\\\\deg'(D) = 3$ (odd) Now, exactly two vertices ($C$ and $D$) have odd degrees , while $A$ and $B$ have even degrees. The graph remains connected. Therefore, by Euler's Theorem, an Euler path exists starting at $C$ and ending at $D$ (or vice versa). A valid Euler path traversing all 6 remaining bridges is: $$C \\xrightarrow{\\text{bridge 1}} A \\xrightarrow{\\text{remaining bridge}} B \\to D \\to A \\xrightarrow{\\text{bridge 2}} C \\to D$$ Every one of the 6 bridges is crossed exactly once."
@@ -1880,8 +1880,8 @@
     "type": "question"
   },
   {
-    "id": "q111",
-    "q_num": 111,
+    "id": "ese_q21",
+    "q_num": 21,
     "unit": "IV",
     "exam": "endterm",
     "marks": 5,
@@ -1890,7 +1890,7 @@
     "score": 9.3,
     "important": true,
     "title": "Let Q3 be the cube graph: its vertices are the 3-bit strings 000 , 001, . . . ,111, and two vertices are adjacent if and only if they differ in exactly one bit. (i) Find a Hamilton circuit in",
-    "url": "question-bank.html?open=q111",
+    "url": "question-bank.html?open=ese_q21",
     "chunks": [
       "1. Hypercube Structure and Hamming Adjacency: The 3-dimensional cube graph $Q_3$ has $|V| = 2^3 = 8$ vertices representing all 3-bit binary words $\\{0, 1\\}^3$. Two vertices $u, v \\in V(Q_3)$ are adjacent if and only if their Hamming distance is 1 (differing in exactly one bit position): $$d_H(u, v) = 1 \\iff \\{u, v\\} \\in E(Q_3)$$ Each vertex has degree 3, giving $|E| = \\frac{8 \\times 3}{2} = 12$ edges. Furthermore, $Q_3$ is a bipartite graph partitioned into vertices of even Hamming weight (even number of 1s: $\\{000, 011, 101, 110\\}$) and odd Hamming weight (\\{001, 010, 100, 111\\}). 2. Constructing the Hamilton Circuit via Gray Code: A Hamilton circuit in $Q_3$ is a simple closed cycle visiting all 8 vertices exactly once. Such a sequence corresponds directly to a cyclic 3-bit reflected Gray code : 3. Step-by-Step Bit Transition Verification: $000 \\to 001$: Flip bit 3 (Hamming distance 1). $001 \\to 011$: Flip bit 2 (Hamming distance 1). $011 \\to 010$: Flip bit 3 (Hamming distance 1). $010 \\to 110$: Flip bit 1 (Hamming distance 1). $110 \\to 111$: Flip bit 3 (Hamming distance 1). $111 \\to 101$: Flip bit 2 (Hamming distance 1). $101 \\to 100$: Flip",
       "bit 3 (Hamming distance 1). $100 \\to 000$: Flip bit 1 (Hamming distance 1, closing the circuit). Every transition occurs along a valid edge in $Q_3$. The path visits each of the 8 vertices exactly once and returns to the initial vertex $000$, establishing a rigorous Hamilton circuit of length 8 ."
@@ -1898,8 +1898,8 @@
     "type": "question"
   },
   {
-    "id": "q112",
-    "q_num": 112,
+    "id": "ese_q22",
+    "q_num": 22,
     "unit": "IV",
     "exam": "endterm",
     "marks": 5,
@@ -1908,7 +1908,7 @@
     "score": 9.4,
     "important": true,
     "title": "(ii) Does Q3 have an Euler circuit or an Euler path? Justify. (iii) Draw Q3 in the plane without crossing edges and verify Euler\u2019s formula.",
-    "url": "question-bank.html?open=q112",
+    "url": "question-bank.html?open=ese_q22",
     "chunks": [
       "(ii) Euler Circuit and Path Analysis in $Q_3$: In the hypercube $Q_3$, every vertex has degree equal to the dimension $n = 3$, because each 3-bit string has exactly 3 positions that can be flipped to reach an adjacent vertex. $$\\\\deg(v) = 3 \\quad \\forall v \\in V(Q_3)$$ According to Euler's Theorem for connected graphs: An Euler circuit exists if and only if every vertex has an even degree . Since all 8 vertices of $Q_3$ have odd degree 3, no Euler circuit exists . An Euler path exists if and only if at most two vertices have odd degrees . Because $Q_3$ contains 8 odd-degree vertices ($8 > 2$), no Euler path exists . (iii) Planar Representation of $Q_3$ and Verification of Euler's Formula: Although usually drawn as a 3D isometric cube with crossing diagonals, $Q_3$ is a planar graph. It can be drawn without crossing edges using a Schlegel diagram (a square nested inside another square with 4 radial struts): Verification of Euler's Formula: Number of vertices ($v$): $v = 8$ Number of edges ($e$): $e = 12$ (4 outer square edges + 4 inner square edges + 4 radial joining edges) Number of regions ($r$): $r =",
       "6$ (1 central inner square face $R_1$, 4 trapezoidal boundary faces $R_2, R_3, R_4, R_5$, and 1 unbounded exterior face $R_6$) Euler's formula states that for every connected planar graph: $$\\\\nu - e + r = 2$$ Substituting our parameters: $$8 - 12 + 6 = 2 \\implies -4 + 6 = 2 \\implies 2 = 2$$ Thus, Euler's formula holds true, fully verifying the planar embedding of $Q_3$."
@@ -1916,8 +1916,8 @@
     "type": "question"
   },
   {
-    "id": "q113",
-    "q_num": 113,
+    "id": "ese_q23",
+    "q_num": 23,
     "unit": "IV",
     "exam": "endterm",
     "marks": 5,
@@ -1926,7 +1926,7 @@
     "score": 9.5,
     "important": true,
     "title": "A connected planar simple graph has 9 vertices with degrees 4 , 4, 4, 3, 3, 3, 3, 2, 2. (a) Find the number of edges and the number of regions. V erify that e \u2264 3v \u2212 6. (b) Show that K6 is not planar. (c) Show that every connected planar simple graph with at least 3 vertices has a vertex of degree at most 5.",
-    "url": "question-bank.html?open=q113",
+    "url": "question-bank.html?open=ese_q23",
     "chunks": [
       "(a) Number of edges and regions, and verification of $e \\le 3v - 6$: Edges ($e$): By the Handshaking Lemma, the sum of degrees equals twice the number of edges: $$\\\\sum_{v \\in V} \\\\deg(v) = 2e$$$$\\\\sum \\\\deg(v) = (3 \\times 4) + (4 \\times 3) + (2 \\times 2) = 12 + 12 + 4 = 28$$$$2e = 28 \\implies e = 14$$ Regions ($r$): Using Euler's formula $v - e + r = 2$ for connected planar graphs with $v = 9$ and $e = 14$: $$9 - 14 + r = 2 \\implies -5 + r = 2 \\implies r = 7$$The graph divides the plane into 7 regions . Verifying $e \\le 3v - 6$: $$3v - 6 = 3(9) - 6 = 27 - 6 = 21$$Since $e = 14 \\le 21$, the inequality is satisfied. (b) Show that $K_6$ is not planar: The complete graph $K_6$ has $v = 6$ vertices and $e = \\\\binom{6}{2} = \\\\frac{6 \\times 5}{2} = 15$ edges. If $K_6$ were planar, it would satisfy the necessary condition $e \\le 3v - 6$ for simple planar graphs: $$3v - 6 = 3(6) - 6 = 18 - 6 = 12$$ However,",
       "$e = 15 > 12$. Because $K_6$ exceeds the maximum possible number of edges for a planar graph of 6 vertices, $K_6$ cannot be planar . (c) Prove that every connected planar simple graph ($v \\ge 3$) has a vertex of degree at most 5: We prove this by contradiction. Suppose there exists a connected planar simple graph $G$ with $v \\ge 3$ vertices in which every vertex has degree at least 6 ($\\\\deg(v) \\ge 6$ for all $v \\in V$). Summing over all degrees: $$2e = \\\\sum_{v \\in V} \\\\deg(v) \\ge 6v \\implies e \\ge 3v$$ However, for any planar simple graph with $v \\ge 3$, we have: $$e \\le 3v - 6$$ Combining both inequalities: $$3v \\le e \\le 3v - 6 \\implies 3v \\le 3v - 6 \\implies 0 \\le -6$$ This is an obvious contradiction. Therefore, our initial assumption is false, and every connected planar simple graph with $v \\ge 3$ must have at least one vertex of degree $\\\\le 5$ ."
@@ -1934,8 +1934,8 @@
     "type": "question"
   },
   {
-    "id": "q114",
-    "q_num": 114,
+    "id": "ese_q24",
+    "q_num": 24,
     "unit": "IV",
     "exam": "endterm",
     "marks": 5,
@@ -1944,7 +1944,7 @@
     "score": 9.7,
     "important": true,
     "title": "State Eulers formula for a connected planar graph. Prove that Kuratowski\u2019s graph other than K3,3 is non-planar.",
-    "url": "question-bank.html?open=q114",
+    "url": "question-bank.html?open=ese_q24",
     "chunks": [
       "1. Statement of Euler's Formula: For any connected planar graph $G$ drawn in the plane with $v$ vertices, $e$ edges, and $r$ regions (faces, including the outer unbounded face): $$\\\\nu - e + r = 2$$ 2. Kuratowski's Graphs: Kuratowski's Theorem states that a graph is planar if and only if it does not contain a subgraph that is homeomorphic to $K_5$ or $K_{3,3}$. The Kuratowski graph other than $K_{3,3}$ is the complete graph $K_5$ . 3. Proof that $K_5$ is Non-Planar: Step 1: Edge-Face Inequality. In any simple planar graph with $v \\ge 3$, every region is bounded by a cycle of length at least 3 edges. Furthermore, each edge separates at most two regions (or borders one region twice). Let $B_i$ denote the number of boundary edges of region $i$. Then: $$\\\\sum_{i=1}^r B_i = 2e$$ Since $B_i \\ge 3$ for each of the $r$ regions: $$2e = \\\\sum_{i=1}^r B_i \\ge 3r \\implies r \\le \\\\frac{2}{3}e$$ Step 2: Combining with Euler's Formula. Substitute $r = 2 - v + e$ into the inequality: $$2 - v + e \\le \\\\frac{2}{3}e \\implies 2 - v \\le -\\\\frac{1}{3}e \\implies \\\\frac{1}{3}e \\le v - 2 \\implies e \\le 3v - 6$$ Hence,",
       "any simple connected planar graph must satisfy $e \\le 3v - 6$. Step 3: Evaluating for $K_5$. For $K_5$: Number of vertices: $v = 5$ Number of edges: $e = \\\\binom{5}{2} = \\\\frac{5 \\times 4}{2} = 10$ Testing the planar inequality: $$3v - 6 = 3(5) - 6 = 15 - 6 = 9$$ Since $e = 10 > 9$, $K_5$ violates the fundamental planar inequality $e \\le 3v - 6$. Therefore, $K_5$ cannot be embedded in the plane without edges crossing, proving that $K_5$ is non-planar ."
@@ -1952,8 +1952,8 @@
     "type": "question"
   },
   {
-    "id": "q115",
-    "q_num": 115,
+    "id": "ese_q25",
+    "q_num": 25,
     "unit": "IV",
     "exam": "endterm",
     "marks": 5,
@@ -1962,7 +1962,7 @@
     "score": 9.3,
     "important": true,
     "title": "Find the chromatic number of the following graphs. (i) C6 and C7 (cycles with 6 and 7 vertices). (ii) K3,3. (iii) The graph G shown below. Give a proper coloring that uses the minimum number of colors. a b c d e f",
-    "url": "question-bank.html?open=q115",
+    "url": "question-bank.html?open=ese_q25",
     "chunks": [
       "The chromatic number $\\\\chi(G)$ is the minimal number of colors needed to color the vertices such that no two adjacent vertices share a color. (i) Cycle graphs $C_6$ and $C_7$: $C_6$ is an even cycle ($n = 6$). Every even cycle is bipartite and 2-colorable by alternating colors around the cycle. Hence, $\\\\chi(C_6) = 2$. $C_7$ is an odd cycle ($n = 7$). Any proper 2-coloring of an alternating path will leave the 7th vertex adjacent to both color 1 and color 2, requiring a 3rd color. Hence, $\\\\chi(C_7) = 3$. (ii) Complete bipartite graph $K_{3,3}$: By definition, a bipartite graph has vertices partitioned into two independent sets $V_1$ and $V_2$ with all edges running between $V_1$ and $V_2$. Assigning color 1 to all vertices of $V_1$ and color 2 to all vertices of $V_2$ yields a valid proper coloring. Hence, $\\\\chi(K_{3,3}) = 2$. (iii) Graph $G$ (central triangle with 3 outer ear vertices): The graph consists of central triangle $\\{a, c, e\\}$ with outer vertices $b$ (adjacent to $a, c$), $d$ (adjacent to $c, e$), and $f$ (adjacent to $e, a$): Since $\\{a, c, e\\}$ is a triangle clique ($K_3$), at least 3 colors are required ($\\\\chi(G) \\ge 3$).",
       "Assign colors: $a: 1, c: 2, e: 3$. Now assign colors to the outer vertices: Vertex $b$ is connected to $a$ (color 1) and $c$ (color 2). Assign $b$: Color 3 . Vertex $d$ is connected to $c$ (color 2) and $e$ (color 3). Assign $d$: Color 1 . Vertex $f$ is connected to $e$ (color 3) and $a$ (color 1). Assign $f$: Color 2 . No two adjacent vertices share the same color. Thus, 3 colors suffice. Hence, $\\\\chi(G) = 3$ ."
@@ -1970,8 +1970,8 @@
     "type": "question"
   },
   {
-    "id": "q116",
-    "q_num": 116,
+    "id": "ese_q26",
+    "q_num": 26,
     "unit": "IV",
     "exam": "endterm",
     "marks": 5,
@@ -1980,7 +1980,7 @@
     "score": 9.1,
     "important": true,
     "title": "Consider the graph G shown below. (i) Which of the following are subgraphs of G? Justify. H1: V = {1, 2, 3}, E = {{1, 2}, {2, 3}}; H2: V = {5, 6}, E = {{5, 6}, {6, 7}, {6, 8}} (ii) Find one cut edges, the one cut vertex and one cut set of the component that contains the vertex 6. 1 2 34 5 6 7 8 4",
-    "url": "question-bank.html?open=q116",
+    "url": "question-bank.html?open=ese_q26",
     "chunks": [
       "Consider the disconnected graph $G$ consisting of two separate components: a complete 4-vertex clique $K_4$ on $\\{1, 2, 3, 4\\}$ and an open path on $\\{5, 6, 7, 8\\}$: (i) Subgraph Justifications: $H_1$: $V = \\{1, 2, 3\\}, E = \\{\\{1, 2\\}, \\{2, 3\\}\\}$: Here, $V(H_1) \\subseteq V(G)$ since $\\{1, 2, 3\\} \\subseteq \\{1, 2, 3, 4, 5, 6, 7, 8\\}$. Moreover, both edges $\\{1, 2\\}$ and $\\{2, 3\\}$ belong to $E(G)$, and both endpoints of each edge belong to $V(H_1)$. Therefore, $H_1$ is a valid subgraph of $G$ . $H_2$: $V = \\{5, 6\\}, E = \\{\\{5, 6\\}, \\{6, 7\\}, \\{6, 8\\}\\}$: By definition of a graph, every edge in $E(H_2)$ must connect vertices that exist within $V(H_2)$. In $H_2$, edges $\\{6, 7\\}$ and $\\{6, 8\\}$ require vertices 7 and 8, which are absent from $V(H_2) = \\{5, 6\\}$. Additionally, edge $\\{6, 8\\}$ does not even exist in $G$. Therefore, $H_2$ is NOT a subgraph of $G$ . (ii) Analysis of Component Containing Vertex 6: The component containing vertex 6 is the 4-vertex path graph $P_4$ with edges $\\{\\{5, 6\\}, \\{6, 7\\}, \\{7, 8\\}\\}$. One Cut Edge (Bridge): $\\{\\{5, 6\\}\\}$ (or $\\{\\{6, 7\\}\\}$). Removing edge $\\{5, 6\\}$ disconnects vertex",
       "5 from the rest of the component $\\{6, 7, 8\\}$. One Cut Vertex: Vertex 6 (or vertex 7 ). Deleting vertex 6 removes incident edges and splits the component into isolated vertex $\\{5\\}$ and path $\\{7, 8\\}$. One Cut Set: $\\{\\{\\{6, 7\\}\\}\\}$ (or $\\{\\{\\{5, 6\\}\\}\\}$). In any tree or path graph, any single internal edge constitutes a minimal disconnecting set whose removal splits the connected component into two pieces."
@@ -1988,8 +1988,8 @@
     "type": "question"
   },
   {
-    "id": "q117",
-    "q_num": 117,
+    "id": "ese_q27",
+    "q_num": 27,
     "unit": "V",
     "exam": "endterm",
     "marks": 2,
@@ -1998,15 +1998,15 @@
     "score": 8.5,
     "important": false,
     "title": "Let A = {a, b, c}. Check whether R1 = {(a, a), (b, b), (b, c)} and R3 = {(a, d), (b, b)} are relations on A. How many relations can be de\ufb01ned on A?",
-    "url": "question-bank.html?open=q117",
+    "url": "question-bank.html?open=ese_q27",
     "chunks": [
       "A relation on $A$ is any subset of $A \\times A$: $R_1$: All pairs belong to $A \\times A$. Hence, $R_1 \\subseteq A \\times A$, so $R_1$ is a relation on $A$ . $R_3$: Contains $(a, d)$ with $d \\notin A$. Thus $R_3 \\not\\subseteq A \\times A$, so $R_3$ is not a relation on $A$ . Total relations: With $|A| = 3$, $|A \\times A| = 9$. The number of relations is $2^{|A \\times A|} = 2^9 = \\mathbf{512}$."
     ],
     "type": "question"
   },
   {
-    "id": "q118",
-    "q_num": 118,
+    "id": "ese_q28",
+    "q_num": 28,
     "unit": "V",
     "exam": "endterm",
     "marks": 2,
@@ -2015,15 +2015,15 @@
     "score": 9.1,
     "important": true,
     "title": "Is the relation \u201c x divides y\u201d on N re\ufb02exive? symmetric? anti-symmetric? transitive? Justify brie\ufb02y.",
-    "url": "question-bank.html?open=q118",
+    "url": "question-bank.html?open=ese_q28",
     "chunks": [
       "For $x, y \\in \\mathbb{N}$ with relation $x \\mid y$: Reflexive: Yes, $x \\mid x$ since $x = 1 \\cdot x$. Symmetric: No, $2 \\mid 4$ but $4 \\nmid 2$. Anti-symmetric: Yes, if $x \\mid y$ and $y \\mid x$, then $x = y$ for positive integers. Transitive: Yes, if $x \\mid y$ and $y \\mid z$, then $x \\mid z$."
     ],
     "type": "question"
   },
   {
-    "id": "q119",
-    "q_num": 119,
+    "id": "ese_q29",
+    "q_num": 29,
     "unit": "V",
     "exam": "endterm",
     "marks": 2,
@@ -2032,15 +2032,15 @@
     "score": 8.6,
     "important": false,
     "title": "Give a relation on {a, b, c} that is transitive but neither re\ufb02exive nor symmetric.",
-    "url": "question-bank.html?open=q119",
+    "url": "question-bank.html?open=ese_q29",
     "chunks": [
       "Let $A = \\{a, b, c\\}$. Define: $$R = \\{(a, b), (b, c), (a, c)\\}$$ Transitive: $(a, b) \\in R$ and $(b, c) \\in R \\implies (a, c) \\in R$. No other compositions exist. Not Reflexive: $(a, a) \\notin R$, $(b, b) \\notin R$, $(c, c) \\notin R$. Not Symmetric: $(a, b) \\in R$, but $(b, a) \\notin R$."
     ],
     "type": "question"
   },
   {
-    "id": "q120",
-    "q_num": 120,
+    "id": "ese_q30",
+    "q_num": 30,
     "unit": "V",
     "exam": "endterm",
     "marks": 2,
@@ -2049,15 +2049,15 @@
     "score": 8.8,
     "important": false,
     "title": "Is \u201cx \u2264 y\u201d an equivalence relation on Z? Which property fails?",
-    "url": "question-bank.html?open=q120",
+    "url": "question-bank.html?open=ese_q30",
     "chunks": [
       "No, \"$x \\le y$\" is not an equivalence relation on $\\mathbb{Z}$. Failing property: Symmetry fails. Justification: Symmetry requires $x \\le y \\implies y \\le x$. Taking $x = 1, y = 3$, we have $1 \\le 3$, but $3 \\le 1$ is false. (The relation is a partial order, not an equivalence relation)."
     ],
     "type": "question"
   },
   {
-    "id": "q121",
-    "q_num": 121,
+    "id": "ese_q31",
+    "q_num": 31,
     "unit": "V",
     "exam": "endterm",
     "marks": 2,
@@ -2066,15 +2066,15 @@
     "score": 8.9,
     "important": false,
     "title": "Is \u201cx and y have the same birthday\u201d an equivalence relation on a set of people? Justify.",
-    "url": "question-bank.html?open=q121",
+    "url": "question-bank.html?open=ese_q31",
     "chunks": [
       "Yes, it is an equivalence relation . Let $B(x)$ be the birthday of person $x$: Reflexive: $B(x) = B(x)$ for every person $x$ ($xRx$). Symmetric: If $B(x) = B(y)$, then $B(y) = B(x)$ ($xRy \\implies yRx$). Transitive: If $B(x) = B(y)$ and $B(y) = B(z)$, then $B(x) = B(z)$ ($xRy \\land yRz \\implies xRz$). Since all three properties hold, it is an equivalence relation."
     ],
     "type": "question"
   },
   {
-    "id": "q122",
-    "q_num": 122,
+    "id": "ese_q32",
+    "q_num": 32,
     "unit": "V",
     "exam": "endterm",
     "marks": 2,
@@ -2083,15 +2083,15 @@
     "score": 9.0,
     "important": true,
     "title": "Write the matrix of the relation R = {(1, 1), (1, 2), (2, 1), (3, 3)} on A = {1, 2, 3}. Using the matrix, state whether R is re\ufb02exive and whether it is symmetric.",
-    "url": "question-bank.html?open=q122",
+    "url": "question-bank.html?open=ese_q32",
     "chunks": [
       "The relation matrix $M_R$ on ordered set $(1, 2, 3)$ is: $$M_R = \\begin{bmatrix} 1 & 1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}$$ Reflexive: No , because diagonal entry $m_{22} = 0$ (since $(2, 2) \\notin R$). Reflexivity requires all diagonal entries to be 1. Symmetric: Yes , because $M_R = M_R^T$ (the matrix is symmetric across the main diagonal)."
     ],
     "type": "question"
   },
   {
-    "id": "q123",
-    "q_num": 123,
+    "id": "ese_q33",
+    "q_num": 33,
     "unit": "V",
     "exam": "endterm",
     "marks": 2,
@@ -2100,15 +2100,15 @@
     "score": 9.2,
     "important": true,
     "title": "Is (Z, D) a poset, where D is the divides relation? (Hint: look at 2 and \u22122.)",
-    "url": "question-bank.html?open=q123",
+    "url": "question-bank.html?open=ese_q33",
     "chunks": [
       "No, $(\\mathbb{Z}, D)$ is not a poset because it fails anti-symmetry . Anti-symmetry requires: $a \\mid b \\land b \\mid a \\implies a = b$. Take $a = 2$ and $b = -2$ in $\\mathbb{Z}$: $2 \\mid -2$ since $-2 = (-1) \\cdot 2$. $-2 \\mid 2$ since $2 = (-1) \\cdot (-2)$. However, $2 \\ne -2$. Thus anti-symmetry fails, so $(\\mathbb{Z}, D)$ is not a poset."
     ],
     "type": "question"
   },
   {
-    "id": "q124",
-    "q_num": 124,
+    "id": "ese_q34",
+    "q_num": 34,
     "unit": "V",
     "exam": "endterm",
     "marks": 2,
@@ -2117,15 +2117,15 @@
     "score": 9.0,
     "important": true,
     "title": "Which of (Z+, \u2264), (S16, D) and (P(A), \u2286), where A = {a, b, c}, are chains? Give a reason.",
-    "url": "question-bank.html?open=q124",
+    "url": "question-bank.html?open=ese_q34",
     "chunks": [
       "A chain is a poset where every pair of elements is comparable: $(\\mathbb{Z}^+, \\le)$: CHAIN. Any two positive integers satisfy $x \\le y$ or $y \\le x$. $(S_{16}, D)$: CHAIN. Divisors $S_{16} = \\{1, 2, 4, 8, 16\\}$ form a linear sequence: $1 \\mid 2 \\mid 4 \\mid 8 \\mid 16$. Every pair is comparable. $(\\mathcal{P}(A), \\subseteq)$: NOT A CHAIN. Singletons $\\{a\\}$ and $\\{b\\}$ are non-comparable ($\\{a\\} \\not\\subseteq \\{b\\}$ and $\\{b\\} \\not\\subseteq \\{a\\}$)."
     ],
     "type": "question"
   },
   {
-    "id": "q125",
-    "q_num": 125,
+    "id": "ese_q35",
+    "q_num": 35,
     "unit": "V",
     "exam": "endterm",
     "marks": 2,
@@ -2134,15 +2134,15 @@
     "score": 8.8,
     "important": false,
     "title": "In the poset (S12, D), \ufb01nd glb(4, 6) and lub(4, 6).",
-    "url": "question-bank.html?open=q125",
+    "url": "question-bank.html?open=ese_q35",
     "chunks": [
       "In the divisibility poset $(S_{12}, D)$ with $S_{12} = \\{1, 2, 3, 4, 6, 12\\}$: glb(4, 6): $\\\\text{glb}(a, b) = \\\\gcd(a, b) = \\\\gcd(4, 6) = \\mathbf{2}$. Both 1 and 2 divide 4 and 6, and 2 is the greatest lower bound in $S_{12}$. lub(4, 6): $\\\\text{lub}(a, b) = \\\\text{lcm}(a, b) = \\\\text{lcm}(4, 6) = \\mathbf{12}$. 12 is the least common multiple in $S_{12}$."
     ],
     "type": "question"
   },
   {
-    "id": "q126",
-    "q_num": 126,
+    "id": "ese_q36",
+    "q_num": 36,
     "unit": "V",
     "exam": "endterm",
     "marks": 2,
@@ -2151,15 +2151,15 @@
     "score": 8.7,
     "important": false,
     "title": "V erify the absorption law in (S30, D) for a = 6 and b = 10.",
-    "url": "question-bank.html?open=q126",
+    "url": "question-bank.html?open=ese_q36",
     "chunks": [
       "In $(S_{30}, D)$, meet is $\\\\gcd$ and join is $\\\\text{lcm}$: $a \\wedge (a \\vee b) = a$: $a \\vee b = \\\\text{lcm}(6, 10) = 30$. $a \\wedge 30 = \\\\gcd(6, 30) = 6 = a$. Verified. $a \\vee (a \\wedge b) = a$: $a \\wedge b = \\\\gcd(6, 10) = 2$. $a \\vee 2 = \\\\text{lcm}(6, 2) = 6 = a$. Verified."
     ],
     "type": "question"
   },
   {
-    "id": "q127",
-    "q_num": 127,
+    "id": "ese_q37",
+    "q_num": 37,
     "unit": "V",
     "exam": "endterm",
     "marks": 3,
@@ -2168,15 +2168,15 @@
     "score": 9.1,
     "important": true,
     "title": "On A = {1, 2, 3} let R = {(1, 1), (2, 2), (3, 3), (1, 2)}. Decide which of the four properties (re\ufb02exive, symmetric, anti-symmetric, transitive) hold for R. Justify each.",
-    "url": "question-bank.html?open=q127",
+    "url": "question-bank.html?open=ese_q37",
     "chunks": [
       "Given set $A = \\{1, 2, 3\\}$ and relation $R = \\{(1, 1), (2, 2), (3, 3), (1, 2)\\}$: Reflexive (HOLDS): A relation is reflexive if $(x, x) \\in R$ for every $x \\in A$. Here, $(1, 1), (2, 2), (3, 3) \\in R$. Hence, $R$ is reflexive. Symmetric (FAILS): Symmetry requires $(x, y) \\in R \\implies (y, x) \\in R$. Here, $(1, 2) \\in R$, but $(2, 1) \\notin R$. Hence, $R$ is not symmetric. Anti-symmetric (HOLDS): Anti-symmetry requires that if $(x, y) \\in R$ and $(y, x) \\in R$, then $x = y$. The only pairs with both directions present are $(1,1), (2,2), (3,3)$, where $x = y$. Thus, $R$ is anti-symmetric. Transitive (HOLDS): Transitivity requires $(x, y) \\in R \\land (y, z) \\in R \\implies (x, z) \\in R$. The only non-trivial chains are $(1, 1) \\circ (1, 2) = (1, 2) \\in R$ and $(1, 2) \\circ (2, 2) = (1, 2) \\in R$. Thus, $R$ is transitive. Conclusion: $R$ is reflexive, anti-symmetric, and transitive (a partial order), but not symmetric."
     ],
     "type": "question"
   },
   {
-    "id": "q128",
-    "q_num": 128,
+    "id": "ese_q38",
+    "q_num": 38,
     "unit": "V",
     "exam": "endterm",
     "marks": 3,
@@ -2185,15 +2185,15 @@
     "score": 9.2,
     "important": true,
     "title": "Write the matrix and draw the digraph of R = {(1, 2), (2, 3), (3, 1)} on {1, 2, 3}. Which of the four properties hold?",
-    "url": "question-bank.html?open=q128",
+    "url": "question-bank.html?open=ese_q38",
     "chunks": [
       "Given $A = \\{1, 2, 3\\}$ and $R = \\{(1, 2), (2, 3), (3, 1)\\}$: 1. Relation Matrix $M_R$: $$M_R = \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 1 & 0 & 0 \\end{bmatrix}$$ 2. Digraph of $R$: 3. Property Tests: Reflexive: Fails. Diagonal entries are all 0 ($m_{11}=m_{22}=m_{33}=0$). Symmetric: Fails. $(1, 2) \\in R$ but $(2, 1) \\notin R$. Anti-symmetric: Holds. No distinct pair satisfies $(x, y) \\in R$ and $(y, x) \\in R$. Transitive: Fails. $(1, 2) \\in R$ and $(2, 3) \\in R$, but $(1, 3) \\notin R$."
     ],
     "type": "question"
   },
   {
-    "id": "q129",
-    "q_num": 129,
+    "id": "ese_q39",
+    "q_num": 39,
     "unit": "V",
     "exam": "endterm",
     "marks": 3,
@@ -2202,15 +2202,15 @@
     "score": 9.3,
     "important": true,
     "title": "Given MR = \uf8ee \uf8f0 1 1 1 0 1 1 0 0 1 \uf8f9 \uf8fb, list the pairs of R and test all four properties.",
-    "url": "question-bank.html?open=q129",
+    "url": "question-bank.html?open=ese_q39",
     "chunks": [
       "Given the boolean relation matrix on $A = \\{1, 2, 3\\}$: $$M_R = \\begin{bmatrix} 1 & 1 & 1 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix}$$ 1. Ordered Pairs of $R$: $$R = \\{(1, 1), (1, 2), (1, 3), (2, 2), (2, 3), (3, 3)\\}$$ 2. Testing the Four Properties: Reflexive: Holds. All main diagonal entries are 1 ($m_{11} = m_{22} = m_{33} = 1$), meaning $(1,1), (2,2), (3,3) \\in R$. Symmetric: Fails. $M_R \\ne M_R^T$. For instance, $m_{12} = 1$ ($(1,2) \\in R$), but $m_{21} = 0$ ($(2,1) \\notin R$). Anti-symmetric: Holds. For all $i \\ne j$, if $m_{ij} = 1$, then $m_{ji} = 0$. Hence $(x,y) \\in R \\land (y,x) \\in R \\implies x = y$. Transitive: Holds. $(1, 2) \\in R \\land (2, 3) \\in R \\implies (1, 3) \\in R$. Matrix multiplication verifies $M_R \\odot M_R = M_R$. Remark: $R$ represents the standard less-than-or-equal-to relation $\\le$ on $\\{1, 2, 3\\}$ (a total order)."
     ],
     "type": "question"
   },
   {
-    "id": "q130",
-    "q_num": 130,
+    "id": "ese_q40",
+    "q_num": 40,
     "unit": "V",
     "exam": "endterm",
     "marks": 3,
@@ -2219,15 +2219,15 @@
     "score": 9.4,
     "important": true,
     "title": "Show that xRy if x \u2212 y is divisible by 3 is an equivalence relation on Z.",
-    "url": "question-bank.html?open=q130",
+    "url": "question-bank.html?open=ese_q40",
     "chunks": [
       "Let $R$ be defined on $\\mathbb{Z}$ by $x R y \\iff 3 \\mid (x - y)$, which means $x - y = 3k$ for some $k \\in \\mathbb{Z}$ ($x \\equiv y \\pmod 3$). We verify the three axioms: Reflexive: For any $x \\in \\mathbb{Z}$: $$x - x = 0 = 3 \\cdot 0$$Since $0 \\in \\mathbb{Z}$, $3 \\mid (x - x)$, so $x R x$ holds for all $x \\in \\mathbb{Z}$. Symmetric: Assume $x R y$. Then $x - y = 3k$ for some $k \\in \\mathbb{Z}$. Multiplying by $-1$: $$y - x = -(x - y) = 3(-k)$$ Since $-k \\in \\mathbb{Z}$, $3 \\mid (y - x)$, proving that $y R x$. Transitive: Assume $x R y$ and $y R z$. Then $x - y = 3k_1$ and $y - z = 3k_2$ for $k_1, k_2 \\in \\mathbb{Z}$. Adding the two equations: $$(x - y) + (y - z) = x - z = 3(k_1 + k_2)$$ Since $k_1 + k_2 \\in \\mathbb{Z}$, $3 \\mid (x - z)$, so $x R z$. Since $R$ is reflexive, symmetric, and transitive, $R$ is an equivalence relation on $\\mathbb{Z}$ (partitioning $\\mathbb{Z}$ into modulo 3 residue classes $[0], [1], [2]$)."
     ],
     "type": "question"
   },
   {
-    "id": "q131",
-    "q_num": 131,
+    "id": "ese_q41",
+    "q_num": 41,
     "unit": "V",
     "exam": "endterm",
     "marks": 3,
@@ -2236,15 +2236,15 @@
     "score": 9.0,
     "important": true,
     "title": "Let A = {1, 2, 3}, R1 = {(1, 1), (1, 2), (2, 3)} and R2 = {(1, 1), (2, 3), (3, 1)}. Find R1 \u222a R2, R1 \u2229 R2, R1 \u2212 R2 and R\u22121 1 .",
-    "url": "question-bank.html?open=q131",
+    "url": "question-bank.html?open=ese_q41",
     "chunks": [
       "Given $A = \\{1, 2, 3\\}$, $R_1 = \\{(1, 1), (1, 2), (2, 3)\\}$, and $R_2 = \\{(1, 1), (2, 3), (3, 1)\\}$: Union ($R_1 \\cup R_2$): The set of all pairs in $R_1$ or $R_2$: $$R_1 \\cup R_2 = \\{(1, 1), (1, 2), (2, 3), (3, 1)\\}$$ Intersection ($R_1 \\cap R_2$): The set of pairs common to both $R_1$ and $R_2$: $$R_1 \\cap R_2 = \\{(1, 1), (2, 3)\\}$$ Set Difference ($R_1 - R_2$): Pairs in $R_1$ that are not in $R_2$: $$R_1 - R_2 = \\{(1, 2)\\}$$ Inverse Relation ($R_1^{-1}$): Obtained by reversing the order of coordinates of each pair in $R_1$ ($(x, y) \\in R_1 \\iff (y, x) \\in R_1^{-1}$): $$R_1^{-1} = \\{(1, 1), (2, 1), (3, 2)\\}$$"
     ],
     "type": "question"
   },
   {
-    "id": "q132",
-    "q_num": 132,
+    "id": "ese_q42",
+    "q_num": 42,
     "unit": "V",
     "exam": "endterm",
     "marks": 3,
@@ -2253,15 +2253,15 @@
     "score": 9.2,
     "important": true,
     "title": "Show, with an example, that the union of two equivalence relations on a set A need not be an equiva- lence relation.",
-    "url": "question-bank.html?open=q132",
+    "url": "question-bank.html?open=ese_q42",
     "chunks": [
       "While the intersection of two equivalence relations is always an equivalence relation, their union need not be an equivalence relation because transitivity often fails. Counterexample: Let $A = \\{1, 2, 3\\}$. Define two equivalence relations corresponding to different partitions of $A$: $R_1 = \\{(1, 1), (2, 2), (3, 3), (1, 2), (2, 1)\\}$ (partition $\\{\\{1, 2\\}, \\{3\\}\\}$) $R_2 = \\{(1, 1), (2, 2), (3, 3), (2, 3), (3, 2)\\}$ (partition $\\{\\{1\\}, \\{2, 3\\}\\}$) Both $R_1$ and $R_2$ are clearly equivalence relations (reflexive, symmetric, transitive). Now take their union $R = R_1 \\cup R_2$: $$R = \\{(1, 1), (2, 2), (3, 3), (1, 2), (2, 1), (2, 3), (3, 2)\\}$$ Transitivity test on $R$: $(1, 2) \\in R$ (from $R_1$) and $(2, 3) \\in R$ (from $R_2$). If $R$ were transitive, $(1, 3)$ would have to belong to $R$. However, $(1, 3) \\notin R$. Because transitivity fails, $R_1 \\cup R_2$ is not an equivalence relation ."
     ],
     "type": "question"
   },
   {
-    "id": "q133",
-    "q_num": 133,
+    "id": "ese_q43",
+    "q_num": 43,
     "unit": "V",
     "exam": "endterm",
     "marks": 3,
@@ -2270,15 +2270,15 @@
     "score": 9.1,
     "important": true,
     "title": "Prove that (P(A), \u2286) is a poset, where A = {a, b, c}.",
-    "url": "question-bank.html?open=q133",
+    "url": "question-bank.html?open=ese_q43",
     "chunks": [
       "Let $A = \\{a, b, c\\}$. The power set $\\mathcal{P}(A)$ contains all $2^3 = 8$ subsets of $A$. To prove that $(\\mathcal{P}(A), \\subseteq)$ is a partially ordered set (poset), we prove that subset inclusion $\\subseteq$ satisfies reflexivity, anti-symmetry, and transitivity: Reflexivity: For every subset $X \\in \\mathcal{P}(A)$, every element of $X$ is an element of $X$. Thus $X \\subseteq X$ holds for all $X$. Anti-symmetry: Let $X, Y \\in \\mathcal{P}(A)$. If $X \\subseteq Y$ and $Y \\subseteq X$, then by the axiom of set extensionality (two sets with identical elements are equal), $X = Y$. Thus anti-symmetry holds. Transitivity: Let $X, Y, Z \\in \\mathcal{P}(A)$. Assume $X \\subseteq Y$ and $Y \\subseteq Z$. For any element $x \\in X$, since $X \\subseteq Y$, $x \\in Y$. Further, since $Y \\subseteq Z$, $x \\in Z$. Thus every element of $X$ belongs to $Z$, implying $X \\subseteq Z$. Because $\\subseteq$ is reflexive, anti-symmetric, and transitive on $\\mathcal{P}(A)$, $(\\mathcal{P}(A), \\subseteq)$ is a poset (specifically, a Boolean poset of dimension 3)."
     ],
     "type": "question"
   },
   {
-    "id": "q134",
-    "q_num": 134,
+    "id": "ese_q44",
+    "q_num": 44,
     "unit": "V",
     "exam": "endterm",
     "marks": 3,
@@ -2287,15 +2287,15 @@
     "score": 9.0,
     "important": true,
     "title": "Check whether (N, D) is a poset, where D is the divides relation.",
-    "url": "question-bank.html?open=q134",
+    "url": "question-bank.html?open=ese_q44",
     "chunks": [
       "Let $\\mathbb{N} = \\{1, 2, 3, \\dots\\}$ and let $D$ be the divisibility relation $a D b \\iff a \\mid b$ ($b = ka$ for some $k \\in \\mathbb{N}$). We test whether $D$ satisfies the three poset axioms: Reflexivity: For every $a \\in \\mathbb{N}$, $a = 1 \\cdot a$. Since $1 \\in \\mathbb{N}$, $a \\mid a$ holds for all $a$. Hence, $D$ is reflexive. Anti-symmetry: Let $a, b \\in \\mathbb{N}$ such that $a \\mid b$ and $b \\mid a$. Then there exist positive integers $k_1, k_2 \\in \\mathbb{N}$ such that: $$b = k_1 a \\quad \\text{and} \\quad a = k_2 b$$Substituting gives $a = k_2 (k_1 a) = (k_1 k_2) a \\implies k_1 k_2 = 1$. Since $k_1, k_2 \\in \\mathbb{N}$, the only positive integer solution is $k_1 = k_2 = 1$, which implies $a = b$. Thus $D$ is anti-symmetric. Transitivity: If $a \\mid b$ ($b = k_1 a$) and $b \\mid c$ ($c = k_2 b$), then $c = k_2 (k_1 a) = (k_1 k_2) a$. Since $k_1 k_2 \\in \\mathbb{N}$, $a \\mid c$. Thus $D$ is transitive. Since all three axioms hold, $(\\mathbb{N}, D)$ is a poset ."
     ],
     "type": "question"
   },
   {
-    "id": "q135",
-    "q_num": 135,
+    "id": "ese_q45",
+    "q_num": 45,
     "unit": "V",
     "exam": "endterm",
     "marks": 3,
@@ -2304,15 +2304,15 @@
     "score": 9.3,
     "important": true,
     "title": "Draw the Hasse diagram of (i) (S64, D) and (ii) (P({a, b}), \u2286). For each, name the maximal, mini- mal, greatest and least elements.",
-    "url": "question-bank.html?open=q135",
+    "url": "question-bank.html?open=ese_q45",
     "chunks": [
       "A Hasse diagram represents covering relations in a poset without redundant transitive edges or self-loops. (i) Poset $(S_{64}, D)$: Divisors $S_{64} = \\{1, 2, 4, 8, 16, 32, 64\\}$ form a linear chain ($1 \\prec 2 \\prec 4 \\prec 8 \\prec 16 \\prec 32 \\prec 64$). Maximal element: 64 | Greatest element: 64 Minimal element: 1 | Least element: 1 (ii) Poset $(\\mathcal{P}(\\{a, b\\}), \\subseteq)$: Subsets form a diamond lattice with bottom $\\emptyset$, middle atoms $\\{a\\}, \\{b\\}$, and top $\\{a, b\\}$. Maximal element: $\\{a, b\\}$ | Greatest element: $\\{a, b\\}$ Minimal element: $\\emptyset$ | Least element: $\\emptyset$"
     ],
     "type": "question"
   },
   {
-    "id": "q136",
-    "q_num": 136,
+    "id": "ese_q46",
+    "q_num": 46,
     "unit": "V",
     "exam": "endterm",
     "marks": 3,
@@ -2321,15 +2321,15 @@
     "score": 9.1,
     "important": true,
     "title": "Is (P(A), \u2286) a lattice for A = {1, 2, 3}? Identify the meet \u2227 and the join \u2228 for every possible pair. 1",
-    "url": "question-bank.html?open=q136",
+    "url": "question-bank.html?open=ese_q46",
     "chunks": [
       "Yes, $(\\mathcal{P}(A), \\subseteq)$ is a lattice (known as the Boolean lattice $B_3$). 1. Definition of Lattice: A poset $(L, \\le)$ is a lattice if every pair of elements $X, Y \\in L$ has a unique greatest lower bound (meet $X \\wedge Y$) and a unique least upper bound (join $X \\vee Y$). 2. Identification of Meet $\\wedge$ and Join $\\vee$: Meet ($X \\wedge Y$): The greatest lower bound is the set intersection: $$X \\wedge Y = X \\cap Y$$For any subsets $X, Y \\subseteq A$, $X \\cap Y \\subseteq X$ and $X \\cap Y \\subseteq Y$, and any common subset $Z$ satisfies $Z \\subseteq X \\cap Y$. Since $X \\cap Y \\in \\mathcal{P}(A)$, the meet is always well-defined and unique. Join ($X \\vee Y$): The least upper bound is the set union: $$X \\vee Y = X \\cup Y$$For any subsets $X, Y \\subseteq A$, $X \\subseteq X \\cup Y$ and $Y \\subseteq X \\cup Y$, and any common superset $W$ satisfies $X \\cup Y \\subseteq W$. Since $X \\cup Y \\in \\mathcal{P}(A)$, the join is always well-defined and unique. Because $X \\cap Y$ and $X \\cup Y$ exist in $\\mathcal{P}(A)$ for every pair of subsets, $(\\mathcal{P}(A), \\subseteq)$ is a complete distributive lattice."
     ],
     "type": "question"
   },
   {
-    "id": "q137",
-    "q_num": 137,
+    "id": "ese_q47",
+    "q_num": 47,
     "unit": "V",
     "exam": "endterm",
     "marks": 5,
@@ -2338,7 +2338,7 @@
     "score": 9.5,
     "important": true,
     "title": "Let A = {1, 2, 3, 4}, R = {(1, 2), (2, 3), (3, 4)} and S = {(1, 1), (2, 4), (3, 2)}. (i) Find S \u25e6 R, R \u25e6 S, R2 and R3. (ii) Write MR and MS and verify that MS\u25e6R = MR \u2299 MS.",
-    "url": "question-bank.html?open=q137",
+    "url": "question-bank.html?open=ese_q47",
     "chunks": [
       "Given $A = \\{1, 2, 3, 4\\}$, $R = \\{(1, 2), (2, 3), (3, 4)\\}$, and $S = \\{(1, 1), (2, 4), (3, 2)\\}$. (i) Compositions and Powers of Relations: By standard composition, $(x, z) \\in S \\circ R \\iff \\exists y \\in A$ with $(x, y) \\in R$ and $(y, z) \\in S$. $S \\circ R$: Chaining through intermediate vertices: $(1, 2) \\in R \\land (2, 4) \\in S \\implies (1, 4)$. $(2, 3) \\in R \\land (3, 2) \\in S \\implies (2, 2)$. $(3, 4) \\in R$, but 4 has no outgoing pair in $S$. Hence, $S \\circ R = \\{(1, 4), (2, 2)\\}$ . $R \\circ S$: Chaining $S$ then $R$: $(1, 1) \\in S \\land (1, 2) \\in R \\implies (1, 2)$. $(2, 4) \\in S$, but 4 has no outgoing pair in $R$. $(3, 2) \\in S \\land (2, 3) \\in R \\implies (3, 3)$. Hence, $R \\circ S = \\{(1, 2), (3, 3)\\}$ . $R^2 = R \\circ R$: $(1, 2) \\in R \\land (2, 3) \\in R \\implies (1, 3)$; $(2, 3) \\in R \\land (3, 4) \\in R \\implies (2, 4)$. Hence, $R^2 = \\{(1, 3), (2, 4)\\}$ . $R^3 = R^2",
       "\\circ R$: $(1, 2) \\in R \\land (2, 4) \\in R^2 \\implies (1, 4)$. Hence, $R^3 = \\{(1, 4)\\}$ . (ii) Matrix Representation and Verification of $M_{S \\circ R} = M_R \\odot M_S$: The boolean relation matrices for $R$ and $S$ on $A$ are: $$M_R = \\begin{bmatrix} 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}, \\quad M_S = \\begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}$$ Computing the boolean product $M_R \\odot M_S$ ($c_{ij} = \\bigvee_{k=1}^4 m_{R,ik} \\wedge m_{S,kj}$): $$M_R \\odot M_S = \\begin{bmatrix} 0 & 0 & 0 & 1 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}$$ The entries $c_{14} = 1$ and $c_{22} = 1$ represent pairs $\\{(1, 4), (2, 2)\\}$, which matches $S \\circ R$ identically. Hence, $M_{S \\circ R} = M_R \\odot M_S$ is verified ."
@@ -2346,8 +2346,8 @@
     "type": "question"
   },
   {
-    "id": "q138",
-    "q_num": 138,
+    "id": "ese_q48",
+    "q_num": 48,
     "unit": "V",
     "exam": "endterm",
     "marks": 5,
@@ -2356,7 +2356,7 @@
     "score": 9.4,
     "important": true,
     "title": "Let A = {1, 2, 3, 4}, R1 = {(1, 1), (2, 2), (3, 3), (4, 4), (1, 2), (2, 1)} and R2 = {(1, 1), (2, 2), (3, 3), (4, 4), (3, 4), (4, 3)}. (i) Find R1 \u222a R2 and R1 \u2229 R2. (ii) Are R1 \u222a R2 and R1 \u2229 R2 equivalence relations? (iii) Write the matrices of R1 \u222a R2 and R1 \u2229 R2 from the matrices of R1 and R2 and check against part (i).",
-    "url": "question-bank.html?open=q138",
+    "url": "question-bank.html?open=ese_q48",
     "chunks": [
       "Given set $A = \\{1, 2, 3, 4\\}$ and two equivalence relations $R_1, R_2$ on $A$: (i) Set Union and Intersection: $R_1 \\cup R_2 = \\{(1, 1), (2, 2), (3, 3), (4, 4), (1, 2), (2, 1), (3, 4), (4, 3)\\}$ $R_1 \\cap R_2 = \\{(1, 1), (2, 2), (3, 3), (4, 4)\\} = I_A$ (identity relation on $A$) (ii) Testing Equivalence Properties: $R_1 \\cap R_2 = I_A$: Reflexive (all $(x,x) \\in I_A$), symmetric (diagonal), and transitive ($x=y=z$). Hence, $R_1 \\cap R_2$ is an equivalence relation , partitioning $A$ into $\\{\\{1\\}, \\{2\\}, \\{3\\}, \\{4\\}\\}$. $R_1 \\cup R_2$: Reflexive (all $(x,x)$ present), symmetric (contains $(1,2),(2,1)$ and $(3,4),(4,3)$). Transitivity holds because blocks $\\{1, 2\\}$ and $\\{3, 4\\}$ are disjoint with no interconnecting pairs. Hence, $R_1 \\cup R_2$ is an equivalence relation , partitioning $A$ into $\\{\\{1, 2\\}, \\{3, 4\\}\\}$. (iii) Matrix Formulation: $$M_{R_1} = \\begin{bmatrix} 1 & 1 & 0 & 0 \\\\ 1 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \\end{bmatrix}, \\quad M_{R_2} = \\begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1",
       "& 1 \\\\ 0 & 0 & 1 & 1 \\end{bmatrix}$$ $M_{R_1 \\cup R_2} = M_{R_1} \\vee M_{R_2} = \\begin{bmatrix} 1 & 1 & 0 & 0 \\\\ 1 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 0 & 1 & 1 \\end{bmatrix}$, matching pairs of $R_1 \\cup R_2$ in (i). $M_{R_1 \\cap R_2} = M_{R_1} \\wedge M_{R_2} = \\begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \\end{bmatrix} = I_4$, matching $R_1 \\cap R_2$ in (i)."
@@ -2364,8 +2364,8 @@
     "type": "question"
   },
   {
-    "id": "q139",
-    "q_num": 139,
+    "id": "ese_q49",
+    "q_num": 49,
     "unit": "V",
     "exam": "endterm",
     "marks": 5,
@@ -2374,7 +2374,7 @@
     "score": 9.5,
     "important": true,
     "title": "Check whether the following relations on Z are equivalence relations: (i) xRy if |x \u2212 y| is even; (ii) xRy if x2 = y2; (iii) xRy if xy \u2265 0.",
-    "url": "question-bank.html?open=q139",
+    "url": "question-bank.html?open=ese_q49",
     "chunks": [
       "An equivalence relation on $\\mathbb{Z}$ must be reflexive, symmetric, and transitive. (i) $x R y \\iff |x - y|$ is even: Reflexive: For any $x \\in \\mathbb{Z}$, $|x - x| = |0| = 0 = 2 \\times 0$, which is even. Thus $x R x$. Symmetric: If $x R y$, then $|x - y| = 2k$ for some $k \\ge 0$. Since $|y - x| = |-(x - y)| = |x - y| = 2k$, $|y - x|$ is even, so $y R x$. Transitive: $|x - y|$ is even $\\iff x - y$ is even. If $x - y = 2k_1$ and $y - z = 2k_2$, then $(x - y) + (y - z) = x - z = 2(k_1 + k_2)$. Since $k_1 + k_2 \\in \\mathbb{Z}$, $x - z$ is even $\\implies |x - z|$ is even, so $x R z$. Conclusion: Yes, it is an equivalence relation (partitions $\\mathbb{Z}$ into Even and Odd integers). (ii) $x R y \\iff x^2 = y^2$: Reflexive: For all $x \\in \\mathbb{Z}$, $x^2 = x^2$ holds identically. Thus $x R x$. Symmetric: If $x^2 = y^2$, then $y^2 = x^2$ by symmetry of equality. Thus $y R x$. Transitive:",
       "If $x^2 = y^2$ and $y^2 = z^2$, then $x^2 = z^2$ by transitivity of equality. Thus $x R z$. Conclusion: Yes, it is an equivalence relation (equivalence classes are $\\{0\\}$ and pairs $\\{x, -x\\}$ for $x \\ne 0$). (iii) $x R y \\iff x y \\ge 0$: Reflexive: For all $x \\in \\mathbb{Z}$, $x \\cdot x = x^2 \\ge 0$ holds. Thus $x R x$. Symmetric: If $x y \\ge 0$, then $y x = x y \\ge 0$, so $y R x$. Transitive (FAILS): We provide a counterexample involving zero: Take $x = -3, y = 0, z = 4$. $x y = (-3)(0) = 0 \\ge 0 \\implies -3 R 0$ (holds). $y z = (0)(4) = 0 \\ge 0 \\implies 0 R 4$ (holds). However, $x z = (-3)(4) = -12 < 0$, so $-3 R 4$ is false . Conclusion: Because transitivity fails, it is NOT an equivalence relation ."
@@ -2382,8 +2382,8 @@
     "type": "question"
   },
   {
-    "id": "q140",
-    "q_num": 140,
+    "id": "ese_q50",
+    "q_num": 50,
     "unit": "V",
     "exam": "endterm",
     "marks": 5,
@@ -2392,7 +2392,7 @@
     "score": 9.3,
     "important": true,
     "title": "Check whether the following relations on Z are re\ufb02exive, symmetric, anti-symmetric and transitive: (i) xRy if |x \u2212 y| is even; (ii) xRy if x \u2265 y; (iii) xRy if xy < 0.",
-    "url": "question-bank.html?open=q140",
+    "url": "question-bank.html?open=ese_q50",
     "chunks": [
       "We rigorously analyze the four binary relation properties for each relation defined on $\\mathbb{Z}$: (i) Relation $x R y \\iff |x - y|$ is even: Reflexive: Holds. For all $x \\in \\mathbb{Z}$, $|x - x| = 0 = 2(0)$ is even. Thus $x R x$. Symmetric: Holds. Since $|y - x| = |-(x - y)| = |x - y|$, $|y - x|$ is even whenever $|x - y|$ is even. Thus $x R y \\implies y R x$. Anti-symmetric: Fails. Taking $x = 1$ and $y = 3$, $|1 - 3| = 2$ is even ($1 R 3$) and $|3 - 1| = 2$ is even ($3 R 1$), but $1 \\ne 3$. Transitive: Holds. If $x - y = 2k_1$ and $y - z = 2k_2$, then $x - z = 2(k_1 + k_2)$, so $|x - z|$ is even. Thus $x R y \\land y R z \\implies x R z$. (ii) Relation $x R y \\iff x \\ge y$: Reflexive: Holds. $x \\ge x$ is true for all integers $x \\in \\mathbb{Z}$. Symmetric: Fails. Taking $x = 5, y = 2$, $5 \\ge 2$ ($5 R 2$), but $2 \\ge 5$ is false ($2 \\cancel{R} 5$). Anti-symmetric:",
       "Holds. If $x \\ge y$ and $y \\ge x$, standard order arithmetic yields $x = y$. Transitive: Holds. If $x \\ge y$ and $y \\ge z$, transitivity of inequalities guarantees $x \\ge z$. (iii) Relation $x R y \\iff xy < 0$: Reflexive: Fails. For any $x \\in \\mathbb{Z}$, $x^2 \\ge 0$, which is never strictly negative ($< 0$). Thus $x \\cancel{R} x$. Symmetric: Holds. Multiplication is commutative: $x y < 0 \\implies y x < 0$. Thus $x R y \\implies y R x$. Anti-symmetric: Fails. For $x = 2, y = -1$: $2(-1) = -2 < 0$ ($2 R -1$) and $(-1)(2) = -2 < 0$ ($-1 R 2$), but $2 \\ne -1$. Transitive: Fails. For $x = 2, y = -1, z = 3$: $x y = -2 < 0$ ($2 R -1$) and $y z = -3 < 0$ ($-1 R 3$). However, $x z = (2)(3) = 6 > 0$, so $2 \\cancel{R} 3$."
@@ -2400,8 +2400,8 @@
     "type": "question"
   },
   {
-    "id": "q141",
-    "q_num": 141,
+    "id": "ese_q51",
+    "q_num": 51,
     "unit": "V",
     "exam": "endterm",
     "marks": 5,
@@ -2410,7 +2410,7 @@
     "score": 9.6,
     "important": true,
     "title": "Draw the Hasse diagram of (i) (S36, D) and (ii) (S42, D). For each, name the maximal, minimal, greatest and least elements.",
-    "url": "question-bank.html?open=q141",
+    "url": "question-bank.html?open=ese_q51",
     "chunks": [
       "A Hasse diagram graphically depicts the transitive reduction of a partial order, connecting elements where an immediate covering relation $x \\prec y$ exists without redundant transitive edges. (i) Poset $(S_{36}, D)$: The set of divisors of 36 ($36 = 2^2 \\cdot 3^2$) is $S_{36} = \\{1, 2, 3, 4, 6, 9, 12, 18, 36\\}$. Elements are structured into 5 horizontal levels based on the sum of prime exponents $a + b$ in $2^a 3^b$: Level 0 contains 1; Level 1 contains prime factors $\\{2, 3\\}$; Level 2 contains $\\{4, 6, 9\\}$; Level 3 contains $\\{12, 18\\}$; Level 4 contains 36. Covering edges connect elements differing by a factor of 2 or 3 ($1 \\prec \\{2, 3\\}$, $2 \\prec \\{4, 6\\}$, $3 \\prec \\{6, 9\\}$, $4 \\prec 12$, $6 \\prec \\{12, 18\\}$, $9 \\prec 18$, and $\\{12, 18\\} \\prec 36$). Maximal element: 36 (no element in $S_{36}$ strictly succeeds 36). Minimal element: 1 (no element in $S_{36}$ strictly precedes 1). Greatest element: 36 (satisfies $x \\mid 36$ for all $x \\in S_{36}$). Least element: 1 (satisfies $1 \\mid x$ for all $x \\in S_{36}$). (ii) Poset $(S_{42}, D)$: The set of divisors of 42 ($42 = 2 \\cdot 3 \\cdot 7$)",
       "is $S_{42} = \\{1, 2, 3, 6, 7, 14, 21, 42\\}$. Since 42 is square-free with three distinct prime factors, each divisor corresponds to a subset of prime factors $\\{2, 3, 7\\}$. Therefore, $(S_{42}, D)$ is order-isomorphic to the Boolean lattice $\\mathcal{P}(\\{2, 3, 7\\}) \\cong B_3$, forming a 3-dimensional cube graph. Covering edges represent multiplying by a single prime factor: $1 \\prec \\{2, 3, 7\\}$; $2 \\prec \\{6, 14\\}$; $3 \\prec \\{6, 21\\}$; $7 \\prec \\{14, 21\\}$; and $\\{6, 14, 21\\} \\prec 42$. Maximal element: 42 Minimal element: 1 Greatest element: 42 (satisfies $x \\mid 42$ for all $x \\in S_{42}$). Least element: 1 (satisfies $1 \\mid x$ for all $x \\in S_{42}$)."
@@ -2418,8 +2418,8 @@
     "type": "question"
   },
   {
-    "id": "q142",
-    "q_num": 142,
+    "id": "ese_q52",
+    "q_num": 52,
     "unit": "V",
     "exam": "endterm",
     "marks": 5,
@@ -2428,7 +2428,7 @@
     "score": 9.4,
     "important": true,
     "title": "Prove that the following posets are lattices: (i) (N, D); (ii) (S24, D).",
-    "url": "question-bank.html?open=q142",
+    "url": "question-bank.html?open=ese_q52",
     "chunks": [
       "Definition of a Lattice: A poset $(L, \\le)$ is a lattice if and only if every pair of elements $a, b \\in L$ has a unique greatest lower bound (meet: $a \\wedge b$) and least upper bound (join: $a \\vee b$). (i) Proof that $(\\mathbb{N}, D)$ is a lattice: Let $\\mathbb{N} = \\{1, 2, 3, \\dots\\}$ with divisibility relation $D$ ($a \\le b \\iff a \\mid b$). For any $a, b \\in \\mathbb{N}$: Meet ($a \\wedge b = \\gcd(a, b)$): By the Euclidean algorithm, the greatest common divisor $g = \\gcd(a, b)$ exists in $\\mathbb{N}$. It satisfies $g \\mid a$ and $g \\mid b$ (lower bound). Furthermore, if $c \\mid a$ and $c \\mid b$, then by B\u00e9zout's identity $c \\mid g$ (greatest lower bound). Hence $\\text{glb}(a, b) = \\gcd(a, b)$ is unique. Join ($a \\vee b = \\text{lcm}(a, b)$): The least common multiple $m = \\text{lcm}(a, b) = \\frac{ab}{\\gcd(a, b)}$ exists in $\\mathbb{N}$. It satisfies $a \\mid m$ and $b \\mid m$ (upper bound). If $a \\mid k$ and $b \\mid k$, then $m \\mid k$ (least upper bound). Hence $\\text{lub}(a, b) = \\text{lcm}(a, b)$ is unique. Since both glb and lub exist uniquely for every pair, $(\\mathbb{N}, D)$",
       "is a lattice . (ii) Proof that $(S_{24}, D)$ is a lattice: The set $S_{24} = \\{1, 2, 3, 4, 6, 8, 12, 24\\}$ consists of all positive divisors of 24. We demonstrate closure under the lattice operations: Closure under meet ($\\gcd$): If $a, b \\in S_{24}$, then $a \\mid 24$. Since $\\gcd(a, b) \\mid a$, by transitivity $\\gcd(a, b) \\mid 24$. Hence $\\gcd(a, b) \\in S_{24}$. Closure under join ($\\text{lcm}$): Since $a \\mid 24$ and $b \\mid 24$, 24 is a common multiple of $a$ and $b$. By definition of least common multiple, $\\text{lcm}(a, b) \\mid 24$. Hence $\\text{lcm}(a, b) \\in S_{24}$. Since $S_{24}$ is closed under $\\gcd$ and $\\text{lcm}$, every pair in $S_{24}$ has its glb and lub in $S_{24}$. Therefore, $(S_{24}, D)$ is a lattice ."
@@ -2436,8 +2436,8 @@
     "type": "question"
   },
   {
-    "id": "q143",
-    "q_num": 143,
+    "id": "ese_q53",
+    "q_num": 53,
     "unit": "V",
     "exam": "endterm",
     "marks": 5,
@@ -2446,7 +2446,7 @@
     "score": 9.5,
     "important": true,
     "title": "Check whether the following subsets are sublattices: (i) A = {1, 2, 3, 6} and B = {1, 2, 3, 8} in (S24, gcd, lcm); (ii) {1, 2, 5, 7, 10, 14, 70} in (N, gcd, lcm); (iii) T = {\u2205, {a}, {b}, {c}, {a, b}, {a, c}, {a, b, c}} in (P({a, b, c}), \u2229, \u222a).",
-    "url": "question-bank.html?open=q143",
+    "url": "question-bank.html?open=ese_q53",
     "chunks": [
       "Sublattice Criterion: A non-empty subset $S$ of a lattice $(L, \\wedge, \\vee)$ is a sublattice if and only if $S$ is closed under the operations of $L$: for all $x, y \\in S$, $x \\wedge y \\in S$ and $x \\vee y \\in S$. (i) In $(S_{24}, \\gcd, \\text{lcm})$: For subset $A = \\{1, 2, 3, 6\\}$: Testing all non-trivial pairs: $\\gcd(2, 3) = 1 \\in A$, $\\text{lcm}(2, 3) = 6 \\in A$. For any $x \\in A$, $\\gcd(x, 1) = 1, \\text{lcm}(x, 1) = x$, and $\\gcd(x, 6) = x, \\text{lcm}(x, 6) = 6$. Since $A$ is closed under both $\\gcd$ and $\\text{lcm}$, $A$ is a sublattice of $S_{24}$ . For subset $B = \\{1, 2, 3, 8\\}$: Take $2, 3 \\in B$. The join in the parent lattice is $\\text{lcm}(2, 3) = 6$. However, $6 \\notin B$. Because $B$ is not closed under join ($\\text{lcm}$), $B$ is NOT a sublattice of $S_{24}$ . (ii) Subset $S = \\{1, 2, 5, 7, 10, 14, 70\\}$ in $(\\mathbb{N}, \\gcd, \\text{lcm})$: Take elements $5, 7 \\in S$. The join operation is $\\text{lcm}(5, 7) = 35$. However, $35 \\notin S$ (the number 35 is missing from the subset). Because $S$ is not",
       "closed under the join operation $\\text{lcm}$, $S$ is NOT a sublattice of $\\mathbb{N}$ . (iii) Subset $T = \\{\\emptyset, \\{a\\}, \\{b\\}, \\{c\\}, \\{a, b\\}, \\{a, c\\}, \\{a, b, c\\}\\}$ in $(\\mathcal{P}(\\{a, b, c\\}), \\cap, \\cup)$: Notice that $T$ contains 7 of the 8 subsets of $\\{a, b, c\\}$, missing only $\\{b, c\\}$. Take elements $\\{b\\} \\in T$ and $\\{c\\} \\in T$. Their join in the parent lattice is the union: $\\{b\\} \\cup \\{c\\} = \\{b, c\\}$. Since $\\{b, c\\} \\notin T$, $T$ is not closed under union (join). Therefore, $T$ is NOT a sublattice of $\\mathcal{P}(\\{a, b, c\\})$ ."
@@ -2454,8 +2454,8 @@
     "type": "question"
   },
   {
-    "id": "q144",
-    "q_num": 144,
+    "id": "ese_q54",
+    "q_num": 54,
     "unit": "V",
     "exam": "endterm",
     "marks": 5,
@@ -2464,7 +2464,7 @@
     "score": 9.6,
     "important": true,
     "title": "Draw the Hasse diagram of (S72, D), where S72 = {1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72}. Write the cover(s) of each element and name the maximal, minimal, greatest and least elements.",
-    "url": "question-bank.html?open=q144",
+    "url": "question-bank.html?open=ese_q54",
     "chunks": [
       "The number 72 has prime factorization $72 = 2^3 \\cdot 3^2$. The set of positive divisors contains $(3+1)(2+1) = 12$ elements: $S_{72} = \\{1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72\\}$. 1. Covering Relations in $(S_{72}, D)$: In a divisibility poset, an element $y$ is said to cover $x$ (denoted $x \\prec y$) if and only if $x \\mid y$, $x \\ne y$, and no element $z \\in S_{72}$ satisfies $x < z < y$. This occurs precisely when the ratio $\\frac{y}{x}$ is a prime factor of 72, which means $\\frac{y}{x} \\in \\{2, 3\\}$. Testing all 12 elements gives the exact covers: $\\text{cov}(1) = \\{2, 3\\}$ $\\text{cov}(2) = \\{4, 6\\}$ $\\text{cov}(3) = \\{6, 9\\}$ $\\text{cov}(4) = \\{8, 12\\}$ $\\text{cov}(6) = \\{12, 18\\}$ $\\text{cov}(8) = \\{24\\}$ $\\text{cov}(9) = \\{18\\}$ $\\text{cov}(12) = \\{24, 36\\}$ $\\text{cov}(18) = \\{36\\}$ $\\text{cov}(24) = \\{72\\}$ $\\text{cov}(36) = \\{72\\}$ $\\text{cov}(72) = \\emptyset$ (no element covers 72, as it is the top element) 2. Hasse Diagram of $(S_{72}, D)$: The diagram forms a $4 \\times 3$ grid of 12 elements stratified across 6 levels according to prime factor count $a + b$ in $2^a 3^b$: 3. Identification of Special Elements: Maximal element: 72 (there is",
       "no element $x \\in S_{72}$ such that $72 < x$). Minimal element: 1 (there is no element $x \\in S_{72}$ such that $x < 1$). Greatest element: 72 (because $x \\mid 72$ holds for every element $x \\in S_{72}$). Least element: 1 (because $1 \\mid x$ holds for every element $x \\in S_{72}$)."
@@ -2472,8 +2472,8 @@
     "type": "question"
   },
   {
-    "id": "q145",
-    "q_num": 145,
+    "id": "ese_q55",
+    "q_num": 55,
     "unit": "V",
     "exam": "endterm",
     "marks": 5,
@@ -2482,7 +2482,7 @@
     "score": 9.3,
     "important": true,
     "title": "Answer the following about divisibility posets: (i) Prove that (S60, D) is a poset, where S60 = {1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60}. (ii) Find two non-comparable elements of S60 and hence decide whether (S60, D) is a chain. (iii) Show that (S64, D) is a chain. 2",
-    "url": "question-bank.html?open=q145",
+    "url": "question-bank.html?open=ese_q55",
     "chunks": [
       "(i) Prove that $(S_{60}, D)$ is a poset: The set $S_{60}$ is the set of all 12 positive divisors of 60. Divisibility $D$ ($x D y \\iff x \\mid y$) satisfies the three poset axioms: Reflexivity: For every $x \\in S_{60}$, $x = 1 \\cdot x$. Since $1 \\in \\mathbb{N}$, $x \\mid x$. Thus reflexivity holds. Anti-symmetry: Let $x, y \\in S_{60}$. If $x \\mid y$ and $y \\mid x$, then $y = k_1 x$ and $x = k_2 y$ for $k_1, k_2 \\in \\mathbb{Z}^+$. Substituting gives $k_1 k_2 = 1 \\implies k_1 = k_2 = 1$, so $x = y$. Thus anti-symmetry holds. Transitivity: If $x \\mid y$ and $y \\mid z$, then $y = k_1 x$ and $z = k_2 y \\implies z = (k_1 k_2) x$. Since $k_1 k_2 \\in \\mathbb{Z}^+$, $x \\mid z$. Thus transitivity holds. Because $D$ is reflexive, anti-symmetric, and transitive on $S_{60}$, $(S_{60}, D)$ is a poset . (ii) Non-comparable elements and chain decision for $S_{60}$: Two elements $a, b$ are non-comparable (written $a \\parallel b$) if neither $a \\mid b$ nor $b \\mid a$. Consider the elements $4$ and $6$ in $S_{60}$ (or $3$ and $5$, or $4$ and $10$): $4 \\nmid",
       "6$ because $6 / 4 = 1.5 \\notin \\mathbb{Z}$. $6 \\nmid 4$ because $4 / 6 < 1 \\notin \\mathbb{Z}$. Hence, $4$ and $6$ are non-comparable. A poset is a chain (total order) if and only if every pair of elements is comparable. Because $4$ and $6$ are non-comparable, $(S_{60}, D)$ is NOT a chain . (iii) Show that $(S_{64}, D)$ is a chain: The positive divisors of 64 are powers of the prime 2 ($64 = 2^6$): $$S_{64} = \\{1, 2, 4, 8, 16, 32, 64\\} = \\{2^0, 2^1, 2^2, 2^3, 2^4, 2^5, 2^6\\}$$ For any two arbitrary elements $2^i, 2^j \\in S_{64}$ with indices $0 \\le i, j \\le 6$: By the trichotomy property of integers, either $i \\le j$ or $j \\le i$. If $i \\le j$, then $2^j = 2^{j-i} \\cdot 2^i$ where $j-i \\ge 0$, which proves that $2^i \\mid 2^j$. If $j \\le i$, then similarly $2^j \\mid 2^i$. Consequently, the divisibility relation establishes a strictly total chain order: $$1 \\mid 2 \\mid 4 \\mid 8 \\mid 16 \\mid 32 \\mid 64$$ Because every pair of distinct elements in $S_{64}$ is comparable, $(S_{64}, D)$ is a chain ."
@@ -2490,8 +2490,8 @@
     "type": "question"
   },
   {
-    "id": "q146",
-    "q_num": 146,
+    "id": "ese_q56",
+    "q_num": 56,
     "unit": "V",
     "exam": "endterm",
     "marks": 5,
@@ -2500,7 +2500,7 @@
     "score": 9.7,
     "important": true,
     "title": "Answer the following: (i) Prove that (S30, D) is a lattice, where S30 = {1, 2, 3, 5, 6, 10, 15, 30}. (ii) The Hasse diagram of a poset is shown below. Is it a lattice? Justify. a b c d 3",
-    "url": "question-bank.html?open=q146",
+    "url": "question-bank.html?open=ese_q56",
     "chunks": [
       "(i) Prove that $(S_{30}, D)$ is a lattice: The set $S_{30} = \\{1, 2, 3, 5, 6, 10, 15, 30\\}$ is the set of all divisors of $30 = 2 \\times 3 \\times 5$. To prove it is a lattice, we show that every pair $x, y \\in S_{30}$ has a unique greatest lower bound (glb) and least upper bound (lub) inside $S_{30}$: Greatest Lower Bound (Meet): For any $x, y \\in S_{30}$, $\\text{glb}(x, y) = \\gcd(x, y)$. Since $x \\mid 30$, any divisor of $x$ also divides 30. Thus $\\gcd(x, y) \\mid 30$, which guarantees $\\gcd(x, y) \\in S_{30}$. By the properties of gcd, it is the unique greatest lower bound. Least Upper Bound (Join): For any $x, y \\in S_{30}$, $\\text{lub}(x, y) = \\text{lcm}(x, y)$. Because both $x \\mid 30$ and $y \\mid 30$, 30 is a common multiple of $x$ and $y$. By definition of least common multiple, $\\text{lcm}(x, y)$ divides every common multiple of $x$ and $y$, which implies $\\text{lcm}(x, y) \\mid 30$. Hence $\\text{lcm}(x, y) \\in S_{30}$. By properties of lcm, it is the unique least upper bound. Because $S_{30}$ is closed under $\\gcd$ and $\\text{lcm}$, every pair has a unique meet and join. Thus",
       "$(S_{30}, D)$ is a lattice (isomorphic to the Boolean lattice $B_3$). (ii) Analysis of the Given Hasse Diagram: The diagram shows four elements $\\{a, b, c, d\\}$ where $a \\prec c, a \\prec d, b \\prec c, b \\prec d$. Consider the pair of elements $\\{a, b\\}$ at the bottom level. The set of upper bounds of $\\{a, b\\}$ is $\\{c, d\\}$ (since $a \\le c, b \\le c$ and $a \\le d, b \\le d$). For a least upper bound (lub) to exist, there must be a unique least element in the set of upper bounds $\\{c, d\\}$. However, $c$ and $d$ are non-comparable ($c \\not\\le d$ and $d \\not\\le c$). Neither $c \\le d$ nor $d \\le c$ holds. Therefore, $\\text{lub}(a, b)$ does NOT exist . (Similarly, $\\text{glb}(c, d)$ does not exist). Because least upper bounds fail to exist for the pair $\\{a, b\\}$, the poset is NOT a lattice ."

@@ -1054,308 +1054,1703 @@
     "type": "question"
   },
   {
-    "id": "q63",
-    "q_num": 63,
+    "id": "ese_q1",
+    "q_num": 1,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO1",
+    "score": 9.2,
+    "important": true,
+    "title": "Define an algorithm and state characteristics of a good algorithm.",
+    "url": "question-bank.html?open=ese_q1",
+    "chunks": [
+      "An algorithm is a finite, well-defined sequence of unambiguous computational steps that takes some value or set of values as input and produces some value or set of values as output. Key characteristics of a good algorithm are: Input & Output: Takes zero or more well-defined inputs and produces at least one clearly defined output. Definiteness: Each step is clear, precise, and unambiguous. Finiteness: Must terminate after a finite number of steps for all valid inputs. Effectiveness: Operations must be basic enough to be carried out exactly and in a finite length of time."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q2",
+    "q_num": 2,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO1",
+    "score": 8.7,
+    "important": false,
+    "title": "Define algorithm correctness.",
+    "url": "question-bank.html?open=ese_q2",
+    "chunks": [
+      "An algorithm is said to be correct if, for every valid instance of the input, it halts (terminates) and produces the correct and expected output according to the problem specification. Algorithm correctness involves two distinct proofs: Partial Correctness: If the algorithm terminates, the output produced satisfies the post-conditions. Total Correctness: The algorithm is guaranteed to terminate and the final output satisfies the post-conditions."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q3",
+    "q_num": 3,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO3",
+    "score": 9.3,
+    "important": true,
+    "title": "Define the divide-and-conquer paradigm.",
+    "url": "question-bank.html?open=ese_q3",
+    "chunks": [
+      "The Divide-and-Conquer paradigm is an algorithmic design strategy based on multi-branched recursion that solves a problem through three essential steps: Divide: Partition the original problem into two or more smaller, disjoint subproblems of the same type. Conquer: Solve the subproblems recursively. If subproblems are small enough (base case), solve them directly. Combine: Merge the solutions of the subproblems into a comprehensive solution for the original problem. Examples: Merge Sort, Quick Sort, Binary Search, Strassen's Matrix Multiplication."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q4",
+    "q_num": 4,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO4",
+    "score": 9.4,
+    "important": true,
+    "title": "Define dynamic programming.",
+    "url": "question-bank.html?open=ese_q4",
+    "chunks": [
+      "Dynamic Programming (DP) is an algorithm design technique used for solving optimization problems by breaking them down into simpler, overlapping subproblems, solving each subproblem once, and storing its solution in a table (memoization or tabulation) to avoid redundant recalculations. Two fundamental prerequisites for applying Dynamic Programming are: Optimal Substructure: An optimal solution to the problem contains within it optimal solutions to its subproblems. Overlapping Subproblems: The recursive formulation revisits the same subproblems repeatedly rather than generating new ones."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q5",
+    "q_num": 5,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO5",
+    "score": 9.1,
+    "important": false,
+    "title": "Define backtracking.",
+    "url": "question-bank.html?open=ese_q5",
+    "chunks": [
+      "Backtracking is a systematic, algorithmic search technique that builds candidates for a solution incrementally and abandons (\"backtracks\" from) a candidate as soon as it determines that the candidate cannot possibly be extended to a valid or optimal solution. It traverses the problem's State-Space Tree typically using Depth-First Search (DFS). When a dead end or constraint violation is encountered at a non-promising node, the search prunes that branch and retreats to the parent node to explore alternative choices. Examples: N-Queens Problem, Subset Sum Problem, Graph Coloring, Hamiltonian Cycle."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q6",
+    "q_num": 6,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO1",
+    "score": 8.8,
+    "important": false,
+    "title": "What is pseudocode? State two advantages of using pseudocode.",
+    "url": "question-bank.html?open=ese_q6",
+    "chunks": [
+      "Pseudocode is an informal, high-level description of the operating principles of an algorithm. It uses the structural conventions of normal programming languages but is intended for human reading rather than machine execution. Two key advantages of pseudocode are: Language Independence: It allows algorithm designers to articulate logical solutions without getting bogged down in syntax constraints, memory management, or compiler specifics of languages like C++, Java, or Python. Ease of Analysis & Translation: It facilitates formal asymptotic analysis (counting steps, loops, and conditions) and can be easily translated into any target programming language."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q7",
+    "q_num": 7,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 9.2,
+    "important": true,
+    "title": "Arrange the following functions in increasing order of growth: (n log n, n log n^2, n^2).",
+    "url": "question-bank.html?open=ese_q7",
+    "chunks": [
+      "To arrange $n \\log n$, $n \\log(n^2)$, and $n^2$ in increasing order of asymptotic growth: Simplify $n \\log(n^2)$: Using logarithmic identity $\\log(a^b) = b \\log a$:$$n \\log(n^2) = n \\cdot (2 \\log n) = 2 n \\log n$$ Compare $n \\log n$ and $n \\log(n^2)$: Both have the exact same asymptotic growth rate: $\\Theta(n \\log n)$. Asymptotically, $n \\log n = \\Theta(n \\log(n^2))$. Compare with $n^2$: Dividing $n^2$ by $n \\log n$ as $n \\to \\infty$:$$\\lim_{n \\to \\infty} \\frac{n \\log n}{n^2} = \\lim_{n \\to \\infty} \\frac{\\log n}{n} = 0$$Hence, $n^2$ grows strictly faster than $n \\log n$ and $n \\log(n^2)$. Increasing Order of Growth: $$\\mathbf{n \\log n \\le n \\log(n^2) < n^2} \\quad \\text{or} \\quad \\mathbf{n \\log n \\sim 2n \\log n < n^2}$$"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q8",
+    "q_num": 8,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 9.0,
+    "important": false,
+    "title": "State the purpose of a loop invariant. Why it is used",
+    "url": "question-bank.html?open=ese_q8",
+    "chunks": [
+      "A Loop Invariant is a formal logical predicate/property about the algorithm's state that is true before the first iteration of a loop, remains true before and after every subsequent iteration, and remains true upon loop termination. Why it is used: Proving Correctness: It serves as a mathematical proof technique (analogous to mathematical induction) to formally verify that an iterative algorithm correctly achieves its intended outcome. Three Required Proof Steps: Initialization: True prior to the first loop iteration (base case). Maintenance: If true before an iteration, it remains true before the next iteration (inductive step). Termination: When the loop terminates, the invariant provides a useful property that helps prove the algorithm is correct."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q9",
+    "q_num": 9,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.2,
+    "important": true,
+    "title": "Apply the first complete pass of Bubble Sort to the array 22, 45, 34, 78, 68, 98, 58, 23, 23. Show the array after each comparison and swap.",
+    "url": "question-bank.html?open=ese_q9",
+    "chunks": [
+      "Initial Array: [22, 45, 34, 78, 68, 98, 58, 23, 23] (Length $n = 9$) Pass 1 Comparisons and Swaps: Compare A[0]=22 and A[1]=45 : $22 \\le 45$, No swap. Array: [22, 45, 34, 78, 68, 98, 58, 23, 23] Compare A[1]=45 and A[2]=34 : $45 > 34$, Swap . Array: [22, 34, 45, 78, 68, 98, 58, 23, 23] Compare A[2]=45 and A[3]=78 : $45 \\le 78$, No swap. Array: [22, 34, 45, 78, 68, 98, 58, 23, 23] Compare A[3]=78 and A[4]=68 : $78 > 68$, Swap . Array: [22, 34, 45, 68, 78, 98, 58, 23, 23] Compare A[4]=78 and A[5]=98 : $78 \\le 98$, No swap. Array: [22, 34, 45, 68, 78, 98, 58, 23, 23] Compare A[5]=98 and A[6]=58 : $98 > 58$, Swap . Array: [22, 34, 45, 68, 78, 58, 98, 23, 23] Compare A[6]=98 and A[7]=23 : $98 > 23$, Swap . Array: [22, 34, 45, 68, 78, 58, 23, 98, 23] Compare A[7]=98 and A[8]=23 : $98 > 23$, Swap . Array: [22, 34, 45, 68, 78, 58, 23, 23, 98] Final Array after Pass 1: [22, 34, 45, 68, 78, 58, 23, 23, 98] (The maximum element 98 has bubbled to the final position)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q10",
+    "q_num": 10,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO2",
+    "score": 9.1,
+    "important": false,
+    "title": "What is a recurrence relation? How it can be solved?",
+    "url": "question-bank.html?open=ese_q10",
+    "chunks": [
+      "A Recurrence Relation is an equation or inequality that defines a function $T(n)$ in terms of its values on smaller inputs (e.g., $T(n) = 2T(n/2) + O(n)$). In computer science, they describe the execution time of recursive algorithms. Major Methods to Solve Recurrence Relations: Substitution Method: Guess the form of the mathematical solution and then use mathematical induction to find the constants and verify the solution. Recursion Tree Method: Visualizes the recurrence as a tree of recursive calls where nodes represent the cost incurred at each level; summing the costs across all levels yields the total cost. Master Theorem Method: A cookbook formula that provides instantaneous asymptotic solutions for recurrences of the form $T(n) = aT(n/b) + f(n)$ by comparing $f(n)$ with $n^{\\log_b a}$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q11",
+    "q_num": 11,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.5,
+    "important": true,
+    "title": "Solve T(n) = 2T(n/2) + n using the Master Method.",
+    "url": "question-bank.html?open=ese_q11",
+    "chunks": [
+      "Given Recurrence: $T(n) = 2T(n/2) + n$. Step 1: Identify Parameters: Form: $T(n) = aT(n/b) + f(n)$ $a = 2$, $b = 2$, and $f(n) = n$. Step 2: Calculate Critical Exponent $n^{\\log_b a}$: $$n^{\\log_b a} = n^{\\log_2 2} = n^1 = n$$ Step 3: Compare $f(n)$ with $n^{\\log_b a}$: Here, $f(n) = n$ and $n^{\\log_b a} = n$. Since $f(n) = \\Theta(n^{\\log_b a}) = \\Theta(n)$, this corresponds strictly to Case 2 of the Master Theorem with $k = 0$. Step 4: Apply Case 2 Formula: $$T(n) = \\Theta(n^{\\log_b a} \\log^{k+1} n) = \\Theta(n^1 \\log^1 n) = \\mathbf{\\Theta(n \\log n)}$$ Conclusion: The solution to the recurrence is $\\mathbf{\\Theta(n \\log n)}$ (the characteristic complexity of Merge Sort)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q12",
+    "q_num": 12,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.2,
+    "important": true,
+    "title": "What is the principle of optimality? Explain in detail",
+    "url": "question-bank.html?open=ese_q12",
+    "chunks": [
+      "The Principle of Optimality (originally formulated by Richard Bellman) states that: \"An optimal policy has the property that whatever the initial state and initial decision are, the remaining decisions must constitute an optimal policy with regard to the state resulting from the first decision.\" In algorithmic terms, a problem satisfies the principle of optimality (also called Optimal Substructure ) if an optimal solution to the overall problem can be constructed efficiently from optimal solutions to its constituent subproblems. Significance: It is the foundational theoretical requirement for both Dynamic Programming and Greedy Algorithms . Valid Example: Shortest Path in Graphs. If the shortest path from $A$ to $C$ passes through $B$, then the sub-path from $A$ to $B$ must also be the shortest path between $A$ and $B$. Counter-Example: Longest Simple Path in general graphs does NOT satisfy the principle of optimality (cannot compose independently)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q13",
+    "q_num": 13,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 8.9,
+    "important": false,
+    "title": "Calculate C(8,5) using the binomial-coefficient formula.",
+    "url": "question-bank.html?open=ese_q13",
+    "chunks": [
+      "Binomial Coefficient Recurrence Formula (Pascal's Identity): $$C(n, k) = C(n-1, k-1) + C(n-1, k) \\quad \\text{with base cases } C(n, 0) = C(n, n) = 1$$ Factorial Formula: $$C(n, k) = \\frac{n!}{k!(n-k)!}$$ Step-by-Step Calculation for $C(8, 5)$: $$C(8, 5) = \\frac{8!}{5!(8-5)!} = \\frac{8!}{5! \\times 3!}$$ Expanding and cancelling $5!$: $$C(8, 5) = \\frac{8 \\times 7 \\times 6 \\times 5!}{5! \\times (3 \\times 2 \\times 1)} = \\frac{8 \\times 7 \\times 6}{6} = 8 \\times 7 = \\mathbf{56}$$ Note: In Dynamic Programming, $C(n, k)$ is computed iteratively using an $(n+1) \\times (k+1)$ table in $O(n k)$ time without encountering large factorial integer overflow."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q14",
+    "q_num": 14,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.3,
+    "important": true,
+    "title": "Explain N-Queens problem.",
+    "url": "question-bank.html?open=ese_q14",
+    "chunks": [
+      "The N-Queens Problem is a classic combinatorial constraint satisfaction problem that requires placing $N$ non-attacking chess queens on an $N \\times N$ chessboard such that no two queens threaten each other. According to chess rules, two queens attack each other if they share: The same row . The same column . The same diagonal (both major and minor diagonals). Mathematical Formulation: Represent solution as an array X[1..N] where X[i] denotes the column index of the queen placed in row i . Row and column attacks are avoided by ensuring X[i] != X[j] for all $i \\neq j$. Diagonal attacks are avoided by ensuring: $|X[i] - X[j]| \\neq |i - j|$. It has no solution for $N=2$ and $N=3$. The smallest non-trivial solution is for $N=4$ (has 2 distinct solutions)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q15",
+    "q_num": 15,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO5",
+    "score": 9.2,
+    "important": false,
+    "title": "Explain backtracking in the N-Queens problem.",
+    "url": "question-bank.html?open=ese_q15",
+    "chunks": [
+      "Applying Backtracking to the N-Queens Problem avoids exploring all $N^N$ brute-force configurations by pruning non-promising paths: Incremental Placement: Queens are placed one by one in successive rows (starting with row 1). Bounding / Safety Check ( Place(k, i) ): Before placing queen $k$ in column $i$, check if column $i$ or either diagonal is already occupied by any queen $j < k$:$$\\text{Conflict if } X[j] == i \\quad \\text{OR} \\quad |X[j] - i| == |j - k|$$ Pruning & Retreat: If no column in row $k$ is safe (dead end), the algorithm terminates exploration of the entire sub-tree beneath this node and backtracks to row $k-1$ to reposition the previous queen."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q16",
+    "q_num": 16,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 9.6,
+    "important": true,
+    "title": "Explain Big-O, Big-\u03a9 and Big-\u0398 notation with examples.",
+    "url": "question-bank.html?open=ese_q16",
+    "chunks": [
+      "The three fundamental asymptotic notations used to bound algorithm running time: Big-O Notation ($O$ - Asymptotic Upper Bound): $$f(n) = O(g(n)) \\iff \\exists c > 0, n_0 > 0 \\text{ such that } 0 \\le f(n) \\le c \\cdot g(n) \\quad \\forall n \\ge n_0$$Represents the worst-case ceiling. Example: $3n + 5 = O(n)$ (with $c = 4, n_0 = 5$). Big-Omega Notation ($\\Omega$ - Asymptotic Lower Bound): $$f(n) = \\Omega(g(n)) \\iff \\exists c > 0, n_0 > 0 \\text{ such that } 0 \\le c \\cdot g(n) \\le f(n) \\quad \\forall n \\ge n_0$$Represents the best-case floor. Example: $2n^2 - 3n = \\Omega(n^2)$ (with $c = 1, n_0 = 3$). Big-Theta Notation ($\\Theta$ - Asymptotically Tight Bound): $$f(n) = \\Theta(g(n)) \\iff \\exists c_1, c_2 > 0, n_0 > 0 \\text{ such that } 0 \\le c_1 \\cdot g(n) \\le f(n) \\le c_2 \\cdot g(n) \\quad \\forall n \\ge n_0$$Sandwiches $f(n)$ from both above and below. Holds if and only if $f(n) = O(g(n))$ and $f(n) = \\Omega(g(n))$. Example: $6n^2 + 4n = \\Theta(n^2)$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q17",
+    "q_num": 17,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 9.1,
+    "important": false,
+    "title": "Explain the aggregate method of amortized analysis.",
+    "url": "question-bank.html?open=ese_q17",
+    "chunks": [
+      "In Amortized Analysis , the average running time of an operation over a worst-case sequence of $n$ operations is computed, guaranteeing that the average cost per operation is small even if an occasional single operation is expensive. The Aggregate Method: In the aggregate method, we determine the total worst-case cost $T(n)$ for an entire sequence of $n$ operations. The amortized cost per operation is then directly computed as:$$\\text{Amortized Cost} = \\frac{T(n)}{n}$$ Every operation in the sequence is assigned the same identical amortized cost, regardless of whether it was cheap or expensive. Classic Example: Dynamic Array Resizing. Appending $n$ items triggers occasional array doubling ($1 + 2 + 4 + \\dots + n = 2n$ copy cost) plus $n$ simple inserts. Total cost $T(n) \\le 3n$. Amortized cost per append $= \\frac{3n}{n} = O(1)$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q18",
+    "q_num": 18,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.3,
+    "important": true,
+    "title": "Sort 42, 17, 8, 31, 23, 5 using Selection Sort. Show the array after each pass.",
+    "url": "question-bank.html?open=ese_q18",
+    "chunks": [
+      "Selection Sort Algorithm: Repeatedly finds the minimum element from the unsorted subarray and swaps it with the first element of the unsorted subarray. Initial Array: [42, 17, 8, 31, 23, 5] ($n = 6$) Pass 1: Find minimum in index 0..5. Minimum is 5 (at index 5). Swap with A[0]=42 . Array: [5, 17, 8, 31, 23, 42] Pass 2: Find minimum in index 1..5. Minimum is 8 (at index 2). Swap with A[1]=17 . Array: [5, 8, 17, 31, 23, 42] Pass 3: Find minimum in index 2..5. Minimum is 17 (at index 2). Already in place, no swap. Array: [5, 8, 17, 31, 23, 42] Pass 4: Find minimum in index 3..5. Minimum is 23 (at index 4). Swap with A[3]=31 . Array: [5, 8, 17, 23, 31, 42] Pass 5: Find minimum in index 4..5. Minimum is 31 (at index 4). Already in place, no swap. Array: [5, 8, 17, 23, 31, 42] Final Sorted Array: [5, 8, 17, 23, 31, 42] (Total 5 passes, Time Complexity $\\Theta(n^2)$)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q19",
+    "q_num": 19,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.3,
+    "important": true,
+    "title": "Sort 96, 67, 87, 34, 54, 23, 11, 62, 65, 34 using Insertion Sort. Show every pass.",
+    "url": "question-bank.html?open=ese_q19",
+    "chunks": [
+      "Insertion Sort: Builds the sorted array one element at a time by inserting the current key into its correct relative position within the sorted prefix. Initial Array: [96, 67, 87, 34, 54, 23, 11, 62, 65, 34] ($n = 10$) Pass 1 (Key = 67): $67 < 96$, shift 96 right $\\rightarrow$ [67, 96, 87, 34, 54, 23, 11, 62, 65, 34] Pass 2 (Key = 87): Insert between 67 and 96 $\\rightarrow$ [67, 87, 96, 34, 54, 23, 11, 62, 65, 34] Pass 3 (Key = 34): Shift 96, 87, 67 right; insert at index 0 $\\rightarrow$ [34, 67, 87, 96, 54, 23, 11, 62, 65, 34] Pass 4 (Key = 54): Shift 96, 87, 67 right; insert after 34 $\\rightarrow$ [34, 54, 67, 87, 96, 23, 11, 62, 65, 34] Pass 5 (Key = 23): Shift all elements right; insert at index 0 $\\rightarrow$ [23, 34, 54, 67, 87, 96, 11, 62, 65, 34] Pass 6 (Key = 11): Shift all elements right; insert at index 0 $\\rightarrow$ [11, 23, 34, 54, 67, 87, 96, 62, 65, 34] Pass 7 (Key = 62): Shift 96, 87, 67 right; insert after 54 $\\rightarrow$ [11, 23, 34, 54, 62, 67,",
+      "87, 96, 65, 34] Pass 8 (Key = 65): Shift 96, 87, 67 right; insert after 62 $\\rightarrow$ [11, 23, 34, 54, 62, 65, 67, 87, 96, 34] Pass 9 (Key = 34): Shift 96 down to 54 right; insert after first 34 $\\rightarrow$ [11, 23, 34, 34, 54, 62, 65, 67, 87, 96] Final Sorted Array: [11, 23, 34, 34, 54, 62, 65, 67, 87, 96] ."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q20",
+    "q_num": 20,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO3",
+    "score": 9.5,
+    "important": true,
+    "title": "Sort 44, 56, 77, 55, 33, 22, 99, 11 using Quick Sort, taking the last element as pivot.",
+    "url": "question-bank.html?open=ese_q20",
+    "chunks": [
+      "Initial Array: [44, 56, 77, 55, 33, 22, 99, 11] ($p = 0, r = 7$) Partition 1 (Pivot = 11, at index 7): Compare all elements with pivot 11: None of 44, 56, 77, 55, 33, 22, 99 are $\\le 11$. Index $i = -1$. Swap pivot with A[i+1] = A[0]=44 . Array becomes: [11, 56, 77, 55, 33, 22, 99, 44] . Pivot 11 is now in its permanent position at index 0. Partition 2 (Subarray [56, 77, 55, 33, 22, 99, 44], Pivot = 44): Elements $\\le 44$: 33, 22. Elements $> 44$: 56, 77, 55, 99. After partition, 33 and 22 move to the left: [33, 22, 44, 55, 56, 99, 77] . Pivot 44 is at index 3. Subsequent Partitions: Left subarray [33, 22] with pivot 22 $\\rightarrow$ partitions to [22, 33] . Right subarray [55, 56, 99, 77] partitions recursively until all base cases are reached. Final Sorted Array: [11, 22, 33, 44, 55, 56, 77, 99] ."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q21",
+    "q_num": 21,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO3",
+    "score": 9.5,
+    "important": true,
+    "title": "Sort 78, 56, 45, 87, 34, 23, 76, 34, 98, 76 using Merge Sort. Show the splitting and merging process.",
+    "url": "question-bank.html?open=ese_q21",
+    "chunks": [
+      "Initial Array: [78, 56, 45, 87, 34, 23, 76, 34, 98, 76] ($n = 10$) 1. Splitting Phase (Divide): Divide into two halves: [78, 56, 45, 87, 34] and [23, 76, 34, 98, 76] Divide left half: [78, 56, 45] and [87, 34] $\\rightarrow$ down to single elements: [78] , [56] , [45] , [87] , [34] Divide right half: [23, 76] and [34, 98, 76] $\\rightarrow$ down to single elements: [23] , [76] , [34] , [98] , [76] 2. Merging Phase (Conquer & Combine): Merge [78] and [56] $\\rightarrow$ [56, 78] Merge [56, 78] and [45] $\\rightarrow$ [45, 56, 78] Merge [87] and [34] $\\rightarrow$ [34, 87] Merge [45, 56, 78] and [34, 87] $\\rightarrow$ [34, 45, 56, 78, 87] (Left half sorted) Merge [23] and [76] $\\rightarrow$ [23, 76] Merge [98] and [76] $\\rightarrow$ [76, 98] Merge [34] and [76, 98] $\\rightarrow$ [34, 76, 98] Merge [23, 76] and [34, 76, 98] $\\rightarrow$ [23, 34, 76, 76, 98] (Right half sorted) Final 2-Way Merge: Merge [34, 45, 56, 78, 87] with [23, 34, 76, 76, 98] :$$\\mathbf{[23, 34, 34, 45, 56, 76, 76, 78, 87, 98]}$$"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q22",
+    "q_num": 22,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.6,
+    "important": true,
+    "title": "Solve the 0/1 Knapsack problem for weights (2, 3, 4, 5), profits (7, 11, 15, 20) and capacity 5. Identify the maximum profit.",
+    "url": "question-bank.html?open=ese_q22",
+    "chunks": [
+      "Given: Weights $w = [2, 3, 4, 5]$, Profits $p = [7, 11, 15, 20]$, Knapsack Capacity $W = 5$, Items $n = 4$. DP Table Construction ($V[i, w]$ = max profit using subset of items $1..i$ with capacity $w$): Recurrence: $V[i, w] = \\max(V[i-1, w],\\, p_i + V[i-1, w - w_i])$ if $w \\ge w_i$, else $V[i-1, w]$. Item $i$ ($w_i, p_i$) $w=0$ $w=1$ $w=2$ $w=3$ $w=4$ $w=5$ 0 (None) 0 0 0 0 0 0 1 (2, 7) 0 0 7 7 7 7 2 (3, 11) 0 0 7 11 11 18 ($7+11$) 3 (4, 15) 0 0 7 11 15 18 4 (5, 20) 0 0 7 11 15 20 ($\\max(18, 20)$) Backtracking to Identify Selected Items: At $V[4, 5] = 20 \\neq V[3, 5] = 18 \\implies$ Item 4 is selected (Weight = 5, Profit = 20). Remaining capacity: $5 - 5 = 0$. No more items can be selected. Maximum Profit: $\\mathbf{20}$ (by selecting Item 4 with weight 5 and profit 20)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q23",
+    "q_num": 23,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.5,
+    "important": true,
+    "title": "For matrix dimensions of three matrices are : [5\u00d73, 3\u00d76, 6\u00d75], calculate the scalar multiplication costs of (A1(A2.A3) and (A1.A2)A3). Identify the better parenthesization.",
+    "url": "question-bank.html?open=ese_q23",
+    "chunks": [
+      "Given Dimensions: $A_1 = 5 \\times 3$, $A_2 = 3 \\times 6$, $A_3 = 6 \\times 5$. ($p_0 = 5, p_1 = 3, p_2 = 6, p_3 = 5$) Multiplying a matrix of size $p \\times q$ by $q \\times r$ requires $p \\times q \\times r$ scalar multiplications. Case 1: Parenthesization $((A_1 \\cdot A_2) \\cdot A_3)$: Cost of $(A_1 \\cdot A_2)$: Size is $5 \\times 6$.$$\\text{Cost}_1 = 5 \\times 3 \\times 6 = 90 \\text{ multiplications}$$ Cost of multiplying result $(A_1 A_2)$ by $A_3$ ($5 \\times 6$ with $6 \\times 5$):$$\\text{Cost}_2 = 5 \\times 6 \\times 5 = 150 \\text{ multiplications}$$ Total Cost: $90 + 150 = \\mathbf{240} \\text{ multiplications}$. Case 2: Parenthesization $(A_1 \\cdot (A_2 \\cdot A_3))$: Cost of $(A_2 \\cdot A_3)$: Size is $3 \\times 5$.$$\\text{Cost}_1 = 3 \\times 6 \\times 5 = 90 \\text{ multiplications}$$ Cost of multiplying $A_1$ by $(A_2 A_3)$ ($5 \\times 3$ with $3 \\times 5$):$$\\text{Cost}_2 = 5 \\times 3 \\times 5 = 75 \\text{ multiplications}$$ Total Cost: $90 + 75 = \\mathbf{165} \\text{ multiplications}$. Conclusion: $(A_1 \\cdot (A_2 \\cdot A_3))$ is the better parenthesization , saving $240 - 165 = 75$ scalar multiplications (a 31% reduction)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q24",
+    "q_num": 24,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.4,
+    "important": true,
+    "title": "Explain the backtracking approach to the 4-Queens problem and show one valid arrangement.",
+    "url": "question-bank.html?open=ese_q24",
+    "chunks": [
+      "The 4-Queens Problem on a $4 \\times 4$ Chessboard: We place 4 queens such that no two share the same row, column, or diagonal. Backtracking Search Trace: Place $Q_1$ in row 1, col 2 $\\rightarrow X = [2, -, -, -]$ Row 2: Col 1 attacked diagonally by $(1, 2)$. Col 2 attacked vertically. Col 3 attacked diagonally. Col 4 is safe $\\rightarrow$ Place $Q_2$ in col 4: $X = [2, 4, -, -]$. Row 3: Col 1 is safe! Place $Q_3$ in col 1: $X = [2, 4, 1, -]$. Row 4: Col 1 (attacked by $Q_3$), Col 2 (attacked diagonally by $Q_3$), Col 3 (safe from all queens!) $\\rightarrow$ Place $Q_4$ in col 3: $X = [2, 4, 1, 3]$. One Valid Arrangement ($X = [2, 4, 1, 3]$): Row / Col Col 1 Col 2 Col 3 Col 4 Row 1 . Q . . Row 2 . . . Q Row 3 Q . . . Row 4 . . Q . (The symmetrical second solution is $X = [3, 1, 4, 2]$)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q25",
+    "q_num": 25,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 9.2,
+    "important": false,
+    "title": "Explain the Max-Min algorithm using the divide-and-conquer approach.",
+    "url": "question-bank.html?open=ese_q25",
+    "chunks": [
+      "The Max-Min Divide-and-Conquer Algorithm simultaneously finds the maximum and minimum elements in an array of size $n$ using significantly fewer comparisons than brute-force. Algorithmic Strategy: Base Case 1 ($n = 1$): If array has 1 element: $\\min = \\max = A[1]$ (0 comparisons). Base Case 2 ($n = 2$): If array has 2 elements: Compare $A[1]$ and $A[2]$, assign $\\max$ and $\\min$ (1 comparison). Recursive Step ($n > 2$): Divide array into two halves at midpoint $mid = (low + high) / 2$. Recursively find $(\\min_1, \\max_1)$ for left half and $(\\min_2, \\max_2)$ for right half. Combine:$$\\min = \\min(\\min_1, \\min_2), \\quad \\max = \\max(\\max_1, \\max_2)$$ Comparison Count Recurrence: $$T(n) = 2T(n/2) + 2 \\implies T(n) = \\frac{3n}{2} - 2 \\text{ comparisons}$$ Compared to straightforward linear search which takes $2n - 2$ comparisons, the Divide-and-Conquer approach saves 25% of comparison operations."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q26",
+    "q_num": 26,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 8.8,
+    "important": false,
+    "title": "Differentiate between best-case and worst-case time complexity.",
+    "url": "question-bank.html?open=ese_q26",
+    "chunks": [
+      "Comparison between Best-Case and Worst-Case Time Complexity: Feature Best-Case Time Complexity Worst-Case Time Complexity Definition The minimum amount of time/steps required by an algorithm over all inputs of size $n$. The maximum amount of time/steps taken by an algorithm on any input of size $n$. Asymptotic Bound Expressed using Big-Omega ($\\Omega$) notation. Expressed using Big-O ($O$) notation. Example (Linear Search) $O(1)$ when the search key is the very first element in the array. $O(n)$ when the search key is at the last position or not present at all."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q27",
+    "q_num": 27,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO2",
+    "score": 8.7,
+    "important": false,
+    "title": "What is the basic principle of Selection Sort?",
+    "url": "question-bank.html?open=ese_q27",
+    "chunks": [
+      "The basic working principle of Selection Sort is: in each pass through the array, it scans the remaining unsorted subarray to select the minimum element , and swaps it with the element at the beginning of the unsorted subarray. This incrementally expands the sorted prefix by one element per pass until the entire array is sorted in $O(n^2)$ time using $O(1)$ auxiliary memory."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q28",
+    "q_num": 28,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO3",
+    "score": 9.1,
+    "important": true,
+    "title": "What is the role of a pivot in Quick Sort?",
+    "url": "question-bank.html?open=ese_q28",
+    "chunks": [
+      "The pivot in Quick Sort acts as a reference partitioning element around which the array is rearranged such that: All elements smaller than or equal to the pivot are placed to its left. All elements strictly greater than the pivot are placed to its right. The pivot itself settles into its final, permanent sorted position in the array without requiring further movement."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q29",
+    "q_num": 29,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO4",
+    "score": 9.2,
+    "important": true,
+    "title": "Define overlapping subproblems.",
+    "url": "question-bank.html?open=ese_q29",
+    "chunks": [
+      "A problem exhibits Overlapping Subproblems if a recursive algorithm solves the exact same smaller subproblems repeatedly, rather than generating brand-new subproblems at each step. Example: In computing Fibonacci numbers recursively ($F(n) = F(n-1) + F(n-2)$), $F(n-2)$ and $F(n-3)$ are recalculated exponentially many times. Dynamic programming saves solutions to overlapping subproblems in memory tables, reducing running time from exponential $O(2^n)$ to linear $O(n)$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q30",
+    "q_num": 30,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO5",
+    "score": 8.6,
+    "important": false,
+    "title": "What is the minimax principle?",
+    "url": "question-bank.html?open=ese_q30",
+    "chunks": [
+      "The Minimax Principle is a decision rule used in two-player zero-sum adversarial games (e.g., Chess, Tic-Tac-Toe): The maximizing player seeks a strategy that maximizes their minimum possible payoff (maximizing the worst-case return). The minimizing player seeks a move that minimizes the opponent's maximum gain. It assumes both players play optimally, evaluating board state values from the leaf nodes back to the root of the game tree."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q31",
+    "q_num": 31,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 8.9,
+    "important": false,
+    "title": "Find the time complexity of the following code: for i = 1 to 10 print(i).",
+    "url": "question-bank.html?open=ese_q31",
+    "chunks": [
+      "Given code snippet: for i = 1 to 10 print(i) Analysis: The loop runs for a fixed, constant number of iterations (exactly 10 times). Each iteration performs a constant-time print statement: $O(1)$ work. Total operations $= 10 \\times c = \\text{constant}$. The number of operations is completely independent of any variable input size $n$. Time Complexity: $\\mathbf{O(1)}$ (Constant Time)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q32",
+    "q_num": 32,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 9.0,
+    "important": false,
+    "title": "In what cases amortized analysis should be used ?",
+    "url": "question-bank.html?open=ese_q32",
+    "chunks": [
+      "Amortized Analysis should be used when: An algorithm occasionally executes an expensive, high-cost operation, but that expensive operation is guaranteed to occur very infrequently . The expensive operation is preceded by or pays for a large sequence of cheap, constant-time operations. Traditional worst-case analysis of a single step produces an overly pessimistic bound that misrepresents the true efficiency of a sequence of operations. Classic Examples: Dynamic array capacity doubling, Fibonacci heap operations, splay trees, and disjoint-set (Union-Find) structures."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q33",
+    "q_num": 33,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.3,
+    "important": true,
+    "title": "Apply Counting Sort to 10, 9, 9, 7, 6, 5, 8, 7, 9, 2, 1 and write the sorted sequence.",
+    "url": "question-bank.html?open=ese_q33",
+    "chunks": [
+      "Input Array: [10, 9, 9, 7, 6, 5, 8, 7, 9, 2, 1] (Size $n = 11$, range $[1, 10]$) Step 1: Compute Frequency Count Array: Value 1 2 3 4 5 6 7 8 9 10 Count 1 1 0 0 1 1 2 1 3 1 Step 2: Cumulative Prefix Sum Array: Value 1 2 3 4 5 6 7 8 9 10 Cum. Count 1 2 2 2 3 4 6 7 10 11 Step 3: Build Output Array (Iterating input from right to preserve stability): Place elements into their respective cumulative positions. Sorted Sequence: $$\\mathbf{[1, 2, 5, 6, 7, 7, 8, 9, 9, 9, 10]}$$"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q34",
+    "q_num": 34,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.4,
+    "important": true,
+    "title": "Show the process of Radix Sort for 290, 398, 456, 987, 432, 345, 678, 321.",
+    "url": "question-bank.html?open=ese_q34",
+    "chunks": [
+      "Initial Array: [290, 398, 456, 987, 432, 345, 678, 321] (Max value has 3 digits: $d = 3$) Pass 1: Sort by Units Digit (Least Significant Digit): Keys by unit digit: 29 0 , 32 1 , 43 2 , 34 5 , 45 6 , 98 7 , 39 8 , 67 8 Result: [290, 321, 432, 345, 456, 987, 398, 678] Pass 2: Sort by Tens Digit (Stable Sort): Keys by tens digit: 3 2 1, 4 3 2, 3 4 5, 4 5 6, 6 7 8, 9 8 7, 2 9 0, 3 9 8 Result: [321, 432, 345, 456, 678, 987, 290, 398] Pass 3: Sort by Hundreds Digit (Most Significant Digit): Keys by hundreds digit: 2 90, 3 21, 3 45, 3 98, 4 32, 4 56, 6 78, 9 87 Result: [290, 321, 345, 398, 432, 456, 678, 987] Final Sorted Array: $\\mathbf{[290, 321, 345, 398, 432, 456, 678, 987]}$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q35",
+    "q_num": 35,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO3",
+    "score": 9.2,
+    "important": true,
+    "title": "Trace Binary Search to find 23 in the sorted array 4, 9, 12, 15, 23, 31, 42, 43, 56, 57.",
+    "url": "question-bank.html?open=ese_q35",
+    "chunks": [
+      "Given Sorted Array: [4, 9, 12, 15, 23, 31, 42, 43, 56, 57] ($n = 10$, indices $0..9$). Target $X = 23$. Iteration 1: $low = 0$, $high = 9$ $mid = \\lfloor(0 + 9) / 2\\rfloor = 4$ Compare $A[mid] = A[4] = 23$ with Target $X = 23$. $A[4] == 23 \\implies$ Match found at index 4! Total Comparisons: 1 comparison. Binary search halts immediately upon finding the target at index 4."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q36",
+    "q_num": 36,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 9.2,
+    "important": false,
+    "title": "Explain the role of the partitioning step in Quick Sort. How does it divide an array?",
+    "url": "question-bank.html?open=ese_q36",
+    "chunks": [
+      "The partitioning step is the core engine of Quick Sort. Its role is to arrange elements in linear $O(n)$ time around a chosen pivot element: Pivot Selection: A pivot is chosen (e.g., first, last, median, or random element). Two-Pointer Rearrangement: Scans array using two pointers (Lomuto or Hoare scheme): Elements smaller than the pivot are moved into the left partition. Elements larger than the pivot are moved into the right partition. Pivot Placement: The pivot is swapped into the boundary between the two partitions. Division: The array is divided into two independent subproblems: $A[p..q-1]$ and $A[q+1..r]$. Crucially, unlike Merge Sort, no combine step is required because the pivot is already in its final position."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q37",
+    "q_num": 37,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.4,
+    "important": true,
+    "title": "Using denominations 3, 2, 1, find the coins selected by dynamic programming for amount 5.",
+    "url": "question-bank.html?open=ese_q37",
+    "chunks": [
+      "Coin Change Problem (Min Coins): Denominations $C = [1, 2, 3]$, Target Amount $A = 5$. Recurrence: $dp[v] = 1 + \\min_{c \\in C, c \\le v}(dp[v - c])$ with $dp[0] = 0$. DP Array Construction: $dp[0] = 0$ $dp[1] = 1 + dp[0] = 1$ (coin 1) $dp[2] = 1 + \\min(dp[1], dp[0]) = 1 + 0 = 1$ (coin 2) $dp[3] = 1 + \\min(dp[2], dp[1], dp[0]) = 1 + 0 = 1$ (coin 3) $dp[4] = 1 + \\min(dp[3], dp[2], dp[1]) = 1 + \\min(1, 1, 1) = 2$ (coins 2+2 or 3+1) $dp[5] = 1 + \\min(dp[4], dp[3], dp[2]) = 1 + \\min(2, 1, 1) = 1 + 1 = \\mathbf{2}$ Coins Selected for Amount 5: Trace back from $dp[5]$: using coin 3 leads to $dp[2]$ (which uses coin 2). Selected Coins: {3, 2} (Total 2 coins: $3 + 2 = 5$)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q38",
+    "q_num": 38,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.5,
+    "important": true,
+    "title": "For activities with start times (2,4,1,5,7,8) and finish times (3,5,6,7,9,11) select the maximum set of compatible activities.",
+    "url": "question-bank.html?open=ese_q38",
+    "chunks": [
+      "Activity Selection Problem (Greedy Strategy): Always pick the next compatible activity that has the earliest finish time . Given Activities (Already sorted by finish time $f_i$): Activity $A_1$ $A_2$ $A_3$ $A_4$ $A_5$ $A_6$ Start ($s_i$) 2 4 1 5 7 8 Finish ($f_i$) 3 5 6 7 9 11 Greedy Selection Trace: Select $A_1$ (earliest finish time $f_1 = 3$). Last finish time $= 3$. Check $A_2$: $s_2 = 4 \\ge 3$ $\\implies$ Select $A_2$ . Last finish time $= 5$. Check $A_3$: $s_3 = 1 < 5$ $\\implies$ Conflict! Skip. Check $A_4$: $s_4 = 5 \\ge 5$ $\\implies$ Select $A_4$ . Last finish time $= 7$. Check $A_5$: $s_5 = 7 \\ge 7$ $\\implies$ Select $A_5$ . Last finish time $= 9$. Check $A_6$: $s_6 = 8 < 9$ $\\implies$ Conflict! Skip. Maximum Compatible Activity Set: $\\mathbf{\\{A_1, A_2, A_4, A_5\\}}$ (Total 4 activities)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q39",
+    "q_num": 39,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.2,
+    "important": true,
+    "title": "Trace naive string matching to find the pattern ABC in the text ABABABAABABBABBC.",
+    "url": "question-bank.html?open=ese_q39",
+    "chunks": [
+      "Text $T$: ABABABAABABBABBC ($n = 16$) Pattern $P$: ABC ($m = 3$) The algorithm slides $P$ across $T$ at shifts $s = 0, 1, \\dots, n-m$ ($0..13$): $s = 0$: $T[0..2] = \\text{ABA} \\neq \\text{ABC}$ (mismatch at char 3) $s = 1$: $T[1..2] = \\text{BA} \\neq \\text{AB}$ (mismatch at char 1) $s = 2$: $T[2..4] = \\text{ABA} \\neq \\text{ABC}$ $s = 3$: mismatch $s = 4$: mismatch $s = 5$: mismatch $s = 6$: mismatch $s = 7$: mismatch $s = 8$: mismatch $s = 9$: mismatch $s = 10$: mismatch $s = 11$: mismatch $s = 12$: mismatch $s = 13$: $T[13..15] = \\text{BBC} \\neq \\text{ABC}$ Conclusion: Pattern ABC does not occur anywhere in the text (0 valid shifts found)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q40",
+    "q_num": 40,
     "unit": "IV",
     "exam": "endterm",
     "marks": 2,
     "bloom": "L2",
     "co": "CO4",
-    "score": 9.4,
-    "important": true,
-    "title": "Define dynamic programming.",
-    "url": "question-bank.html?open=q63",
+    "score": 9.0,
+    "important": false,
+    "title": "State the difference between single-source and all-pairs shortest-path problems.",
+    "url": "question-bank.html?open=ese_q40",
     "chunks": [
-      "Dynamic Programming (DP) is an algorithm design paradigm for solving optimization problems by decomposing them into simpler, overlapping subproblems. It solves each subproblem exactly once and caches the result in a table (memoization or tabulation) to prevent redundant computations. Key Properties Required: Optimal Substructure: An optimal solution to the overall problem incorporates optimal solutions to its subproblems. Overlapping Subproblems: Recursive subproblems recur repeatedly rather than generating new instances."
+      "Comparison between Shortest Path Problem Formulations: Feature Single-Source Shortest Path (SSSP) All-Pairs Shortest Path (APSP) Objective Finds shortest paths from one specific source vertex to all other vertices in the graph. Finds shortest paths between every possible pair of vertices in the graph. Output 1D distance array of size $|V|$. 2D distance matrix of size $|V| \\times |V|$. Standard Algorithms Dijkstra's Algorithm (non-negative edges), Bellman-Ford (handles negative weights). Floyd-Warshall Algorithm, Johnson's Algorithm. Time Complexity $O((V + E) \\log V)$ via Dijkstra with min-heap. $O(V^3)$ via Floyd-Warshall."
     ],
     "type": "question"
   },
   {
-    "id": "q64",
+    "id": "ese_q41",
+    "q_num": 41,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO1",
+    "score": 9.4,
+    "important": true,
+    "title": "Find Big O notation for the following functions: a. f(n) = 2n + 6n^2 + 3n, b. f(n) = 4n^3 + 2n + 3.",
+    "url": "question-bank.html?open=ese_q41",
+    "chunks": [
+      "a. Analysis for $f(n) = 2n + 6n^2 + 3n$: Combine like linear terms: $f(n) = 6n^2 + 5n$. Identify the dominant term: As $n \\to \\infty$, the quadratic term $6n^2$ dominates the linear term $5n$. Drop lower-order terms and leading coefficients:$$f(n) \\le 6n^2 + 5n^2 = 11n^2 \\quad \\forall n \\ge 1$$ By formal definition with $c = 11$ and $n_0 = 1$:$$\\mathbf{f(n) = O(n^2)}$$ b. Analysis for $f(n) = 4n^3 + 2n + 3$: Identify the highest-degree term: The cubic term $4n^3$ grows asymptotically faster than $2n$ and constant $3$. For all $n \\ge 1$:$$4n^3 + 2n + 3 \\le 4n^3 + 2n^3 + 3n^3 = 9n^3$$ By formal definition with $c = 9$ and $n_0 = 1$:$$\\mathbf{f(n) = O(n^3)}$$"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q42",
+    "q_num": 42,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 9.2,
+    "important": true,
+    "title": "Compare the growth rates of n log n and n^2 for large values of n.",
+    "url": "question-bank.html?open=ese_q42",
+    "chunks": [
+      "To compare the asymptotic growth rates of $f(n) = n \\log n$ and $g(n) = n^2$, evaluate the limit of their ratio as $n \\to \\infty$: $$\\lim_{n \\to \\infty} \\frac{f(n)}{g(n)} = \\lim_{n \\to \\infty} \\frac{n \\log n}{n^2} = \\lim_{n \\to \\infty} \\frac{\\log n}{n}$$ Applying L'H\u00f4pital's Rule (differentiating numerator and denominator with respect to $n$): $$\\lim_{n \\to \\infty} \\frac{\\frac{1}{n}}{1} = \\lim_{n \\to \\infty} \\frac{1}{n} = 0$$ Mathematical Meaning: Since the limit equals $0$, $n \\log n$ is strictly dominated by $n^2$, denoted as $n \\log n = o(n^2)$ (Little-o). Empirical Comparison for Large $n$: For $n = 10^6$: $n \\log_2 n \\approx 20 \\times 10^6$ operations vs $n^2 = 10^{12}$ operations (a 50,000x difference!). Hence, algorithms with $O(n \\log n)$ complexity (e.g., Merge Sort) scale efficiently to millions of items, whereas $O(n^2)$ algorithms (e.g., Bubble Sort) become computationally infeasible."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q43",
+    "q_num": 43,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.3,
+    "important": true,
+    "title": "Apply Bucket Sort to 0.28, 0.71, 0.23, 0.22, 0.38, 0.55. Show bucket placement and final order.",
+    "url": "question-bank.html?open=ese_q43",
+    "chunks": [
+      "Bucket Sort Algorithm: Distributes numbers uniformly across $n = 10$ buckets using index $\\lfloor 10 \\times x \\rfloor$, sorts each bucket individually (via Insertion Sort), and concatenates. Input: [0.28, 0.71, 0.23, 0.22, 0.38, 0.55] Bucket Assignment (Index $\\lfloor 10 \\times x \\rfloor$): $0.28 \\implies \\lfloor 2.8 \\rfloor = 2 \\rightarrow$ Bucket 2 $0.71 \\implies \\lfloor 7.1 \\rfloor = 7 \\rightarrow$ Bucket 7 $0.23 \\implies \\lfloor 2.3 \\rfloor = 2 \\rightarrow$ Bucket 2 $0.22 \\implies \\lfloor 2.2 \\rfloor = 2 \\rightarrow$ Bucket 2 $0.38 \\implies \\lfloor 3.8 \\rfloor = 3 \\rightarrow$ Bucket 3 $0.55 \\implies \\lfloor 5.5 \\rfloor = 5 \\rightarrow$ Bucket 5 Bucket Contents & Sorting: Bucket Index Unsorted Elements Sorted Bucket (Insertion Sort) Bucket 2 [0.28, 0.23, 0.22] [0.22, 0.23, 0.28] Bucket 3 [0.38] [0.38] Bucket 5 [0.55] [0.55] Bucket 7 [0.71] [0.71] Concatenated Final Order: $$\\mathbf{[0.22, 0.23, 0.28, 0.38, 0.55, 0.71]}$$"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q44",
+    "q_num": 44,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.2,
+    "important": false,
+    "title": "Apply Radix Sort to 329, 457, 657, 839, 436, 720, 355. Show the ordering after the units digit pass.",
+    "url": "question-bank.html?open=ese_q44",
+    "chunks": [
+      "Input: [329, 457, 657, 839, 436, 720, 355] Units Digit Extraction: 32 9 (9), 45 7 (7), 65 7 (7), 83 9 (9), 43 6 (6), 72 0 (0), 35 5 (5) Bucket Assignment (0 to 9) using Stable Queue: Bucket 0: [720] Bucket 5: [355] Bucket 6: [436] Bucket 7: [457, 657] (457 precedes 657 due to stability) Bucket 9: [329, 839] (329 precedes 839 due to stability) Ordering after the Units Digit Pass: $$\\mathbf{[720, 355, 436, 457, 657, 329, 839]}$$"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q45",
+    "q_num": 45,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 9.5,
+    "important": true,
+    "title": "Explain Strassen's Matrix Multiplication, including its seven recursive products.",
+    "url": "question-bank.html?open=ese_q45",
+    "chunks": [
+      "Standard matrix multiplication of two $n \\times n$ matrices requires $8$ recursive multiplications of size $n/2$, yielding $T(n) = 8T(n/2) + O(n^2) = O(n^{\\log_2 8}) = O(n^3)$. Strassen's Insight: Uses clever algebraic linear combinations to reduce multiplications from 8 down to 7 . For $2 \\times 2$ block partitions $A = \\begin{pmatrix} A_{11} & A_{12} \\\\ A_{21} & A_{22} \\end{pmatrix}$ and $B = \\begin{pmatrix} B_{11} & B_{12} \\\\ B_{21} & B_{22} \\end{pmatrix}$, Strassen defines seven products: $P_1 = A_{11} (B_{12} - B_{22})$ $P_2 = (A_{11} + A_{12}) B_{22}$ $P_3 = (A_{21} + A_{22}) B_{11}$ $P_4 = A_{22} (B_{21} - B_{11})$ $P_5 = (A_{11} + A_{22}) (B_{11} + B_{22})$ $P_6 = (A_{12} - A_{22}) (B_{21} + B_{22})$ $P_7 = (A_{11} - A_{21}) (B_{11} + B_{12})$ Reconstructing the Result Matrix $C$: $C_{11} = P_5 + P_4 - P_2 + P_6$ $C_{12} = P_1 + P_2$ $C_{21} = P_3 + P_4$ $C_{22} = P_1 + P_5 - P_3 - P_7$ Complexity Recurrence: $$T(n) = 7T(n/2) + O(n^2) \\implies T(n) = O(n^{\\log_2 7}) \\approx \\mathbf{O(n^{2.807})}$$"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q46",
+    "q_num": 46,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO3",
+    "score": 9.4,
+    "important": true,
+    "title": "Sort 100, 110, 210, 342, 90, 80, 60 using Merge Sort. Show the splitting and merging process.",
+    "url": "question-bank.html?open=ese_q46",
+    "chunks": [
+      "Initial Array: [100, 110, 210, 342, 90, 80, 60] ($n = 7$) 1. Divide Phase (Splitting): Divide at index 3: Left [100, 110, 210, 342] and Right [90, 80, 60] Left splits to [100, 110] and [210, 342] Right splits to [90, 80] and [60] $\\rightarrow$ down to single elements. 2. Conquer & Merge Phase: Merge [100] and [110] $\\rightarrow$ [100, 110] Merge [210] and [342] $\\rightarrow$ [210, 342] Merge [100, 110] and [210, 342] $\\rightarrow$ [100, 110, 210, 342] (Left sorted) Merge [90] and [80] $\\rightarrow$ [80, 90] Merge [80, 90] and [60] $\\rightarrow$ [60, 80, 90] (Right sorted) Final Merge: Merge [100, 110, 210, 342] with [60, 80, 90] :$$\\mathbf{[60, 80, 90, 100, 110, 210, 342]}$$"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q47",
+    "q_num": 47,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.5,
+    "important": true,
+    "title": "Find an LCS of X={ABCBDABDCBBDABC} and Y={BDC}. Show the dynamic-programming approach.",
+    "url": "question-bank.html?open=ese_q47",
+    "chunks": [
+      "Strings: $X = \\text{\"ABCBDABDCBBDABC\"}$ ($m = 15$), $Y = \\text{\"BDC\"}$ ($n = 3$). DP Recurrence: $$L[i, j] = \\begin{cases} 0 & \\text{if } i=0 \\text{ or } j=0 \\\\ 1 + L[i-1, j-1] & \\text{if } X[i] == Y[j] \\\\ \\max(L[i-1, j], L[i, j-1]) & \\text{if } X[i] \\neq Y[j] \\end{cases}$$ Tracing Pattern Matches in $X$: Notice that $Y = \\text{\"BDC\"}$ has length 3. Let us trace whether $Y$ appears as a subsequence of $X$: First occurrence of 'B' in $X$ is at $X[2]$ (0-indexed: index 1). Subsequent occurrence of 'D' in $X$ is at index 4 ( X[4] = 'D' ). Subsequent occurrence of 'C' in $X$ is at index 5 ( X[5] = 'C' ). Since the complete sequence B -> D -> C appears intact in $X$ (at positions $X[1], X[4], X[5]$), the Longest Common Subsequence length is equal to the length of $Y$: $$\\mathbf{\\text{Length of LCS} = 3, \\quad \\text{LCS} = \\text{\"BDC\"}}$$"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q48",
+    "q_num": 48,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.3,
+    "important": true,
+    "title": "Use tabulation to calculate the Fibonacci sequence up to F(6). Show the table.",
+    "url": "question-bank.html?open=ese_q48",
+    "chunks": [
+      "Tabulation (Bottom-Up Dynamic Programming): Computes values sequentially starting from base cases, storing each in a table to avoid redundant recursion. Recurrence: $F(0) = 0, \\, F(1) = 1, \\, F(n) = F(n-1) + F(n-2)$ for $n \\ge 2$. Tabulation Array: $n$ Calculation $F(n)$ 0 Base case 0 1 Base case 1 2 $F(1) + F(0) = 1 + 0$ 1 3 $F(2) + F(1) = 1 + 1$ 2 4 $F(3) + F(2) = 2 + 1$ 3 5 $F(4) + F(3) = 3 + 2$ 5 6 $F(5) + F(4) = 5 + 3$ 8 Conclusion: $F(6) = \\mathbf{8}$. Computed in $O(n)$ time and $O(n)$ space (or $O(1)$ space using two variables)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q49",
+    "q_num": 49,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.6,
+    "important": true,
+    "title": "For edges A-B=3, A-C=2, C-B=5, B-D=2 and C-D=7, calculate the shortest distances from A using Dijkstra's algorithm.",
+    "url": "question-bank.html?open=ese_q49",
+    "chunks": [
+      "Graph Specification: Vertices $V = \\{A, B, C, D\\}$, Source vertex $S = A$. Edges: $(A, B) = 3, (A, C) = 2, (C, B) = 5, (B, D) = 2, (C, D) = 7$. Step-by-Step Execution of Dijkstra's Algorithm: Initialization: $dist = \\{A: 0, B: \\infty, C: \\infty, D: \\infty\\}$ Visited set $S = \\emptyset$. Step 1: Select unvisited vertex with min distance $\\rightarrow$ $A$ ($dist=0$) . $S = \\{A\\}$. Relax neighbor $B$: $dist[B] = \\min(\\infty, 0 + 3) = 3$. Relax neighbor $C$: $dist[C] = \\min(\\infty, 0 + 2) = 2$. $dist = \\{A: 0, B: 3, C: 2, D: \\infty\\}$. Step 2: Select min unvisited $\\rightarrow$ $C$ ($dist=2$) . $S = \\{A, C\\}$. Relax neighbor $B$: $dist[B] = \\min(3, 2 + 5) = 3$ (No change). Relax neighbor $D$: $dist[D] = \\min(\\infty, 2 + 7) = 9$. $dist = \\{A: 0, B: 3, C: 2, D: 9\\}$. Step 3: Select min unvisited $\\rightarrow$ $B$ ($dist=3$) . $S = \\{A, B, C\\}$. Relax neighbor $D$: $dist[D] = \\min(9, 3 + 2) = \\mathbf{5}$ (Updated via path $A \\to B \\to D$). $dist = \\{A: 0, B: 3, C: 2, D: 5\\}$. Step 4: Select min unvisited $\\rightarrow$ $D$ ($dist=5$) . $S = \\{A, B, C, D\\}$. All vertices visited. Final Shortest Distances from A: $A \\to A$: $\\mathbf{0}$ $A \\to B$: $\\mathbf{3}$ (Path: $A \\to B$) $A \\to C$: $\\mathbf{2}$ (Path: $A \\to C$) $A \\to D$: $\\mathbf{5}$ (Path: $A \\to B \\to D$)"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q50",
+    "q_num": 50,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.5,
+    "important": true,
+    "title": "Explain the Floyd\u2013Warshall algorithm and demonstrate how it updates an all-pairs distance matrix.",
+    "url": "question-bank.html?open=ese_q50",
+    "chunks": [
+      "The Floyd-Warshall Algorithm is a Dynamic Programming algorithm that finds the shortest paths between all pairs of vertices in a directed, weighted graph (allowing negative edge weights, but no negative cycles). Core DP Formulation: Let $D^{(k)}[i, j]$ be the length of the shortest path from vertex $i$ to vertex $j$ using only intermediate vertices from the set $\\{1, 2, \\dots, k\\}$. $$D^{(k)}[i, j] = \\min\\left(D^{(k-1)}[i, j],\\, D^{(k-1)}[i, k] + D^{(k-1)}[k, j]\\right)$$ How the Matrix is Updated: Initialization ($D^{(0)}$): Direct edge weights from adjacency matrix ($D[i, i] = 0$, $D[i, j] = w(i, j)$, or $\\infty$ if no direct edge). Iteration over $k = 1$ to $|V|$: At each phase $k$, vertex $k$ is considered as a potential intermediate waypoint. If travelling from $i$ to $k$ and then $k$ to $j$ is shorter than the currently recorded distance from $i$ to $j$, the matrix cell is updated. Final Matrix ($D^{(|V|)}$): Contains the true all-pairs shortest path distances. Complexity: Three nested loops running $|V|$ times yield a time complexity of $\\mathbf{\\Theta(V^3)}$ and space complexity of $\\Theta(V^2)$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q51",
+    "q_num": 51,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO1",
+    "score": 8.7,
+    "important": false,
+    "title": "State two differences between an algorithm and a program.",
+    "url": "question-bank.html?open=ese_q51",
+    "chunks": [
+      "Comparison between an Algorithm and a Program: Feature Algorithm Program Design & Language Abstract, formal mathematical design written in pseudocode or natural language; completely independent of programming syntax or hardware. Concrete implementation written in a specific programming language (e.g., C, Java, Python) adhering to strict syntactic grammar. Execution Analyzed theoretically on paper (space/time complexity); cannot be executed directly by a computer CPU. Compiled or interpreted into machine instructions and executed directly on physical computer hardware."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q52",
+    "q_num": 52,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO2",
+    "score": 9.1,
+    "important": true,
+    "title": "What is a stable sorting algorithm?",
+    "url": "question-bank.html?open=ese_q52",
+    "chunks": [
+      "A sorting algorithm is defined as stable if two objects with equal keys appear in the same relative order in the sorted output as they appeared in the initial unsorted input array. Formally, if $A[i] = A[j]$ and index $i < j$ in the input, then after sorting, the item originally at $i$ precedes the item originally at $j$. Stable Sorts: Merge Sort, Insertion Sort, Bubble Sort, Counting Sort. Unstable Sorts: Quick Sort, Heap Sort, Selection Sort."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q53",
+    "q_num": 53,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO2",
+    "score": 8.9,
+    "important": false,
+    "title": "What is the purpose of a recurrence tree?",
+    "url": "question-bank.html?open=ese_q53",
+    "chunks": [
+      "The purpose of a Recursion Tree is to provide a structured graphical visualization of the execution cost incurred at each recursive step of a divide-and-conquer recurrence relation: Each node represents the non-recursive work performed at that subproblem ($f(n/b^i)$). Summing the work horizontally across all nodes at each depth gives the per-level cost. Summing the per-level costs vertically across all tree levels (from depth 0 to $\\log_b n$) determines the total asymptotic time complexity, serving as an intuitive proof for the Master Theorem."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q54",
+    "q_num": 54,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO4",
+    "score": 9.3,
+    "important": true,
+    "title": "Define memoization.",
+    "url": "question-bank.html?open=ese_q54",
+    "chunks": [
+      "Memoization is a top-down optimization technique in Dynamic Programming where the algorithm solves problems recursively, but before computing the solution to any subproblem, it checks a lookup cache (hash table or array): If the subproblem has already been solved, its cached result is returned immediately ($O(1)$ lookup). If not, the subproblem is computed recursively and its result is saved in the cache for future calls. It maintains the intuitive structure of recursive code while eliminating exponential recomputations."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q55",
+    "q_num": 55,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO5",
+    "score": 9.2,
+    "important": true,
+    "title": "What is a promising node in backtracking?",
+    "url": "question-bank.html?open=ese_q55",
+    "chunks": [
+      "In Backtracking algorithms, a node in the state-space tree is called promising if it represents a partial solution that satisfies all problem constraints so far, meaning it has the potential to lead to a complete, valid solution. Conversely, a non-promising node violates one or more bounding constraints; the algorithm immediately prunes that branch and backtracks without expanding its children."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q56",
+    "q_num": 56,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 9.1,
+    "important": false,
+    "title": "Differentiate between an upper bound and a tight asymptotic bound.",
+    "url": "question-bank.html?open=ese_q56",
+    "chunks": [
+      "Comparison between Upper Bound and Tight Asymptotic Bound: Feature Upper Bound (Big-O, $O$) Tight Bound (Big-Theta, $\\Theta$) Meaning Guarantees that the running time does not exceed $c \\cdot g(n)$ for large $n$. May or may not be tight. Guarantees that the running time grows at the exact same rate as $g(n)$, bounded both above and below. Mathematical Condition $0 \\le f(n) \\le c \\cdot g(n)$ for all $n \\ge n_0$. $c_1 \\cdot g(n) \\le f(n) \\le c_2 \\cdot g(n)$ for all $n \\ge n_0$. Example ($f(n) = 3n + 2$) $f(n) = O(n)$ is valid, and $f(n) = O(n^2)$ is also mathematically valid (loose upper bound). Only $f(n) = \\Theta(n)$ is valid; $f(n) \\neq \\Theta(n^2)$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q57",
+    "q_num": 57,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 9.0,
+    "important": false,
+    "title": "Explain why the dominant term is considered when determining asymptotic complexity.",
+    "url": "question-bank.html?open=ese_q57",
+    "chunks": [
+      "When analyzing asymptotic complexity as input size $n \\to \\infty$: The dominant term (the term with the highest degree or fastest mathematical growth rate) increases so rapidly that all lower-order terms and constant multipliers become mathematically negligible in comparison. For example, in $f(n) = 0.001 n^2 + 1000 n$: for $n = 10^7$, the quadratic term contributes $10^{11}$ operations while the linear term contributes only $10^{10}$ operations (10% of total); as $n \\to 10^9$, the quadratic term accounts for 99.9% of total time. Hence, asymptotic analysis focuses solely on the dominant term to capture the true scalability of algorithms."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q58",
+    "q_num": 58,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO2",
+    "score": 9.1,
+    "important": false,
+    "title": "State limitation of Counting Sort.",
+    "url": "question-bank.html?open=ese_q58",
+    "chunks": [
+      "Two major limitations of Counting Sort are: Range Sensitivity ($k$ must be small): The space complexity is $O(n + k)$ where $k$ is the range of values $(\\max - \\min)$. If $k = O(n^2)$ (e.g., sorting 10 numbers between 1 and 1,000,000), it requires an enormous array of 1 million integers, making it terribly inefficient in memory and time compared to comparison sorts. Integer Restriction: It operates strictly on discrete non-negative integer keys (or objects mapped directly to small integers); it cannot sort floating-point real numbers or arbitrary unbounded strings directly."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q59",
+    "q_num": 59,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO2",
+    "score": 8.8,
+    "important": false,
+    "title": "How many elements are placed in their final positions after one complete pass of Bubble Sort and Selection Sort?",
+    "url": "question-bank.html?open=ese_q59",
+    "chunks": [
+      "After one complete pass over an unsorted array of size $n$: Bubble Sort: Exactly one element (the global maximum element in ascending sort) is guaranteed to reach its final, permanent sorted position at the end of the array (index $n-1$). Selection Sort: Exactly one element (the global minimum element in ascending sort) is selected and swapped into its final, permanent sorted position at the beginning of the array (index $0$)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q60",
+    "q_num": 60,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 9.2,
+    "important": false,
+    "title": "Explain how divide and conquer is applied in large integer multiplication.",
+    "url": "question-bank.html?open=ese_q60",
+    "chunks": [
+      "In Karatsuba's large integer multiplication (Divide and Conquer): Two $n$-digit integers $X$ and $Y$ are divided into high and low $n/2$-digit halves: $X = X_L \\cdot 10^{n/2} + X_R$ and $Y = Y_L \\cdot 10^{n/2} + Y_R$. Standard expansion requires 4 multiplications: $X_L Y_L, X_L Y_R, X_R Y_L, X_R Y_R$ ($O(n^2)$). Karatsuba's Divide-and-Conquer Trick: Computes only 3 recursive multiplications : $P_1 = X_L Y_L$, $P_2 = X_R Y_R$, and $P_3 = (X_L + X_R)(Y_L + Y_R)$. The middle cross-term is obtained via: $P_3 - P_1 - P_2$. This reduces time complexity to $T(n) = 3T(n/2) + O(n) = \\mathbf{O(n^{\\log_2 3}) \\approx O(n^{1.585})}$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q61",
+    "q_num": 61,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 9.4,
+    "important": true,
+    "title": "What is the worst-case time complexity of Quick Sort? Under what condition does it occur?",
+    "url": "question-bank.html?open=ese_q61",
+    "chunks": [
+      "The worst-case time complexity of Quick Sort is $\\mathbf{\\Theta(n^2)}$ (Quadratic Time). Conditions Under Which It Occurs: Occurs when the partitioning routine produces the most unbalanced partitions possible: one subproblem with $n-1$ elements and one subproblem with $0$ elements at every recursive step. Classic Scenario: When the input array is already sorted (in ascending or descending order) and the algorithm always picks the first or last element as the pivot. Recurrence: $T(n) = T(n-1) + T(0) + \\Theta(n) \\implies T(n) = \\Theta(n^2)$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q62",
+    "q_num": 62,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.4,
+    "important": true,
+    "title": "Find an LCS of X = ABCBCABCAAB and Y = AC.",
+    "url": "question-bank.html?open=ese_q62",
+    "chunks": [
+      "Strings: $X = \\text{\"ABCBCABCAAB\"}$ ($m = 11$), $Y = \\text{\"AC\"}$ ($n = 2$). We check if the short string $Y = \\text{\"AC\"}$ is a subsequence of $X$: First character 'A' of $Y$ matches $X[0] = \\text{'A'}$. Second character 'C' of $Y$ matches $X[2] = \\text{'C'}$ (which occurs after index 0). Since the entire string $Y$ appears in order in $X$ (at indices 0 and 2), the Longest Common Subsequence is: $$\\mathbf{\\text{LCS} = \\text{\"AC\"}, \\quad \\text{Length} = 2}$$"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q63",
+    "q_num": 63,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.4,
+    "important": true,
+    "title": "Given Huffman frequencies 4, 7, 8, 10 identify the first two combinations.",
+    "url": "question-bank.html?open=ese_q63",
+    "chunks": [
+      "Huffman Algorithm Greedy Strategy: Repeatedly extract the two trees with the lowest frequencies from a priority queue (min-heap) and merge them into a new parent node whose frequency is the sum of both. Initial Frequencies: $\\{4, 7, 8, 10\\}$ Combination 1: Extract the two smallest: $4$ and $7$. Merge: Create parent node $N_1$ with frequency $= 4 + 7 = \\mathbf{11}$. Queue becomes: $\\{8, 10, 11\\}$. Combination 2: Extract the two smallest from current queue: $8$ and $10$. Merge: Create parent node $N_2$ with frequency $= 8 + 10 = \\mathbf{18}$. Queue becomes: $\\{11, 18\\}$. Summary: First Combination: 4 and 7 merged to form 11 . Second Combination: 8 and 10 merged to form 18 ."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q64",
     "q_num": 64,
     "unit": "V",
     "exam": "endterm",
     "marks": 2,
     "bloom": "L2",
     "co": "CO5",
-    "score": 9.3,
-    "important": true,
-    "title": "Define backtracking.",
-    "url": "question-bank.html?open=q64",
+    "score": 9.2,
+    "important": false,
+    "title": "Explain why Rabin\u2013Karp verifies the characters after finding equal hash values.",
+    "url": "question-bank.html?open=ese_q64",
     "chunks": [
-      "Backtracking is a systematic algorithmic paradigm for solving constraint satisfaction problems by incrementally constructing candidate solutions within a state-space tree. It traverses candidate states using Depth-First Search (DFS) and applies bounding functions. Pruning Principle: The moment a partial solution violates any problem constraint, the algorithm abandons (prunes) that entire search branch and immediately backtracks to the parent decision node to evaluate alternative choices."
+      "In the Rabin-Karp String Matching Algorithm , hash values are computed using modulo arithmetic (e.g., $hash \\bmod q$, where $q$ is a prime number) to prevent arithmetic integer overflow. Why character-by-character verification is required: Because the hash range is finite ($0$ to $q-1$), two completely different strings can produce the exact same hash value. This phenomenon is known as a hash collision (or spurious hit ). Therefore, when the pattern hash matches the text window hash, the algorithm must verify each character one-by-one to confirm whether it is a genuine valid match or a false positive caused by a hash collision."
     ],
     "type": "question"
   },
   {
-    "id": "q65",
+    "id": "ese_q65",
     "q_num": 65,
     "unit": "V",
     "exam": "endterm",
-    "marks": 3,
+    "marks": 2,
     "bloom": "L2",
     "co": "CO5",
-    "score": 9.1,
+    "score": 9.2,
     "important": true,
-    "title": "Explain N-Queens problem.",
-    "url": "question-bank.html?open=q65",
+    "title": "What is a spurious hit and valid hit in Rabin\u2013Karp string matching?",
+    "url": "question-bank.html?open=ese_q65",
     "chunks": [
-      "The $N$-Queens problem is a classic combinatorial constraint satisfaction problem that requires placing $N$ non-attacking chess queens on an $N \\times N$ chessboard. Under standard chess rules, a queen attacks any piece along the same row, column, or diagonal. Problem Formulation & Constraints: Representation: A 1D array $X[1 \\dots N]$ where $X[i] = j$ signifies that Queen $i$ occupies row $i$ and column $j$. This representation inherently satisfies the row constraint of exactly one queen per row. Column Constraint: No two queens share a column: $X[i] \\neq X[k]$ for all distinct $i, k$. Diagonal Constraint: No two queens share a major or minor diagonal: $|X[i] - X[k]| \\neq |i - k|$ for all $i \\neq k$. Solutions exist for all $N \\ge 4$ (no solutions exist for $N=2$ and $N=3$, while $N=1$ is trivial)."
+      "In Rabin-Karp String Matching: Valid Hit: Occurs when the hash value of the text window matches the pattern hash ($hash(T[s..s+m-1]) == hash(P)$), AND subsequent character verification confirms that the characters are identical ($T[s..s+m-1] == P$). Represents a true occurrence of the pattern. Spurious Hit: Occurs when the hash values match ($hash(T) == hash(P)$), BUT subsequent character verification reveals that the strings are actually different ($T[s..s+m-1] \\neq P$). Caused by a mathematical hash collision resulting from modulo arithmetic."
     ],
     "type": "question"
   },
   {
-    "id": "q66",
+    "id": "ese_q66",
     "q_num": 66,
-    "unit": "V",
+    "unit": "I",
     "exam": "endterm",
     "marks": 3,
     "bloom": "L3",
-    "co": "CO5",
+    "co": "CO1",
+    "score": 9.1,
+    "important": false,
+    "title": "Given two algorithms with time complexities T1(n) = 5n + 10 and T2(n) = n^2 + 2, determine for which values of n algorithm T1 is more efficient than T2.",
+    "url": "question-bank.html?open=ese_q66",
+    "chunks": [
+      "To determine when $T_1(n)$ is more efficient than $T_2(n)$, solve for $T_1(n) < T_2(n)$: $$5n + 10 < n^2 + 2 \\implies n^2 - 5n - 8 > 0$$ Find the roots of the quadratic equation $n^2 - 5n - 8 = 0$ using the quadratic formula: $$n = \\frac{-(-5) \\pm \\sqrt{(-5)^2 - 4(1)(-8)}}{2(1)} = \\frac{5 \\pm \\sqrt{25 + 32}}{2} = \\frac{5 \\pm \\sqrt{57}}{2}$$ Since $\\sqrt{57} \\approx 7.55$: $$n \\approx \\frac{5 + 7.55}{2} = \\frac{12.55}{2} \\approx 6.27$$ Conclusion: For integer input sizes $n \\ge 7$, $n^2 - 5n - 8 > 0$, meaning $T_1(n) < T_2(n)$. Algorithm $T_1$ is strictly more efficient than $T_2$ for all $n \\ge 7$. (For $n \\le 6$, the quadratic algorithm $T_2$ is faster or equal due to smaller constants)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q67",
+    "q_num": 67,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO1",
+    "score": 9.3,
+    "important": true,
+    "title": "Determine the time complexity of the following code:\nfor i = 1 to n\n   for j = 1 to n\n      k = k + 1",
+    "url": "question-bank.html?open=ese_q67",
+    "chunks": [
+      "Given nested loop structure: for i = 1 to n for j = 1 to n k = k + 1 Step-by-Step Analysis: The outer loop executes for $i = 1, 2, \\dots, n$, running a total of $n$ iterations. For each iteration of the outer loop, the inner loop executes for $j = 1, 2, \\dots, n$, running a total of $n$ iterations. Inside the inner loop, the statement k = k + 1 executes in constant $O(1)$ time. Total number of operations is given by the double summation:$$\\sum_{i=1}^{n} \\sum_{j=1}^{n} 1 = \\sum_{i=1}^{n} n = n \\times n = n^2$$ Time Complexity: $\\mathbf{\\Theta(n^2)}$ (Quadratic Time)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q68",
+    "q_num": 68,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO2",
     "score": 9.4,
     "important": true,
-    "title": "Explain backtracking in the N-Queens problem.",
-    "url": "question-bank.html?open=q66",
+    "title": "For the array 29, 15, 34, 12, 27, 18 construct a max heap and show how the array is stored.",
+    "url": "question-bank.html?open=ese_q68",
     "chunks": [
-      "Backtracking solves the $N$-Queens problem by positioning queens row by row from row $1$ to $N$. For each row $k$, candidate columns $col \\in \\{1 \\dots N\\}$ are systematically tested against previously placed queens using a bounding function Place(k, col) . Safety Bounding Condition: A candidate placement is valid if and only if no earlier queen $i < k$ shares the same column ($X[i] == col$) or the same diagonal ($|X[i] - col| == |k - i|$). If safe, the algorithm sets $X[k] = col$ and recursively explores row $k+1$. If every column in row $k$ causes a conflict, the current state is identified as a dead end; the algorithm abandons the subtree and backtracks to row $k-1$ to advance the previous queen to alternative remaining columns. bool Place(int k, int col) { for (int i = 1; i < k; i++) if (X[i] == col || abs(X[i] - col) == abs(i - k)) return false; return true; } By executing Depth-First Search with bounding, backtracking dynamically prunes fruitless paths, reducing the search space from $O(N^N)$ down to a small fraction of $O(N!)$. The search completes when all $N$ queens are safely placed."
+      "Initial Array: [29, 15, 34, 12, 27, 18] ($n = 6$) A Max-Heap satisfies the property that every parent node is $\\ge$ its children ($A[i] \\ge A[2i+1]$ and $A[i] \\ge A[2i+2]$). Heapify Process (Bottom-Up from last non-leaf node index $\\lfloor n/2 \\rfloor - 1 = 2$): Index 2 (Value = 34): Left child at index 5 is 18. $34 > 18$, Heap property satisfied. Index 1 (Value = 15): Left child index 3 (12), Right child index 4 (27). Max child is 27. $15 < 27$, Swap 15 and 27 . Subarray becomes: [29, 27, 34, 12, 15, 18] Index 0 (Value = 29): Left child index 1 (27), Right child index 2 (34). Max child is 34. $29 < 34$, Swap 29 and 34 . Array becomes: [34, 27, 29, 12, 15, 18] Check index 2 (29) with its child index 5 (18): $29 > 18$, Heap property holds. Final Max-Heap Array: $\\mathbf{[34, 27, 29, 12, 15, 18]}$ (Root is 34; children of 34 are 27 and 29; children of 27 are 12 and 15; child of 29 is 18)."
     ],
     "type": "question"
   },
   {
-    "id": "q67",
-    "q_num": 67,
-    "unit": "IV",
-    "exam": "endterm",
-    "marks": 3,
-    "bloom": "L3",
-    "co": "CO4",
-    "score": 9.6,
-    "important": true,
-    "title": "Solve the 0/1 Knapsack problem for weights (2,3,4,5), profits (7,11,15,20) and capacity 5. Identify the  maximum profit.",
-    "url": "question-bank.html?open=q67",
-    "chunks": [
-      "Given 4 items with weights $w = (2, 3, 4, 5)$, profits $p = (7, 11, 15, 20)$, and knapsack capacity $W = 5$. We apply the 0/1 Knapsack dynamic programming recurrence: $$V[i, w] = \\max(V[i-1, w], V[i-1, w - w_i] + p_i) \\quad (\\text{for } w_i \\le w)$$ Item ($w_i, p_i$) $w=0$ $w=1$ $w=2$ $w=3$ $w=4$ $w=5$ $i=1$ (2, 7) 0 0 7 7 7 7 $i=2$ (3, 11) 0 0 7 11 11 18 $i=3$ (4, 15) 0 0 7 11 15 18 $i=4$ (5, 20) 0 0 7 11 15 20 Traceback: At $V[4, 5] = 20 \\neq V[3, 5] = 18$, Item 4 is selected. The remaining capacity becomes $5 - 5 = 0$. The optimal item set is $\\{\\text{Item 4}\\}$ with total weight $5$ and Maximum Profit = 20 ."
-    ],
-    "type": "question"
-  },
-  {
-    "id": "q68",
-    "q_num": 68,
-    "unit": "V",
-    "exam": "endterm",
-    "marks": 3,
-    "bloom": "L3",
-    "co": "CO5",
-    "score": 9.6,
-    "important": true,
-    "title": "Explain the backtracking approach to the 4-Queens problem and show one valid arrangement of queens.",
-    "url": "question-bank.html?open=q68",
-    "chunks": [
-      "The 4-Queens problem positions 4 queens on a $4 \\times 4$ chessboard such that no two attack each other. Backtracking systematically explores placements row by row, pruning branches when column or diagonal conflicts occur. Backtracking Execution Steps: Row 1: Place $Q_1$ at column 1. In Row 2, column 3 is safe. In Row 3, all columns $(1,2,3,4)$ are attacked. Backtrack! Row 1: Move $Q_1$ to column 2 ($X[1] = 2$). Row 2: Testing columns yields column 4 safe ($X[2] = 4$). Row 3: Column 1 is safe from both earlier queens ($X[3] = 1$). Row 4: Testing columns reveals column 3 is safe ($X[4] = 3$). Valid Arrangement: The resulting solution vector is $X = [2, 4, 1, 3]$ (placing queens at $(1,2), (2,4), (3,1), (4,3)$), where all column and diagonal constraints are completely satisfied."
-    ],
-    "type": "question"
-  },
-  {
-    "id": "q69",
+    "id": "ese_q69",
     "q_num": 69,
-    "unit": "IV",
+    "unit": "II",
     "exam": "endterm",
-    "marks": 2,
-    "bloom": "L2",
-    "co": "CO4",
-    "score": 8.8,
+    "marks": 3,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.2,
     "important": false,
-    "title": "Define overlapping subproblems.",
-    "url": "question-bank.html?open=q69",
+    "title": "Apply Insertion Sort to 3, 10, 23, 52, 49, 38, 56. Show the sorted portion after inserting 49 and 38.",
+    "url": "question-bank.html?open=ese_q69",
     "chunks": [
-      "Overlapping subproblems is a fundamental property of problems where recursive decomposition solves the identical smaller subproblems repeatedly rather than creating unique ones. Unlike Divide and Conquer (which divides problems into independent, disjoint subproblems like Merge Sort), Dynamic Programming caches the results of overlapping subproblems in memory tables (memoization or tabulation). This avoids exponential recalculation, reducing runtime to polynomial order (e.g., computing Fibonacci numbers or LCS)."
+      "Given Array: [3, 10, 23, 52, 49, 38, 56] Initially, [3, 10, 23, 52] is already sorted. Pass inserting Key = 49: Key 49 is compared with 52: $49 < 52$, shift 52 right. Key 49 is compared with 23: $49 > 23$, insert 49 at index 3. Sorted portion after inserting 49: [3, 10, 23, 49, 52] Pass inserting Key = 38: Key 38 is compared with 52: shift 52 right. Key 38 is compared with 49: shift 49 right. Key 38 is compared with 23: $38 > 23$, insert 38 at index 3. Sorted portion after inserting 38: [3, 10, 23, 38, 49, 52]"
     ],
     "type": "question"
   },
   {
-    "id": "q70",
+    "id": "ese_q70",
     "q_num": 70,
-    "unit": "IV",
+    "unit": "III",
     "exam": "endterm",
-    "marks": 2,
-    "bloom": "L3",
-    "co": "CO4",
-    "score": 8.6,
-    "important": false,
-    "title": "Using denominations 3,2,1, find the coins selected by dynamic programming for amount 6.",
-    "url": "question-bank.html?open=q70",
-    "chunks": [
-      "For amount $A = 6$ and coin denominations $D = \\{3, 2, 1\\}$, the DP recurrence minimizes total coins: $$dp[v] = 1 + \\min_{c \\in D, c \\le v} dp[v - c], \\quad dp[0] = 0$$ Table Progression: $dp[1]=1$, $dp[2]=1$, $dp[3]=1$, $dp[4]=2$, $dp[5]=2$, and $dp[6]=1+dp[3]=2$. Selected Coins: Backtracking from amount 6 picks coin 3 (remaining 3), then picks another coin 3. Thus, the optimal selection is two coins: $\\{3, 3\\}$ ."
-    ],
-    "type": "question"
-  },
-  {
-    "id": "q71",
-    "q_num": 71,
-    "unit": "IV",
-    "exam": "endterm",
-    "marks": 2,
-    "bloom": "L3",
-    "co": "CO4",
-    "score": 9.1,
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 9.4,
     "important": true,
-    "title": "For activities with start times (2,4,1,5,7,8) and finish times (3,5,6,7,9,11) select a maximum compatible set using the greedy strategy.",
-    "url": "question-bank.html?open=q71",
+    "title": "Explain Merge Sort using a suitable array and derive its recurrence relation.",
+    "url": "question-bank.html?open=ese_q70",
     "chunks": [
-      "The greedy strategy sorts activities by ascending finish times and chooses non-overlapping activities whose start time is $\\ge$ previous finish time. Given sorted intervals $A_1(2,3), A_2(4,5), A_3(1,6), A_4(5,7), A_5(7,9), A_6(8,11)$: Pick $A_1(2,3)$ (finish 3). Pick $A_2(4,5)$ ($4 \\ge 3$, finish 5). Reject $A_3$ ($1 < 5$). Pick $A_4(5,7)$ ($5 \\ge 5$, finish 7). Pick $A_5(7,9)$ ($7 \\ge 7$, finish 9). Reject $A_6$ ($8 < 9$). Selected Set: $\\{A_1, A_2, A_4, A_5\\}$ ( 4 activities )."
+      "Merge Sort is a recursive Divide-and-Conquer sorting algorithm with three phases: Divide: Computes the midpoint $q = \\lfloor(p+r)/2\\rfloor$ in $O(1)$ time. Conquer: Recursively sorts the two subarrays $A[p..q]$ and $A[q+1..r]$. Combine (Merge): Merges the two sorted subarrays in linear $O(n)$ time using a temporary array. Example on [38, 27, 43, 3, 9, 82, 10]: Splits into [38, 27, 43, 3] and [9, 82, 10] . Recursive merges yield left sorted [3, 27, 38, 43] and right sorted [9, 10, 82] . Final two-way merge produces: [3, 9, 10, 27, 38, 43, 82] . Recurrence Relation Derivation: $$T(n) = \\begin{cases} c & \\text{if } n = 1 \\\\ 2T(n/2) + cn & \\text{if } n > 1 \\end{cases}$$ By Master Theorem (Case 2 with $a=2, b=2, f(n)=cn$ where $n^{\\log_2 2} = n$):$$T(n) = \\mathbf{\\Theta(n \\log n)}$$Merge Sort guarantees $\\Theta(n \\log n)$ time in all cases (best, worst, and average)."
     ],
     "type": "question"
   },
   {
-    "id": "q72",
+    "id": "ese_q71",
+    "q_num": 71,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO3",
+    "score": 9.3,
+    "important": true,
+    "title": "Consider an array [21, 3, 12, 17, 58, 1, 19, 18, 4, 15, 30]. Apply Min-Max Algorithm step by step and give the answer based on the algorithm.",
+    "url": "question-bank.html?open=ese_q71",
+    "chunks": [
+      "Input: [21, 3, 12, 17, 58, 1, 19, 18, 4, 15, 30] ($n = 11$, indices 0..10) Step-by-Step Divide-and-Conquer Execution: Divide at mid index 5: Left [21, 3, 12, 17, 58, 1] (0..5) and Right [19, 18, 4, 15, 30] (6..10). Left Subproblem (0..5): Split 0..2: [21, 3, 12] $\\rightarrow$ Min=3, Max=21. Split 3..5: [17, 58, 1] $\\rightarrow$ Min=1, Max=58. Combine Left: $\\min(3, 1) = \\mathbf{1}$, $\\max(21, 58) = \\mathbf{58}$. Right Subproblem (6..10): Split 6..7: [19, 18] $\\rightarrow$ Min=18, Max=19. Split 8..10: [4, 15, 30] $\\rightarrow$ Min=4, Max=30. Combine Right: $\\min(18, 4) = \\mathbf{4}$, $\\max(19, 30) = \\mathbf{30}$. Final Combine: $$\\text{Global Minimum} = \\min(\\text{Left Min}, \\text{Right Min}) = \\min(1, 4) = \\mathbf{1}$$$$\\text{Global Maximum} = \\max(\\text{Left Max}, \\text{Right Max}) = \\max(58, 30) = \\mathbf{58}$$ Final Answer: $\\mathbf{\\text{Minimum} = 1, \\quad \\text{Maximum} = 58}$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q72",
     "q_num": 72,
     "unit": "IV",
     "exam": "endterm",
-    "marks": 2,
+    "marks": 5,
     "bloom": "L3",
-    "co": "CO4",
-    "score": 8.9,
-    "important": false,
-    "title": "Find an LCS of X={ABCBDABDCBBDABC} and Y={BDC} Show the dynamic-programming approach and state the LCS length.",
-    "url": "question-bank.html?open=q72",
-    "chunks": [
-      "We find the LCS of $X = \\text{\"ABCBDABDCBBDABC\"}$ and $Y = \\text{\"BDC\"}$ using DP recurrence $c[i,j] = c[i-1,j-1] + 1$ on character matches. Sequential Match: Character $Y[1]=\\text{'B'}$ matches at $X[2]$, $Y[2]=\\text{'D'}$ matches at $X[5]$, and $Y[3]=\\text{'C'}$ matches at $X[9]$ ($2 < 5 < 9$). Because all characters of $Y$ appear in sequential order inside $X$, string $Y$ forms a valid common subsequence. Thus, $\\text{LCS} = \\text{\"BDC\"}$ with LCS Length = 3 ."
-    ],
-    "type": "question"
-  },
-  {
-    "id": "q73",
-    "q_num": 73,
-    "unit": "V",
-    "exam": "endterm",
-    "marks": 2,
-    "bloom": "L2",
-    "co": "CO5",
-    "score": 8.7,
-    "important": false,
-    "title": "What is a promising node in backtracking?",
-    "url": "question-bank.html?open=q73",
-    "chunks": [
-      "In backtracking algorithms, a node in the state-space tree is termed promising if it satisfies all problem constraints established so far and has the potential to lead to at least one valid, feasible solution. Conversely, a node is non-promising if it violates any constraint. Backtracking evaluates nodes via bounding functions, immediately pruning non-promising subtrees and retreating to the parent node, thereby eliminating fruitless combinatorial searches."
-    ],
-    "type": "question"
-  },
-  {
-    "id": "q74",
-    "q_num": 74,
-    "unit": "IV",
-    "exam": "endterm",
-    "marks": 2,
-    "bloom": "L3",
-    "co": "CO4",
-    "score": 8.5,
-    "important": false,
-    "title": "Find an LCS of X=ABCBCABCAAB and Y=AC",
-    "url": "question-bank.html?open=q74",
-    "chunks": [
-      "To find an LCS of $X = \\text{\"ABCBCABCAAB\"}$ (length 11) and $Y = \\text{\"AC\"}$ (length 2), we use the Dynamic Programming table formulation $c[i,j]$. Subsequence Analysis: Character $Y[1]=\\text{'A'}$ occurs at index $X[1]$. Subsequent character $Y[2]=\\text{'C'}$ occurs at index $X[3]$ ($1 < 3$). Both characters of $Y$ appear in forward sequential order inside $X$. Since $|Y| = 2$ is the upper bound on common subsequence length, the entire string $Y$ is an optimal subsequence. Thus, $\\text{LCS} = \\text{\"AC\"}$ with Length = 2 ."
-    ],
-    "type": "question"
-  },
-  {
-    "id": "q75",
-    "q_num": 75,
-    "unit": "IV",
-    "exam": "endterm",
-    "marks": 2,
-    "bloom": "L3",
-    "co": "CO4",
-    "score": 9.2,
-    "important": true,
-    "title": "Given Huffman frequencies 4,7,8,10 identify the first two combinations.",
-    "url": "question-bank.html?open=q75",
-    "chunks": [
-      "Huffman coding greedily merges the two lowest frequency nodes from a min-heap. Given initial frequencies: $\\{4, 7, 8, 10\\}$. First Combination: Extract smallest $4$ and $7$. Merge into internal node of weight $4 + 7 = \\mathbf{11}$. Set: $\\{8, 10, 11\\}$. Second Combination: Extract next smallest $8$ and $10$. Merge into internal node of weight $8 + 10 = \\mathbf{18}$. Set: $\\{11, 18\\}$."
-    ],
-    "type": "question"
-  },
-  {
-    "id": "q76",
-    "q_num": 76,
-    "unit": "IV",
-    "exam": "endterm",
-    "marks": 2,
-    "bloom": "L4",
     "co": "CO4",
     "score": 9.5,
     "important": true,
-    "title": "Compare greedy algorithms and dynamic programming with respect to strategy, subproblem handling and optimality.",
-    "url": "question-bank.html?open=q76",
+    "title": "Schedule jobs with deadline-profit pairs J1(3, 60), J2(2, 100), J3(3, 20), J4(1, 40), J5(2, 80) to maximize profit. Show the slot allocation.",
+    "url": "question-bank.html?open=ese_q72",
     "chunks": [
-      "Criterion Greedy Algorithm Dynamic Programming Strategy Makes locally optimal choice at each step; never reconsiders. Explores all subproblem choices and combines their solutions. Subproblem Handling Solves subproblems top-down sequentially without overlapping storage. Solves overlapping subproblems bottom-up, memoizing table entries. Optimality Does not guarantee global optimum for all problems (e.g., 0/1 knapsack). Always guarantees global optimum if optimal substructure holds."
+      "Job Sequencing with Deadlines (Greedy Strategy): Sort jobs in descending order of profit and greedily schedule each job in the latest available slot prior to its deadline. Sorted Jobs by Profit: $J_2$: Profit = 100, Deadline = 2 $J_5$: Profit = 80, Deadline = 2 $J_1$: Profit = 60, Deadline = 3 $J_4$: Profit = 40, Deadline = 1 $J_3$: Profit = 20, Deadline = 3 Max Deadline $= 3 \\implies$ Time slots: Slot 1 $[0-1]$, Slot 2 $[1-2]$, Slot 3 $[2-3]$. Slot Allocation Trace: $J_2$ (Profit 100, Deadline 2): Latest available slot $\\le 2$ is Slot 2 . Allocate $J_2 \\rightarrow$ Slot 2. $J_5$ (Profit 80, Deadline 2): Slot 2 occupied; next available slot $\\le 2$ is Slot 1 . Allocate $J_5 \\rightarrow$ Slot 1. $J_1$ (Profit 60, Deadline 3): Latest available slot $\\le 3$ is Slot 3 . Allocate $J_1 \\rightarrow$ Slot 3. $J_4$ (Profit 40, Deadline 1): Slot 1 is already full. Rejected. $J_3$ (Profit 20, Deadline 3): Slots 1, 2, 3 are all full. Rejected. Final Slot Schedule: Time Slot Slot 1 (0 - 1) Slot 2 (1 - 2) Slot 3 (2 - 3) Assigned Job $J_5$ $J_2$ $J_1$ Profit 80 100 60 Total Maximum Profit: $80 + 100 + 60 = \\mathbf{240}$."
     ],
     "type": "question"
   },
   {
-    "id": "q77",
-    "q_num": 77,
+    "id": "ese_q73",
+    "q_num": 73,
     "unit": "IV",
     "exam": "endterm",
-    "marks": 2,
+    "marks": 5,
     "bloom": "L2",
     "co": "CO4",
-    "score": 9.2,
+    "score": 9.4,
     "important": true,
-    "title": "Define a longest common subsequence.",
-    "url": "question-bank.html?open=q77",
+    "title": "Compare greedy algorithms and dynamic programming with respect to strategy, feasibility and optimal substructure.",
+    "url": "question-bank.html?open=ese_q73",
     "chunks": [
-      "A subsequence of a sequence $X$ is obtained by deleting zero or more elements without changing the order of remaining elements. A Longest Common Subsequence (LCS) of sequences $X$ and $Y$ is a common subsequence of maximum length. Unlike substrings, elements need not be contiguous. The DP recurrence is: $$c[i,j] = \\begin{cases} c[i-1,j-1] + 1 & \\text{if } x_i = y_j \\\\ \\max(c[i-1,j], c[i,j-1]) & \\text{if } x_i \\neq y_j \\end{cases}$$"
+      "Comparison between Greedy Algorithms and Dynamic Programming: Parameter Greedy Algorithm Dynamic Programming Strategy Makes the locally optimal choice at each step without ever reconsidering past choices (no backtracking). Evaluates all subproblem possibilities, solves overlapping subproblems once, and stores results in a table. Feasibility Fast and intuitive ($O(n \\log n)$ or $O(n)$), but does not guarantee optimality for all problem types (fails on 0/1 knapsack). Guarantees global optimality for any problem with optimal substructure, though computationally more intensive ($O(n^2)$ or $O(n \\cdot W)$). Optimal Substructure Required. The global optimum is formed by accumulating locally optimal greedy choices. Required. The global optimum is constructed from memoized/tabulated optimal solutions to overlapping subproblems. Subproblem Overlap Subproblems do not need to overlap; greedy choice directly reduces the problem size. Strictly requires overlapping subproblems to realize efficiency gains."
     ],
     "type": "question"
   },
   {
-    "id": "q78",
-    "q_num": 78,
+    "id": "ese_q74",
+    "q_num": 74,
     "unit": "V",
     "exam": "endterm",
-    "marks": 2,
-    "bloom": "L2",
+    "marks": 5,
+    "bloom": "L3",
     "co": "CO5",
     "score": 9.3,
     "important": true,
-    "title": "What is a state-space tree in the N-Queens problem?",
-    "url": "question-bank.html?open=q78",
+    "title": "Apply Rabin\u2013Karp to search for pattern 23 in text 123423, using modulus q = 11.",
+    "url": "question-bank.html?open=ese_q74",
     "chunks": [
-      "A state-space tree in the $N$-Queens problem is an ordered tree representing all partial and candidate queen configurations explored during backtracking search. Tree Structure: The root represents an empty chessboard. Level $k$ corresponds to placing the $k$-th queen in row $k$, branching across $N$ possible columns. Pruning: Nodes violating column or diagonal safety are dead ends (non-promising) and are pruned immediately, while complete valid leaves at level $N$ constitute solutions."
+      "Text $T$: 123423 ($n = 6$), Pattern $P$: 23 ($m = 2$), Modulus $q = 11$, Base $d = 10$. Step 1: Compute Pattern Hash: $$p = 23 \\bmod 11 = \\mathbf{1}$$ Step 2: Slide Window of Length 2 Across Text: Shift $s = 0$ (Text \"12\"): $t_0 = 12 \\bmod 11 = 1$. $t_0 == p$ ($1 == 1$) $\\implies$ Hash Match! Verify characters: \"12\" $\\neq$ \"23\" $\\rightarrow$ Spurious Hit (Hash collision) . Shift $s = 1$ (Text \"23\"): $t_1 = 23 \\bmod 11 = 1$. $t_1 == p$ ($1 == 1$) $\\implies$ Hash Match! Verify characters: \"23\" $==$ \"23\" $\\rightarrow$ Valid Hit! Match found at index 1! Shift $s = 2$ (Text \"34\"): $t_2 = 34 \\bmod 11 = 1$. $t_2 == p$ ($1 == 1$) $\\implies$ Hash Match! Verify characters: \"34\" $\\neq$ \"23\" $\\rightarrow$ Spurious Hit . Shift $s = 3$ (Text \"42\"): $t_3 = 42 \\bmod 11 = 9 \\neq 1$. No match. Shift $s = 4$ (Text \"23\"): $t_4 = 23 \\bmod 11 = 1$. $t_4 == p$ ($1 == 1$) $\\implies$ Hash Match! Verify characters: \"23\" $==$ \"23\" $\\rightarrow$ Valid Hit! Match found at index 4! Summary: Valid pattern occurrences found at index 1 and index 4 (Spurious hits occurred at index 0 and 2)."
     ],
     "type": "question"
   },
   {
-    "id": "q79",
+    "id": "ese_q75",
+    "q_num": 75,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.4,
+    "important": true,
+    "title": "Consider a graph where a direct path exists: 1 -> 2 (weight 5), 2 -> 3 (weight 3), 1 -> 3 (weight 10). Show how the triangle inequality is checked and updated.",
+    "url": "question-bank.html?open=ese_q75",
+    "chunks": [
+      "Triangle Inequality in Graph Theory: For any three vertices $u, v, w$, the shortest distance must satisfy: $dist(u, w) \\le dist(u, v) + dist(v, w)$. Given Edges: Direct edge $(1, 3)$ with cost $= 10$. Path via vertex 2: edge $(1, 2) = 5$ and edge $(2, 3) = 3$. Checking Triangle Inequality: Calculate indirect path cost via intermediate vertex 2:$$dist(1, 2) + dist(2, 3) = 5 + 3 = \\mathbf{8}$$ Compare with direct path $dist(1, 3) = 10$:$$dist(1, 3) > dist(1, 2) + dist(2, 3) \\quad (10 > 8)$$The triangle inequality is currently violated by the direct edge! Edge Relaxation / Matrix Update: $$\\text{New } dist(1, 3) = \\min(10, 5 + 3) = \\mathbf{8}$$ The direct distance is relaxed and updated to 8 (using the path $1 \\to 2 \\to 3$), successfully satisfying the triangle inequality."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q76",
+    "q_num": 76,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO1",
+    "score": 8.8,
+    "important": false,
+    "title": "What is meant by the order of growth of an algorithm?",
+    "url": "question-bank.html?open=ese_q76",
+    "chunks": [
+      "The Order of Growth (rate of growth) of an algorithm describes how its resource requirements (execution time or memory space) increase asymptotically as the input size $n$ approaches infinity. It is obtained by focusing on the leading term of the exact time formula and ignoring constant coefficients and lower-order terms. Common standard growth orders (from fastest to slowest): $O(1) < O(\\log n) < O(n) < O(n \\log n) < O(n^2) < O(n^3) < O(2^n) < O(n!)$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q77",
+    "q_num": 77,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L2",
+    "co": "CO2",
+    "score": 9.2,
+    "important": true,
+    "title": "State the worst-case and best-case time complexity of Bubble Sort.",
+    "url": "question-bank.html?open=ese_q77",
+    "chunks": [
+      "Time complexity specifications for Bubble Sort : Worst-Case Time Complexity: $\\mathbf{\\Theta(n^2)}$ (Quadratic Time). Occurs when the input array is sorted in reverse order; requires $\\frac{n(n-1)}{2}$ comparisons and swaps. Best-Case Time Complexity (Optimized with swapped flag): $\\mathbf{\\Theta(n)}$ (Linear Time). Occurs when the array is already sorted; the algorithm performs one pass of $n-1$ comparisons, detects zero swaps, and terminates immediately."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q78",
+    "q_num": 78,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO3",
+    "score": 8.7,
+    "important": false,
+    "title": "Define the combine step in divide and conquer.",
+    "url": "question-bank.html?open=ese_q78",
+    "chunks": [
+      "In the Divide-and-Conquer paradigm, the Combine Step is the final phase where the algorithmic solutions derived independently from the smaller subproblems are synthesized and integrated together to construct the complete, correct solution for the original larger problem. Example: In Merge Sort, the combine step is the two-way Merge() procedure that takes two already sorted sub-arrays and merges them into a single sorted array in linear $O(n)$ time."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q79",
     "q_num": 79,
     "unit": "IV",
     "exam": "endterm",
-    "marks": 3,
-    "bloom": "L3",
+    "marks": 2,
+    "bloom": "L1",
     "co": "CO4",
-    "score": 9.7,
+    "score": 9.1,
     "important": true,
-    "title": "Consider m=2,p=4,s=5,i=7\nGenerate Huffman Tree\nCalculate number of bits using frequency of characters and number of bits required to represent those characters.",
-    "url": "question-bank.html?open=q79",
+    "title": "Define a longest common subsequence.",
+    "url": "question-bank.html?open=ese_q79",
     "chunks": [
-      "Given character frequencies: $m: 2, p: 4, s: 5, i: 7$ (total 18). We construct the optimal Huffman Tree using greedy min-heap merges: Merge 1: Combine $m(2)$ and $p(4)$ into node $(6)$ with edge bits $0, 1$. Merge 2: Combine $s(5)$ and node $(6)$ into node $(11)$ with edge bits $0, 1$. Merge 3: Combine $i(7)$ and node $(11)$ into root $(18)$. Character Frequency ($f$) Code Bits ($l$) Total ($f \\times l$) $i$ 7 0 1 7 $s$ 5 10 2 10 $m$ 2 110 3 6 $p$ 4 111 3 12 Total Bits: $\\sum (f_i \\times l_i) = 7 + 10 + 6 + 12 = \\mathbf{35\\text{ bits}}$ (versus fixed 2-bit encoding requiring $18 \\times 2 = 36$ bits)."
+      "Given two sequences $X = \\langle x_1, x_2, \\dots, x_m \\rangle$ and $Y = \\langle y_1, y_2, \\dots, y_n \\rangle$, a sequence $Z = \\langle z_1, z_2, \\dots, z_k \\rangle$ is a Common Subsequence if $Z$ is a subsequence of both $X$ and $Y$ (characters appear in the same relative order, but not necessarily contiguously). A Longest Common Subsequence (LCS) is a common subsequence of maximum possible length $k$. It is computed via Dynamic Programming in $O(m \\cdot n)$ time."
     ],
     "type": "question"
   },
   {
-    "id": "q80",
+    "id": "ese_q80",
     "q_num": 80,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L1",
+    "co": "CO5",
+    "score": 9.2,
+    "important": true,
+    "title": "What is a state-space tree in the N-Queens problem?",
+    "url": "question-bank.html?open=ese_q80",
+    "chunks": [
+      "In the N-Queens problem, the State-Space Tree is a conceptual tree representation where: The root node represents the initial state (an empty board with 0 queens placed). Each level $k$ represents the decision of which column to place queen $k$ in row $k$. Each branch corresponds to choosing a column $1, 2, \\dots, N$. Leaf nodes at depth $N$ represent complete configurations. Backtracking uses pruning functions to avoid generating dead-end subtrees where diagonal or column conflicts occur."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q81",
+    "q_num": 81,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 9.4,
+    "important": true,
+    "title": "Differentiate between best-case, worst-case and average-case analysis using a searching algorithm as an example.",
+    "url": "question-bank.html?open=ese_q81",
+    "chunks": [
+      "Analysis using Linear Search on an array of size $n$: Analysis Type Mathematical Condition Linear Search Cost Best-Case Analysis Minimum number of operations across all possible inputs of size $n$. $\\mathbf{O(1)}$ comparisons when target element is located at the first index ($A[0]$). Worst-Case Analysis Maximum number of operations across all possible inputs of size $n$; provides a strict performance guarantee. $\\mathbf{O(n)}$ comparisons when target is at the very last index ($A[n-1]$) or absent from the array. Average-Case Analysis Expected number of operations averaged over all inputs assuming a uniform probability distribution. $\\mathbf{O(n)}$ comparisons (average cost $= \\frac{n+1}{2} \\approx \\frac{n}{2}$)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q82",
+    "q_num": 82,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 2,
+    "bloom": "L3",
+    "co": "CO1",
+    "score": 9.0,
+    "important": false,
+    "title": "Find the time complexity of two consecutive loops, each executing n times.",
+    "url": "question-bank.html?open=ese_q82",
+    "chunks": [
+      "Consider two consecutive (sequential) loops: for i = 1 to n do // O(1) statement for j = 1 to n do // O(1) statement Analysis: First loop executes $n$ times: $T_1(n) = c_1 \\cdot n$. Second loop executes $n$ times: $T_2(n) = c_2 \\cdot n$. By the Sum Rule of asymptotic analysis: $T(n) = T_1(n) + T_2(n) = (c_1 + c_2)n$. Time Complexity: $\\mathbf{\\Theta(n)}$ (Linear Time, unlike nested loops which multiply to $\\Theta(n^2)$)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q83",
+    "q_num": 83,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.3,
+    "important": true,
+    "title": "Sort using Selection Sort to 29, 11, 45, 34, 13, 18, 6, 24.",
+    "url": "question-bank.html?open=ese_q83",
+    "chunks": [
+      "Input: [29, 11, 45, 34, 13, 18, 6, 24] ($n = 8$) Pass 1: Min in 0..7 is 6 (index 6). Swap with A[0]=29 . Array: [6, 11, 45, 34, 13, 18, 29, 24] Pass 2: Min in 1..7 is 11 (index 1). In place. Array: [6, 11, 45, 34, 13, 18, 29, 24] Pass 3: Min in 2..7 is 13 (index 4). Swap with A[2]=45 . Array: [6, 11, 13, 34, 45, 18, 29, 24] Pass 4: Min in 3..7 is 18 (index 5). Swap with A[3]=34 . Array: [6, 11, 13, 18, 45, 34, 29, 24] Pass 5: Min in 4..7 is 24 (index 7). Swap with A[4]=45 . Array: [6, 11, 13, 18, 24, 34, 29, 45] Pass 6: Min in 5..7 is 29 (index 6). Swap with A[5]=34 . Array: [6, 11, 13, 18, 24, 29, 34, 45] Pass 7: Min in 6..7 is 34 (index 6). In place. Array: [6, 11, 13, 18, 24, 29, 34, 45] Final Sorted Array: $\\mathbf{[6, 11, 13, 18, 24, 29, 34, 45]}$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q84",
+    "q_num": 84,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO2",
+    "score": 9.3,
+    "important": true,
+    "title": "Apply Insertion Sort on 18, 7, 12, 4, 15, 23, 17, 19, 12.",
+    "url": "question-bank.html?open=ese_q84",
+    "chunks": [
+      "Input: [18, 7, 12, 4, 15, 23, 17, 19, 12] ($n = 9$) Key = 7: Insert before 18 $\\rightarrow$ [7, 18, 12, 4, 15, 23, 17, 19, 12] Key = 12: Insert between 7 and 18 $\\rightarrow$ [7, 12, 18, 4, 15, 23, 17, 19, 12] Key = 4: Insert at index 0 $\\rightarrow$ [4, 7, 12, 18, 15, 23, 17, 19, 12] Key = 15: Insert between 12 and 18 $\\rightarrow$ [4, 7, 12, 15, 18, 23, 17, 19, 12] Key = 23: In place $\\rightarrow$ [4, 7, 12, 15, 18, 23, 17, 19, 12] Key = 17: Insert between 15 and 18 $\\rightarrow$ [4, 7, 12, 15, 17, 18, 23, 19, 12] Key = 19: Insert between 18 and 23 $\\rightarrow$ [4, 7, 12, 15, 17, 18, 19, 23, 12] Key = 12: Insert after first 12 $\\rightarrow$ [4, 7, 12, 12, 15, 17, 18, 19, 23] Final Sorted Array: $\\mathbf{[4, 7, 12, 12, 15, 17, 18, 19, 23]}$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q85",
+    "q_num": 85,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 9.4,
+    "important": true,
+    "title": "Explain Strassen's Matrix Multiplication using a 2 \u00d7 2 matrix example.",
+    "url": "question-bank.html?open=ese_q85",
+    "chunks": [
+      "Let $A = \\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{pmatrix}$ and $B = \\begin{pmatrix} b_{11} & b_{12} \\\\ b_{21} & b_{22} \\end{pmatrix}$. Instead of 8 scalar multiplications, Strassen computes 7 products : $M_1 = (a_{11} + a_{22})(b_{11} + b_{22})$ $M_2 = (a_{21} + a_{22}) b_{11}$ $M_3 = a_{11} (b_{12} - b_{22})$ $M_4 = a_{22} (b_{21} - b_{11})$ $M_5 = (a_{11} + a_{12}) b_{22}$ $M_6 = (a_{21} - a_{11}) (b_{11} + b_{12})$ $M_7 = (a_{12} - a_{22}) (b_{21} + b_{22})$ The resulting product matrix $C = AB$ is formed by additions/subtractions: $c_{11} = M_1 + M_4 - M_5 + M_7$ $c_{12} = M_3 + M_5$ $c_{21} = M_2 + M_4$ $c_{22} = M_1 - M_2 + M_3 + M_6$ Solving $T(n) = 7T(n/2) + O(n^2)$ yields $\\mathbf{\\Theta(n^{\\log_2 7}) \\approx \\Theta(n^{2.807})}$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q86",
+    "q_num": 86,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 9.3,
+    "important": true,
+    "title": "Explain how Randomized Quick Sort selects its pivot and why this can help avoid worst-case.",
+    "url": "question-bank.html?open=ese_q86",
+    "chunks": [
+      "In Randomized Quick Sort , instead of deterministically picking a fixed index (like the first or last element), the pivot is chosen uniformly at random from the current subarray $A[p..r]$: Randomly select an index $k \\in [p, r]$. Swap $A[k]$ with $A[r]$ (or $A[p]$). Execute standard partition around $A[r]$. Why It Avoids the Worst-Case: In standard Quick Sort, an adversary can deliberately supply an already sorted array to trigger worst-case $O(n^2)$ performance every single time. With randomization, no particular input arrangement can consistently force unbalanced $(n-1, 0)$ splits. The algorithm guarantees an expected running time of $O(n \\log n)$ for every possible input with high probability."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q87",
+    "q_num": 87,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.5,
+    "important": true,
+    "title": "Consider m=2, p=4, s=5, i=7. Generate Huffman Tree and calculate number of bits required to encode the message.",
+    "url": "question-bank.html?open=ese_q87",
+    "chunks": [
+      "Given Characters and Frequencies: $m = 2, p = 4, s = 5, i = 7$. (Total characters $= 2 + 4 + 5 + 7 = 18$) Step-by-Step Huffman Tree Construction: Min-heap contains: $\\{(m, 2), (p, 4), (s, 5), (i, 7)\\}$. Merge two smallest: $m(2)$ and $p(4) \\rightarrow N_1(6)$ with left child $m$, right child $p$. Queue: $\\{(s, 5), (N_1, 6), (i, 7)\\}$. Merge two smallest: $s(5)$ and $N_1(6) \\rightarrow N_2(11)$ with left child $s$, right child $N_1$. Queue: $\\{(i, 7), (N_2, 11)\\}$. Merge two remaining: $i(7)$ and $N_2(11) \\rightarrow \\text{Root}(18)$ with left child $i$, right child $N_2$. Huffman Bit Codes (Left = 0, Right = 1): $i$: 0 (Length = 1 bit) $s$: 10 (Length = 2 bits) $m$: 110 (Length = 3 bits) $p$: 111 (Length = 3 bits) Total Bits Calculation: $$\\text{Total Bits} = \\sum (\\text{frequency} \\times \\text{code length})$$$$\\text{Total Bits} = (7 \\times 1) + (5 \\times 2) + (2 \\times 3) + (4 \\times 3) = 7 + 10 + 6 + 12 = \\mathbf{35 \\text{ bits}}$$"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q88",
+    "q_num": 88,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO4",
+    "score": 9.4,
+    "important": true,
+    "title": "Let J1, J2, J3, J4 jobs along with their profits 50, 15, 10, 25 and Deadlines 2, 1, 2, 1. Find optimal schedule and total profit.",
+    "url": "question-bank.html?open=ese_q88",
+    "chunks": [
+      "Given Jobs: $J_1$: Profit = 50, Deadline = 2 $J_2$: Profit = 15, Deadline = 1 $J_3$: Profit = 10, Deadline = 2 $J_4$: Profit = 25, Deadline = 1 1. Sort in Descending Order of Profit: $J_1$: Profit = 50, Deadline = 2 $J_4$: Profit = 25, Deadline = 1 $J_2$: Profit = 15, Deadline = 1 $J_3$: Profit = 10, Deadline = 2 Max Deadline $= 2 \\implies$ Two slots: Slot 1 $[0-1]$ and Slot 2 $[1-2]$. 2. Greedy Slot Allocation: $J_1$ (Profit 50, Deadline 2): Latest open slot $\\le 2$ is Slot 2 . Assign $J_1 \\rightarrow$ Slot 2. $J_4$ (Profit 25, Deadline 1): Latest open slot $\\le 1$ is Slot 1 . Assign $J_4 \\rightarrow$ Slot 1. $J_2$ (Profit 15, Deadline 1): Slot 1 is full. Rejected. $J_3$ (Profit 10, Deadline 2): Slots 1 and 2 are both full. Rejected. Optimal Schedule: Slot 1: $J_4$ (Profit 25) Slot 2: $J_1$ (Profit 50) Total Maximum Profit: $25 + 50 = \\mathbf{75}$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q89",
+    "q_num": 89,
     "unit": "IV",
     "exam": "endterm",
     "marks": 3,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.4,
+    "important": true,
+    "title": "Why does Dijkstra's algorithm not work correctly for graphs containing negative edge weights? Explain with a suitable example.",
+    "url": "question-bank.html?open=ese_q89",
+    "chunks": [
+      "Why Dijkstra Fails on Negative Edges: Dijkstra's algorithm relies on a fundamental greedy property: once a vertex $u$ is extracted from the priority queue and added to the visited set $S$, its shortest path distance is assumed to be final and optimal . If negative edges exist, a longer multi-edge path discovered later can have a negative total weight that is strictly shorter than the already settled path, violating the greedy assumption. Counter-Example: Consider vertices $A, B, C$ with edges: $(A, B) = 5$, $(A, C) = 2$, and $(C, B) = -4$. Dijkstra settles $A (0)$, then relaxes $C (2)$ and $B (5)$. Next, Dijkstra settles $C (2)$ as visited. Next, it settles $B (5)$ as visited and permanently finalizes $dist[B] = 5$. However, path $A \\to C \\to B$ has cost $2 + (-4) = \\mathbf{-2}$, which is strictly less than $5$! Because $B$ was already marked visited, Dijkstra cannot update it, producing an incorrect distance. Solution: Use the Bellman-Ford Algorithm for graphs with negative weights."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q90",
+    "q_num": 90,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.3,
+    "important": true,
+    "title": "Apply na\u00efve string matching to find BCA in ABCBCABCBCBA. Show the successful alignments.",
+    "url": "question-bank.html?open=ese_q90",
+    "chunks": [
+      "Text $T$: ABCBCABCBCBA ($n = 12$, indices 0..11) Pattern $P$: BCA ($m = 3$) We test all shifts $s = 0, 1, \\dots, 9$: $s = 0$: $T[0..2] = \\text{ABC} \\neq \\text{BCA}$ $s = 1$: $T[1..3] = \\text{BCB} \\neq \\text{BCA}$ (mismatch at char 'B' vs 'A') $s = 2$: $T[2..4] = \\text{CBC} \\neq \\text{BCA}$ $s = 3$: $T[3..5] = \\text{BCA} == \\text{BCA} \\implies$ Valid Match at shift s = 3! (Indices 3, 4, 5) $s = 4$: $T[4..6] = \\text{CAB} \\neq \\text{BCA}$ $s = 5$: $T[5..7] = \\text{ABC} \\neq \\text{BCA}$ $s = 6$: $T[6..8] = \\text{BCB} \\neq \\text{BCA}$ $s = 7$: $T[7..9] = \\text{CBC} \\neq \\text{BCA}$ $s = 8$: $T[8..10] = \\text{BCA} == \\text{BCA} \\implies$ Valid Match at shift s = 8! (Indices 8, 9, 10) $s = 9$: $T[9..11] = \\text{CBA} \\neq \\text{BCA}$ Successful Alignments: Pattern BCA occurs at shift $s = 3$ (index 3) and shift $s = 8$ (index 8)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q91",
+    "q_num": 91,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 9.4,
+    "important": true,
+    "title": "Analyze the time complexity of sequential statements, selection statements and loops with suitable pseudocode examples.",
+    "url": "question-bank.html?open=ese_q91",
+    "chunks": [
+      "Asymptotic time complexity analysis across basic programming control structures: Sequential Statements: Execute one after another. Total time is the sum of their individual execution times:$$T(n) = c_1 + c_2 + \\dots + c_k = \\mathbf{O(1)}$$ Selection Statements ( if-else ): Evaluates a condition and executes one branch:$$T(n) = \\text{Cost(Condition)} + \\max(\\text{Cost(Then-branch)}, \\text{Cost(Else-branch)})$$ Example: If the then branch runs an $O(n)$ loop and the else branch runs $O(1)$, worst-case complexity is $\\mathbf{O(n)}$. Loops ( for / while ): Total time is the sum of costs across all iterations:$$T(n) = \\sum_{i=1}^{n} \\text{Cost of body}(i)$$ Single Loop (1 to $n$): $n \\times O(1) = \\mathbf{O(n)}$. Nested Loop ($1..n$ inside $1..n$): $n \\times n = \\mathbf{O(n^2)}$. Logarithmic Loop ($i = i \\times 2$): Halves or doubles problem size $\\implies \\mathbf{O(\\log n)}$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q92",
+    "q_num": 92,
+    "unit": "I",
+    "exam": "endterm",
+    "marks": 3,
+    "bloom": "L2",
+    "co": "CO1",
+    "score": 9.2,
+    "important": false,
+    "title": "Compare the best-case, worst-case and average-case analysis of Linear Search.",
+    "url": "question-bank.html?open=ese_q92",
+    "chunks": [
+      "Comprehensive analysis of Linear Search on array of $n$ elements: Best-Case: The searched element is at the very first index $A[0]$. Algorithm executes exactly 1 comparison and halts. Time Complexity: $\\mathbf{\\Omega(1)}$. Worst-Case: The searched element is at the last index $A[n-1]$ or absent from the array. Algorithm executes all $n$ comparisons. Time Complexity: $\\mathbf{O(n)}$. Average-Case: Assuming the element is equally likely to be at any index $i \\in [1, n]$ with probability $1/n$:$$\\text{Expected Comparisons} = \\sum_{i=1}^{n} i \\cdot \\frac{1}{n} = \\frac{1}{n} \\cdot \\frac{n(n+1)}{2} = \\frac{n+1}{2}$$Time Complexity: $\\mathbf{\\Theta(n)}$ (Linear Time)."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q93",
+    "q_num": 93,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO2",
+    "score": 9.5,
+    "important": true,
+    "title": "Compare Counting Sort, Radix Sort and Bucket Sort with respect to input requirements and running time.",
+    "url": "question-bank.html?open=ese_q93",
+    "chunks": [
+      "Comparison of Non-Comparison Linear-Time Sorting Algorithms: Algorithm Input Requirements / Constraints Time Complexity (Average / Worst) Space Complexity Stability Counting Sort Discrete integers in a small known range $[0, k]$ where $k = O(n)$. $\\Theta(n + k)$ $O(n + k)$ Stable Radix Sort $n$ keys with $d$ digits or fixed-length strings/tuples; requires a stable sub-sort (Counting Sort). $\\Theta(d(n + k))$ $O(n + k)$ Stable Bucket Sort Floating-point numbers uniformly distributed over a continuous interval $[0, 1)$. Average: $\\Theta(n)$ Worst: $\\Theta(n^2)$ (when all items cluster in one bucket) $O(n + k)$ Stable (with stable bucket sort)"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q94",
+    "q_num": 94,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO2",
+    "score": 9.4,
+    "important": true,
+    "title": "Compare Bubble Sort, Selection Sort and Insertion Sort in terms of working principle, stability and time complexity.",
+    "url": "question-bank.html?open=ese_q94",
+    "chunks": [
+      "Comparison of Elementary $O(n^2)$ Sorting Algorithms: Parameter Bubble Sort Selection Sort Insertion Sort Working Principle Repeatedly swaps adjacent out-of-order elements, bubbling the largest to the end. Finds the minimum element from the unsorted subarray and swaps it to the front. Inserts each key into its correct relative position within the sorted prefix. Stability Stable (does not swap equal keys). Unstable (long-distance swaps can change relative order of equals). Stable (preserves order of duplicates). Best-Case Time $\\Theta(n)$ (with swap flag). $\\Theta(n^2)$ (always scans entire unsorted prefix). $\\Theta(n)$ (already sorted). Worst-Case Time $\\Theta(n^2)$ (reverse sorted). $\\Theta(n^2)$ $\\Theta(n^2)$ (reverse sorted). Number of Swaps $O(n^2)$ swaps. Strictly $O(n)$ swaps (at most $n-1$). $O(n^2)$ shifts."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q95",
+    "q_num": 95,
+    "unit": "III",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO3",
+    "score": 9.5,
+    "important": true,
+    "title": "Compare Merge Sort and Quick Sort in terms of partitioning, merging, auxiliary space and time complexity.",
+    "url": "question-bank.html?open=ese_q95",
+    "chunks": [
+      "Comparison between Merge Sort and Quick Sort: Feature Merge Sort Quick Sort Division / Partitioning Trivial divide: splits array strictly in half at index $mid = (low+high)/2$ in $O(1)$ time. Complex partitioning: rearranges elements in $O(n)$ time around a pivot. Combination / Merging Heavy work is in the combine step: two-way linear merge ($O(n)$). No combine step required! Once partitions are sorted, the entire array is sorted. Auxiliary Space $O(n)$ extra memory (requires temporary arrays for merging). Not in-place. $O(\\log n)$ stack space (in-place sorting). Time Complexity Guaranteed $\\mathbf{\\Theta(n \\log n)}$ in all cases (best, worst, average). Average: $\\mathbf{O(n \\log n)}$, Worst-case: $\\mathbf{O(n^2)}$ (when partitions are unbalanced). Stability Stable . Unstable ."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q96",
+    "q_num": 96,
+    "unit": "II",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO2",
+    "score": 9.6,
+    "important": true,
+    "title": "Explain the Master Method and demonstrate how its three standard cases are used to solve recurrences.",
+    "url": "question-bank.html?open=ese_q96",
+    "chunks": [
+      "The Master Method solves recurrences of the form: $$T(n) = a T(n/b) + f(n) \\quad \\text{where } a \\ge 1, b > 1$$ It compares $f(n)$ asymptotically with the critical function $n^{\\log_b a}$: Case 1 ($f(n)$ grows polynomially slower than $n^{\\log_b a}$): If $f(n) = O(n^{\\log_b a - \\epsilon})$ for some $\\epsilon > 0$:$$T(n) = \\mathbf{\\Theta(n^{\\log_b a})}$$ Example: $T(n) = 8T(n/2) + 1000n^2$. $n^{\\log_2 8} = n^3$. Since $n^2 = O(n^{3-1})$, $T(n) = \\Theta(n^3)$. Case 2 ($f(n)$ and $n^{\\log_b a}$ have the same order of growth): If $f(n) = \\Theta(n^{\\log_b a} \\log^k n)$ for $k \\ge 0$:$$T(n) = \\mathbf{\\Theta(n^{\\log_b a} \\log^{k+1} n)}$$ Example: $T(n) = 2T(n/2) + n$. $n^{\\log_2 2} = n$. Here $f(n) = n = \\Theta(n^1 \\log^0 n) \\implies T(n) = \\Theta(n \\log n)$. Case 3 ($f(n)$ grows polynomially faster and satisfies regularity): If $f(n) = \\Omega(n^{\\log_b a + \\epsilon})$ for some $\\epsilon > 0$ and $a f(n/b) \\le c f(n)$ for $c < 1$:$$T(n) = \\mathbf{\\Theta(f(n))}$$ Example: $T(n) = 2T(n/2) + n^2$. $n^{\\log_2 2} = n$. Since $n^2 = \\Omega(n^{1+1})$, $T(n) = \\Theta(n^2)$."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q97",
+    "q_num": 97,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L2",
+    "co": "CO4",
+    "score": 9.5,
+    "important": true,
+    "title": "Explain the matrix-chain multiplication problem and show how the split position affects the number of scalar multiplications.",
+    "url": "question-bank.html?open=ese_q97",
+    "chunks": [
+      "The Matrix Chain Multiplication Problem finds the optimal parenthesization of a product of $n$ matrices $A_1 A_2 \\dots A_n$ that minimizes total scalar multiplications. Matrix multiplication is associative ($(AB)C = A(BC)$), but the parenthesization dramatically impacts operations. Impact of Split Position $k$: To multiply $A_{i..j}$, we choose an intermediate split point $k$ ($i \\le k < j$) such that $(A_i \\dots A_k)(A_{k+1} \\dots A_j)$. Recurrence: $m[i, j] = \\min_{i \\le k < j} \\{m[i, k] + m[k+1, j] + p_{i-1} p_k p_j\\}$. Concrete Demonstration on 3 Matrices: Dimensions: $A_1(10 \\times 100), A_2(100 \\times 5), A_3(5 \\times 50)$. Split at $k = 1$ ($(A_1(A_2 A_3))$): Cost $= (100 \\times 5 \\times 50) + (10 \\times 100 \\times 50) = 25,000 + 50,000 = \\mathbf{75,000}$. Split at $k = 2$ ($((A_1 A_2)A_3)$): Cost $= (10 \\times 100 \\times 5) + (10 \\times 5 \\times 50) = 5,000 + 2,500 = \\mathbf{7,500}$. Splitting at $k=2$ is 10 times faster than splitting at $k=1$, demonstrating the critical role of optimal parenthesization."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q98",
+    "q_num": 98,
+    "unit": "IV",
+    "exam": "endterm",
+    "marks": 5,
     "bloom": "L3",
     "co": "CO4",
     "score": 9.6,
     "important": true,
     "title": "Explain how dynamic programming can solve the LCS problem. Illustrate the construction of the table using two short strings.",
-    "url": "question-bank.html?open=q80",
+    "url": "question-bank.html?open=ese_q98",
     "chunks": [
-      "The Longest Common Subsequence (LCS) problem finds the maximum-length subsequence present in two sequences $X$ and $Y$. Dynamic Programming solves it by defining $L[i,j]$ as the LCS length of prefixes $X[1\\dots i]$ and $Y[1\\dots j]$ using the recurrence: $$L[i,j] = \\begin{cases} 0 & \\text{if } i=0 \\text{ or } j=0 \\\\ L[i-1,j-1] + 1 & \\text{if } X[i] = Y[j] \\\\ \\max(L[i-1,j], L[i,j-1]) & \\text{if } X[i] \\neq Y[j] \\end{cases}$$ Illustration with $X = \\text{\"ABA\"}$ and $Y = \\text{\"BA\"}$: Initialize row $0$ and column $0$ to 0. For $X[1]=\\text{'A'}$: $L[1,1]=0$, $L[1,2]=L[0,1]+1=1$. For $X[2]=\\text{'B'}$: $L[2,1]=L[1,0]+1=1$, $L[2,2]=\\max(L[1,2], L[2,1])=1$. For $X[3]=\\text{'A'}$: $L[3,1]=\\max(1,0)=1$, $L[3,2]=L[2,1]+1=2$. Traceback: From cell $(3,2)$ with value 2, diagonal jumps identify characters $\\text{'A'}$ at $(3,2)$ and $\\text{'B'}$ at $(2,1)$, yielding the common subsequence $\\text{LCS} = \\text{\"BA\"}$ with length 2 in $O(m \\cdot n)$ time."
+      "Dynamic Programming for Longest Common Subsequence (LCS): Let $c[i, j]$ be the length of LCS for prefixes $X[1..i]$ and $Y[1..j]$. Recurrence Formula: $$c[i, j] = \\begin{cases} 0 & \\text{if } i=0 \\text{ or } j=0 \\\\ c[i-1, j-1] + 1 & \\text{if } X[i] == Y[j] \\\\ \\max(c[i-1, j], c[i, j-1]) & \\text{if } X[i] \\neq Y[j] \\end{cases}$$ Table Construction for $X = \\text{\"ABC\"}$ and $Y = \\text{\"AC\"}$: $j=0$ ($\\emptyset$) $j=1$ (A) $j=2$ (C) $i=0$ ($\\emptyset$) 0 0 0 $i=1$ (A) 0 1 ($\\nwarrow$) 1 ($\\leftarrow$) $i=2$ (B) 0 1 ($\\uparrow$) 1 ($\\uparrow$) $i=3$ (C) 0 1 ($\\uparrow$) 2 ($\\nwarrow$) Traceback: From cell $(3, 2) = 2$: $X[3] == Y[2] == \\text{'C'} \\implies$ record 'C', move to $(2, 1)$. Cell $(2, 1) = 1$ comes from $(1, 1)$. At $(1, 1)$, $X[1] == Y[1] == \\text{'A'} \\implies$ record 'A'. LCS: $\\mathbf{\\text{\"AC\"}}$ with Length = 2. Complexity: $\\Theta(m \\cdot n)$ time and space."
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q99",
+    "q_num": 99,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.5,
+    "important": true,
+    "title": "A salesperson needs to visit 4 cities (A, B, C, and D). They must start at City A, visit every other city exactly once, and return to City A. Find the route that minimizes total travel distance based on the given connections.",
+    "url": "question-bank.html?open=ese_q99",
+    "chunks": [
+      "Traveling Salesperson Problem (TSP) on 4 Cities $\\{A, B, C, D\\}$: Distances from A: $AB=15, AC=18, AD=24$. Distances from B: $BA=19, BC=37, BD=24$. Distances from C: $CA=15, CB=35, CD=30$. Distances from D: $DA=20, DB=25, DC=30$. Starting and ending at city A, there are $(4-1)! = 3! = 6$ possible Hamiltonian tours: $A \\to B \\to C \\to D \\to A$: Cost $= 15 + 37 + 30 + 20 = \\mathbf{102}$ $A \\to B \\to D \\to C \\to A$: Cost $= 15 + 24 + 30 + 15 = \\mathbf{84}$ $A \\to C \\to B \\to D \\to A$: Cost $= 18 + 35 + 24 + 20 = \\mathbf{97}$ $A \\to C \\to D \\to B \\to A$: Cost $= 18 + 30 + 25 + 19 = \\mathbf{92}$ $A \\to D \\to B \\to C \\to A$: Cost $= 24 + 25 + 35 + 15 = \\mathbf{99}$ $A \\to D \\to C \\to B \\to A$: Cost $= 24 + 30 + 35 + 19 = \\mathbf{108}$ Optimal Tour: $$\\mathbf{A \\to B \\to D \\to C \\to A \\quad \\text{with minimum total distance } = \\mathbf{84 \\text{ km}}}$$"
+    ],
+    "type": "question"
+  },
+  {
+    "id": "ese_q100",
+    "q_num": 100,
+    "unit": "V",
+    "exam": "endterm",
+    "marks": 5,
+    "bloom": "L3",
+    "co": "CO5",
+    "score": 9.5,
+    "important": true,
+    "title": "Given a Text T and a Pattern P: Text (T): A C A A B C B B A A B; Pattern (P): A A B. Tasks: 1. Find all valid shifts where the pattern occurs in the text. 2. Calculate the total number of character-to-character comparisons performed by the algorithm.",
+    "url": "question-bank.html?open=ese_q100",
+    "chunks": [
+      "Text $T$: A C A A B C B B A A B ($n = 11$, indices 0..10) Pattern $P$: A A B ($m = 3$) Possible shifts $s = 0, 1, \\dots, 11-3 = 8$. Step-by-Step Shift Tracing and Comparison Count: $s = 0$ (\"ACA\"): Compare $P[0]='A' == T[0]='A'$ (1), $P[1]='A' \\neq T[1]='C'$ (2). Mismatch! $\\rightarrow$ 2 comparisons . $s = 1$ (\"CAA\"): $P[0]='A' \\neq T[1]='C'$ (1). Mismatch! $\\rightarrow$ 1 comparison . $s = 2$ (\"AAB\"): $P[0]='A' == T[2]='A'$ (1), $P[1]='A' == T[3]='A'$ (2), $P[2]='B' == T[4]='B'$ (3). MATCH at s = 2! $\\rightarrow$ 3 comparisons . $s = 3$ (\"ABC\"): $P[0]='A' == T[3]='A'$ (1), $P[1]='A' \\neq T[4]='B'$ (2). Mismatch! $\\rightarrow$ 2 comparisons . $s = 4$ (\"BCB\"): $P[0]='A' \\neq T[4]='B'$ (1). Mismatch! $\\rightarrow$ 1 comparison . $s = 5$ (\"CBB\"): $P[0]='A' \\neq T[5]='C'$ (1). Mismatch! $\\rightarrow$ 1 comparison . $s = 6$ (\"BBA\"): $P[0]='A' \\neq T[6]='B'$ (1). Mismatch! $\\rightarrow$ 1 comparison . $s = 7$ (\"BAA\"): $P[0]='A' \\neq T[7]='B'$ (1). Mismatch! $\\rightarrow$ 1 comparison . $s = 8$ (\"AAB\"): $P[0]='A' == T[8]='A'$ (1), $P[1]='A' == T[9]='A'$ (2), $P[2]='B' == T[10]='B'$ (3). MATCH at s = 8! $\\rightarrow$ 3 comparisons . Answers: Valid Shifts: The pattern occurs at shift $s = 2$ (indices 2..4) and shift $s = 8$ (indices 8..10). Total Comparisons Performed: $2 + 1 + 3 + 2 + 1 + 1 + 1 + 1 + 3 = \\mathbf{15 \\text{ character comparisons}}$."
     ],
     "type": "question"
   },
