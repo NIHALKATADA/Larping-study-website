@@ -128,7 +128,11 @@ for (const sub of subjects) {
 const globalIndex = JSON.parse(fs.readFileSync(path.join(projectRoot, 'global', 'assistant-index.json'), 'utf8'));
 const globalCore = new AssistantCore('global', realAliases, globalIndex);
 const dbmsQ1 = globalCore.execute('show Q1 dbms').result;
-if (!dbmsQ1 || dbmsQ1.subject !== 'dbms' || Number(dbmsQ1.q_num) !== 1) {
+if (Array.isArray(dbmsQ1)) {
+  if (!dbmsQ1.length || !dbmsQ1.every(q => q.subject === 'dbms' && Number(q.q_num) === 1)) {
+    throw new Error('Global subject-scoped Q1 lookup failed');
+  }
+} else if (!dbmsQ1 || dbmsQ1.subject !== 'dbms' || Number(dbmsQ1.q_num) !== 1) {
   throw new Error('Global subject-scoped Q1 lookup failed');
 }
 console.log('✅ Global subject-scoped Q1 lookup works');
