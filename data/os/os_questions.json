@@ -1869,8 +1869,8 @@
     "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Busy Waiting: They rely on while(true) spin-loops. This wastes massive amounts of CPU cycles just checking a lock, which is catastrophic in modern multitasking systems.</li><li>Scalability: Peterson's solution mathematically only works for exactly two processes. Scaling it to 100 processes is incredibly complex.</li></ul>"
   },
   {
-    "id": "q91",
-    "q_num": 91,
+    "id": "ese_q1",
+    "q_num": 1,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L1",
@@ -1888,8 +1888,8 @@
     ]
   },
   {
-    "id": "q92",
-    "q_num": 92,
+    "id": "ese_q2",
+    "q_num": 2,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L1",
@@ -1908,8 +1908,8 @@
     ]
   },
   {
-    "id": "q93",
-    "q_num": 93,
+    "id": "ese_q3",
+    "q_num": 3,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L1",
@@ -1928,8 +1928,8 @@
     ]
   },
   {
-    "id": "q94",
-    "q_num": 94,
+    "id": "ese_q4",
+    "q_num": 4,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L2",
@@ -1948,8 +1948,8 @@
     ]
   },
   {
-    "id": "q95",
-    "q_num": 95,
+    "id": "ese_q5",
+    "q_num": 5,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L2",
@@ -1968,8 +1968,8 @@
     ]
   },
   {
-    "id": "q96",
-    "q_num": 96,
+    "id": "ese_q6",
+    "q_num": 6,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L2",
@@ -1988,8 +1988,8 @@
     ]
   },
   {
-    "id": "q97",
-    "q_num": 97,
+    "id": "ese_q7",
+    "q_num": 7,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L3",
@@ -2008,8 +2008,8 @@
     ]
   },
   {
-    "id": "q98",
-    "q_num": 98,
+    "id": "ese_q8",
+    "q_num": 8,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L3",
@@ -2028,8 +2028,8 @@
     ]
   },
   {
-    "id": "q99",
-    "q_num": 99,
+    "id": "ese_q9",
+    "q_num": 9,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L3",
@@ -2048,8 +2048,8 @@
     ]
   },
   {
-    "id": "q100",
-    "q_num": 100,
+    "id": "ese_q10",
+    "q_num": 10,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L2",
@@ -2068,8 +2068,8 @@
     ]
   },
   {
-    "id": "q101",
-    "q_num": 101,
+    "id": "ese_q11",
+    "q_num": 11,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L1",
@@ -2088,8 +2088,8 @@
     ]
   },
   {
-    "id": "q102",
-    "q_num": 102,
+    "id": "ese_q12",
+    "q_num": 12,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L2",
@@ -2108,8 +2108,8 @@
     ]
   },
   {
-    "id": "q103",
-    "q_num": 103,
+    "id": "ese_q13",
+    "q_num": 13,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L2",
@@ -2128,8 +2128,8 @@
     ]
   },
   {
-    "id": "q104",
-    "q_num": 104,
+    "id": "ese_q14",
+    "q_num": 14,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L2",
@@ -2148,8 +2148,8 @@
     ]
   },
   {
-    "id": "q105",
-    "q_num": 105,
+    "id": "ese_q15",
+    "q_num": 15,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L2",
@@ -2168,8 +2168,8 @@
     ]
   },
   {
-    "id": "q106",
-    "q_num": 106,
+    "id": "ese_q16",
+    "q_num": 16,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L3",
@@ -2188,8 +2188,8 @@
     ]
   },
   {
-    "id": "q107",
-    "q_num": 107,
+    "id": "ese_q17",
+    "q_num": 17,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L3",
@@ -2208,8 +2208,8 @@
     ]
   },
   {
-    "id": "q108",
-    "q_num": 108,
+    "id": "ese_q18",
+    "q_num": 18,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L3",
@@ -2228,8 +2228,8 @@
     ]
   },
   {
-    "id": "q109",
-    "q_num": 109,
+    "id": "ese_q19",
+    "q_num": 19,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L3",
@@ -2248,8 +2248,8 @@
     ]
   },
   {
-    "id": "q110",
-    "q_num": 110,
+    "id": "ese_q20",
+    "q_num": 20,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L2",
@@ -2268,8 +2268,8 @@
     ]
   },
   {
-    "id": "q111",
-    "q_num": 111,
+    "id": "ese_q21",
+    "q_num": 21,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L2",
@@ -2288,8 +2288,8 @@
     ]
   },
   {
-    "id": "q112",
-    "q_num": 112,
+    "id": "ese_q22",
+    "q_num": 22,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L2",
@@ -2308,8 +2308,8 @@
     ]
   },
   {
-    "id": "q113",
-    "q_num": 113,
+    "id": "ese_q23",
+    "q_num": 23,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L2",
@@ -2328,8 +2328,8 @@
     ]
   },
   {
-    "id": "q114",
-    "q_num": 114,
+    "id": "ese_q24",
+    "q_num": 24,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L4",
@@ -2348,8 +2348,8 @@
     ]
   },
   {
-    "id": "q115",
-    "q_num": 115,
+    "id": "ese_q25",
+    "q_num": 25,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L3",
@@ -2368,8 +2368,8 @@
     ]
   },
   {
-    "id": "q116",
-    "q_num": 116,
+    "id": "ese_q26",
+    "q_num": 26,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L4",
@@ -2388,8 +2388,8 @@
     ]
   },
   {
-    "id": "q117",
-    "q_num": 117,
+    "id": "ese_q27",
+    "q_num": 27,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L4",
@@ -2408,8 +2408,8 @@
     ]
   },
   {
-    "id": "q118",
-    "q_num": 118,
+    "id": "ese_q28",
+    "q_num": 28,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L3",
@@ -2428,8 +2428,8 @@
     ]
   },
   {
-    "id": "q119",
-    "q_num": 119,
+    "id": "ese_q29",
+    "q_num": 29,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L4",
@@ -2448,8 +2448,8 @@
     ]
   },
   {
-    "id": "q120",
-    "q_num": 120,
+    "id": "ese_q30",
+    "q_num": 30,
     "unit": "IV",
     "exam": "endterm",
     "bloom": "L5",
@@ -2468,8 +2468,8 @@
     ]
   },
   {
-    "id": "q121",
-    "q_num": 121,
+    "id": "ese_q31",
+    "q_num": 31,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L1",
@@ -2488,8 +2488,8 @@
     ]
   },
   {
-    "id": "q122",
-    "q_num": 122,
+    "id": "ese_q32",
+    "q_num": 32,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L1",
@@ -2507,8 +2507,8 @@
     ]
   },
   {
-    "id": "q123",
-    "q_num": 123,
+    "id": "ese_q33",
+    "q_num": 33,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L1",
@@ -2527,8 +2527,8 @@
     ]
   },
   {
-    "id": "q124",
-    "q_num": 124,
+    "id": "ese_q34",
+    "q_num": 34,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L2",
@@ -2547,8 +2547,8 @@
     ]
   },
   {
-    "id": "q125",
-    "q_num": 125,
+    "id": "ese_q35",
+    "q_num": 35,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L2",
@@ -2567,8 +2567,8 @@
     ]
   },
   {
-    "id": "q126",
-    "q_num": 126,
+    "id": "ese_q36",
+    "q_num": 36,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L2",
@@ -2587,8 +2587,8 @@
     ]
   },
   {
-    "id": "q127",
-    "q_num": 127,
+    "id": "ese_q37",
+    "q_num": 37,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L3",
@@ -2607,8 +2607,8 @@
     ]
   },
   {
-    "id": "q128",
-    "q_num": 128,
+    "id": "ese_q38",
+    "q_num": 38,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L3",
@@ -2627,8 +2627,8 @@
     ]
   },
   {
-    "id": "q129",
-    "q_num": 129,
+    "id": "ese_q39",
+    "q_num": 39,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L2",
@@ -2647,8 +2647,8 @@
     ]
   },
   {
-    "id": "q130",
-    "q_num": 130,
+    "id": "ese_q40",
+    "q_num": 40,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L3",
@@ -2667,8 +2667,8 @@
     ]
   },
   {
-    "id": "q131",
-    "q_num": 131,
+    "id": "ese_q41",
+    "q_num": 41,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L2",
@@ -2687,8 +2687,8 @@
     ]
   },
   {
-    "id": "q132",
-    "q_num": 132,
+    "id": "ese_q42",
+    "q_num": 42,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L2",
@@ -2707,8 +2707,8 @@
     ]
   },
   {
-    "id": "q133",
-    "q_num": 133,
+    "id": "ese_q43",
+    "q_num": 43,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L2",
@@ -2727,8 +2727,8 @@
     ]
   },
   {
-    "id": "q134",
-    "q_num": 134,
+    "id": "ese_q44",
+    "q_num": 44,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L2",
@@ -2747,8 +2747,8 @@
     ]
   },
   {
-    "id": "q135",
-    "q_num": 135,
+    "id": "ese_q45",
+    "q_num": 45,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L2",
@@ -2767,8 +2767,8 @@
     ]
   },
   {
-    "id": "q136",
-    "q_num": 136,
+    "id": "ese_q46",
+    "q_num": 46,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L2",
@@ -2787,8 +2787,8 @@
     ]
   },
   {
-    "id": "q137",
-    "q_num": 137,
+    "id": "ese_q47",
+    "q_num": 47,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L3",
@@ -2807,8 +2807,8 @@
     ]
   },
   {
-    "id": "q138",
-    "q_num": 138,
+    "id": "ese_q48",
+    "q_num": 48,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L3",
@@ -2827,8 +2827,8 @@
     ]
   },
   {
-    "id": "q139",
-    "q_num": 139,
+    "id": "ese_q49",
+    "q_num": 49,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L3",
@@ -2847,8 +2847,8 @@
     ]
   },
   {
-    "id": "q140",
-    "q_num": 140,
+    "id": "ese_q50",
+    "q_num": 50,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L2",
@@ -2867,8 +2867,8 @@
     ]
   },
   {
-    "id": "q141",
-    "q_num": 141,
+    "id": "ese_q51",
+    "q_num": 51,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L2",
@@ -2887,8 +2887,8 @@
     ]
   },
   {
-    "id": "q142",
-    "q_num": 142,
+    "id": "ese_q52",
+    "q_num": 52,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L2",
@@ -2907,8 +2907,8 @@
     ]
   },
   {
-    "id": "q143",
-    "q_num": 143,
+    "id": "ese_q53",
+    "q_num": 53,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L2",
@@ -2927,8 +2927,8 @@
     ]
   },
   {
-    "id": "q144",
-    "q_num": 144,
+    "id": "ese_q54",
+    "q_num": 54,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L4",
@@ -2947,8 +2947,8 @@
     ]
   },
   {
-    "id": "q145",
-    "q_num": 145,
+    "id": "ese_q55",
+    "q_num": 55,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L4",
@@ -2967,8 +2967,8 @@
     ]
   },
   {
-    "id": "q146",
-    "q_num": 146,
+    "id": "ese_q56",
+    "q_num": 56,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L4",
@@ -2987,8 +2987,8 @@
     ]
   },
   {
-    "id": "q147",
-    "q_num": 147,
+    "id": "ese_q57",
+    "q_num": 57,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L3",
@@ -3007,8 +3007,8 @@
     ]
   },
   {
-    "id": "q148",
-    "q_num": 148,
+    "id": "ese_q58",
+    "q_num": 58,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L4",
@@ -3027,8 +3027,8 @@
     ]
   },
   {
-    "id": "q149",
-    "q_num": 149,
+    "id": "ese_q59",
+    "q_num": 59,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L4",
@@ -3047,8 +3047,8 @@
     ]
   },
   {
-    "id": "q150",
-    "q_num": 150,
+    "id": "ese_q60",
+    "q_num": 60,
     "unit": "V",
     "exam": "endterm",
     "bloom": "L5",
