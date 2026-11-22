@@ -10,7 +10,15 @@
     "co": "CO1",
     "title": "Determine whether each of the following is a proposition. If it is a proposition, state whether it is True or False. (a) Every prime number greater than 2 is odd. (b) 7 + 8 = 16. (c) The Moon is a planet. (d) India is located in Asia.",
     "answer_html": "<p><b>(a)</b> It is a proposition. It is <b>True</b>.</p><p><b>(b)</b> It is a proposition. It is <b>False</b> (since 7+8=15).</p><p><b>(c)</b> It is a proposition. It is <b>False</b> (the Moon is a satellite, not a planet).</p><p><b>(d)</b> It is a proposition. It is <b>True</b>.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "True",
+      "False",
+      "Determine whether",
+      "whether",
+      "following"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) It is a proposition.</li><li>(b) It is a proposition.</li></ul>"
   },
   {
     "id": "u1_pa_q2",
@@ -23,7 +31,15 @@
     "co": "CO1",
     "title": "Let p: It is raining, q: I carry an umbrella. Translate the following symbolic propositions into English. (a) p ∧ q (b) p ∨ q",
     "answer_html": "<p><b>(a) p ∧ q:</b> It is raining and I carry an umbrella.</p><p><b>(b) p ∨ q:</b> It is raining or I carry an umbrella.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "p ∧ q",
+      "p ∨ q",
+      "Let p",
+      "raining q",
+      "carry"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) p ∧ q: It is raining and I carry an umbrella.</li><li>(b) p ∨ q: It is raining or I carry an umbrella.</li></ul>"
   },
   {
     "id": "u1_pa_q3",
@@ -36,7 +52,15 @@
     "co": "CO1",
     "title": "Write the negation of each of the following statements. (a) Today is Monday. (b) The computer is connected to the internet. (c) The file is encrypted. (d) The classroom is empty.",
     "answer_html": "<p><b>(a)</b> Today is not Monday.</p><p><b>(b)</b> The computer is not connected to the internet.</p><p><b>(c)</b> The file is not encrypted.</p><p><b>(d)</b> The classroom is not empty.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "negation",
+      "following statements",
+      "statements",
+      "Today",
+      "Monday b"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) Today is not Monday.</li><li>(b) The computer is not connected to the internet.</li></ul>"
   },
   {
     "id": "u1_pa_q4",
@@ -49,7 +73,15 @@
     "co": "CO1",
     "title": "If a number is divisible by 4, then it is even. Write its (a) converse and (b) inverse",
     "answer_html": "<p>Let p: A number is divisible by 4. q: It is even. The statement is p &rarr; q.</p><p><b>(a) Converse (q &rarr; p):</b> If a number is even, then it is divisible by 4.</p><p><b>(b) Inverse (&not;p &rarr; &not;q):</b> If a number is not divisible by 4, then it is not even.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Converse",
+      "Inverse",
+      "number",
+      "divisible",
+      "then"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Let p: A number is divisible by 4.</li><li>The statement is p → q.</li></ul>"
   },
   {
     "id": "u1_pa_q5",
@@ -62,7 +94,15 @@
     "co": "CO1",
     "title": "Show the compound proposition (p ↔ q) ≡ (p → q) ∧ (q → p) is logically equivalent.",
     "answer_html": "<p>This is a standard logical equivalence definition. We can show it using a truth table:</p><table border='1'><tr><th>p</th><th>q</th><th>p &harr; q</th><th>p &rarr; q</th><th>q &rarr; p</th><th>(p &rarr; q) &and; (q &rarr; p)</th></tr><tr><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td></tr><tr><td>T</td><td>F</td><td>F</td><td>F</td><td>T</td><td>F</td></tr><tr><td>F</td><td>T</td><td>F</td><td>T</td><td>F</td><td>F</td></tr><tr><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td><td>T</td></tr></table><p>Since columns 3 and 6 match exactly, the statements are logically equivalent.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "p ↔ q",
+      "p → q",
+      "q → p",
+      "compound proposition",
+      "proposition p"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> T</li><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> F</li><li><strong>p:</strong> F <em>vs</em> <strong>q:</strong> T</li></ul>"
   },
   {
     "id": "u1_pa_q6",
@@ -75,7 +115,15 @@
     "co": "CO1",
     "title": "Let p: It is raining, q: I carry an umbrella, r: I wear a raincoat. Write the following statements in symbolic form. (a) It is raining and I carry an umbrella. (b) It is not raining but I wear a raincoat.",
     "answer_html": "<p><b>(a)</b> p &and; q</p><p><b>(b)</b> &not;p &and; r (Note: 'but' translates to logical AND)</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Let p",
+      "raining q",
+      "carry",
+      "umbrella r",
+      "wear"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) p ∧ q (b) ¬p ∧ r (Note: 'but' translates to logical AND)</li></ul>"
   },
   {
     "id": "u1_pa_q7",
@@ -88,7 +136,15 @@
     "co": "CO1",
     "title": "Let p, q, r be as mentioned in Q6. Translate the following symbolic propositions into English (a) p → q (b) p ↔ q (c) p ⊕ q",
     "answer_html": "<p><b>(a) p &rarr; q:</b> If it is raining, then I carry an umbrella.</p><p><b>(b) p &harr; q:</b> It is raining if and only if I carry an umbrella.</p><p><b>(c) p &oplus; q:</b> Either it is raining or I carry an umbrella, but not both.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "p → q",
+      "p ↔ q",
+      "p ⊕ q",
+      "Let p",
+      "mentioned"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) p → q: If it is raining, then I carry an umbrella.</li><li>(b) p ↔ q: It is raining if and only if I carry an umbrella.</li></ul>"
   },
   {
     "id": "u1_pa_q8",
@@ -101,7 +157,15 @@
     "co": "CO1",
     "title": "Using a truth table, determine whether p ∨ ¬p is a Tautology, Contradiction, or Contingency.",
     "answer_html": "<table border='1'><tr><th>p</th><th>&not;p</th><th>p &or; &not;p</th></tr><tr><td>T</td><td>F</td><td>T</td></tr><tr><td>F</td><td>T</td><td>T</td></tr></table><p>Since all truth values in the final column are True, <b>p &or; &not;p is a Tautology</b>.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "p ∨ ¬p",
+      "p ∨ ¬p is a Tautology",
+      "truth table",
+      "table determine",
+      "determine whether"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li><strong>p:</strong> T <em>vs</em> <strong>¬p:</strong> F</li><li><strong>p:</strong> F <em>vs</em> <strong>¬p:</strong> T</li></ul>"
   },
   {
     "id": "u1_pa_q9",
@@ -114,7 +178,15 @@
     "co": "CO1",
     "title": "Define the following terms with examples. (a) Tautology (b) Conditional Statement",
     "answer_html": "<p><b>(a) Tautology:</b> A compound proposition that is always true, regardless of the truth values of the propositional variables that occur in it. Example: p &or; &not;p (Either it is raining or it is not raining).</p><p><b>(b) Conditional Statement:</b> A statement of the form p &rarr; q, which is false only when p is true and q is false. It is read as 'if p, then q'. Example: If it rains, then I will stay at home.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Tautology",
+      "Conditional Statement",
+      "following terms",
+      "terms",
+      "Tautology b"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) Tautology: A compound proposition that is always true, regardless of the truth values of the propositional variables that occur in it.</li><li>Example: p ∨ ¬p (Either it is raining or it is not raining).</li></ul>"
   },
   {
     "id": "u1_pa_q10",
@@ -127,7 +199,15 @@
     "co": "CO1",
     "title": "Construct the truth table of the following: (a) (p → q) (b) (¬p ∨ q).",
     "answer_html": "<table border='1'><tr><th>p</th><th>q</th><th>&not;p</th><th>p &rarr; q</th><th>&not;p &or; q</th></tr><tr><td>T</td><td>T</td><td>F</td><td>T</td><td>T</td></tr><tr><td>T</td><td>F</td><td>F</td><td>F</td><td>F</td></tr><tr><td>F</td><td>T</td><td>T</td><td>T</td><td>T</td></tr><tr><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td></tr></table><p>Note that both (p &rarr; q) and (&not;p &or; q) have the same truth values.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "p → q",
+      "¬p ∨ q",
+      "Construct",
+      "truth table",
+      "table"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> T</li><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> F</li><li><strong>p:</strong> F <em>vs</em> <strong>q:</strong> T</li></ul>"
   },
   {
     "id": "u1_pb_q1",
@@ -140,7 +220,15 @@
     "co": "CO1",
     "title": "Let p: It is raining, q: I carry an umbrella, r: I wear a raincoat. Write the following statements in symbolic form (a) Either I carry an umbrella or wear a raincoat, but not both. (b) I carry an umbrella if and only if it is raining.",
     "answer_html": "<p><b>(a)</b> q &oplus; r (or equivalently, (q &or; r) &and; &not;(q &and; r))</p><p><b>(b)</b> q &harr; p</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Let p",
+      "raining q",
+      "carry",
+      "umbrella r",
+      "wear"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) q ⊕ r (or equivalently, (q ∨ r) ∧ ¬(q ∧ r)) (b) q ↔ p</li></ul>"
   },
   {
     "id": "u1_pb_q2",
@@ -153,7 +241,15 @@
     "co": "CO1",
     "title": "Let p, q, r be as above. Translate the following symbolic propositions into English (a) (p ∧ q) → r (b) (p ∨ q) ∧ ¬r",
     "answer_html": "<p><b>(a) (p &and; q) &rarr; r:</b> If it is raining and I carry an umbrella, then I wear a raincoat.</p><p><b>(b) (p &or; q) &and; &not;r:</b> It is raining or I carry an umbrella, and I do not wear a raincoat.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "→ r",
+      "∧ ¬r",
+      "Let p",
+      "Translate",
+      "following symbolic"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) (p ∧ q) → r: If it is raining and I carry an umbrella, then I wear a raincoat.</li><li>(b) (p ∨ q) ∧ ¬r: It is raining or I carry an umbrella, and I do not wear a raincoat.</li></ul>"
   },
   {
     "id": "u1_pb_q3",
@@ -166,7 +262,15 @@
     "co": "CO1",
     "title": "Construct the complete truth table for each of the following (a) (p ∧ q) → p (b) (p → q) ∧ (q → p)",
     "answer_html": "<h4>(a) (p &and; q) &rarr; p</h4><table border='1'><tr><th>p</th><th>q</th><th>p &and; q</th><th>(p &and; q) &rarr; p</th></tr><tr><td>T</td><td>T</td><td>T</td><td>T</td></tr><tr><td>T</td><td>F</td><td>F</td><td>T</td></tr><tr><td>F</td><td>T</td><td>F</td><td>T</td></tr><tr><td>F</td><td>F</td><td>F</td><td>T</td></tr></table><h4>(b) (p &rarr; q) &and; (q &rarr; p)</h4><table border='1'><tr><th>p</th><th>q</th><th>p &rarr; q</th><th>q &rarr; p</th><th>(p &rarr; q) &and; (q &rarr; p)</th></tr><tr><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td></tr><tr><td>T</td><td>F</td><td>F</td><td>T</td><td>F</td></tr><tr><td>F</td><td>T</td><td>T</td><td>F</td><td>F</td></tr><tr><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td></tr></table>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "p ∧ q",
+      "→ p",
+      "p → q",
+      "q → p",
+      "Construct"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> T</li><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> F</li><li><strong>p:</strong> F <em>vs</em> <strong>q:</strong> T</li></ul>"
   },
   {
     "id": "u1_pb_q4",
@@ -179,7 +283,15 @@
     "co": "CO1",
     "title": "Let p and q be the propositions “The election is decided” and “The votes have been counted,” respectively. Express each of these compound propositions as an English sentence. (a) ¬q → ¬p (b) ¬p → ¬q (c) ¬q ∨ (¬p ∧ q)",
     "answer_html": "<p><b>(a) &not;q &rarr; &not;p:</b> If the votes have not been counted, then the election is not decided.</p><p><b>(b) &not;p &rarr; &not;q:</b> If the election is not decided, then the votes have not been counted.</p><p><b>(c) &not;q &or; (&not;p &and; q):</b> The votes have not been counted, or the election is not decided and the votes have been counted.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "¬q → ¬p",
+      "¬p → ¬q",
+      "¬q ∨",
+      "Let p",
+      "propositions"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) ¬q → ¬p: If the votes have not been counted, then the election is not decided.</li><li>(b) ¬p → ¬q: If the election is not decided, then the votes have not been counted.</li></ul>"
   },
   {
     "id": "u1_pb_q5",
@@ -192,7 +304,15 @@
     "co": "CO1",
     "title": "Determine whether these biconditional are true or false. a) 2 + 2 = 4 if and only if 1 + 1 = 2. b) 1 + 1 = 2 if and only if 2 + 3 = 4. c) 1 + 1 = 3 if and only if monkeys can fly",
     "answer_html": "<p>A biconditional (p &harr; q) is true if both p and q have the same truth value.</p><p><b>(a)</b> p: 2+2=4 (True). q: 1+1=2 (True). T &harr; T is <b>True</b>.</p><p><b>(b)</b> p: 1+1=2 (True). q: 2+3=4 (False). T &harr; F is <b>False</b>.</p><p><b>(c)</b> p: 1+1=3 (False). q: monkeys can fly (False). F &harr; F is <b>True</b>.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "True",
+      "False",
+      "Determine whether",
+      "whether these",
+      "these biconditional"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>A biconditional (p ↔ q) is true if both p and q have the same truth value.</li></ul>"
   },
   {
     "id": "u1_pb_q6",
@@ -205,7 +325,15 @@
     "co": "CO1",
     "title": "Using a truth table, determine whether which of the following is a Tautology, Contradiction, or Contingency. (a) (p → q) ∨ (q → p) (b) (p → q) ↔ (¬q → ¬p)",
     "answer_html": "<h4>(a) (p &rarr; q) &or; (q &rarr; p)</h4><table border='1'><tr><th>p</th><th>q</th><th>p &rarr; q</th><th>q &rarr; p</th><th>(p &rarr; q) &or; (q &rarr; p)</th></tr><tr><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td></tr><tr><td>T</td><td>F</td><td>F</td><td>T</td><td>T</td></tr><tr><td>F</td><td>T</td><td>T</td><td>F</td><td>T</td></tr><tr><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td></tr></table><p>All values are True, so it is a <b>Tautology</b>.</p><h4>(b) (p &rarr; q) &harr; (&not;q &rarr; &not;p)</h4><table border='1'><tr><th>p</th><th>q</th><th>&not;p</th><th>&not;q</th><th>p &rarr; q</th><th>&not;q &rarr; &not;p</th><th>(p &rarr; q) &harr; (&not;q &rarr; &not;p)</th></tr><tr><td>T</td><td>T</td><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td></tr><tr><td>T</td><td>F</td><td>F</td><td>T</td><td>F</td><td>F</td><td>T</td></tr><tr><td>F</td><td>T</td><td>T</td><td>F</td><td>T</td><td>T</td><td>T</td></tr><tr><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td></tr></table><p>All values are True, so it is a <b>Tautology</b>.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "p → q",
+      "q → p",
+      "Tautology",
+      "¬q → ¬p",
+      "truth table"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> T</li><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> F</li><li><strong>p:</strong> F <em>vs</em> <strong>q:</strong> T</li></ul>"
   },
   {
     "id": "u1_pb_q7",
@@ -218,7 +346,15 @@
     "co": "CO1",
     "title": "Construct a truth table for each of the following compound propositions. (a) (p → q) ↔ (¬q → ¬p) (b) (p → q) → (q → p)",
     "answer_html": "<h4>(a) (p &rarr; q) &harr; (&not;q &rarr; &not;p)</h4><table border='1'><tr><th>p</th><th>q</th><th>&not;p</th><th>&not;q</th><th>p &rarr; q</th><th>&not;q &rarr; &not;p</th><th>(p &rarr; q) &harr; (&not;q &rarr; &not;p)</th></tr><tr><td>T</td><td>T</td><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td></tr><tr><td>T</td><td>F</td><td>F</td><td>T</td><td>F</td><td>F</td><td>T</td></tr><tr><td>F</td><td>T</td><td>T</td><td>F</td><td>T</td><td>T</td><td>T</td></tr><tr><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td></tr></table><h4>(b) (p &rarr; q) &rarr; (q &rarr; p)</h4><table border='1'><tr><th>p</th><th>q</th><th>p &rarr; q</th><th>q &rarr; p</th><th>(p &rarr; q) &rarr; (q &rarr; p)</th></tr><tr><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td></tr><tr><td>T</td><td>F</td><td>F</td><td>T</td><td>T</td></tr><tr><td>F</td><td>T</td><td>T</td><td>F</td><td>F</td></tr><tr><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td></tr></table>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "p → q",
+      "¬q → ¬p",
+      "q → p",
+      "Construct",
+      "truth table"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> T</li><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> F</li><li><strong>p:</strong> F <em>vs</em> <strong>q:</strong> T</li></ul>"
   },
   {
     "id": "u1_pb_q8",
@@ -231,7 +367,15 @@
     "co": "CO1",
     "title": "State the converse, contrapositive, and inverse of each of these conditional statements. When I stay up late, it is necessary that I sleep until noon",
     "answer_html": "<p>Original statement: If I stay up late, then I sleep until noon. (p: I stay up late, q: I sleep until noon. p &rarr; q)</p><p><b>Converse (q &rarr; p):</b> If I sleep until noon, then I stay up late.</p><p><b>Inverse (&not;p &rarr; &not;q):</b> If I do not stay up late, then I do not sleep until noon.</p><p><b>Contrapositive (&not;q &rarr; &not;p):</b> If I do not sleep until noon, then I do not stay up late.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Converse",
+      "Inverse",
+      "Contrapositive",
+      "converse contrapositive",
+      "these conditional"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Original statement: If I stay up late, then I sleep until noon.</li><li>(p: I stay up late, q: I sleep until noon.</li></ul>"
   },
   {
     "id": "u1_pb_q9",
@@ -244,7 +388,15 @@
     "co": "CO1",
     "title": "Using logical laws (without truth tables), prove the following (a) (p → q) ≡ (¬q → ¬p) (b) ¬(p → q) ≡ p ∧ ¬q",
     "answer_html": "<p><b>(a)</b> Prove: (p &rarr; q) &equiv; (&not;q &rarr; &not;p)<br/>LHS = p &rarr; q<br/>&equiv; &not;p &or; q (Implication law)<br/>&equiv; q &or; &not;p (Commutative law)<br/>&equiv; &not;(&not;q) &or; &not;p (Double negation)<br/>&equiv; &not;q &rarr; &not;p (Implication law) = RHS. Hence Proved.</p><p><b>(b)</b> Prove: &not;(p &rarr; q) &equiv; p &and; &not;q<br/>LHS = &not;(p &rarr; q)<br/>&equiv; &not;(&not;p &or; q) (Implication law)<br/>&equiv; &not;(&not;p) &and; &not;q (De Morgan's law)<br/>&equiv; p &and; &not;q (Double negation) = RHS. Hence Proved.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "logical laws",
+      "laws without",
+      "without truth",
+      "truth tables",
+      "tables prove"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) Prove: (p → q) ≡ (¬q → ¬p)LHS = p → q≡ ¬p ∨ q (Implication law)≡ q ∨ ¬p (Commutative law)≡ ¬(¬q) ∨ ¬p (Double negation)≡ ¬q → ¬p (Implication law) = RHS.</li><li>(b) Prove: ¬(p → q) ≡ p ∧ ¬qLHS = ¬(p → q)≡ ¬(¬p ∨ q) (Implication law)≡ ¬(¬p) ∧ ¬q (De Morgan's law)≡ p ∧ ¬q (Double negation) = RHS.</li></ul>"
   },
   {
     "id": "u1_pb_q10",
@@ -257,7 +409,15 @@
     "co": "CO1",
     "title": "Using truth tables, prove the following (a) (p ∧ q) ∨ (¬p ∧ q) ≡ q (b) (p ∨ q) ∧ (p ∨ ¬q) ≡ p",
     "answer_html": "<h4>(a) (p &and; q) &or; (&not;p &and; q) &equiv; q</h4><table border='1'><tr><th>p</th><th>q</th><th>&not;p</th><th>p &and; q</th><th>&not;p &and; q</th><th>(p &and; q) &or; (&not;p &and; q)</th></tr><tr><td>T</td><td>T</td><td>F</td><td>T</td><td>F</td><td>T</td></tr><tr><td>T</td><td>F</td><td>F</td><td>F</td><td>F</td><td>F</td></tr><tr><td>F</td><td>T</td><td>T</td><td>F</td><td>T</td><td>T</td></tr><tr><td>F</td><td>F</td><td>T</td><td>F</td><td>F</td><td>F</td></tr></table><p>The last column is identical to the 'q' column. Hence proved.</p><h4>(b) (p &or; q) &and; (p &or; &not;q) &equiv; p</h4><table border='1'><tr><th>p</th><th>q</th><th>&not;q</th><th>p &or; q</th><th>p &or; &not;q</th><th>(p &or; q) &and; (p &or; &not;q)</th></tr><tr><td>T</td><td>T</td><td>F</td><td>T</td><td>T</td><td>T</td></tr><tr><td>T</td><td>F</td><td>T</td><td>T</td><td>T</td><td>T</td></tr><tr><td>F</td><td>T</td><td>F</td><td>T</td><td>F</td><td>F</td></tr><tr><td>F</td><td>F</td><td>T</td><td>F</td><td>T</td><td>F</td></tr></table><p>The last column is identical to the 'p' column. Hence proved.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "p ∧ q",
+      "¬p ∧ q",
+      "p ∨ q",
+      "p ∨ ¬q",
+      "truth tables"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> T</li><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> F</li><li><strong>p:</strong> F <em>vs</em> <strong>q:</strong> T</li></ul>"
   },
   {
     "id": "u1_pc_q1",
@@ -270,7 +430,15 @@
     "co": "CO1",
     "title": "Let p and q be the propositions p: It is below freezing and q: It is snowing. Write these propositions using p and q and logical connectives (including negations). (a) It is below freezing but not snowing. (b) It is not below freezing and it is not snowing. (c) It is either snowing or below freezing (or both). (d) Either it is below freezing or it is snowing, but it is not snowing if it is below freezing. (e) That it is below freezing is necessary and sufficient for it to be snowing.",
     "answer_html": "<p><b>(a)</b> p &and; &not;q</p><p><b>(b)</b> &not;p &and; &not;q</p><p><b>(c)</b> p &or; q</p><p><b>(d)</b> (p &or; q) &and; (p &rarr; &not;q)</p><p><b>(e)</b> p &harr; q</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Let p",
+      "propositions p",
+      "below freezing",
+      "freezing",
+      "snowing"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) p ∧ ¬q (b) ¬p ∧ ¬q (c) p ∨ q (d) (p ∨ q) ∧ (p → ¬q) (e) p ↔ q</li></ul>"
   },
   {
     "id": "u1_pc_q2",
@@ -283,7 +451,15 @@
     "co": "CO1",
     "title": "Using a truth table, determine whether each of the following is a Tautology, Contradiction, or Contingency (a) (p ∧ (q → r)) → ((p ∧ q) → r) (b) ((p → q) ∧ (p → r)) ∧ p",
     "answer_html": "<h4>(a) (p &and; (q &rarr; r)) &rarr; ((p &and; q) &rarr; r)</h4><table border='1'><tr><th>p</th><th>q</th><th>r</th><th>q&rarr;r</th><th>p&and;(q&rarr;r)</th><th>p&and;q</th><th>(p&and;q)&rarr;r</th><th>Result</th></tr><tr><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td></tr><tr><td>T</td><td>T</td><td>F</td><td>F</td><td>F</td><td>T</td><td>F</td><td>T</td></tr><tr><td>T</td><td>F</td><td>T</td><td>T</td><td>T</td><td>F</td><td>T</td><td>T</td></tr><tr><td>T</td><td>F</td><td>F</td><td>T</td><td>T</td><td>F</td><td>T</td><td>T</td></tr><tr><td>F</td><td>T</td><td>T</td><td>T</td><td>F</td><td>F</td><td>T</td><td>T</td></tr><tr><td>F</td><td>T</td><td>F</td><td>F</td><td>F</td><td>F</td><td>T</td><td>T</td></tr><tr><td>F</td><td>F</td><td>T</td><td>T</td><td>F</td><td>F</td><td>T</td><td>T</td></tr><tr><td>F</td><td>F</td><td>F</td><td>T</td><td>F</td><td>F</td><td>T</td><td>T</td></tr></table><p>All values are True, so it is a <b>Tautology</b>.</p><h4>(b) ((p &rarr; q) &and; (p &rarr; r)) &and; p</h4><table border='1'><tr><th>p</th><th>q</th><th>r</th><th>p&rarr;q</th><th>p&rarr;r</th><th>(p&rarr;q)&and;(p&rarr;r)</th><th>Result</th></tr><tr><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td></tr><tr><td>T</td><td>T</td><td>F</td><td>T</td><td>F</td><td>F</td><td>F</td></tr><tr><td>T</td><td>F</td><td>T</td><td>F</td><td>T</td><td>F</td><td>F</td></tr><tr><td>T</td><td>F</td><td>F</td><td>F</td><td>F</td><td>F</td><td>F</td></tr><tr><td>F</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td><td>F</td></tr><tr><td>F</td><td>T</td><td>F</td><td>T</td><td>T</td><td>T</td><td>F</td></tr><tr><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td><td>T</td><td>F</td></tr><tr><td>F</td><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td><td>F</td></tr></table><p>Contains both True and False values, so it is a <b>Contingency</b>.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "q→r",
+      "p∧q",
+      "Result",
+      "Tautology",
+      "p→q"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> T</li><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> T</li><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> F</li></ul>"
   },
   {
     "id": "u1_pc_q3",
@@ -296,7 +472,15 @@
     "co": "CO1",
     "title": "Construct a truth table for each of the following compound propositions. (a) (p ↔ q) ⊕ (¬p ↔ ¬r) (b) (¬p ↔ ¬q) ↔ (q ↔ r)",
     "answer_html": "<p>Since these involve 3 variables (p, q, r), we construct an 8-row truth table for each. (Left as exercise for detailed 8 rows).</p><h4>(a) (p &harr; q) &oplus; (&not;p &harr; &not;r)</h4><p>We evaluate p &harr; q and &not;p &harr; &not;r separately for 8 rows, then apply XOR.</p><h4>(b) (&not;p &harr; &not;q) &harr; (q &harr; r)</h4><p>Evaluate &not;p &harr; &not;q and q &harr; r separately for 8 rows, then apply biconditional.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Construct",
+      "truth table",
+      "table",
+      "following compound",
+      "compound propositions"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Since these involve 3 variables (p, q, r), we construct an 8-row truth table for each.</li><li>(Left as exercise for detailed 8 rows).</li></ul>"
   },
   {
     "id": "u1_pc_q4",
@@ -309,7 +493,15 @@
     "co": "CO1",
     "title": "Let p, q, and r be the propositions p: You have the flu. q: You miss the final examination. r: You pass the course. Express each of these propositions as an English sentence. (a) q → ¬r (b) ¬q ↔ r (c) p ∨ q ∨ r (d) (p → ¬r) ∨ (q → ¬r) (e) (p ∧ q) ∨ (¬q ∧ r)",
     "answer_html": "<p><b>(a) q &rarr; &not;r:</b> If you miss the final examination, then you do not pass the course.</p><p><b>(b) &not;q &harr; r:</b> You do not miss the final examination if and only if you pass the course.</p><p><b>(c) p &or; q &or; r:</b> You have the flu, or you miss the final examination, or you pass the course.</p><p><b>(d) (p &rarr; &not;r) &or; (q &rarr; &not;r):</b> If you have the flu, then you do not pass the course, or if you miss the final examination, then you do not pass the course.</p><p><b>(e) (p &and; q) &or; (&not;q &and; r):</b> You have the flu and miss the final examination, or you do not miss the final examination and you pass the course.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "q → ¬r",
+      "¬q ↔ r",
+      "p ∨ q ∨ r",
+      "Let p",
+      "propositions p"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) q → ¬r: If you miss the final examination, then you do not pass the course.</li><li>(b) ¬q ↔ r: You do not miss the final examination if and only if you pass the course.</li></ul>"
   },
   {
     "id": "u1_pc_q5",
@@ -322,7 +514,15 @@
     "co": "CO1",
     "title": "State the converse, contrapositive, and inverse of each of these conditional statements. (a) If it snows tonight, then I will stay at home. (b) I go to the beach whenever it is a sunny summer day.",
     "answer_html": "<h4>(a) If it snows tonight, then I will stay at home.</h4><p>Let p: It snows tonight, q: I stay at home.</p><p><b>Converse (q &rarr; p):</b> If I stay at home, then it snows tonight.</p><p><b>Inverse (&not;p &rarr; &not;q):</b> If it does not snow tonight, then I will not stay at home.</p><p><b>Contrapositive (&not;q &rarr; &not;p):</b> If I do not stay at home, then it does not snow tonight.</p><h4>(b) I go to the beach whenever it is a sunny summer day.</h4><p>This means: If it is a sunny summer day, then I go to the beach. (p: It is a sunny summer day, q: I go to the beach)</p><p><b>Converse:</b> If I go to the beach, then it is a sunny summer day.</p><p><b>Inverse:</b> If it is not a sunny summer day, then I do not go to the beach.</p><p><b>Contrapositive:</b> If I do not go to the beach, then it is not a sunny summer day.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Converse",
+      "Inverse",
+      "Contrapositive",
+      "converse contrapositive",
+      "these conditional"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Let p: It snows tonight, q: I stay at home.</li><li>Converse (q → p): If I stay at home, then it snows tonight.</li></ul>"
   },
   {
     "id": "u1_pc_q6",
@@ -335,7 +535,15 @@
     "co": "CO1",
     "title": "Show that ¬(p ∨ (¬p ∧ q)) and ¬p ∧ ¬q are logically equivalent by developing a series of logical equivalences.",
     "answer_html": "<p>We start with the LHS:</p><p>&not(p &or; (&not;p &and; q))</p><p>&equiv; &not;p &and; &not;(&not;p &and; q) (De Morgan's law)</p><p>&equiv; &not;p &and; (&not;(&not;p) &or; &not;q) (De Morgan's law)</p><p>&equiv; &not;p &and; (p &or; &not;q) (Double negation law)</p><p>&equiv; (&not;p &and; p) &or; (&not;p &and; &not;q) (Distributive law)</p><p>&equiv; F &or; (&not;p &and; &not;q) (Negation law)</p><p>&equiv; &not;p &and; &not;q (Identity law)</p><p>This is exactly the RHS. Hence proved.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "that p",
+      "logically equivalent",
+      "equivalent",
+      "developing",
+      "series"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>We start with the LHS: ¬(p ∨ (¬p ∧ q)) ≡ ¬p ∧ ¬(¬p ∧ q) (De Morgan's law) ≡ ¬p ∧ (¬(¬p) ∨ ¬q) (De Morgan's law) ≡ ¬p ∧ (p ∨ ¬q) (Double negation law) ≡ (¬p ∧ p) ∨ (¬p ∧ ¬q) (Distributive law) ≡ F ∨ (¬p ∧ ¬q)...</li></ul>"
   },
   {
     "id": "u1_pc_q7",
@@ -348,7 +556,15 @@
     "co": "CO1",
     "title": "Define the following terms with suitable truth table: (a) Tautology (b) Biconditional Statement (c) Contingency (d) Contrapositive (e) Exclusive OR",
     "answer_html": "<p><b>(a) Tautology:</b> A proposition that is always true. Ex: p &or; &not;p.</p><p><b>(b) Biconditional Statement:</b> p &harr; q. True when both have same truth value.</p><p><b>(c) Contingency:</b> A proposition that is neither a tautology nor a contradiction (has both True and False values).</p><p><b>(d) Contrapositive:</b> Of p &rarr; q is &not;q &rarr; &not;p. They are logically equivalent.</p><p><b>(e) Exclusive OR:</b> p &oplus; q. True when exactly one of p or q is true.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Tautology",
+      "Biconditional Statement",
+      "Contingency",
+      "Contrapositive",
+      "Exclusive OR"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) Tautology: A proposition that is always true.</li><li>(b) Biconditional Statement: p ↔ q.</li></ul>"
   },
   {
     "id": "u1_pc_q8",
@@ -361,7 +577,15 @@
     "co": "CO1",
     "title": "Determine whether each of these conditional statements is true or false. (a) If 1 + 1 = 2, then 2 + 2 = 5. (b) If 1 + 1 = 3, then 2 + 2 = 4. (c) If 1 + 1 = 3, then 2 + 2 = 5. (d) If monkeys can fly, then 1 + 1 = 3. (e) If 1 + 1 = 2, then dogs can fly",
     "answer_html": "<p>A conditional statement (p &rarr; q) is false only when p is True and q is False.</p><p><b>(a)</b> T &rarr; F is <b>False</b>.</p><p><b>(b)</b> F &rarr; T is <b>True</b>.</p><p><b>(c)</b> F &rarr; F is <b>True</b>.</p><p><b>(d)</b> F &rarr; F is <b>True</b>.</p><p><b>(e)</b> T &rarr; F is <b>False</b>.</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "False",
+      "True",
+      "Determine whether",
+      "whether",
+      "these conditional"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>A conditional statement (p → q) is false only when p is True and q is False.</li></ul>"
   },
   {
     "id": "u1_pc_q9",
@@ -374,7 +598,15 @@
     "co": "CO1",
     "title": "Express these system specifications using the propositions p “The user enters a valid password,” q “Access is granted,” and r “The user has paid the subscription fee” and logical connectives (including negations). (a) “The user has paid the subscription fee, but does not enter a valid password.” (b) “Access is granted whenever the user has paid the subscription fee and enters a valid password.”",
     "answer_html": "<p><b>(a)</b> r &and; &not;p</p><p><b>(b)</b> (r &and; p) &rarr; q</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Express these",
+      "these system",
+      "system specifications",
+      "specifications",
+      "propositions p"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) r ∧ ¬p (b) (r ∧ p) → q</li></ul>"
   },
   {
     "id": "u1_pc_q10",
@@ -387,7 +619,15 @@
     "co": "CO1",
     "title": "Using truth tables, prove the following pair of equivalences (a) ((p → q) ∧ (p → r)) ≡ (p → (q ∧ r)) (b) (p → (q ∧ r)) ≡ (p → q) ∧ (p → r)",
     "answer_html": "<p>We construct an 8-row truth table for p, q, and r to evaluate both expressions.</p><table border='1'><tr><th>p</th><th>q</th><th>r</th><th>p&rarr;q</th><th>p&rarr;r</th><th>(p&rarr;q)&and;(p&rarr;r)</th><th>q&and;r</th><th>p&rarr;(q&and;r)</th></tr><tr><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td></tr><tr><td>T</td><td>T</td><td>F</td><td>T</td><td>F</td><td>F</td><td>F</td><td>F</td></tr><tr><td>T</td><td>F</td><td>T</td><td>F</td><td>T</td><td>F</td><td>F</td><td>F</td></tr><tr><td>T</td><td>F</td><td>F</td><td>F</td><td>F</td><td>F</td><td>F</td><td>F</td></tr><tr><td>F</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td><td>T</td></tr><tr><td>F</td><td>T</td><td>F</td><td>T</td><td>T</td><td>T</td><td>F</td><td>T</td></tr><tr><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td><td>T</td><td>F</td><td>T</td></tr><tr><td>F</td><td>F</td><td>F</td><td>T</td><td>T</td><td>T</td><td>F</td><td>T</td></tr></table><p>Since the column for ((p &rarr; q) &and; (p &rarr; r)) and the column for (p &rarr; (q &and; r)) have the exact same truth values, the two statements are logically equivalent. This proves both (a) and (b).</p>",
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "p→q",
+      "p→r",
+      "q∧r",
+      "truth tables",
+      "tables prove"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> T</li><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> T</li><li><strong>p:</strong> T <em>vs</em> <strong>q:</strong> F</li></ul>"
   },
   {
     "id": "u2_a1",
@@ -400,7 +640,15 @@
     "answer_html": "<p>The characteristic equation is <code>r^2 - 5r + 6 = 0</code>.</p><p>Factoring gives <code>(r - 2)(r - 3) = 0</code>, so the roots are <code>r = 2</code> and <code>r = 3</code>.</p><p>The complete solution is <strong>a<sub>n</sub> = c<sub>1</sub>2<sup>n</sup> + c<sub>2</sub>3<sup>n</sup></strong>.</p>",
     "important": false,
     "score": 5.6,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "r^2 - 5r + 6 = 0",
+      "= 0",
+      "r = 2",
+      "r = 3",
+      "an = c12n + c23n"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>The characteristic equation is r^2 - 5r + 6 = 0.</li><li>Factoring gives (r - 2)(r - 3) = 0, so the roots are r = 2 and r = 3.</li></ul>"
   },
   {
     "id": "u2_a2",
@@ -413,7 +661,15 @@
     "answer_html": "<p>The generating function <code>1 / (1 - rx)</code> corresponds to the sequence <code>r^n</code>.</p><p>Here, <code>r = 2</code>, so the solution is <strong>a<sub>n</sub> = 2<sup>n</sup></strong>.</p>",
     "important": true,
     "score": 9.4,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "1 /",
+      "r^n",
+      "r = 2",
+      "an = 2n",
+      "solution"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>The generating function 1 / (1 - rx) corresponds to the sequence r^n.</li><li>Here, r = 2, so the solution is an = 2n.</li></ul>"
   },
   {
     "id": "u2_a3",
@@ -426,7 +682,15 @@
     "answer_html": "<p>This is a permutation problem since the order of arrangement matters.</p><p>Number of ways = <code><sup>5</sup>P<sub>3</sub> = 5! / (5 - 3)! = 5! / 2! = 5 &times; 4 &times; 3 = 60</code>.</p>",
     "important": false,
     "score": 8.4,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Find",
+      "number",
+      "ways",
+      "arranging 3",
+      "different books"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>This is a permutation problem since the order of arrangement matters.</li><li>Number of ways = 5P3 = 5!</li></ul>"
   },
   {
     "id": "u2_a4",
@@ -439,7 +703,15 @@
     "answer_html": "<p>Given <code>a<sub>1</sub> = 2</code>.</p><p><code>a<sub>2</sub> = a<sub>1</sub><sup>2</sup> = 2<sup>2</sup> = 4</code>.</p><p><code>a<sub>3</sub> = a<sub>2</sub><sup>2</sup> = 4<sup>2</sup> = 16</code>.</p>",
     "important": true,
     "score": 9.6,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "a1 = 2",
+      "a2 = a12 = 22 = 4",
+      "a3 = a22 = 42 = 16",
+      "Find a2",
+      "terms"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Given a1 = 2.a2 = a12 = 22 = 4.a3 = a22 = 42 = 16.</li></ul>"
   },
   {
     "id": "u2_a5",
@@ -452,7 +724,15 @@
     "answer_html": "<p>(a) <code>a<sub>n</sub> = a<sub>n-1</sub> + a<sub>n-5</sub></code> is a <strong>linear homogeneous recurrence relation with constant coefficients</strong>. Its degree is <strong>5</strong>.</p><p>(b) <code>a<sub>n</sub> = a<sub>n-1</sub><sup>3</sup> + a<sub>n-2</sub> + n</code> is <strong>not</strong> linear (due to the cube) and <strong>not</strong> homogeneous (due to the +n term).</p>",
     "important": false,
     "score": 8.6,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "an = an-1 + an-5",
+      "an = an-13 + an-2 + n",
+      "Identify",
+      "following recurrence",
+      "recurrence relations"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) an = an-1 + an-5 is a linear homogeneous recurrence relation with constant coefficients.</li><li>(b) an = an-13 + an-2 + n is not linear (due to the cube) and not homogeneous (due to the +n term).</li></ul>"
   },
   {
     "id": "u2_a6",
@@ -465,7 +745,15 @@
     "answer_html": "<p>(i) <code><sup>7</sup>P<sub>2</sub> = 7! / (7-2)! = 7 &times; 6 = 42</code>.</p><p>(ii) <code><sup>9</sup>C<sub>2</sub> = 9! / (2! &times; (9-2)!) = (9 &times; 8) / 2 = 36</code>.</p>",
     "important": true,
     "score": 9.5,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "7P2 = 7! /! = 7 × 6 = 42",
+      "9C2 = 9! /!) = / 2 = 36",
+      "Find",
+      "value",
+      "7P2"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(i) 7P2 = 7! / (7-2)! = 7 × 6 = 42.(ii) 9C2 = 9! / (2! × (9-2)!) = (9 × 8) / 2 = 36.</li></ul>"
   },
   {
     "id": "u2_a7",
@@ -478,7 +766,15 @@
     "answer_html": "<p>This is a combination problem since the order of selection does not matter.</p><p>Number of ways = <code><sup>8</sup>C<sub>3</sub> = 8! / (3! &times; 5!) = (8 &times; 7 &times; 6) / 6 = 56</code>.</p>",
     "important": false,
     "score": 5.9,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "8C3 = 8! / = / 6 = 56",
+      "Find",
+      "number",
+      "ways",
+      "select 3"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>This is a combination problem since the order of selection does not matter.</li><li>Number of ways = 8C3 = 8!</li></ul>"
   },
   {
     "id": "u2_a8",
@@ -491,7 +787,15 @@
     "answer_html": "<p>The generating function for the constant sequence 1, 1, 1, ... is <code>1 / (1-x)</code>.</p><p>Differentiating with respect to x gives the sequence 1, 2, 3, ..., so the generating function is <strong><code>1 / (1-x)<sup>2</sup></code></strong>.</p>",
     "important": false,
     "score": 6.7,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "1 /",
+      "1 /2",
+      "Find",
+      "generating",
+      "sequence 1"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>The generating function for the constant sequence 1, 1, 1, ...</li><li>Differentiating with respect to x gives the sequence 1, 2, 3, ..., so the generating function is 1 / (1-x)2.</li></ul>"
   },
   {
     "id": "u2_a9",
@@ -504,7 +808,15 @@
     "answer_html": "<p>The characteristic equation is <code>r^2 - 4r + 1 = 0</code>.</p><p>Using the quadratic formula, the roots are <code>r = (4 &plusmn; &radic;12) / 2 = 2 &plusmn; &radic;3</code>.</p><p>The solution is <strong>a<sub>n</sub> = c<sub>1</sub>(2 + &radic;3)<sup>n</sup> + c<sub>2</sub>(2 - &radic;3)<sup>n</sup></strong>.</p>",
     "important": false,
     "score": 7.2,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "r^2 - 4r + 1 = 0",
+      "r = / 2 = 2 ± √3",
+      "an = c1n + c2n",
+      "Solve",
+      "following recurrence"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>The characteristic equation is r^2 - 4r + 1 = 0.</li><li>Using the quadratic formula, the roots are r = (4 ± √12) / 2 = 2 ± √3.</li></ul>"
   },
   {
     "id": "u2_a10",
@@ -517,7 +829,15 @@
     "answer_html": "<p>(i) Substitute <code>a<sub>n</sub> = n<sup>2</sup></code> into <code>2a<sub>n-1</sub> - a<sub>n-2</sub> + 2</code>: <br><code>2(n-1)<sup>2</sup> - (n-2)<sup>2</sup> + 2 = 2(n<sup>2</sup> - 2n + 1) - (n<sup>2</sup> - 4n + 4) + 2 = n<sup>2</sup> = a<sub>n</sub></code>. <strong>Yes, it is a solution.</strong></p><p>(ii) Substitute <code>a<sub>n</sub> = 2<sup>n</sup> + 1</code> into <code>2a<sub>n-1</sub> - 1</code>: <br><code>2(2<sup>n-1</sup> + 1) - 1 = 2<sup>n</sup> + 2 - 1 = 2<sup>n</sup> + 1 = a<sub>n</sub></code>. <strong>Yes, it is a solution.</strong></p>",
     "important": false,
     "score": 5.3,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "an = n2",
+      "2an-1 - an-2 + 2",
+      "22 -2 + 2 = 2 - + 2 = n2 = an",
+      "Yes, it is a solution",
+      "an = 2n + 1"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(i) Substitute an = n2 into 2an-1 - an-2 + 2: 2(n-1)2 - (n-2)2 + 2 = 2(n2 - 2n + 1) - (n2 - 4n + 4) + 2 = n2 = an.</li><li>Yes, it is a solution.</li></ul>"
   },
   {
     "id": "u2_b1",
@@ -530,7 +850,15 @@
     "answer_html": "<p>(i) <code>a<sub>n</sub> = 3a<sub>n-1</sub> + 2a<sub>n-2</sub> - a<sub>n-3</sub></code>: <strong>Order = 3</strong>, <strong>Degree = 1</strong>.</p><p>(ii) <code>a<sub>n</sub> = a<sub>n-1</sub> + 2</code>: <strong>Order = 1</strong>, <strong>Degree = 1</strong>.</p><p>(iii) <code>(a<sub>n</sub>)<sup>2</sup> - 4a<sub>n-1</sub>a<sub>n-2</sub> = 0</code>: <strong>Order = 2</strong>, <strong>Degree = 2</strong>.</p>",
     "important": false,
     "score": 8.1,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "an = 3an-1 + 2an-2 - an-3",
+      "Order = 3",
+      "Degree = 1",
+      "an = an-1 + 2",
+      "Order = 1"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(i) an = 3an-1 + 2an-2 - an-3: Order = 3, Degree = 1.</li><li>(ii) an = an-1 + 2: Order = 1, Degree = 1.</li></ul>"
   },
   {
     "id": "u2_b2",
@@ -543,7 +871,15 @@
     "answer_html": "<p>(i) <code>a<sub>n</sub> = 3a<sub>n-1</sub> - 2a<sub>n-2</sub> + n</code>, <code>a<sub>1</sub> = 1, a<sub>2</sub> = 4</code>.<br><code>a<sub>3</sub> = 3(4) - 2(1) + 3 = 13</code>.<br><code>a<sub>4</sub> = 3(13) - 2(4) + 4 = 35</code>.<br><code>a<sub>5</sub> = 3(35) - 2(13) + 5 = 84</code>.</p><p>(ii) <code>a<sub>n</sub> = n &cdot; a<sub>n-1</sub> - a<sub>n-2</sub></code>, <code>a<sub>1</sub> = 1, a<sub>2</sub> = 3</code>.<br><code>a<sub>3</sub> = 3(3) - 1 = 8</code>.<br><code>a<sub>4</sub> = 4(8) - 3 = 29</code>.<br><code>a<sub>5</sub> = 5(29) - 8 = 137</code>.</p>",
     "important": false,
     "score": 7.6,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "an = 3an-1 - 2an-2 + n",
+      "a1 = 1, a2 = 4",
+      "a3 = 3 - 2 + 3 = 13",
+      "a4 = 3 - 2 + 4 = 35",
+      "a5 = 3 - 2 + 5 = 84"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(i) an = 3an-1 - 2an-2 + n, a1 = 1, a2 = 4.a3 = 3(4) - 2(1) + 3 = 13.a4 = 3(13) - 2(4) + 4 = 35.a5 = 3(35) - 2(13) + 5 = 84.</li><li>(ii) an = n ċ an-1 - an-2, a1 = 1, a2 = 3.a3 = 3(3) - 1 = 8.a4 = 4(8) - 3 = 29.a5 = 5(29) - 8 = 137.</li></ul>"
   },
   {
     "id": "u2_b3",
@@ -556,7 +892,15 @@
     "answer_html": "<p>Characteristic equation: <code>r^2 - 10r + 25 = 0 &rArr; (r - 5)^2 = 0</code>, so <code>r = 5</code> (repeated).</p><p>General solution: <code>a<sub>n</sub> = (c<sub>1</sub> + c<sub>2</sub>n)5<sup>n</sup></code>.</p><p>For <code>n=0</code>: <code>3 = c<sub>1</sub></code>.</p><p>For <code>n=1</code>: <code>25 = (3 + c<sub>2</sub>) &times; 5 &rArr; 3 + c<sub>2</sub> = 5 &rArr; c<sub>2</sub> = 2</code>.</p><p>Solution: <strong>a<sub>n</sub> = (3 + 2n)5<sup>n</sup></strong>.</p>",
     "important": true,
     "score": 9.2,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "r^2 - 10r + 25 = 0 ⇒^2 = 0",
+      "r = 5",
+      "an =5n",
+      "n=0",
+      "3 = c1"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Characteristic equation: r^2 - 10r + 25 = 0 ⇒ (r - 5)^2 = 0, so r = 5 (repeated).</li><li>General solution: an = (c1 + c2n)5n.</li></ul>"
   },
   {
     "id": "u2_b4",
@@ -569,7 +913,15 @@
     "answer_html": "<p>Total students = 6 boys + 5 girls = 11.</p><p>We need to select a committee of 4 from 11.</p><p>Number of ways = <code><sup>11</sup>C<sub>4</sub> = 11! / (4! &times; 7!) = (11 &times; 10 &times; 9 &times; 8) / (4 &times; 3 &times; 2 &times; 1) = 330</code> ways.</p>",
     "important": false,
     "score": 6.6,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "11C4 = 11! / = / = 330",
+      "committee",
+      "students",
+      "selected",
+      "boys"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Total students = 6 boys + 5 girls = 11.</li><li>We need to select a committee of 4 from 11.</li></ul>"
   },
   {
     "id": "u2_b5",
@@ -582,7 +934,15 @@
     "answer_html": "<p>Multiply by x^n and sum for n &ge; 1: <code>&Sigma; a<sub>n</sub>x<sup>n</sup> = 7x &Sigma; a<sub>n-1</sub>x<sup>n-1</sup></code>.</p><p>Let G(x) be the generating function. Then <code>G(x) - a<sub>0</sub> = 7xG(x)</code>.</p><p><code>G(x) (1 - 7x) = -2 &rArr; G(x) = -2 / (1 - 7x)</code>.</p><p>The coefficient of x^n in G(x) gives the sequence: <strong>a<sub>n</sub> = -2 &times; 7<sup>n</sup></strong>.</p>",
     "important": false,
     "score": 8.3,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Σ anxn = 7x Σ an-1xn-1",
+      "G - a0 = 7xG",
+      "G = -2 ⇒ G = -2 /",
+      "an = -2 × 7n",
+      "Solve"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Multiply by x^n and sum for n ≥ 1: Σ anxn = 7x Σ an-1xn-1.</li><li>Let G(x) be the generating function.</li></ul>"
   },
   {
     "id": "u2_b6",
@@ -595,7 +955,15 @@
     "answer_html": "<p>The word MATH has 4 distinct letters.</p><p>The number of 4-letter words that can be formed is the number of permutations of 4 letters, which is <code>4! = 4 &times; 3 &times; 2 &times; 1 = 24</code>.</p>",
     "important": true,
     "score": 9.2,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "4! = 4 × 3 × 2 × 1 = 24",
+      "many different",
+      "different 4-letter",
+      "4-letter words",
+      "words"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>The word MATH has 4 distinct letters.</li><li>The number of 4-letter words that can be formed is the number of permutations of 4 letters, which is 4!</li></ul>"
   },
   {
     "id": "u2_b7",
@@ -608,7 +976,15 @@
     "answer_html": "<p>Characteristic equation: <code>r^2 - 6r + 9 = 0 &rArr; (r - 3)^2 = 0</code>. Root: <code>r = 3</code> (repeated).</p><p>General solution: <code>a<sub>n</sub> = (c<sub>1</sub> + c<sub>2</sub>n)3<sup>n</sup></code>.</p><p>For <code>n=0</code>: <code>c<sub>1</sub> = 1</code>.</p><p>For <code>n=1</code>: <code>(1 + c<sub>2</sub>)3 = 9 &rArr; 1 + c<sub>2</sub> = 3 &rArr; c<sub>2</sub> = 2</code>.</p><p>Solution: <strong>a<sub>n</sub> = (1 + 2n)3<sup>n</sup></strong>.</p>",
     "important": false,
     "score": 8.2,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "r^2 - 6r + 9 = 0 ⇒^2 = 0",
+      "r = 3",
+      "an =3n",
+      "n=0",
+      "c1 = 1"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Characteristic equation: r^2 - 6r + 9 = 0 ⇒ (r - 3)^2 = 0.</li><li>Root: r = 3 (repeated).</li></ul>"
   },
   {
     "id": "u2_b8",
@@ -621,7 +997,15 @@
     "answer_html": "<p>Characteristic equation: <code>r^3 - 4r^2 + 5r - 2 = 0</code>.</p><p>Factoring gives <code>(r - 1)^2(r - 2) = 0</code>, so roots are <code>r = 1, 1, 2</code>.</p><p>General solution: <code>a<sub>n</sub> = c<sub>1</sub> + c<sub>2</sub>n + c<sub>3</sub>2<sup>n</sup></code>.</p><p>From conditions:<br><code>c<sub>1</sub> + c<sub>3</sub> = 1</code><br><code>c<sub>1</sub> + c<sub>2</sub> + 2c<sub>3</sub> = 3</code><br><code>c<sub>1</sub> + 2c<sub>2</sub> + 4c<sub>3</sub> = 8</code>.</p><p>Solving yields <code>c<sub>1</sub> = -2, c<sub>2</sub> = -1, c<sub>3</sub> = 3</code>.</p><p>Solution: <strong>a<sub>n</sub> = -2 - n + 3(2<sup>n</sup>)</strong>.</p>",
     "important": false,
     "score": 9.2,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "r^3 - 4r^2 + 5r - 2 = 0",
+      "^2 = 0",
+      "r = 1, 1, 2",
+      "an = c1 + c2n + c32n",
+      "c1 + c3 = 1"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Characteristic equation: r^3 - 4r^2 + 5r - 2 = 0.</li><li>Factoring gives (r - 1)^2(r - 2) = 0, so roots are r = 1, 1, 2.</li></ul>"
   },
   {
     "id": "u2_b9",
@@ -634,7 +1018,15 @@
     "answer_html": "<p>Characteristic equation: <code>r^3 - 6r^2 + 11r - 6 = 0</code>.</p><p>Factoring gives <code>(r - 1)(r - 2)(r - 3) = 0</code>, so roots are <code>1, 2, 3</code>.</p><p>General solution: <code>a<sub>n</sub> = c<sub>1</sub> + c<sub>2</sub>2<sup>n</sup> + c<sub>3</sub>3<sup>n</sup></code>.</p><p>From conditions:<br><code>c<sub>1</sub> + c<sub>2</sub> + c<sub>3</sub> = 1</code><br><code>c<sub>1</sub> + 2c<sub>2</sub> + 3c<sub>3</sub> = 6</code><br><code>c<sub>1</sub> + 4c<sub>2</sub> + 9c<sub>3</sub> = 20</code>.</p><p>Solving yields <code>c<sub>1</sub> = 2, c<sub>2</sub> = -3, c<sub>3</sub> = 2</code>.</p><p>Solution: <strong>a<sub>n</sub> = 2 - 3(2<sup>n</sup>) + 2(3<sup>n</sup>)</strong>.</p>",
     "important": false,
     "score": 5.6,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "r^3 - 6r^2 + 11r - 6 = 0",
+      "= 0",
+      "1, 2, 3",
+      "an = c1 + c22n + c33n",
+      "c1 + c2 + c3 = 1"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Characteristic equation: r^3 - 6r^2 + 11r - 6 = 0.</li><li>Factoring gives (r - 1)(r - 2)(r - 3) = 0, so roots are 1, 2, 3.</li></ul>"
   },
   {
     "id": "u2_b10",
@@ -647,7 +1039,15 @@
     "answer_html": "<p>Let G(x) be the generating function. Multiply by x^n and sum:<br><code>G(x) - 1 - 3x = 3x(G(x) - 1) + 2x^2 G(x)</code>.</p><p><code>G(x)(1 - 3x - 2x^2) = 1</code> &rArr; <code>G(x) = 1 / (1 - 3x - 2x^2)</code>.</p><p>Let the roots of <code>1 - 3x - 2x^2 = 0</code> be finding roots of <code>r^2 - 3r - 2 = 0</code>, <code>r = (3 &plusmn; &radic;17)/2</code>.</p><p>The sequence is given by expanding via partial fractions, resulting in <strong>a<sub>n</sub> = c<sub>1</sub>((3 + &radic;17)/2)<sup>n</sup> + c<sub>2</sub>((3 - &radic;17)/2)<sup>n</sup></strong> where constants are found from initial conditions.</p>",
     "important": false,
     "score": 7.4,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "G - 1 - 3x = 3x - 1) + 2x^2 G",
+      "G = 1",
+      "G = 1 /",
+      "1 - 3x - 2x^2 = 0",
+      "r^2 - 3r - 2 = 0"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Let G(x) be the generating function.</li><li>Multiply by x^n and sum:G(x) - 1 - 3x = 3x(G(x) - 1) + 2x^2 G(x).</li></ul>"
   },
   {
     "id": "u2_c1",
@@ -660,7 +1060,15 @@
     "answer_html": "<p>Using the permutation formula: <code>(n+1)! / (n+1-3)! = 5 &times; [n! / (n-2)!]</code>.</p><p><code>(n+1)! / (n-2)! = 5 &times; n! / (n-2)!</code></p><p>Canceling <code>(n-2)!</code> from both sides gives <code>(n+1)! = 5 &times; n!</code>.</p><p><code>(n+1)n! = 5n! &rArr; n + 1 = 5 &rArr; <strong>n = 4</strong></code>.</p>",
     "important": true,
     "score": 9.3,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "! /! = 5 × [n! /!]",
+      "! /! = 5 × n! /!",
+      "! = 5 × n!",
+      "n! = 5n! ⇒ n + 1 = 5 ⇒ n = 4",
+      "n = 4"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Using the permutation formula: (n+1)!</li></ul>"
   },
   {
     "id": "u2_c2",
@@ -673,7 +1081,15 @@
     "answer_html": "<p>Let G(x) be the generating function. <code>G(x) - 2 - 5x = 3x(G(x) - 2) - 2x^2 G(x)</code>.</p><p><code>G(x)(1 - 3x + 2x^2) = 2 - x</code> &rArr; <code>G(x) = (2 - x) / ((1 - x)(1 - 2x))</code>.</p><p>Using partial fractions: <code>(2 - x) / ((1 - x)(1 - 2x)) = A / (1 - x) + B / (1 - 2x)</code>.</p><p>Solving gives <code>A = -1</code> and <code>B = 3</code>. Thus, <code>G(x) = -1/(1 - x) + 3/(1 - 2x)</code>.</p><p>Solution: <strong>a<sub>n</sub> = 3(2<sup>n</sup>) - 1</strong>.</p>",
     "important": false,
     "score": 7.2,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "G - 2 - 5x = 3x - 2) - 2x^2 G",
+      "G = 2 - x",
+      "G = /)",
+      "/) = A / + B /",
+      "A = -1"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Let G(x) be the generating function.</li><li>G(x) - 2 - 5x = 3x(G(x) - 2) - 2x^2 G(x).</li></ul>"
   },
   {
     "id": "u2_c3",
@@ -686,7 +1102,15 @@
     "answer_html": "<p>Characteristic equation: <code>r^2 - 7r + 12 = 0 &rArr; (r - 3)(r - 4) = 0</code>. Roots: 3, 4.</p><p>General solution: <code>a<sub>n</sub> = c<sub>1</sub>3<sup>n</sup> + c<sub>2</sub>4<sup>n</sup></code>.</p><p>Using conditions: <code>3c<sub>1</sub> + 4c<sub>2</sub> = 2</code> and <code>9c<sub>1</sub> + 16c<sub>2</sub> = 7</code>.</p><p>Multiply first by 4: <code>12c<sub>1</sub> + 16c<sub>2</sub> = 8</code>. Subtracting the second gives <code>3c<sub>1</sub> = 1 &rArr; c<sub>1</sub> = 1/3</code>.</p><p>Then <code>4c<sub>2</sub> = 2 - 1 = 1 &rArr; c<sub>2</sub> = 1/4</code>.</p><p>Solution: <strong>a<sub>n</sub> = 3<sup>n-1</sup> + 4<sup>n-1</sup></strong>.</p>",
     "important": false,
     "score": 8.5,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "r^2 - 7r + 12 = 0 ⇒ = 0",
+      "an = c13n + c24n",
+      "3c1 + 4c2 = 2",
+      "9c1 + 16c2 = 7",
+      "12c1 + 16c2 = 8"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Characteristic equation: r^2 - 7r + 12 = 0 ⇒ (r - 3)(r - 4) = 0.</li><li>General solution: an = c13n + c24n.</li></ul>"
   },
   {
     "id": "u2_c4",
@@ -699,7 +1123,15 @@
     "answer_html": "<p>Characteristic equation: <code>r^3 - 5r^2 + 7r - 3 = 0</code>. Roots: <code>1, 1, 3</code>.</p><p>General solution: <code>a<sub>n</sub> = c<sub>1</sub> + c<sub>2</sub>n + c<sub>3</sub>3<sup>n</sup></code>.</p><p>Solving conditions: <code>c<sub>1</sub> + c<sub>3</sub> = 2</code>, <code>c<sub>1</sub> + c<sub>2</sub> + 3c<sub>3</sub> = 5</code>, <code>c<sub>1</sub> + 2c<sub>2</sub> + 9c<sub>3</sub> = 12</code>.</p><p>We get <code>c<sub>1</sub> = 1, c<sub>2</sub> = 1, c<sub>3</sub> = 1</code>.</p><p>Solution: <strong>a<sub>n</sub> = 1 + n + 3<sup>n</sup></strong>.</p>",
     "important": false,
     "score": 8.7,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "r^3 - 5r^2 + 7r - 3 = 0",
+      "1, 1, 3",
+      "an = c1 + c2n + c33n",
+      "c1 + c3 = 2",
+      "c1 + c2 + 3c3 = 5"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Characteristic equation: r^3 - 5r^2 + 7r - 3 = 0.</li><li>General solution: an = c1 + c2n + c33n.</li></ul>"
   },
   {
     "id": "u2_c5",
@@ -712,7 +1144,15 @@
     "answer_html": "<p>Characteristic equation: <code>r^3 - 5r^2 + 8r - 4 = 0</code>. Roots: <code>1, 2, 2</code>.</p><p>General solution: <code>a<sub>n</sub> = c<sub>1</sub> + (c<sub>2</sub> + c<sub>3</sub>n)2<sup>n</sup></code>.</p><p>Solving with conditions gives <code>c<sub>1</sub> = 5, c<sub>2</sub> = -3, c<sub>3</sub> = 1.5</code>.</p><p>Solution: <strong>a<sub>n</sub> = 5 + (-3 + 1.5n)2<sup>n</sup></strong>.</p>",
     "important": false,
     "score": 6.2,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "r^3 - 5r^2 + 8r - 4 = 0",
+      "1, 2, 2",
+      "an = c1 +2n",
+      "c1 = 5, c2 = -3, c3 = 1.5",
+      "an = 5 +2n"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Characteristic equation: r^3 - 5r^2 + 8r - 4 = 0.</li><li>General solution: an = c1 + (c2 + c3n)2n.</li></ul>"
   },
   {
     "id": "u2_c6",
@@ -725,7 +1165,15 @@
     "answer_html": "<p>Characteristic equation: <code>r^3 - 11r^2 + 38r - 40 = 0</code>. Roots: <code>2, 4, 5</code>.</p><p>General solution: <code>a<sub>n</sub> = c<sub>1</sub>2<sup>n</sup> + c<sub>2</sub>4<sup>n</sup> + c<sub>3</sub>5<sup>n</sup></code>.</p><p>Using conditions, solving 3 equations gives the constants for the exact solution.</p>",
     "important": false,
     "score": 7.6,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "r^3 - 11r^2 + 38r - 40 = 0",
+      "2, 4, 5",
+      "an = c12n + c24n + c35n",
+      "Solve",
+      "following recurrence"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Characteristic equation: r^3 - 11r^2 + 38r - 40 = 0.</li><li>General solution: an = c12n + c24n + c35n.</li></ul>"
   },
   {
     "id": "u2_c7",
@@ -738,7 +1186,15 @@
     "answer_html": "<p>Let G(x) be the generating function. <code>G(x) - 1 - 2x = 2x(G(x) - 1) + 3x^2 G(x)</code>.</p><p><code>G(x)(1 - 2x - 3x^2) = 1</code> &rArr; <code>G(x) = 1 / ((1 - 3x)(1 + x))</code>.</p><p>Using partial fractions: <code>1 / ((1 - 3x)(1 + x)) = A / (1 - 3x) + B / (1 + x)</code> gives <code>A = 3/4</code>, <code>B = 1/4</code>.</p><p>Solution: <strong>a<sub>n</sub> = (3/4)3<sup>n</sup> + (1/4)(-1)<sup>n</sup></strong>.</p>",
     "important": false,
     "score": 5.8,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "G - 1 - 2x = 2x - 1) + 3x^2 G",
+      "G = 1",
+      "G = 1 /)",
+      "1 /) = A / + B /",
+      "A = 3/4"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Let G(x) be the generating function.</li><li>G(x) - 1 - 2x = 2x(G(x) - 1) + 3x^2 G(x).</li></ul>"
   },
   {
     "id": "u2_c8",
@@ -751,7 +1207,15 @@
     "answer_html": "<p>Characteristic equation: <code>r^3 - 5r^2 + 8r - 4 = 0</code>. Roots: <code>1, 2, 2</code>.</p><p>General solution: <code>a<sub>n</sub> = c<sub>1</sub> + (c<sub>2</sub> + c<sub>3</sub>n)2<sup>n</sup></code>.</p><p>Applying conditions <code>a<sub>1</sub> = 1, a<sub>2</sub> = 4, a<sub>3</sub> = 11</code> allows us to solve for constants <code>c<sub>1</sub>, c<sub>2</sub>, c<sub>3</sub></code>.</p>",
     "important": false,
     "score": 8.5,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "r^3 - 5r^2 + 8r - 4 = 0",
+      "1, 2, 2",
+      "an = c1 +2n",
+      "a1 = 1, a2 = 4, a3 = 11",
+      "c1, c2, c3"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Characteristic equation: r^3 - 5r^2 + 8r - 4 = 0.</li><li>General solution: an = c1 + (c2 + c3n)2n.</li></ul>"
   },
   {
     "id": "u2_c9",
@@ -764,7 +1228,15 @@
     "answer_html": "<p>Characteristic equation: <code>r^3 - 8r^2 + 21r - 18 = 0</code>. Roots: <code>2, 3, 3</code>.</p><p>General solution: <code>a<sub>n</sub> = c<sub>1</sub>2<sup>n</sup> + (c<sub>2</sub> + c<sub>3</sub>n)3<sup>n</sup></code>.</p><p>Conditions: <code>c<sub>1</sub> + c<sub>2</sub> = 1</code>, <code>2c<sub>1</sub> + 3(c<sub>2</sub> + c<sub>3</sub>) = 5</code>, <code>4c<sub>1</sub> + 9(c<sub>2</sub> + 2c<sub>3</sub>) = 19</code>. Solving gives constants <code>c<sub>1</sub>, c<sub>2</sub>, c<sub>3</sub></code>.</p>",
     "important": false,
     "score": 6.1,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "r^3 - 8r^2 + 21r - 18 = 0",
+      "2, 3, 3",
+      "an = c12n +3n",
+      "c1 + c2 = 1",
+      "2c1 + 3 = 5"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Characteristic equation: r^3 - 8r^2 + 21r - 18 = 0.</li><li>General solution: an = c12n + (c2 + c3n)3n.</li></ul>"
   },
   {
     "id": "u2_c10",
@@ -777,7 +1249,15 @@
     "answer_html": "<p>This is the Fibonacci sequence.</p><p>Let G(x) be the generating function. <code>G(x) - x = x G(x) + x^2 G(x)</code>.</p><p><code>G(x)(1 - x - x^2) = x</code> &rArr; <code>G(x) = x / (1 - x - x^2)</code>.</p><p>Using partial fractions with roots of <code>1 - x - x^2 = 0</code>, we get Binet's formula: <strong>a<sub>n</sub> = (1/&radic;5) [ ((1+&radic;5)/2)<sup>n</sup> - ((1-&radic;5)/2)<sup>n</sup> ]</strong>.</p>",
     "important": false,
     "score": 6.7,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "G - x = x G + x^2 G",
+      "G = x",
+      "G = x /",
+      "1 - x - x^2 = 0",
+      "an = [/2)n -/2)n ]"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>This is the Fibonacci sequence.</li><li>Let G(x) be the generating function.</li></ul>"
   },
   {
     "id": "u3_a_q1",
@@ -790,7 +1270,15 @@
     "answer_html": "<p><b>(i) Complete Bipartite Graph:</b> A bipartite graph $G=(V, E)$ with partition $V = V_1 \\cup V_2$ is a complete bipartite graph if every vertex in $V_1$ is connected to every vertex in $V_2$. Denoted as $K_{m,n}$.</p><p><b>(ii) Complete graph:</b> A simple graph in which every pair of distinct vertices is connected by a unique edge. Denoted as $K_n$.</p>",
     "score": 8.2,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Complete Bipartite Graph",
+      "Complete graph",
+      "following terms",
+      "terms",
+      "graphs i"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(i) Complete Bipartite Graph: A bipartite graph $G=(V, E)$ with partition $V = V_1 \\cup V_2$ is a complete bipartite graph if every vertex in $V_1$ is connected to every vertex in $V_2$.</li><li>Denoted as $K_{m,n}$.</li></ul>"
   },
   {
     "id": "u3_a_q2",
@@ -803,7 +1291,15 @@
     "answer_html": "<p><b>(i) $K_5$:</b> A complete graph with 5 vertices. Every vertex is connected to every other vertex, having 10 edges in total.</p><p><b>(ii) $C_4$:</b> A cycle graph with 4 vertices. It forms a square with vertices connected in a closed loop, having 4 edges.</p>",
     "score": 5.6,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "$K_5$",
+      "$C_4$",
+      "Draw",
+      "following graphs",
+      "graphs i"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(i) $K_5$: A complete graph with 5 vertices.</li><li>Every vertex is connected to every other vertex, having 10 edges in total.</li></ul>"
   },
   {
     "id": "u3_a_q3",
@@ -816,7 +1312,14 @@
     "answer_html": "<p>The graph has vertices $v_1$ to $v_8$. Degrees: $deg(v_1)=3$, $deg(v_2)=2$, $deg(v_3)=3$, $deg(v_4)=2$, $deg(v_5)=3$, $deg(v_6)=2$, $deg(v_7)=3$, $deg(v_8)=2$.</p>",
     "score": 6.7,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Find degree",
+      "degree",
+      "following graph",
+      "graph"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>The graph has vertices $v_1$ to $v_8$.</li><li>Degrees: $deg(v_1)=3$, $deg(v_2)=2$, $deg(v_3)=3$, $deg(v_4)=2$, $deg(v_5)=3$, $deg(v_6)=2$, $deg(v_7)=3$, $deg(v_8)=2$.</li></ul>"
   },
   {
     "id": "u3_a_q4",
@@ -829,7 +1332,12 @@
     "answer_html": "<p>The Handshaking Theorem states that in any undirected graph, the sum of the degrees of all vertices is equal to twice the number of edges. Mathematically, $\\sum_{v \\in V} deg(v) = 2|E|$.</p>",
     "score": 6.5,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Handshaking Theorem",
+      "Theorem"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>The Handshaking Theorem states that in any undirected graph, the sum of the degrees of all vertices is equal to twice the number of edges.</li><li>Mathematically, $\\sum_{v \\in V} deg(v) = 2|E|$.</li></ul>"
   },
   {
     "id": "u3_a_q5",
@@ -842,7 +1350,15 @@
     "answer_html": "<p>(i) This graph has parallel edges between a and b, and b and d. Thus, it is a <b>multigraph</b>.</p><p>(ii) This directed graph has self-loops (on a, c, e) and directed edges. It is a <b>directed pseudograph</b>.</p>",
     "score": 8.7,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "multigraph",
+      "directed pseudograph",
+      "Determine",
+      "following graphs",
+      "graphs"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(i) This graph has parallel edges between a and b, and b and d.</li><li>Thus, it is a multigraph.</li></ul>"
   },
   {
     "id": "u3_a_q6",
@@ -855,7 +1371,15 @@
     "answer_html": "<p>The graph has 4 vertices. Based on the adjacency matrix: $v_1$ has 3 parallel edges to $v_2$, 2 to $v_4$. $v_2$ has 1 edge to $v_3$ and $v_4$. $v_3$ has a self-loop (value 1 on diagonal) and 2 parallel edges to $v_4$.</p>",
     "score": 8.4,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Draw undirected",
+      "undirected graph",
+      "graph",
+      "following matrix",
+      "matrix"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>The graph has 4 vertices.</li><li>Based on the adjacency matrix: $v_1$ has 3 parallel edges to $v_2$, 2 to $v_4$.</li></ul>"
   },
   {
     "id": "u3_a_q7",
@@ -868,7 +1392,15 @@
     "answer_html": "<p><b>(i) n-Cube ($Q_n$):</b> A graph with $2^n$ vertices, represented by bit strings of length $n$. Two vertices are connected if their bit strings differ by exactly one bit.</p><p><b>(ii) Pseudograph:</b> An undirected graph that may contain both multiple (parallel) edges and self-loops.</p>",
     "score": 9.3,
     "important": true,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "n-Cube",
+      "Pseudograph",
+      "following terms",
+      "terms",
+      "graphs i"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(i) n-Cube ($Q_n$): A graph with $2^n$ vertices, represented by bit strings of length $n$.</li><li>Two vertices are connected if their bit strings differ by exactly one bit.</li></ul>"
   },
   {
     "id": "u3_a_q8",
@@ -881,7 +1413,15 @@
     "answer_html": "<p>The vertices are $a, b, c, d, e$. The edges are $\\{a,b\\}, \\{a,d\\}, \\{a,e\\}, \\{b,c\\}, \\{b,d\\}, \\{c,e\\}, \\{d,e\\}$. The adjacency matrix is a 5x5 symmetric matrix with 1s at these edge intersections and 0s elsewhere.</p>",
     "score": 5.9,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Find Adjacency",
+      "Adjacency matrix",
+      "matrix",
+      "following graph",
+      "graph"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>The vertices are $a, b, c, d, e$.</li><li>The edges are $\\{a,b\\}, \\{a,d\\}, \\{a,e\\}, \\{b,c\\}, \\{b,d\\}, \\{c,e\\}, \\{d,e\\}$.</li></ul>"
   },
   {
     "id": "u3_a_q9",
@@ -894,7 +1434,15 @@
     "answer_html": "<p>The incidence matrix has rows for vertices $v_1, v_2, v_3, v_4$ and columns for edges $e_1, e_2, e_3, e_4, e_5, e_6$. For a directed graph, the entry is $1$ if the edge starts at the vertex, $-1$ if it ends at the vertex, and $0$ otherwise.</p>",
     "score": 7.3,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Draw",
+      "incidence matrix",
+      "matrix",
+      "following graph",
+      "graph"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>The incidence matrix has rows for vertices $v_1, v_2, v_3, v_4$ and columns for edges $e_1, e_2, e_3, e_4, e_5, e_6$.</li><li>For a directed graph, the entry is $1$ if the edge starts at the vertex, $-1$ if it ends at the vertex, and $0$ otherwise.</li></ul>"
   },
   {
     "id": "u3_a_q10",
@@ -907,7 +1455,15 @@
     "answer_html": "<p>Both graphs $G$ and $H$ are cycles of 4 vertices ($C_4$). They have the same number of vertices, edges, and degree sequence (all vertices have degree 2). An isomorphism mapping exists (e.g., $u_1 \\to v_1, u_2 \\to v_4, u_4 \\to v_2, u_3 \\to v_3$), so they <b>are isomorphic</b>.</p>",
     "score": 5.6,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "are isomorphic",
+      "Check",
+      "following graph",
+      "graph",
+      "isomorphic"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Both graphs $G$ and $H$ are cycles of 4 vertices ($C_4$).</li><li>They have the same number of vertices, edges, and degree sequence (all vertices have degree 2).</li></ul>"
   },
   {
     "id": "u3_b_q1",
@@ -920,7 +1476,15 @@
     "answer_html": "<p><b>(i) $K_{1,3}$:</b> This is a star graph. One central vertex has degree 3, and three outer vertices each have degree 1.</p><p><b>(ii):</b> This is the $Q_3$ cube graph drawn on a plane. Every vertex has a degree of 3.</p>",
     "score": 6.4,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "$K_{1,3}$",
+      "Find Degree",
+      "Degree",
+      "following graph",
+      "graph i"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(i) $K_{1,3}$: This is a star graph.</li><li>One central vertex has degree 3, and three outer vertices each have degree 1.</li></ul>"
   },
   {
     "id": "u3_b_q2",
@@ -933,7 +1497,15 @@
     "answer_html": "<p>The given graph contains cycles of odd length (e.g., the triangle formed by vertices $a, b, h$). A graph is bipartite if and only if it contains no odd cycles. Therefore, this graph is <b>not bipartite</b>.</p>",
     "score": 7.7,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "not bipartite",
+      "Check",
+      "following graphs",
+      "graphs",
+      "Bipartite"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>The given graph contains cycles of odd length (e.g., the triangle formed by vertices $a, b, h$).</li><li>A graph is bipartite if and only if it contains no odd cycles.</li></ul>"
   },
   {
     "id": "u3_b_q3",
@@ -946,7 +1518,15 @@
     "answer_html": "<p>(i) The graph has parallel edges between $\\{a,b\\}$ and $\\{c,d\\}$. The adjacency matrix will have values of 2 for those pairs, and 1 for $\\{a,d\\}$ and $\\{b,c\\}$.</p><p>(ii) The graph has parallel cross edges. The adjacency matrix incorporates these multiple edges accordingly.</p>",
     "score": 5.6,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Find Adjacency",
+      "Adjacency matrix",
+      "matrix",
+      "following graph",
+      "graph"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(i) The graph has parallel edges between $\\{a,b\\}$ and $\\{c,d\\}$.</li><li>The adjacency matrix will have values of 2 for those pairs, and 1 for $\\{a,d\\}$ and $\\{b,c\\}$.</li></ul>"
   },
   {
     "id": "u3_b_q4",
@@ -959,7 +1539,15 @@
     "answer_html": "<p>Both graphs represent a path graph of length 5 ($P_5$). They both have 5 vertices, 4 edges, two vertices of degree 1, and three vertices of degree 2. Since their structures are identical under vertex relabeling, they <b>are isomorphic</b>.</p>",
     "score": 6.4,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "are isomorphic",
+      "Check",
+      "following graphs",
+      "graphs",
+      "isomorphic"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Both graphs represent a path graph of length 5 ($P_5$).</li><li>They both have 5 vertices, 4 edges, two vertices of degree 1, and three vertices of degree 2.</li></ul>"
   },
   {
     "id": "u3_b_q5",
@@ -972,7 +1560,15 @@
     "answer_html": "<p>According to the Handshaking Theorem, the sum of degrees of all vertices equals $2|E|$.</p><p>Sum of degrees = $3 + 3 + 4 + 2 + 2 + 2 = 16$.</p><p>Since the sum is even, such a graph can exist.</p><p>Total number of edges $|E| = 16 / 2 = 8$.</p>",
     "score": 8.3,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "graph",
+      "vertices",
+      "degrees 3",
+      "Verify whether",
+      "whether"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>According to the Handshaking Theorem, the sum of degrees of all vertices equals $2|E|$.</li><li>Sum of degrees = $3 + 3 + 4 + 2 + 2 + 2 = 16$.</li></ul>"
   },
   {
     "id": "u3_b_q6",
@@ -985,7 +1581,15 @@
     "answer_html": "<p>The incidence matrix maps 4 vertices to 5 edges. Each column has exactly two 1s, meaning it's an undirected graph. Edge $e_1=\\{v_1, v_2\\}$, $e_2=\\{v_1, v_4\\}$, $e_3=\\{v_2, v_4\\}$, $e_4=\\{v_3, v_4\\}$, $e_5=\\{v_2, v_3\\}$.</p>",
     "score": 7.8,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Draw",
+      "graph",
+      "following incidence",
+      "incidence matrix",
+      "matrix"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>The incidence matrix maps 4 vertices to 5 edges.</li><li>Each column has exactly two 1s, meaning it's an undirected graph.</li></ul>"
   },
   {
     "id": "u3_b_q7",
@@ -998,7 +1602,15 @@
     "answer_html": "<p><b>(i) $C_6$:</b> Hexagon cycle. Vertices: 6, Edges: 6.</p><p><b>(ii) $K_{2,3}$:</b> Complete bipartite graph. Vertices: $2+3=5$, Edges: $2 \\times 3 = 6$.</p><p><b>(iii) $Q_3$:</b> 3D Cube. Vertices: $2^3=8$, Edges: $3 \\times 2^2 = 12$.</p>",
     "score": 6.4,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "$C_6$",
+      "$K_{2,3}$",
+      "$Q_3$",
+      "Draw",
+      "following graphs"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(i) $C_6$: Hexagon cycle.</li><li>Vertices: 6, Edges: 6.</li></ul>"
   },
   {
     "id": "u3_b_q8",
@@ -1011,7 +1623,15 @@
     "answer_html": "<p><b>(i) $K_3$:</b> 3x3 matrix with 0s on diagonal, 1s everywhere else.</p><p><b>(ii) $Q_3$:</b> 8x8 matrix where $a_{ij}=1$ if binary representations of $i$ and $j$ differ by one bit.</p><p><b>(iii) $W_4$:</b> Wheel graph with 5 vertices (1 hub, 4 rim). The hub connects to all rim vertices, and rim vertices form a cycle $C_4$.</p>",
     "score": 8.0,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "$K_3$",
+      "$Q_3$",
+      "$W_4$",
+      "Represent",
+      "these graphs"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(i) $K_3$: 3x3 matrix with 0s on diagonal, 1s everywhere else.</li><li>(ii) $Q_3$: 8x8 matrix where $a_{ij}=1$ if binary representations of $i$ and $j$ differ by one bit.</li></ul>"
   },
   {
     "id": "u3_b_q9",
@@ -1024,7 +1644,15 @@
     "answer_html": "<p>Count the vertices $|V|$ and edges $|E|$. For each vertex, the in-degree is the number of incoming arrows (including self-loops), and the out-degree is the number of outgoing arrows (including self-loops). Sum of in-degrees = Sum of out-degrees = $|E|$.</p>",
     "score": 9.0,
     "important": true,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Determine",
+      "number",
+      "vertices",
+      "edges",
+      "find"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Count the vertices $|V|$ and edges $|E|$.</li><li>For each vertex, the in-degree is the number of incoming arrows (including self-loops), and the out-degree is the number of outgoing arrows (including self-loops).</li></ul>"
   },
   {
     "id": "u3_b_q10",
@@ -1037,7 +1665,15 @@
     "answer_html": "<p>Given the 4x4 adjacency matrix, construct the graph with 4 vertices. Draw $a_{ij}$ parallel edges between vertex $i$ and vertex $j$. The diagonal entries $a_{ii}$ represent self-loops.</p>",
     "score": 5.5,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Draw",
+      "undirected graph",
+      "graph",
+      "following matrix",
+      "matrix"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Given the 4x4 adjacency matrix, construct the graph with 4 vertices.</li><li>Draw $a_{ij}$ parallel edges between vertex $i$ and vertex $j$.</li></ul>"
   },
   {
     "id": "u3_c_q1",
@@ -1050,7 +1686,15 @@
     "answer_html": "<p>Both graphs have 5 vertices and 6 edges. Both consist of a cycle $C_4$ and an extra vertex connected to two adjacent vertices of the cycle. By mapping the degree 3 vertices and degree 2 vertices appropriately, an isomorphism is established. They <b>are isomorphic</b>.</p>",
     "score": 9.0,
     "important": true,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "are isomorphic",
+      "Check",
+      "following graphs",
+      "graphs",
+      "isomorphic"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Both graphs have 5 vertices and 6 edges.</li><li>Both consist of a cycle $C_4$ and an extra vertex connected to two adjacent vertices of the cycle.</li></ul>"
   },
   {
     "id": "u3_c_q2",
@@ -1063,7 +1707,15 @@
     "answer_html": "<p><b>(a)</b> Total edges $|E| = 15$. Sum of degrees = $2 \\times 15 = 30$.</p><p>Sum = $6 + 2(5) + 3(4) + k(1) = 28 + k$.</p><p>$28 + k = 30 \\implies k = 2$. Total vertices = $1 + 2 + 3 + 2 = 8$.</p><p><b>(b)</b> Total edges $|E| = 10$. Sum of degrees = 20.</p><p>$2+3+4+2+5+x = 16+x$.</p><p>$16+x = 20 \\implies x = 4$.</p>",
     "score": 8.5,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "graph",
+      "edges",
+      "one vertex",
+      "vertex",
+      "degree 6"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(a) Total edges $|E| = 15$.</li><li>Sum of degrees = $2 \\times 15 = 30$.</li></ul>"
   },
   {
     "id": "u3_c_q3",
@@ -1076,7 +1728,15 @@
     "answer_html": "<p>Vertices and edges are counted directly from the graph. The degree of each vertex is the number of incident edges (with self-loops counting twice). Isolated vertices have degree 0. Pendant vertices have degree 1.</p>",
     "score": 7.0,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Find",
+      "number",
+      "vertices",
+      "edges",
+      "degree"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Vertices and edges are counted directly from the graph.</li><li>The degree of each vertex is the number of incident edges (with self-loops counting twice).</li></ul>"
   },
   {
     "id": "u3_c_q4",
@@ -1089,7 +1749,15 @@
     "answer_html": "<p>Both graphs represent the Petersen graph or a structural equivalent with 10 vertices and 15 edges. By checking the degree sequence (all vertices have degree 3) and cycle structures, the mapping preserves adjacency, meaning they <b>are isomorphic</b>.</p>",
     "score": 6.2,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "are isomorphic",
+      "Check",
+      "following graphs",
+      "graphs",
+      "isomorphic"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Both graphs represent the Petersen graph or a structural equivalent with 10 vertices and 15 edges.</li><li>By checking the degree sequence (all vertices have degree 3) and cycle structures, the mapping preserves adjacency, meaning they are isomorphic.</li></ul>"
   },
   {
     "id": "u3_c_q5",
@@ -1102,7 +1770,15 @@
     "answer_html": "<p>Create a graph with 4 vertices. For each non-zero entry $a_{ij}$ in the matrix, draw that many parallel edges between vertex $i$ and vertex $j$. A non-zero $a_{ii}$ corresponds to self-loops.</p>",
     "score": 9.6,
     "important": true,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Draw",
+      "undirected graph",
+      "graph",
+      "following matrix",
+      "matrix"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Create a graph with 4 vertices.</li><li>For each non-zero entry $a_{ij}$ in the matrix, draw that many parallel edges between vertex $i$ and vertex $j$.</li></ul>"
   },
   {
     "id": "u3_c_q6",
@@ -1115,7 +1791,15 @@
     "answer_html": "<p>Count the vertices and all directed edges (including parallel ones). For each vertex, count incoming arrows for in-degree and outgoing arrows for out-degree. Confirm that the total in-degree equals the total out-degree.</p>",
     "score": 6.9,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Determine",
+      "number",
+      "vertices",
+      "edges",
+      "find"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Count the vertices and all directed edges (including parallel ones).</li><li>For each vertex, count incoming arrows for in-degree and outgoing arrows for out-degree.</li></ul>"
   },
   {
     "id": "u3_c_q7",
@@ -1128,7 +1812,15 @@
     "answer_html": "<p>Check the number of vertices, edges, and degree sequences. Both graphs are regular graphs of the same degree with identical structural properties. The mapping between outer and inner vertices demonstrates that they <b>are isomorphic</b>.</p>",
     "score": 5.9,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "are isomorphic",
+      "Check",
+      "following graphs",
+      "graphs",
+      "isomorphic"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Check the number of vertices, edges, and degree sequences.</li><li>Both graphs are regular graphs of the same degree with identical structural properties.</li></ul>"
   },
   {
     "id": "u3_c_q8",
@@ -1141,7 +1833,15 @@
     "answer_html": "<p>Sum the number of vertices and edges. List the degree for every labeled vertex. Identify vertices with degree 0 as isolated, and those with degree 1 as pendant (e.g., vertex $f$ or $d$ if applicable).</p>",
     "score": 5.9,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Find",
+      "number",
+      "vertices",
+      "edges",
+      "degree"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>Sum the number of vertices and edges.</li><li>List the degree for every labeled vertex.</li></ul>"
   },
   {
     "id": "u3_c_q9",
@@ -1154,7 +1854,15 @@
     "answer_html": "<p>List vertices in alphabetical order (e.g., $a, b, c, d$). Construct a matrix where entry $a_{ij}$ equals the number of directed edges from vertex $i$ to vertex $j$. Include self-loops on the diagonal.</p>",
     "score": 9.1,
     "important": true,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "Find",
+      "adjacency matrix",
+      "matrix",
+      "given directed",
+      "directed multigraph"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>List vertices in alphabetical order (e.g., $a, b, c, d$).</li><li>Construct a matrix where entry $a_{ij}$ equals the number of directed edges from vertex $i$ to vertex $j$.</li></ul>"
   },
   {
     "id": "u3_c_q10",
@@ -1167,7 +1875,15 @@
     "answer_html": "<p>(i) This is $K_5$, which contains triangles (odd cycles), so it is <b>not bipartite</b>.</p><p>(ii) This graph can be colored with two colors such that no two adjacent vertices have the same color, meaning it has no odd cycles. It <b>is bipartite</b>.</p>",
     "score": 8.1,
     "important": false,
-    "exam": "midterm"
+    "exam": "midterm",
+    "keywords": [
+      "not bipartite",
+      "is bipartite",
+      "Check",
+      "following graphs",
+      "graphs"
+    ],
+    "simplified_html": "<p><strong>Quick Recall:</strong></p><ul><li>(i) This is $K_5$, which contains triangles (odd cycles), so it is not bipartite.</li><li>(ii) This graph can be colored with two colors such that no two adjacent vertices have the same color, meaning it has no odd cycles.</li></ul>"
   },
   {
     "id": "q91",

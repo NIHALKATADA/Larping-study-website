@@ -468,6 +468,11 @@
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p>A <strong>transaction</strong> is a logical unit of work consisting of one or more SQL statements that must be executed entirely or not at all.</p>
 <p><strong>ACID Properties (Bank Transfer Example: A to B):</strong></p>
@@ -512,6 +517,27 @@
 
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Atomicity: "All or nothing." If money is deducted from A, it MUST be credited to B. If either fails, the entire transaction is rolled back.</li><li>Consistency: The database must remain in a valid state. The total sum of A + B's balances must be the same before and after the transaction.</li><li>Isolation: Concurrent transactions do not interfere with each other. If another transaction reads A's balance during the transfer, it will see the state either strictly before or strictly after, not midway.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">transaction</span>
+                                    
+                                    <span class="kw-badge">ACID Properties</span>
+                                    
+                                    <span class="kw-badge">Atomicity</span>
+                                    
+                                    <span class="kw-badge">Consistency</span>
+                                    
+                                    <span class="kw-badge">Isolation</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1155,6 +1181,11 @@
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div class="concept-heading">Definition</div>
         <p>Normalization is the process of organizing data to minimize redundancy and eliminate anomalies by dividing larger tables into smaller tables and defining relationships between them using functional dependencies.</p>
@@ -1167,6 +1198,27 @@
         </ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>First Normal Form (1NF): All attributes must be atomic (indivisible). No repeating groups or arrays allowed in a cell.</li><li>Second Normal Form (2NF): Must be in 1NF, and all non-key attributes must be fully functionally dependent on the entire primary key. (Eliminates partial dependencies).</li><li>Third Normal Form (3NF): Must be in 2NF, and no non-key attribute can be dependent on another non-key attribute. (Eliminates transitive dependencies: X → Y and Y → Z).</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">First Normal Form</span>
+                                    
+                                    <span class="kw-badge">Second Normal Form</span>
+                                    
+                                    <span class="kw-badge">Third Normal Form</span>
+                                    
+                                    <span class="kw-badge">normalization</span>
+                                    
+                                    <span class="kw-badge">1NF 2NF</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1192,6 +1244,11 @@
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <div class="concept-heading">E-R Diagram</div>
@@ -1239,6 +1296,27 @@
         </ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Student(Roll_No, Name, Program)</li><li>Course(Course_Code, C_Name, Credits)</li><li>Exam(Exam_ID, Date, Time, Course_Code)</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Student</span>
+                                    
+                                    <span class="kw-badge">Course</span>
+                                    
+                                    <span class="kw-badge">Exam</span>
+                                    
+                                    <span class="kw-badge">Appears</span>
+                                    
+                                    <span class="kw-badge">Draw</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1264,6 +1342,11 @@
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <div class="concept-heading">E-R Diagram</div>
@@ -1334,6 +1417,27 @@
         </ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Customer(Cust_ID, Name, Email, Address)</li><li>Author(Auth_ID, Name, Bio)</li><li>Publisher(Pub_ID, Name, Address)</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Customer</span>
+                                    
+                                    <span class="kw-badge">Author</span>
+                                    
+                                    <span class="kw-badge">Publisher</span>
+                                    
+                                    <span class="kw-badge">Book</span>
+                                    
+                                    <span class="kw-badge">Order</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1360,6 +1464,11 @@
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div class="concept-heading">Functional Dependencies (FDs)</div>
         <p>Assumed FDs based on logic:</p>
@@ -1380,6 +1489,27 @@
         <p>In the new tables, there are no non-key attributes depending on other non-key attributes (no transitive dependencies). Therefore, the tables are already in <strong>3NF</strong>.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>FD1: Rollno → Name (A student has one name)</li><li>FD2: Rollno, Subject → Marks (A specific student's marks in a specific subject)</li><li>Student(Rollno, Name)</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Rollno → Name</span>
+                                    
+                                    <span class="kw-badge">Rollno, Subject → Marks</span>
+                                    
+                                    <span class="kw-badge">Rollno</span>
+                                    
+                                    <span class="kw-badge">Partial Dependency</span>
+                                    
+                                    <span class="kw-badge">Student</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1406,6 +1536,11 @@
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div class="concept-heading">Checking BCNF</div>
         <p>Relation: <code>R(StudentID, Subject, Mentor)</code><br>
@@ -1421,6 +1556,27 @@
         <p>Now all determinants are candidate keys.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Mentor_Subject(Mentor, Subject)</li><li>Student_Mentor(StudentID, Mentor)</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">{StudentID, Subject} → Mentor</span>
+                                    
+                                    <span class="kw-badge">Mentor → Subject</span>
+                                    
+                                    <span class="kw-badge">Mentor</span>
+                                    
+                                    <span class="kw-badge">not a super key</span>
+                                    
+                                    <span class="kw-badge">Mentor_Subject</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1447,6 +1603,11 @@
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div class="concept-heading">Candidate Keys</div>
         <ul>
@@ -1461,6 +1622,27 @@
         However, check BCNF: The FD <code>C &rarr; D</code> has determinant C, which is not a super key. Thus, it violates BCNF. The highest normal form is <strong>3NF</strong>.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>{A, B}+ = {A, B, C, D}</li><li>{B, C}+ = {A, B, C, D} (since C → D and D → A)</li><li>{B, D}+ = {A, B, C, D} (since D → A and AB → C)</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">{A, B}+</span>
+                                    
+                                    <span class="kw-badge">{B, C}+</span>
+                                    
+                                    <span class="kw-badge">{B, D}+</span>
+                                    
+                                    <span class="kw-badge">AB, BC, and BD</span>
+                                    
+                                    <span class="kw-badge">3NF</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1486,6 +1668,11 @@
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
@@ -1564,6 +1751,27 @@
         </ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Left Outer: Returns all rows from the left table, and matched rows from the right.</li><li>Right Outer: Returns all rows from the right table, and matched rows from the left.</li><li>Full Outer: Returns all rows when there is a match in either table.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">JOIN</span>
+                                    
+                                    <span class="kw-badge">Left Outer</span>
+                                    
+                                    <span class="kw-badge">Right Outer</span>
+                                    
+                                    <span class="kw-badge">Full Outer</span>
+                                    
+                                    <span class="kw-badge">different</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1590,6 +1798,11 @@
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Decomposition</strong> is the process of breaking down a large, poorly-designed relation into two or more smaller relations to eliminate redundancy and anomalies.</p>
         
@@ -1601,6 +1814,27 @@
         <p>A decomposition is dependency-preserving if all original functional dependencies can be checked and enforced using only the decomposed relations, without needing to join them back together.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Decomposition is the process of breaking down a large, poorly-designed relation into two or more smaller relations to eliminate redundancy and anomalies.</li><li>A decomposition of R into R1 and R2 is lossless if joining R1 and R2 back together using a Natural Join yields the exact original relation R, without generating spurious (fake) tuples.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Decomposition</span>
+                                    
+                                    <span class="kw-badge">R1 ∩ R2 → R1</span>
+                                    
+                                    <span class="kw-badge">R1 ∩ R2 → R2</span>
+                                    
+                                    <span class="kw-badge">lossless-join</span>
+                                    
+                                    <span class="kw-badge">dependency-preserving decomposition</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1627,6 +1861,11 @@
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p>Assuming <code>Enrollment(sid, cid, marks)</code>.</p>
         <pre><code>SELECT s.sname, e.marks
@@ -1642,6 +1881,27 @@ WHERE c.cname = 'DBMS'
   );</code></pre>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Assuming Enrollment(sid, cid, marks).</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Enrollment</span>
+                                    
+                                    <span class="kw-badge">nested query</span>
+                                    
+                                    <span class="kw-badge">query</span>
+                                    
+                                    <span class="kw-badge">find</span>
+                                    
+                                    <span class="kw-badge">student</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1668,6 +1928,11 @@ WHERE c.cname = 'DBMS'
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p>The division operator (<code>&divide;</code>) is used specifically for queries involving "every" or "all".</p>
         <p><strong>Expression:</strong></p>
@@ -1676,6 +1941,27 @@ WHERE c.cname = 'DBMS'
         <p><code>&pi;<sub>sname</sub> ( Student &#x2A1D; (&pi;<sub>sid, cid</sub>(Enrollment) &divide; &pi;<sub>cid</sub>(Course)) )</code></p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>The division operator (÷) is used specifically for queries involving "every" or "all".</li><li>Expression: πsid(Enrollment) ÷ πcid(Course) To get the student names, we natural join this result with the Student table: πsname ( Student ⨝ (πsid, cid(Enrollment) ÷ πcid(Course)) )</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Expression</span>
+                                    
+                                    <span class="kw-badge">πsid ÷ πcid</span>
+                                    
+                                    <span class="kw-badge">πsname ÷ πcid) )</span>
+                                    
+                                    <span class="kw-badge">division operation</span>
+                                    
+                                    <span class="kw-badge">operation</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1702,6 +1988,11 @@ WHERE c.cname = 'DBMS'
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <pre><code>SELECT s.sname, e1.cid, e1.marks
 FROM Student s
@@ -1714,6 +2005,27 @@ WHERE e1.marks &gt; (
         <p>The inner query recalculates the average marks dynamically for every row of the outer query, matching the <code>cid</code>.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>The inner query recalculates the average marks dynamically for every row of the outer query, matching the cid.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">cid</span>
+                                    
+                                    <span class="kw-badge">correlated subquery</span>
+                                    
+                                    <span class="kw-badge">subquery</span>
+                                    
+                                    <span class="kw-badge">students who</span>
+                                    
+                                    <span class="kw-badge">who</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1740,6 +2052,11 @@ WHERE e1.marks &gt; (
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <ul>
 <li><strong>DELETE</strong> is a DML command used to remove specific rows based on a WHERE clause. It can be rolled back.</li>
@@ -1748,6 +2065,27 @@ WHERE e1.marks &gt; (
 </ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>DELETE is a DML command used to remove specific rows based on a WHERE clause. It can be rolled back.</li><li>TRUNCATE is a DDL command that removes all rows from a table quickly by deallocating the pages. It cannot be rolled back and resets identity columns.</li><li>DROP is a DDL command that completely deletes the table structure and its data from the database.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">DELETE</span>
+                                    
+                                    <span class="kw-badge">TRUNCATE</span>
+                                    
+                                    <span class="kw-badge">DROP</span>
+                                    
+                                    <span class="kw-badge">DELETE TRUNCATE</span>
+                                    
+                                    <span class="kw-badge">DROP commands</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1774,6 +2112,11 @@ WHERE e1.marks &gt; (
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>NOT NULL</strong>: Ensures a column cannot have a NULL value. <em>Ex: <code>Name VARCHAR(50) NOT NULL</code></em></p>
 <p><strong>UNIQUE</strong>: Ensures all values in a column are distinct. <em>Ex: <code>Email VARCHAR(50) UNIQUE</code></em></p>
@@ -1782,6 +2125,27 @@ WHERE e1.marks &gt; (
 <p><strong>CHECK</strong>: Ensures values in a column satisfy a specific condition. <em>Ex: <code>Age INT CHECK (Age &gt;= 18)</code></em></p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>NOT NULL: Ensures a column cannot have a NULL value.</li><li>Ex: Name VARCHAR(50) NOT NULL UNIQUE: Ensures all values in a column are distinct.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">NOT NULL</span>
+                                    
+                                    <span class="kw-badge">Name VARCHAR NOT NULL</span>
+                                    
+                                    <span class="kw-badge">UNIQUE</span>
+                                    
+                                    <span class="kw-badge">Email VARCHAR UNIQUE</span>
+                                    
+                                    <span class="kw-badge">PRIMARY KEY</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1808,6 +2172,11 @@ WHERE e1.marks &gt; (
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <ul>
 <li><strong>ROUND(n, d)</strong>: Rounds <em>n</em> to <em>d</em> decimal places. <em>ROUND(3.456, 2) &rarr; 3.46</em></li>
@@ -1821,6 +2190,27 @@ WHERE e1.marks &gt; (
 </ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>ROUND(n, d): Rounds n to d decimal places. ROUND(3.456, 2) → 3.46</li><li>TRUNCATE(n, d): Cuts off n at d decimal places without rounding. TRUNCATE(3.456, 2) → 3.45</li><li>CEIL(n): Returns the smallest integer ≥ n. CEIL(3.14) → 4</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">ROUND</span>
+                                    
+                                    <span class="kw-badge">TRUNCATE</span>
+                                    
+                                    <span class="kw-badge">CEIL</span>
+                                    
+                                    <span class="kw-badge">FLOOR</span>
+                                    
+                                    <span class="kw-badge">ABS</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1847,6 +2237,11 @@ WHERE e1.marks &gt; (
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <ul>
 <li><strong>CURDATE()</strong>: Returns the current system date. <em>Ex: <code>SELECT CURDATE();</code></em></li>
@@ -1856,6 +2251,27 @@ WHERE e1.marks &gt; (
 </ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>CURDATE(): Returns the current system date. Ex: SELECT CURDATE();</li><li>DATEDIFF(date1, date2): Returns the number of days between two dates. Ex: SELECT DATEDIFF('2023-10-10', '2023-10-01'); → 9</li><li>DATE_ADD(date, INTERVAL expr unit): Adds a time interval to a date. Ex: SELECT DATE_ADD('2023-01-01', INTERVAL 5 DAY);</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">CURDATE</span>
+                                    
+                                    <span class="kw-badge">SELECT CURDATE</span>
+                                    
+                                    <span class="kw-badge">DATEDIFF</span>
+                                    
+                                    <span class="kw-badge">SELECT DATEDIFF; → 9</span>
+                                    
+                                    <span class="kw-badge">DATE_ADD</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1882,6 +2298,11 @@ WHERE e1.marks &gt; (
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Set Operators:</strong></p>
 <ul>
@@ -1897,6 +2318,27 @@ WHERE e1.marks &gt; (
 </ol>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>UNION: Combines results of two queries, removing duplicates.</li><li>UNION ALL: Combines results of two queries, keeping all duplicates.</li><li>INTERSECT: Returns only the rows that appear in both queries.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Set Operators</span>
+                                    
+                                    <span class="kw-badge">UNION</span>
+                                    
+                                    <span class="kw-badge">UNION ALL</span>
+                                    
+                                    <span class="kw-badge">INTERSECT</span>
+                                    
+                                    <span class="kw-badge">MINUS / EXCEPT</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1923,6 +2365,11 @@ WHERE e1.marks &gt; (
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <ul>
 <li><strong>COMMIT</strong>: Saves all changes made during the current transaction permanently.</li>
@@ -1938,6 +2385,27 @@ ROLLBACK TO step1; -- Undoes only the A102 update
 COMMIT; -- Saves the final state</code></pre>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>COMMIT: Saves all changes made during the current transaction permanently.</li><li>ROLLBACK: Undoes all changes made during the current transaction, reverting to the last commit.</li><li>SAVEPOINT: Sets a marker within a transaction so you can roll back to that specific point without canceling the entire transaction.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">COMMIT</span>
+                                    
+                                    <span class="kw-badge">ROLLBACK</span>
+                                    
+                                    <span class="kw-badge">SAVEPOINT</span>
+                                    
+                                    <span class="kw-badge">COMMIT ROLLBACK</span>
+                                    
+                                    <span class="kw-badge">ACCOUNT table</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1964,6 +2432,11 @@ COMMIT; -- Saves the final state</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <ul>
 <li><strong>Stored Procedure</strong>: A pre-compiled collection of SQL statements saved in the database that can be executed as a single callable routine.</li>
@@ -1973,6 +2446,27 @@ COMMIT; -- Saves the final state</code></pre>
 </ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Stored Procedure: A pre-compiled collection of SQL statements saved in the database that can be executed as a single callable routine.</li><li>Sequence (AUTO_INCREMENT): Automatically generates unique, sequential numeric values, typically used for primary keys.</li><li>Cursor: A database object used to retrieve and process rows one by one from a result set inside a stored procedure.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Stored Procedure</span>
+                                    
+                                    <span class="kw-badge">Sequence</span>
+                                    
+                                    <span class="kw-badge">Cursor</span>
+                                    
+                                    <span class="kw-badge">Trigger</span>
+                                    
+                                    <span class="kw-badge">one</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4288,6 +4782,11 @@ COMMIT; -- Saves the final state</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div class="concept-heading">The Three Levels</div>
         <ol>
@@ -4345,6 +4844,27 @@ COMMIT; -- Saves the final state</code></pre>
 
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>External Level (View Level): The highest level, describing only the part of the database relevant to a specific user group (hiding the rest).</li><li>Conceptual Level (Logical Level): Describes what data is stored in the entire database and the relationships among those data. Used by DBAs.</li><li>Internal Level (Physical Level): Describes exactly how the data is physically stored on disk (data structures, file organizations).</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">External Level</span>
+                                    
+                                    <span class="kw-badge">Conceptual Level</span>
+                                    
+                                    <span class="kw-badge">Internal Level</span>
+                                    
+                                    <span class="kw-badge">Exam Tip</span>
+                                    
+                                    <span class="kw-badge">Draw</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4370,6 +4890,11 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <div class="concept-heading">Explanation</div>
@@ -4397,6 +4922,27 @@ COMMIT; -- Saves the final state</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Super Key: Any combination of columns that uniquely identifies a row. (e.g., StudentID + Name)</li><li>Candidate Key: A minimal super key; it uniquely identifies a row with no unnecessary columns. (e.g., StudentID or Email)</li><li>Primary Key: The specific candidate key chosen to identify rows. Cannot be NULL. (e.g., StudentID)</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Super Key</span>
+                                    
+                                    <span class="kw-badge">StudentID + Name</span>
+                                    
+                                    <span class="kw-badge">Candidate Key</span>
+                                    
+                                    <span class="kw-badge">StudentID</span>
+                                    
+                                    <span class="kw-badge">Email</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4423,6 +4969,11 @@ COMMIT; -- Saves the final state</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div class="concept-heading">The Three Anomalies</div>
         <ul>
@@ -4434,6 +4985,27 @@ COMMIT; -- Saves the final state</code></pre>
         <p>Normalization resolves these by decomposing large, poorly structured tables into smaller, well-structured tables where each table represents a single logical theme or entity. By linking them with foreign keys, redundancy is eliminated, which inherently solves update, insertion, and deletion anomalies.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Update Anomaly: If data is stored redundantly, changing it in one row requires changing it in all rows. Missing one causes inconsistency (e.g., changing a department's location).</li><li>Insertion Anomaly: The inability to add data to the database due to absence of other data (e.g., unable to add a new Department because it has no Employees yet, and Employee_ID is the primary key).</li><li>Deletion Anomaly: The unintended loss of data when deleting a row (e.g., deleting the only employee in a department also deletes the department's information).</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Update Anomaly</span>
+                                    
+                                    <span class="kw-badge">Insertion Anomaly</span>
+                                    
+                                    <span class="kw-badge">Deletion Anomaly</span>
+                                    
+                                    <span class="kw-badge">insertion deletion</span>
+                                    
+                                    <span class="kw-badge">deletion</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4459,6 +5031,11 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <div class="concept-heading">E-R Diagram</div>
@@ -4495,6 +5072,27 @@ COMMIT; -- Saves the final state</code></pre>
         </ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Patient(Patient_ID, Name, DOB, Contact)</li><li>Doctor(Doc_ID, Name, Specialization)</li><li>Test(Test_Code, Test_Name, Cost)</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Patient</span>
+                                    
+                                    <span class="kw-badge">Doctor</span>
+                                    
+                                    <span class="kw-badge">Test</span>
+                                    
+                                    <span class="kw-badge">Consultation_Record</span>
+                                    
+                                    <span class="kw-badge">Hospital wants</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4520,6 +5118,11 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <div class="concept-heading">E-R Diagram</div>
@@ -4572,6 +5175,27 @@ COMMIT; -- Saves the final state</code></pre>
         </ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Branch(Branch_Code, City, Assets)</li><li>Customer(Cust_ID, Name, Phone, Address)</li><li>Account(Acc_No, Type, Balance, Branch_Code)</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Branch</span>
+                                    
+                                    <span class="kw-badge">Customer</span>
+                                    
+                                    <span class="kw-badge">Account</span>
+                                    
+                                    <span class="kw-badge">Loan</span>
+                                    
+                                    <span class="kw-badge">Holds_Account</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4598,6 +5222,11 @@ COMMIT; -- Saves the final state</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div class="concept-heading">Identifying Partial Dependencies</div>
         <p>Suppose the relation is <code>R(StudentID, SubjectID, StudentName, Grade)</code>. The primary key is <strong>(StudentID, SubjectID)</strong>.</p>
@@ -4614,6 +5243,27 @@ COMMIT; -- Saves the final state</code></pre>
         <p>Both tables are now in 2NF as all non-prime attributes fully depend on their respective primary keys.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>StudentID → StudentName (StudentName depends only on part of the key) — Partial Dependency</li><li>StudentID, SubjectID → Grade (Grade depends on the whole key) — Full Dependency</li><li>Student(StudentID, StudentName)</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">StudentID → StudentName</span>
+                                    
+                                    <span class="kw-badge">— Partial Dependency</span>
+                                    
+                                    <span class="kw-badge">StudentID, SubjectID → Grade</span>
+                                    
+                                    <span class="kw-badge">— Full Dependency</span>
+                                    
+                                    <span class="kw-badge">Student</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4640,6 +5290,11 @@ COMMIT; -- Saves the final state</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div class="concept-heading">Violation of 3NF</div>
         <p>Consider <code>Employee(EmpID, Name, DeptID, DeptName)</code> where <code>EmpID</code> is the primary key.</p>
@@ -4656,6 +5311,27 @@ COMMIT; -- Saves the final state</code></pre>
         </ol>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Employee(EmpID, Name, DeptID)</li><li>Department(DeptID, DeptName)</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Employee</span>
+                                    
+                                    <span class="kw-badge">EmpID</span>
+                                    
+                                    <span class="kw-badge">EmpID → DeptID</span>
+                                    
+                                    <span class="kw-badge">DeptID → DeptName</span>
+                                    
+                                    <span class="kw-badge">EmpID → DeptName</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4682,6 +5358,11 @@ COMMIT; -- Saves the final state</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div class="concept-heading">Computing {A, C}<sup>+</sup></div>
         <ol>
@@ -4694,6 +5375,27 @@ COMMIT; -- Saves the final state</code></pre>
         <p>Since the closure of {A, C} contains all the attributes of the relation R, <strong>{A, C} is a super key</strong>. Assuming no proper subset of {A, C} can determine all attributes, <strong>{A, C} is a Candidate Key</strong>.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Start with the base set: {A, C}</li><li>Using A → B, add B. The set becomes {A, B, C}</li><li>Using BC → D (we have both B and C), add D. The set becomes {A, B, C, D}</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">{A, C}</span>
+                                    
+                                    <span class="kw-badge">A → B</span>
+                                    
+                                    <span class="kw-badge">{A, B, C}</span>
+                                    
+                                    <span class="kw-badge">BC → D</span>
+                                    
+                                    <span class="kw-badge">{A, B, C, D}</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4720,6 +5422,11 @@ COMMIT; -- Saves the final state</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div class="concept-heading">Analysis</div>
         <p>Primary Key: <strong>(Roll_No, Course_ID)</strong><br>
@@ -4733,6 +5440,27 @@ COMMIT; -- Saves the final state</code></pre>
         <p>Now, both relations are in 2NF.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Course(Course_ID, Course_Name)</li><li>Student_Course(Roll_No, Course_ID, Instructor)</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Course_ID → Course_Name</span>
+                                    
+                                    <span class="kw-badge">Partial Dependency</span>
+                                    
+                                    <span class="kw-badge">Course_Name</span>
+                                    
+                                    <span class="kw-badge">Course</span>
+                                    
+                                    <span class="kw-badge">Student_Course</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4759,6 +5487,11 @@ COMMIT; -- Saves the final state</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div class="concept-heading">Analysis</div>
         <p>Primary Key: <strong>Emp_ID</strong>. Since the key is a single attribute, there are no partial dependencies, so it is in <strong>2NF</strong>.<br>
@@ -4771,6 +5504,27 @@ COMMIT; -- Saves the final state</code></pre>
         </ol>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Employee(Emp_ID, Emp_Name, Dept_ID)</li><li>Department(Dept_ID, Dept_Name, Dept_Location)</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Emp_ID</span>
+                                    
+                                    <span class="kw-badge">2NF</span>
+                                    
+                                    <span class="kw-badge">Dept_ID → Dept_Name, Dept_Location</span>
+                                    
+                                    <span class="kw-badge">Transitive Dependency</span>
+                                    
+                                    <span class="kw-badge">Employee</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4797,6 +5551,11 @@ COMMIT; -- Saves the final state</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div class="concept-heading">Analysis</div>
         <p>Candidate Keys: <strong>(Student, Subject)</strong> and <strong>(Student, Teacher)</strong>.<br>
@@ -4810,6 +5569,27 @@ COMMIT; -- Saves the final state</code></pre>
         <p>Both tables are now strictly in BCNF.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Teach_Subj(Teacher, Subject)</li><li>Stud_Teach(Student, Teacher)</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Teacher → Subject</span>
+                                    
+                                    <span class="kw-badge">Teacher</span>
+                                    
+                                    <span class="kw-badge">not a super key</span>
+                                    
+                                    <span class="kw-badge">Teach_Subj</span>
+                                    
+                                    <span class="kw-badge">Stud_Teach</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4833,6 +5613,11 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
@@ -4882,6 +5667,27 @@ COMMIT; -- Saves the final state</code></pre>
         <p><code>&pi;<sub>cname</sub> ( &sigma;<sub>sname='Alice'</sub> (Course &#x2A1D; Enrollment &#x2A1D; Student) )</code></p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>πsname ( σcname='DBMS' (Student ⨝ Enrollment ⨝ Course) ) πcname ( σsname='Alice' (Course ⨝ Enrollment ⨝ Student) )</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">πsname )</span>
+                                    
+                                    <span class="kw-badge">πcname )</span>
+                                    
+                                    <span class="kw-badge">Consider</span>
+                                    
+                                    <span class="kw-badge">relational schema</span>
+                                    
+                                    <span class="kw-badge">schema Student</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4908,6 +5714,11 @@ COMMIT; -- Saves the final state</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <ul>
             <li><strong>DDL:</strong> Defines structure (e.g., <code>CREATE TABLE</code>).</li>
@@ -4917,6 +5728,27 @@ COMMIT; -- Saves the final state</code></pre>
         </ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>DDL: Defines structure (e.g., CREATE TABLE).</li><li>DML: Manages data (e.g., INSERT INTO).</li><li>DCL: Manages security (e.g., GRANT).</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">DDL</span>
+                                    
+                                    <span class="kw-badge">CREATE TABLE</span>
+                                    
+                                    <span class="kw-badge">DML</span>
+                                    
+                                    <span class="kw-badge">INSERT INTO</span>
+                                    
+                                    <span class="kw-badge">DCL</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4943,6 +5775,11 @@ COMMIT; -- Saves the final state</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p>Aggregate functions perform a calculation on a set of values and return a single summarizing value.</p>
         <ul>
@@ -4953,6 +5790,27 @@ COMMIT; -- Saves the final state</code></pre>
         </ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>COUNT(): Returns the number of rows. SELECT COUNT(*) FROM Employees;</li><li>SUM(): Returns the total sum of a column. SELECT SUM(Salary) FROM Employees;</li><li>AVG(): Returns the average value. SELECT AVG(Salary) FROM Employees;</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">COUNT</span>
+                                    
+                                    <span class="kw-badge">SELECT COUNT FROM Employees</span>
+                                    
+                                    <span class="kw-badge">SUM</span>
+                                    
+                                    <span class="kw-badge">SELECT SUM FROM Employees</span>
+                                    
+                                    <span class="kw-badge">AVG</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -4976,6 +5834,11 @@ COMMIT; -- Saves the final state</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <div class="table-responsive">
@@ -5005,6 +5868,27 @@ GROUP BY DeptID
 HAVING AVG(Salary) &gt; 50000;    -- Filters groups</code></pre>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li><strong>WHERE Clause:</strong> Filters individual rows before grouping. <em>vs</em> <strong>HAVING Clause:</strong> Filters groups after grouping.</li><li><strong>WHERE Clause:</strong> Cannot contain aggregate functions. <em>vs</em> <strong>HAVING Clause:</strong> Can contain aggregate functions.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">WHERE Clause</span>
+                                    
+                                    <span class="kw-badge">HAVING Clause</span>
+                                    
+                                    <span class="kw-badge">individual rows</span>
+                                    
+                                    <span class="kw-badge">groups</span>
+                                    
+                                    <span class="kw-badge">clause different</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -5030,6 +5914,11 @@ HAVING AVG(Salary) &gt; 50000;    -- Filters groups</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
@@ -5085,6 +5974,27 @@ HAVING AVG(Salary) &gt; 50000;    -- Filters groups</code></pre>
         <p>Treating a relationship between entities as a single abstract entity, allowing relationships to participate in other relationships. <br><em>Example:</em> A <strong>Project</strong> and <strong>Employee</strong> have a <em>Works_On</em> relationship. A <strong>Manager</strong> manages the entire <em>Works_On</em> relationship, treating it as one aggregated entity.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>The process of defining a set of subclasses from an entity type based on distinguishing characteristics.</li><li>Example: An Employee can be specialized into Hourly_Emp and Salaried_Emp.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Employee</span>
+                                    
+                                    <span class="kw-badge">Hourly_Emp</span>
+                                    
+                                    <span class="kw-badge">Salaried_Emp</span>
+                                    
+                                    <span class="kw-badge">Car</span>
+                                    
+                                    <span class="kw-badge">Truck</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -5111,6 +6021,11 @@ HAVING AVG(Salary) &gt; 50000;    -- Filters groups</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Normalization</strong> uses <strong>Decomposition</strong> as its primary mechanism. When a relation violates a normal form, we decompose it into smaller relations that satisfy the normal form.</p>
         
@@ -5126,6 +6041,27 @@ HAVING AVG(Salary) &gt; 50000;    -- Filters groups</code></pre>
         <p>This decomposition is both lossless-join (because DeptID is a primary key in Department) and dependency-preserving.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>This violates 3NF due to the transitive dependency (EmpID → DeptID → DeptName).</li><li>Normalization Process: We decompose R into two relations to remove the redundancy: 1. Employee(EmpID, EmpName, DeptID) 2. Department(DeptID, DeptName)</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Normalization</span>
+                                    
+                                    <span class="kw-badge">Decomposition</span>
+                                    
+                                    <span class="kw-badge">EmpID → EmpName, DeptID</span>
+                                    
+                                    <span class="kw-badge">DeptID → DeptName</span>
+                                    
+                                    <span class="kw-badge">EmpID → DeptID → DeptName</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -5152,6 +6088,11 @@ HAVING AVG(Salary) &gt; 50000;    -- Filters groups</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div class="concept-heading">Using LEFT JOIN</div>
         <pre><code>SELECT s.sname 
@@ -5165,6 +6106,27 @@ WHERE NOT EXISTS (
 );</code></pre>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Using LEFT JOIN SELECT s.sname FROM Student s LEFT JOIN Enrollment e ON s.sid = e.sid WHERE e.cid IS NULL; Using NOT EXISTS SELECT sname FROM Student s WHERE NOT EXISTS ( SELECT 1 FROM Enrollment e WH</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">query</span>
+                                    
+                                    <span class="kw-badge">find students</span>
+                                    
+                                    <span class="kw-badge">students who</span>
+                                    
+                                    <span class="kw-badge">who</span>
+                                    
+                                    <span class="kw-badge">enrolled</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -5191,6 +6153,11 @@ WHERE NOT EXISTS (
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Relational Algebra:</strong></p>
         <p><code>&pi;<sub>sname</sub> ( Student &#x2A1D; Enrollment &#x2A1D; &sigma;<sub>cname='DBMS'</sub>(Course) )</code></p>
@@ -5202,6 +6169,27 @@ WHERE NOT EXISTS (
         </ol>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Select only the course where cname is 'DBMS' (σ).</li><li>Natural Join (⨝) the result with Enrollment and Student.</li><li>Project (π) only the student name (sname).</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Relational Algebra</span>
+                                    
+                                    <span class="kw-badge">πsname )</span>
+                                    
+                                    <span class="kw-badge">algebra expression</span>
+                                    
+                                    <span class="kw-badge">expression</span>
+                                    
+                                    <span class="kw-badge">retrieve</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -5228,10 +6216,36 @@ WHERE NOT EXISTS (
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>CREATE TABLE</strong> is used to create a new table in the database.</p><p><strong>ALTER TABLE</strong> is used to add, delete, or modify columns in an existing table.</p><p><strong>DROP TABLE</strong> is used to delete an existing table completely (including its structure and data).</p><p>DDL statements are <strong>auto-committed</strong> because they alter the database schema directly and cannot be rolled back in most RDBMS like MySQL and Oracle.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>CREATE TABLE is used to create a new table in the database.</li><li>ALTER TABLE is used to add, delete, or modify columns in an existing table.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">CREATE TABLE</span>
+                                    
+                                    <span class="kw-badge">ALTER TABLE</span>
+                                    
+                                    <span class="kw-badge">DROP TABLE</span>
+                                    
+                                    <span class="kw-badge">auto-committed</span>
+                                    
+                                    <span class="kw-badge">use</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -5258,6 +6272,11 @@ WHERE NOT EXISTS (
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <pre><code>CREATE TABLE Employee (
     Emp_ID INT PRIMARY KEY,
@@ -5268,6 +6287,27 @@ WHERE NOT EXISTS (
 );</code></pre>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>CREATE TABLE Employee ( Emp_ID INT PRIMARY KEY, Name VARCHAR(50) NOT NULL, Email VARCHAR(50) UNIQUE, Dept_ID INT, Salary DECIMAL(10,2) );</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">CREATE TABLE</span>
+                                    
+                                    <span class="kw-badge">TABLE statement</span>
+                                    
+                                    <span class="kw-badge">statement</span>
+                                    
+                                    <span class="kw-badge">Employee Emp_ID</span>
+                                    
+                                    <span class="kw-badge">Emp_ID</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -5294,12 +6334,38 @@ WHERE NOT EXISTS (
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <pre><code>ALTER TABLE Employee
 ADD CONSTRAINT fk_dept
 FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);</code></pre>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>ALTER TABLE Employee ADD CONSTRAINT fk_dept FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">ALTER TABLE</span>
+                                    
+                                    <span class="kw-badge">TABLE add</span>
+                                    
+                                    <span class="kw-badge">add</span>
+                                    
+                                    <span class="kw-badge">foreign key</span>
+                                    
+                                    <span class="kw-badge">key</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -5326,6 +6392,11 @@ FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <ul>
 <li><strong>CONCAT(s1, s2)</strong>: Joins two or more strings. <em>Ex: <code>CONCAT('Data', 'base') &rarr; 'Database'</code></em></li>
@@ -5337,6 +6408,27 @@ FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);</code></pre>
 </ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>CONCAT(s1, s2): Joins two or more strings. Ex: CONCAT('Data', 'base') → 'Database'</li><li>UPPER(s) / LOWER(s): Converts a string to all uppercase or lowercase. Ex: UPPER('sql') → 'SQL'</li><li>LENGTH(s): Returns the number of characters in a string. Ex: LENGTH('DBMS') → 4</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">CONCAT</span>
+                                    
+                                    <span class="kw-badge">CONCAT → 'Database'</span>
+                                    
+                                    <span class="kw-badge">UPPER / LOWER</span>
+                                    
+                                    <span class="kw-badge">UPPER → 'SQL'</span>
+                                    
+                                    <span class="kw-badge">LENGTH</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -5363,11 +6455,37 @@ FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID);</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>BEFORE Trigger</strong> executes before the triggering DML operation is applied (useful for validation/modification of incoming data). <strong>AFTER Trigger</strong> executes after the operation (useful for auditing or cascading changes to other tables).</p>
 <p><strong>NEW</strong> refers to the incoming data (being inserted or updated). <strong>OLD</strong> refers to the existing data in the table before the operation (being updated or deleted).</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>BEFORE Trigger executes before the triggering DML operation is applied (useful for validation/modification of incoming data).</li><li>AFTER Trigger executes after the operation (useful for auditing or cascading changes to other tables).</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">BEFORE Trigger</span>
+                                    
+                                    <span class="kw-badge">AFTER Trigger</span>
+                                    
+                                    <span class="kw-badge">NEW</span>
+                                    
+                                    <span class="kw-badge">OLD</span>
+                                    
+                                    <span class="kw-badge">trigger</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>

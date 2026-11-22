@@ -376,10 +376,36 @@
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Binary Cross-Entropy (Log-Loss)</strong> is a convex loss function used to evaluate probabilistic binary classification models by penalizing false predictions proportionally to their logarithmic divergence from ground truth. The single-sample log-loss (binary cross-entropy) formula is: <code>Loss = -[y*log(p) + (1-y)*log(1-p)]</code>. Using Mean Squared Error (MSE) is highly unsuitable for classification tasks utilizing a sigmoid activation function because it fundamentally results in a non-convex loss function. A non-convex function is characterized by undulating terrain with multiple local minima. When Gradient Descent attempts to optimize an MSE loss in this context, it frequently gets trapped in these local minima and fails entirely to find the true global minimum, rendering the model largely useless.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Binary Cross-Entropy (Log-Loss) is a convex loss function used to evaluate probabilistic binary classification models by penalizing false predictions proportionally to their logarithmic divergence from ground truth.</li><li>The single-sample log-loss (binary cross-entropy) formula is: Loss = -[y*log(p) + (1-y)*log(1-p)].</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Binary Cross-Entropy</span>
+                                    
+                                    <span class="kw-badge">Loss = -[y*log +*log]</span>
+                                    
+                                    <span class="kw-badge">single-sample log-loss</span>
+                                    
+                                    <span class="kw-badge">log-loss binary</span>
+                                    
+                                    <span class="kw-badge">cross-entropy formula</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -406,10 +432,36 @@
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div><p><strong>Hard and Soft Margin SVM</strong> are two boundary formulation strategies in Support Vector Machines that differ in whether margin constraints are strictly enforced or relaxed using slack variables. <b>Hard Margin SVM</b> strictly requires all data points to be correctly classified, working only for perfectly linearly separable data. <b>Soft Margin SVM</b> introduces slack variables (and hinge loss) to allow some misclassifications or margin violations, handling non-separable data gracefully.</p></div><p><strong>Further Explanation:</strong></p><ul><li>This fundamental concept is critical for understanding the underlying mechanics of the algorithm.</li><li>It provides a robust theoretical foundation for practical implementations.</li><li>Mastering this aspect allows for better model tuning and diagnostics.</li></ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>This fundamental concept is critical for understanding the underlying mechanics of the algorithm.</li><li>It provides a robust theoretical foundation for practical implementations.</li><li>Mastering this aspect allows for better model tuning and diagnostics.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Hard and Soft Margin SVM</span>
+                                    
+                                    <span class="kw-badge">Hard Margin SVM</span>
+                                    
+                                    <span class="kw-badge">Soft Margin SVM</span>
+                                    
+                                    <span class="kw-badge">Further Explanation</span>
+                                    
+                                    <span class="kw-badge">Hard Margin</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -435,6 +487,11 @@
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <p><strong>Node Impurity Metrics</strong>, such as Entropy and Gini Impurity, quantify the disorder or class mixture within a dataset to evaluate decision tree splits alongside classification performance metrics.</p><div class='solution-step'><p>Step-by-step solution:</p>
@@ -470,6 +527,27 @@ preds = model.predict(X_test)</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Accuracy = (35 + 45)/100 = 0.80</li><li>Precision = 35 / (35 + 10) = 35/45 ≈ 0.778</li><li>Recall = 35 / (35 + 10) = 35/45 ≈ 0.778</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Node Impurity Metrics</span>
+                                    
+                                    <span class="kw-badge">Entropy of dataset</span>
+                                    
+                                    <span class="kw-badge">992</span>
+                                    
+                                    <span class="kw-badge">Gini impurity</span>
+                                    
+                                    <span class="kw-badge">495</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -496,10 +574,30 @@ preds = model.predict(X_test)</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Underfitting</strong> is a modeling failure that occurs when a machine learning model lacks the statistical capacity to capture the underlying structure and relationships within the dataset. Underfitting is a condition where a machine learning model is far too simple or constrained to capture the true underlying patterns and complexities of the data. It can be easily identified when the model exhibits poor predictive performance and high error rates on both the training dataset and the validation dataset. Ultimately, an underfitted model fails to extract meaningful insights, acting as an overly generalized approximation of the problem.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Underfitting is a modeling failure that occurs when a machine learning model lacks the statistical capacity to capture the underlying structure and relationships within the dataset.</li><li>Underfitting is a condition where a machine learning model is far too simple or constrained to capture the true underlying patterns and complexities of the data.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Underfitting</span>
+                                    
+                                    <span class="kw-badge">identified</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -526,10 +624,36 @@ preds = model.predict(X_test)</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Gradient Descent</strong> is a first-order iterative optimization algorithm used to locate the minimum of a differentiable objective function by updating model parameters in the direction of the negative gradient. Gradient Descent is an iterative optimization algorithm used to find the optimal slope and intercept (parameters) that minimize a model's cost function. It works by calculating the partial derivatives—or gradient—of the cost function with respect to each parameter, indicating the direction of steepest ascent. To minimize the cost, the algorithm updates the parameters by taking small steps in the exact opposite direction of the gradient. The size of these steps is controlled by the learning rate, and this process repeats until the algorithm reaches the global minimum cost.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Gradient Descent is a first-order iterative optimization algorithm used to locate the minimum of a differentiable objective function by updating model parameters in the direction of the negative gradient.</li><li>Gradient Descent is an iterative optimization algorithm used to find the optimal slope and intercept (parameters) that minimize a model's cost function.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Gradient Descent</span>
+                                    
+                                    <span class="kw-badge">Descent updates</span>
+                                    
+                                    <span class="kw-badge">updates parameters</span>
+                                    
+                                    <span class="kw-badge">parameters iteratively</span>
+                                    
+                                    <span class="kw-badge">iteratively</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -556,10 +680,36 @@ preds = model.predict(X_test)</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Underfitting</strong> is a machine learning condition occurring when a high-bias model lacks the structural complexity to capture the underlying patterns and relationships in the data. Underfitting occurs when a machine learning model is far too simplistic to capture the underlying structures, trends, and patterns in the dataset, leading to high bias. The primary root causes of underfitting include using a model with insufficient complexity (e.g., trying to fit a straight line to highly non-linear data), providing inadequate or poorly engineered features, or applying excessive regularization. Its error profile is distinctly characterized by both high training error and high validation error, indicating that the model failed to learn the data entirely, unlike overfitting where training error is low.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Underfitting is a machine learning condition occurring when a high-bias model lacks the structural complexity to capture the underlying patterns and relationships in the data.</li><li>Underfitting occurs when a machine learning model is far too simplistic to capture the underlying structures, trends, and patterns in the dataset, leading to high bias.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Underfitting</span>
+                                    
+                                    <span class="kw-badge">primary root</span>
+                                    
+                                    <span class="kw-badge">root causes</span>
+                                    
+                                    <span class="kw-badge">causes</span>
+                                    
+                                    <span class="kw-badge">error profile</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -586,6 +736,11 @@ preds = model.predict(X_test)</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div><div class="concept-heading">Log-Loss (Binary Cross-Entropy)</div><p><strong>Log-Loss (Binary Cross-Entropy)</strong> is a convex loss function used in binary classification that penalizes divergent probabilistic predictions relative to the true binary ground truth labels. The cost function for Logistic Regression is Log-Loss, also known as Binary Cross-Entropy.</p><p><b>Formula:</b></p><p>$J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} \left[ y^{(i)} \log(h_\theta(x^{(i)})) + (1 - y^{(i)}) \log(1 - h_\theta(x^{(i)})) \right]$</p><p>Where $h_\theta(x)$ is the sigmoid predicted probability and $y$ is the actual binary label (0 or 1).</p><p><b>Why MSE is Unsuitable:</b></p><ul><li>If we use standard Mean Squared Error (MSE) for Logistic Regression, the cost function becomes $J(\theta) = \frac{1}{2m} \sum (\sigma(W^TX) - y)^2$.</li><li>Because the sigmoid function $\sigma$ is non-linear, squaring it results in a <b>non-convex</b> cost function landscape with multiple local minima.</li><li>Gradient Descent is prone to getting stuck in these local minima, failing to find the global optimum.</li><li>Log-Loss, conversely, guarantees a <b>convex</b> cost function with a single global minimum, penalizing confident wrong predictions heavily using logarithms.</li></ul></div><p><strong>Comprehensive Analysis:</strong></p><p>The above principles form the core of advanced machine learning systems. By deeply understanding these concepts, practitioners can make informed decisions regarding model selection, hyperparameter tuning, and performance optimization.</p><ul><li><strong>Scalability:</strong> Essential for handling large-scale, real-world datasets efficiently.</li><li><strong>Robustness:</strong> Helps in building models that are resilient to noise and outliers.</li><li><strong>Interpretability:</strong> Facilitates clear communication of model behaviors to stakeholders.</li></ul><p><strong>Practical Code Snippet:</strong></p><pre><code>import numpy as np
 import pandas as pd
@@ -598,6 +753,27 @@ def apply_concept(data):
 </code></pre><p>In summary, integrating these methodologies into the ML pipeline significantly elevates the overall quality and predictive power of the final models.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>If we use standard Mean Squared Error (MSE) for Logistic Regression, the cost function becomes $J(\theta) = \frac{1}{2m} \sum (\sigma(W^TX) - y)^2$.</li><li>Because the sigmoid function $\sigma$ is non-linear, squaring it results in a non-convex cost function landscape with multiple local minima.</li><li>Gradient Descent is prone to getting stuck in these local minima, failing to find the global optimum.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Log-Loss</span>
+                                    
+                                    <span class="kw-badge">Formula</span>
+                                    
+                                    <span class="kw-badge">Why MSE is Unsuitable</span>
+                                    
+                                    <span class="kw-badge">non-convex</span>
+                                    
+                                    <span class="kw-badge">convex</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -624,6 +800,11 @@ def apply_concept(data):
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Multiple Linear Regression</strong> is a supervised learning approach that models the linear relationship between two or more independent predictor variables and a continuous response variable.</p><div class='solution-step'><p>Step-by-step solution:</p>
 <p>Model: y = 20 + 3x1 + 5x2</p>
@@ -647,6 +828,27 @@ print(f'MSE: {mse}')</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Regression Metrics: MAE gives average error magnitude, MSE heavily penalizes large errors, and RMSE is interpretable in the original units.</li><li>Classification Metrics: Accuracy is good for balanced classes. Precision and Recall are crucial when false positives or false negatives have different costs. F1-score balances the two.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Multiple Linear Regression</span>
+                                    
+                                    <span class="kw-badge">42 lakh rupees</span>
+                                    
+                                    <span class="kw-badge">Regression Metrics</span>
+                                    
+                                    <span class="kw-badge">Classification Metrics</span>
+                                    
+                                    <span class="kw-badge">house-price model</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -673,6 +875,11 @@ print(f'MSE: {mse}')</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>The Sigmoid Function</strong> is an S-shaped mathematical activation function that maps any real-valued number into a probability value between 0 and 1 for binary classification.</p><div class='solution-step'><p>Step-by-step solution:</p>
 <p>z = 2.5</p>
@@ -698,6 +905,27 @@ print('Class probabilities:', probs)</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Sigmoid Function: Maps any real-valued number into a value between 0 and 1, which can be interpreted as a probability.</li><li>Decision Boundary: The threshold (typically 0.5) used to separate the classes.</li><li>Log-Loss: The cost function used in logistic regression, which penalizes confident but incorrect predictions.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">The Sigmoid Function</span>
+                                    
+                                    <span class="kw-badge">924</span>
+                                    
+                                    <span class="kw-badge">Logistic Regression Deep Dive</span>
+                                    
+                                    <span class="kw-badge">Sigmoid Function</span>
+                                    
+                                    <span class="kw-badge">Decision Boundary</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -724,6 +952,11 @@ print('Class probabilities:', probs)</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div><div class="concept-heading">Overfitting, Underfitting, and Bias-Variance Tradeoff</div><p><strong>The Bias-Variance Tradeoff</strong> is a fundamental machine learning property wherein model bias and variance inversely influence underfitting and overfitting performance. <b>Underfitting (High Bias):</b> Occurs when a model is too simple to capture the underlying data patterns. It performs poorly on both training and testing sets. This represents High Bias.</p><p><b>Overfitting (High Variance):</b> Occurs when a model is excessively complex, learning the noise and fluctuations in the training data rather than the true signal. It performs exceptionally well on the training data but poorly on testing data. This represents High Variance.</p><p><b>Relationship with Model Complexity and Error Rates:</b></p><ul><li>As model complexity increases, <b>Training Error</b> continuously decreases because the model fits the training points tighter.</li><li><b>Testing Error</b> initially decreases as the model learns useful patterns, but eventually starts to <i>increase</i> when the model becomes too complex and begins overfitting.</li><li><b>Bias-Variance Tradeoff:</b> The goal of ML is to find the "sweet spot" of model complexity that balances bias and variance, minimizing the total error (Testing Error). Too simple = high bias, too complex = high variance.</li></ul></div><p><strong>Comprehensive Analysis:</strong></p><p>The above principles form the core of advanced machine learning systems. By deeply understanding these concepts, practitioners can make informed decisions regarding model selection, hyperparameter tuning, and performance optimization.</p><ul><li><strong>Scalability:</strong> Essential for handling large-scale, real-world datasets efficiently.</li><li><strong>Robustness:</strong> Helps in building models that are resilient to noise and outliers.</li><li><strong>Interpretability:</strong> Facilitates clear communication of model behaviors to stakeholders.</li></ul><p><strong>Practical Code Snippet:</strong></p><pre><code>import numpy as np
 import pandas as pd
@@ -736,6 +969,27 @@ def apply_concept(data):
 </code></pre><p>In summary, integrating these methodologies into the ML pipeline significantly elevates the overall quality and predictive power of the final models.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>As model complexity increases, Training Error continuously decreases because the model fits the training points tighter.</li><li>Testing Error initially decreases as the model learns useful patterns, but eventually starts to increase when the model becomes too complex and begins overfitting.</li><li>Bias-Variance Tradeoff: The goal of ML is to find the "sweet spot" of model complexity that balances bias and variance, minimizing the total error (Testing Error). Too simple = high bias, too complex = high variance.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">The Bias-Variance Tradeoff</span>
+                                    
+                                    <span class="kw-badge">Underfitting</span>
+                                    
+                                    <span class="kw-badge">Overfitting</span>
+                                    
+                                    <span class="kw-badge">Training Error</span>
+                                    
+                                    <span class="kw-badge">Testing Error</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -761,6 +1015,11 @@ def apply_concept(data):
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <p><strong>Normal Equations Parameter Estimation</strong> is the method of solving a system of simultaneous linear equations ($X^T X b = X^T y$) to determine the exact least-squares coefficients for multiple regression without iterative optimization.</p><div class='solution-step'><p>Step-by-step solution:</p>
@@ -799,6 +1058,27 @@ print('Intercept:', model.intercept_)</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Ordinary Least Squares (OLS): The mathematical optimization technique used to find the best-fitting line.</li><li>Normal Equations: A closed-form solution to find the parameters, though computationally expensive for very large feature spaces.</li><li>Gradient Descent: An iterative optimization algorithm used when normal equations are too costly.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">b0 = 3</span>
+                                    
+                                    <span class="kw-badge">b2 = 1.125</span>
+                                    
+                                    <span class="kw-badge">125</span>
+                                    
+                                    <span class="kw-badge">b0 = 3, b1 = 1.125, b2 = 1.125</span>
+                                    
+                                    <span class="kw-badge">Linear Regression Fundamentals</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -824,6 +1104,11 @@ print('Intercept:', model.intercept_)</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <p><strong>Gradient Descent</strong> is an iterative optimization algorithm that minimizes an objective loss function by updating model parameters in the direction opposite to the gradient of the loss with respect to those parameters.</p><div class='solution-step'><p>Step-by-step solution:</p>
@@ -856,6 +1141,27 @@ print('Intercept:', model.intercept_)</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Ordinary Least Squares (OLS): The mathematical optimization technique used to find the best-fitting line.</li><li>Normal Equations: A closed-form solution to find the parameters, though computationally expensive for very large feature spaces.</li><li>Gradient Descent: An iterative optimization algorithm used when normal equations are too costly.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Gradient Descent</span>
+                                    
+                                    <span class="kw-badge">Linear Regression Fundamentals</span>
+                                    
+                                    <span class="kw-badge">Ordinary Least Squares</span>
+                                    
+                                    <span class="kw-badge">Normal Equations</span>
+                                    
+                                    <span class="kw-badge">model y</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -881,6 +1187,11 @@ print('Intercept:', model.intercept_)</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <p><strong>Regression Evaluation Metrics</strong> are quantitative criteria, such as Mean Absolute Error (MAE), Mean Squared Error (MSE), and Root Mean Squared Error (RMSE), used to measure the deviation between model predictions and true observed values.</p><div class='solution-step'><p>Step-by-step solution:</p>
@@ -915,6 +1226,27 @@ print('Intercept:', model.intercept_)</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li><strong>Y:</strong> 10 <em>vs</em> <strong>Y_hat:</strong> 12</li><li><strong>Y:</strong> 15 <em>vs</em> <strong>Y_hat:</strong> 13</li><li><strong>Y:</strong> 20 <em>vs</em> <strong>Y_hat:</strong> 18</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Regression Evaluation Metrics</span>
+                                    
+                                    <span class="kw-badge">Y_hat</span>
+                                    
+                                    <span class="kw-badge">Error</span>
+                                    
+                                    <span class="kw-badge">|e|</span>
+                                    
+                                    <span class="kw-badge">Sum</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -941,6 +1273,11 @@ print('Intercept:', model.intercept_)</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>The SVM Hyperplane</strong> is an optimal linear decision boundary ($w^T x + b = 0$) that separates classes in a feature space by maximizing the geometric margin to the nearest support vectors.</p><div class='solution-step'><p>Step-by-step solution:</p>
 <p>f(x1, x2) = 2x1 + 3x2 - 6</p>
@@ -965,6 +1302,27 @@ preds = svm_model.predict(X_test)</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>P1 (1, 1): f(1, 1) = 2(1) + 3(1) - 6 = 2 + 3 - 6 = -1.Since -1 < 0, Class is -1.</li><li>P2 (2, 2): f(2, 2) = 2(2) + 3(2) - 6 = 4 + 6 - 6 = 4.Since 4 > 0, Class is +1.</li><li>P3 (0, 1): f(0, 1) = 2(0) + 3(1) - 6 = 0 + 3 - 6 = -3.Since -3 < 0, Class is -1.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">The SVM Hyperplane</span>
+                                    
+                                    <span class="kw-badge">Support Vector Machines</span>
+                                    
+                                    <span class="kw-badge">Hyperplane</span>
+                                    
+                                    <span class="kw-badge">Margin</span>
+                                    
+                                    <span class="kw-badge">Kernel Trick</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -991,10 +1349,36 @@ preds = svm_model.predict(X_test)</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Categorical Label Encoding</strong> is the preprocessing technique of mapping non-numerical categorical values or discrete qualitative classes into distinct numerical integers. Most machine learning algorithms are rooted in mathematical equations and require numerical inputs to perform computations like calculating distances or gradients. Categorical label encoding is required because it converts string-based or categorical variables into a numerical format that models can interpret and process. Without this conversion, algorithms cannot handle non-numeric data, making it impossible to train predictive models on datasets containing text labels or categories.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Categorical Label Encoding is the preprocessing technique of mapping non-numerical categorical values or discrete qualitative classes into distinct numerical integers.</li><li>Most machine learning algorithms are rooted in mathematical equations and require numerical inputs to perform computations like calculating distances or gradients.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Categorical Label Encoding</span>
+                                    
+                                    <span class="kw-badge">categorical label</span>
+                                    
+                                    <span class="kw-badge">label encoding</span>
+                                    
+                                    <span class="kw-badge">encoding required</span>
+                                    
+                                    <span class="kw-badge">required before</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1021,6 +1405,11 @@ preds = svm_model.predict(X_test)</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div><div class="concept-heading">Bagging vs. Boosting Ensemble Methods</div><p><strong>Ensemble Learning Methods</strong> are collaborative algorithmic paradigms that combine the predictions of multiple diverse base models to achieve superior predictive accuracy and generalization performance. Ensemble methods combine multiple weak machine learning models to create a single, highly accurate strong model.</p><p><b>Bagging (Bootstrap Aggregating) & Random Forest:</b></p><ul><li><i>Concept:</i> Trains multiple models <b>independently and in parallel</b> on random subsets of the training data (drawn with replacement).</li><li><i>Aggregation:</i> Predictions are aggregated via majority voting (classification) or averaging (regression).</li><li><i>Random Forest:</i> Uses bagging specifically on Decision Trees. It also uses random subsets of features at each split. It dramatically reduces <b>variance</b> (overfitting).</li></ul><p><b>Boosting (XGBoost, AdaBoost):</b></p><ul><li><i>Concept:</i> Trains multiple models <b>sequentially</b>. Each new model specifically focuses on correcting the errors (misclassified instances or residuals) made by the previous models.</li><li><i>AdaBoost:</i> Adjusts weights of data points, penalizing incorrect classifications more in the next round.</li><li><i>Gradient Boosting (XGBoost):</i> Fits subsequent trees directly to the residual errors of the previous sequence.</li><li><i>Result:</i> Primarily reduces <b>bias</b> (underfitting) and creates highly accurate models, though it is more prone to overfitting than Bagging if not tuned carefully.</li></ul></div><p><strong>Comprehensive Analysis:</strong></p><p>The above principles form the core of advanced machine learning systems. By deeply understanding these concepts, practitioners can make informed decisions regarding model selection, hyperparameter tuning, and performance optimization.</p><ul><li><strong>Scalability:</strong> Essential for handling large-scale, real-world datasets efficiently.</li><li><strong>Robustness:</strong> Helps in building models that are resilient to noise and outliers.</li><li><strong>Interpretability:</strong> Facilitates clear communication of model behaviors to stakeholders.</li></ul><p><strong>Practical Code Snippet:</strong></p><pre><code>import numpy as np
 import pandas as pd
@@ -1033,6 +1422,27 @@ def apply_concept(data):
 </code></pre><p>In summary, integrating these methodologies into the ML pipeline significantly elevates the overall quality and predictive power of the final models.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Concept: Trains multiple models independently and in parallel on random subsets of the training data (drawn with replacement).</li><li>Aggregation: Predictions are aggregated via majority voting (classification) or averaging (regression).</li><li>Random Forest: Uses bagging specifically on Decision Trees. It also uses random subsets of features at each split. It dramatically reduces variance (overfitting).</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Ensemble Learning Methods</span>
+                                    
+                                    <span class="kw-badge">Bagging & Random Forest</span>
+                                    
+                                    <span class="kw-badge">independently and in parallel</span>
+                                    
+                                    <span class="kw-badge">variance</span>
+                                    
+                                    <span class="kw-badge">Boosting</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1058,6 +1468,11 @@ def apply_concept(data):
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <div><p><strong>Simple Linear Regression Least Squares</strong> is a closed-form statistical parameter estimation technique that fits a straight line minimizing the sum of squared vertical differences between observed and predicted values. Step-by-step solution:</p>
@@ -1086,6 +1501,27 @@ def apply_concept(data):
 </code></pre><p>In summary, integrating these methodologies into the ML pipeline significantly elevates the overall quality and predictive power of the final models.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li><strong>X:</strong> 1 <em>vs</em> <strong>Y:</strong> 35</li><li><strong>X:</strong> 2 <em>vs</em> <strong>Y:</strong> 40</li><li><strong>X:</strong> 3 <em>vs</em> <strong>Y:</strong> 50</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">X*Y</span>
+                                    
+                                    <span class="kw-badge">X^2</span>
+                                    
+                                    <span class="kw-badge">Sum=15</span>
+                                    
+                                    <span class="kw-badge">Sum=245</span>
+                                    
+                                    <span class="kw-badge">Sum=810</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1111,6 +1547,11 @@ def apply_concept(data):
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <p><strong>K-Nearest Neighbors (KNN)</strong> is a non-parametric, lazy supervised learning algorithm that classifies a new query point by taking a majority vote of its $K$ closest training instances in the feature space.</p><div class='solution-step'><p>Step-by-step solution:</p>
@@ -1139,6 +1580,27 @@ pred = knn.predict([query_point])</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>d(A, Q) = √((4-1)² + (3-1)²) = √(9 + 4) = √13 ≈ 3.605</li><li>d(B, Q) = √((4-2)² + (3-2)²) = √(4 + 1) = √5 ≈ 2.236</li><li>d(C, Q) = √((4-3)² + (3-2)²) = √(1 + 1) = √2 ≈ 1.414</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">K-Nearest Neighbors</span>
+                                    
+                                    <span class="kw-badge">Class 1</span>
+                                    
+                                    <span class="kw-badge">Distance Metrics</span>
+                                    
+                                    <span class="kw-badge">Choosing K</span>
+                                    
+                                    <span class="kw-badge">KNN -</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1165,6 +1627,11 @@ pred = knn.predict([query_point])</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Distance Metrics</strong> are mathematical formulas that quantify geometric dissimilarity or spatial proximity between data points in a multidimensional feature space.</p><div class='solution-step'><p>Step-by-step solution:</p>
 <ul>
@@ -1188,6 +1655,27 @@ pred = knn.predict([query_point])</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Euclidean distance: √((7-2)² + (9-5)²) = √(5² + 4²) = √(25 + 16) = √41 ≈ 6.40</li><li>Manhattan distance: |7-2| + |9-5| = 5 + 4 = 9</li><li>Squared Euclidean: (7-2)² + (9-5)² = 25 + 16 = 41</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Distance Metrics</span>
+                                    
+                                    <span class="kw-badge">Euclidean distance</span>
+                                    
+                                    <span class="kw-badge">Manhattan distance</span>
+                                    
+                                    <span class="kw-badge">Squared Euclidean</span>
+                                    
+                                    <span class="kw-badge">K-Nearest Neighbors</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1214,10 +1702,36 @@ pred = knn.predict([query_point])</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div><p><strong>F1-Score</strong> is the harmonic mean of precision and recall that evaluates a classification model's predictive performance on uneven class distributions. In imbalanced datasets, Accuracy can be misleadingly high if the model simply predicts the majority class every time. F1-Score balances Precision and Recall, ensuring the model performs well on the minority (often more important) class by taking both false positives and false negatives into account.</p></div><p><strong>Further Explanation:</strong></p><ul><li>This fundamental concept is critical for understanding the underlying mechanics of the algorithm.</li><li>It provides a robust theoretical foundation for practical implementations.</li><li>Mastering this aspect allows for better model tuning and diagnostics.</li></ul>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>This fundamental concept is critical for understanding the underlying mechanics of the algorithm.</li><li>It provides a robust theoretical foundation for practical implementations.</li><li>Mastering this aspect allows for better model tuning and diagnostics.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">F1-Score</span>
+                                    
+                                    <span class="kw-badge">Further Explanation</span>
+                                    
+                                    <span class="kw-badge">reliable metric</span>
+                                    
+                                    <span class="kw-badge">metric</span>
+                                    
+                                    <span class="kw-badge">Accuracy</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1243,6 +1757,11 @@ pred = knn.predict([query_point])</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <div><div class="concept-heading">7-Step Machine Learning Lifecycle</div><p><strong>The Machine Learning Lifecycle</strong> is a comprehensive end-to-end framework encompassing the systematic phases required to develop, validate, and deploy predictive models. The machine learning lifecycle consists of seven sequential steps that convert raw data into a functional predictive model.</p><ul><li><b>1. Data Gathering:</b> Identifying and collecting relevant datasets from various sources (databases, APIs, web scraping).</li><li><b>2. Data Preparation/Cleaning:</b> The objective is to fix missing values, remove duplicates, and handle outliers. It ensures the data is accurate and consistent.</li><li><b>3. Data Preprocessing & EDA:</b> Exploring the data to find patterns. Preprocessing involves feature scaling, normalization, and encoding categorical variables.</li><li><b>4. Data Split:</b> Dividing the dataset into training and testing sets (e.g., 80/20 split) to ensure unbiased evaluation.</li><li><b>5. Model Training:</b> Selecting an appropriate algorithm and feeding the training data into it to let the model learn the underlying patterns.</li><li><b>6. Model Evaluation/Validation:</b> The objective is to test the trained model on unseen testing data to measure its performance using metrics like accuracy, RMSE, or F1-Score.</li><li><b>7. Prediction & Deployment:</b> Deploying the validated model into a production environment to make predictions on real-world, live data.</li></ul></div><p><strong>Comprehensive Analysis:</strong></p><p>The above principles form the core of advanced machine learning systems. By deeply understanding these concepts, practitioners can make informed decisions regarding model selection, hyperparameter tuning, and performance optimization.</p><ul><li><strong>Scalability:</strong> Essential for handling large-scale, real-world datasets efficiently.</li><li><strong>Robustness:</strong> Helps in building models that are resilient to noise and outliers.</li><li><strong>Interpretability:</strong> Facilitates clear communication of model behaviors to stakeholders.</li></ul><p><strong>Practical Code Snippet:</strong></p><pre><code>import numpy as np
@@ -1296,6 +1815,27 @@ def apply_concept(data):
 </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>1. Data Gathering: Identifying and collecting relevant datasets from various sources (databases, APIs, web scraping).</li><li>2. Data Preparation/Cleaning: The objective is to fix missing values, remove duplicates, and handle outliers. It ensures the data is accurate and consistent.</li><li>3. Data Preprocessing & EDA: Exploring the data to find patterns. Preprocessing involves feature scaling, normalization, and encoding categorical variables.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">The Machine Learning Lifecycle</span>
+                                    
+                                    <span class="kw-badge">Data Gathering</span>
+                                    
+                                    <span class="kw-badge">Data Preparation/Cleaning</span>
+                                    
+                                    <span class="kw-badge">Data Preprocessing & EDA</span>
+                                    
+                                    <span class="kw-badge">Data Split</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1322,6 +1862,11 @@ def apply_concept(data):
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>AdaBoost Classifier Weighting</strong> assigns a voting weight $\alpha$ to each base classifier based on its weighted training error rate, giving higher influence to more accurate models.</p><div class='solution-step'><p>Step-by-step solution:</p>
 <p>Total samples = 100, Correct = 80, Incorrect = 20.</p>
@@ -1346,6 +1891,27 @@ print(f'MSE: {mse}')</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Regression Metrics: MAE gives average error magnitude, MSE heavily penalizes large errors, and RMSE is interpretable in the original units.</li><li>Classification Metrics: Accuracy is good for balanced classes. Precision and Recall are crucial when false positives or false negatives have different costs. F1-score balances the two.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">AdaBoost Classifier Weighting</span>
+                                    
+                                    <span class="kw-badge">Error rate</span>
+                                    
+                                    <span class="kw-badge">Classifier weight</span>
+                                    
+                                    <span class="kw-badge">693</span>
+                                    
+                                    <span class="kw-badge">Regression Metrics</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1372,10 +1938,36 @@ print(f'MSE: {mse}')</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>The Hypothesis Function in Simple Linear Regression</strong> is a mathematical linear equation that estimates the expected value of a continuous dependent target given a single independent predictor. The hypothesis function for a Simple Linear Regression model is mathematically represented as <code>h(x) = &theta;0 + &theta;1*x</code>. In this equation, <code>&theta;0</code> represents the y-intercept, which is the predicted value when the input is zero. The component <code>&theta;1</code> is the slope or weight that determines the impact of the input feature, while <code>x</code> represents the independent input feature itself.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>The Hypothesis Function in Simple Linear Regression is a mathematical linear equation that estimates the expected value of a continuous dependent target given a single independent predictor.</li><li>The hypothesis function for a Simple Linear Regression model is mathematically represented as h(x) = θ0 + θ1*x.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">h = θ0 + θ1*x</span>
+                                    
+                                    <span class="kw-badge">hypothesis</span>
+                                    
+                                    <span class="kw-badge">Simple Linear</span>
+                                    
+                                    <span class="kw-badge">Linear Regression</span>
+                                    
+                                    <span class="kw-badge">Regression model</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1402,10 +1994,36 @@ print(f'MSE: {mse}')</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Automatic Feature Selection in Lasso</strong> is the algorithmic property stemming from the geometry of the L1 norm that drives non-informative feature coefficients strictly to zero during optimization. Lasso (L1) regularization utilizes an absolute value penalty, which structurally encourages sparsity by forcing the coefficients of less important features exactly to zero. Because these coefficients become zero, Lasso effectively performs automatic feature selection by dropping irrelevant variables from the model. Ridge (L2) regularization, utilizing a squared penalty, shrinks coefficients asymptotically towards zero but rarely makes them exactly zero, meaning all features remain in the final model.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Automatic Feature Selection in Lasso is the algorithmic property stemming from the geometry of the L1 norm that drives non-informative feature coefficients strictly to zero during optimization.</li><li>Lasso (L1) regularization utilizes an absolute value penalty, which structurally encourages sparsity by forcing the coefficients of less important features exactly to zero.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Lasso L1</span>
+                                    
+                                    <span class="kw-badge">regularization perform</span>
+                                    
+                                    <span class="kw-badge">perform automatic</span>
+                                    
+                                    <span class="kw-badge">automatic feature</span>
+                                    
+                                    <span class="kw-badge">feature selection</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1432,10 +2050,36 @@ print(f'MSE: {mse}')</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Euclidean Distance</strong> is a standard geometric distance metric that calculates the straight-line distance between two points in multidimensional Euclidean space. The formula for Euclidean distance between two points, p and q, in an n-dimensional feature space is <code>d(p, q) = &radic;(&Sigma; (q_i - p_i)&sup2;)</code> for i=1 to n. This metric calculates the length of the straight-line path connecting the two points. It is widely used as the default distance metric in various machine learning algorithms, including K-Nearest Neighbors and K-Means clustering, to quantify the similarity or dissimilarity between data instances.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Euclidean Distance is a standard geometric distance metric that calculates the straight-line distance between two points in multidimensional Euclidean space.</li><li>The formula for Euclidean distance between two points, p and q, in an n-dimensional feature space is d(p, q) = √(Σ (q_i - p_i)²) for i=1 to n.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Euclidean Distance</span>
+                                    
+                                    <span class="kw-badge">d = √²)</span>
+                                    
+                                    <span class="kw-badge">formula</span>
+                                    
+                                    <span class="kw-badge">distance</span>
+                                    
+                                    <span class="kw-badge">points</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1462,10 +2106,36 @@ print(f'MSE: {mse}')</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Independent Predictor Variables and Dependent Target Variables</strong> constitute the foundational mathematical distinction in predictive modeling between input explanatory features and the corresponding target output being predicted. In predictive modeling, understanding the distinction between independent predictor variables and dependent target variables is crucial for defining the problem statement. <b>Independent Predictor Variables</b> (also known as features, inputs, or X) are the measurable attributes or characteristics of the data that the model uses to make its prediction. These are the variables that you already know or can easily observe. Conversely, the <b>Dependent Target Variable</b> (also known as the label, output, or y) is the specific outcome or value that the model is actively attempting to forecast or classify based on those predictors. For example, in a medical diagnosis scenario aimed at predicting heart disease, the independent predictor variables would include patient metrics such as age, resting blood pressure, cholesterol levels, and family history. The dependent target variable would be the final diagnosis—a binary classification of whether the patient actually has heart disease (Yes/No). The model learns how changes in the independent variables mathematically influence the dependent variable.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Independent Predictor Variables and Dependent Target Variables constitute the foundational mathematical distinction in predictive modeling between input explanatory features and the corresponding target output being...</li><li>In predictive modeling, understanding the distinction between independent predictor variables and dependent target variables is crucial for defining the problem statement.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Independent Predictor Variables</span>
+                                    
+                                    <span class="kw-badge">Dependent Target Variable</span>
+                                    
+                                    <span class="kw-badge">independent predictor</span>
+                                    
+                                    <span class="kw-badge">predictor variables</span>
+                                    
+                                    <span class="kw-badge">variables</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1492,10 +2162,36 @@ print(f'MSE: {mse}')</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Information Gain</strong> is an impurity-based criterion that measures the reduction in overall entropy achieved by partitioning a dataset across a specific candidate feature. Information Gain is defined as the expected reduction in a dataset's overall entropy (or impurity) after it has been partitioned based on a specific attribute. Decision Tree algorithms leverage Information Gain as their primary guiding metric for constructing the tree. At every given node, the algorithm calculates the Information Gain for all available features. It then actively selects the single feature that yields the highest Information Gain to split the node, thereby maximizing the class purity of the resulting child nodes and aggressively reducing uncertainty.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Information Gain is an impurity-based criterion that measures the reduction in overall entropy achieved by partitioning a dataset across a specific candidate feature.</li><li>Information Gain is defined as the expected reduction in a dataset's overall entropy (or impurity) after it has been partitioned based on a specific attribute.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Information Gain</span>
+                                    
+                                    <span class="kw-badge">Gain</span>
+                                    
+                                    <span class="kw-badge">Decision Tree</span>
+                                    
+                                    <span class="kw-badge">Tree</span>
+                                    
+                                    <span class="kw-badge">uses</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1522,6 +2218,11 @@ print(f'MSE: {mse}')</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div><div class="concept-heading">Feature Engineering vs. Feature Selection</div><p><strong>Feature Engineering and Feature Selection</strong> are data preprocessing methodologies used to create, transform, and isolate optimal predictive variables for machine learning models. <b>Feature Engineering</b> involves creating new features or transforming existing ones to improve model performance (e.g., extracting day of the week from a date). <b>Feature Selection</b> involves choosing the most relevant subset of existing features to reduce dimensionality and noise without creating new ones.</p><p><b>Working Principles:</b></p><ul><li><b>Min-Max Scaling:</b> Transforms numerical features to a fixed range, typically [0, 1].<br>Formula: $X_{scaled} = \frac{X - X_{min}}{X_{max} - X_{min}}$. Useful for algorithms that rely on distances (like KNN).</li><li><b>Standardization (Z-score):</b> Transforms data to have a mean of 0 and standard deviation of 1.<br>Formula: $Z = \frac{X - \mu}{\sigma}$. More robust to outliers than min-max scaling and preferred for gradient descent-based algorithms.</li><li><b>Categorical Label Encoding:</b> Converts categorical string values into numerical integer representations (e.g., Red=0, Green=1, Blue=2). Necessary because ML algorithms require numerical input. However, it may introduce ordinal relationships implicitly; hence, One-Hot Encoding is sometimes preferred for nominal data.</li></ul></div><p><strong>Comprehensive Analysis:</strong></p><p>The above principles form the core of advanced machine learning systems. By deeply understanding these concepts, practitioners can make informed decisions regarding model selection, hyperparameter tuning, and performance optimization.</p><ul><li><strong>Scalability:</strong> Essential for handling large-scale, real-world datasets efficiently.</li><li><strong>Robustness:</strong> Helps in building models that are resilient to noise and outliers.</li><li><strong>Interpretability:</strong> Facilitates clear communication of model behaviors to stakeholders.</li></ul><p><strong>Practical Code Snippet:</strong></p><pre><code>import numpy as np
 import pandas as pd
@@ -1534,6 +2235,27 @@ def apply_concept(data):
 </code></pre><p>In summary, integrating these methodologies into the ML pipeline significantly elevates the overall quality and predictive power of the final models.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Min-Max Scaling: Transforms numerical features to a fixed range, typically [0, 1].Formula: $X_{scaled} = \frac{X - X_{min}}{X_{max} - X_{min}}$. Useful for algorithms that rely on distances (like KNN).</li><li>Standardization (Z-score): Transforms data to have a mean of 0 and standard deviation of 1.Formula: $Z = \frac{X - \mu}{\sigma}$. More robust to outliers than min-max scaling and preferred for gradient descent-based...</li><li>Categorical Label Encoding: Converts categorical string values into numerical integer representations (e.g., Red=0, Green=1, Blue=2). Necessary because ML algorithms require numerical input. However, it may introduce...</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Feature Engineering</span>
+                                    
+                                    <span class="kw-badge">Feature Selection</span>
+                                    
+                                    <span class="kw-badge">Working Principles</span>
+                                    
+                                    <span class="kw-badge">Min-Max Scaling</span>
+                                    
+                                    <span class="kw-badge">Standardization</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1560,6 +2282,11 @@ def apply_concept(data):
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div><div class="concept-heading">Naive Bayes Classifier</div><p><strong>Naive Bayes Classifier</strong> is a family of supervised probabilistic classifiers based on applying Bayes' Theorem under the strong assumption of conditional independence between all input features. The Naive Bayes classifier is a probabilistic machine learning model based on Bayes\' Theorem, widely used for text classification tasks like spam filtering.</p><p><b>Mathematical Foundation:</b></p><ul><li>Bayes\' Theorem states: $P(y|X) = \frac{P(X|y) \cdot P(y)}{P(X)}$</li><li>Where $P(y|X)$ is the posterior probability of class $y$ given features $X$.</li><li>$P(X|y)$ is the likelihood, and $P(y)$ is the prior probability of class $y$.</li></ul><p><b>Key Assumptions (The "Naive" Aspect):</b></p><ul><li>The core assumption is <b>Conditional Independence</b> of features. It assumes that the presence or absence of a particular feature (e.g., word A) is entirely independent of the presence of any other feature (e.g., word B), given the class variable.</li><li>Mathematically, the likelihood is decomposed as: $P(X|y) = P(x_1|y) \times P(x_2|y) \times \dots \times P(x_n|y)$.</li><li>Despite this assumption almost never holding perfectly true in real-world data (words in sentences are usually correlated), Naive Bayes often performs surprisingly well in practice.</li></ul></div><p><strong>Comprehensive Analysis:</strong></p><p>The above principles form the core of advanced machine learning systems. By deeply understanding these concepts, practitioners can make informed decisions regarding model selection, hyperparameter tuning, and performance optimization.</p><ul><li><strong>Scalability:</strong> Essential for handling large-scale, real-world datasets efficiently.</li><li><strong>Robustness:</strong> Helps in building models that are resilient to noise and outliers.</li><li><strong>Interpretability:</strong> Facilitates clear communication of model behaviors to stakeholders.</li></ul><p><strong>Practical Code Snippet:</strong></p><pre><code>import numpy as np
 import pandas as pd
@@ -1572,6 +2299,27 @@ def apply_concept(data):
 </code></pre><p>In summary, integrating these methodologies into the ML pipeline significantly elevates the overall quality and predictive power of the final models.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Bayes\' Theorem states: $P(y|X) = \frac{P(X|y) \cdot P(y)}{P(X)}$</li><li>Where $P(y|X)$ is the posterior probability of class $y$ given features $X$.</li><li>$P(X|y)$ is the likelihood, and $P(y)$ is the prior probability of class $y$.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Naive Bayes Classifier</span>
+                                    
+                                    <span class="kw-badge">Mathematical Foundation</span>
+                                    
+                                    <span class="kw-badge">Key Assumptions</span>
+                                    
+                                    <span class="kw-badge">Conditional Independence</span>
+                                    
+                                    <span class="kw-badge">Comprehensive Analysis</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1597,6 +2345,11 @@ def apply_concept(data):
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <div><div class="concept-heading">Support Vector Machines (SVM)</div><p><strong>Support Vector Machines (SVM)</strong> is a supervised machine learning algorithm that constructs an optimal separating hyperplane in a high-dimensional feature space to maximize the margin between classes. SVM is a powerful algorithm that finds an optimal boundary between classes in an $N$-dimensional space.</p><ul><li><b>Hyperplane:</b> The decision boundary separating different classes. In 2D space, it\'s a line; in 3D, a flat plane.</li><li><b>Support Vectors:</b> The specific data points lying closest to the hyperplane. They act as pillars; if they are moved or removed, the position of the dividing hyperplane alters. The algorithm only cares about these vectors.</li><li><b>Maximum Margin:</b> SVM aims to find the hyperplane that maximizes the margin, which is the orthogonal distance between the hyperplane and the closest support vectors of each class. A wider margin implies better generalization.</li><li><b>Hard Margin vs. Soft Margin:</b><br>- <i>Hard Margin:</i> Strictly separates classes without allowing any misclassification. Only works if data is perfectly linearly separable and is highly sensitive to outliers.<br>- <i>Soft Margin (Hinge Loss):</i> Introduces a regularization parameter ($C$) and slack variables to allow a few misclassifications (errors). This yields a more robust, generalized boundary in the presence of noise or overlapping data.</li></ul></div><p><strong>Comprehensive Analysis:</strong></p><p>The above principles form the core of advanced machine learning systems. By deeply understanding these concepts, practitioners can make informed decisions regarding model selection, hyperparameter tuning, and performance optimization.</p><ul><li><strong>Scalability:</strong> Essential for handling large-scale, real-world datasets efficiently.</li><li><strong>Robustness:</strong> Helps in building models that are resilient to noise and outliers.</li><li><strong>Interpretability:</strong> Facilitates clear communication of model behaviors to stakeholders.</li></ul><p><strong>Practical Code Snippet:</strong></p><pre><code>import numpy as np
@@ -1634,6 +2387,27 @@ def apply_concept(data):
 </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Hyperplane: The decision boundary separating different classes. In 2D space, it\'s a line; in 3D, a flat plane.</li><li>Support Vectors: The specific data points lying closest to the hyperplane. They act as pillars; if they are moved or removed, the position of the dividing hyperplane alters. The algorithm only cares about these vectors.</li><li>Maximum Margin: SVM aims to find the hyperplane that maximizes the margin, which is the orthogonal distance between the hyperplane and the closest support vectors of each class. A wider margin implies better...</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Support Vector Machines</span>
+                                    
+                                    <span class="kw-badge">Hyperplane</span>
+                                    
+                                    <span class="kw-badge">Support Vectors</span>
+                                    
+                                    <span class="kw-badge">Maximum Margin</span>
+                                    
+                                    <span class="kw-badge">Hard Margin vs. Soft Margin</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1659,6 +2433,11 @@ def apply_concept(data):
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <p><strong>Model Selection in Regression</strong> is the process of comparing candidate predictive models across loss criteria such as Mean Absolute Error (MAE) and Mean Squared Error (MSE) to identify the model that minimizes prediction error.</p><div class='solution-step'><p>Step-by-step solution:</p>
@@ -1700,6 +2479,27 @@ print('Intercept:', model.intercept_)</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Errors: -5, 10, -5, -10</li><li>Abs Errors: 5, 10, 5, 10 -> MAE = 30/4 = 7.5</li><li>Sq Errors: 25, 100, 25, 100 -> MSE = 250/4 = 62.5</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Model Selection in Regression</span>
+                                    
+                                    <span class="kw-badge">Random Forest</span>
+                                    
+                                    <span class="kw-badge">Gradient Boosting</span>
+                                    
+                                    <span class="kw-badge">XGBoost</span>
+                                    
+                                    <span class="kw-badge">Conclusion</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1726,6 +2526,11 @@ print('Intercept:', model.intercept_)</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div><div class="concept-heading">Comparison of Learning Paradigms</div><p><strong>Machine Learning Paradigms</strong> are foundational learning frameworks that categorize algorithms based on data structure, supervisory feedback, and optimization objectives. Machine learning is broadly categorized into three paradigms:</p><ul><li><b>Supervised Learning:</b><br><i>Input Data:</i> Requires labeled data (features and corresponding target labels).<br><i>Feedback Loop:</i> Direct feedback mechanism; predictions are compared to actual labels to calculate error.<br><i>Target Applications:</i> Classification (e.g., spam detection), Regression (e.g., house price prediction).</li><li><b>Unsupervised Learning:</b><br><i>Input Data:</i> Requires unlabeled data (only features, no target labels).<br><i>Feedback Loop:</i> No direct feedback; the model learns internal structures, patterns, or clusters autonomously.<br><i>Target Applications:</i> Clustering (e.g., customer segmentation), Dimensionality Reduction (e.g., PCA).</li><li><b>Reinforcement Learning:</b><br><i>Input Data:</i> No predefined dataset; an agent interacts with an environment represented as states.<br><i>Feedback Loop:</i> Delayed feedback in the form of rewards or penalties based on the sequence of actions taken.<br><i>Target Applications:</i> Robotics, game AI (e.g., AlphaGo), autonomous navigation.</li></ul></div><p><strong>Comprehensive Analysis:</strong></p><p>The above principles form the core of advanced machine learning systems. By deeply understanding these concepts, practitioners can make informed decisions regarding model selection, hyperparameter tuning, and performance optimization.</p><ul><li><strong>Scalability:</strong> Essential for handling large-scale, real-world datasets efficiently.</li><li><strong>Robustness:</strong> Helps in building models that are resilient to noise and outliers.</li><li><strong>Interpretability:</strong> Facilitates clear communication of model behaviors to stakeholders.</li></ul><p><strong>Practical Code Snippet:</strong></p><pre><code>import numpy as np
 import pandas as pd
@@ -1738,6 +2543,27 @@ def apply_concept(data):
 </code></pre><p>In summary, integrating these methodologies into the ML pipeline significantly elevates the overall quality and predictive power of the final models.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Supervised Learning:Input Data: Requires labeled data (features and corresponding target labels).Feedback Loop: Direct feedback mechanism; predictions are compared to actual labels to calculate error.Target...</li><li>Unsupervised Learning:Input Data: Requires unlabeled data (only features, no target labels).Feedback Loop: No direct feedback; the model learns internal structures, patterns, or clusters autonomously.Target...</li><li>Reinforcement Learning:Input Data: No predefined dataset; an agent interacts with an environment represented as states.Feedback Loop: Delayed feedback in the form of rewards or penalties based on the sequence of...</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Machine Learning Paradigms</span>
+                                    
+                                    <span class="kw-badge">Supervised Learning</span>
+                                    
+                                    <span class="kw-badge">Unsupervised Learning</span>
+                                    
+                                    <span class="kw-badge">Reinforcement Learning</span>
+                                    
+                                    <span class="kw-badge">Comprehensive Analysis</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1764,6 +2590,11 @@ def apply_concept(data):
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div><div class="concept-heading">Confusion Matrix and Metrics</div><p><strong>A Confusion Matrix</strong> is a specific tabular layout that visualizes the performance of an algorithm by comparing predicted classifications against actual ground truth outcomes. <b>Confusion Matrix:</b> A $2 \times 2$ table used to evaluate binary classification performance.</p><ul><li><b>True Positive (TP):</b> Predicted Positive, Actual Positive</li><li><b>True Negative (TN):</b> Predicted Negative, Actual Negative</li><li><b>False Positive (FP - Type I Error):</b> Predicted Positive, Actual Negative</li><li><b>False Negative (FN - Type II Error):</b> Predicted Negative, Actual Positive</li></ul><p><b>Evaluation Formulas:</b></p><ul><li><b>Accuracy:</b> $\frac{TP + TN}{TP + TN + FP + FN}$. The overall correct predictions.</li><li><b>Precision:</b> $\frac{TP}{TP + FP}$. Out of all predicted positives, how many were actually positive?</li><li><b>Recall (Sensitivity):</b> $\frac{TP}{TP + FN}$. Out of all actual positives, how many did the model find?</li><li><b>F1-Score:</b> $2 \times \frac{Precision \times Recall}{Precision + Recall}$ (Harmonic Mean).</li></ul><p><b>Importance of F1-Score for Imbalanced Data:</b><br>If a dataset has 99% Negative and 1% Positive instances, a model predicting "Negative" every time achieves 99% accuracy but fails its actual purpose. F1-Score completely ignores True Negatives, focusing strictly on the model\'s ability to correctly balance identifying the minority Positive class (Recall) without generating excessive false alarms (Precision).</p></div><p><strong>Comprehensive Analysis:</strong></p><p>The above principles form the core of advanced machine learning systems. By deeply understanding these concepts, practitioners can make informed decisions regarding model selection, hyperparameter tuning, and performance optimization.</p><ul><li><strong>Scalability:</strong> Essential for handling large-scale, real-world datasets efficiently.</li><li><strong>Robustness:</strong> Helps in building models that are resilient to noise and outliers.</li><li><strong>Interpretability:</strong> Facilitates clear communication of model behaviors to stakeholders.</li></ul><p><strong>Practical Code Snippet:</strong></p><pre><code>import numpy as np
 import pandas as pd
@@ -1776,6 +2607,27 @@ def apply_concept(data):
 </code></pre><p>In summary, integrating these methodologies into the ML pipeline significantly elevates the overall quality and predictive power of the final models.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>True Positive (TP): Predicted Positive, Actual Positive</li><li>True Negative (TN): Predicted Negative, Actual Negative</li><li>False Positive (FP - Type I Error): Predicted Positive, Actual Negative</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">A Confusion Matrix</span>
+                                    
+                                    <span class="kw-badge">Confusion Matrix</span>
+                                    
+                                    <span class="kw-badge">True Positive</span>
+                                    
+                                    <span class="kw-badge">True Negative</span>
+                                    
+                                    <span class="kw-badge">False Positive</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1802,6 +2654,11 @@ def apply_concept(data):
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div><p><strong>Linear Regression Parameter Estimation</strong> is the analytical calculation of slope and intercept coefficients to establish the optimal linear relationship governing dependent and independent variables. Step-by-step solution:</p>
 <p>n = 5, Σx = 20, Σy = 75, Σx² = 90, Σxy = 340</p>
@@ -1820,6 +2677,27 @@ def apply_concept(data):
 </code></pre><p>In summary, integrating these methodologies into the ML pipeline significantly elevates the overall quality and predictive power of the final models.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Scalability: Essential for handling large-scale, real-world datasets efficiently.</li><li>Robustness: Helps in building models that are resilient to noise and outliers.</li><li>Interpretability: Facilitates clear communication of model behaviors to stakeholders.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">y = -1 + 4x</span>
+                                    
+                                    <span class="kw-badge">Comprehensive Analysis</span>
+                                    
+                                    <span class="kw-badge">Scalability</span>
+                                    
+                                    <span class="kw-badge">Robustness</span>
+                                    
+                                    <span class="kw-badge">Interpretability</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1845,6 +2723,11 @@ def apply_concept(data):
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <p><strong>Gini Impurity</strong> is a measure of misclassification probability that quantifies how often a randomly chosen element from a dataset would be incorrectly labeled if classified according to the label distribution of a node.</p><div class='solution-step'><p>Step-by-step solution:</p>
@@ -1872,6 +2755,27 @@ preds = model.predict(X_test)</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Entropy: A measure of randomness or unpredictability in the dataset. Lower entropy means higher purity.</li><li>Gini Impurity: Measures how often a randomly chosen element would be incorrectly labeled. Faster to compute than entropy.</li><li>Information Gain: The reduction in entropy after a dataset is split on an attribute.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Gini Impurity</span>
+                                    
+                                    <span class="kw-badge">Left node</span>
+                                    
+                                    <span class="kw-badge">Right node</span>
+                                    
+                                    <span class="kw-badge">Weighted Gini</span>
+                                    
+                                    <span class="kw-badge">Decision Trees & Information Theory</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1898,6 +2802,11 @@ preds = model.predict(X_test)</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Gradient Boosting</strong> is an ensemble technique that sequentially builds an additive model where each new weak learner is trained to predict the residual errors of preceding learners and scaled by a shrinkage learning rate.</p><div class='solution-step'><p>Step-by-step solution:</p>
 <p>F_m(x) = F_{m-1}(x) + α * h_m(x)</p>
@@ -1923,6 +2832,27 @@ pred = rf.predict(X_test)</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>F0(x) = 20</li><li>F1(x) = F0(x) + 0.2 * h1(x) = 20 + 0.2(10) = 20 + 2 = 22</li><li>F2(x) = F1(x) + 0.2 * h2(x) = 22 + 0.2(6) = 22 + 1.2 = 23.2</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Gradient Boosting</span>
+                                    
+                                    <span class="kw-badge">Ensemble Methods</span>
+                                    
+                                    <span class="kw-badge">Bagging</span>
+                                    
+                                    <span class="kw-badge">Boosting</span>
+                                    
+                                    <span class="kw-badge">Multiple boosting</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1949,6 +2879,11 @@ pred = rf.predict(X_test)</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div><div class="concept-heading">Ordinary Least Squares (OLS)</div><p><strong>Ordinary Least Squares (OLS)</strong> is a parameter estimation technique in linear regression that determines the best-fitting line by minimizing the sum of squared residuals between observed and predicted values. Simple Linear Regression models the relationship between a dependent variable $y$ and an independent variable $x$ as: $\hat{y} = mx + c$, where $m$ is the slope and $c$ is the intercept.</p><p><b>Objective Function:</b> The OLS method aims to minimize the Sum of Squared Residuals (SSR) between actual and predicted values. The cost function $J$ is:<br>$J(m, c) = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 = \sum_{i=1}^{n} (y_i - (mx_i + c))^2$</p><p><b>Derivation Framework:</b></p><ul><li>To find the optimal $m$ and $c$, we take the partial derivatives of $J$ with respect to $m$ and $c$, and set them to zero.</li><li>$\frac{\partial J}{\partial c} = -2 \sum_{i=1}^{n} (y_i - mx_i - c) = 0 \implies \sum y_i = m\sum x_i + nc$</li><li>$\frac{\partial J}{\partial m} = -2 \sum_{i=1}^{n} x_i(y_i - mx_i - c) = 0 \implies \sum x_i y_i = m\sum x_i^2 + c\sum x_i$</li><li>Solving these two normal equations yields the optimal formulas for slope $m$ and intercept $c$, which represent the best-fit line minimizing the squared errors.</li></ul></div><p><strong>Comprehensive Analysis:</strong></p><p>The above principles form the core of advanced machine learning systems. By deeply understanding these concepts, practitioners can make informed decisions regarding model selection, hyperparameter tuning, and performance optimization.</p><ul><li><strong>Scalability:</strong> Essential for handling large-scale, real-world datasets efficiently.</li><li><strong>Robustness:</strong> Helps in building models that are resilient to noise and outliers.</li><li><strong>Interpretability:</strong> Facilitates clear communication of model behaviors to stakeholders.</li></ul><p><strong>Practical Code Snippet:</strong></p><pre><code>import numpy as np
 import pandas as pd
@@ -1961,6 +2896,27 @@ def apply_concept(data):
 </code></pre><p>In summary, integrating these methodologies into the ML pipeline significantly elevates the overall quality and predictive power of the final models.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>To find the optimal $m$ and $c$, we take the partial derivatives of $J$ with respect to $m$ and $c$, and set them to zero.</li><li>$\frac{\partial J}{\partial c} = -2 \sum_{i=1}^{n} (y_i - mx_i - c) = 0 \implies \sum y_i = m\sum x_i + nc$</li><li>$\frac{\partial J}{\partial m} = -2 \sum_{i=1}^{n} x_i(y_i - mx_i - c) = 0 \implies \sum x_i y_i = m\sum x_i^2 + c\sum x_i$</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Ordinary Least Squares</span>
+                                    
+                                    <span class="kw-badge">Objective Function</span>
+                                    
+                                    <span class="kw-badge">Derivation Framework</span>
+                                    
+                                    <span class="kw-badge">Comprehensive Analysis</span>
+                                    
+                                    <span class="kw-badge">Scalability</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -1987,6 +2943,11 @@ def apply_concept(data):
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <div><div class="concept-heading">Gradient Descent vs Normal Equation</div><p><strong>Gradient Descent</strong> is a first-order iterative optimization algorithm used to find the minimum of a differentiable cost function by updating parameters in the opposite direction of the gradient. <b>Gradient Descent (GD):</b></p><p>GD is an iterative optimization algorithm used to minimize a cost function $J(\theta)$. It updates model weights (parameters) by moving in the direction opposite to the gradient of the cost function with respect to the weights.</p><ul><li><b>Update Rule:</b> $\theta_j = \theta_j - \alpha \frac{\partial J(\theta)}{\partial \theta_j}$, where $\alpha$ is the learning rate.</li><li>It iteratively takes steps proportional to the negative gradient until it converges to a local or global minimum.</li></ul><p><b>Contrast with Normal Equation:</b></p><ul><li>The Normal Equation provides an analytical, closed-form solution to linear regression: $\theta = (X^T X)^{-1} X^T y$.</li><li><b>High-Dimensional Datasets:</b> The Normal Equation requires computing the inverse of an $(n \times n)$ matrix ($X^T X$), which has a time complexity of $O(n^3)$. For large number of features (e.g., $n > 10,000$), matrix inversion becomes computationally prohibitive.</li><li>Gradient Descent scales much better with large numbers of features ($O(n^2)$ per iteration) and is highly preferred for high-dimensional datasets and models where analytical solutions do not exist.</li></ul></div><p><strong>Comprehensive Analysis:</strong></p><p>The above principles form the core of advanced machine learning systems. By deeply understanding these concepts, practitioners can make informed decisions regarding model selection, hyperparameter tuning, and performance optimization.</p><ul><li><strong>Scalability:</strong> Essential for handling large-scale, real-world datasets efficiently.</li><li><strong>Robustness:</strong> Helps in building models that are resilient to noise and outliers.</li><li><strong>Interpretability:</strong> Facilitates clear communication of model behaviors to stakeholders.</li></ul><p><strong>Practical Code Snippet:</strong></p><pre><code>import numpy as np
 import pandas as pd
@@ -1999,6 +2960,27 @@ def apply_concept(data):
 </code></pre><p>In summary, integrating these methodologies into the ML pipeline significantly elevates the overall quality and predictive power of the final models.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Update Rule: $\theta_j = \theta_j - \alpha \frac{\partial J(\theta)}{\partial \theta_j}$, where $\alpha$ is the learning rate.</li><li>It iteratively takes steps proportional to the negative gradient until it converges to a local or global minimum.</li><li>The Normal Equation provides an analytical, closed-form solution to linear regression: $\theta = (X^T X)^{-1} X^T y$.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Gradient Descent</span>
+                                    
+                                    <span class="kw-badge">Update Rule</span>
+                                    
+                                    <span class="kw-badge">Contrast with Normal Equation</span>
+                                    
+                                    <span class="kw-badge">High-Dimensional Datasets</span>
+                                    
+                                    <span class="kw-badge">Comprehensive Analysis</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -2024,6 +3006,11 @@ def apply_concept(data):
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <p><strong>The Logit Function</strong> calculates the linear score (log-odds) representing the weighted sum of input features and bias prior to sigmoid probability mapping.</p><div class='solution-step'><p>Step-by-step solution:</p>
@@ -2051,6 +3038,27 @@ print('Class probabilities:', probs)</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Sigmoid Function: Maps any real-valued number into a value between 0 and 1, which can be interpreted as a probability.</li><li>Decision Boundary: The threshold (typically 0.5) used to separate the classes.</li><li>Log-Loss: The cost function used in logistic regression, which penalizes confident but incorrect predictions.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">The Logit Function</span>
+                                    
+                                    <span class="kw-badge">-0.2</span>
+                                    
+                                    <span class="kw-badge">450</span>
+                                    
+                                    <span class="kw-badge">Logistic Regression Deep Dive</span>
+                                    
+                                    <span class="kw-badge">Sigmoid Function</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -2076,6 +3084,11 @@ print('Class probabilities:', probs)</code></pre>
                             </div>
                         </summary>
                         <div class="answer-content">
+                            
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
                             
                             <div class="view-full">
                                 <p><strong>Information Gain</strong> is the expected reduction in entropy resulting from partitioning a dataset on a given feature, used as an attribute selection criterion in decision trees.</p><div class='solution-step'><p>Step-by-step solution:</p>
@@ -2106,6 +3119,27 @@ preds = model.predict(X_test)</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Entropy: A measure of randomness or unpredictability in the dataset. Lower entropy means higher purity.</li><li>Gini Impurity: Measures how often a randomly chosen element would be incorrectly labeled. Faster to compute than entropy.</li><li>Information Gain: The reduction in entropy after a dataset is split on an attribute.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Information Gain</span>
+                                    
+                                    <span class="kw-badge">Parent node</span>
+                                    
+                                    <span class="kw-badge">971</span>
+                                    
+                                    <span class="kw-badge">Left child</span>
+                                    
+                                    <span class="kw-badge">722</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -2132,6 +3166,11 @@ preds = model.predict(X_test)</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Random Forest Regression</strong> is an ensemble bagging algorithm that aggregates the numerical predictions of multiple independently trained decision trees by computing their unweighted mean.</p><div class='solution-step'><p>Step-by-step solution:</p>
 <p>Random forest regression uses the average of the predictions of the individual trees.</p>
@@ -2153,6 +3192,27 @@ preds = model.predict(X_test)</code></pre>
         </div>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Entropy: A measure of randomness or unpredictability in the dataset. Lower entropy means higher purity.</li><li>Gini Impurity: Measures how often a randomly chosen element would be incorrectly labeled. Faster to compute than entropy.</li><li>Information Gain: The reduction in entropy after a dataset is split on an attribute.</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Random Forest Regression</span>
+                                    
+                                    <span class="kw-badge">33 lakh</span>
+                                    
+                                    <span class="kw-badge">Decision Trees & Information Theory</span>
+                                    
+                                    <span class="kw-badge">Entropy</span>
+                                    
+                                    <span class="kw-badge">Gini Impurity</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -2179,10 +3239,36 @@ preds = model.predict(X_test)</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Sigmoid Activation Function</strong> is an S-shaped mathematical activation function that non-linearly maps any real-valued input into a probability range between 0 and 1. The mathematical formula for the Sigmoid activation function is <code>&sigma;(z) = 1 / (1 + e^(-z))</code>. This function maps any real-valued number into a continuously bounded output range strictly between 0 and 1. Because of this specific S-shaped output range, it is ideal for tasks such as binary classification and probability estimation, as the output can be directly interpreted as the probability of a data point belonging to the positive class.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Sigmoid Activation Function is an S-shaped mathematical activation function that non-linearly maps any real-valued input into a probability range between 0 and 1.</li><li>The mathematical formula for the Sigmoid activation function is σ(z) = 1 / (1 + e^(-z)).</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Sigmoid Activation Function</span>
+                                    
+                                    <span class="kw-badge">σ = 1 /)</span>
+                                    
+                                    <span class="kw-badge">Sigmoid activation</span>
+                                    
+                                    <span class="kw-badge">activation</span>
+                                    
+                                    <span class="kw-badge">formula</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
@@ -2209,10 +3295,36 @@ preds = model.predict(X_test)</code></pre>
                         </summary>
                         <div class="answer-content">
                             
+                            <div class="answer-mode-switch">
+                                <button type="button" class="ans-toggle-btn active" onclick="toggleAnswerView(this, 'full')">Standard Exam Answer</button>
+                                <button type="button" class="ans-toggle-btn" onclick="toggleAnswerView(this, 'simple')">Simplified / Quick Revision</button>
+                            </div>
+                            
                             <div class="view-full">
                                 <p><strong>Random Forest</strong> is an ensemble supervised learning algorithm that combines predictions from multiple independently trained decision trees using bootstrap aggregation and random feature selection to enhance classification accuracy. Random Forests are ensemble models that construct a multitude of individual decision trees during the training phase, with each tree built independently using a bootstrapped subset of the training data and a random subset of features at each split. During the prediction phase for classification tasks, each individual tree outputs a predicted class label for a given input. The final classification output of the entire Random Forest is then determined by aggregating these predictions and taking a democratic majority vote among all the trees.</p>
                             </div>
                             
+                            <div class="view-simple" style="display: none;">
+                                <p><strong>Quick Recall:</strong></p><ul><li>Random Forest is an ensemble supervised learning algorithm that combines predictions from multiple independently trained decision trees using bootstrap aggregation and random feature selection to enhance...</li><li>Random Forests are ensemble models that construct a multitude of individual decision trees during the training phase, with each tree built independently using a bootstrapped subset of the training data and a random...</li></ul>
+                            </div>
+                            
+                            
+                            <div class="key-scoring-box">
+                                <div class="kw-title">🎯 Evaluator Scoring Keywords:</div>
+                                <div class="kw-list">
+                                    
+                                    <span class="kw-badge">Random Forest</span>
+                                    
+                                    <span class="kw-badge">voting structure</span>
+                                    
+                                    <span class="kw-badge">structure</span>
+                                    
+                                    <span class="kw-badge">ensemble approach</span>
+                                    
+                                    <span class="kw-badge">approach used</span>
+                                    
+                                </div>
+                            </div>
                             
                         </div>
                     </details>
